@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Answers — PedsIQ Exam Sheets</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        :root {
+            --bg: #000000; --surface: #0a0a0a; --surface-elevated: #111111; --surface-hover: #1a1a1a;
+            --text-primary: #ffffff; --text-secondary: rgba(255,255,255,0.6); --text-tertiary: rgba(255,255,255,0.55);
+            --accent: #007AFF; --accent-glow: rgba(0,122,255,0.3); --accent-secondary: #5856D6;
+            --success: #34C759; --warning: #FF9500; --danger: #FF3B30;
+            --gradient-1: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            --gradient-2: linear-gradient(135deg, #FF2D55 0%, #FF9500 100%);
+            --gradient-3: linear-gradient(135deg, #34C759 0%, #00C7BE 100%);
+            --glass: rgba(255,255,255,0.03); --glass-border: rgba(255,255,255,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg); color: var(--text-primary); min-height: 100vh; -webkit-font-smoothing: antialiased;
+        }
+        .bg-mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; opacity: 0.4; }
+        .bg-mesh::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(ellipse 80% 50% at 20% 40%, rgba(0,122,255,0.08) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 80% 20%, rgba(88,86,214,0.06) 0%, transparent 50%), radial-gradient(ellipse 50% 60% at 60% 80%, rgba(255,45,85,0.05) 0%, transparent 50%);
+            animation: meshFloat 20s ease-in-out infinite;
+        }
+        @keyframes meshFloat { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 33% { transform: translate(-2%, 2%) rotate(1deg); } 66% { transform: translate(2%, -1%) rotate(-1deg); } }
+        .noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; opacity: 0.025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); }
+        .app { position: relative; z-index: 2; display: flex; min-height: 100vh; }
+        .sidebar { width: 280px; background: var(--surface); border-right: 1px solid var(--glass-border); padding: 24px 16px; display: flex; flex-direction: column; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .sidebar::-webkit-scrollbar { width: 4px; }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 4px; }
+        .logo { display: flex; align-items: center; gap: 12px; padding: 0 12px 24px; border-bottom: 1px solid var(--glass-border); margin-bottom: 16px; }
+        .logo-icon { width: 40px; height: 40px; background: var(--gradient-1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; box-shadow: 0 4px 20px var(--accent-glow); }
+        .logo-text { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; }
+        .logo-sub { font-size: 11px; color: var(--text-tertiary); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+        .nav { display: flex; flex-direction: column; gap: 4px; }
+        .nav-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; cursor: pointer; transition: all 0.2s ease; font-size: 14px; font-weight: 500; color: var(--text-secondary); border: none; background: none; width: 100%; text-align: left; font-family: inherit; text-decoration: none; }
+        .nav-item:hover { background: var(--glass); color: var(--text-primary); }
+        .nav-item.active { background: var(--glass); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--glass-border); }
+        .nav-item .nav-icon { width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+        .nav-badge { margin-left: auto; background: var(--accent); color: white; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+        .sidebar-section { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--glass-border); }
+        .sidebar-section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-tertiary); padding: 0 12px 8px; }
+        .q-link { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 8px; font-size: 12px; color: var(--text-secondary); text-decoration: none; cursor: pointer; transition: all 0.15s; border-left: 2px solid transparent; }
+        .q-link:hover { background: var(--glass); color: var(--text-primary); border-left-color: var(--accent); }
+        .q-link .q-link-prob { margin-left: auto; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 6px; }
+        .q-link-prob.hot { background: rgba(255,45,85,0.12); color: #FF2D55; }
+        .q-link-prob.warm { background: rgba(255,149,0,0.12); color: #FF9500; }
+        .q-link-prob.cool { background: rgba(0,122,255,0.12); color: #007AFF; }
+        .main { flex: 1; margin-left: 280px; padding: 32px 40px; max-width: calc(100% - 280px); }
+        .page-header { margin-bottom: 32px; }
+        .page-title { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .page-subtitle { font-size: 15px; color: var(--text-secondary); font-weight: 400; }
+        .mode-bar { display: flex; gap: 8px; margin-bottom: 24px; align-items: center; flex-wrap: wrap; }
+        .mode-btn { padding: 8px 16px; border-radius: 10px; border: 1px solid var(--glass-border); background: var(--surface-elevated); color: var(--text-secondary); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+        .mode-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text-primary); }
+        .mode-btn.active { background: var(--accent); color: white; border-color: var(--accent); box-shadow: 0 4px 20px var(--accent-glow); }
+        .mode-hint { font-size: 12px; color: var(--text-tertiary); margin-left: auto; }
+        .a4-sheet {
+            background: var(--surface-elevated); border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 40px; margin-bottom: 32px; position: relative; overflow: hidden; transition: all 0.3s ease; page-break-after: always;
+        }
+        .a4-sheet::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+        .a4-sheet::after { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
+        .a4-sheet.hot::after { background: var(--gradient-2); }
+        .a4-sheet.warm::after { background: var(--gradient-3); }
+        .a4-sheet.cool::after { background: var(--gradient-1); }
+        .sheet-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+        .sheet-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+        .sheet-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 10px; border-radius: 8px; }
+        .sheet-badge.hot { background: rgba(255,45,85,0.1); color: #FF2D55; }
+        .sheet-badge.warm { background: rgba(255,149,0,0.1); color: #FF9500; }
+        .sheet-badge.cool { background: rgba(0,122,255,0.1); color: #007AFF; }
+        .sheet-marks { font-size: 28px; font-weight: 800; color: var(--warning); letter-spacing: -1px; }
+        .sheet-question { font-size: 18px; font-weight: 700; line-height: 1.5; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--glass-border); }
+        .marks-breakdown { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
+        .mark-chip { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 8px; background: var(--glass); color: var(--text-secondary); border: 1px solid var(--glass-border); }
+        .sheet-content h2 { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; margin: 24px 0 12px; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+        .sheet-content h2::before { content: ''; width: 4px; height: 16px; border-radius: 2px; background: var(--accent); }
+        .sheet-content h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-tertiary); margin: 20px 0 8px; }
+        .sheet-content p { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px; }
+        .sheet-content ul { margin: 8px 0 12px 18px; }
+        .sheet-content li { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 4px; }
+        .sheet-content strong { color: var(--text-primary); font-weight: 600; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 13px; border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; }
+        .data-table th { background: var(--glass); padding: 10px 14px; text-align: left; font-weight: 600; color: var(--text-tertiary); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--glass-border); }
+        .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--glass-border); color: var(--text-secondary); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover td { background: var(--glass); }
+        .scoring-box { background: linear-gradient(135deg, rgba(0,122,255,0.06) 0%, rgba(88,86,214,0.06) 100%); border: 1px solid rgba(0,122,255,0.15); border-radius: 16px; padding: 20px; margin: 16px 0; }
+        .scoring-box-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+        .scoring-box ul { margin: 0 0 0 16px; }
+        .scoring-box li { font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 3px; }
+        .scoring-box li strong { color: var(--text-primary); }
+        .mnemonic { background: linear-gradient(135deg, rgba(52,199,89,0.06) 0%, rgba(0,199,190,0.06) 100%); border: 1px solid rgba(52,199,89,0.15); border-radius: 16px; padding: 20px; margin: 16px 0; }
+        .mnemonic-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--success); margin-bottom: 10px; }
+        .mnemonic-text { font-size: 20px; font-weight: 700; letter-spacing: 2px; font-family: 'JetBrains Mono', monospace; color: var(--text-primary); }
+        .mnemonic-exp { font-size: 13px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6; }
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0; }
+        .compare-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; padding: 16px; }
+        .compare-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 10px; color: var(--text-primary); }
+        .compare-card ul { margin: 0 0 0 16px; }
+        .compare-card li { font-size: 13px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 3px; }
+        .mermaid { background: var(--surface); border-radius: 16px; padding: 20px; margin: 16px 0; border: 1px solid var(--glass-border); display: flex; justify-content: center; }
+        .mermaid svg { max-width: 100%; height: auto; }
+        .diagram-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 16px 0; }
+        .diag-box { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; padding: 14px 18px; text-align: center; min-width: 120px; }
+        .diag-box.primary { border-color: var(--accent); background: rgba(0,122,255,0.06); }
+        .diag-box.danger { border-color: var(--danger); background: rgba(255,59,48,0.06); }
+        .diag-box.success { border-color: var(--success); background: rgba(52,199,89,0.06); }
+        .diag-box.warning { border-color: var(--warning); background: rgba(255,149,0,0.06); }
+        .diag-box-title { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+        .diag-box-desc { font-size: 11px; color: var(--text-secondary); }
+        .pathway { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0; justify-content: center; }
+        .path-step { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 10px; padding: 10px 14px; font-size: 12px; font-weight: 600; color: var(--text-primary); }
+        .path-arrow { color: var(--text-tertiary); font-size: 16px; }
+        .topic-section { display: none; }
+        .topic-section.active { display: block; animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        @media print {
+            body { background: #ffffff !important; color: #111 !important; }
+            .sidebar, .mode-bar, .page-header, .bg-mesh, .noise { display: none !important; }
+            .main { margin-left: 0 !important; max-width: 100% !important; padding: 0 !important; }
+            .a4-sheet { background: #ffffff !important; border: 1px solid #ddd !important; border-radius: 0 !important; box-shadow: none !important; padding: 24mm 20mm !important; margin-bottom: 0 !important; page-break-after: always !important; }
+            .topic-section:last-child .a4-sheet:last-child { page-break-after: auto !important; }
+            .a4-sheet::after { display: none; }
+            .sheet-question { color: #111 !important; border-bottom-color: #ddd !important; }
+            .sheet-content h2 { color: #111 !important; }
+            .sheet-content h2::before { background: #007AFF !important; }
+            .sheet-content h3 { color: #555 !important; }
+            .sheet-content p, .sheet-content li { color: #333 !important; }
+            .sheet-content strong { color: #000 !important; }
+            .data-table { border-color: #ddd !important; }
+            .data-table th { background: #f5f5f5 !important; color: #555 !important; border-bottom-color: #ddd !important; }
+            .data-table td { color: #333 !important; border-bottom-color: #eee !important; }
+            .scoring-box { background: #f8f9ff !important; border-color: #d0d8ff !important; }
+            .mnemonic { background: #f0fdf4 !important; border-color: #bbf7d0 !important; }
+            .mermaid { background: #fafafa !important; border-color: #eee !important; }
+            .diag-box { background: #f9f9f9 !important; border-color: #e0e0e0 !important; }
+            .diag-box.primary { background: #eff6ff !important; border-color: #bfdbfe !important; }
+            .diag-box.danger { background: #fef2f2 !important; border-color: #fecaca !important; }
+            .diag-box.success { background: #f0fdf4 !important; border-color: #bbf7d0 !important; }
+            .compare-card { background: #f9f9f9 !important; border-color: #e0e0e0 !important; }
+            .mark-chip { background: #f0f0f0 !important; color: #444 !important; border-color: #ddd !important; }
+            .sheet-badge.hot { background: #fef2f2 !important; color: #991b1b !important; }
+            .sheet-badge.warm { background: #fffbeb !important; color: #92400e !important; }
+            .sheet-badge.cool { background: #eff6ff !important; color: #1e40af !important; }
+            .sheet-marks { color: #d97706 !important; }
+            .path-step { background: #f5f5f5 !important; border-color: #ddd !important; color: #111 !important; }
+            a { text-decoration: none !important; color: inherit !important; }
+        }
+        @media (max-width: 768px) {
+            .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); }
+            .main { margin-left: 0; max-width: 100%; padding: 20px; padding-top: 72px; }
+            .compare-grid { grid-template-columns: 1fr; }
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+        .sidebar-toggle { display: none; position: fixed; top: 16px; left: 16px; z-index: 200; width: 40px; height: 40px; border-radius: 10px; background: var(--surface); border: 1px solid var(--glass-border); color: white; font-size: 20px; cursor: pointer; align-items: center; justify-content: center; }
+        @media (max-width: 768px) { .sidebar-toggle { display: flex; } }
+    </style>
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div class="noise"></div>
+    <button class="sidebar-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar" onclick="const s=document.getElementById('sidebar'),t=this;s.classList.toggle('open');t.setAttribute('aria-expanded',s.classList.contains('open'))">&#9776;</button>
+    <div class="app">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <div class="logo-icon">P</div>
+                <div><div class="logo-text">PedsIQ</div><div class="logo-sub">KUHS PYQ Analyzer</div></div>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-item"><span class="nav-icon">&#9672;</span><span>Dashboard</span></a>
+                <a href="structured-answers.html" class="nav-item active"><span class="nav-icon">&#9673;</span><span>Structured Answers</span><span class="nav-badge">12</span></a>
+            </nav>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Very High Probability</div>
+                <a href="#topic-agn" class="q-link" onclick="showTopic('agn',event)"><span>AGN / PSGN</span><span class="q-link-prob hot">10&#9733;</span></a>
+                <a href="#topic-nephrotic" class="q-link" onclick="showTopic('nephrotic',event)"><span>Nephrotic Syndrome</span><span class="q-link-prob hot">10&#9733;</span></a>
+                <a href="#topic-rickets" class="q-link" onclick="showTopic('rickets',event)"><span>Rickets</span><span class="q-link-prob hot">3-10&#9733;</span></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">High Probability</div>
+                <a href="#topic-hypothyroid" class="q-link" onclick="showTopic('hypothyroid',event)"><span>Cong. Hypothyroidism</span><span class="q-link-prob warm">3-5&#9733;</span></a>
+                <a href="#topic-torsion" class="q-link" onclick="showTopic('torsion',event)"><span>Testicular Torsion</span><span class="q-link-prob warm">3&#9733;</span></a>
+                <a href="#topic-hematuria" class="q-link" onclick="showTopic('hematuria',event)"><span>Hematuria DDx</span><span class="q-link-prob warm">3&#9733;</span></a>
+                <a href="#topic-hypoglycemia" class="q-link" onclick="showTopic('hypoglycemia',event)"><span>Neonatal Hypoglycemia</span><span class="q-link-prob warm">3&#9733;</span></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Moderate / Surprise</div>
+                <a href="#topic-intussusception" class="q-link" onclick="showTopic('intussusception',event)"><span>Intussusception</span><span class="q-link-prob cool">3-5&#9733;</span></a>
+                <a href="#topic-portal" class="q-link" onclick="showTopic('portal',event)"><span>Portal Hypertension</span><span class="q-link-prob cool">3&#9733;</span></a>
+                <a href="#topic-hus" class="q-link" onclick="showTopic('hus',event)"><span>HUS</span><span class="q-link-prob cool">10&#9733;</span></a>
+                <a href="#topic-biliary" class="q-link" onclick="showTopic('biliary',event)"><span>Biliary Atresia</span><span class="q-link-prob cool">3-5&#9733;</span></a>
+                <a href="#topic-dka" class="q-link" onclick="showTopic('dka',event)"><span>DKA Management</span><span class="q-link-prob cool">10&#9733;</span></a>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="page-header">
+                <h1 class="page-title">Structured Answers</h1>
+                <p class="page-subtitle">Predicted questions with model answers formatted for 100/100 scoring. Print each sheet as A4.</p>
+            </div>
+            <div class="mode-bar">
+                <button class="mode-btn active" id="btn-all" onclick="showTopic('all')">Show All</button>
+                <button class="mode-btn" id="btn-exam" onclick="toggleExamMode()">Exam Print Mode</button>
+                <span class="mode-hint">Tip: Use "Exam Print Mode" then Ctrl+P to generate clean A4 sheets</span>
+            </div>
+
+            <!-- ========================== AGN / PSGN ========================== -->
+            <div class="topic-section active" id="topic-agn">
+                <div class="a4-sheet hot">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge hot">Very High Probability</span>
+                            <span class="sheet-badge">Nephrology</span>
+                            <span class="sheet-badge">Essay / Short Note</span>
+                        </div>
+                        <div class="sheet-marks">10 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 3-year-old child is brought with puffiness of face and tea-colored urine 10 days after a sore throat. Discuss the diagnosis, investigations, and management. (2+4+4=10)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition &amp; Etiology → 2M</span>
+                        <span class="mark-chip">Clinical Features → 2M</span>
+                        <span class="mark-chip">Investigations → 2M</span>
+                        <span class="mark-chip">Management → 2M</span>
+                        <span class="mark-chip">Complications &amp; Prognosis → 2M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition &amp; Etiology</h2>
+                        <p><strong>Acute Glomerulonephritis (AGN)</strong> is an immune-mediated inflammatory disease of the glomeruli, most commonly <strong>Post-Streptococcal Glomerulonephritis (PSGN)</strong> — the classic "nephritic syndrome" of childhood.</p>
+                        <ul>
+                            <li><strong>Agent:</strong> Nephritogenic strains of <em>Group A β-hemolytic Streptococcus</em> (M-types 1, 4, 12, 18, 25, 49, 55, 57, 60)</li>
+                            <li><strong>Trigger:</strong> Pharyngitis (1–3 weeks prior) or skin infection (impetigo — 3–6 weeks prior)</li>
+                            <li><strong>Age:</strong> Peak 5–12 years; rare &lt;2 years</li>
+                            <li><strong>Pathophysiology:</strong> Streptococcal antigens → immune complex deposition (IgG + C3) on GBM → complement activation → neutrophil infiltration → glomerular inflammation → ↓GFR</li>
+                        </ul>
+                        <div class="mermaid">
+flowchart TD
+    A["Strep throat or Skin infection"] --> B["Streptococcal antigen release"]
+    B --> C["Immune complex formation (IgG + C3)"]
+    C --> D["Subepithelial deposits (lumpy-bumpy GBM)"]
+    D --> E["Complement activation (C3 consumption)"]
+    E --> F["Glomerular inflammation + neutrophil influx"]
+    F --> G["Decreased GFR = Na+ and H2O retention"]
+    G --> H["Edema + Hypertension + Oliguria"]
+                        </div>
+                        <h2>2. Clinical Features</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Classic Triad (Nephritic Syndrome)</h4>
+                                <ul>
+                                    <li><strong>Hematuria</strong> — smoky/tea-colored (RBC casts pathognomonic)</li>
+                                    <li><strong>Edema</strong> — periorbital, pitting, often sudden</li>
+                                    <li><strong>Hypertension</strong> — due to salt-water retention</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Associated Features</h4>
+                                <ul>
+                                    <li>Oliguria (&lt;300 mL/m²/day)</li>
+                                    <li>Mild proteinuria (&lt;1 g/day — non-nephrotic)</li>
+                                    <li>Fever, malaise, anorexia</li>
+                                    <li>Flank pain (renal capsular stretch)</li>
+                                    <li>Hypertensive encephalopathy (seizures, headache, visual disturbance)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>3. Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Investigation</th><th>Finding</th><th>Scoring Value</th></tr>
+                            <tr><td><strong>Urine R/E</strong></td><td>RBCs, RBC casts, mild proteinuria (&lt;1+), leukocytes</td><td>Pathognomonic casts = 1M</td></tr>
+                            <tr><td><strong>Blood Urea &amp; Creatinine</strong></td><td>Elevated (azotemia)</td><td></td></tr>
+                            <tr><td><strong>Serum Electrolytes</strong></td><td>Hyperkalemia, hyponatremia, metabolic acidosis</td><td></td></tr>
+                            <tr><td><strong>C3 Complement</strong></td><td><strong>Low</strong> (returns to normal in 6–8 weeks)</td><td>Key differentiator = 1M</td></tr>
+                            <tr><td><strong>C4 Complement</strong></td><td>Normal (vs MPGN where both ↓)</td><td></td></tr>
+                            <tr><td><strong>ASO Titer</strong></td><td>Elevated in 70–80% (post-pharyngitis)</td><td></td></tr>
+                            <tr><td><strong>Anti-DNase B</strong></td><td>Elevated (post-skin infection / if ASO negative)</td><td></td></tr>
+                            <tr><td><strong>Throat Culture</strong></td><td>Group A Strep (confirmatory)</td><td></td></tr>
+                            <tr><td><strong>Renal Biopsy</strong></td><td>Rarely needed; subepithelial "humps" on EM</td><td></td></tr>
+                        </table>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Scoring Mnemonic — PSGN Features</div>
+                            <div class="mnemonic-text">S-T-R-E-P</div>
+                            <div class="mnemonic-exp">
+                                <strong>S</strong>ore throat / Skin infection &nbsp;|&nbsp;
+                                <strong>T</strong>ea-colored urine (hematuria) &nbsp;|&nbsp;
+                                <strong>R</strong>enal failure signs (oliguria, edema) &nbsp;|&nbsp;
+                                <strong>E</strong>levated BP (hypertension) &nbsp;|&nbsp;
+                                <strong>P</strong>roteinuria (mild, &lt;1 g/day)
+                            </div>
+                        </div>
+                        <h2>4. Management</h2>
+                        <h3>A. General &amp; Supportive</h3>
+                        <ul>
+                            <li><strong>Bed rest</strong> until hematuria, edema, and hypertension resolve</li>
+                            <li><strong>Diet:</strong> Salt restriction; fluid restriction to insensible losses + urine output; protein — normal intake</li>
+                            <li><strong>Daily monitoring:</strong> BP, weight, urine output, fluid balance</li>
+                        </ul>
+                        <h3>B. Treatment of Complications</h3>
+                        <table class="data-table">
+                            <tr><th>Complication</th><th>Treatment</th></tr>
+                            <tr><td><strong>Hypertension</strong></td><td>Calcium channel blockers (Amlodipine), ACE inhibitors if proteinuric; IV Labetalol / Nitroprusside for hypertensive emergency</td></tr>
+                            <tr><td><strong>Hyperkalemia</strong></td><td>Calcium gluconate, insulin + glucose, sodium bicarbonate, kayexalate; dialysis if refractory</td></tr>
+                            <tr><td><strong>Fluid overload</strong></td><td>Furosemide 1–2 mg/kg IV (loop diuretics)</td></tr>
+                            <tr><td><strong>Azotemia / AKI</strong></td><td>Dialysis (indications: refractory fluid overload, severe hyperkalemia, uremic symptoms)</td></tr>
+                            <tr><td><strong>Seizures</strong></td><td>Antihypertensives (not anticonvulsants alone); treat the cause (hypertensive encephalopathy)</td></tr>
+                        </table>
+                        <h3>C. Eradication of Strep</h3>
+                        <ul>
+                            <li><strong>Penicillin V</strong> 250 mg PO BD/TDS × 10 days (or Benzathine Penicillin G IM single dose)</li>
+                            <li>If penicillin allergic: <strong>Erythromycin</strong> or <strong>Azithromycin</strong></li>
+                        </ul>
+                        <div class="mermaid">
+flowchart TD
+    A["Child with AGN"] --> B{Severity?}
+    B -->|Mild| C["Bed rest, salt and fluid restriction, monitoring"]
+    B -->|Severe| D["Hospital admission"]
+    D --> E["Penicillin for Strep eradication"]
+    D --> F["Diuretics: Furosemide"]
+    D --> G["Antihypertensives"]
+    G --> H{BP control?}
+    H -->|No or Emergency| I["IV Labetalol or Nitroprusside + Seizure management"]
+    H -->|Yes| J["Continue oral therapy"]
+    D --> K{Complications?}
+    K -->|Hyperkalemia| L["Calcium gluconate + Insulin-Glucose + Kayexalate"]
+    K -->|Fluid overload| M["Furosemide IV +/- Dialysis if refractory"]
+    K -->|Azotemia| N["Hemodialysis or Peritoneal dialysis"]
+    C --> O["Recovery in 1-2 weeks"]
+    J --> O
+    L --> O
+    M --> O
+    N --> O
+                        </div>
+                        <h2>5. Complications</h2>
+                        <ul>
+                            <li><strong>Acute Kidney Injury (AKI)</strong> — reversible; dialysis may be needed</li>
+                            <li><strong>Hypertensive encephalopathy</strong> — seizures, papilledema, altered sensorium</li>
+                            <li><strong>Acute pulmonary edema</strong> — due to fluid overload</li>
+                            <li><strong>Chronic kidney disease</strong> — rare (&lt;1%); associated with crescentic transformation</li>
+                        </ul>
+                        <h2>6. Prognosis</h2>
+                        <ul>
+                            <li><strong>Excellent</strong> in children; &gt;95% complete recovery</li>
+                            <li>Diuresis begins in 5–10 days; hematuria clears in 1–3 weeks</li>
+                            <li>Complement normalizes by 6–8 weeks (if not, consider MPGN or lupus)</li>
+                            <li>Recurrence is rare (unlike IgA nephropathy)</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (AGN / PSGN)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Mention "immune-mediated glomerular inflammation" and "post-streptococcal" — <em>0.5M</em></li>
+                                <li><strong>Etiology:</strong> Group A β-hemolytic strep, nephritogenic M-types, latent period (1–3w pharyngitis / 3–6w skin) — <em>0.5M</em></li>
+                                <li><strong>Pathophysiology:</strong> Immune complex deposition → complement activation → ↓GFR — <em>1M</em></li>
+                                <li><strong>Clinical triad:</strong> Hematuria (RBC casts) + Edema + Hypertension — <em>1M</em></li>
+                                <li><strong>Other features:</strong> Oliguria, mild proteinuria, flank pain, encephalopathy — <em>0.5M</em></li>
+                                <li><strong>Investigations:</strong> Urine RBC casts, ↓C3 (normal C4), ↑ASO, anti-DNase B — <em>1M</em></li>
+                                <li><strong>General management:</strong> Bed rest, salt/fluid restriction, daily monitoring — <em>0.5M</em></li>
+                                <li><strong>Specific Rx:</strong> Penicillin, diuretics, antihypertensives — <em>1M</em></li>
+                                <li><strong>Complication management:</strong> Hyperkalemia, fluid overload, dialysis indications — <em>1M</em></li>
+                                <li><strong>Prognosis:</strong> Excellent in children, C3 normalizes by 6–8 weeks — <em>0.5M</em></li>
+                                <li><strong>Flowchart / Diagram:</strong> Management algorithm — <em>1M</em></li>
+                                <li><strong>Neatness &amp; Structure:</strong> Subheadings, tables, bullet points — <em>1M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== NEPHROTIC SYNDROME ========================== -->
+            <div class="topic-section" id="topic-nephrotic">
+                <div class="a4-sheet hot">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge hot">Very High Probability</span>
+                            <span class="sheet-badge">Nephrology</span>
+                            <span class="sheet-badge">Essay / Short Note</span>
+                        </div>
+                        <div class="sheet-marks">10 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 4-year-old boy presents with periorbital puffiness and frothy urine. On examination, there is pitting edema of the legs and ascites. Discuss the diagnosis, investigations, and management. (2+4+4=10)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition &amp; Types → 2M</span>
+                        <span class="mark-chip">Clinical Features → 2M</span>
+                        <span class="mark-chip">Investigations → 2M</span>
+                        <span class="mark-chip">Management → 3M</span>
+                        <span class="mark-chip">Complications → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition &amp; Classification</h2>
+                        <p><strong>Nephrotic Syndrome (NS)</strong> is defined by <strong>massive proteinuria</strong> (&gt;50 mg/kg/day or &gt;40 mg/m²/hr or Urine Protein/Creatinine ratio &gt;2), <strong>hypoalbuminemia</strong> (&lt;2.5 g/dL), <strong>hyperlipidemia</strong>, and <strong>edema</strong>.</p>
+                        <h3>Classification by Etiology</h3>
+                        <table class="data-table">
+                            <tr><th>Type</th><th>Age</th><th>Pathology</th><th>Key Feature</th></tr>
+                            <tr><td><strong>Minimal Change Disease (MCD)</strong></td><td>2–6 years (80%)</td><td>Normal LM; foot process fusion on EM</td><td>Steroid sensitive</td></tr>
+                            <tr><td><strong>FSGS</strong></td><td>Any age</td><td>Segmental sclerosis</td><td>Steroid resistant; poor prognosis</td></tr>
+                            <tr><td><strong>Membranoproliferative GN (MPGN)</strong></td><td>Older children</td><td>Tram-track BM on LM</td><td>↓C3 + ↓C4; hematuria common</td></tr>
+                            <tr><td><strong>Membranous Nephropathy</strong></td><td>Rare in children</td><td>Subepithelial deposits</td><td>Secondary (HBV, SLE, drugs)</td></tr>
+                        </table>
+                        <h3>Classification by Steroid Response (ISKD)</h3>
+                        <ul>
+                            <li><strong>Steroid Sensitive (SSNS):</strong> Remission within 4 weeks of prednisolone</li>
+                            <li><strong>Steroid Resistant (SRNS):</strong> No remission after 4 weeks</li>
+                            <li><strong>Steroid Dependent:</strong> 2 relapses during steroid taper or within 2 weeks of stopping</li>
+                            <li><strong>Frequently Relapsing:</strong> ≥2 relapses in 6 months or ≥4 in 12 months</li>
+                        </ul>
+                        <div class="mermaid">
+flowchart TD
+    A["Child with Nephrotic Syndrome"] --> B{First Episode}
+    B --> C["Steroid Trial: Prednisolone 2 mg/kg/day x 6 weeks"]
+    C --> D{Response?}
+    D -->|Remission under 4 weeks| E["Steroid Sensitive NS (80% children - MCD)"]
+    D -->|No remission| F["Steroid Resistant NS"]
+    F --> G["Renal Biopsy"]
+    G --> H{Histology}
+    H -->|MCD| I["Reclassify or Re-trial"]
+    H -->|FSGS| J["Calcineurin inhibitors + ACEi"]
+    H -->|MPGN| K["Immunosuppression + Treat cause"]
+    E --> L{Tapering}
+    L -->|Relapse on taper| M["Steroid Dependent"]
+    L -->|Relapse over 2 in 6 months| N["Frequently Relapsing"]
+    L -->|No relapse| O["Continue maintenance 1.5 mg/kg alt days x 6 weeks"]
+                        </div>
+                        <h2>2. Clinical Features</h2>
+                        <ul>
+                            <li><strong>Edema</strong> — periorbital (worse in morning), dependent (legs by evening), ascites, pleural effusion, scrotal edema</li>
+                            <li><strong>Frothy urine</strong> — due to massive proteinuria</li>
+                            <li><strong>Weight gain</strong> — due to fluid retention</li>
+                            <li><strong>Anorexia, lethargy, diarrhea</strong> — gut edema</li>
+                            <li><strong>Hypovolemia signs</strong> — cold peripheries, tachycardia, hypotension (despite edema!)</li>
+                            <li><strong>Infections</strong> — due to loss of IgG and complement factors in urine</li>
+                            <li><strong>Thrombosis</strong> — loss of antithrombin III; renal vein thrombosis most common</li>
+                        </ul>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Edema Progression Mnemonic</div>
+                            <div class="mnemonic-text">P-E-A-S</div>
+                            <div class="mnemonic-exp">
+                                <strong>P</strong>eriorbital (morning) → <strong>E</strong>xtremities (evening) → <strong>A</strong>scites → <strong>S</strong>evere (anasarca, pleural effusion)
+                            </div>
+                        </div>
+                        <h2>3. Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Investigation</th><th>Expected Finding</th></tr>
+                            <tr><td><strong>Urine R/E</strong></td><td>Massive proteinuria (3–4+); few RBCs; hyaline / fatty casts; oval fat bodies</td></tr>
+                            <tr><td><strong>24h Urine Protein</strong></td><td>&gt;50 mg/kg/day</td></tr>
+                            <tr><td><strong>Urine P/C ratio</strong></td><td>&gt;2 (mg/mg) or &gt;200 (mg/mmol)</td></tr>
+                            <tr><td><strong>Serum Albumin</strong></td><td>&lt;2.5 g/dL (hypoalbuminemia)</td></tr>
+                            <tr><td><strong>Serum Cholesterol / TG</strong></td><td>Elevated (hyperlipidemia)</td></tr>
+                            <tr><td><strong>Serum Electrolytes</strong></td><td>Hyponatremia (dilutional); hypocalcemia (↓Vit D binding protein)</td></tr>
+                            <tr><td><strong>Complements (C3, C4)</strong></td><td><strong>Normal</strong> in MCD (vs ↓C3 in MPGN)</td></tr>
+                            <tr><td><strong>Renal Function</strong></td><td>Usually normal (creatinine may be slightly elevated)</td></tr>
+                            <tr><td><strong>Renal Biopsy</strong></td><td>Only if: &gt;8 years, SRNS, atypical features (hematuria, ↓C3, HTN), frequent relapses</td></tr>
+                        </table>
+                        <h2>4. Management</h2>
+                        <h3>A. General Measures</h3>
+                        <ul>
+                            <li><strong>Bed rest</strong> during edema phase</li>
+                            <li><strong>Diet:</strong> Normal protein intake (do NOT restrict); salt restriction during edema; fluid restriction if severe hyponatremia</li>
+                            <li><strong>Monitor:</strong> Daily weight, BP, urine protein (dipstick), input-output chart</li>
+                        </ul>
+                        <h3>B. Steroid Regimen (First Episode) — Standard ISKD Protocol</h3>
+                        <div class="pathway">
+                            <div class="path-step">Prednisolone<br/>2 mg/kg/day<br/>× 6 weeks</div>
+                            <span class="path-arrow">→</span>
+                            <div class="path-step">Then 1.5 mg/kg<br/>Alternate days<br/>× 6 weeks</div>
+                            <span class="path-arrow">→</span>
+                            <div class="path-step">Taper over<br/>4–8 weeks</div>
+                            <span class="path-arrow">→</span>
+                            <div class="path-step">Total duration<br/>~3–4 months</div>
+                        </div>
+                        <h3>C. Treatment of Complications</h3>
+                        <table class="data-table">
+                            <tr><th>Complication</th><th>Management</th></tr>
+                            <tr><td><strong>Hypovolemia / Shock</strong></td><td>Albumin 20% 1 g/kg IV over 4h + Furosemide; cautious fluid resuscitation</td></tr>
+                            <tr><td><strong>Infection (SBP / cellulitis)</strong></td><td>Ceftriaxone; if suspected pneumococcal sepsis → Vancomycin + Ceftriaxone; vaccinate with Pneumococcal + Varicella</td></tr>
+                            <tr><td><strong>Thrombosis</strong></td><td>Low molecular weight heparin (LMWH); then warfarin; avoid dehydration</td></tr>
+                            <tr><td><strong>Hyperlipidemia</strong></td><td>Dietary modification; rarely needs statins in children</td></tr>
+                        </table>
+                        <h3>D. Steroid-Sparing Agents (for Frequent Relapsers / Steroid Dependent)</h3>
+                        <ul>
+                            <li><strong>Cyclophosphamide</strong> — 2 mg/kg/day PO × 8–12 weeks (max cumulative dose 168 mg/kg)</li>
+                            <li><strong>Cyclosporine</strong> — 3–5 mg/kg/day (trough levels 80–150 ng/mL)</li>
+                            <li><strong>Tacrolimus</strong> — 0.1 mg/kg/day</li>
+                            <li><strong>Mycophenolate mofetil (MMF)</strong> — 600–1200 mg/m²/day</li>
+                            <li><strong>Rituximab</strong> — for severe steroid-dependent / calcineurin-dependent cases</li>
+                        </ul>
+                        <h2>5. Complications</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Infections</h4>
+                                <ul>
+                                    <li>Spontaneous bacterial peritonitis (SBP) — <em>Strep pneumoniae</em></li>
+                                    <li>Cellulitis, sepsis</li>
+                                    <li>Loss of IgG, Factor B, properdin in urine</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Thromboembolism</h4>
+                                <ul>
+                                    <li>Renal vein thrombosis (most common)</li>
+                                    <li>Loss of antithrombin III, proteins C &amp; S</li>
+                                    <li>Hyperfibrinogenemia, hyperlipidemia</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Hypovolemia</h4>
+                                <ul>
+                                    <li>Acute pre-renal failure</li>
+                                    <li>Hypotension, cold peripheries</li>
+                                    <li>Requires albumin + diuretics</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Other</h4>
+                                <ul>
+                                    <li>Growth retardation (chronic steroids)</li>
+                                    <li>Cataracts, osteoporosis</li>
+                                    <li>Hypocalcemia, rickets (loss of Vit D binding protein)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>6. Prognosis</h2>
+                        <ul>
+                            <li><strong>MCD:</strong> Excellent; most outgrow by adolescence; rare progression to ESRD</li>
+                            <li><strong>FSGS:</strong> 50% progress to ESRD within 10 years</li>
+                            <li><strong>MPGN:</strong> Variable; Type II (dense deposit disease) has worst prognosis</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (Nephrotic Syndrome)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Quad: Massive proteinuria + hypoalbuminemia + hyperlipidemia + edema — <em>1M</em></li>
+                                <li><strong>Classification:</strong> MCD (2–6y, 80%), FSGS, MPGN, Membranous — <em>0.5M</em></li>
+                                <li><strong>Steroid response classes:</strong> Sensitive, Resistant, Dependent, Frequently relapsing — <em>0.5M</em></li>
+                                <li><strong>Clinical:</strong> Periorbital edema, frothy urine, ascites, hypovolemia signs — <em>1M</em></li>
+                                <li><strong>Investigations:</strong> Urine protein 3–4+, ↓albumin &lt;2.5, ↑cholesterol, <strong>normal C3</strong> — <em>1M</em></li>
+                                <li><strong>General management:</strong> Bed rest, normal protein, salt restriction, daily monitoring — <em>0.5M</em></li>
+                                <li><strong>Steroid protocol:</strong> 2 mg/kg/day × 6w → 1.5 mg/kg alt days × 6w → taper — <em>1M</em></li>
+                                <li><strong>Complication Rx:</strong> Hypovolemia (albumin + furosemide), infection (ceftriaxone), thrombosis (LMWH) — <em>1M</em></li>
+                                <li><strong>Steroid-sparing:</strong> Cyclophosphamide, Cyclosporine, Tacrolimus, MMF, Rituximab — <em>0.5M</em></li>
+                                <li><strong>Prognosis:</strong> MCD excellent; FSGS poor — <em>0.5M</em></li>
+                                <li><strong>Flowchart / Diagram:</strong> Management algorithm or steroid protocol — <em>1M</em></li>
+                                <li><strong>Neatness &amp; Structure:</strong> — <em>1M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== RICKETS ========================== -->
+            <div class="topic-section" id="topic-rickets">
+                <div class="a4-sheet hot">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge hot">Very High Probability</span>
+                            <span class="sheet-badge">Endocrinology</span>
+                            <span class="sheet-badge">Short Note / Essay</span>
+                        </div>
+                        <div class="sheet-marks">3–10 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 9-month-old infant is brought with delayed teething, wrist swelling, and bowing of legs. Discuss the biochemical changes, clinical features, radiological findings, and management. (2+3+2+3=10)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition &amp; Types → 1M</span>
+                        <span class="mark-chip">Biochemical Changes → 2M</span>
+                        <span class="mark-chip">Clinical Features → 2M</span>
+                        <span class="mark-chip">Radiology → 2M</span>
+                        <span class="mark-chip">Management → 2M</span>
+                        <span class="mark-chip">Complications → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition</h2>
+                        <p><strong>Rickets</strong> is a disorder of defective mineralization of the growth plate (physis) in children caused by <strong>vitamin D deficiency</strong>, calcium deficiency, or phosphate deficiency. <strong>Osteomalacia</strong> is the adult equivalent affecting trabecular bone.</p>
+                        <h3>Classification</h3>
+                        <table class="data-table">
+                            <tr><th>Type</th><th>Mechanism</th><th>Key Lab</th></tr>
+                            <tr><td><strong>Nutritional (Vit D deficient)</strong></td><td>Inadequate intake / sunlight</td><td>↓25(OH)D, ↓Ca, ↓PO4, ↑PTH, ↑ALP</td></tr>
+                            <tr><td><strong>Vit D dependent Type I</strong></td><td>Renal 1α-hydroxylase deficiency (AR)</td><td>↓1,25(OH)₂D; Rx: Calcitriol</td></tr>
+                            <tr><td><strong>Vit D dependent Type II</strong></td><td>End-organ resistance to Vit D (AR)</td><td>↑↑1,25(OH)₂D; Alopecia common</td></tr>
+                            <tr><td><strong>Vit D resistant (Hypophosphatemic)</strong></td><td>Renal phosphate wasting (X-linked)</td><td>↓PO4, normal Ca, normal 25(OH)D</td></tr>
+                            <tr><td><strong>Renal Rickets</strong></td><td>Chronic kidney disease</td><td>↓Ca, ↑PO4, ↑PTH, metabolic acidosis</td></tr>
+                        </table>
+                        <h2>2. Biochemical Changes (Scoring Heavy)</h2>
+                        <div class="mermaid">
+flowchart LR
+    A["Low Dietary Vit D or Sunlight"] --> B["Low 25-OH Vit D (under 20 ng/mL)"]
+    B --> C["Low Intestinal Ca absorption"]
+    C --> D["Hypocalcemia"]
+    D --> E["High PTH secretion (Secondary hyperparathyroidism)"]
+    E --> F["Renal phosphate wasting"]
+    E --> G["Bone resorption for calcium"]
+    F --> H["Hypophosphatemia"]
+    G --> I["Normalization of Ca"]
+    H --> J["Low Ca x PO4 product (under 30 mg2/dL2)"]
+    J --> K["Defective mineralization of osteoid"]
+    K --> L["Rickets"]
+                        </div>
+                        <table class="data-table">
+                            <tr><th>Parameter</th><th>Change</th><th>Mechanism</th></tr>
+                            <tr><td><strong>Serum Calcium</strong></td><td>Low / Low-normal</td><td>↓ Intestinal absorption</td></tr>
+                            <tr><td><strong>Serum Phosphate</strong></td><td>Low</td><td>Renal phosphate wasting (PTH effect)</td></tr>
+                            <tr><td><strong>Serum ALP</strong></td><td><strong>Markedly elevated</strong></td><td>Osteoblast hyperactivity (unmineralized osteoid)</td></tr>
+                            <tr><td><strong>Serum PTH</strong></td><td><strong>Elevated</strong></td><td>Secondary hyperparathyroidism</td></tr>
+                            <tr><td><strong>25-OH Vitamin D</strong></td><td><strong>Low</strong> (&lt;20 ng/mL)</td><td>Best indicator of body stores</td></tr>
+                            <tr><td><strong>1,25(OH)₂D</strong></td><td>Low / Normal</td><td>May be preserved due to ↑PTH-driven 1α-hydroxylase</td></tr>
+                        </table>
+                        <h2>3. Clinical Features</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Head &amp; Chest</h4>
+                                <ul>
+                                    <li><strong>Craniotabes</strong> — ping-pong ball sensation of skull (3–6 months)</li>
+                                    <li><strong>Delayed fontanelle closure</strong> — anterior fontanelle &gt;18 months</li>
+                                    <li><strong>Rachitic rosary</strong> — costochondral beading</li>
+                                    <li><strong>Harrison's sulcus</strong> — groove along lower rib cage (diaphragmatic tug)</li>
+                                    <li><strong>Pectus carinatum / excavatum</strong></li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Extremities &amp; Spine</h4>
+                                <ul>
+                                    <li><strong>Wrist widening</strong> — enlargement of distal radius &amp; ulna</li>
+                                    <li><strong>Ankle widening</strong></li>
+                                    <li><strong>Bow legs</strong> (genu varum) — &lt;3 years</li>
+                                    <li><strong>Knock knees</strong> (genu valgum) — &gt;3 years</li>
+                                    <li><strong>Delayed teething</strong> — &gt;12 months for first tooth</li>
+                                    <li><strong>Kyphosis / Scoliosis</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Clinical Features Mnemonic — CRaWL</div>
+                            <div class="mnemonic-text">C-R-W-L</div>
+                            <div class="mnemonic-exp">
+                                <strong>C</strong>raniotabes &nbsp;|&nbsp;
+                                <strong>R</strong>osary (rachitic) &nbsp;|&nbsp;
+                                <strong>W</strong>rist widening &nbsp;|&nbsp;
+                                <strong>L</strong>egs bowed / knock-kneed
+                            </div>
+                        </div>
+                        <h2>4. Radiological Findings (X-ray Wrist — AP View)</h2>
+                        <p>X-ray of the wrist is the <strong>gold standard</strong> for diagnosing rickets. Look for changes at the <strong>distal radius and ulna metaphysis</strong>:</p>
+                        <ul>
+                            <li><strong>Cupping</strong> — concavity of metaphysis (saucerization)</li>
+                            <li><strong>Fraying</strong> — irregular, brush-like appearance of metaphyseal margins</li>
+                            <li><strong>Splaying</strong> — widening of the growth plate (&gt;2 mm)</li>
+                            <li><strong>Reduced bone density</strong> — coarsened trabecular pattern</li>
+                            <li><strong>Greenstick fractures</strong></li>
+                        </ul>
+                        <div class="diagram-row">
+                            <div class="diag-box primary">
+                                <div class="diag-box-title">Normal Metaphysis</div>
+                                <div class="diag-box-desc">Smooth, sharp, well-corticated margin</div>
+                            </div>
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Rachitic Metaphysis</div>
+                                <div class="diag-box-desc">Cupped + Frayed + Splayed + Poor density</div>
+                            </div>
+                        </div>
+                        <h2>5. Management</h2>
+                        <h3>A. Nutritional Rickets — Stoss Therapy vs Daily</h3>
+                        <table class="data-table">
+                            <tr><th>Regimen</th><th>Dose</th><th>Duration</th></tr>
+                            <tr><td><strong>Daily Therapy (Preferred)</strong></td><td>Vit D3 2000–4000 IU/day</td><td>6–12 weeks, then 400 IU maintenance</td></tr>
+                            <tr><td><strong>Stoss Therapy</strong></td><td>Vit D3 150,000–300,000 IU orally (single or split dose)</td><td>Single dose; repeat if needed at 3 months</td></tr>
+                            <tr><td><strong>Calcium</strong></td><td>Elemental calcium 50–100 mg/kg/day</td><td>Alongside Vit D</td></tr>
+                        </table>
+                        <h3>B. Monitoring</h3>
+                        <ul>
+                            <li>Clinical improvement in 2–4 weeks; radiological healing in 3–6 months</li>
+                            <li>Monitor serum Ca, PO4, ALP at 4, 8, 12 weeks</li>
+                            <li>25(OH)D target: &gt;30 ng/mL</li>
+                        </ul>
+                        <h3>C. Surgical</h3>
+                        <ul>
+                            <li>Corrective osteotomy for severe deformities (after healing of rickets)</li>
+                        </ul>
+                        <h2>6. Prevention</h2>
+                        <ul>
+                            <li><strong>Breastfed infants:</strong> 400 IU/day Vit D3 from first few days of life</li>
+                            <li><strong>Formula-fed infants:</strong> If &lt;1 L/day formula, supplement 400 IU</li>
+                            <li><strong>Pregnant &amp; lactating mothers:</strong> 600 IU/day</li>
+                            <li><strong>Sun exposure:</strong> 15–30 min/day (arms &amp; legs)</li>
+                            <li><strong>Diet:</strong> Fortified milk, eggs, fish, cod liver oil</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (Rickets)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Defective mineralization of growth plate due to Vit D / Ca / PO4 deficiency — <em>0.5M</em></li>
+                                <li><strong>Types:</strong> Nutritional, Vit D dependent I &amp; II, Vit D resistant, Renal — <em>0.5M</em></li>
+                                <li><strong>Biochemistry:</strong> ↓Ca, ↓PO4, ↑ALP, ↑PTH, ↓25(OH)D — draw pathway — <em>2M</em></li>
+                                <li><strong>Clinical features:</strong> Craniotabes, rachitic rosary, Harrison's sulcus, wrist widening, bow legs — <em>2M</em></li>
+                                <li><strong>X-ray:</strong> Cupping + Fraying + Splaying of metaphysis — <em>1.5M</em></li>
+                                <li><strong>Management:</strong> Vit D 2000–4000 IU/day × 6–12w or Stoss 150,000–300,000 IU; calcium; diet — <em>2M</em></li>
+                                <li><strong>Prevention:</strong> 400 IU/day in infants, maternal supplementation, sun exposure — <em>0.5M</em></li>
+                                <li><strong>Diagram / Mnemonic:</strong> — <em>1M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== CONGENITAL HYPOTHYROIDISM ========================== -->
+            <div class="topic-section" id="topic-hypothyroid">
+                <div class="a4-sheet warm">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge warm">High Probability</span>
+                            <span class="sheet-badge">Endocrinology</span>
+                            <span class="sheet-badge">Short Note</span>
+                        </div>
+                        <div class="sheet-marks">3–5 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        Describe the clinical features, screening, and management of congenital hypothyroidism. (2+2+1=5)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition &amp; Etiology → 1M</span>
+                        <span class="mark-chip">Clinical Features → 2M</span>
+                        <span class="mark-chip">Screening → 1M</span>
+                        <span class="mark-chip">Management → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition &amp; Etiology</h2>
+                        <p><strong>Congenital Hypothyroidism (CH)</strong> is thyroid hormone deficiency present at birth. It is the <strong>most common preventable cause of intellectual disability</strong>. Incidence: 1:2500–1:4000 live births.</p>
+                        <table class="data-table">
+                            <tr><th>Type</th><th>Cause</th><th>%</th></tr>
+                            <tr><td><strong>Primary (Thyroid dysgenesis)</strong></td><td>Agenesis, hypoplasia, ectopic thyroid (lingual/submandibular)</td><td>80–85%</td></tr>
+                            <tr><td><strong>Primary (Dyshormonogenesis)</strong></td><td>Defects in thyroid hormone synthesis (TSH receptor, thyroglobulin, peroxidase, pendrin, deiodinase)</td><td>10–15%</td></tr>
+                            <tr><td><strong>Central (Hypothalamic-Pituitary)</strong></td><td>Defective TRH/TSH secretion; midline defects (holoprosencephaly, septo-optic dysplasia)</td><td>1–5%</td></tr>
+                        </table>
+                        <h2>2. Clinical Features</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Neonatal Period (First 2–4 Weeks)</h4>
+                                <ul>
+                                    <li><strong>Prolonged physiological jaundice</strong> (&gt;7 days) — unconjugated</li>
+                                    <li><strong>Hypotonia, lethargy, poor feeding</strong></li>
+                                    <li><strong>Constipation</strong></li>
+                                    <li><strong>Hypothermia</strong> (cold, mottled skin)</li>
+                                    <li><strong>Large anterior + posterior fontanelle</strong></li>
+                                    <li><strong>Bradycardia</strong></li>
+                                    <li><strong>Respiratory distress</strong> (myxedema of vocal cords)</li>
+                                    <li><strong>Edema (periorbital, peripheral)</strong></li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Infantile Period (2–3 Months Onwards)</h4>
+                                <ul>
+                                    <li><strong>Coarse facies</strong> — flat nasal bridge, puffy eyes, macroglossia</li>
+                                    <li><strong>Umbilical hernia</strong></li>
+                                    <li><strong>Goiter</strong> (in dyshormonogenesis)</li>
+                                    <li><strong>Developmental delay</strong> — poor head control, delayed milestones</li>
+                                    <li><strong>Hoarse cry</strong></li>
+                                    <li><strong>Dry skin, sparse hair</strong></li>
+                                    <li><strong>Short stature</strong></li>
+                                    <li><strong>Anemia</strong> (macrocytic)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Clinical Features — COLD CHILD</div>
+                            <div class="mnemonic-text">C-O-L-D C-H-I-L-D</div>
+                            <div class="mnemonic-exp">
+                                <strong>C</strong>onstipation &nbsp;|&nbsp;
+                                <strong>O</strong>bstructive jaundice (prolonged) &nbsp;|&nbsp;
+                                <strong>L</strong>arge fontanelle &nbsp;|&nbsp;
+                                <strong>D</strong>evelopmental delay &nbsp;|&nbsp;
+                                <strong>C</strong>ourse facies &nbsp;|&nbsp;
+                                <strong>H</strong>oarse cry &nbsp;|&nbsp;
+                                <strong>I</strong>ntellectual disability (if untreated) &nbsp;|&nbsp;
+                                <strong>L</strong>ethargy &nbsp;|&nbsp;
+                                <strong>D</strong>ry skin
+                            </div>
+                        </div>
+                        <h2>3. Newborn Screening</h2>
+                        <p>All newborns must be screened at <strong>day 3–5 of life</strong> (before discharge, optimally 48–72h after birth to avoid physiological TSH surge).</p>
+                        <ul>
+                            <li><strong>Primary screening:</strong> TSH (most common) or T4</li>
+                            <li><strong>Abnormal:</strong> TSH &gt;20–40 mIU/L (varies by lab); T4 &lt;10 μg/dL</li>
+                            <li><strong>Confirmatory test:</strong> Serum TSH, free T4, total T4</li>
+                            <li><strong>If TSH high + T4 low:</strong> Primary hypothyroidism</li>
+                            <li><strong>If TSH low/normal + T4 low:</strong> Central hypothyroidism — do MRI pituitary</li>
+                        </ul>
+                        <h2>4. Management</h2>
+                        <ul>
+                            <li><strong>Levothyroxine (L-thyroxine)</strong> — <strong>10–15 μg/kg/day</strong> PO started <strong>immediately</strong> after confirmation</li>
+                            <li>Start treatment <strong>within 2 weeks of life</strong> for normal neurodevelopmental outcome</li>
+                            <li>Crush tablet, mix with breast milk/formula; do NOT give with soy/iron/calcium (reduces absorption)</li>
+                            <li><strong>Monitoring:</strong> TSH and free T4 every 1–2 months in first 6 months; then every 3 months until age 3; then every 6–12 months</li>
+                            <li><strong>Target:</strong> TSH 0.5–2.0 mIU/L; free T4 in upper normal range</li>
+                            <li><strong>Prognosis:</strong> Excellent if treatment starts within 2 weeks; IQ normal</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (Congenital Hypothyroidism)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Thyroid hormone deficiency at birth; most common preventable cause of mental retardation — <em>0.5M</em></li>
+                                <li><strong>Etiology:</strong> Thyroid dysgenesis (85%), dyshormonogenesis (15%), central (1–5%) — <em>0.5M</em></li>
+                                <li><strong>Clinical:</strong> Prolonged jaundice, hypotonia, constipation, cold skin, large fontanelle, coarse facies, macroglossia, umbilical hernia, hoarse cry — <em>1.5M</em></li>
+                                <li><strong>Screening:</strong> TSH at day 3–5; confirm with TSH + free T4; start Rx before 2 weeks — <em>1M</em></li>
+                                <li><strong>Management:</strong> Levothyroxine 10–15 μg/kg/day; monitor TSH/T4 every 1–2 months; avoid soy/iron — <em>1M</em></li>
+                                <li><strong>Prognosis:</strong> Excellent if early treatment; normal IQ — <em>0.5M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== TESTICULAR TORSION ========================== -->
+            <div class="topic-section" id="topic-torsion">
+                <div class="a4-sheet warm">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge warm">High Probability</span>
+                            <span class="sheet-badge">Nephrology / Surgery</span>
+                            <span class="sheet-badge">Short Note</span>
+                        </div>
+                        <div class="sheet-marks">3 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 12-year-old boy presents with sudden severe pain in the right scrotum and vomiting. Discuss the differential diagnosis, investigations, and emergency management. (1+1+1=3)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">DDx of Acute Scrotum → 1M</span>
+                        <span class="mark-chip">Clinical Features → 0.5M</span>
+                        <span class="mark-chip">Investigations → 0.5M</span>
+                        <span class="mark-chip">Emergency Management → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Differential Diagnosis of Acute Scrotum</h2>
+                        <table class="data-table">
+                            <tr><th>Condition</th><th>Age</th><th>Key Feature</th></tr>
+                            <tr><td><strong>Testicular Torsion</strong></td><td>Neonatal / Peripubertal (12–18y)</td><td>Sudden pain, high-riding testis, absent cremasteric</td></tr>
+                            <tr><td><strong>Torsion of Testicular Appendage</strong></td><td>Prepubertal</td><td>Blue dot sign, localized tenderness at upper pole</td></tr>
+                            <tr><td><strong>Epididymo-orchitis</strong></td><td>Any age</td><td>Fever, pyuria, gradual onset, UTIs</td></tr>
+                            <tr><td><strong>Idiopathic Scrotal Edema</strong></td><td>3–8 years</td><td>Painless erythematous scrotal edema</td></tr>
+                            <tr><td><strong>Trauma / Henoch-Schonlein Purpura</strong></td><td>Any age</td><td>History of trauma / purpura rash</td></tr>
+                            <tr><td><strong>Inguinal Hernia (Incarcerated)</strong></td><td>Infants</td><td>Visible bulge, irritability, vomiting</td></tr>
+                        </table>
+                        <h2>2. Clinical Features of Testicular Torsion</h2>
+                        <ul>
+                            <li><strong>Sudden severe unilateral scrotal pain</strong> (often wakes child from sleep)</li>
+                            <li><strong>Nausea and vomiting</strong> (due to severe pain)</li>
+                            <li><strong>High-riding testis</strong> (horizontal lie — "bell-clapper deformity")</li>
+                            <li><strong>Absent cremasteric reflex</strong> (most sensitive sign)</li>
+                            <li><strong>Scrotal swelling, erythema, tenderness</strong></li>
+                            <li><strong>No relief with elevation</strong> (vs epididymitis where elevation helps — Prehn's sign)</li>
+                        </ul>
+                        <h2>3. Investigations</h2>
+                        <ul>
+                            <li><strong>Color Doppler USG</strong> — <strong>test of choice</strong>; shows <strong>absent or decreased blood flow</strong> to testis (sensitivity 90–100%)</li>
+                            <li><strong>Radionuclide scan</strong> — rarely used now; "cold spot" in torsion</li>
+                            <li><strong>Urine analysis</strong> — normal (vs pyuria in infection)</li>
+                            <li><strong>Do NOT delay surgery for imaging if clinical suspicion is high</strong></li>
+                        </ul>
+                        <h2>4. Emergency Management</h2>
+                        <div class="mermaid">
+flowchart TD
+    A["Suspected Testicular Torsion"] --> B{"Time since onset?"}
+    B -->|under 6 hours| C["Immediate Surgical Exploration"]
+    B -->|6 to 12 hours| D["High risk of infarction - Still explore urgently"]
+    B -->|over 24 hours| E["Likely non-viable - Explore + orchidectomy"]
+    C --> F["Scrotal Approach"]
+    F --> G["Detorsion + Warm packs"]
+    G --> H{"Testis viable?"}
+    H -->|Yes| I["Bilateral Orchidopexy - Fix both testes"]
+    H -->|No| J["Orchidectomy + Contralateral fixation"]
+    I --> K["Prognosis: Good if under 6 hours"]
+    J --> L["Counsel about fertility + testosterone"]
+                        </div>
+                        <ul>
+                            <li><strong>Immediate surgical exploration</strong> — do not wait for imaging if strongly suspected</li>
+                            <li><strong>Manual detorsion</strong> may be attempted as a temporizing measure ("open the book" — rotate testis laterally 180° × 2)</li>
+                            <li><strong>Scrotal exploration:</strong> Detorsion, assess viability (warm packs), bilateral orchidopexy (fix both testes to prevent future torsion)</li>
+                            <li><strong>Salvage rate:</strong> &gt;90% if surgery within 6 hours; &lt;10% if &gt;24 hours</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (Testicular Torsion)</div>
+                            <ul>
+                                <li><strong>DDx:</strong> Torsion of appendage, epididymo-orchitis, HSP, trauma, incarcerated hernia, idiopathic edema — <em>0.5M</em></li>
+                                <li><strong>Clinical:</strong> Sudden pain, vomiting, high-riding testis, absent cremasteric reflex — <em>0.5M</em></li>
+                                <li><strong>Investigations:</strong> Color Doppler USG — absent blood flow; urine normal — <em>0.5M</em></li>
+                                <li><strong>Management:</strong> Emergency surgery within 6h; detorsion + bilateral orchidopexy; orchidectomy if non-viable — <em>1M</em></li>
+                                <li><strong>Diagram / Flowchart:</strong> — <em>0.5M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== HEMATURIA DDx ========================== -->
+            <div class="topic-section" id="topic-hematuria">
+                <div class="a4-sheet warm">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge warm">High Probability</span>
+                            <span class="sheet-badge">Nephrology</span>
+                            <span class="sheet-badge">Short Note</span>
+                        </div>
+                        <div class="sheet-marks">3 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 7-year-old child presents with painless hematuria. Discuss the approach to diagnosis and differential diagnosis. (1.5+1.5=3)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Classification → 0.5M</span>
+                        <span class="mark-chip">Glomerular Causes → 1M</span>
+                        <span class="mark-chip">Non-Glomerular Causes → 1M</span>
+                        <span class="mark-chip">Investigations → 0.5M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Classification of Hematuria</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Glomerular Hematuria</h4>
+                                <ul>
+                                    <li><strong>Color:</strong> Cola/tea/smoky (brown)</li>
+                                    <li><strong>RBCs:</strong> Dysmorphic, fragmented (acanthocytes)</li>
+                                    <li><strong>Casts:</strong> RBC casts pathognomonic</li>
+                                    <li><strong>Proteinuria:</strong> Present (often &gt;+++)</li>
+                                    <li><strong>Clots:</strong> Absent</li>
+                                    <li><strong>Associated:</strong> Edema, hypertension, ↓GFR</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Non-Glomerular Hematuria</h4>
+                                <ul>
+                                    <li><strong>Color:</strong> Fresh red/pink</li>
+                                    <li><strong>RBCs:</strong> Isomorphic (normal shape)</li>
+                                    <li><strong>Casts:</strong> Absent</li>
+                                    <li><strong>Proteinuria:</strong> Minimal or absent</li>
+                                    <li><strong>Clots:</strong> May be present</li>
+                                    <li><strong>Associated:</strong> Dysuria, flank pain, trauma history</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>2. Differential Diagnosis</h2>
+                        <div class="mermaid">
+flowchart TD
+    A["Hematuria"] --> B{"Glomerular?"}
+    B -->|Yes| C["AGN or PSGN"]
+    B -->|Yes| D["IgA Nephropathy (Synpharyngitic hematuria)"]
+    B -->|Yes| E["HSP or IgA vasculitis"]
+    B -->|Yes| F["Alport Syndrome (X-linked, hearing loss)"]
+    B -->|Yes| G["MPGN"]
+    B -->|Yes| H["Thin Basement Membrane Disease"]
+    B -->|No| I["UTI"]
+    B -->|No| J["Urolithiasis"]
+    B -->|No| K["Trauma"]
+    B -->|No| L["Hypercalciuria (#1 cause of isolated hematuria)"]
+    B -->|No| M["Coagulopathy"]
+    B -->|No| N["Sickle Cell Trait or Disease"]
+    B -->|No| O["Wilms Tumor"]
+    B -->|No| P["PUV or UPJ obstruction"]
+                        </div>
+                        <h2>3. Key Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Test</th><th>Purpose</th></tr>
+                            <tr><td><strong>Urine microscopy</strong></td><td>Dysmorphic vs isomorphic RBCs; RBC casts; crystals</td></tr>
+                            <tr><td><strong>Urine culture</strong></td><td>Rule out UTI</td></tr>
+                            <tr><td><strong>Urine calcium/creatinine</strong></td><td>Hypercalciuria (&gt;0.21 mg/mg)</td></tr>
+                            <tr><td><strong>C3, C4</strong></td><td>Low in PSGN, MPGN; normal in IgA, HSP</td></tr>
+                            <tr><td><strong>ASO, Anti-DNase B</strong></td><td>PSGN</td></tr>
+                            <tr><td><strong>IgA levels</strong></td><td>Elevated in IgA nephropathy, HSP</td></tr>
+                            <tr><td><strong>USG KUB</strong></td><td>Stones, masses, hydronephrosis, bladder wall thickness</td></tr>
+                            <tr><td><strong>CT KUB</strong></td><td>Non-contrast for stones</td></tr>
+                            <tr><td><strong>Cystoscopy</strong></td><td>If structural bladder abnormality suspected</td></tr>
+                            <tr><td><strong>Renal biopsy</strong></td><td>If glomerular + persistent hematuria + proteinuria</td></tr>
+                        </table>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">&#127919; Exam Scoring Checklist (Hematuria DDx)</div>
+                            <ul>
+                                <li><strong>Classification:</strong> Glomerular (dysmorphic RBCs, RBC casts, brown urine) vs Non-glomerular (isomorphic RBCs, red urine, clots) — <em>0.5M</em></li>
+                                <li><strong>Glomerular causes:</strong> AGN, IgA nephropathy, HSP, Alport, MPGN, TBM disease — <em>1M</em></li>
+                                <li><strong>Non-glomerular causes:</strong> UTI, stones, trauma, hypercalciuria, coagulopathy, sickle cell, Wilms, PUV — <em>0.5M</em></li>
+                                <li><strong>Investigations:</strong> Urine microscopy, culture, calcium/creatinine, C3, USG, biopsy — <em>0.5M</em></li>
+                                <li><strong>Table / Flowchart:</strong> — <em>0.5M</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== NEONATAL HYPOGLYCEMIA ========================== -->
+            <div class="topic-section" id="topic-hypoglycemia">
+                <div class="a4-sheet warm">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge warm">High Probability</span>
+                            <span class="sheet-badge">Neonatology</span>
+                            <span class="sheet-badge">Short Note</span>
+                        </div>
+                        <div class="sheet-marks">3 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        Define neonatal hypoglycemia. List the risk factors, clinical features, and management. (1+1+1=3)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition → 1M</span>
+                        <span class="mark-chip">Risk Factors → 0.5M</span>
+                        <span class="mark-chip">Clinical Features → 0.5M</span>
+                        <span class="mark-chip">Management → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition</h2>
+                        <p><strong>Operational threshold:</strong> Plasma glucose &lt;40 mg/dL in the first 24 hours; &lt;45 mg/dL after 24 hours.</p>
+                        <p><strong>Neuroglycopenic threshold:</strong> &lt;30 mg/dL — risk of permanent brain injury</p>
+                        <h2>2. Risk Factors</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Increased Utilization / Decreased Stores</h4>
+                                <ul>
+                                    <li><strong>Preterm / SGA / IUGR</strong> — decreased glycogen stores</li>
+                                    <li><strong>Perinatal asphyxia / Hypothermia</strong></li>
+                                    <li><strong>Sepsis</strong></li>
+                                    <li><strong>Polycythemia</strong></li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Hyperinsulinism / Endocrine</h4>
+                                <ul>
+                                    <li><strong>Infant of Diabetic Mother (IDM)</strong></li>
+                                    <li><strong>Large for Gestational Age (LGA)</strong></li>
+                                    <li><strong>Beckwith-Wiedemann syndrome</strong></li>
+                                    <li><strong>Transfusion / Exchange</strong></li>
+                                    <li><strong>Pituitary / adrenal insufficiency</strong></li>
+                                    <li><strong>Inborn errors of metabolism</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>3. Clinical Features</h2>
+                        <table class="data-table">
+                            <tr><th>System</th><th>Signs</th></tr>
+                            <tr><td><strong>CNS</strong></td><td>Jitteriness, tremors, irritability, lethargy, hypotonia, seizures, apnea, coma</td></tr>
+                            <tr><td><strong>Autonomic</strong></td><td>Sweating, tachycardia, pallor, cyanosis</td></tr>
+                            <tr><td><strong>Respiratory</strong></td><td>Apnea, tachypnea, respiratory distress</td></tr>
+                            <tr><td><strong>GI</strong></td><td>Poor feeding, weak suck</td></tr>
+                            <tr><td><strong>Other</strong></td><td>Temperature instability, high-pitched cry</td></tr>
+                        </table>
+                        <p><strong>Asymptomatic hypoglycemia</strong> is common — detected only on screening</p>
+                        <h2>4. Management</h2>
+                        <ul>
+                            <li><strong>Screening:</strong> All at-risk neonates at 2, 6, 12, 24, 36, 48 hours</li>
+                            <li><strong>Asymptomatic (glucose 25-40):</strong> Feed immediately; recheck in 30 min</li>
+                            <li><strong>Symptomatic or less than 25 mg/dL:</strong> IV D10 2 mL/kg bolus then D10 maintenance 80-100 mL/kg/day</li>
+                            <li><strong>Goal:</strong> Maintain glucose greater than 45-50 mg/dL</li>
+                            <li><strong>If persistent:</strong> Increase GIR to 8-12 mg/kg/min; add glucagon 0.03 mg/kg IV or hydrocortisone 5 mg/kg/day</li>
+                            <li><strong>Refractory:</strong> Evaluate for hyperinsulinism then Diazoxide / Octreotide / Surgery</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (Neonatal Hypoglycemia)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> less than 40 mg/dL first 24h; less than 45 mg/dL after</li>
+                                <li><strong>Risk factors:</strong> IDM, preterm, SGA, LGA, asphyxia, sepsis, Beckwith-Wiedemann</li>
+                                <li><strong>Clinical:</strong> Jitteriness, seizures, apnea, lethargy, poor feeding, sweating</li>
+                                <li><strong>Management:</strong> Feed if asymptomatic; IV D10 bolus plus maintenance if symptomatic; increase GIR; glucagon/hydrocortisone if refractory</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== INTUSSUSCEPTION ========================== -->
+            <div class="topic-section" id="topic-intussusception">
+                <div class="a4-sheet cool">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge cool">Moderate Probability</span>
+                            <span class="sheet-badge">GI Surgery</span>
+                            <span class="sheet-badge">Short Note / Essay</span>
+                        </div>
+                        <div class="sheet-marks">3-5 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 9-month-old infant is brought with episodes of severe crying, vomiting, and passing currant jelly stool. Discuss the diagnosis, investigations, and management. (2+1+2=5)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition and Pathophysiology → 1M</span>
+                        <span class="mark-chip">Clinical Features → 1.5M</span>
+                        <span class="mark-chip">Investigations → 1M</span>
+                        <span class="mark-chip">Management → 1.5M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition</h2>
+                        <p><strong>Intussusception</strong> is the telescoping (invagination) of a proximal segment of bowel (intussusceptum) into the distal segment (intussuscipiens). It is the <strong>most common cause of intestinal obstruction</strong> in children aged 6-36 months.</p>
+                        <ul>
+                            <li><strong>Idiopathic (90%):</strong> Lymphoid hyperplasia of Peyer patches (post-viral)</li>
+                            <li><strong>Lead point (10%):</strong> Meckel diverticulum, polyp, lymphoma, duplication cyst, HSP</li>
+                            <li><strong>Location:</strong> Ileocolic (most common); ileoileal; colocolic</li>
+                        </ul>
+                        <h2>2. Clinical Features</h2>
+                        <div class="compare-grid">
+                            <div class="compare-card">
+                                <h4>Classic Triad (20-30%)</h4>
+                                <ul>
+                                    <li><strong>Colicky abdominal pain</strong> — episodic, severe crying with legs drawn up</li>
+                                    <li><strong>Vomiting</strong> — initially non-bilious; later bilious</li>
+                                    <li><strong>Currant jelly stool</strong> — blood + mucus + sloughed mucosa</li>
+                                </ul>
+                            </div>
+                            <div class="compare-card">
+                                <h4>Other Features</h4>
+                                <ul>
+                                    <li><strong>Dance's sign</strong> — emptiness in RLQ</li>
+                                    <li><strong>Sausage-shaped mass</strong> — palpable in RUQ/epigastrium</li>
+                                    <li><strong>Lethargy</strong> between pain episodes (can mimic sepsis)</li>
+                                    <li><strong>Abdominal distension, fever, dehydration</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Intussusception Mnemonic — I-LEAD</div>
+                            <div class="mnemonic-text">I-L-E-A-D</div>
+                            <div class="mnemonic-exp">
+                                <strong>I</strong>ntermittent colic | <strong>L</strong>ethargy | <strong>E</strong>mesis | <strong>A</strong>bdominal mass | <strong>D</strong>ance's sign + Dark red jelly stool
+                            </div>
+                        </div>
+                        <h2>3. Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Investigation</th><th>Finding</th></tr>
+                            <tr><td><strong>USG Abdomen</strong></td><td><strong>Test of choice</strong>; Target sign / Doughnut sign on transverse view; Pseudokidney sign on longitudinal view</td></tr>
+                            <tr><td><strong>Barium / Air Enema</strong></td><td>Claw sign / Crescent sign; therapeutic reduction possible</td></tr>
+                            <tr><td><strong>X-ray Abdomen</strong></td><td>Dilated small bowel loops; paucity of gas in RLQ; soft tissue mass</td></tr>
+                        </table>
+                        <h2>4. Management</h2>
+                        <h3>A. Non-Operative Reduction (First Line if No Peritonitis)</h3>
+                        <ul>
+                            <li><strong>Air (Pneumatic) Enema</strong> — preferred; safer; lower perforation rate; success rate 80-95%</li>
+                            <li><strong>Contrast (Hydrostatic) Enema</strong> — barium or water-soluble contrast</li>
+                            <li><strong>Contraindications:</strong> Peritonitis, perforation, hemodynamic instability, suspected pathological lead point</li>
+                            <li><strong>Success criteria:</strong> Free flow of air into terminal ileum; resolution of mass; child becomes asymptomatic</li>
+                            <li><strong>Recurrence:</strong> 5-10% after enema reduction; can attempt repeat enema</li>
+                        </ul>
+                        <h3>B. Surgical Management</h3>
+                        <ul>
+                            <li><strong>Indications:</strong> Failed enema, peritonitis/perforation, suspected lead point, hemodynamic instability</li>
+                            <li><strong>Procedure:</strong> Laparotomy / laparoscopy then manual reduction (milk out from distal to proximal)</li>
+                            <li><strong>Resection:</strong> If bowel is necrotic or cannot be reduced then resection + primary anastomosis</li>
+                        </ul>
+                        <h2>5. Prognosis</h2>
+                        <ul>
+                            <li>Excellent if treated within 24 hours</li>
+                            <li>Mortality increases significantly if bowel necrosis/perforation occurs</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (Intussusception)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Telescoping of bowel; most common intestinal obstruction 6-36 months</li>
+                                <li><strong>Etiology:</strong> Idiopathic (lymphoid hyperplasia) 90%; lead point 10%</li>
+                                <li><strong>Clinical triad:</strong> Colicky pain + vomiting + currant jelly stool</li>
+                                <li><strong>Examination:</strong> Sausage mass, Dance's sign, lethargy</li>
+                                <li><strong>Investigations:</strong> USG — target/doughnut sign; air enema — claw sign</li>
+                                <li><strong>Management:</strong> Air enema reduction first line; surgery if peritonitis/failed reduction</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== PORTAL HYPERTENSION ========================== -->
+            <div class="topic-section" id="topic-portal">
+                <div class="a4-sheet cool">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge cool">Moderate Probability</span>
+                            <span class="sheet-badge">Hepatology</span>
+                            <span class="sheet-badge">Short Note</span>
+                        </div>
+                        <div class="sheet-marks">3 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        Define portal hypertension. Discuss the etiology, clinical features, and management in children. (1+1+1=3)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition → 0.5M</span>
+                        <span class="mark-chip">Etiology → 0.5M</span>
+                        <span class="mark-chip">Clinical Features → 1M</span>
+                        <span class="mark-chip">Management → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition</h2>
+                        <p><strong>Portal hypertension</strong> is defined as a portal venous pressure greater than 5 mmHg, or a hepatic venous pressure gradient (HVPG) greater than 5 mmHg. Clinically significant when HVPG greater than 10 mmHg (risk of variceal bleeding).</p>
+                        <h2>2. Etiology (Classified by Site of Obstruction)</h2>
+                        <table class="data-table">
+                            <tr><th>Site</th><th>Cause</th><th>Key Feature</th></tr>
+                            <tr><td><strong>Pre-hepatic</strong></td><td>Portal vein thrombosis (sepsis, omphalitis, dehydration, umbilical catheterization); cavernous transformation</td><td>Normal liver function; splenomegaly prominent; commonest cause in children</td></tr>
+                            <tr><td><strong>Hepatic</strong></td><td>Cirrhosis (biliary atresia post-Kasai, Wilson disease, autoimmune hepatitis, hepatitis B/C); congenital hepatic fibrosis; schistosomiasis</td><td>Abnormal LFT; ascites; encephalopathy</td></tr>
+                            <tr><td><strong>Post-hepatic</strong></td><td>Budd-Chiari syndrome (hepatic vein thrombosis); constrictive pericarditis; veno-occlusive disease</td><td>Ascites; hepatomegaly; abdominal pain</td></tr>
+                        </table>
+                        <h2>3. Clinical Features</h2>
+                        <ul>
+                            <li><strong>Splenomegaly</strong> — most consistent finding; may cause pancytopenia (hypersplenism)</li>
+                            <li><strong>Variceal bleeding</strong> — hematemesis (fresh blood/coffee-ground), melena; esophageal varices (most common), gastric, rectal, umbilical (caput medusae)</li>
+                            <li><strong>Ascites</strong> — if hepatic cause</li>
+                            <li><strong>Hepatomegaly</strong> — if hepatic/post-hepatic cause</li>
+                            <li><strong>Anorectal varices</strong> — often mistaken for hemorrhoids</li>
+                            <li><strong>Encephalopathy</strong> — if hepatic cause with liver failure</li>
+                        </ul>
+                        <h2>4. Management</h2>
+                        <h3>A. Acute Variceal Bleed</h3>
+                        <table class="data-table">
+                            <tr><th>Step</th><th>Action</th></tr>
+                            <tr><td><strong>Resuscitation</strong></td><td>IV access x2; fluid resuscitation; blood transfusion (Hgb target 7-8 g/dL); platelets if less than 50,000; vitamin K; FFP if coagulopathy</td></tr>
+                            <tr><td><strong>Pharmacotherapy</strong></td><td>Octreotide / Somatostatin (vasoconstrict splanchnic vessels); IV PPI; antibiotics (ceftriaxone) to prevent SBP</td></tr>
+                            <tr><td><strong>Endoscopic</strong></td><td>Upper GI endoscopy within 12h; <strong>variceal band ligation</strong> (preferred) or sclerotherapy</td></tr>
+                            <tr><td><strong>Balloon tamponade</strong></td><td>Sengstaken-Blakemore tube if refractory (temporary bridge)</td></tr>
+                            <tr><td><strong>TIPS / Surgery</strong></td><td>If refractory: Transjugular Intrahepatic Portosystemic Shunt or surgical shunt</td></tr>
+                        </table>
+                        <h3>B. Prophylaxis of Re-bleeding</h3>
+                        <ul>
+                            <li><strong>Non-selective beta-blockers:</strong> Propranolol (1-3 mg/kg/day) or Nadolol — reduces portal pressure</li>
+                            <li><strong>Endoscopic variceal ligation (EVL)</strong> — repeat every 2-4 weeks until obliteration</li>
+                            <li><strong>Primary prophylaxis:</strong> Consider in large varices with red signs or Child B/C cirrhosis</li>
+                        </ul>
+                        <h3>C. Definitive / Surgical</h3>
+                        <ul>
+                            <li><strong>Extrahepatic PVO:</strong> Meso-Rex bypass (restores portal flow to liver) — preferred if feasible</li>
+                            <li><strong>Shunt surgery:</strong> Splenorenal shunt (Warren), portosystemic shunt</li>
+                            <li><strong>Liver transplantation:</strong> For hepatic causes with decompensated cirrhosis</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (Portal Hypertension)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Portal pressure greater than 5 mmHg; HVPG greater than 10 = clinically significant</li>
+                                <li><strong>Etiology:</strong> Pre-hepatic (PVT), hepatic (cirrhosis, biliary atresia), post-hepatic (Budd-Chiari)</li>
+                                <li><strong>Clinical:</strong> Splenomegaly, variceal bleeding, ascites, hypersplenism, caput medusae</li>
+                                <li><strong>Acute bleed:</strong> Resuscitation, octreotide, ceftriaxone, endoscopic band ligation</li>
+                                <li><strong>Prophylaxis:</strong> Propranolol, repeated EVL</li>
+                                <li><strong>Definitive:</strong> Meso-Rex bypass, shunt surgery, liver transplant</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== HUS ========================== -->
+            <div class="topic-section" id="topic-hus">
+                <div class="a4-sheet cool">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge cool">Moderate / Surprise</span>
+                            <span class="sheet-badge">Nephrology / Hematology</span>
+                            <span class="sheet-badge">Essay</span>
+                        </div>
+                        <div class="sheet-marks">10 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 2-year-old child presents with pallor, oliguria, and bloody diarrhea after eating at a fast food restaurant. Discuss the diagnosis, pathophysiology, investigations, and management. (2+2+3+3=10)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition and Classification → 2M</span>
+                        <span class="mark-chip">Pathophysiology → 2M</span>
+                        <span class="mark-chip">Clinical Features → 1.5M</span>
+                        <span class="mark-chip">Investigations → 1.5M</span>
+                        <span class="mark-chip">Management → 2M</span>
+                        <span class="mark-chip">Prognosis and DDx → 1M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition and Classification</h2>
+                        <p><strong>Hemolytic Uremic Syndrome (HUS)</strong> is characterized by the <strong>classic triad</strong>:</p>
+                        <div class="diagram-row">
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Microangiopathic Hemolytic Anemia</div>
+                            </div>
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Thrombocytopenia</div>
+                            </div>
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Acute Kidney Injury</div>
+                            </div>
+                        </div>
+                        <table class="data-table">
+                            <tr><th>Type</th><th>Cause</th><th>Features</th></tr>
+                            <tr><td><strong>Typical (D+ HUS)</strong></td><td>Shiga toxin-producing E. coli (STEC) O157:H7, O104:H4; Shigella dysenteriae type 1</td><td>Preceded by bloody diarrhea; 90% of childhood HUS; good prognosis</td></tr>
+                            <tr><td><strong>Atypical (D- HUS)</strong></td><td>Complement dysregulation (factor H, I, B deficiencies; MCP mutations); ADAMTS13 deficiency (TTP)</td><td>No diarrhea; recurrent; poor prognosis; may need eculizumab</td></tr>
+                            <tr><td><strong>Secondary HUS</strong></td><td>Drugs, malignancy, transplantation, SLE, HIV</td><td>Treat underlying cause</td></tr>
+                        </table>
+                        <h2>2. Pathophysiology (Typical HUS)</h2>
+                        <ul>
+                            <li>Ingestion of contaminated food (undercooked beef, unpasteurized milk)</li>
+                            <li>STEC colonizes colon and produces Shiga toxin (Stx1, Stx2)</li>
+                            <li>Toxin binds Gb3 receptors on colonic epithelium then enters bloodstream</li>
+                            <li>Binds Gb3 on endothelial cells (especially kidney glomeruli)</li>
+                            <li>Endothelial injury plus apoptosis leads to platelet adhesion and aggregation</li>
+                            <li>Microthrombi form in glomerular capillaries</li>
+                            <li>Results in microangiopathic hemolysis (schistocytes), thrombocytopenia, and AKI</li>
+                        </ul>
+                        <h2>3. Clinical Features</h2>
+                        <ul>
+                            <li><strong>Prodrome:</strong> Bloody diarrhea (3-7 days), abdominal pain, vomiting, fever</li>
+                            <li><strong>Hemolysis:</strong> Pallor, jaundice, hemoglobinuria</li>
+                            <li><strong>Thrombocytopenia:</strong> Petechiae, purpura, mucosal bleeding</li>
+                            <li><strong>AKI:</strong> Oliguria/anuria, edema, hypertension, fluid overload, electrolyte disturbances</li>
+                            <li><strong>CNS:</strong> Irritability, seizures, altered sensorium (toxin crosses BBB)</li>
+                            <li><strong>Pancreatitis, colitis complications</strong></li>
+                        </ul>
+                        <h2>4. Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Test</th><th>Finding</th></tr>
+                            <tr><td><strong>CBC</strong></td><td>Anemia (Hb 5-9 g/dL), thrombocytopenia (less than 50,000), schistocytes on PBS</td></tr>
+                            <tr><td><strong>Peripheral Blood Smear</strong></td><td>Fragmented RBCs (schistocytes), helmet cells — diagnostic</td></tr>
+                            <tr><td><strong>LDH</strong></td><td>Markedly elevated</td></tr>
+                            <tr><td><strong>Haptoglobin</strong></td><td>Very low or undetectable</td></tr>
+                            <tr><td><strong>Coagulation profile</strong></td><td>Normal PT/INR, normal aPTT (vs DIC)</td></tr>
+                            <tr><td><strong>Renal function</strong></td><td>Elevated BUN and creatinine, hyperkalemia, metabolic acidosis</td></tr>
+                            <tr><td><strong>Stool culture</strong></td><td>STEC O157:H7 (sorbitol-negative colonies on SMAC agar)</td></tr>
+                            <tr><td><strong>Stool Shiga toxin PCR</strong></td><td>Rapid detection</td></tr>
+                            <tr><td><strong>ADAMTS13 activity</strong></td><td>Normal (vs TTP where less than 10%)</td></tr>
+                        </table>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">HUS vs TTP Mnemonic</div>
+                            <div class="mnemonic-text">HUS = H-B-ST + Kidneys</div>
+                            <div class="mnemonic-exp">
+                                <strong>H</strong>emolytic anemia | <strong>B</strong>loody diarrhea (typical) | <strong>S</strong>chistocytes | <strong>T</strong>hrombocytopenia | <strong>Kidney</strong> failure prominent<br/><br/>
+                                <strong>TTP</strong> = <strong>F</strong>ever + <strong>A</strong>nemia + <strong>T</strong>hrombocytopenia + <strong>R</strong>enal + <strong>N</strong>eurological (FAT RN)
+                            </div>
+                        </div>
+                        <h2>5. Management</h2>
+                        <h3>A. Supportive Care (Mainstay)</h3>
+                        <ul>
+                            <li><strong>Strict isolation</strong> (STEC is contagious)</li>
+                            <li><strong>Fluid management:</strong> Avoid dehydration but also avoid fluid overload; careful input-output charting</li>
+                            <li><strong>Nutrition:</strong> Early enteral nutrition; TPN if prolonged ileus</li>
+                            <li><strong>Hypertension:</strong> Calcium channel blockers, ACE inhibitors</li>
+                            <li><strong>Anemia:</strong> PRBC transfusion if Hb less than 6-7 g/dL or symptomatic; do NOT transfuse platelets unless life-threatening bleed (worsens thrombosis)</li>
+                        </ul>
+                        <h3>B. Treatment of Complications</h3>
+                        <table class="data-table">
+                            <tr><th>Complication</th><th>Management</th></tr>
+                            <tr><td><strong>Hyperkalemia</strong></td><td>Calcium gluconate, insulin-glucose, kayexalate, bicarbonate</td></tr>
+                            <tr><td><strong>Fluid overload</strong></td><td>Furosemide; dialysis if refractory</td></tr>
+                            <tr><td><strong>Hypertensive encephalopathy</strong></td><td>Antihypertensives; seizure management</td></tr>
+                            <tr><td><strong>Dialysis indications</strong></td><td>Refractory fluid overload, severe hyperkalemia, severe metabolic acidosis, uremic symptoms</td></tr>
+                        </table>
+                        <h3>C. What NOT to Do (Crucial for Exam)</h3>
+                        <ul>
+                            <li><strong>NO antibiotics</strong> for STEC diarrhea — increases Stx release and HUS risk</li>
+                            <li><strong>NO antimotility agents</strong> (loperamide) — delays toxin clearance</li>
+                            <li><strong>NO platelet transfusion</strong> unless life-threatening bleed — worsens microthrombi</li>
+                        </ul>
+                        <h3>D. Specific Therapies</h3>
+                        <ul>
+                            <li><strong>Atypical HUS (complement-mediated):</strong> Eculizumab (anti-C5 monoclonal antibody) — blocks terminal complement pathway; life-saving</li>
+                            <li><strong>TTP (if confused):</strong> Plasma exchange plus steroids</li>
+                            <li><strong>Typical HUS:</strong> No proven specific therapy beyond supportive care</li>
+                        </ul>
+                        <h2>6. Prognosis</h2>
+                        <ul>
+                            <li><strong>Typical HUS:</strong> Mortality 3-5%; greater than 85% recover fully; 10-15% develop CKD/HTN/relapse</li>
+                            <li><strong>Poor prognostic factors:</strong> Older age, severe CNS involvement, anuria greater than 7 days, high leukocyte count, need for dialysis</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (HUS)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Triad: MAHA + thrombocytopenia + AKI</li>
+                                <li><strong>Classification:</strong> Typical (D+, STEC), Atypical (D-, complement), Secondary</li>
+                                <li><strong>Pathophysiology:</strong> Shiga toxin binds Gb3 on endothelial cells then microthrombi then hemolysis + AKI</li>
+                                <li><strong>Clinical:</strong> Bloody diarrhea prodrome, pallor, petechiae, oliguria, seizures</li>
+                                <li><strong>Investigations:</strong> Schistocytes, normal PT/aPTT, elevated LDH, low haptoglobin, stool STEC, normal ADAMTS13</li>
+                                <li><strong>Management:</strong> Supportive care only; NO antibiotics; NO platelet transfusion; dialysis if needed; eculizumab for atypical</li>
+                                <li><strong>Prognosis:</strong> Excellent for typical HUS; poor for atypical</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== BILIARY ATRESIA ========================== -->
+            <div class="topic-section" id="topic-biliary">
+                <div class="a4-sheet cool">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge cool">Moderate / Surprise</span>
+                            <span class="sheet-badge">Hepatology</span>
+                            <span class="sheet-badge">Short Note / Essay</span>
+                        </div>
+                        <div class="sheet-marks">3-5 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 3-week-old infant presents with progressive jaundice, dark urine, and pale stools. Discuss the diagnosis, investigations, and management. (2+2+1=5)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition and Pathophysiology → 1M</span>
+                        <span class="mark-chip">Clinical Features → 1M</span>
+                        <span class="mark-chip">Investigations → 1.5M</span>
+                        <span class="mark-chip">Management → 1.5M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition</h2>
+                        <p><strong>Biliary atresia</strong> is a progressive, destructive, inflammatory obliterative cholangiopathy of the extrahepatic bile ducts (and sometimes intrahepatic) leading to <strong>neonatal cholestasis</strong>. It is the <strong>most common cause of neonatal cholestasis</strong> requiring surgery and the leading indication for pediatric liver transplantation.</p>
+                        <ul>
+                            <li><strong>Incidence:</strong> 1:10,000-1:15,000 live births</li>
+                            <li><strong>Types:</strong> Type I (common bile duct), Type II (common hepatic duct), Type III ( porta hepatis — most common, 90%)</li>
+                        </ul>
+                        <h2>2. Clinical Features</h2>
+                        <ul>
+                            <li><strong>Jaundice</strong> — progressive, conjugated (direct) hyperbilirubinemia; persists beyond 2 weeks of life</li>
+                            <li><strong>Acholic (pale/white) stools</strong> — pathognomonic; due to absent bile pigment</li>
+                            <li><strong>Dark urine</strong> — bilirubinuria</li>
+                            <li><strong>Hepatomegaly</strong> — firm, enlarged liver</li>
+                            <li><strong>Splenomegaly</strong> — develops later (portal hypertension)</li>
+                            <li><strong>Poor weight gain, irritability, pruritus</strong></li>
+                            <li><strong>Ascites, bleeding tendencies</strong> — late signs of cirrhosis</li>
+                        </ul>
+                        <div class="mnemonic">
+                            <div class="mnemonic-title">Biliary Atresia Mnemonic — B-A-B-Y</div>
+                            <div class="mnemonic-text">B-A-B-Y</div>
+                            <div class="mnemonic-exp">
+                                <strong>B</strong>ile duct obstruction | <strong>A</strong>cholic stools | <strong>B</strong>eyond 2 weeks jaundice | <strong>Y</strong>ellow skin but dark urine
+                            </div>
+                        </div>
+                        <h2>3. Investigations</h2>
+                        <table class="data-table">
+                            <tr><th>Investigation</th><th>Finding</th></tr>
+                            <tr><td><strong>Serum bilirubin</strong></td><td>Elevated direct (conjugated) bilirubin; direct fraction greater than 20% of total; total bilirubin greater than 5 mg/dL with direct greater than 1 mg/dL</td></tr>
+                            <tr><td><strong>Liver enzymes</strong></td><td>Elevated GGT (greater than 300 U/L — strongly suggests biliary obstruction), elevated AST/ALT</td></tr>
+                            <tr><td><strong>Coagulation profile</strong></td><td>Prolonged PT/INR (vitamin K dependent); corrects with parenteral vitamin K</td></tr>
+                            <tr><td><strong>Ultrasound abdomen</strong></td><td>Absent or contracted gallbladder (failed to visualize after feeding); triangular cord sign (fibrotic porta hepatis); no dilated bile ducts</td></tr>
+                            <tr><td><strong>HIDA scan (Hepatobiliary iminodiacetic acid)</strong></td><td>Non-excreting liver (no tracer in intestine even after phenobarbital priming) — diagnostic</td></tr>
+                            <tr><td><strong>MRCP / ERCP</strong></td><td>May show obliterated extrahepatic ducts</td></tr>
+                            <tr><td><strong>Liver biopsy</strong></td><td>Bile ductular proliferation, bile plugs, portal fibrosis, inflammatory infiltrate; done if diagnosis uncertain</td></tr>
+                            <tr><td><strong>Infectious workup</strong></td><td>TORCH, blood culture, urine culture to rule out sepsis, CMV, toxoplasmosis</td></tr>
+                        </table>
+                        <h2>4. Management</h2>
+                        <h3>A. Kasai Portoenterostomy (Hepatoportoenterostomy)</h3>
+                        <ul>
+                            <li><strong>Timing:</strong> Must be performed <strong>before 60 days of age</strong> (ideally before 30-45 days); prognosis worsens significantly with delay</li>
+                            <li><strong>Procedure:</strong> Resection of fibrotic extrahepatic bile duct and porta hepatis; creation of Roux-en-Y jejunal loop anastomosed to hepatic hilum to drain bile</li>
+                            <li><strong>Post-operative care:</strong> Choleretics (ursodeoxycholic acid), antibiotics (prophylactic trimethoprim-sulfamethoxazole to prevent cholangitis), fat-soluble vitamins (A, D, E, K), nutritional support (MCT-rich formula)</li>
+                            <li><strong>Success rate:</strong> 50-60% achieve bile drainage if done before 60 days; 80-90% if before 30 days</li>
+                        </ul>
+                        <h3>B. Complications After Kasai</h3>
+                        <table class="data-table">
+                            <tr><th>Complication</th><th>Management</th></tr>
+                            <tr><td><strong>Cholangitis</strong></td><td>IV antibiotics (piperacillin-tazobactam, ceftriaxone + metronidazole); recurrent cholangitis is a poor prognostic sign</td></tr>
+                            <tr><td><strong>Portal hypertension</strong></td><td>Band ligation of varices, propranolol; may require shunt surgery</td></tr>
+                            <tr><td><strong>Hepatic dysfunction</strong></td><td>Supportive; evaluate for transplant if decompensated</td></tr>
+                            <tr><td><strong>Malnutrition</strong></td><td>MCT formula, nasogastric feeds, fat-soluble vitamin supplementation</td></tr>
+                        </table>
+                        <h3>C. Liver Transplantation</h3>
+                        <ul>
+                            <li><strong>Indications:</strong> Failed Kasai (no bile drainage), progressive cirrhosis, recurrent cholangitis, growth failure, intractable portal hypertension</li>
+                            <li><strong>Timing:</strong> Usually by 1-2 years of age if Kasai fails</li>
+                            <li><strong>Survival:</strong> Greater than 90% 5-year survival with living donor or deceased donor liver transplant</li>
+                        </ul>
+                        <h2>5. Prognosis</h2>
+                        <ul>
+                            <li>Without Kasai: death by 2 years from cirrhosis/liver failure</li>
+                            <li>With Kasai before 60 days: 50-60% achieve bile drainage; 30-40% survive to adolescence with native liver</li>
+                            <li>With liver transplant: greater than 90% 5-year survival</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (Biliary Atresia)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Obliterative cholangiopathy of extrahepatic bile ducts; leading cause of neonatal cholestasis</li>
+                                <li><strong>Clinical:</strong> Progressive jaundice beyond 2 weeks, acholic stools, dark urine, hepatomegaly</li>
+                                <li><strong>Investigations:</strong> Elevated direct bilirubin, elevated GGT, USG — absent gallbladder, HIDA — non-excreting liver</li>
+                                <li><strong>Management:</strong> Kasai portoenterostomy before 60 days (ideally 30-45 days); antibiotics, UDCA, fat-soluble vitamins</li>
+                                <li><strong>Complications:</strong> Cholangitis, portal hypertension, malnutrition</li>
+                                <li><strong>Definitive:</strong> Liver transplantation if Kasai fails</li>
+                                <li><strong>Prognosis:</strong> Excellent with early Kasai + transplant if needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================== DKA MANAGEMENT ========================== -->
+            <div class="topic-section" id="topic-dka">
+                <div class="a4-sheet cool">
+                    <div class="sheet-header">
+                        <div class="sheet-meta">
+                            <span class="sheet-badge cool">Moderate / Surprise</span>
+                            <span class="sheet-badge">Endocrinology / Emergency</span>
+                            <span class="sheet-badge">Essay</span>
+                        </div>
+                        <div class="sheet-marks">10 Marks</div>
+                    </div>
+                    <div class="sheet-question">
+                        A 10-year-old child presents with polyuria, polydipsia, weight loss, and altered sensorium. Blood glucose is 450 mg/dL, pH 7.1, and ketones are present in urine. Discuss the diagnosis and management. (2+8=10)
+                    </div>
+                    <div class="marks-breakdown">
+                        <span class="mark-chip">Definition and Diagnosis → 2M</span>
+                        <span class="mark-chip">Fluid Resuscitation → 2.5M</span>
+                        <span class="mark-chip">Insulin Therapy → 2M</span>
+                        <span class="mark-chip">Potassium and Bicarbonate → 1.5M</span>
+                        <span class="mark-chip">Monitoring and Complications → 2M</span>
+                    </div>
+                    <div class="sheet-content">
+                        <h2>1. Definition and Diagnosis</h2>
+                        <p><strong>Diabetic Ketoacidosis (DKA)</strong> is an acute metabolic complication of diabetes mellitus characterized by:</p>
+                        <div class="diagram-row">
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Hyperglycemia</div>
+                                <div class="diag-box-desc">BG greater than 200 mg/dL</div>
+                            </div>
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Metabolic Acidosis</div>
+                                <div class="diag-box-desc">pH less than 7.30 or HCO3 less than 15 mEq/L</div>
+                            </div>
+                            <div class="diag-box danger">
+                                <div class="diag-box-title">Ketonemia / Ketonuria</div>
+                                <div class="diag-box-desc">Positive serum ketones</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li><strong>Pathophysiology:</strong> Absolute insulin deficiency leads to increased gluconeogenesis, glycogenolysis, and decreased glucose uptake. Lipolysis increases, producing free fatty acids that are converted to ketone bodies (beta-hydroxybutyrate, acetoacetate) in the liver, causing metabolic acidosis.</li>
+                            <li><strong>Precipitating factors:</strong> New-onset T1DM (20-40%), missed insulin doses, infection, trauma, stress</li>
+                            <li><strong>Severity:</strong> Mild (pH 7.25-7.30), Moderate (pH 7.00-7.24), Severe (pH less than 7.00)</li>
+                        </ul>
+                        <h2>2. Fluid Resuscitation (ISPAD Guidelines)</h2>
+                        <h3>A. Initial Resuscitation</h3>
+                        <ul>
+                            <li><strong>0.9% Normal Saline</strong> 10-20 mL/kg over 1-2 hours (bolus only if shock/hypotension)</li>
+                            <li><strong>Goal:</strong> Restore peripheral perfusion; do NOT over-resuscitate (risk of cerebral edema)</li>
+                            <li><strong>Maximum bolus:</strong> 20 mL/kg total (unless in shock)</li>
+                        </ul>
+                        <h3>B. Deficit Replacement</h3>
+                        <ul>
+                            <li><strong>Total fluid deficit:</strong> 5-10% body weight (approx 50-100 mL/kg)</li>
+                            <li><strong>Rate:</strong> Replace deficit over 48 hours (slower than adults to prevent cerebral edema)</li>
+                            <li><strong>Fluid choice:</strong> 0.45-0.9% saline with 5% dextrose once BG falls below 250-300 mg/dL</li>
+                            <li><strong>Maintenance + deficit:</strong> 1.5-2 times maintenance rate</li>
+                        </ul>
+                        <div class="pathway">
+                            <div class="path-step">0.9% NS<br/>10-20 mL/kg<br/>over 1-2h</div>
+                            <span class="path-arrow">→</span>
+                            <div class="path-step">0.45-0.9% NS<br/>plus dextrose<br/>when BG less than 250</div>
+                            <span class="path-arrow">→</span>
+                            <div class="path-step">Replace deficit<br/>over 48h<br/>1.5-2x maintenance</div>
+                        </div>
+                        <h2>3. Insulin Therapy</h2>
+                        <ul>
+                            <li><strong>Start insulin ONLY after 1-2 hours of fluid resuscitation</strong> (to prevent rapid osmotic shifts)</li>
+                            <li><strong>IV Regular Insulin:</strong> 0.05-0.1 U/kg/hr continuous infusion (no bolus in children)</li>
+                            <li><strong>Goal:</strong> Decrease BG by 50-90 mg/dL/hr; decrease to 150-200 mg/dL by adding dextrose, NOT by stopping insulin</li>
+                            <li><strong>Continue insulin</strong> until acidosis resolves (pH greater than 7.30, HCO3 greater than 18, anion gap closes)</li>
+                            <li><strong>Transition to SC:</strong> Once DKA resolved and patient tolerates oral intake; overlap SC with IV by 1-2 hours</li>
+                        </ul>
+                        <h2>4. Potassium Management</h2>
+                        <ul>
+                            <li><strong>Despite total body K+ depletion,</strong> initial serum K+ may be normal or high due to acidosis (K+ shifts extracellularly)</li>
+                            <li><strong>Add K+ to fluids</strong> once urine output is confirmed and K+ less than 5.5 mEq/L</li>
+                            <li><strong>Dose:</strong> 20-40 mEq/L (half as KCl, half as KPO4 or K acetate)</li>
+                            <li><strong>Monitor:</strong> Check K+ every 2-4 hours</li>
+                            <li><strong>If K+ less than 3.3 mEq/L:</strong> Hold insulin, give K+ 40 mEq/L until K+ greater than 3.3 (risk of arrhythmia)</li>
+                        </ul>
+                        <h2>5. Bicarbonate Therapy</h2>
+                        <ul>
+                            <li><strong>Generally avoided</strong> in pediatric DKA — may increase risk of cerebral edema</li>
+                            <li><strong>Indications (rare):</strong> Severe acidosis (pH less than 6.9) with hemodynamic instability</li>
+                            <li><strong>If given:</strong> 1-2 mEq/kg over 2 hours; do NOT correct pH to greater than 7.10</li>
+                        </ul>
+                        <h2>6. Cerebral Edema Prevention and Management</h2>
+                        <p><strong>Cerebral edema</strong> is the most feared complication (mortality 20-25% if untreated). Risk factors: younger age, new-onset DM, severe acidosis, rapid correction of hyperglycemia, excessive fluid administration.</p>
+                        <table class="data-table">
+                            <tr><th>Warning Signs</th><th>Management</th></tr>
+                            <tr><td>Headache, irritability, altered behavior, bradycardia, hypertension, decreased O2 saturation, papilledema, seizures, coma</td><td><strong>Mannitol</strong> 0.5-1 g/kg IV over 15 min (may repeat if no response)<br/><strong>OR 3% Hypertonic Saline</strong> 2.5-5 mL/kg over 15 min<br/>Reduce fluid rate by 1/3<br/>Elevate head of bed<br/>CT head to rule out other causes<br/>Intubation if necessary (avoid hyperventilation)</td></tr>
+                        </table>
+                        <h2>7. Monitoring</h2>
+                        <table class="data-table">
+                            <tr><th>Parameter</th><th>Frequency</th></tr>
+                            <tr><td><strong>Blood glucose</strong></td><td>Hourly</td></tr>
+                            <tr><td><strong>Electrolytes (Na, K, Cl, bicarb)</strong></td><td>Every 2-4 hours</td></tr>
+                            <tr><td><strong>Blood gas (venous)</strong></td><td>Every 2-4 hours</td></tr>
+                            <tr><td><strong>Serum ketones / beta-hydroxybutyrate</strong></td><td>Every 4 hours</td></tr>
+                            <tr><td><strong>Fluid balance</strong></td><td>Hourly input-output</td></tr>
+                            <tr><td><strong>Neurological status</strong></td><td>Hourly (Glasgow Coma Scale)</td></tr>
+                        </table>
+                        <h2>8. Resolution Criteria</h2>
+                        <ul>
+                            <li>Blood glucose less than 200 mg/dL</li>
+                            <li>pH greater than 7.30</li>
+                            <li>HCO3 greater than 18 mEq/L</li>
+                            <li>Closed anion gap</li>
+                            <li>Two of above + ability to tolerate oral intake</li>
+                        </ul>
+                        <div class="scoring-box">
+                            <div class="scoring-box-title">Exam Scoring Checklist (DKA Management)</div>
+                            <ul>
+                                <li><strong>Definition:</strong> Hyperglycemia (BG greater than 200) + Metabolic acidosis (pH less than 7.30) + Ketonemia/ketonuria</li>
+                                <li><strong>Pathophysiology:</strong> Insulin deficiency leads to hyperglycemia, lipolysis, ketogenesis, osmotic diuresis, dehydration</li>
+                                <li><strong>Fluid:</strong> 0.9% NS 10-20 mL/kg over 1-2h, then 0.45-0.9% NS plus dextrose; replace deficit over 48h</li>
+                                <li><strong>Insulin:</strong> 0.05-0.1 U/kg/hr IV after 1-2h of fluids; continue until acidosis resolves</li>
+                                <li><strong>Potassium:</strong> Add 20-40 mEq/L once urine output confirmed and K+ less than 5.5; hold insulin if K+ less than 3.3</li>
+                                <li><strong>Bicarbonate:</strong> Avoid; only if pH less than 6.9 with hemodynamic instability</li>
+                                <li><strong>Cerebral edema:</strong> Mannitol 0.5-1 g/kg or 3% hypertonic saline; reduce fluids; elevate head</li>
+                                <li><strong>Monitoring:</strong> Glucose hourly, electrolytes and VBG every 2-4h, neuro checks hourly</li>
+                                <li><strong>Resolution:</strong> BG less than 200, pH greater than 7.30, HCO3 greater than 18, closed anion gap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script>
+        // Initialize Mermaid without auto-render so we can control when diagrams render
+        if (typeof mermaid !== 'undefined') {
+            try {
+                mermaid.initialize({ startOnLoad: false, theme: 'dark', securityLevel: 'antiscript' });
+            } catch (e) {
+                console.error('Mermaid failed to initialize', e);
+            }
+        }
+
+        // Render Mermaid diagrams that are inside visible (active) topic sections
+        function renderVisibleMermaids() {
+            if (typeof mermaid === 'undefined') return;
+            // Delay slightly so CSS display changes have applied
+            setTimeout(function() {
+                try {
+                    mermaid.run({ querySelector: '.topic-section.active .mermaid' });
+                } catch (e) {
+                    console.error('Mermaid render failed', e);
+                }
+            }, 60);
+        }
+
+        // Render mermaids in the initially visible topic on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', renderVisibleMermaids);
+        } else {
+            renderVisibleMermaids();
+        }
+
+        let examMode = false;
+
+        function showTopic(id, evt) {
+            if (evt && evt.preventDefault) evt.preventDefault();
+            examMode = false;
+            document.getElementById('btn-exam').classList.remove('active');
+            if (id === 'all') {
+                document.querySelectorAll('.topic-section').forEach(function(s) { s.classList.add('active'); });
+                document.querySelectorAll('.mode-btn').forEach(function(b) { b.classList.remove('active'); });
+                document.getElementById('btn-all').classList.add('active');
+            } else {
+                document.querySelectorAll('.topic-section').forEach(function(s) { s.classList.remove('active'); });
+                var el = document.getElementById('topic-' + id);
+                if (el) {
+                    el.classList.add('active');
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                document.querySelectorAll('.mode-btn').forEach(function(b) { b.classList.remove('active'); });
+            }
+            renderVisibleMermaids();
+        }
+
+        function toggleExamMode() {
+            examMode = !examMode;
+            document.getElementById('btn-exam').classList.toggle('active', examMode);
+            if (examMode) {
+                document.querySelectorAll('.topic-section').forEach(function(s) { s.classList.add('active'); });
+                document.getElementById('btn-all').classList.remove('active');
+                window.scrollTo(0, 0);
+                renderVisibleMermaids();
+            } else {
+                showTopic('all');
+            }
+        }
+    </script>
+</body>
+</html>

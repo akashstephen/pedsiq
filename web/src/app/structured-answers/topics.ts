@@ -1,0 +1,935 @@
+export interface TopicSection {
+  title: string;
+  text?: string;
+  list?: string[];
+  table?: { headers: string[]; rows: string[][] };
+  flowchart?: {
+    nodes: { id: string; label: string; type?: 'default' | 'decision' | 'start' | 'end' }[];
+    edges: { from: string; to: string; label?: string }[];
+  };
+  mnemonic?: { title: string; text: string };
+}
+
+export interface Topic {
+  id: string;
+  shortTitle: string;
+  prob: 'Very High' | 'High' | 'Moderate';
+  subject: string;
+  examType: string;
+  question: string;
+  marksBreakdown: string;
+  sections: TopicSection[];
+  checklist?: string[];
+}
+
+export const topics: Topic[] = [
+  {
+    id: 'agn',
+    shortTitle: 'AGN / PSGN',
+    prob: 'Very High',
+    subject: 'Nephrology',
+    examType: 'Essay / Short Note',
+    question: 'A 3-year-old child is brought with puffiness of face and tea-colored urine 10 days after a sore throat. Discuss the diagnosis, investigations, and management. (2+4+4=10)',
+    marksBreakdown: 'Definition & Etiology → 2M | Clinical Features → 2M | Investigations → 2M | Management → 2M | Complications & Prognosis → 2M',
+    sections: [
+      {
+        title: '1. Definition & Etiology',
+        text: '<strong>Acute Glomerulonephritis (AGN)</strong> is an immune-mediated inflammatory disease of the glomeruli, most commonly <strong>Post-Streptococcal Glomerulonephritis (PSGN)</strong>.',
+        list: [
+          '<strong>Agent:</strong> Nephritogenic strains of Group A beta-hemolytic Streptococcus (M-types 1, 4, 12, 18, 25, 49, 55, 57, 60)',
+          '<strong>Trigger:</strong> Pharyngitis (1-3 weeks prior) or skin infection (impetigo - 3-6 weeks prior)',
+          '<strong>Age:</strong> Peak 5-12 years; rare under 2 years',
+          '<strong>Pathophysiology:</strong> Streptococcal antigens → immune complex deposition (IgG + C3) on GBM → complement activation → neutrophil infiltration → glomerular inflammation → decreased GFR'
+        ],
+        flowchart: {
+          nodes: [
+            { id: 'a', label: 'Strep throat or Skin infection', type: 'start' },
+            { id: 'b', label: 'Streptococcal antigen release' },
+            { id: 'c', label: 'Immune complex formation (IgG + C3)' },
+            { id: 'd', label: 'Subepithelial deposits (lumpy-bumpy GBM)' },
+            { id: 'e', label: 'Complement activation (C3 consumption)' },
+            { id: 'f', label: 'Glomerular inflammation + neutrophil influx' },
+            { id: 'g', label: 'Decreased GFR = Na+ and H2O retention' },
+            { id: 'h', label: 'Edema + Hypertension + Oliguria', type: 'end' },
+          ],
+          edges: [
+            { from: 'a', to: 'b' },
+            { from: 'b', to: 'c' },
+            { from: 'c', to: 'd' },
+            { from: 'd', to: 'e' },
+            { from: 'e', to: 'f' },
+            { from: 'f', to: 'g' },
+            { from: 'g', to: 'h' },
+          ],
+        },
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Classic Triad (Nephritic Syndrome):</strong> Hematuria (smoky/tea-colored, RBC casts pathognomonic), Edema (periorbital, pitting, sudden), Hypertension (salt-water retention)',
+          '<strong>Associated:</strong> Oliguria (&lt;300 mL/m2/day), mild proteinuria (&lt;1 g/day), fever, flank pain, hypertensive encephalopathy'
+        ],
+      },
+      {
+        title: '3. Investigations',
+        table: {
+          headers: ['Investigation', 'Finding', 'Scoring Value'],
+          rows: [
+            ['Urine R/E', 'RBCs, RBC casts, mild proteinuria, leukocytes', 'Pathognomonic casts = 1M'],
+            ['Blood Urea & Creatinine', 'Elevated (azotemia)', ''],
+            ['Serum Electrolytes', 'Hyperkalemia, hyponatremia, metabolic acidosis', ''],
+            ['C3 Complement', 'Low (returns to normal in 6-8 weeks)', 'Key differentiator = 1M'],
+            ['C4 Complement', 'Normal (vs MPGN where both low)', ''],
+            ['ASO Titer', 'Elevated in 70-80% (post-pharyngitis)', ''],
+            ['Anti-DNase B', 'Elevated (post-skin infection)', ''],
+          ],
+        },
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>General:</strong> Bed rest until hematuria, edema, HTN resolve. Salt restriction. Fluid restriction to insensible + urine output. Daily monitoring: BP, weight, I/O.',
+          '<strong>Hypertension:</strong> Calcium channel blockers (Amlodipine), ACE inhibitors. IV Labetalol/Nitroprusside for emergency.',
+          '<strong>Hyperkalemia:</strong> Calcium gluconate, insulin + glucose, sodium bicarbonate, kayexalate. Dialysis if refractory.',
+          '<strong>Fluid overload:</strong> Furosemide 1-2 mg/kg IV.',
+          '<strong>Azotemia/AKI:</strong> Dialysis if refractory fluid overload, severe hyperkalemia, uremic symptoms.',
+          '<strong>Strep eradication:</strong> Penicillin V 250 mg PO BD/TDS x 10 days (or Benzathine Penicillin G IM single dose). If allergic: Erythromycin or Azithromycin.',
+        ],
+        flowchart: {
+          nodes: [
+            { id: 'a', label: 'Child with AGN', type: 'start' },
+            { id: 'b', label: 'Severity?', type: 'decision' },
+            { id: 'c', label: 'Bed rest, salt and fluid restriction, monitoring' },
+            { id: 'd', label: 'Hospital admission' },
+            { id: 'e', label: 'Penicillin for Strep eradication' },
+            { id: 'f', label: 'Diuretics: Furosemide' },
+            { id: 'g', label: 'Antihypertensives' },
+            { id: 'h', label: 'BP control?', type: 'decision' },
+            { id: 'i', label: 'IV Labetalol or Nitroprusside + Seizure management' },
+            { id: 'j', label: 'Continue oral therapy' },
+            { id: 'k', label: 'Complications?', type: 'decision' },
+            { id: 'l', label: 'Calcium gluconate + Insulin-Glucose + Kayexalate' },
+            { id: 'm', label: 'Furosemide IV +/- Dialysis' },
+            { id: 'n', label: 'Hemodialysis or Peritoneal dialysis' },
+            { id: 'o', label: 'Recovery in 1-2 weeks', type: 'end' },
+          ],
+          edges: [
+            { from: 'a', to: 'b' },
+            { from: 'b', to: 'c', label: 'Mild' },
+            { from: 'b', to: 'd', label: 'Severe' },
+            { from: 'd', to: 'e' },
+            { from: 'd', to: 'f' },
+            { from: 'd', to: 'g' },
+            { from: 'g', to: 'h' },
+            { from: 'h', to: 'i', label: 'No or Emergency' },
+            { from: 'h', to: 'j', label: 'Yes' },
+            { from: 'd', to: 'k' },
+            { from: 'k', to: 'l', label: 'Hyperkalemia' },
+            { from: 'k', to: 'm', label: 'Fluid overload' },
+            { from: 'k', to: 'n', label: 'Azotemia' },
+            { from: 'c', to: 'o' },
+            { from: 'j', to: 'o' },
+            { from: 'l', to: 'o' },
+            { from: 'm', to: 'o' },
+            { from: 'n', to: 'o' },
+          ],
+        },
+      },
+      {
+        title: '5. Complications & Prognosis',
+        list: [
+          '<strong>AKI</strong> - reversible; dialysis may be needed',
+          '<strong>Hypertensive encephalopathy</strong> - seizures, papilledema',
+          '<strong>Acute pulmonary edema</strong> - fluid overload',
+          '<strong>CKD</strong> - rare (&lt;1%); crescentic transformation',
+          '<strong>Prognosis:</strong> Excellent in children; &gt;95% complete recovery. Diuresis begins 5-10 days. C3 normalizes by 6-8 weeks.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: immune-mediated glomerular inflammation, post-streptococcal - <strong>0.5M</strong>',
+      'Etiology: Group A beta-hemolytic strep, nephritogenic M-types, latent period - <strong>0.5M</strong>',
+      'Pathophysiology: Immune complex deposition → complement activation → decreased GFR - <strong>1M</strong>',
+      'Clinical triad: Hematuria (RBC casts) + Edema + Hypertension - <strong>1M</strong>',
+      'Investigations: Urine RBC casts, low C3 (normal C4), high ASO - <strong>1M</strong>',
+      'General management: Bed rest, salt/fluid restriction, daily monitoring - <strong>0.5M</strong>',
+      'Specific Rx: Penicillin, diuretics, antihypertensives - <strong>1M</strong>',
+      'Complication management: Hyperkalemia, fluid overload, dialysis - <strong>1M</strong>',
+      'Prognosis: Excellent, C3 normalizes by 6-8 weeks - <strong>0.5M</strong>',
+      'Flowchart/Diagram: Management algorithm - <strong>1M</strong>',
+      'Neatness & Structure: Subheadings, tables, bullet points - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'nephrotic',
+    shortTitle: 'Nephrotic Syndrome',
+    prob: 'Very High',
+    subject: 'Nephrology',
+    examType: 'Essay / Short Note',
+    question: 'A 4-year-old boy presents with periorbital puffiness and frothy urine. On examination, there is pitting edema of the legs and ascites. Discuss the diagnosis, investigations, and management. (2+4+4=10)',
+    marksBreakdown: 'Definition & Types → 2M | Clinical Features → 2M | Investigations → 2M | Management → 3M | Complications → 1M',
+    sections: [
+      {
+        title: '1. Definition & Classification',
+        text: '<strong>Nephrotic Syndrome (NS)</strong> is defined by massive proteinuria (&gt;50 mg/kg/day), hypoalbuminemia (&lt;2.5 g/dL), hyperlipidemia, and edema.',
+        table: {
+          headers: ['Type', 'Age', 'Pathology', 'Key Feature'],
+          rows: [
+            ['Minimal Change Disease (MCD)', '2-6 years (80%)', 'Normal LM; foot process fusion on EM', 'Steroid sensitive'],
+            ['FSGS', 'Any age', 'Segmental sclerosis', 'Steroid resistant; poor prognosis'],
+            ['Membranoproliferative GN (MPGN)', 'Older children', 'Tram-track BM on LM', 'Low C3 + low C4; hematuria common'],
+            ['Membranous Nephropathy', 'Rare in children', 'Subepithelial deposits', 'Secondary (HBV, SLE, drugs)'],
+          ],
+        },
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          'Edema - periorbital (worse in morning), dependent (legs by evening), ascites, pleural effusion, scrotal edema',
+          'Frothy urine - due to massive proteinuria',
+          'Weight gain - fluid retention',
+          'Anorexia, lethargy, diarrhea - gut edema',
+          'Hypovolemia signs - cold peripheries, tachycardia, hypotension (despite edema!)',
+          'Infections - loss of IgG and complement factors in urine',
+          'Thrombosis - loss of antithrombin III; renal vein thrombosis most common',
+        ],
+        mnemonic: { title: 'P-E-A-S', text: 'Periorbital (morning) → Extremities (evening) → Ascites → Severe (anasarca, pleural effusion)' },
+      },
+      {
+        title: '3. Investigations',
+        table: {
+          headers: ['Investigation', 'Expected Finding'],
+          rows: [
+            ['Urine R/E', 'Massive proteinuria (3-4+); few RBCs; hyaline/fatty casts; oval fat bodies'],
+            ['24h Urine Protein', '&gt;50 mg/kg/day'],
+            ['Urine P/C ratio', '&gt;2 (mg/mg)'],
+            ['Serum Albumin', '&lt;2.5 g/dL (hypoalbuminemia)'],
+            ['Serum Cholesterol/TG', 'Elevated (hyperlipidemia)'],
+            ['Complements (C3, C4)', 'Normal in MCD (vs low C3 in MPGN)'],
+            ['Renal Biopsy', 'Only if: &gt;8 years, SRNS, atypical features, frequent relapses'],
+          ],
+        },
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>General:</strong> Bed rest during edema phase. Normal protein intake (do NOT restrict). Salt restriction during edema. Daily weight, BP, urine protein dipstick, I/O chart.',
+          '<strong>Steroid Regimen (First Episode) - ISKD Protocol:</strong> Prednisolone 2 mg/kg/day x 6 weeks → 1.5 mg/kg alternate days x 6 weeks → taper over 4-8 weeks. Total ~3-4 months.',
+          '<strong>Hypovolemia/Shock:</strong> Albumin 20% 1 g/kg IV over 4h + Furosemide.',
+          '<strong>Infection (SBP/cellulitis):</strong> Ceftriaxone. Vaccinate with Pneumococcal + Varicella.',
+          '<strong>Thrombosis:</strong> Low molecular weight heparin (LMWH), then warfarin.',
+          '<strong>Steroid-Sparing Agents:</strong> Cyclophosphamide 2 mg/kg/day PO x 8-12 weeks. Cyclosporine 3-5 mg/kg/day. Tacrolimus 0.1 mg/kg/day. MMF 600-1200 mg/m2/day. Rituximab for severe cases.',
+        ],
+        flowchart: {
+          nodes: [
+            { id: 'a', label: 'Child with Nephrotic Syndrome', type: 'start' },
+            { id: 'b', label: 'First Episode?', type: 'decision' },
+            { id: 'c', label: 'Steroid Trial: Prednisolone 2 mg/kg/day x 6 weeks' },
+            { id: 'd', label: 'Response?', type: 'decision' },
+            { id: 'e', label: 'Steroid Sensitive NS (80% children - MCD)', type: 'end' },
+            { id: 'f', label: 'Steroid Resistant NS' },
+            { id: 'g', label: 'Renal Biopsy' },
+            { id: 'h', label: 'Histology?', type: 'decision' },
+            { id: 'i', label: 'Reclassify or Re-trial' },
+            { id: 'j', label: 'Calcineurin inhibitors + ACEi' },
+            { id: 'k', label: 'Immunosuppression + Treat cause' },
+          ],
+          edges: [
+            { from: 'a', to: 'b' },
+            { from: 'b', to: 'c' },
+            { from: 'c', to: 'd' },
+            { from: 'd', to: 'e', label: 'Remission under 4 weeks' },
+            { from: 'd', to: 'f', label: 'No remission' },
+            { from: 'f', to: 'g' },
+            { from: 'g', to: 'h' },
+            { from: 'h', to: 'i', label: 'MCD' },
+            { from: 'h', to: 'j', label: 'FSGS' },
+            { from: 'h', to: 'k', label: 'MPGN' },
+          ],
+        },
+      },
+      {
+        title: '5. Complications & Prognosis',
+        list: [
+          '<strong>Infections:</strong> Spontaneous bacterial peritonitis (Strep pneumoniae), cellulitis, sepsis. Loss of IgG, Factor B, properdin.',
+          '<strong>Thromboembolism:</strong> Renal vein thrombosis (most common). Loss of antithrombin III, proteins C & S.',
+          '<strong>Hypovolemia:</strong> Acute pre-renal failure. Hypotension, cold peripheries.',
+          '<strong>Other:</strong> Growth retardation (chronic steroids), cataracts, osteoporosis, hypocalcemia, rickets.',
+          '<strong>Prognosis:</strong> MCD: Excellent; most outgrow by adolescence. FSGS: 50% progress to ESRD within 10 years.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Quad - Massive proteinuria + hypoalbuminemia + hyperlipidemia + edema - <strong>1M</strong>',
+      'Classification: MCD (2-6y, 80%), FSGS, MPGN, Membranous - <strong>0.5M</strong>',
+      'Steroid response classes: Sensitive, Resistant, Dependent, Frequently relapsing - <strong>0.5M</strong>',
+      'Clinical: Periorbital edema, frothy urine, ascites, hypovolemia signs - <strong>1M</strong>',
+      'Investigations: Urine protein 3-4+, low albumin &lt;2.5, high cholesterol, normal C3 - <strong>1M</strong>',
+      'General management: Bed rest, normal protein, salt restriction, daily monitoring - <strong>0.5M</strong>',
+      'Steroid protocol: 2 mg/kg/day x 6w → 1.5 mg/kg alt days x 6w → taper - <strong>1M</strong>',
+      'Complication Rx: Hypovolemia (albumin + furosemide), infection (ceftriaxone), thrombosis (LMWH) - <strong>1M</strong>',
+      'Steroid-sparing: Cyclophosphamide, Cyclosporine, Tacrolimus, MMF, Rituximab - <strong>0.5M</strong>',
+      'Prognosis: MCD excellent; FSGS poor - <strong>0.5M</strong>',
+      'Flowchart/Diagram: Management algorithm - <strong>1M</strong>',
+      'Neatness & Structure - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'rickets',
+    shortTitle: 'Rickets',
+    prob: 'Very High',
+    subject: 'Endocrinology',
+    examType: 'Short Note / Essay',
+    question: 'A 9-month-old infant is brought with delayed teething, wrist swelling, and bowing of legs. Discuss the biochemical changes, clinical features, radiological findings, and management. (2+3+2+3=10)',
+    marksBreakdown: 'Definition & Types → 1M | Biochemical Changes → 2M | Clinical Features → 2M | Radiology → 2M | Management → 2M | Complications → 1M',
+    sections: [
+      {
+        title: '1. Definition',
+        text: '<strong>Rickets</strong> is a disorder of defective mineralization of the growth plate (physis) in children caused by vitamin D deficiency, calcium deficiency, or phosphate deficiency. <strong>Osteomalacia</strong> is the adult equivalent.',
+        table: {
+          headers: ['Type', 'Mechanism', 'Key Lab'],
+          rows: [
+            ['Nutritional (Vit D deficient)', 'Inadequate intake / sunlight', 'Low 25(OH)D, low Ca, low PO4, high PTH, high ALP'],
+            ['Vit D dependent Type I', 'Renal 1alpha-hydroxylase deficiency (AR)', 'Low 1,25(OH)2D; Rx: Calcitriol'],
+            ['Vit D dependent Type II', 'End-organ resistance to Vit D (AR)', 'High 1,25(OH)2D; Alopecia common'],
+            ['Vit D resistant (Hypophosphatemic)', 'Renal phosphate wasting (X-linked)', 'Low PO4, normal Ca, normal 25(OH)D'],
+            ['Renal Rickets', 'Chronic kidney disease', 'Low Ca, high PO4, high PTH, metabolic acidosis'],
+          ],
+        },
+      },
+      {
+        title: '2. Biochemical Changes',
+        text: 'Low dietary Vit D / Sunlight → Low 25-OH Vit D (&lt;20 ng/mL) → Low intestinal Ca absorption → Hypocalcemia → High PTH secretion (secondary hyperparathyroidism) → Renal phosphate wasting + Bone resorption → Hypophosphatemia → Low Ca x PO4 product (&lt;30 mg2/dL2) → Defective mineralization of osteoid → Rickets',
+        table: {
+          headers: ['Parameter', 'Change', 'Mechanism'],
+          rows: [
+            ['Serum Calcium', 'Low / Low-normal', 'Low intestinal absorption'],
+            ['Serum Phosphate', 'Low', 'Renal phosphate wasting (PTH effect)'],
+            ['Serum ALP', 'Markedly elevated', 'Osteoblast hyperactivity'],
+            ['Serum PTH', 'Elevated', 'Secondary hyperparathyroidism'],
+            ['25-OH Vitamin D', 'Low (&lt;20 ng/mL)', 'Best indicator of body stores'],
+          ],
+        },
+      },
+      {
+        title: '3. Clinical Features',
+        list: [
+          '<strong>Head & Chest:</strong> Craniotabes (ping-pong ball sensation, 3-6 months), delayed fontanelle closure (&gt;18 months), rachitic rosary (costochondral beading), Harrison\'s sulcus, pectus carinatum/excavatum',
+          '<strong>Extremities & Spine:</strong> Wrist widening, ankle widening, bow legs (genu varum, &lt;3 years), knock knees (genu valgum, &gt;3 years), delayed teething (&gt;12 months), kyphosis/scoliosis',
+        ],
+        mnemonic: { title: 'C-R-W-L', text: 'Craniotabes | Rosary (rachitic) | Wrist widening | Legs bowed or knock-kneed' },
+      },
+      {
+        title: '4. Radiological Findings (X-ray Wrist - AP View)',
+        list: [
+          '<strong>Cupping</strong> - concavity of metaphysis (saucerization)',
+          '<strong>Fraying</strong> - irregular, brush-like appearance of metaphyseal margins',
+          '<strong>Splaying</strong> - widening of growth plate (&gt;2 mm)',
+          '<strong>Reduced bone density</strong> - coarsened trabecular pattern',
+          '<strong>Greenstick fractures</strong>',
+        ],
+      },
+      {
+        title: '5. Management',
+        table: {
+          headers: ['Regimen', 'Dose', 'Duration'],
+          rows: [
+            ['Daily Therapy (Preferred)', 'Vit D3 2000-4000 IU/day', '6-12 weeks, then 400 IU maintenance'],
+            ['Stoss Therapy', 'Vit D3 150,000-300,000 IU orally', 'Single dose; repeat at 3 months if needed'],
+            ['Calcium', 'Elemental calcium 50-100 mg/kg/day', 'Alongside Vit D'],
+          ],
+        },
+        list: [
+          '<strong>Monitoring:</strong> Clinical improvement in 2-4 weeks; radiological healing in 3-6 months. Monitor serum Ca, PO4, ALP at 4, 8, 12 weeks.',
+          '<strong>Surgical:</strong> Corrective osteotomy for severe deformities (after healing of rickets).',
+          '<strong>Prevention:</strong> Breastfed infants: 400 IU/day Vit D3 from first few days. Formula-fed: supplement if &lt;1 L/day. Pregnant/lactating mothers: 600 IU/day. Sun exposure: 15-30 min/day.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Defective mineralization of growth plate due to Vit D/Ca/PO4 deficiency - <strong>0.5M</strong>',
+      'Types: Nutritional, Vit D dependent I & II, Vit D resistant, Renal - <strong>0.5M</strong>',
+      'Biochemistry: Low Ca, low PO4, high ALP, high PTH, low 25(OH)D - draw pathway - <strong>2M</strong>',
+      'Clinical features: Craniotabes, rachitic rosary, Harrison\'s sulcus, wrist widening, bow legs - <strong>2M</strong>',
+      'X-ray: Cupping + Fraying + Splaying of metaphysis - <strong>1.5M</strong>',
+      'Management: Vit D 2000-4000 IU/day x 6-12w or Stoss 150,000-300,000 IU; calcium; diet - <strong>2M</strong>',
+      'Prevention: 400 IU/day in infants, maternal supplementation, sun exposure - <strong>0.5M</strong>',
+      'Diagram/Mnemonic - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'hypothyroid',
+    shortTitle: 'Hypothyroidism',
+    prob: 'High',
+    subject: 'Endocrinology',
+    examType: 'Short Note',
+    question: 'Describe the clinical features, screening, and management of congenital hypothyroidism. (2+2+1=5)',
+    marksBreakdown: 'Definition & Etiology → 1M | Clinical Features → 2M | Screening → 1M | Management → 1M',
+    sections: [
+      {
+        title: '1. Definition & Etiology',
+        text: '<strong>Congenital Hypothyroidism (CH)</strong> is thyroid hormone deficiency present at birth. Most common preventable cause of intellectual disability. Incidence: 1:2500-1:4000 live births.',
+        table: {
+          headers: ['Type', 'Cause', '%'],
+          rows: [
+            ['Primary (Thyroid dysgenesis)', 'Agenesis, hypoplasia, ectopic thyroid (lingual/submandibular)', '80-85%'],
+            ['Primary (Dyshormonogenesis)', 'Defects in thyroid hormone synthesis (TSH receptor, thyroglobulin, peroxidase, pendrin, deiodinase)', '10-15%'],
+            ['Central (Hypothalamic-Pituitary)', 'Defective TRH/TSH secretion; midline defects (holoprosencephaly, septo-optic dysplasia)', '1-5%'],
+          ],
+        },
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Neonatal Period (First 2-4 Weeks):</strong> Prolonged physiological jaundice (&gt;7 days) - unconjugated, hypotonia, lethargy, poor feeding, constipation, hypothermia (cold, mottled skin), large anterior + posterior fontanelle, bradycardia, respiratory distress (myxedema of vocal cords), edema (periorbital, peripheral)',
+          '<strong>Infantile Period (2-3 Months Onwards):</strong> Coarse facies (flat nasal bridge, puffy eyes, macroglossia), umbilical hernia, goiter (in dyshormonogenesis), developmental delay, hoarse cry, dry skin, sparse hair, short stature, anemia (macrocytic)',
+        ],
+        mnemonic: { title: 'C-O-L-D C-H-I-L-D', text: 'Constipation | Obstructive jaundice (prolonged) | Large fontanelle | Developmental delay | Coarse facies | Hoarse cry | Intellectual disability (if untreated) | Lethargy | Dry skin' },
+      },
+      {
+        title: '3. Newborn Screening',
+        list: [
+          'All newborns screened at day 3-5 of life (before discharge, optimally 48-72h after birth to avoid physiological TSH surge)',
+          '<strong>Primary screening:</strong> TSH (most common) or T4',
+          '<strong>Abnormal:</strong> TSH &gt;20-40 mIU/L; T4 &lt;10 microg/dL',
+          '<strong>Confirmatory:</strong> Serum TSH, free T4, total T4',
+          'If TSH high + T4 low: Primary hypothyroidism',
+          'If TSH low/normal + T4 low: Central hypothyroidism - do MRI pituitary',
+        ],
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Levothyroxine (L-thyroxine):</strong> 10-15 microg/kg/day PO started immediately after confirmation',
+          'Start treatment within <strong>2 weeks of life</strong> for normal neurodevelopmental outcome',
+          'Crush tablet, mix with breast milk/formula. Do NOT give with soy/iron/calcium (reduces absorption)',
+          '<strong>Monitoring:</strong> TSH and free T4 every 1-2 months in first 6 months; then every 3 months until age 3; then every 6-12 months',
+          '<strong>Target:</strong> TSH 0.5-2.0 mIU/L; free T4 in upper normal range',
+          '<strong>Prognosis:</strong> Excellent if treatment starts within 2 weeks; IQ normal',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Thyroid hormone deficiency at birth; most common preventable cause of mental retardation - <strong>0.5M</strong>',
+      'Etiology: Thyroid dysgenesis (85%), dyshormonogenesis (15%), central (1-5%) - <strong>0.5M</strong>',
+      'Clinical: Prolonged jaundice, hypotonia, constipation, cold skin, large fontanelle, coarse facies, macroglossia, umbilical hernia, hoarse cry - <strong>1.5M</strong>',
+      'Screening: TSH at day 3-5; confirm with TSH + free T4; start Rx before 2 weeks - <strong>1M</strong>',
+      'Management: Levothyroxine 10-15 microg/kg/day; monitor TSH/T4 every 1-2 months; avoid soy/iron - <strong>1M</strong>',
+      'Prognosis: Excellent if early treatment; normal IQ - <strong>0.5M</strong>',
+    ],
+  },
+  {
+    id: 'torsion',
+    shortTitle: 'Testicular Torsion',
+    prob: 'High',
+    subject: 'Nephrology / Surgery',
+    examType: 'Short Note',
+    question: 'A 12-year-old boy presents with sudden severe pain in the right scrotum and vomiting. Discuss the differential diagnosis, investigations, and emergency management. (1+1+1=3)',
+    marksBreakdown: 'DDx of Acute Scrotum → 1M | Clinical Features → 0.5M | Investigations → 0.5M | Emergency Management → 1M',
+    sections: [
+      {
+        title: '1. Differential Diagnosis of Acute Scrotum',
+        table: {
+          headers: ['Condition', 'Age', 'Key Feature'],
+          rows: [
+            ['Testicular Torsion', 'Neonatal / Peripubertal (12-18y)', 'Sudden pain, high-riding testis, absent cremasteric'],
+            ['Torsion of Testicular Appendage', 'Prepubertal', 'Blue dot sign, localized tenderness at upper pole'],
+            ['Epididymo-orchitis', 'Any age', 'Fever, pyuria, gradual onset, UTIs'],
+            ['Idiopathic Scrotal Edema', '3-8 years', 'Painless erythematous scrotal edema'],
+            ['Trauma / HSP', 'Any age', 'History of trauma / purpura rash'],
+            ['Inguinal Hernia (Incarcerated)', 'Infants', 'Visible bulge, irritability, vomiting'],
+          ],
+        },
+      },
+      {
+        title: '2. Clinical Features of Testicular Torsion',
+        list: [
+          'Sudden severe unilateral scrotal pain (often wakes child from sleep)',
+          'Nausea and vomiting (due to severe pain)',
+          'High-riding testis (horizontal lie - "bell-clapper deformity")',
+          'Absent cremasteric reflex (most sensitive sign)',
+          'Scrotal swelling, erythema, tenderness',
+          'No relief with elevation (vs epididymitis where elevation helps - Prehn\'s sign)',
+        ],
+      },
+      {
+        title: '3. Investigations',
+        list: [
+          '<strong>Color Doppler USG</strong> - test of choice; shows absent or decreased blood flow to testis (sensitivity 90-100%)',
+          'Radionuclide scan - rarely used now; "cold spot" in torsion',
+          'Urine analysis - normal (vs pyuria in infection)',
+          'Do NOT delay surgery for imaging if clinical suspicion is high',
+        ],
+      },
+      {
+        title: '4. Emergency Management',
+        list: [
+          '<strong>Immediate surgical exploration</strong> - do not wait for imaging if strongly suspected',
+          'Manual detorsion may be attempted as a temporizing measure ("open the book" - rotate testis laterally 180 degrees x 2)',
+          'Scrotal exploration: Detorsion, assess viability (warm packs), bilateral orchidopexy (fix both testes to prevent future torsion)',
+          '<strong>Salvage rate:</strong> &gt;90% if surgery within 6 hours; &lt;10% if &gt;24 hours',
+        ],
+      },
+    ],
+    checklist: [
+      'DDx: Torsion of appendage, epididymo-orchitis, HSP, trauma, incarcerated hernia, idiopathic edema - <strong>0.5M</strong>',
+      'Clinical: Sudden pain, vomiting, high-riding testis, absent cremasteric reflex - <strong>0.5M</strong>',
+      'Investigations: Color Doppler USG - absent blood flow; urine normal - <strong>0.5M</strong>',
+      'Management: Emergency surgery within 6h; detorsion + bilateral orchidopexy; orchidectomy if non-viable - <strong>1M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
+    ],
+  },
+  {
+    id: 'hematuria',
+    shortTitle: 'Hematuria DDx',
+    prob: 'High',
+    subject: 'Nephrology',
+    examType: 'Short Note',
+    question: 'A 7-year-old child presents with painless hematuria. Discuss the approach to diagnosis and differential diagnosis. (1.5+1.5=3)',
+    marksBreakdown: 'Classification → 0.5M | Glomerular Causes → 1M | Non-Glomerular Causes → 1M | Investigations → 0.5M',
+    sections: [
+      {
+        title: '1. Classification of Hematuria',
+        list: [
+          '<strong>Glomerular Hematuria:</strong> Color: Cola/tea/smoky (brown). RBCs: Dysmorphic, fragmented (acanthocytes). Casts: RBC casts pathognomonic. Proteinuria: Present (often &gt;+++). Clots: Absent. Associated: Edema, hypertension, decreased GFR.',
+          '<strong>Non-Glomerular Hematuria:</strong> Color: Fresh red/pink. RBCs: Isomorphic (normal shape). Casts: Absent. Proteinuria: Minimal or absent. Clots: May be present. Associated: Dysuria, flank pain, trauma history.',
+        ],
+      },
+      {
+        title: '2. Differential Diagnosis',
+        list: [
+          '<strong>Glomerular causes:</strong> AGN/PSGN, IgA Nephropathy (Synpharyngitic hematuria), HSP/IgA vasculitis, Alport Syndrome (X-linked, hearing loss), MPGN, Thin Basement Membrane Disease',
+          '<strong>Non-glomerular causes:</strong> UTI, Urolithiasis, Trauma, Hypercalciuria (#1 cause of isolated hematuria), Coagulopathy, Sickle Cell Trait/Disease, Wilms Tumor, PUV/UPJ obstruction',
+        ],
+      },
+      {
+        title: '3. Key Investigations',
+        table: {
+          headers: ['Test', 'Purpose'],
+          rows: [
+            ['Urine microscopy', 'Dysmorphic vs isomorphic RBCs; RBC casts; crystals'],
+            ['Urine culture', 'Rule out UTI'],
+            ['Urine calcium/creatinine', 'Hypercalciuria (&gt;0.21 mg/mg)'],
+            ['C3, C4', 'Low in PSGN, MPGN; normal in IgA, HSP'],
+            ['ASO, Anti-DNase B', 'PSGN'],
+            ['IgA levels', 'Elevated in IgA nephropathy, HSP'],
+            ['USG KUB', 'Stones, masses, hydronephrosis'],
+            ['CT KUB', 'Non-contrast for stones'],
+            ['Renal biopsy', 'If glomerular + persistent hematuria + proteinuria'],
+          ],
+        },
+      },
+    ],
+    checklist: [
+      'Classification: Glomerular (dysmorphic RBCs, RBC casts, brown urine) vs Non-glomerular (isomorphic RBCs, red urine, clots) - <strong>0.5M</strong>',
+      'Glomerular causes: AGN, IgA nephropathy, HSP, Alport, MPGN, TBM disease - <strong>1M</strong>',
+      'Non-glomerular causes: UTI, stones, trauma, hypercalciuria, coagulopathy, sickle cell, Wilms, PUV - <strong>0.5M</strong>',
+      'Investigations: Urine microscopy, culture, calcium/creatinine, C3, USG, biopsy - <strong>0.5M</strong>',
+      'Table/Flowchart - <strong>0.5M</strong>',
+    ],
+  },
+  {
+    id: 'hypoglycemia',
+    shortTitle: 'Hypoglycemia',
+    prob: 'High',
+    subject: 'Neonatology',
+    examType: 'Short Note',
+    question: 'Define neonatal hypoglycemia. List the risk factors, clinical features, and management. (1+1+1=3)',
+    marksBreakdown: 'Definition → 1M | Risk Factors → 0.5M | Clinical Features → 0.5M | Management → 1M',
+    sections: [
+      {
+        title: '1. Definition',
+        list: [
+          'Operational threshold: Plasma glucose &lt;40 mg/dL in the first 24 hours; &lt;45 mg/dL after 24 hours',
+          'Neuroglycopenic threshold: &lt;30 mg/dL - risk of permanent brain injury',
+        ],
+      },
+      {
+        title: '2. Risk Factors',
+        list: [
+          '<strong>Increased Utilization / Decreased Stores:</strong> Preterm/SGA/IUGR (decreased glycogen stores), perinatal asphyxia, hypothermia, sepsis, polycythemia',
+          '<strong>Hyperinsulinism / Endocrine:</strong> Infant of Diabetic Mother (IDM), LGA, Beckwith-Wiedemann syndrome, transfusion/exchange, pituitary/adrenal insufficiency, inborn errors of metabolism',
+        ],
+      },
+      {
+        title: '3. Clinical Features',
+        table: {
+          headers: ['System', 'Signs'],
+          rows: [
+            ['CNS', 'Jitteriness, tremors, irritability, lethargy, hypotonia, seizures, apnea, coma'],
+            ['Autonomic', 'Sweating, tachycardia, pallor, cyanosis'],
+            ['Respiratory', 'Apnea, tachypnea, respiratory distress'],
+            ['GI', 'Poor feeding, weak suck'],
+            ['Other', 'Temperature instability, high-pitched cry'],
+          ],
+        },
+        text: 'Asymptomatic hypoglycemia is common - detected only on screening',
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Screening:</strong> All at-risk neonates at 2, 6, 12, 24, 36, 48 hours',
+          '<strong>Asymptomatic (glucose 25-40):</strong> Feed immediately; recheck in 30 min',
+          '<strong>Symptomatic or &lt;25 mg/dL:</strong> IV D10 2 mL/kg bolus then D10 maintenance 80-100 mL/kg/day',
+          '<strong>Goal:</strong> Maintain glucose &gt;45-50 mg/dL',
+          '<strong>If persistent:</strong> Increase GIR to 8-12 mg/kg/min; add glucagon 0.03 mg/kg IV or hydrocortisone 5 mg/kg/day',
+          '<strong>Refractory:</strong> Evaluate for hyperinsulinism then Diazoxide / Octreotide / Surgery',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: &lt;40 mg/dL first 24h; &lt;45 mg/dL after - <strong>0.5M</strong>',
+      'Risk factors: IDM, preterm, SGA, LGA, asphyxia, sepsis, Beckwith-Wiedemann - <strong>0.5M</strong>',
+      'Clinical: Jitteriness, seizures, apnea, lethargy, poor feeding, sweating - <strong>0.5M</strong>',
+      'Management: Feed if asymptomatic; IV D10 bolus + maintenance if symptomatic; increase GIR; glucagon/hydrocortisone if refractory - <strong>1M</strong>',
+      'Neatness/Structure - <strong>0.5M</strong>',
+    ],
+  },
+  {
+    id: 'intussusception',
+    shortTitle: 'Intussusception',
+    prob: 'Moderate',
+    subject: 'GI Surgery',
+    examType: 'Short Note / Essay',
+    question: 'A 9-month-old infant is brought with episodes of severe crying, vomiting, and passing currant jelly stool. Discuss the diagnosis, investigations, and management. (2+1+2=5)',
+    marksBreakdown: 'Definition and Pathophysiology → 1M | Clinical Features → 1.5M | Investigations → 1M | Management → 1.5M',
+    sections: [
+      {
+        title: '1. Definition',
+        text: '<strong>Intussusception</strong> is the telescoping (invagination) of a proximal segment of bowel (intussusceptum) into the distal segment (intussuscipiens). It is the most common cause of intestinal obstruction in children aged 6-36 months.',
+        list: [
+          '<strong>Idiopathic (90%):</strong> Lymphoid hyperplasia of Peyer patches (post-viral)',
+          '<strong>Lead point (10%):</strong> Meckel diverticulum, polyp, lymphoma, duplication cyst, HSP',
+        ],
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Classic Triad:</strong> Severe episodic crying (colicky pain), vomiting (bilious if advanced), currant jelly stool (blood + mucus)',
+          '<strong>Other:</strong> Drawing up of legs toward abdomen during episodes, lethargy between episodes, sausage-shaped abdominal mass (right upper quadrant), empty right lower quadrant (Dance sign)',
+        ],
+      },
+      {
+        title: '3. Investigations',
+        list: [
+          '<strong>USG Abdomen</strong> - test of choice; shows "target sign" or "doughnut sign" (concentric rings)',
+          '<strong>Abdominal X-ray</strong> - signs of obstruction (air-fluid levels), paucity of gas in RLQ, soft tissue mass',
+          '<strong>Contrast Enema</strong> - diagnostic and therapeutic; shows "coiled spring sign" or "meniscus sign"',
+          '<strong>Air Enema</strong> - preferred for reduction under fluoroscopy',
+          'Do NOT perform contrast enema if signs of perforation or peritonitis',
+        ],
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Non-operative (First Line):</strong> Air/contrast enema reduction under fluoroscopy. Success rate: 80-90%. Contraindications: Peritonitis, perforation, shock, failed enema reduction.',
+          '<strong>Operative:</strong> Manual reduction via laparotomy or laparoscopy. Resection if gangrenous bowel or lead point.',
+          '<strong>Pre-operative:</strong> IV fluids, NG tube decompression, antibiotics, correct electrolytes.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Telescoping of bowel; most common cause of intestinal obstruction in 6-36 months - <strong>0.5M</strong>',
+      'Etiology: Idiopathic (90% - lymphoid hyperplasia), Lead point (10% - Meckel, polyp, lymphoma) - <strong>0.5M</strong>',
+      'Clinical: Severe episodic crying, vomiting, currant jelly stool, sausage-shaped mass, Dance sign - <strong>1M</strong>',
+      'Investigations: USG target sign, X-ray obstruction, contrast enema coiled spring sign - <strong>0.5M</strong>',
+      'Management: Air/contrast enema reduction (first line), surgery if peritonitis/perforation - <strong>1M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
+      'Neatness/Structure - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'portal',
+    shortTitle: 'Portal Hypertension',
+    prob: 'Moderate',
+    subject: 'GI',
+    examType: 'Short Note / Essay',
+    question: 'A 10-year-old child with chronic liver disease presents with hematemesis and abdominal distension. Discuss the diagnosis and management of portal hypertension. (2+3+3+2=10)',
+    marksBreakdown: 'Definition & Pathophysiology → 2M | Clinical Features → 2M | Investigations → 2M | Management → 3M | Complications → 1M',
+    sections: [
+      {
+        title: '1. Definition & Pathophysiology',
+        text: '<strong>Portal Hypertension</strong> is a pathological increase in portal venous pressure (&gt;10 mmHg or gradient &gt;5 mmHg). It results from increased resistance to portal blood flow and/or increased portal blood flow.',
+        list: [
+          '<strong>Pre-hepatic:</strong> Portal vein thrombosis, congenital atresia/stenosis, compression by tumor/cyst',
+          '<strong>Hepatic (most common):</strong> Cirrhosis, congenital hepatic fibrosis, schistosomiasis',
+          '<strong>Post-hepatic:</strong> Budd-Chiari syndrome, constrictive pericarditis, veno-occlusive disease',
+        ],
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Splenomegaly</strong> - most common sign; hypersplenism (pancytopenia)',
+          '<strong>Ascites</strong> - fluid accumulation in peritoneal cavity',
+          '<strong>Caput medusae</strong> - dilated periumbilical veins',
+          '<strong>Hematemesis/Melena</strong> - from esophageal/gastric variceal bleeding (life-threatening)',
+          '<strong>Hepatic encephalopathy</strong> - confusion, asterixis, altered consciousness',
+          '<strong>Pruritus, jaundice, palmar erythema, spider angiomas</strong> - signs of chronic liver disease',
+        ],
+      },
+      {
+        title: '3. Investigations',
+        table: {
+          headers: ['Investigation', 'Finding'],
+          rows: [
+            ['USG Doppler Abdomen', 'Portal vein diameter &gt;13 mm, hepatofugal flow, ascites, splenomegaly, collaterals'],
+            ['Upper GI Endoscopy', 'Esophageal and gastric varices (grade I-IV) - gold standard for diagnosis'],
+            ['CT/MRI Abdomen', 'Portal vein thrombosis, cavernous transformation, collateral vessels'],
+            ['Liver Function Tests', 'Low albumin, elevated bilirubin, prolonged PT/INR'],
+            ['CBC', 'Pancytopenia (hypersplenism)'],
+            ['Endoscopic Ultrasound', 'Detailed evaluation of varices and portal venous system'],
+          ],
+        },
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Acute Variceal Bleeding:</strong> IV fluids, blood transfusion (Hb target 7-8 g/dL), antibiotics (Ceftriaxone - prevent SBP), vasoactive drugs (Octreotide/Terlipressin), endoscopic band ligation (EBL) or sclerotherapy. Balloon tamponade (Sengstaken-Blakemore) if refractory. TIPS if endoscopy fails.',
+          '<strong>Prevention of Rebleeding:</strong> Non-selective beta-blockers (Propranolol), repeated EBL until varices obliterated.',
+          '<strong>Primary Prophylaxis:</strong> Non-selective beta-blockers or EBL if high-risk varices.',
+          '<strong>Portosystemic Shunt Surgery:</strong> Devascularization procedures (Sugiura), shunt procedures (MESO-Rex bypass for portal vein thrombosis), liver transplantation (definitive for end-stage liver disease).',
+          '<strong>General:</strong> Low sodium diet, diuretics (Spironolactone + Furosemide) for ascites, lactulose/rifaximin for encephalopathy, nutritional support.',
+        ],
+      },
+      {
+        title: '5. Complications',
+        list: [
+          'Variceal bleeding (life-threatening)',
+          'Hepatic encephalopathy',
+          'Ascites and spontaneous bacterial peritonitis (SBP)',
+          'Hepatorenal syndrome',
+          'Hepatopulmonary syndrome / portopulmonary hypertension',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Portal venous pressure &gt;10 mmHg or gradient &gt;5 mmHg - <strong>0.5M</strong>',
+      'Pathophysiology: Increased resistance (pre-hepatic, hepatic, post-hepatic) + increased flow - <strong>1M</strong>',
+      'Clinical: Splenomegaly, ascites, caput medusae, hematemesis/melena, encephalopathy - <strong>1M</strong>',
+      'Investigations: USG Doppler, endoscopy (gold standard), CT/MRI, LFT, CBC - <strong>1M</strong>',
+      'Acute bleed management: Fluids, blood, antibiotics, octreotide, endoscopic band ligation - <strong>1.5M</strong>',
+      'Prevention: Beta-blockers, EBL, portosystemic shunt, liver transplant - <strong>1M</strong>',
+      'Complications: Encephalopathy, SBP, hepatorenal syndrome - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>1M</strong>',
+      'Neatness/Structure - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'hus',
+    shortTitle: 'HUS',
+    prob: 'Moderate',
+    subject: 'Nephrology',
+    examType: 'Essay',
+    question: 'A 3-year-old child presents with bloody diarrhea followed by pallor, petechiae, and decreased urine output. Discuss the diagnosis, investigations, and management of Hemolytic Uremic Syndrome. (2+3+3+2=10)',
+    marksBreakdown: 'Definition & Pathophysiology → 2M | Clinical Features → 2M | Investigations → 2M | Management → 3M | Prognosis → 1M',
+    sections: [
+      {
+        title: '1. Definition & Pathophysiology',
+        text: '<strong>Hemolytic Uremic Syndrome (HUS)</strong> is a thrombotic microangiopathy characterized by the classic triad: <strong>hemolytic anemia, thrombocytopenia, and acute kidney injury (AKI)</strong>. It is the most common cause of AKI in children.',
+        list: [
+          '<strong>Typical HUS (90%):</strong> Caused by Shiga toxin-producing E. coli (STEC) - O157:H7, O104:H4. Toxin binds to globotriaosylceramide (Gb3) receptors on glomerular endothelial cells → endothelial damage → platelet activation → microthrombi formation → microangiopathic hemolytic anemia + thrombocytopenia + AKI.',
+          '<strong>Atypical HUS (10%):</strong> Due to complement dysregulation (mutations in CFH, CFI, MCP, C3, CFHR, THBD) or secondary causes (pneumococcal infection, drugs, malignancy, autoimmune).',
+        ],
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Prodrome:</strong> Bloody diarrhea (hemorrhagic colitis) 5-10 days before HUS onset. Severe abdominal pain, vomiting.',
+          '<strong>Hematologic:</strong> Pallor, fatigue, petechiae, ecchymoses, mucosal bleeding (epistaxis, gingival).',
+          '<strong>Renal:</strong> Oliguria/anuria, edema, hypertension, hematuria, proteinuria.',
+          '<strong>Other:</strong> Fever, irritability, seizures (hypertensive encephalopathy), pancreatitis, cardiomyopathy, CNS involvement.',
+        ],
+      },
+      {
+        title: '3. Investigations',
+        table: {
+          headers: ['Investigation', 'Finding'],
+          rows: [
+            ['CBC', 'Anemia (Hb 5-9 g/dL), thrombocytopenia (&lt;150,000), schistocytes/fragmented RBCs'],
+            ['Peripheral Smear', 'Schistocytes, helmet cells, burr cells - microangiopathic hemolysis'],
+            ['LDH, Haptoglobin', 'High LDH, low haptoglobin'],
+            ['Reticulocyte Count', 'Elevated'],
+            ['Coombs Test', 'Negative (non-immune hemolysis)'],
+            ['Blood Urea, Creatinine', 'Elevated (AKI)'],
+            ['Electrolytes', 'Hyperkalemia, hyponatremia, metabolic acidosis, hyperphosphatemia, hypocalcemia'],
+            ['Stool Culture/PCR', 'STEC O157:H7 or other Shiga toxin-producing E. coli'],
+            ['Complement Levels (C3, C4)', 'Normal in typical HUS; low in aHUS'],
+            ['ADAMTS13 Activity', 'Normal (to rule out TTP)'],
+          ],
+        },
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Supportive Care (Mainstay):</strong> Strict fluid and electrolyte management. Treat hyperkalemia, acidosis, hypertension. Blood transfusion for symptomatic anemia (Hb &lt;6 g/dL or hemodynamic compromise). Platelet transfusion only for active bleeding or invasive procedures.',
+          '<strong>Nutrition:</strong> Early enteral nutrition. Parenteral nutrition if contraindicated.',
+          '<strong>Dialysis:</strong> Indicated for refractory fluid overload, severe hyperkalemia, severe metabolic acidosis, uremic symptoms, oliguria &gt;24h. Peritoneal dialysis preferred in children.',
+          '<strong>Antibiotics:</strong> Generally AVOIDED in typical STEC-HUS (may increase Shiga toxin release). Use only for documented sepsis or pneumococcal HUS.',
+          '<strong>Eculizumab:</strong> Humanized anti-C5 monoclonal antibody. Indicated for atypical HUS. Extremely expensive. Vaccinate against meningococcus before starting.',
+          '<strong>Plasma Exchange:</strong> For severe aHUS or TTP-like presentation.',
+          '<strong>Other:</strong> No role for heparin, aspirin, or antiplatelet agents in typical HUS.',
+        ],
+      },
+      {
+        title: '5. Prognosis',
+        list: [
+          'Typical HUS: Mortality 3-5%. Most children recover fully. 30% may have long-term sequelae (proteinuria, hypertension, CKD).',
+          'Atypical HUS: Poor prognosis without treatment. 50% mortality/ESRD in first year. Eculizumab has dramatically improved outcomes.',
+          'Poor prognostic factors: Atypical HUS, CNS involvement, prolonged anuria (&gt;7 days), severe thrombocytopenia.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Thrombotic microangiopathy - hemolytic anemia + thrombocytopenia + AKI - <strong>0.5M</strong>',
+      'Pathophysiology: Shiga toxin (STEC) → endothelial damage → microthrombi → MHA + thrombocytopenia + AKI - <strong>1M</strong>',
+      'Types: Typical (90% - STEC) vs Atypical (10% - complement dysregulation) - <strong>0.5M</strong>',
+      'Clinical: Bloody diarrhea prodrome, pallor, petechiae, oliguria, edema, hypertension - <strong>1M</strong>',
+      'Investigations: CBC with schistocytes, low haptoglobin, high LDH, negative Coombs, stool STEC PCR, normal ADAMTS13 - <strong>1M</strong>',
+      'Management: Supportive care, fluids/electrolytes, dialysis if indicated, AVOID antibiotics in STEC-HUS, eculizumab for aHUS - <strong>1.5M</strong>',
+      'Prognosis: Typical - good recovery; Atypical - poor without eculizumab - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>1M</strong>',
+      'Neatness/Structure - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'biliary',
+    shortTitle: 'Biliary Atresia',
+    prob: 'Moderate',
+    subject: 'GI Surgery / Hepatology',
+    examType: 'Essay',
+    question: 'A 3-week-old infant presents with progressive jaundice, pale stools, and dark urine. Discuss the diagnosis and management of biliary atresia. (2+3+3+2=10)',
+    marksBreakdown: 'Definition & Classification → 2M | Clinical Features → 2M | Investigations → 2M | Management → 3M | Prognosis → 1M',
+    sections: [
+      {
+        title: '1. Definition & Classification',
+        text: '<strong>Biliary Atresia (BA)</strong> is a progressive, idiopathic, obliterative cholangiopathy involving the extrahepatic (and sometimes intrahepatic) bile ducts. It is the most common cause of neonatal cholestasis and the leading indication for liver transplantation in children.',
+        list: [
+          '<strong>Type I (10%):</strong> Obliteration of common bile duct only. Most favorable prognosis.',
+          '<strong>Type II (2%):</strong> Obliteration of common hepatic duct.',
+          '<strong>Type III (88%):</strong> Obliteration of entire extrahepatic biliary tree up to porta hepatis. Most common and most severe.',
+          '<strong>Associated anomalies (10-20%):</strong> Biliary atresia splenic malformation (BASM) syndrome - polysplenia, situs inversus, malrotation, cardiac defects, preduodenal portal vein.',
+        ],
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Jaundice:</strong> Progressive, conjugated hyperbilirubinemia. Persists beyond 14 days of life (physiological jaundice resolves by 2 weeks).',
+          '<strong>Acholic (pale/white) stools:</strong> Due to absence of bile reaching intestine. Most specific sign.',
+          '<strong>Dark urine:</strong> Conjugated bilirubin excreted in urine.',
+          '<strong>Hepatomegaly:</strong> Firm, enlarged liver. Splenomegaly in advanced disease.',
+          '<strong>Ascites, failure to thrive, bleeding tendency, pruritus</strong> - signs of end-stage liver disease.',
+        ],
+      },
+      {
+        title: '3. Investigations',
+        table: {
+          headers: ['Investigation', 'Finding/Purpose'],
+          rows: [
+            ['Serum Bilirubin', 'Conjugated hyperbilirubinemia (&gt;20% of total or &gt;1 mg/dL if total &lt;5 mg/dL)'],
+            ['Liver Function Tests', 'Elevated AST, ALT, GGT (markedly elevated), low albumin, prolonged PT'],
+            ['Coagulation Profile', 'Prolonged PT/INR (vitamin K responsive initially)'],
+            ['USG Abdomen', 'Small/absent gallbladder, triangular cord sign (&gt;4 mm fibrous cone at porta hepatis), absent common bile duct'],
+            ['HIDA Scan', 'No excretion of tracer into intestine (non-visualization of bowel at 24h) - high sensitivity'],
+            ['Liver Biopsy', 'Bile duct proliferation, portal fibrosis, bile plugs, inflammatory infiltrate - gold standard if diagnosis unclear'],
+            ['MRCP/ERCP', 'Anatomic delineation (rarely needed)'],
+            ['Infectious Workup', 'Exclude TORCH, sepsis, hepatitis'],
+          ],
+        },
+      },
+      {
+        title: '4. Management',
+        list: [
+          '<strong>Kasai Portoenterostomy (First Line):</strong> Excision of fibrotic biliary remnant + Roux-en-Y jejunal loop anastomosed to porta hepatis to restore bile drainage. <strong>Timing is critical:</strong> Best outcomes if performed &lt;60 days of age. Success rate drops dramatically after 90 days.',
+          '<strong>Pre-operative:</strong> Vitamin K (correct coagulopathy), nutritional support (MCT-containing formula), choleretics (ursodeoxycholic acid), antibiotics.',
+          '<strong>Post-operative:</strong> Prednisolone (improve bile flow), prophylactic antibiotics (prevent cholangitis), ursodeoxycholic acid, fat-soluble vitamins (A, D, E, K).',
+          '<strong>Liver Transplantation:</strong> Definitive treatment for failed Kasai or end-stage liver disease. 80-90% survival at 5 years.',
+          '<strong>Cholangitis:</strong> Most common complication post-Kasai. Fever, increased jaundice, acholic stools. Treat with broad-spectrum IV antibiotics.',
+        ],
+      },
+      {
+        title: '5. Prognosis',
+        list: [
+          'Kasai success (jaundice-free) in 50-60% if performed &lt;60 days.',
+          'Native liver survival: 50% at 5 years, 30% at 10 years.',
+          'Overall survival with transplant: 80-90% at 5 years, 80% at 20 years.',
+          'Poor prognostic factors: Age &gt;90 days at Kasai, Type III, BASM syndrome, post-operative cholangitis, portal hypertension.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Obliterative cholangiopathy of extrahepatic (and intrahepatic) bile ducts - <strong>0.5M</strong>',
+      'Classification: Type I (common bile duct), Type II (common hepatic duct), Type III (entire extrahepatic tree) - <strong>0.5M</strong>',
+      'BASM syndrome: Polysplenia, situs inversus, malrotation, cardiac defects - <strong>0.5M</strong>',
+      'Clinical: Progressive jaundice, acholic stools (most specific), dark urine, hepatomegaly - <strong>1M</strong>',
+      'Investigations: Conjugated hyperbilirubinemia, high GGT, USG (triangular cord sign), HIDA scan (non-visualization), liver biopsy - <strong>1M</strong>',
+      'Management: Kasai portoenterostomy &lt;60 days (critical), post-op steroids + antibiotics, liver transplant for failure - <strong>1.5M</strong>',
+      'Prognosis: 50-60% jaundice-free if &lt;60 days; 80-90% survival with transplant - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>1M</strong>',
+      'Neatness/Structure - <strong>1M</strong>',
+    ],
+  },
+  {
+    id: 'dka',
+    shortTitle: 'DKA Management',
+    prob: 'Moderate',
+    subject: 'Endocrinology',
+    examType: 'Essay',
+    question: 'A 6-year-old child with Type 1 DM presents with polyuria, polydipsia, vomiting, abdominal pain, and Kussmaul breathing. Discuss the management of diabetic ketoacidosis. (2+3+3+2=10)',
+    marksBreakdown: 'Definition & Pathophysiology → 2M | Clinical Features & Diagnosis → 2M | Management → 4M | Monitoring & Complications → 2M',
+    sections: [
+      {
+        title: '1. Definition & Pathophysiology',
+        text: '<strong>Diabetic Ketoacidosis (DKA)</strong> is a life-threatening complication of Type 1 DM characterized by hyperglycemia (BG &gt;200 mg/dL), metabolic acidosis (pH &lt;7.30), and ketonemia/ketonuria.',
+        list: [
+          '<strong>Insulin deficiency</strong> → decreased glucose utilization → hyperglycemia → osmotic diuresis → dehydration + electrolyte losses.',
+          '<strong>Lipolysis</strong> → increased free fatty acids → hepatic ketogenesis (beta-hydroxybutyrate, acetoacetate) → metabolic acidosis.',
+          '<strong>Counter-regulatory hormones</strong> (glucagon, cortisol, catecholamines, growth hormone) further worsen hyperglycemia and ketosis.',
+        ],
+      },
+      {
+        title: '2. Clinical Features',
+        list: [
+          '<strong>Hyperglycemia symptoms:</strong> Polyuria, polydipsia, weight loss, dehydration (dry mucous membranes, poor skin turgor, tachycardia, hypotension)',
+          '<strong>Acidosis symptoms:</strong> Kussmaul breathing (deep, rapid, sighing respirations), acetone breath (fruity odor)',
+          '<strong>GI symptoms:</strong> Nausea, vomiting, abdominal pain (may mimic acute abdomen)',
+          '<strong>CNS symptoms:</strong> Altered consciousness, lethargy, confusion, coma (cerebral edema - most feared complication)',
+        ],
+      },
+      {
+        title: '3. Management',
+        list: [
+          '<strong>Fluid Resuscitation:</strong> 0.9% NS 10-20 mL/kg over 1-2 hours (initial). Then 0.45-0.9% NS + dextrose. Replace deficit over 48 hours. Avoid overly rapid correction.',
+          '<strong>Insulin:</strong> Regular insulin 0.05-0.1 U/kg/hr IV infusion. Start AFTER 1-2 hours of fluid resuscitation. Do NOT bolus. Continue until acidosis resolves (pH &gt;7.30, bicarbonate &gt;18).',
+          '<strong>Potassium:</strong> Add 20-40 mEq/L once urine output confirmed and K+ &lt;5.5 mEq/L. Hold insulin if K+ &lt;3.3 mEq/L (risk of arrhythmia).',
+          '<strong>Bicarbonate:</strong> Generally AVOIDED. May consider if pH &lt;6.9 with hemodynamic instability.',
+          '<strong>Phosphate:</strong> Replace if &lt;1 mg/dL or cardiac dysfunction/hemolysis present.',
+          '<strong>Dextrose:</strong> Add D5 or D10 when BG drops to 200-250 mg/dL. Continue insulin to clear ketosis.',
+        ],
+      },
+      {
+        title: '4. Monitoring & Complications',
+        list: [
+          '<strong>Monitoring:</strong> Blood glucose hourly, electrolytes and VBG every 2-4 hours, neuro checks hourly, fluid balance hourly, ECG monitoring.',
+          '<strong>Cerebral Edema (most feared):</strong> Headache, bradycardia, hypertension, altered consciousness, seizures, pupillary changes. Treat with mannitol 0.5-1 g/kg or 3% hypertonic saline 5-10 mL/kg. Reduce fluid rate, elevate head.',
+          '<strong>Hypoglycemia:</strong> Add dextrose to IV fluids.',
+          '<strong>Hypokalemia:</strong> Aggressive K+ replacement.',
+          '<strong>Resolution criteria:</strong> BG &lt;200 mg/dL, pH &gt;7.30, HCO3 &gt;18 mEq/L, closed anion gap, ability to tolerate oral intake.',
+        ],
+      },
+    ],
+    checklist: [
+      'Definition: Hyperglycemia (BG &gt;200) + Metabolic acidosis (pH &lt;7.30) + Ketonemia/ketonuria - <strong>0.5M</strong>',
+      'Pathophysiology: Insulin deficiency → hyperglycemia → lipolysis → ketogenesis → osmotic diuresis → dehydration + acidosis - <strong>1M</strong>',
+      'Clinical: Polyuria, polydipsia, Kussmaul breathing, acetone breath, vomiting, abdominal pain, altered consciousness - <strong>1M</strong>',
+      'Fluid: 0.9% NS 10-20 mL/kg over 1-2h, then 0.45-0.9% NS + dextrose; replace deficit over 48h - <strong>1M</strong>',
+      'Insulin: 0.05-0.1 U/kg/hr IV after 1-2h of fluids; continue until acidosis resolves - <strong>1M</strong>',
+      'Potassium: Add 20-40 mEq/L once urine output confirmed and K+ &lt;5.5; hold insulin if K+ &lt;3.3 - <strong>0.5M</strong>',
+      'Bicarbonate: Avoid; only if pH &lt;6.9 with hemodynamic instability - <strong>0.5M</strong>',
+      'Cerebral edema: Most feared complication; mannitol or 3% saline, reduce fluids, elevate head - <strong>0.5M</strong>',
+      'Monitoring: Glucose hourly, electrolytes/VBG every 2-4h, neuro checks hourly - <strong>0.5M</strong>',
+      'Resolution: BG &lt;200, pH &gt;7.30, HCO3 &gt;18, closed anion gap, oral tolerance - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>1M</strong>',
+      'Neatness/Structure - <strong>1M</strong>',
+    ],
+  },
+];

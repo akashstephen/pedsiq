@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #111111;
+  --color-surface-hover: #1a1a1a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255,255,255,0.6);
+  --color-text-tertiary: rgba(255,255,255,0.55);
+  --color-accent: #007AFF;
+  --color-accent-glow: rgba(0,122,255,0.3);
+  --color-accent-secondary: #5856D6;
+  --color-success: #34C759;
+  --color-warning: #FF9500;
+  --color-danger: #FF3B30;
+  --color-glass: rgba(255,255,255,0.03);
+  --color-glass-border: rgba(255,255,255,0.08);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Hide sidebar and mobile toggle */
+  aside,
+  button[aria-label="Toggle navigation"] {
+    display: none !important;
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Ensure articles break properly */
+  article {
+    page-break-inside: avoid;
+    page-break-after: always;
+    border: 1px solid #ddd !important;
+    margin-bottom: 20px;
+    padding: 20px !important;
+    background: #fff !important;
+  }
+
+  article:last-child {
+    page-break-after: auto;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10pt;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    text-align: left;
+  }
+
+  th {
+    background: #f5f5f5 !important;
+    color: #111 !important;
+  }
+
+  /* Hide filter buttons and print button on print */
+  button {
+    display: none !important;
+  }
+}
