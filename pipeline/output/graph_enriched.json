@@ -1,0 +1,1579 @@
+{
+  "concepts": {
+    "agn": {
+      "id": "agn",
+      "name": "Acute Glomerulonephritis",
+      "category": "disease",
+      "synonyms": [
+        "AGN",
+        "PSGN",
+        "Acute Post-Streptococcal GN"
+      ],
+      "definition": "Immune complex-mediated glomerular inflammation following streptococcal infection.",
+      "related_concepts": [
+        "nephrotic_syndrome",
+        "streptococcus",
+        "complement_c3",
+        "hematuria",
+        "hypertension"
+      ],
+      "nelson_chapter": "184. Glomerulonephritis",
+      "exam_frequency": 36,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": [
+        "Do NOT give steroids in APSGN",
+        "C3 is low; C4 is normal (differentiates from MPGN)",
+        "Penicillin is for eradication, not treatment of GN"
+      ]
+    },
+    "nephrotic_syndrome": {
+      "id": "nephrotic_syndrome",
+      "name": "Nephrotic Syndrome",
+      "category": "syndrome",
+      "synonyms": [
+        "NS",
+        "Minimal Change Disease",
+        "Steroid-Sensitive NS"
+      ],
+      "definition": "Massive proteinuria (>50 mg/kg/day), hypoalbuminemia, edema, hyperlipidemia.",
+      "related_concepts": [
+        "agn",
+        "proteinuria",
+        "edema",
+        "steroids",
+        "albumin"
+      ],
+      "nelson_chapter": "162. Nephrotic Syndrome and Proteinuria",
+      "exam_frequency": 83,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": [
+        "First-line is oral prednisolone 2 mg/kg/day",
+        "Do NOT biopsy on first episode if typical",
+        "Pneumococcal vaccine before starting steroids"
+      ]
+    },
+    "hus": {
+      "id": "hus",
+      "name": "Hemolytic Uremic Syndrome",
+      "category": "disease",
+      "synonyms": [
+        "HUS",
+        "D+HUS",
+        "Atypical HUS"
+      ],
+      "definition": "Microangiopathic hemolytic anemia, thrombocytopenia, acute kidney injury.",
+      "related_concepts": [
+        "e_coli_o157",
+        "anemia",
+        "thrombocytopenia",
+        "aki"
+      ],
+      "nelson_chapter": "166. Hemolytic Uremic Syndrome",
+      "exam_frequency": 3,
+      "exam_years": [
+        2015,
+        2023,
+        2024
+      ],
+      "examiner_traps": [
+        "Do NOT give antibiotics in STEC-HUS (increases toxin release)",
+        "Platelet transfusion only for active bleeding",
+        "Distinguish from TTP (ADAMTS13 deficiency)"
+      ]
+    },
+    "hematuria": {
+      "id": "hematuria",
+      "name": "Hematuria",
+      "category": "sign_symptom",
+      "synonyms": [
+        "Gross hematuria",
+        "Microscopic hematuria",
+        "RBC casts"
+      ],
+      "definition": "Presence of red blood cells in urine.",
+      "related_concepts": [
+        "agn",
+        "nephrotic_syndrome",
+        "uti",
+        "renal_stones",
+        "iga_nephropathy"
+      ],
+      "nelson_chapter": "161. Cystic Kidney Disease and Urinary Tract Abnormalities",
+      "exam_frequency": 3,
+      "exam_years": [
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "proteinuria": {
+      "id": "proteinuria",
+      "name": "Proteinuria",
+      "category": "sign_symptom",
+      "synonyms": [
+        "Albuminuria",
+        "Massive proteinuria"
+      ],
+      "definition": "Excessive protein in urine.",
+      "related_concepts": [
+        "nephrotic_syndrome",
+        "agn",
+        "renal_failure"
+      ],
+      "nelson_chapter": "162. Nephrotic Syndrome and Proteinuria",
+      "exam_frequency": 1,
+      "exam_years": [
+        2021
+      ],
+      "examiner_traps": []
+    },
+    "rickets": {
+      "id": "rickets",
+      "name": "Rickets",
+      "category": "disease",
+      "synonyms": [
+        "Vitamin D deficiency rickets",
+        "Nutritional rickets"
+      ],
+      "definition": "Defective mineralization of growing bone due to vitamin D/calcium/phosphate deficiency.",
+      "related_concepts": [
+        "vitamin_d",
+        "calcium",
+        "phosphate",
+        "alkaline_phosphatase",
+        "craniotabes"
+      ],
+      "nelson_chapter": "176. Disorders of Parathyroid Bone and Mineral Endocrinology",
+      "exam_frequency": 7,
+      "exam_years": [
+        2015,
+        2016,
+        2019,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": [
+        "X-ray shows cupping and fraying of metaphysis",
+        "Alkaline phosphatase is elevated",
+        "Treat with cholecalciferol 2000-5000 IU/day x 6-12 weeks"
+      ]
+    },
+    "hypothyroidism": {
+      "id": "hypothyroidism",
+      "name": "Congenital Hypothyroidism",
+      "category": "disease",
+      "synonyms": [
+        "Cretinism",
+        "Neonatal hypothyroidism"
+      ],
+      "definition": "Thyroid hormone deficiency present at birth; screened via TSH.",
+      "related_concepts": [
+        "tsh",
+        "thyroxine",
+        "newborn_screening",
+        "developmental_delay"
+      ],
+      "nelson_chapter": "173. Thyroid Disorders",
+      "exam_frequency": 3,
+      "exam_years": [
+        2020,
+        2022,
+        2024
+      ],
+      "examiner_traps": [
+        "Start thyroxine immediately; delay causes irreversible brain damage",
+        "TSH elevated, T4 low",
+        "Most common cause is thyroid dysgenesis"
+      ]
+    },
+    "dka": {
+      "id": "dka",
+      "name": "Diabetic Ketoacidosis",
+      "category": "disease",
+      "synonyms": [
+        "DKA",
+        "Diabetic coma"
+      ],
+      "definition": "Hyperglycemia, ketosis, metabolic acidosis in Type 1 DM.",
+      "related_concepts": [
+        "type_1_dm",
+        "insulin",
+        "fluid_resuscitation",
+        "hyperglycemia",
+        "acidosis"
+      ],
+      "nelson_chapter": "174. Diabetes Mellitus",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": [
+        "Fluid first, then insulin (0.1 U/kg/hr)",
+        "Correct Na+ for hyperglycemia",
+        "Cerebral edema: mannitol + reduce fluid rate"
+      ]
+    },
+    "type_1_dm": {
+      "id": "type_1_dm",
+      "name": "Type 1 Diabetes Mellitus",
+      "category": "disease",
+      "synonyms": [
+        "T1DM",
+        "Juvenile diabetes",
+        "Insulin-dependent diabetes"
+      ],
+      "definition": "Autoimmune destruction of pancreatic beta cells leading to absolute insulin deficiency.",
+      "related_concepts": [
+        "dka",
+        "insulin",
+        "hypoglycemia",
+        "hba1c"
+      ],
+      "nelson_chapter": "174. Diabetes Mellitus",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "portal_hypertension": {
+      "id": "portal_hypertension",
+      "name": "Portal Hypertension",
+      "category": "disease",
+      "synonyms": [
+        "Portal HTN",
+        "PHT"
+      ],
+      "definition": "Elevated pressure in the portal venous system, usually from cirrhosis or extrahepatic obstruction.",
+      "related_concepts": [
+        "cirrhosis",
+        "varices",
+        "hematemesis",
+        "splenomegaly",
+        "ascites"
+      ],
+      "nelson_chapter": "130. Liver Disease",
+      "exam_frequency": 3,
+      "exam_years": [
+        2024
+      ],
+      "examiner_traps": [
+        "First-line for acute bleed: octreotide + antibiotics + endoscopy",
+        "Prophylaxis: non-selective beta-blocker (propranolol)",
+        "Avoid over-transfusion (maintain Hb ~7-8 g/dL)"
+      ]
+    },
+    "biliary_atresia": {
+      "id": "biliary_atresia",
+      "name": "Biliary Atresia",
+      "category": "disease",
+      "synonyms": [
+        "Extrahepatic biliary atresia",
+        "Neonatal cholestasis"
+      ],
+      "definition": "Obstruction of extrahepatic bile ducts leading to cholestatic jaundice in neonates.",
+      "related_concepts": [
+        "kasai_procedure",
+        "neonatal_jaundice",
+        "cholestasis",
+        "liver_transplant"
+      ],
+      "nelson_chapter": "130. Liver Disease",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": [
+        "Kasai portoenterostomy within first 60 days",
+        "Pale stools + dark urine = conjugated hyperbilirubinemia",
+        "Hepatobiliary iminodiacetic acid (HIDA) scan is diagnostic"
+      ]
+    },
+    "intussusception": {
+      "id": "intussusception",
+      "name": "Intussusception",
+      "category": "disease",
+      "synonyms": [
+        "Intussusception",
+        "Telescoping bowel"
+      ],
+      "definition": "Invagination of one segment of intestine into another.",
+      "related_concepts": [
+        "currants_jelly_stool",
+        "sausage_mass",
+        "target_sign",
+        "air_enema"
+      ],
+      "nelson_chapter": "138. Intussusception",
+      "exam_frequency": 1,
+      "exam_years": [
+        2018
+      ],
+      "examiner_traps": [
+        "Two age peaks: 3-12 months and 3-6 years",
+        "Air/contrast enema is first-line reduction",
+        "Surgery if peritonitis, perforation, or failed enema"
+      ]
+    },
+    "hepatitis": {
+      "id": "hepatitis",
+      "name": "Hepatitis",
+      "category": "disease",
+      "synonyms": [
+        "Viral hepatitis",
+        "Hepatitis A",
+        "Hepatitis B",
+        "Hepatitis E"
+      ],
+      "definition": "Inflammation of the liver, commonly viral in children.",
+      "related_concepts": [
+        "jaundice",
+        "hepatomegaly",
+        "vaccine",
+        "fulminant_hepatic_failure"
+      ],
+      "nelson_chapter": "130. Liver Disease",
+      "exam_frequency": 2,
+      "exam_years": [
+        2020,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "neonatal_jaundice": {
+      "id": "neonatal_jaundice",
+      "name": "Neonatal Jaundice",
+      "category": "sign_symptom",
+      "synonyms": [
+        "Hyperbilirubinemia",
+        "Physiological jaundice",
+        "Pathological jaundice"
+      ],
+      "definition": "Yellow discoloration of skin/sclera due to elevated bilirubin in neonates.",
+      "related_concepts": [
+        "phototherapy",
+        "exchange_transfusion",
+        "kernicterus",
+        "abo_incompatibility"
+      ],
+      "nelson_chapter": "60. Hyperbilirubinemia",
+      "exam_frequency": 4,
+      "exam_years": [
+        2018,
+        2021,
+        2023,
+        2024
+      ],
+      "examiner_traps": []
+    },
+    "neonatal_hypoglycemia": {
+      "id": "neonatal_hypoglycemia",
+      "name": "Neonatal Hypoglycemia",
+      "category": "disease",
+      "synonyms": [
+        "Hypoglycemia of newborn"
+      ],
+      "definition": "Blood glucose <40 mg/dL in term neonates; lower thresholds for preterms.",
+      "related_concepts": [
+        "sepsis",
+        "ihd",
+        "macrosomia",
+        "glucose_infusion"
+      ],
+      "nelson_chapter": "59. Hypoglycemia",
+      "exam_frequency": 1,
+      "exam_years": [
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "sepsis": {
+      "id": "sepsis",
+      "name": "Neonatal Sepsis",
+      "category": "disease",
+      "synonyms": [
+        "Early-onset sepsis",
+        "Late-onset sepsis",
+        "Septicemia"
+      ],
+      "definition": "Systemic infection in neonates; early onset <72h, late onset >72h.",
+      "related_concepts": [
+        "group_b_strep",
+        "e_coli",
+        "ampicillin",
+        "gentamicin",
+        "cpap"
+      ],
+      "nelson_chapter": "62. Infections of the Newborn",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "rds": {
+      "id": "rds",
+      "name": "Respiratory Distress Syndrome",
+      "category": "disease",
+      "synonyms": [
+        "RDS",
+        "Hyaline membrane disease",
+        "Surfactant deficiency"
+      ],
+      "definition": "Respiratory failure in preterm neonates due to surfactant deficiency.",
+      "related_concepts": [
+        "surfactant",
+        "cpap",
+        "mechanical_ventilation",
+        "preterm"
+      ],
+      "nelson_chapter": "61. Respiratory Diseases of the Newborn",
+      "exam_frequency": 4,
+      "exam_years": [
+        2017,
+        2018,
+        2022,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "tuberculosis": {
+      "id": "tuberculosis",
+      "name": "Tuberculosis",
+      "category": "disease",
+      "synonyms": [
+        "TB",
+        "Primary complex",
+        "Miliary TB",
+        "Pulmonary TB"
+      ],
+      "definition": "Mycobacterial infection caused by Mycobacterium tuberculosis.",
+      "related_concepts": [
+        "mantoux",
+        "bcg",
+        "rifampicin",
+        "isoniazid",
+        "pyrazinamide"
+      ],
+      "nelson_chapter": "124. Tuberculosis",
+      "exam_frequency": 5,
+      "exam_years": [
+        2017,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "meningitis": {
+      "id": "meningitis",
+      "name": "Meningitis",
+      "category": "disease",
+      "synonyms": [
+        "Pyogenic meningitis",
+        "Tubercular meningitis",
+        "Viral meningitis"
+      ],
+      "definition": "Inflammation of the meninges; bacterial, viral, or tubercular etiology.",
+      "related_concepts": [
+        "csf",
+        "cefotaxime",
+        "ampicillin",
+        "kernig",
+        "brudzinski"
+      ],
+      "nelson_chapter": "100. Bacterial Meningitis",
+      "exam_frequency": 5,
+      "exam_years": [
+        2017,
+        2018,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "pneumonia": {
+      "id": "pneumonia",
+      "name": "Pneumonia",
+      "category": "disease",
+      "synonyms": [
+        "Community-acquired pneumonia",
+        "Very severe pneumonia",
+        "Lobar pneumonia"
+      ],
+      "definition": "Infection of lung parenchyma; leading cause of under-5 mortality.",
+      "related_concepts": [
+        "amoxicillin",
+        "oxygen",
+        "cpap",
+        "imci",
+        "danger_signs"
+      ],
+      "nelson_chapter": "110. Pneumonia",
+      "exam_frequency": 12,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2019,
+        2020,
+        2021,
+        2023
+      ],
+      "examiner_traps": []
+    },
+    "dengue": {
+      "id": "dengue",
+      "name": "Dengue",
+      "category": "disease",
+      "synonyms": [
+        "Dengue fever",
+        "Dengue hemorrhagic fever",
+        "Dengue shock syndrome"
+      ],
+      "definition": "Arboviral infection transmitted by Aedes mosquito.",
+      "related_concepts": [
+        "aedes",
+        "thrombocytopenia",
+        "hemoconcentration",
+        "fluid_resuscitation"
+      ],
+      "nelson_chapter": "122. Zoonoses and Vector Borne Infections",
+      "exam_frequency": 5,
+      "exam_years": [
+        2015,
+        2018,
+        2019,
+        2023,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "malaria": {
+      "id": "malaria",
+      "name": "Malaria",
+      "category": "disease",
+      "synonyms": [
+        "Falciparum malaria",
+        "Vivax malaria",
+        "Cerebral malaria"
+      ],
+      "definition": "Protozoal infection by Plasmodium species transmitted by Anopheles mosquito.",
+      "related_concepts": [
+        "plasmodium",
+        "artesunate",
+        "chloroquine",
+        "anemia",
+        "splenomegaly"
+      ],
+      "nelson_chapter": "123. Parasitic Diseases",
+      "exam_frequency": 2,
+      "exam_years": [
+        2016,
+        2019
+      ],
+      "examiner_traps": []
+    },
+    "hiv": {
+      "id": "hiv",
+      "name": "HIV/AIDS",
+      "category": "disease",
+      "synonyms": [
+        "Pediatric HIV",
+        "AIDS",
+        "HIV encephalopathy"
+      ],
+      "definition": "Chronic viral infection causing immunodeficiency.",
+      "related_concepts": [
+        "art",
+        "cotrimoxazole",
+        "pneumocystis",
+        "opportunistic_infections"
+      ],
+      "nelson_chapter": "125. HIV and AIDS",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "immunization": {
+      "id": "immunization",
+      "name": "Immunization",
+      "category": "program",
+      "synonyms": [
+        "Vaccination",
+        "National Immunization Schedule",
+        "UIP"
+      ],
+      "definition": "Administration of vaccines to induce immunity.",
+      "related_concepts": [
+        "bcg",
+        "opv",
+        "pentavalent",
+        "mmr",
+        "aefi"
+      ],
+      "nelson_chapter": "94. Immunization and Prophylaxis",
+      "exam_frequency": 5,
+      "exam_years": [
+        2018,
+        2020,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "chd": {
+      "id": "chd",
+      "name": "Congenital Heart Disease",
+      "category": "disease",
+      "synonyms": [
+        "CHD",
+        "VSD",
+        "ASD",
+        "PDA",
+        "Tetralogy of Fallot"
+      ],
+      "definition": "Structural abnormalities of the heart present at birth.",
+      "related_concepts": [
+        "cyanosis",
+        "heart_failure",
+        "murmur",
+        "echocardiography"
+      ],
+      "nelson_chapter": "142. Congenital Heart Disease",
+      "exam_frequency": 7,
+      "exam_years": [
+        2017,
+        2018,
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "rheumatic_fever": {
+      "id": "rheumatic_fever",
+      "name": "Rheumatic Fever",
+      "category": "disease",
+      "synonyms": [
+        "Acute rheumatic fever",
+        "RF",
+        "Rheumatic heart disease"
+      ],
+      "definition": "Autoimmune inflammatory disease following Group A streptococcal pharyngitis.",
+      "related_concepts": [
+        "jones_criteria",
+        "carditis",
+        "penicillin",
+        "prophylaxis"
+      ],
+      "nelson_chapter": "146. Rheumatic Fever",
+      "exam_frequency": 5,
+      "exam_years": [
+        2015,
+        2017,
+        2018,
+        2022,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "heart_failure": {
+      "id": "heart_failure",
+      "name": "Heart Failure",
+      "category": "disease",
+      "synonyms": [
+        "Congestive cardiac failure",
+        "CCF",
+        "Pediatric heart failure"
+      ],
+      "definition": "Inability of the heart to pump sufficient blood to meet metabolic demands.",
+      "related_concepts": [
+        "digoxin",
+        "furosemide",
+        "ace_inhibitors",
+        "cardiomegaly"
+      ],
+      "nelson_chapter": "145. Heart Failure",
+      "exam_frequency": 3,
+      "exam_years": [
+        2016,
+        2019,
+        2023
+      ],
+      "examiner_traps": []
+    },
+    "anemia": {
+      "id": "anemia",
+      "name": "Anemia",
+      "category": "disease",
+      "synonyms": [
+        "Iron deficiency anemia",
+        "IDA",
+        "Microcytic hypochromic anemia"
+      ],
+      "definition": "Reduction in hemoglobin concentration below age-specific normal values.",
+      "related_concepts": [
+        "iron",
+        "ferritin",
+        "hb",
+        "microcytosis",
+        "hypochromia"
+      ],
+      "nelson_chapter": "150. Anemia",
+      "exam_frequency": 11,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2019,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "thalassemia": {
+      "id": "thalassemia",
+      "name": "Thalassemia",
+      "category": "disease",
+      "synonyms": [
+        "Beta-thalassemia",
+        "Thalassemia major",
+        "Thalassemia minor"
+      ],
+      "definition": "Inherited hemoglobin synthesis disorder causing microcytic hypochromic anemia.",
+      "related_concepts": [
+        "anemia",
+        "hemolysis",
+        "splenomegaly",
+        "transfusion",
+        "chelation"
+      ],
+      "nelson_chapter": "151. Hemoglobinopathies",
+      "exam_frequency": 5,
+      "exam_years": [
+        2016,
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "itp": {
+      "id": "itp",
+      "name": "Immune Thrombocytopenia",
+      "category": "disease",
+      "synonyms": [
+        "ITP",
+        "Idiopathic thrombocytopenic purpura"
+      ],
+      "definition": "Autoimmune destruction of platelets leading to isolated thrombocytopenia.",
+      "related_concepts": [
+        "purpura",
+        "petechiae",
+        "ivig",
+        "platelets"
+      ],
+      "nelson_chapter": "153. Platelet Disorders",
+      "exam_frequency": 2,
+      "exam_years": [
+        2023,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "leukemia": {
+      "id": "leukemia",
+      "name": "Leukemia",
+      "category": "disease",
+      "synonyms": [
+        "ALL",
+        "AML",
+        "Acute lymphoblastic leukemia"
+      ],
+      "definition": "Malignant proliferation of hematopoietic cells in bone marrow.",
+      "related_concepts": [
+        "anemia",
+        "thrombocytopenia",
+        "hepatosplenomegaly",
+        "chemotherapy"
+      ],
+      "nelson_chapter": "155. Leukemia",
+      "exam_frequency": 18,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "seizures": {
+      "id": "seizures",
+      "name": "Seizures",
+      "category": "disease",
+      "synonyms": [
+        "Epilepsy",
+        "Febrile seizures",
+        "Status epilepticus"
+      ],
+      "definition": "Paroxysmal transient disturbance of cerebral function due to abnormal neuronal discharge.",
+      "related_concepts": [
+        "phenytoin",
+        "phenobarbital",
+        "eeg",
+        "neuroimaging"
+      ],
+      "nelson_chapter": "181. Seizures",
+      "exam_frequency": 6,
+      "exam_years": [
+        2016,
+        2018,
+        2020,
+        2022,
+        2024
+      ],
+      "examiner_traps": []
+    },
+    "meningitis_neuro": {
+      "id": "meningitis_neuro",
+      "name": "Meningitis",
+      "category": "disease",
+      "synonyms": [
+        "Pyogenic meningitis",
+        "Tubercular meningitis"
+      ],
+      "definition": "Inflammation of leptomeninges.",
+      "related_concepts": [
+        "csf",
+        "headache",
+        "neck_rigidity",
+        "photophobia"
+      ],
+      "nelson_chapter": "183. Meningitis",
+      "exam_frequency": 5,
+      "exam_years": [
+        2017,
+        2018,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "cerebral_palsy": {
+      "id": "cerebral_palsy",
+      "name": "Cerebral Palsy",
+      "category": "disease",
+      "synonyms": [
+        "CP",
+        "Spastic diplegia",
+        "Spastic hemiplegia"
+      ],
+      "definition": "Non-progressive disorder of movement and posture due to static encephalopathy.",
+      "related_concepts": [
+        "spasticity",
+        "developmental_delay",
+        "physiotherapy",
+        "botulinum"
+      ],
+      "nelson_chapter": "182. Weakness and Hypotonia",
+      "exam_frequency": 3,
+      "exam_years": [
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "hydrocephalus": {
+      "id": "hydrocephalus",
+      "name": "Hydrocephalus",
+      "category": "disease",
+      "synonyms": [
+        "Communicating hydrocephalus",
+        "Obstructive hydrocephalus"
+      ],
+      "definition": "Abnormal accumulation of CSF in ventricles causing ventricular enlargement.",
+      "related_concepts": [
+        "vp_shunt",
+        "bulging_fontanelle",
+        "sunset_sign",
+        "macrocephaly"
+      ],
+      "nelson_chapter": "180. Head Shape and Size Abnormalities",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "asthma": {
+      "id": "asthma",
+      "name": "Asthma",
+      "category": "disease",
+      "synonyms": [
+        "Bronchial asthma",
+        "Reactive airway disease"
+      ],
+      "definition": "Chronic inflammatory airway disease with reversible bronchospasm.",
+      "related_concepts": [
+        "salbutamol",
+        "steroids",
+        "inhaler",
+        "peak_flow",
+        "wheezing"
+      ],
+      "nelson_chapter": "136. Lower Airway, Parenchymal, and Pulmonary Vascular Diseases",
+      "exam_frequency": 5,
+      "exam_years": [
+        2018,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "pneumonia_resp": {
+      "id": "pneumonia_resp",
+      "name": "Pneumonia",
+      "category": "disease",
+      "synonyms": [
+        "Community-acquired pneumonia",
+        "Lobar pneumonia",
+        "Bronchopneumonia"
+      ],
+      "definition": "Infection of lung parenchyma.",
+      "related_concepts": [
+        "amoxicillin",
+        "oxygen",
+        "cpap",
+        "crackles",
+        "tachypnea"
+      ],
+      "nelson_chapter": "136. Lower Airway, Parenchymal, and Pulmonary Vascular Diseases",
+      "exam_frequency": 12,
+      "exam_years": [
+        2015,
+        2016,
+        2017,
+        2019,
+        2020,
+        2021,
+        2023
+      ],
+      "examiner_traps": []
+    },
+    "bronchiolitis": {
+      "id": "bronchiolitis",
+      "name": "Bronchiolitis",
+      "category": "disease",
+      "synonyms": [
+        "Viral bronchiolitis",
+        "RSV bronchiolitis"
+      ],
+      "definition": "Acute viral lower respiratory tract infection in infants <2 years.",
+      "related_concepts": [
+        "rsv",
+        "wheezing",
+        "hypoxia",
+        "nasal_suction",
+        "cpap"
+      ],
+      "nelson_chapter": "136. Lower Airway, Parenchymal, and Pulmonary Vascular Diseases",
+      "exam_frequency": 2,
+      "exam_years": [
+        2021,
+        2024
+      ],
+      "examiner_traps": []
+    },
+    "sam": {
+      "id": "sam",
+      "name": "Severe Acute Malnutrition",
+      "category": "disease",
+      "synonyms": [
+        "SAM",
+        "Marasmus",
+        "Kwashiorkor",
+        "Marasmic kwashiorkor"
+      ],
+      "definition": "Severe wasting or edematous malnutrition in children <5 years.",
+      "related_concepts": [
+        "muac",
+        "z_score",
+        "f75",
+        "f100",
+        "rtp",
+        "zinc"
+      ],
+      "nelson_chapter": "30. Pediatric Undernutrition",
+      "exam_frequency": 8,
+      "exam_years": [
+        2016,
+        2017,
+        2019,
+        2022,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "bfhi": {
+      "id": "bfhi",
+      "name": "Baby Friendly Hospital Initiative",
+      "category": "program",
+      "synonyms": [
+        "BFHI",
+        "Ten Steps to Successful Breastfeeding"
+      ],
+      "definition": "WHO/UNICEF program to promote and support breastfeeding in maternity facilities.",
+      "related_concepts": [
+        "breastfeeding",
+        "skin_to_skin",
+        "rooming_in",
+        "colostrum"
+      ],
+      "nelson_chapter": "27. Diet of the Normal Infant",
+      "exam_frequency": 1,
+      "exam_years": [
+        2016
+      ],
+      "examiner_traps": []
+    },
+    "down_syndrome": {
+      "id": "down_syndrome",
+      "name": "Down Syndrome",
+      "category": "disease",
+      "synonyms": [
+        "Trisomy 21",
+        "DS"
+      ],
+      "definition": "Chromosomal abnormality with extra chromosome 21.",
+      "related_concepts": [
+        "hypotonia",
+        "congenital_heart_disease",
+        "duodenal_atresia",
+        "alzheimer"
+      ],
+      "nelson_chapter": "49. Chromosomal Disorders",
+      "exam_frequency": 8,
+      "exam_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "thalassemia_genetics": {
+      "id": "thalassemia_genetics",
+      "name": "Thalassemia",
+      "category": "disease",
+      "synonyms": [
+        "Beta-thalassemia",
+        "Alpha-thalassemia"
+      ],
+      "definition": "Autosomal recessive hemoglobinopathy.",
+      "related_concepts": [
+        "anemia",
+        "hemolysis",
+        "transfusion",
+        "chelation",
+        "genetic_counseling"
+      ],
+      "nelson_chapter": "51. Hemoglobinopathies",
+      "exam_frequency": 5,
+      "exam_years": [
+        2016,
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "drowning": {
+      "id": "drowning",
+      "name": "Drowning",
+      "category": "disease",
+      "synonyms": [
+        "Near-drowning",
+        "Submersion injury"
+      ],
+      "definition": "Respiratory impairment from submersion in liquid.",
+      "related_concepts": [
+        "hypoxia",
+        "cerebral_edema",
+        "cpap",
+        "ventilation",
+        "core_temperature"
+      ],
+      "nelson_chapter": "43. Drowning",
+      "exam_frequency": 1,
+      "exam_years": [
+        2015
+      ],
+      "examiner_traps": []
+    },
+    "burns": {
+      "id": "burns",
+      "name": "Burns",
+      "category": "disease",
+      "synonyms": [
+        "Thermal injury",
+        "Scald",
+        "Flame burn"
+      ],
+      "definition": "Tissue injury caused by heat, chemicals, electricity, or radiation.",
+      "related_concepts": [
+        "parkland_formula",
+        "fluid_resuscitation",
+        "tbsa",
+        "escharotomy"
+      ],
+      "nelson_chapter": "42. Burns",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "poisoning": {
+      "id": "poisoning",
+      "name": "Poisoning",
+      "category": "disease",
+      "synonyms": [
+        "Organophosphorus poisoning",
+        "Kerosene poisoning",
+        "Heavy metal poisoning"
+      ],
+      "definition": "Exposure to toxic substances causing systemic effects.",
+      "related_concepts": [
+        "gastric_lavage",
+        "activated_charcoal",
+        "atropine",
+        "pralidoxime"
+      ],
+      "nelson_chapter": "44. Poisoning",
+      "exam_frequency": 5,
+      "exam_years": [
+        2019,
+        2022,
+        2023,
+        2024
+      ],
+      "examiner_traps": []
+    },
+    "growth_assessment": {
+      "id": "growth_assessment",
+      "name": "Growth Assessment",
+      "category": "procedure",
+      "synonyms": [
+        "Growth chart",
+        "WHO growth standards",
+        "Percentile",
+        "MCP card"
+      ],
+      "definition": "Systematic monitoring of anthropometric parameters against reference standards.",
+      "related_concepts": [
+        "who_growth_chart",
+        "midparental_height",
+        "growth_velocity",
+        "stunting"
+      ],
+      "nelson_chapter": "5. Normal Growth",
+      "exam_frequency": 2,
+      "exam_years": [
+        2018,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "developmental_delay": {
+      "id": "developmental_delay",
+      "name": "Developmental Delay",
+      "category": "disease",
+      "synonyms": [
+        "DD",
+        "Global developmental delay",
+        "Intellectual disability"
+      ],
+      "definition": "Significant lag in achieving developmental milestones.",
+      "related_concepts": [
+        "ddst",
+        "denver_ii",
+        "early_intervention",
+        "physiotherapy"
+      ],
+      "nelson_chapter": "8. Disorders of Development",
+      "exam_frequency": 5,
+      "exam_years": [
+        2016,
+        2020,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "csf": {
+      "id": "csf",
+      "name": "Cerebrospinal Fluid Analysis",
+      "category": "investigation",
+      "synonyms": [
+        "CSF",
+        "Lumbar puncture",
+        "CSF cytology"
+      ],
+      "definition": "Analysis of cerebrospinal fluid for diagnosis of CNS infections and disorders.",
+      "related_concepts": [
+        "meningitis",
+        "tubercular_meningitis",
+        "viral_meningitis",
+        "encephalitis"
+      ],
+      "nelson_chapter": "179. Neurology Assessment",
+      "exam_frequency": 4,
+      "exam_years": [
+        2016,
+        2017,
+        2024,
+        2025
+      ],
+      "examiner_traps": []
+    },
+    "phototherapy": {
+      "id": "phototherapy",
+      "name": "Phototherapy",
+      "category": "treatment",
+      "synonyms": [
+        "Double surface phototherapy",
+        "LED phototherapy"
+      ],
+      "definition": "Use of visible light to convert unconjugated bilirubin to excretable isomers.",
+      "related_concepts": [
+        "neonatal_jaundice",
+        "bilirubin",
+        "exchange_transfusion",
+        "kernicterus"
+      ],
+      "nelson_chapter": "60. Hyperbilirubinemia",
+      "exam_frequency": 1,
+      "exam_years": [
+        2020
+      ],
+      "examiner_traps": []
+    },
+    "exchange_transfusion": {
+      "id": "exchange_transfusion",
+      "name": "Exchange Transfusion",
+      "category": "procedure",
+      "synonyms": [
+        "Double volume exchange transfusion"
+      ],
+      "definition": "Replacement of infant's blood with donor blood to remove bilirubin or antibodies.",
+      "related_concepts": [
+        "neonatal_jaundice",
+        "bilirubin",
+        "phototherapy",
+        "kernicterus"
+      ],
+      "nelson_chapter": "60. Hyperbilirubinemia",
+      "exam_frequency": 0,
+      "exam_years": [],
+      "examiner_traps": []
+    },
+    "renal_biopsy": {
+      "id": "renal_biopsy",
+      "name": "Renal Biopsy",
+      "category": "procedure",
+      "synonyms": [
+        "Kidney biopsy",
+        "Percutaneous renal biopsy"
+      ],
+      "definition": "Invasive procedure to obtain renal tissue for histopathological diagnosis.",
+      "related_concepts": [
+        "nephrotic_syndrome",
+        "agn",
+        "lupus_nephritis",
+        "fsgs"
+      ],
+      "nelson_chapter": "162. Nephrotic Syndrome and Proteinuria",
+      "exam_frequency": 1,
+      "exam_years": [
+        2025
+      ],
+      "examiner_traps": []
+    }
+  },
+  "relationships": [
+    {
+      "source": "agn",
+      "target": "glomerulonephritis",
+      "relation_type": "is_a",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "hus",
+      "target": "aki",
+      "relation_type": "is_a",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "dka",
+      "target": "type_1_dm",
+      "relation_type": "is_a",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "sam",
+      "target": "malnutrition",
+      "relation_type": "is_a",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "itp",
+      "target": "platelet_disorder",
+      "relation_type": "is_a",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "streptococcus",
+      "target": "agn",
+      "relation_type": "causes",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "e_coli_o157",
+      "target": "hus",
+      "relation_type": "causes",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "vitamin_d_deficiency",
+      "target": "rickets",
+      "relation_type": "causes",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "rsv",
+      "target": "bronchiolitis",
+      "relation_type": "causes",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "urinalysis",
+      "relation_type": "diagnosed_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "nephrotic_syndrome",
+      "target": "urinalysis",
+      "relation_type": "diagnosed_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "meningitis",
+      "target": "csf",
+      "relation_type": "diagnosed_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "tuberculosis",
+      "target": "mantoux",
+      "relation_type": "diagnosed_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "penicillin",
+      "relation_type": "treated_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "nephrotic_syndrome",
+      "target": "steroids",
+      "relation_type": "treated_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "dka",
+      "target": "insulin",
+      "relation_type": "treated_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "meningitis",
+      "target": "cefotaxime",
+      "relation_type": "treated_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "rickets",
+      "target": "vitamin_d",
+      "relation_type": "treated_by",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "hypertension",
+      "relation_type": "has_complication",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "heart_failure",
+      "relation_type": "has_complication",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "dka",
+      "target": "cerebral_edema",
+      "relation_type": "has_complication",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "neonatal_jaundice",
+      "target": "kernicterus",
+      "relation_type": "has_complication",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "sam",
+      "target": "hypoglycemia",
+      "relation_type": "has_complication",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "hematuria",
+      "relation_type": "has_symptom",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "edema",
+      "relation_type": "has_symptom",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "nephrotic_syndrome",
+      "target": "edema",
+      "relation_type": "has_symptom",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "nephrotic_syndrome",
+      "target": "proteinuria",
+      "relation_type": "has_symptom",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "rickets",
+      "target": "craniotabes",
+      "relation_type": "has_sign",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "rickets",
+      "target": "rachitic_rosary",
+      "relation_type": "has_sign",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "agn",
+      "target": "nephrotic_syndrome",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "hematuria",
+      "target": "uti",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "hypothyroidism",
+      "target": "developmental_delay",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "chd",
+      "target": "heart_failure",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "anemia",
+      "target": "heart_failure",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    },
+    {
+      "source": "sepsis",
+      "target": "neonatal_hypoglycemia",
+      "relation_type": "related_to",
+      "evidence": [],
+      "confidence": 1.0
+    }
+  ],
+  "version": "1.0.0",
+  "created_at": "2026-05-01T12:35:28.622306"
+}

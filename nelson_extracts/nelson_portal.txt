@@ -1,0 +1,108 @@
+
+--- PAGE 515 ---
+494
+SECTION 17  Digestive System
+α1-Antitrypsin deficiency presents with clinical find-
+ings indistinguishable from neonatal hepatitis. Only about 
+10-20% of all infants with the genetic defect exhibit neonatal 
+cholestasis. Of these affected infants, about 20-30% develop 
+chronic liver disease, which may result in cirrhosis and liver 
+failure. Life-threatening α1-antitrypsin deficiency occurs 
+in only 3-5% of affected pediatric patients. α1-Antitrypsin 
+deficiency is the leading metabolic disorder requiring liver 
+transplantation.
+Alagille syndrome is characterized by chronic cholestasis 
+with the unique liver biopsy finding of paucity of bile ducts in 
+the portal triads. Associated abnormalities in some (syndromic) 
+types include peripheral pulmonic stenosis or other cardiac 
+anomalies; hypertelorism; unusual facies with deep-set eyes, 
+prominent forehead, and a pointed chin; butterfly vertebrae; 
+and a defect of the ocular limbus (posterior embryotoxon). 
+Cholestasis is variable but is usually lifelong and associated 
+with hypercholesterolemia and severe pruritus. Progression 
+to end-stage liver disease is uncommon. Liver transplanta-
+tion sometimes is performed electively to relieve severe and 
+uncontrollable pruritus.
+Laboratory and Imaging Studies
+The laboratory approach to diagnosis of a neonate with cho-
+lestatic jaundice is presented in Table 130.2. Noninvasive studies 
+may aid a rapid diagnosis. Early imaging studies are performed 
+to evaluate for biliary obstruction and other anatomical lesions 
+that may be surgically treatable. When necessary to rule out 
+biliary atresia or to obtain prognostic information, liver biopsy 
+is a final option (Fig. 130.2).
+Treatment
+Treatment of extrahepatic biliary atresia is the surgical Kasai 
+procedure, in which the fibrotic extrahepatic bile duct remnant 
+is removed and replaced with a roux-en-Y loop of jejunum. 
+This operation must be performed before 3 months of age 
+to have the best chance of success. Even so, the success rate 
+is low; many children require liver transplantation. Some 
+metabolic causes of neonatal cholestasis are treatable by dietary 
+manipulation (galactosemia) or medication (tyrosinemia); all 
+affected patients require supportive care. This includes fat-
+soluble vitamin supplements (vitamins A, D, E, and K) and 
+formula containing medium-chain triglycerides, which can be 
+absorbed without bile salt–induced micelles. Choleretic agents, 
+such as ursodeoxycholic acid, may improve bile flow in some 
+conditions.
+VIRAL HEPATITIS
+See Chapter 113.
+FULMINANT LIVER FAILURE
+Etiology and Epidemiology
+Fulminant liver failure is defined as severe liver disease 
+with onset of hepatic encephalopathy within 8 weeks after 
+initial symptoms, in the absence of chronic liver disease. 
+Etiology includes viral hepatitis, metabolic disorders, 
+autoimmune hepatitis, ischemia, neoplastic disease, and toxins 
+(Table 130.3).
+Treatment
+Treatment of appendicitis is usually surgical. Laparoscopic 
+appendectomy is curative if performed before perforation. With 
+perforation, a course of postoperative IV antibiotics is required. 
+Broad-spectrum coverage is necessary to cover the mixed bowel 
+flora. In low-risk patients with nonperforated appendicitis, some 
+centers have a nonsurgical approach and use high dose broad-
+spectrum intravenous antibiotics in a hospital setting.
+CHAPTER 130 
+Liver Disease
+CHOLESTASIS
+Etiology and Epidemiology
+Cholestasis is defined as reduced bile flow and is characterized 
+by elevation of the conjugated, or direct, bilirubin fraction. 
+This condition must be distinguished from physiological 
+neonatal jaundice, in which the direct bilirubin is never elevated 
+(see Chapter 62). Neonatal jaundice that is secondary to 
+unconjugated hyperbilirubinemia is the result of immature 
+hepatocellular excretory function or hemolysis, which increases 
+the production of bilirubin. When direct bilirubin is elevated, 
+many potentially serious disorders must be considered (Fig. 
+130.1, Table 130.1). Emphasis must be placed on the rapid 
+diagnosis of treatable and potentially imminently lethal disor-
+ders, especially biliary atresia and metabolic disorders, such 
+as galactosemia or tyrosinemia.
+Clinical Manifestations
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Jaundice
+The jaundice of extrahepatic biliary atresia (biliary atresia) 
+usually is not evident immediately at birth, but develops in the 
+first week or two of life. The reason is that extrahepatic bile 
+ducts are usually present at birth but are then destroyed by an 
+idiopathic inflammatory process. Aside from jaundice, these 
+infants do not initially appear ill. The liver injury progresses 
+rapidly to cirrhosis; symptoms of portal hypertension with 
+splenomegaly, ascites, muscle wasting, and poor weight gain 
+are evident by a few months of age. If surgical drainage is not 
+performed successfully early in the course (ideally by 2 months), 
+progression to liver failure is inevitable.
+Neonatal hepatitis is characterized by an ill-appearing 
+infant with an enlarged liver and jaundice. There is no specific 
+diagnostic test. If liver biopsy is performed, the presence of 
+hepatocyte giant cells is characteristic. Cytomegalovirus, herpes 
+simplex virus, and syphilis must be ruled out. Hepatobiliary 
+scintigraphy typically shows slow hepatic uptake with eventual 
+excretion of isotope into the intestine. These infants have a 
+good prognosis overall, with spontaneous resolution occurring 
+in most.
+

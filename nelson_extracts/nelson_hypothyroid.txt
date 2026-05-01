@@ -1,0 +1,892 @@
+
+--- PAGE 683 ---
+662
+SECTION 23  Endocrinology
+as adult body odor, pubic and axillary hair, and facial skin 
+oiliness and acne. In boys it is also important to note whether 
+the testes are enlarged more than 2.5 cm in length (4 mL 
+volume), which implies gonadarche. If the testes are not enlarged 
+but virilization is progressing, the source of the androgens may 
+be the adrenal glands or exogenous sources.
+Laboratory evaluation includes determination of adrenal 
+androgen and sex steroid levels (testosterone, estradiol, DHEAS 
+[dehydroepiandrosterone sulfate]) and baseline gonadotropin 
+concentrations. The inherent nature of gonadotropin secretion is 
+characterized by low secretory rates throughout childhood and 
+pulsatile secretion in adolescents and adults. If baseline gonado-
+tropin values are elevated into the normal pubertal range, central 
+precocious puberty is likely. If baseline gonadotropins are low, 
+however, no immediate conclusion may be drawn as to GnRH-
+dependent versus GnRH-independent precocious puberty. This 
+distinction often requires the assessment of gonadotropin 
+responsiveness to GnRH stimulation. A prepubertal GnRH 
+response is FSH predominant, whereas a pubertal response is 
+more LH predominant. Thyroid hormone determination also 
+is useful because severe primary hypothyroidism can cause 
+incomplete precocious puberty. If there is a suggestion of a 
+CNS anomaly or a tumor (CNS, hepatic, adrenal, ovarian, or 
+testicular), MRI of the brain and pituitary with and without 
+contrast is indicated. MRI of the is recommended in patients 
+with the diagnosis of central precocious puberty; however, the 
+yield is generally low in girls over age 6. Boys as well as young 
+girls have a higher risk of CNS lesions as a cause of precocious 
+puberty.
+Treatment
+Long-acting, superactive analogs of GnRH (leuprolide depot, 
+histrelin depot) are the treatment of choice for central precocious 
+puberty. They suppress gonadotropin secretion by downregu-
+lating GnRH receptors in the pituitary gonadotropes (Table 
+174.5), causing gonadal secretion to revert to the prepubertal 
+state. Boys with GnRH-independent premature Leydig cell and 
+occur. Adrenal carcinomas usually secrete adrenal androgens, 
+such as DHEA; adrenal adenomas may virilize a child as a 
+result of the production of androgen or may feminize a child 
+as a result of the production of estrogen.
+Boys may have precocious gonadarche on the basis of a rare 
+entity called familial male-limited precocious puberty. This 
+condition, with germ cell maturation caused by an X-limited 
+dominant defect, produces constitutive activation of the LH 
+receptor that leads to continuous production and secretion 
+of testosterone without requiring LH or human chorionic 
+gonadotropin (hCG).
+hCG-secreting tumors stimulate LH receptors and increase 
+testosterone secretion. These tumors may be found in various 
+places, including the pineal gland (dysgerminomas) or the liver 
+(hepatoblastoma).
+Germinomas are noncalcifying hypothalamic or pineal 
+tumors that frequently produce hCG, which may cause sexual 
+precocity in prepubertal boys (hCG cross reacts with the LH 
+receptor because of the similarity of structure between LH 
+and hCG). Optic or hypothalamic gliomas (with or without 
+neurofibromatosis), astrocytomas, and ependymomas may cause 
+precocious puberty by disrupting the negative restraint of the 
+areas of the CNS that normally inhibit pubertal development 
+throughout childhood. These tumors may require radiotherapy, 
+which contributes to a significant risk for hypopituitarism.
+Ovarian cysts may occur once or may be recurrent. High 
+serum estrogen values may mimic ovarian tumors. Congenital 
+adrenal hyperplasia (CAH) is a cause of virilization in girls 
+(see Chapter 177).
+Evaluation of Sexual Precocity
+The first step in evaluating sexual precocity is to determine 
+which characteristics of normal puberty are apparent (see 
+Chapter 67) and whether estrogen effects, androgen effects, or 
+both are present (see Table 174.4). In girls the estrogen effect 
+manifests as breast development, uterine increase, and, eventu-
+ally, menarche. Both boys and girls manifest the androgen effect 
+TABLE 174.5  Pharmacological Therapy of Sexual Precocity
+DISORDER
+TREATMENT
+ACTION AND RATIONALE
+GnRH-dependent true or central 
+precocious puberty
+GnRH agonists
+Desensitization of gonadotropes; blocks action of 
+endogenous GnRH
+GnRH-independent incomplete sexual 
+precocity
+Girls
+Autonomous ovarian cysts
+Medroxyprogesterone acetate
+Inhibition of ovarian steroidogenesis; regression of cyst 
+(inhibition of FSH release)
+McCune-Albright syndrome
+Medroxyprogesterone acetate*
+Inhibition of ovarian steroidogenesis; regression of cyst 
+(inhibition of FSH release)
+Boys
+Testolactone*
+Inhibition of P-450 aromatase; blocks estrogen 
+synthesis
+Familial GnRH-independent sexual 
+precocity with premature Leydig cell 
+maturation
+Ketoconazole*
+Spironolactone* or flutamide and 
+testolactone
+Medroxyprogesterone acetate*
+Inhibition of P-450c17 (mainly 17,20-lyase activity)
+Antiandrogen inhibition of aromatase; blocks estrogen 
+synthesis
+Inhibition of testicular steroidogenesis
+*If true precocious puberty develops, a GnRH agonist can be added.
+FSH, Follicle-stimulating hormone; GnRH, gonadotropin-releasing hormone.
+Modified from Grumbach MM, Kaplan SL. Recent advances in the diagnosis and management of sexual precocity. Acta Paediatr Jpn. 1988;30(Suppl):155.
+
+
+--- PAGE 684 ---
+663
+CHAPTER 175  Thyroid Disease
+Isolated Premature Adrenarche (Pubarche)
+germ cell maturation do not respond to GnRH analogs but 
+require treatment with an inhibitor of testosterone synthesis 
+(e.g., ketoconazole), an antiandrogen (e.g., spironolactone), 
+or an aromatase inhibitor (e.g., testolactone or letrozole). 
+Patients with precocious puberty from a hormone-secreting 
+tumor require surgical removal, if possible. The precocious 
+puberty of the McCune-Albright syndrome is GnRH inde-
+pendent and unresponsive to therapy with GnRH analog. 
+Therapy is provided with testolactone and antiandrogens or 
+antiestrogen, such as tamoxifen or aromatase inhibitor such 
+as letrozole.
+VARIATIONS IN PUBERTAL DEVELOPMENT
+Isolated Premature Thelarche (Premature 
+Breast Development)
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Precocious Puberty in the Female
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Gynecomastia
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Amenorrhea
+Precocious Puberty in the Male
+Precocious Puberty in the Female
+Benign premature thelarche is the isolated appearance of 
+unilateral or bilateral breast tissue in girls, usually at ages 6 
+months to 3 years. There are no other signs of puberty and no 
+evidence of excessive estrogen effect (vaginal bleeding, thicken-
+ing of the vaginal secretions, increased height velocity, or bone 
+age acceleration). Ingestion or dermal application of estrogen-
+containing compounds must be excluded. Laboratory investiga-
+tions are not usually necessary, but a pelvic ultrasound study 
+rarely may be indicated to exclude ovarian disease. Girls with 
+this condition should be re-evaluated at intervals of 6-12 months 
+to ensure that apparent premature thelarche is not the beginning 
+of progression into precocious puberty. The prognosis is excel-
+lent; if no progression occurs, no treatment other than reas-
+surance is necessary.
+Gynecomastia
+In males breast tissue is termed gynecomastia, and it may occur 
+to some degree in 45-75% of normal pubertal boys (see Chapter 
+67). Androgens normally are converted to estrogen by aromatiza-
+tion; in early puberty, only modest amounts of androgens are 
+produced, and the estrogen effect can overwhelm the androgen 
+effects at this stage. Later in pubertal development, the androgen 
+production is so great that there is little effect from the estrogen 
+produced by aromatization. Gynecomastia also can suggest the 
+possibility of Klinefelter syndrome as puberty progresses. 
+Prepubertal gynecomastia suggests an unusual source of estrogen 
+either from exogenous sources (oral or dermal estrogen 
+administration is possible from contamination of food or 
+ointments) or from endogenous sources (from abnormal func-
+tion of adrenal gland or ovary or from increased peripheral 
+aromatization).
+The isolated appearance of pubic hair before age 6-7 years in 
+girls or before age 9 years in boys is termed premature pubarche, 
+usually resulting from adrenarche. It is relatively common. If 
+the pubic hair is associated with any other feature of virilization 
+(clitoral or penile enlargement or advanced bone age) or other 
+signs (acne, rapid growth, or voice change), a detailed investiga-
+tion for a pathological cause of virilization is indicated. Measure-
+ments of serum testosterone, 17-hydroxyprogesterone, and 
+DHEAS are indicated to investigate the possibility of CAH. 
+Ultrasound studies may reveal a hyperplastic adrenal gland or 
+a virilizing adrenal or ovarian tumor. Most patients with isolated 
+pubic hair do not have progressive virilization and simply have 
+premature adrenarche (pubarche) resulting from premature 
+activation of DHEA secretion from the adrenal gland. The 
+skeletal maturation, as assessed by bone age, may be slightly 
+advanced and the height slightly increased, but testosterone 
+concentrations are normal. DHEA levels usually are high for 
+prepubertal age but are consistent with Tanner (sexuality 
+maturity rating) stages II and III. In girls, there have been 
+studies linking premature adrenarche to the development of 
+irregular menses or polycystic ovarian syndrome (PCOS) later 
+in adolescence.
+CHAPTER 175 
+Thyroid Disease
+THYROID PHYSIOLOGY AND DEVELOPMENT
+Thyrotropin-releasing hormone (TRH), a tripeptide synthesized 
+in the hypothalamus, stimulates the release of pituitary thyroid-
+stimulating hormone (TSH). Pituitary TSH is a glycoprotein 
+that stimulates the synthesis and release of thyroid hormones 
+by the thyroid gland. Thyroid function develops in three stages. 
+At the end of the first trimester, the gland descends from the 
+floor of the primitive oral cavity to its definitive position in 
+the anterior lower neck. The hypothalamic-pituitary-thyroid 
+axis becomes functional in the second trimester. Peripheral 
+metabolism of thyroid hormones matures in the third trimester.
+Thyroxine (T4), triiodothyronine (T3), and TSH do not cross 
+the placenta in significant amounts. Concentrations in fetal 
+serum reflect primarily fetal secretion and metabolism. Maternal 
+thyroid antibodies, iodides (including radioactive iodides), 
+and medications given to mothers to treat hyperthyroidism 
+(methimazole and propylthiouracil) cross the placenta and affect 
+fetal thyroid function. An infant born prematurely or with 
+intrauterine growth restriction may have an interruption of the 
+normal maturational process and appear to have hypothyroidism 
+by standard tests (and newborn screen).
+
+
+--- PAGE 685 ---
+664
+SECTION 23  Endocrinology
+rather than T3 occurs in utero and in all forms of severe illness, 
+including respiratory distress syndrome, fevers, anorexia, and 
+starvation. Conversion from T4 to T3 increases immediately after 
+birth and throughout life. T4 and T3 are noncovalently bound to 
+a specific serum carrier protein, thyroxine-binding globulin, 
+and to a lesser extent, albumin. Only small (<0.02%) fractions 
+of T4 and T3 are not bound; free T4 (as it is converted to free 
+T3) and free T3 are biologically active. Free T3 exerts metabolic 
+effects and negative feedback on TSH release (Fig. 175.1).
+The thyroid gland concentrates iodine and binds it to tyrosine 
+molecules to produce either monoiodotyrosine or diiodotyrosine, 
+with subsequent coupling of two tyrosines, T4 or T3. The major 
+fraction of circulating T3 (approximately 2/3) is derived from 
+peripheral deiodination of T4 to T3, but some is produced by 
+the gland itself. The conversion of T4 to T3 requires the removal 
+of one iodine from the outer ring of tyrosine; removing an 
+iodine from the inner ring results in reverse T3, which has little 
+biological effect. Preferential conversion of T4 to reverse T3 
+OB-R
+TSH
+PITUITARY
+TRH
+Somatostatin
+T3
+T4
+T4       T3
+T4      T3
+THYROID
+NPY
+AGRP
+neurons
+POMC
+CART
+neurons
+TRH
+neuron
+Hypothalamus
+CRH
+Brain stem
+catecholaminergic
+inputs
+Paraventricular
+nucleus
+Arcuate
+nucleus
+TEMPERATURE
+ENERGY
+STATE
+Glucocorticoid receptors
+Thyroid hormone receptors
+FIGURE 175.1  Interrelationships of the hypothalamic-pituitary-thyroid axis. Thyroid-stimulating 
+hormone (TSH) from the pituitary gland stimulates the secretion of thyroxine (T4) and triiodothyronine 
+(T3) from the thyroid gland. These act at the pituitary gland level to control secretion of TSH by a 
+negative feedback mechanism. In addition, T4 is metabolized to the potent T3 within the pituitary 
+gland by a deiodinase. Secretion of TSH is stimulated by thyrotropin-releasing hormone (TRH) from 
+the hypothalamus and inhibited by somatostatin. Thyroid hormone acts at the hypothalamus to 
+stimulate secretion of somatostatin (somatostatin acts as a negative signal to the pituitary secretion 
+of TSH). CRH, Corticotropin-releasing hormone; OB-R, leptin receptor. (From Melmed S, Polonsky K, 
+Kronenberg H, Larsen R, eds. Williams Textbook of Endocrinology. 10th ed. Philadelphia: Saunders; 
+2003:101.)
+
+
+--- PAGE 686 ---
+665
+CHAPTER 175  Thyroid Disease
+incorporation or thyroid hormone biosynthesis or reflects the 
+transplacental passage of antithyroid drugs given to the mother. 
+Routine neonatal screening programs to measure cord blood 
+or heel-stick TSH values occur in every state in the United 
+States. An immediate confirmatory serum sample should be 
+obtained from any infant having a positive result on a screening 
+test. A low free T4 and high TSH confirm the finding.
+Isolated secondary or tertiary hypothyroidism occurs in 1 
+in 100,000 live births; the free T4 is normal to low, as is the 
+TSH. When tertiary or secondary hypothyroidism is detected, 
+assessment of other pituitary hormones and investigation of 
+pituitary-hypothalamic anatomy via magnetic resonance imaging 
+Serum TSH increases just after birth but soon decreases 
+to lower values considered normal for later life. T4 secretion 
+increases after birth as a result of the peak in TSH and because 
+of maturation of thyroid metabolism. It is important to refer to 
+age-adjusted normative data to interpret thyroid function tests 
+properly, whether relative to making diagnoses of hyperthyroid-
+ism or hypothyroidism or when adjusting therapy. Free T4 is 
+the test of choice because it eliminates the effects of variation 
+in protein binding, which can be substantial.
+Table 175.1 summarizes laboratory test results in various 
+types of thyroid abnormalities. In usual circumstances, plasma 
+concentrations of TSH above the normal range indicate primary 
+hypothyroidism and concentrations below the normal range 
+most often indicate the presence of hyperthyroidism. Thyroid 
+scans with 99m-pertechnetate or 123-I-iodine are occasionally 
+indicated in the evaluation of pediatric thyroid disease. They can 
+be useful in identifying thyroid agenesis or ectopic thyroid tissue.
+THYROID DISORDERS
+Hypothyroidism
+TABLE 175.1  Laboratory Test Results in Various Types of Thyroid Function Abnormalities in Children*
+ABNORMALITY
+SERUM
+SERUM TSH
+SERUM TBG
+TOTAL T4
+FREE T4
+Primary hypothyroidism
+↓
+↓
+↑
+N
+Hypothalamic (TRH) tertiary hypothyroidism
+↓
+↓
+↓
+N
+Pituitary (TSH) secondary hypothyroidism
+↓
+↓
+↓
+N
+TBG deficiency
+↓
+N
+N
+↓
+TBG excess
+↑
+N
+N
+↑
+*TSH may be slightly elevated.
+↓, Decreased; ↑, increased; N, Normal; T4, thyroxine; TBG, thyroxine-binding globulin; TRH, thyrotropin-releasing hormone; TSH, thyroid-stimulating hormone.
+TABLE 175.2  Causes of Hypothyroidism in Infancy and 
+Childhood
+AGE GROUP
+MANIFESTATION
+CAUSE
+Newborn
+No goiter
+Thyroid gland dysgenesis or 
+ectopic location
+Exposure to iodides
+TSH deficiency
+TRH deficiency
+± Goiter
+Inborn defect in hormone 
+synthesis* or effect
+Maternal goitrogen 
+ingestion, including 
+propylthiouracil, 
+methimazole, iodides
+Severe iodide deficiency 
+(endemic)
+Child
+No goiter
+Thyroid gland dysgenesis
+Cystinosis
+Hypothalamic-pituitary 
+insufficiency
+Surgical after thyrotoxicosis 
+or other thyroid surgery
+Goiter
+Hashimoto thyroiditis: 
+chronic lymphocytic 
+thyroiditis
+Inborn defect in hormone 
+synthesis or effect
+Goitrogenic drugs, infiltrative 
+(sarcoid, lymphoma)
+*Impaired iodide transport, defective thyroglobulin iodination, defective iodo-
+tyrosine dehalogenase, or defective thyroglobulin or its coupling to 
+iodotyrosine.
+TRH, Thyrotropin-releasing hormone; TSH, thyroid-stimulating hormone.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Short Stature
+Pubertal Delay
+Precocious Puberty in the Male
+Precocious Puberty in the Female
+Hypothyroidism is diagnosed by a decreased serum free T4 
+and may be the result of diseases of the thyroid gland (primary 
+hypothyroidism), abnormalities of the pituitary gland (second-
+ary), or abnormalities of the hypothalamus (tertiary). Hypo-
+thyroidism is congenital or acquired and may or may not be 
+associated with a goiter (Table 175.2).
+Congenital Hypothyroidism
+Congenital hypothyroidism occurs in approximately 1 in 
+2,000-4,000 live births and is caused by dysgenesis (agenesis, 
+aplasia, ectopia) or, less often, dyshormonogenesis (e.g., enzyme 
+defects). Thyroid tissue usually is not palpable in these sporadic 
+nongoitrous conditions. Dyshormonogenesis, disorders of 
+intrathyroid metabolism, or goitrous congenital hypothyroidism 
+occurs in about 1 in 30,000 live births. A goiter reflects an 
+inborn error of metabolism in the pathway of iodide 
+
+
+--- PAGE 687 ---
+666
+SECTION 23  Endocrinology
+are indicated. Although not a hypothyroid condition, congenital 
+thyroxine-binding globulin deficiency occurs in about 1 in 
+10,000 live births and is associated with low serum total T4 
+concentration, normal TSH, and normal serum free T4. This is a 
+euthyroid condition and does not require treatment with thyroid 
+hormone because it is merely a binding protein abnormality. 
+It is commonly X-linked dominant.
+Clinical manifestations of congenital hypothyroidism in 
+the immediate newborn period usually are subtle but become 
+more evident weeks or months after birth. By then it is too late 
+to ensure that there is not a detriment to the infant’s cognitive 
+development. Newborn screening is crucial to make an early 
+diagnosis and initiate thyroid replacement therapy by younger 
+than 1 month of age. Findings at various stages after birth include 
+hypothermia, acrocyanosis, respiratory distress, large fontanels, 
+abdominal distention, lethargy and poor feeding, prolonged 
+jaundice, edema, umbilical hernia, mottled skin, constipation, 
+large tongue, dry skin, and hoarse cry. Thyroid hormones are 
+crucial for maturation and differentiation of tissues, such as 
+bone and brain (most thyroid-dependent brain maturation 
+occurs in the first 2-3 years after birth; Table 175.3).
+When treatment (with levothyroxine) is initiated within 1 
+month or less after birth, the prognosis for normal intellectual 
+development is excellent. State screening programs usually allow 
+for therapy within 1-2 weeks of birth. If therapy is instituted after 
+6 months when the signs of severe hypothyroidism are present, 
+the likelihood of normal intellectual function is markedly 
+decreased. Growth improves after thyroid replacement even in 
+late diagnosed cases. The dose of levothyroxine changes with age; 
+10-15 µg/kg of levothyroxine is used for a newborn, but about 
+3 µg/kg is used later in childhood. In neonatal hypothyroidism, 
+the goal is to bring the serum free T4 rapidly into the upper 
+half of the range of normal. Suppression of TSH is not seen 
+and not necessary in all cases because such suppression may 
+lead to excessive doses of levothyroxine.
+Acquired Hypothyroidism
+The etiology of acquired hypothyroidism is presented in Table 
+175.2. The clinical manifestations may be subtle. Hypothyroidism 
+should be suspected in any child who has a decline in growth 
+velocity, especially if not associated with weight loss (see Table 
+175.3). The most common cause of acquired hypothyroidism 
+in older children in the United States is lymphocytic autoimmune 
+thyroiditis (Hashimoto thyroiditis). In many areas of the world, 
+iodine deficiency is the etiology of endemic goiter (endemic 
+cretinism). The failure of the thyroid gland may be heralded 
+by an increase of TSH before T4 levels decrease. In contrast to 
+untreated congenital hypothyroidism, acquired hypothyroidism 
+is not a cause of permanent developmental delay.
+Hashimoto Thyroiditis
+Also known as autoimmune or lymphocytic thyroiditis, Hashi-
+moto thyroiditis is a common cause of goiter and acquired 
+thyroid disease in older children and adolescents. A family 
+history of thyroid disease is present in 25-35% of patients. The 
+etiology is an autoimmune process targeted against the thyroid 
+gland with lymphocytic infiltration and lymphoid follicle and 
+germinal center formation preceding fibrosis and atrophy.
+Clinical manifestations include a firm, nontender euthyroid, 
+hypothyroid, or, rarely, hyperthyroid (hashitoxicosis) diffuse 
+goiter with a pebble-like surface. See Table 175.3 for signs and 
+symptoms, which can be diverse. Onset typically occurs after 
+TABLE 175.3  Symptoms and Signs of Hypothyroidism
+ECTODERMAL
+Poor growth
+Dull facies: thick lips, large tongue, depressed nasal bridge, 
+periorbital edema
+Dry scaly skin
+Sparse brittle hair
+Diminished sweating
+Carotenemia
+Vitiligo
+CIRCULATORY
+Sinus bradycardia/heart block
+Cold extremities
+Cold intolerance
+Pallor
+ECG changes: low-voltage QRS complex
+NEUROMUSCULAR
+Muscle weakness
+Hypotonia: constipation, potbelly
+Umbilical hernia
+Myxedema coma (carbon dioxide narcosis, hypothermia)
+Pseudohypertrophy of muscles
+Myalgia
+Physical and mental lethargy
+Developmental delay
+Delayed relaxation of reflexes
+Paresthesias (nerve entrapment: carpal tunnel syndrome)
+Cerebellar ataxia
+SKELETAL
+Delayed bone age
+Epiphyseal dysgenesis, increased upper-to-lower segment ratio
+METABOLIC
+Myxedema
+Serous effusions (pleural, pericardial, ascites)
+Hoarse voice (cry)
+Weight gain
+Menstrual irregularity
+Arthralgia
+Elevated CK
+Macrocytosis (anemia)
+Hypercholesterolemia
+Hyperprolactinemia
+Precocious puberty in severe cases
+CK, Creatine kinase; ECG, electrocardiographic.
+
+
+--- PAGE 688 ---
+667
+CHAPTER 175  Thyroid Disease
+homogeneous goiter is usually present. Many patients complain 
+of neck fullness. Thyroid gland enlargement is best visualized 
+with the neck only slightly extended and with the examiner 
+lateral to the patient. Palpation of the thyroid gland is best 
+performed with the examiner’s hands around the neck from 
+the back. The patient swallows so that the examiner can feel 
+and examine the size, consistency, nodularity, and motion of 
+the gland. The examiner should watch the patient swallow to 
+note any discernible enlargement or asymmetry of the thyroid 
+lobes. Auscultation may reveal a bruit over the gland that needs 
+to be differentiated from a carotid bruit.
+Treatment
+Three treatment choices are available: pharmacological, radioac-
+tive iodine, and surgical.
+Drugs
+Medical therapy to block thyroid hormone synthesis con­
+sists of methimazole (0.4-0.6 mg/kg/day once or twice daily) 
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Neck Masses
+TABLE 175.4  Clinical Manifestations of Hyperthyroidism
+ASSOCIATED CHANGE
+SIGN/SYMPTOM
+Increased  
+catecholamine  
+effects
+Nervousness
+Palpitations
+Tachycardia
+Atrial arrhythmias
+Systolic hypertension
+Tremor
+Brisk reflexes
+Hypermetabolism
+Increased sweating
+Shiny, smooth skin
+Heat intolerance
+Fatigue
+Weight loss—increased appetite
+Increased bowel movement (loose 
+stools)
+Hyperkinesis
+Myopathy
+Weakness
+Periodic paralysis
+Cardiac failure—dyspnea
+Miscellaneous
+Proptosis, stare, exophthalmos, lid 
+lag, ophthalmopathy
+Hair loss
+Inability to concentrate
+Personality change (emotional 
+lability)
+Goiter
+Thyroid bruit
+Onycholysis
+Painful gland*
+Acute thyroid storm (hyperpyrexia, 
+tachycardia, coma, high-output 
+heart failure, shock)
+*Unusual except in subacute thyroiditis with hyperthyroid phase.
+6 years of age with a peak incidence in adolescence with a 
+female predominance. Associated autoimmune diseases include 
+celiac disease, type 1 diabetes mellitus, adrenal insufficiency, 
+and hypoparathyroidism. Autoimmune polyglandular syn-
+drome type I consists of hypoparathyroidism, Addison disease, 
+mucocutaneous candidiasis, and hypothyroidism. Autoimmune 
+polyglandular syndrome type II consists of Addison disease, 
+type 1 diabetes mellitus, and frequently hypothyroidism. Trisomy 
+21 and Turner syndrome are predisposed to the development 
+of autoimmune thyroiditis.
+The diagnosis may be confirmed by serum antithyroid 
+peroxidase (previously antimicrosomal) and antithyroglobulin 
+antibodies. Neither biopsy nor thyroid scan is indicated in 
+Hashimoto thyroiditis, although a thyroid scan with reduced 
+uptake may differentiate hashitoxicosis from Graves disease.
+Treatment with thyroid hormone sufficient to normalize 
+TSH and free T4 is indicated for hypothyroidism in Hashimoto 
+thyroiditis. Patients without manifestation of hypothyroidism 
+require thyroid function testing (serum TSH and free T4) every 
+6-12 months to detect the later development of hypothyroidism. 
+Goiter with a normal TSH usually is not an indication for 
+treatment.
+Hyperthyroidism
+Graves Disease
+Most children with hyperthyroidism have Graves disease, the 
+autonomous functioning of the thyroid caused by autoantibodies 
+(thyroid-stimulating immunoglobulins [TSIs]) stimulating the 
+thyroid. The resulting excessive synthesis, release, and peripheral 
+metabolism of thyroid hormones produce the clinical features. 
+Hashimoto thyroiditis and thyrotoxicosis are on a continuum 
+of autoimmune diseases; there is overlap in their immunological 
+findings.
+Antithyroid peroxidase and antithyroglobulin antibodies may 
+be present in thyrotoxicosis, although the values are usually 
+lower than in Hashimoto thyroiditis. Exceptionally high titers 
+of antibodies may indicate the thyrotoxic phase of Hashimoto 
+thyroiditis with the subsequent evolution toward permanent 
+hypothyroidism. In Graves disease, serum free T4, free T3, or 
+both levels are elevated, whereas TSH is suppressed. Rare causes 
+of hyperthyroidism include McCune-Albright syndrome, thyroid 
+nodule (often an adenoma), TSH hypersecretion, subacute 
+thyroiditis, and iodine or thyroid hormone ingestion.
+Clinical Manifestations
+Graves disease presents as hyperthyroidism (Table 175.4) and 
+is about five times more common in girls than in boys with a 
+peak incidence in adolescence. Personality changes, mood 
+instability, and poor school performance are common initial 
+problems. Tremor, anxiety, inability to concentrate, and weight 
+loss may be insidious and confused with a psychological disorder 
+until thyroid function tests reveal the elevated serum free T4 
+level. In rare cases, serum free T4 may be near-normal, whereas 
+serum T3 is selectively elevated (T3 toxicosis). A firm 
+
+
+--- PAGE 689 ---
+668
+SECTION 23  Endocrinology
+Congenital Hyperthyroidism
+This disorder results from transplacental passage of maternal 
+TSIs and may be masked for several days until the short-lived 
+effects of transplacental maternal antithyroid medication wear off 
+(assuming the mother was receiving such medication), at which 
+time the effects of TSIs are observed. Irritability, tachycardia 
+(often with signs of cardiac failure simulating cardiomyopathy), 
+polycythemia, craniosynostosis, bone age advancement, poor 
+feeding, and failure to thrive are the clinical hallmarks. This 
+condition may be anticipated if the mother is known to be 
+thyrotoxic or has an elevated TSI during third trimester of 
+pregnancy. Cure of hyperthyroidism before pregnancy (surgery 
+or radioiodine treatment) limits or curtails T4 production but 
+not the underlying immune disturbance producing TSIs; thus 
+the infant still may be affected, at least transiently.
+Treatment for a severely affected neonate includes methima-
+zole and, as needed, a β blocker to help decrease symptoms. 
+Because the half-life of the immunoglobulin is several weeks, 
+spontaneous resolution of neonatal thyrotoxicosis resulting from 
+transplacental passage of TSIs usually occurs by 2-3 months 
+of age. Observation without treatment is indicated in patients 
+who are minimally affected.
+NODULES/TUMORS OF THE THYROID
+About 2% of children develop solitary thyroid nodules, most 
+of which are benign. Evaluation of a nodule includes thyroid 
+function tests, neck ultrasound, and, if needed, fine-needle 
+aspiration (FNA). Ultrasound guidance may be needed for 
+aspiration of small nodules or those not palpable. Nodules 
+found to be benign on FNA may be monitored through clinical 
+exam and ultrasound.
+Carcinoma of the thyroid is rare in children (1% of all 
+pediatric cancers in the 5- to 9-year-old age group and up to 
+7% of cancers in the 15- to 19-year-old age group). Papillary 
+and follicular carcinomas represent 90% of childhood thyroid 
+cancers. A history of therapeutic head or neck irradiation 
+or radiation exposure from nuclear accidents predisposes a 
+child to thyroid cancer. Carcinoma usually presents as a firm 
+to hard, painless, nonfunctional solitary nodule and may 
+spread to adjacent lymph nodes. Rapid growth, hoarseness 
+(recurrent laryngeal nerve involvement), and lung metastasis 
+may be present. If the nodule is solid on ultrasound, is cold 
+on radioiodine scanning, and feels hard, the likelihood of a 
+carcinoma is high. Excisional biopsy usually is performed, but 
+FNA biopsy also may be diagnostic.
+Treatment includes total thyroidectomy, selective regional 
+node dissection, and radioablation with 131I for residual or 
+recurrent disease. The prognosis is usually good if the disease 
+is diagnosed early.
+Medullary carcinoma of the thyroid may be asymptomatic 
+except for a mass. Diagnosis is based on the presence of elevated 
+calcitonin levels, either in the basal state or after pentagastrin 
+stimulation (difficult to obtain) and histological examination. 
+This tumor most often occurs with multiple endocrine neo-
+plasia 2a or 2b (MEN), possibly in a familial pattern. In some 
+families, the presence of mutations of the RET protooncogene 
+is predictive of the development of medullary carcinoma of 
+the thyroid. The location of the mutation can help determine 
+when removal of the thyroid is warranted. Genetic screening 
+of other members of the family is indicated after a proband 
+is recognized. Prophylactic thyroidectomy is indicated for the 
+family members with the same allele.
+or propylthiouracil (5-7 mg/kg/day divided every 8 hours). 
+Both medications are equally effective; however, propylthio-
+uracil is no longer a first-line therapy secondary to concerns 
+of severe liver injury and acute liver failure. A β blocker, 
+such as propranolol or atenolol, is started if symptoms are 
+severe to control cardiac manifestations and is tapered as 
+the methimazole takes effect. Antithyroid medication is 
+usually continued for 1-2 years because the remission rate 
+is approximately 25% per year. In patients complying with 
+the treatment regimen, the 2-year course of treatment can 
+be repeated. Medication should suppress thyroid function to 
+normal without the need to add thyroid hormone replacement 
+to normalize serum free T4. Complications of methimazole 
+are muscle pain, rash, granulocytopenia, and jaundice. The 
+granulocytopenia is an idiosyncratic complication of rapid 
+onset, which is observed only in the early months after 
+institution of antithyroid medication and requires monitoring 
+the complete blood count. If a suppressed white blood cell 
+count is observed, antithyroid therapy must be discontinued. 
+This potentially lethal rare complication affects 3 in 10,000 
+users a year. After resolution, the other of the two antithyroid 
+medications can be started because there is usually less than 
+a 50% chance of a similar reaction from the other medication. 
+Iodine administration, which may suppress thyroid func-
+tion but becomes ineffective in a few weeks, is sometimes 
+used as a preparation for surgery, but never for long-term 
+therapy.
+Radioiodine
+Radioiodine (131I) is slower in exerting therapeutic effects, may 
+require repeated dosing, and is likely to cause permanent 
+hypothyroidism. Hypothyroidism is the desired outcome because 
+it is easier and safer to treat than continued hyperthyroidism. 
+Although studies reveal no long-term consequences, concern 
+remains about possible sequelae in children. This method of 
+treatment is entering the mainstream for children and adoles-
+cents. Radioiodine given to a pregnant teenager renders the 
+fetus hypothyroid and is contraindicated.
+Surgery
+Surgical treatment consists of partial or complete thyroidectomy. 
+Risks associated with thyroidectomy include the use of anesthesia 
+and the possibility that the thyroid removal will be excessive, 
+causing hypothyroidism, or that it will be inadequate, resulting 
+in persistent hyperthyroidism. In addition, keloid formation, 
+recurrent laryngeal nerve palsy, and hypoparathyroidism 
+(transient postoperative or permanent) may occur. Thyroid 
+storm caused by the release of large amounts of preformed 
+hormone is a serious but rare complication. Even with optimal 
+immediate postoperative results, patients may become hypo-
+thyroid within 10 years.
+Thyroid Storm
+Thyroid storm (see Table 175.4) is a rare medical emergency 
+consisting of tachycardia, disorientation, elevated blood 
+pressure, and hyperthermia. Treatment includes reducing 
+the hyperthermia with a cooling blanket and administering 
+a β blocker to control the tachycardia, hypertension, and 
+autonomic hyperfunction symptoms. Iodine may be given to 
+block thyroid hormone release after an antithyroid medication 
+is started. Hydrocortisone may be indicated for relative adrenal 
+insufficiency and therapy for heart failure includes diuretics and 
+digoxin.
+
+
+--- PAGE 690 ---
+669
+CHAPTER 176  Disorders of Parathyroid Bone and Mineral Endocrinology
+hyperpnea caused by anxiety or from hyperventilation related 
+to physical exertion. Hypoproteinemia may lead to a false 
+suggestion of hypocalcemia because the serum total calcium 
+level is low even though the ionized Ca2+ remains normal. It 
+is best to measure serum ionized calcium if hypocalcemia or 
+hypercalcemia is suspected.
+Primary hypoparathyroidism causes hypocalcemia but does 
+not cause rickets. The etiology of primary hypoparathyroidism 
+includes the following:
+1.	 Congenital malformation (e.g., DiGeorge syndrome or other 
+complex syndromes) resulting from developmental abnor-
+malities of the third and fourth branchial arches (see Chapters 
+143 and 144)
+2.	 Surgical procedures, such as thyroidectomy or parathyroid-
+ectomy, in which parathyroid tissue is removed either 
+deliberately or as a complication of surgery for another 
+goal
+3.	 Autoimmunity, which may destroy the parathyroid gland
+Pseudohypoparathyroidism (all with hypocalcemia and 
+hyperphosphatemia) may occur in one of four forms as follows:
+1.	 Type Ia: an abnormality of the Gsa protein linking the PTH 
+receptor to adenylate cyclase; biologically active PTH is 
+secreted in great quantities, but does not stimulate its 
+receptor
+2.	 Type Ib: normal phenotype, normal Gsa with abnormalities 
+in the production of adenylate cyclase
+3.	 Type Ic: abnormal phenotype, normal production of adenyl-
+ate cyclase, but a distal defect eliminates the effects of 
+PTH
+4.	 Type II: normal phenotype, normal production of adenylate 
+cyclase, with a postreceptor defect, close to type Ib
+Pseudohypoparathyroidism is an autosomal dominant condi-
+tion that may present at birth or later. Pseudohypoparathyroidism 
+is associated with Albright hereditary osteodystrophy, whose 
+clinical manifestations include short stature, stocky body habitus, 
+round facies, short fourth and fifth metacarpals, calcification of 
+the basal ganglia, subcutaneous calcification, and developmental 
+delay. Albright hereditary osteodystrophy may be inherited 
+separately so that a patient may have a normal appearance 
+with hypocalcemia or may have the Albright hereditary osteo-
+dystrophy phenotype with normal serum calcium, phosphate, 
+PTH, and response to PTH.
+Transient neonatal hypocalcemia. During the first 3 days 
+after birth, serum calcium concentrations normally decline in 
+response to withdrawal of the maternal calcium supply via the 
+placenta. Sluggish PTH response in a neonate may result in 
+a transient hypocalcemia. Hypocalcemia caused by decreased 
+PTH release is found in infants of mothers with hyperpara-
+thyroidism and hypercalcemia; the latter suppresses fetal 
+PTH release, causing transient hypoparathyroidism in the 
+neonatal period.
+Normal serum magnesium concentrations are required for 
+normal parathyroid gland function and action. Hypomagnese-
+mia may cause a secondary hypoparathyroidism, which responds 
+poorly to therapies other than magnesium replacement.
+The etiology of hypocalcemia usually can be discerned by 
+combining features of the clinical presentation with determina-
+tions of serum ionized calcium, phosphate, alkaline phosphatase, 
+PTH (preferably at a time when the calcium is low), magnesium, 
+and albumin. If the PTH concentration is not appropriately 
+elevated in relation to the low serum calcium, hypoparathy-
+roidism (transient, primary, or caused by hypomagnesemia) 
+is present. Vitamin D stores can be estimated by measuring 
+CHAPTER 176 
+Disorders of Parathyroid Bone 
+and Mineral Endocrinology
+PARATHYROID HORMONE AND VITAMIN D
+Calcium and phosphate are regulated mainly by diet and three 
+hormones: parathyroid hormone (PTH), vitamin D, and cal-
+citonin. PTH is secreted in response to a decrease in serum 
+ionized calcium level. PTH attaches to its membrane receptor 
+then acts via adenylate cyclase to mobilize calcium from bone 
+into the serum and to enhance fractional reabsorption of calcium 
+by the kidney while inducing phosphate excretion; all increase 
+the serum calcium concentration and decrease serum phosphate. 
+Lack of PTH effect is heralded by low serum calcium in the 
+presence of elevated phosphate for age. PTH stimulates vitamin 
+D secretion by increasing renal 1α-hydroxylase activity and 
+acts indirectly to elevate serum calcium concentration by 
+stimulating the production of 1,25-dihydroxyvitamin D from 
+25-hydroxyvitamin D. Calcitonin increases the deposition of 
+calcium into bone; in normal states the effect is subtle, but 
+calcitonin may be used temporarily to suppress extremely 
+elevated serum calcium values.
+1,25-Dihydroxyvitamin D enhances calcium absorption from 
+the gastrointestinal tract, increasing serum calcium levels and 
+bone mineralization. Vitamin D is derived from exposure of 
+the skin to ultraviolet rays (usually via the sun) or from oral 
+ingestion. It is modified first to 25-hydroxyvitamin D in the 
+liver and then 1α-hydroxylated to the metabolically active form 
+(1,25-dihydroxyvitamin D) in the kidney. The serum concentra-
+tion of 25-hydroxyvitamin D is a better reflection of vitamin 
+D sufficiency than the measurement of 1,25-hydroxyvitamin 
+D (see Chapter 31).
+HYPOCALCEMIA
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Hypocalcemia
+The clinical manifestations of hypocalcemia result from 
+increased neuromuscular irritability and include muscle cramps, 
+carpopedal spasm (tetany), weakness, paresthesia, laryngospasm, 
+and seizure-like activity. Tetany can be detected by the Chvostek 
+sign (facial spasms produced by lightly tapping over the facial 
+nerve just in front of the ear) or by the Trousseau sign (carpal 
+spasms exhibited when arterial blood flow to the hand is 
+occluded for 3-5 minutes with a blood pressure cuff inflated 
+to 15 mm Hg above systolic blood pressure). Total serum calcium 
+concentration is usually measured, although a determination 
+of serum ionized calcium, the biologically active form, is 
+preferable. Albumin is the major reservoir of protein-bound 
+calcium. Disorders that alter plasma pH or serum albumin 
+concentration must be considered when circulating calcium 
+concentrations are being evaluated. The fraction of ionized 
+calcium is inversely related to plasma pH; alkalosis can pre-
+cipitate hypocalcemia by lowering ionized calcium without 
+changing total serum calcium. Alkalosis may result from 
+

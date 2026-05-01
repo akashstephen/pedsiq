@@ -1,0 +1,922 @@
+[
+  {
+    "concept_id": "nephrotic_syndrome",
+    "pattern_strength": "Strong",
+    "appearances": 83,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 83 of 411 questions (20.2%). Core syllabus topic with consistent historical presence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "agn",
+      "proteinuria",
+      "edema",
+      "steroids",
+      "albumin"
+    ]
+  },
+  {
+    "concept_id": "agn",
+    "pattern_strength": "Strong",
+    "appearances": 36,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 36 of 411 questions (8.8%). Core syllabus topic with consistent historical presence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "nephrotic_syndrome",
+      "streptococcus",
+      "complement_c3",
+      "hematuria",
+      "hypertension"
+    ]
+  },
+  {
+    "concept_id": "leukemia",
+    "pattern_strength": "Moderate",
+    "appearances": 18,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 18 of 411 questions (4.4%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "anemia",
+      "thrombocytopenia",
+      "hepatosplenomegaly",
+      "chemotherapy"
+    ]
+  },
+  {
+    "concept_id": "pneumonia",
+    "pattern_strength": "Moderate",
+    "appearances": 12,
+    "papers_analyzed": 23,
+    "last_appeared": "2023",
+    "confidence_note": "Appeared in 12 of 411 questions (2.9%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2023
+    ],
+    "co_occurring_concepts": [
+      "amoxicillin",
+      "oxygen",
+      "cpap",
+      "imci",
+      "danger_signs"
+    ]
+  },
+  {
+    "concept_id": "pneumonia_resp",
+    "pattern_strength": "Moderate",
+    "appearances": 12,
+    "papers_analyzed": 23,
+    "last_appeared": "2023",
+    "confidence_note": "Appeared in 12 of 411 questions (2.9%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2023
+    ],
+    "co_occurring_concepts": [
+      "amoxicillin",
+      "oxygen",
+      "cpap",
+      "crackles",
+      "tachypnea"
+    ]
+  },
+  {
+    "concept_id": "anemia",
+    "pattern_strength": "Moderate",
+    "appearances": 11,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 11 of 411 questions (2.7%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2017,
+      2019,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "iron",
+      "ferritin",
+      "hb",
+      "microcytosis",
+      "hypochromia"
+    ]
+  },
+  {
+    "concept_id": "sam",
+    "pattern_strength": "Moderate",
+    "appearances": 8,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 8 of 411 questions (1.9%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2017,
+      2019,
+      2022,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "muac",
+      "z_score",
+      "f75",
+      "f100",
+      "rtp"
+    ]
+  },
+  {
+    "concept_id": "down_syndrome",
+    "pattern_strength": "Moderate",
+    "appearances": 8,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 8 of 411 questions (1.9%). Moderate historical presence; may vary by exam cycle.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "hypotonia",
+      "congenital_heart_disease",
+      "duodenal_atresia",
+      "alzheimer"
+    ]
+  },
+  {
+    "concept_id": "rickets",
+    "pattern_strength": "Emerging",
+    "appearances": 7,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 7 of 411 questions (1.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2016,
+      2019,
+      2021,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "vitamin_d",
+      "calcium",
+      "phosphate",
+      "alkaline_phosphatase",
+      "craniotabes"
+    ]
+  },
+  {
+    "concept_id": "chd",
+    "pattern_strength": "Emerging",
+    "appearances": 7,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 7 of 411 questions (1.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2017,
+      2018,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "cyanosis",
+      "heart_failure",
+      "murmur",
+      "echocardiography"
+    ]
+  },
+  {
+    "concept_id": "seizures",
+    "pattern_strength": "Emerging",
+    "appearances": 6,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 6 of 411 questions (1.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2018,
+      2020,
+      2022,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "phenytoin",
+      "phenobarbital",
+      "eeg",
+      "neuroimaging"
+    ]
+  },
+  {
+    "concept_id": "tuberculosis",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2017,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "mantoux",
+      "bcg",
+      "rifampicin",
+      "isoniazid",
+      "pyrazinamide"
+    ]
+  },
+  {
+    "concept_id": "meningitis",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2017,
+      2018,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "csf",
+      "cefotaxime",
+      "ampicillin",
+      "kernig",
+      "brudzinski"
+    ]
+  },
+  {
+    "concept_id": "dengue",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2018,
+      2019,
+      2023,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "aedes",
+      "thrombocytopenia",
+      "hemoconcentration",
+      "fluid_resuscitation"
+    ]
+  },
+  {
+    "concept_id": "immunization",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2018,
+      2020,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "bcg",
+      "opv",
+      "pentavalent",
+      "mmr",
+      "aefi"
+    ]
+  },
+  {
+    "concept_id": "rheumatic_fever",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2017,
+      2018,
+      2022,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "jones_criteria",
+      "carditis",
+      "penicillin",
+      "prophylaxis"
+    ]
+  },
+  {
+    "concept_id": "thalassemia",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "anemia",
+      "hemolysis",
+      "splenomegaly",
+      "transfusion",
+      "chelation"
+    ]
+  },
+  {
+    "concept_id": "meningitis_neuro",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2017,
+      2018,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "csf",
+      "headache",
+      "neck_rigidity",
+      "photophobia"
+    ]
+  },
+  {
+    "concept_id": "asthma",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2018,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "salbutamol",
+      "steroids",
+      "inhaler",
+      "peak_flow",
+      "wheezing"
+    ]
+  },
+  {
+    "concept_id": "thalassemia_genetics",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "anemia",
+      "hemolysis",
+      "transfusion",
+      "chelation",
+      "genetic_counseling"
+    ]
+  },
+  {
+    "concept_id": "poisoning",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2019,
+      2022,
+      2023,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "gastric_lavage",
+      "activated_charcoal",
+      "atropine",
+      "pralidoxime"
+    ]
+  },
+  {
+    "concept_id": "developmental_delay",
+    "pattern_strength": "Emerging",
+    "appearances": 5,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 5 of 411 questions (1.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2020,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "ddst",
+      "denver_ii",
+      "early_intervention",
+      "physiotherapy"
+    ]
+  },
+  {
+    "concept_id": "neonatal_jaundice",
+    "pattern_strength": "Emerging",
+    "appearances": 4,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 4 of 411 questions (1.0%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2018,
+      2021,
+      2023,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "phototherapy",
+      "exchange_transfusion",
+      "kernicterus",
+      "abo_incompatibility"
+    ]
+  },
+  {
+    "concept_id": "rds",
+    "pattern_strength": "Emerging",
+    "appearances": 4,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 4 of 411 questions (1.0%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2017,
+      2018,
+      2022,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "surfactant",
+      "cpap",
+      "mechanical_ventilation",
+      "preterm"
+    ]
+  },
+  {
+    "concept_id": "csf",
+    "pattern_strength": "Emerging",
+    "appearances": 4,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 4 of 411 questions (1.0%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2017,
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "meningitis",
+      "tubercular_meningitis",
+      "viral_meningitis",
+      "encephalitis"
+    ]
+  },
+  {
+    "concept_id": "hus",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015,
+      2023,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "e_coli_o157",
+      "anemia",
+      "thrombocytopenia",
+      "aki"
+    ]
+  },
+  {
+    "concept_id": "hematuria",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "agn",
+      "nephrotic_syndrome",
+      "uti",
+      "renal_stones",
+      "iga_nephropathy"
+    ]
+  },
+  {
+    "concept_id": "hypothyroidism",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2020,
+      2022,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "tsh",
+      "thyroxine",
+      "newborn_screening",
+      "developmental_delay"
+    ]
+  },
+  {
+    "concept_id": "portal_hypertension",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2024
+    ],
+    "co_occurring_concepts": [
+      "cirrhosis",
+      "varices",
+      "hematemesis",
+      "splenomegaly",
+      "ascites"
+    ]
+  },
+  {
+    "concept_id": "heart_failure",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2023",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2019,
+      2023
+    ],
+    "co_occurring_concepts": [
+      "digoxin",
+      "furosemide",
+      "ace_inhibitors",
+      "cardiomegaly"
+    ]
+  },
+  {
+    "concept_id": "cerebral_palsy",
+    "pattern_strength": "Emerging",
+    "appearances": 3,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 3 of 411 questions (0.7%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2024,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "spasticity",
+      "developmental_delay",
+      "physiotherapy",
+      "botulinum"
+    ]
+  },
+  {
+    "concept_id": "hepatitis",
+    "pattern_strength": "Emerging",
+    "appearances": 2,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 2 of 411 questions (0.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2020,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "jaundice",
+      "hepatomegaly",
+      "vaccine",
+      "fulminant_hepatic_failure"
+    ]
+  },
+  {
+    "concept_id": "malaria",
+    "pattern_strength": "Emerging",
+    "appearances": 2,
+    "papers_analyzed": 23,
+    "last_appeared": "2019",
+    "confidence_note": "Appeared in 2 of 411 questions (0.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016,
+      2019
+    ],
+    "co_occurring_concepts": [
+      "plasmodium",
+      "artesunate",
+      "chloroquine",
+      "anemia",
+      "splenomegaly"
+    ]
+  },
+  {
+    "concept_id": "itp",
+    "pattern_strength": "Emerging",
+    "appearances": 2,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 2 of 411 questions (0.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2023,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "purpura",
+      "petechiae",
+      "ivig",
+      "platelets"
+    ]
+  },
+  {
+    "concept_id": "bronchiolitis",
+    "pattern_strength": "Emerging",
+    "appearances": 2,
+    "papers_analyzed": 23,
+    "last_appeared": "2024",
+    "confidence_note": "Appeared in 2 of 411 questions (0.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2021,
+      2024
+    ],
+    "co_occurring_concepts": [
+      "rsv",
+      "wheezing",
+      "hypoxia",
+      "nasal_suction",
+      "cpap"
+    ]
+  },
+  {
+    "concept_id": "growth_assessment",
+    "pattern_strength": "Emerging",
+    "appearances": 2,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 2 of 411 questions (0.5%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2018,
+      2025
+    ],
+    "co_occurring_concepts": [
+      "who_growth_chart",
+      "midparental_height",
+      "growth_velocity",
+      "stunting"
+    ]
+  },
+  {
+    "concept_id": "proteinuria",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2021",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2021
+    ],
+    "co_occurring_concepts": [
+      "nephrotic_syndrome",
+      "agn",
+      "renal_failure"
+    ]
+  },
+  {
+    "concept_id": "intussusception",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2018",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2018
+    ],
+    "co_occurring_concepts": [
+      "currants_jelly_stool",
+      "sausage_mass",
+      "target_sign",
+      "air_enema"
+    ]
+  },
+  {
+    "concept_id": "neonatal_hypoglycemia",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2025
+    ],
+    "co_occurring_concepts": [
+      "sepsis",
+      "ihd",
+      "macrosomia",
+      "glucose_infusion"
+    ]
+  },
+  {
+    "concept_id": "bfhi",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2016",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2016
+    ],
+    "co_occurring_concepts": [
+      "breastfeeding",
+      "skin_to_skin",
+      "rooming_in",
+      "colostrum"
+    ]
+  },
+  {
+    "concept_id": "drowning",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2015",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2015
+    ],
+    "co_occurring_concepts": [
+      "hypoxia",
+      "cerebral_edema",
+      "cpap",
+      "ventilation",
+      "core_temperature"
+    ]
+  },
+  {
+    "concept_id": "phototherapy",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2020",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2020
+    ],
+    "co_occurring_concepts": [
+      "neonatal_jaundice",
+      "bilirubin",
+      "exchange_transfusion",
+      "kernicterus"
+    ]
+  },
+  {
+    "concept_id": "renal_biopsy",
+    "pattern_strength": "Emerging",
+    "appearances": 1,
+    "papers_analyzed": 23,
+    "last_appeared": "2025",
+    "confidence_note": "Appeared in 1 of 411 questions (0.2%). Low sample size; study for completeness, not pattern confidence.",
+    "average_marks": 0.0,
+    "years_appeared": [
+      2025
+    ],
+    "co_occurring_concepts": [
+      "nephrotic_syndrome",
+      "agn",
+      "lupus_nephritis",
+      "fsgs"
+    ]
+  }
+]

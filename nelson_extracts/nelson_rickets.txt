@@ -1,0 +1,278 @@
+
+--- PAGE 129 ---
+114
+SECTION 6  Pediatric Nutrition and Nutritional Disorders
+Folate
+the brain, carbohydrate metabolism, immune development, 
+and the biosynthesis of heme and prostaglandins. The pyridoxal 
+and pyridoxamine forms of the vitamin are destroyed by heat; 
+heat treatment was responsible for vitamin B6 deficiency and 
+seizures in infants fed improperly processed formulas. Goat’s 
+milk is deficient in vitamin B6.
+Dietary deprivation or malabsorption of vitamin B6 in 
+children results in hypochromic microcytic anemia, vomiting, 
+diarrhea, failure to thrive, listlessness, hyperirritability, and 
+seizures. Children receiving isoniazid or penicillamine may 
+require additional vitamin B6 because the drug binds to the 
+vitamin. Vitamin B6 is unusual as a water-soluble vitamin, in 
+that very large doses (≥500 mg/day) have been associated with 
+a sensory neuropathy.
+TABLE 31.2	 Characteristics of Vitamin Deficiencies
+VITAMIN
+PURPOSE
+DEFICIENCY
+COMMENTS
+SOURCE
+WATER SOLUBLE
+Thiamine (B1)
+Coenzyme in ketoacid 
+decarboxylation (e.g., 
+pyruvate→acetyl-CoA 
+transketolase reaction)
+Beriberi: polyneuropathy, calf 
+tenderness, heart failure, edema, 
+ophthalmoplegia
+Inborn errors of lactate 
+metabolism; boiling milk 
+destroys B1
+Liver, meat, milk, cereals, 
+nuts, legumes
+Riboflavin (B2)
+FAD coenzyme in 
+oxidation-reduction 
+reactions
+Anorexia, mucositis, anemia, 
+cheilosis, nasolabial seborrhea
+Photosensitizer
+Milk, cheese, liver, meat, 
+eggs, whole grains, 
+green leafy vegetables
+Niacin (B3)
+NAD coenzyme in 
+oxidation-reduction 
+reactions
+Pellagra: photosensitivity, 
+dermatitis, dementia, diarrhea, 
+death
+Tryptophan is a precursor
+Meat, fish, liver, whole 
+grains, green leafy 
+vegetables
+Pyridoxine (B6)
+Cofactor in amino acid 
+metabolism
+Seizures, hyperacusis, microcytic 
+anemia, nasolabial seborrhea, 
+neuropathy
+Dependency state: 
+deficiency secondary to 
+drugs
+Meat, liver, whole grains, 
+peanuts, soybeans
+Pantothenic acid
+CoA in Krebs cycle
+None reported
+—
+Meat, vegetables
+Biotin
+Cofactor in carboxylase 
+reactions of amino acids
+Alopecia, dermatitis, hypotonia, 
+death
+Bowel resection, inborn 
+error of metabolism,* and 
+ingestion of raw eggs
+Yeast, meats; made by 
+intestinal flora
+B12
+Coenzyme for 
+5-methyltetrahydrofolate 
+formation; DNA synthesis
+Megaloblastic anemia, peripheral 
+neuropathy, posterior lateral 
+spinal column disease, vitiligo
+Vegans; fish tapeworm; 
+short gut syndrome; 
+transcobalamin or intrinsic 
+factor deficiencies
+Meat, fish, cheese, eggs
+Folate
+DNA synthesis
+Megaloblastic anemia; neural 
+tube defects
+Goat milk deficient; drug 
+antagonists; heat 
+inactivates
+Liver, greens, vegetables, 
+cereals, cheese
+Ascorbic acid (C)
+Reducing agent; collagen 
+metabolism
+Scurvy: irritability, purpura, 
+bleeding gums, periosteal 
+hemorrhage, aching bones
+May improve tyrosine 
+metabolism in preterm 
+infants
+Citrus fruits, green 
+vegetables; cooking 
+destroys it
+FAT SOLUBLE
+A
+Epithelial cell integrity; 
+vision
+Night blindness, xerophthalmia, 
+Bitot spots, follicular 
+hyperkeratosis; immune defects
+Common with protein-
+calorie malnutrition; 
+malabsorption
+Liver, milk, eggs, green 
+and yellow vegetables, 
+fruits
+D
+Maintain serum calcium, 
+phosphorus levels
+Rickets: reduced bone 
+mineralization
+Prohormone of 25- and 
+1,25-vitamin D
+Fortified milk, cheese, 
+liver; sunlight
+E
+Antioxidant
+Hemolysis in preterm infants; 
+areflexia, ataxia, 
+ophthalmoplegia
+May benefit patients with 
+G6PD deficiency
+Seeds, vegetables, germ 
+oils, grains
+K
+Posttranslation 
+carboxylation of clotting 
+factors II, VII, IX, X and 
+proteins C, S
+Prolonged prothrombin time; 
+hemorrhage; elevated protein 
+induced in vitamin K absence 
+(PIVKA)
+Malabsorption; breast fed 
+infants
+Liver, green vegetables; 
+made by intestinal flora
+*Biotinidase deficiency.
+CoA, Coenzyme A; FAD, flavin adenine dinucleotide; G6PD, glucose-6-phosphate dehydrogenase; NAD, nicotinamide adenine dinucleotide.
+A variety of chemical forms of folate are nutritionally active. 
+Folate functions in transport of single-carbon fragments in 
+synthesis of nucleic acids and for normal metabolism of certain 
+amino acids and in conversion of homocysteine to methionine. 
+Food sources include green leafy vegetables, oranges, and whole 
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Anemia
+Neutropenia
+
+
+--- PAGE 130 ---
+115
+CHAPTER 31  Vitamin and Mineral Deficiencie
+TABLE 31.3	 Treatment of Vitamin Deficiencies
+CLINICAL FEATURES
+SUGGESTED DOSES
+Vitamin A
+Severe deficiency with 
+xerophthalmia
+Infants: 7,500-15,000 U/day IM, followed by oral 5,000-10,000 U/day for 10 days.
+Children 1-8 yr of age: oral 5,000-10,000 U/kg/day for 5 days or until recovery.
+Children >8 yr of age and adults: oral 500,000 U/day for 3 days; then 50,000 U/day for 14 days; 
+then 10,000-20,000 U/day for 2 mo.
+Deficiency without 
+corneal changes
+Infants <1 yr of age: 100,000 U/day orally, q4-6 mo.
+Children 1-8 yr of age: 200,000 U/day orally, q4-6 mo.
+Children >8 yr and adults: 100,000 U/day for 3 days, followed by 50,000 U/day for 10 days.
+Deficiency
+IM given only to those patients with malabsorption in whom oral dosing is not possible.
+Infants: 7,500-15,000 U/day for 10 days.
+Children 1-8 yr of age: 17,500-35,000 U/day for 10 days.
+Children >8 yr of age and adults: 100,000 U/day for 3 days, then 50,000 U/day for 14 days.
+Give follow-up oral multivitamin that contains vitamin A:
+LBW infants: no dose established, children ≤8 yr of age: 5,000-10,000 U/day, children >8 yr of 
+age and adults: 10,000-20,000 U daily.
+Malabsorption 
+syndrome (prophylaxis)
+Children >8 yr of age and adults: oral 10,000-50,000 U/day of water-miscible product.
+Cystic fibrosis
+1,500-10,000 U/day prophylaxis (CF Foundation).
+Measles
+WHO recommendations: single dose, repeating the dose next day and at 4 wk for children 
+with eye findings:
+6 mo to 1 yr of age: 100,000 U; >1 yr of age: 200,000 U.
+Vitamin D
+Liver disease
+4,000-8,000 U/day ergocalciferol.
+Malabsorption
+1000 U/day ergocalciferol
+Nutritional rickets and 
+osteomalacia
+Ergocalciferol: children and adults with normal absorption: 1,000-5,000 U/day.
+Children with malabsorption: 10,000-25,000 U/day.
+Adults with malabsorption: 10,000-300,000 U/day.
+Renal disease and 
+failure
+Ergocalciferol: child: 4,000-40,000 U/day; adults: 20,000 U/day.
+Cystic fibrosis
+Ergocalciferol: 400-800 U/day PO (CF Foundation).
+Hypoparathyroidism
+Children: 50,000-200,000 U/day ergocalciferol and calcium supplements.
+Adults: 25,000-200,000 U/day ergocalciferol and calcium supplements.
+Vitamin D-dependent 
+rickets
+Children: 3,000-5,000 U/day ergocalciferol; max: 60,000 U/day.
+Adults: 10,000-60,000 U/day ergocalciferol.
+Vitamin D-resistant 
+rickets
+Children: initial 40,000-80,000 U/day with phosphate supplements, daily dosage is increased 
+at 3-4 mo intervals in 10,000-20,000 U increments.
+Adults: 10,000-60,000 U/day with phosphate supplements.
+Vitamin E
+Premature infant, 
+neonates, infants of low 
+birth weight
+D–α–tocopherol: 25-50 U/day for 1 wk orally.
+Fat malabsorption and 
+liver disease
+10-25 U/kg/day of water–miscible vitamin E preparation.
+Cystic fibrosis
+<1 yr of age: 25-50 U/day; 1-2 yr of age: 100 U/day; >2 yr of age: 100 U/day bid or 200 U daily 
+orally (CF Foundation).
+Sickle cell disease
+450 U/day orally.
+β-Thalassemia
+750 U/day orally.
+Vitamin K
+Hemorrhagic disease of 
+the newborn
+Phytonadione: 0.5-1.0 mg SC or IM as prophylaxis within 1 hr of birth, may repeat 6-8 hr later; 
+1-2 mg/day as treatment.
+Deficiency
+Infants and children: 2.5-5 mg/day orally, or 1-2 mg/dose SC, IM, IV as a single dose; adults: 
+5-25 mg/day or 10 mg IM, IV.
+Cystic fibrosis
+2.5 mg, twice a week (CF Foundation).
+Folate, folic 
+acid, and 
+folacin
+Deficiency
+Infants: 50 µg daily.
+Children 1-10 yr of age: 1 mg/day initially, then 0.1-0.4 mg/day as maintenance.
+Children >11 yr of age and adults: 1 mg/day initially, then 0.5 mg/day as maintenance.
+Hemolytic anemia
+May require higher doses than those listed previously.
+Niacin
+Pellagra
+Children: 50-100 mg tid.
+Adults: 50-100 mg/day, max 100 mg/day.
+Continued
+

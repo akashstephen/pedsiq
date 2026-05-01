@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { topics } from "./topics";
 import { Flowchart } from "@/components/Flowchart";
+import { MermaidDiagram } from "@/components/MermaidDiagram";
 import { SafeHtml } from "@/components/SafeHtml";
+import { ExamTip } from "@/components/ExamTip";
+import { MarkBadge } from "@/components/MarkBadge";
 import { Printer, Network, AlertTriangle, Calendar } from "lucide-react";
 import graphMetadata from "@/data/topic_graph_metadata.json";
 
@@ -101,7 +104,7 @@ export default function StructuredAnswersPage() {
                 <div key={si}>
                   <h3 className="text-base md:text-lg font-bold text-white mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-5 rounded-full bg-[#007AFF]" />
-                    {section.title}
+                    <span>{section.title}</span>
                   </h3>
 
                   {section.text && (
@@ -122,12 +125,12 @@ export default function StructuredAnswersPage() {
                   )}
 
                   {section.table && (
-                    <div className="overflow-x-auto mb-3">
-                      <table className="w-full text-sm border border-white/[0.08] rounded-xl overflow-hidden">
+                    <div className="overflow-x-auto mb-3 rounded-xl border border-white/[0.08]">
+                      <table className="w-full text-sm">
                         <thead>
-                          <tr className="bg-white/[0.05]">
+                          <tr className="bg-white/[0.08]">
                             {section.table.headers.map((h, hi) => (
-                              <th key={hi} className="text-left py-2 px-2 md:py-2.5 md:px-4 text-white/60 font-semibold text-[10px] md:text-xs uppercase tracking-wider">
+                              <th key={hi} className="text-left py-2.5 px-3 md:py-3 md:px-4 text-white/70 font-bold text-[10px] md:text-xs uppercase tracking-wider border-b border-white/[0.08]">
                                 {h}
                               </th>
                             ))}
@@ -135,9 +138,9 @@ export default function StructuredAnswersPage() {
                         </thead>
                         <tbody>
                           {section.table.rows.map((row, ri) => (
-                            <tr key={ri} className="border-t border-white/[0.04]">
+                            <tr key={ri} className={`border-t border-white/[0.04] ${ri % 2 === 1 ? 'bg-white/[0.02]' : ''} hover:bg-white/[0.04] transition-colors`}>
                               {row.map((cell, ci) => (
-                                <td key={ci} className="py-2 px-2 md:py-2.5 md:px-4 text-white/80 text-xs md:text-sm">
+                                <td key={ci} className={`py-2.5 px-3 md:py-3 md:px-4 text-white/80 text-xs md:text-sm ${ci === 0 ? 'font-medium text-white/90' : ''}`}>
                                   <SafeHtml text={cell} />
                                 </td>
                               ))}
@@ -148,6 +151,12 @@ export default function StructuredAnswersPage() {
                     </div>
                   )}
 
+                  {section.mermaid && (
+                    <div className="mb-3">
+                      <MermaidDiagram code={section.mermaid} />
+                    </div>
+                  )}
+
                   {section.flowchart && (
                     <div className="mb-3">
                       <Flowchart nodes={section.flowchart.nodes} edges={section.flowchart.edges} />
@@ -155,31 +164,51 @@ export default function StructuredAnswersPage() {
                   )}
 
                   {section.mnemonic && (
-                    <div className="bg-[#34C759]/10 border border-[#34C759]/20 rounded-xl p-4 mb-3">
-                      <div className="text-[#34C759] text-xs font-bold uppercase tracking-wider mb-1">
-                        Mnemonic
+                    <div className="bg-gradient-to-br from-[#34C759]/10 to-[#007AFF]/10 border border-[#34C759]/20 rounded-xl p-5 mb-3">
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-8 h-8 rounded-lg bg-[#34C759]/20 flex items-center justify-center text-[#34C759] text-lg font-bold">
+          M
+        </div>
+                        <div className="text-[#34C759] text-xs font-bold uppercase tracking-wider">
+                          Memory Aid
+                        </div>
                       </div>
-                      <div className="text-white font-bold text-lg mb-1">{section.mnemonic.title}</div>
-                      <div className="text-white/70 text-sm">{section.mnemonic.text}</div>
+                      <div className="text-white font-bold text-xl mb-2 tracking-tight">{section.mnemonic.title}</div>
+                      <div className="text-white/70 text-sm leading-relaxed">{section.mnemonic.text}</div>
                     </div>
+                  )}
+
+                  {section.examTip && (
+                    <ExamTip type={section.examTip.type}>
+                      {section.examTip.text}
+                    </ExamTip>
                   )}
                 </div>
               ))}
 
               {/* Scoring checklist */}
               {topic.checklist && (
-                <div className="bg-[#007AFF]/10 border border-[#007AFF]/20 rounded-xl p-4 md:p-5">
-                  <div className="text-[#007AFF] text-xs font-bold uppercase tracking-wider mb-3">
-                    Exam Scoring Checklist
+                <div className="bg-gradient-to-br from-[#007AFF]/10 to-[#5856D6]/10 border border-[#007AFF]/20 rounded-xl p-4 md:p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-[#007AFF]/20 flex items-center justify-center text-[#007AFF]">
+          ✓
+        </div>
+                    <div className="text-[#007AFF] text-xs font-bold uppercase tracking-wider">
+                      Exam Scoring Checklist
+                    </div>
                   </div>
-                  <ul className="space-y-2">
+                  <div className="space-y-2">
                     {topic.checklist.map((item, ci) => (
-                      <li key={ci} className="text-white/80 text-sm flex items-start gap-2">
-                        <span className="text-[#007AFF] font-bold">{ci + 1}.</span>
-                        <SafeHtml text={item} />
-                      </li>
+                      <div key={ci} className="flex items-start gap-3 p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                        <div className="w-5 h-5 rounded border-2 border-[#007AFF]/40 flex items-center justify-center shrink-0 mt-0.5">
+                          <div className="w-2.5 h-2.5 rounded-sm bg-[#007AFF]/60" />
+                        </div>
+                        <div className="text-white/80 text-sm leading-relaxed">
+                          <SafeHtml text={item} />
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
 

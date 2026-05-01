@@ -1,0 +1,341 @@
+
+--- PAGE 525 ---
+504
+SECTION 17  Digestive System
+peptic disease, or any other condition predisposing to intestinal 
+perforation, specific testing should be performed.
+TREATMENT
+Peritonitis caused by an intraabdominal surgical process, such 
+as appendicitis or a penetrating wound, must be managed 
+surgically. Spontaneous bacterial peritonitis should be treated 
+with a broad-spectrum antibiotic with good coverage of resistant 
+pneumococcus and enteric bacteria. Cefotaxime is generally 
+effective as initial therapy while awaiting culture and sensitivity 
+results. Anaerobic coverage with metronidazole should be added 
+whenever a perforated viscus is suspected.
+Suggested Readings
+Belsha D, Bremner R, Thomson M. Indications for gastrointestinal 
+endoscopy in childhood. Arch Dis Child. 2016;101(12):1153–1160.
+Brown LK, Beattie RM, Tighe MP. Practical management of functional 
+abdominal pain in children. Arch Dis Child. 2015;101(7):677–683.
+Clark MB, Slayton RL, Segura A, et al. Fluoride use in caries prevention in 
+the primary care setting. Pediatrics. 2014;134(3):626–633.
+Davies I, Burman-Roy S, Murphy MS, et al. Gastro-oesophageal reflux 
+disease in children. BMJ. 2015;350:g7703.
+Ediger TR, Hill ID. Celiac disease. Pediatr Rev. 2014;35(10):409–415. 
+PMID:25274968.
+Fell JM, Muhammed R, Spray C, et al. Management of ulcerative colitis. 
+Arch Dis Child. 2016;101(5):469–474. PMID:26553909.
+Gailey DG. Feeding infants with cleft and the postoperative cleft 
+management. Oral Maxillofac Surg Clin North Am. 2016;28(2):153–159.
+Gottesman LE, Del Vecchio MT, Aronoff SC. Etiologies of conjugated 
+hyperbilirubinemia in infancy: a systematic review of 1692 subjects. 
+BMC Pediatr. 2015;15:192.
+Horslen S. Acute liver failure and transplantation in children. S Afr Med J. 
+2014;104(11 Pt 2):808–812.
+Kammermeier J, Morris MA, Garrick V, et al. Management of Crohn’s 
+disease. Arch Dis Child. 2016;101(5):475–480. PMID:26553907.
+Khalaf R, Phen C, Karjoo S, et al. Cholestasis beyond the neonatal and 
+infancy periods. Pediatr Gastroenterol Hepatol Nutr. 2016;19(1):1–11.
+Kim JS. Acute abdominal pain in children. Pediatr Gastroenterol Hepatol 
+Nutr. 2013;16(4):219–224.
+Koletzko S, Jones NL, Goodman KJ, et al. Evidence-based guidelines from 
+ESPGHAN and NASPGHAN for Helicobacter pylori infection in 
+children. J Pediatr Gastroenterol Nutr. 2011;53(2):230–243.
+Kulik DM, Uleryk EM, Maguire JL. Does this child have appendicitis? A 
+systematic review of clinical prediction rules for children with acute 
+abdominal pain. J Emerg Med. 2013;66(1):95–104.
+Li BU, Lefevre F, Chelimsky GG, et al. North American Society for Pediatric 
+Gastroenterology, Hepatology, and Nutrition consensus statement on the 
+diagnosis and management of cyclic vomiting syndrome. J Pediatr 
+Gastroenterol Nutr. 2008;47(3):379–393.
+Moyer VA. Prevention of dental caries in children from birth through age 5 
+years: U.S. Preventive Services Task Force recommendation statement. 
+Pediatrics. 2014;133(6):1102–1111.
+Neidich GA, Cole SR. Gastrointestinal bleeding. Pediatr Rev. 
+2014;35(6):243–253, quiz 254.
+Papadopolou A, Koletzo S, Heuschkel R, et al. Management guidelines of 
+eosinophilic esophagitis in childhood. J Pediatr Gastroenterol Nutr. 
+2014;58:107–118.
+Pinto RB, Schneider AC, da Silveira TR. Cirrhosis in children and 
+adolescents: an overview. World J Hepatol. 2015;7(3):392–405.
+Pohl JF, Uc A. Paediatric Pancreatitis. Curr Opin Gastroenterol. 
+2015;31(5):380–386. PMID:26181572.
+Preece ER, Athan E, Watters DA, et al. Spontaneous bacterial peritonitis: a 
+rare mimic of acute appendicitis. ANZ J Surg. 2012;82(4):283–284.
+Reilly S, Reid J, Skeat J, et al. ABM clinical protocol #18: guidelines for 
+breastfeeding infants with cleft lip, cleft palate, or cleft lip and palate, 
+revised 2013. Breastfeed Med. 2013;8(4):349–353.
+Sahn B, Bitton S. Lower gastrointestinal bleeding in children. Gastrointest 
+Endosc Clin N Am. 2016;26(1):75–98.
+Saito JM. Beyond appendicitis: evaluation and surgical treatment of 
+pediatric acute abdominal pain. Curr Opin Pediatr. 2012;24(3):357–364.
+CHAPTER 132 
+Peritonitis
+ETIOLOGY AND EPIDEMIOLOGY
+The peritoneum consists of a single layer of mesothelial cells 
+that covers all intraabdominal organs. The portion that covers 
+the abdominal wall is derived from the underlying somatic 
+structures and is innervated by somatic nerves. The portion 
+covering the viscera is derived from visceral mesoderm and is 
+innervated by nonmyelinated visceral afferents. Inflammation 
+of the peritoneum, or peritonitis, usually is caused by infection 
+but may result from exogenous irritants introduced by penetrat-
+ing injuries or surgical procedures, radiation, and endogenous 
+irritants such as meconium. Infectious peritonitis can be an 
+acute complication of intestinal inflammation and perforation, 
+as in appendicitis, or it can occur secondary to contamination 
+of pre-existing ascites associated with renal, cardiac, or hepatic 
+disease. In this setting, when there is no other intraabdominal 
+source, it is referred to as spontaneous bacterial peritonitis. 
+Spontaneous bacterial peritonitis is usually due to pneumococcus 
+and less often to Escherichia coli.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Abdominal Pain
+Peritonitis is characterized on examination by marked abdominal 
+tenderness. Rebound tenderness also generally is quite pro-
+nounced. The patient tends to move very little owing to intense 
+peritoneal irritation and pain. Fever is not always present, and 
+absence of fever should not be regarded as contradictory to 
+the diagnosis. Patients who are taking corticosteroids for an 
+underlying condition, such as nephrotic syndrome, are likely 
+to have little fever and reduced tenderness.
+LABORATORY AND IMAGING STUDIES
+Blood tests should focus on identifying the nature of the 
+inflammation and its underlying cause. An elevated white blood 
+cell count, erythrocyte sedimentation rate, and C-reactive protein 
+suggest infection. In children older than 5 years, appendicitis 
+is the leading cause. Total serum protein, albumin, and urinalysis 
+should be ordered to rule out nephrotic syndrome. Liver function 
+tests should be performed to rule out chronic liver disease 
+causing ascites. The best way to diagnose suspected peritonitis 
+is to sample the peritoneal fluid with a needle or catheter 
+(paracentesis). Peritoneal fluid in spontaneous bacterial peri-
+tonitis has a high neutrophil count of greater than 250 cells/
+mm3. Other tests that should be run on the peritoneal fluid 
+include amylase (to rule out pancreatic ascites), culture, albumin, 
+and lactate dehydrogenase concentration. For culture, a large 
+sample of fluid should be placed into aerobic and anaerobic 
+blood culture bottles immediately on obtaining the sample.
+Appendicitis may be identified by ultrasound or computed 
+tomography (CT) scan. When other intraabdominal emergen-
+cies are suspected, such as midgut volvulus, meconium ileus, 
+
+
+--- PAGE 526 ---
+505
+CHAPTER 132  Peritonitis
+Teo S, Walker A, Steer A. Spontaneous bacterial peritonitis as a presenting 
+feature of nephrotic syndrome. J Paediatr Child Health. 
+2013;49(12):1069–1071.
+van Heurn LW, Pakarinen MP, Wester T. Contemporary management of 
+abdominal surgical emergencies in infants and children. Br J Surg. 
+2014;101(1):e24–e33.
+Verkade HJ, Bezerra JA, Davenport M, et al. Biliary atresia and other 
+cholestatic childhood diseases: advances and future challenges. J Hepatol. 
+2016;65(3):631–642.
+Schwimmer JB. Clinical advances in pediatric nonalcoholic fatty liver 
+disease. Hepatology. 2016;63(5):1718–1725.
+Somaraju UR, Solis-Moya A. Pancreatic enzyme replacement for people 
+with cystic fibrosis. Cochrane Database Syst Rev. 2014;(10):CD008227, 
+PMID:25310479.
+Srinath AI, Lowe ME. Pediatric pancreatitis. Pediatr Rev. 2013;34(2):79–90. 
+PMID: 23378615.
+Tabbers MM, DiLorenzo C, Berger MY, et al. Evaluation and treatment of 
+functional constipation in infants and children: evidence-based 
+recommendations from ESPGHAN and NASPGHAN. J Pediatr 
+Gastroenterol Nutr. 2014;58(2):258–274.
+PEARLS FOR PRACTITIONERS
+Peutz-Jeghers syndrome, Crohn disease, gastroesophageal 
+reflux disease (GERD), Addison disease, and leukemia.
+•	 Deciduous teeth erupt in a predictable sequence and age. 
+Significant delayed eruption may be associated with hypo-
+thyroidism, Down syndrome, and other disorders.
+•	 Cleft lip and palate are common birth defects; combined 
+cleft lip and palate is more common in males and isolated 
+cleft palate is more likely to be associated with other congenital 
+malformations.
+CHAPTER 128
+Esophagus and Stomach
+•	 As many as half of infants will have physiological reflux. 
+The majority of infants do not benefit from acid reduction 
+therapy.
+•	 Gastroesophageal reflux disease occurs when there are 
+complications of reflux such as poor growth, esophagitis, 
+abdominal or chest pain, or respiratory problems.
+•	 Reflux cannot be diagnosed based on imaging as this is only 
+a snapshot in time. Upper gastrointestinal series evaluates 
+for anatomical abnormalities.
+•	 In an older child who has not improved with lifestyle changes, 
+a trial with a proton pump inhibitor is recommended.
+•	 Eosinophilic esophagitis should be considered in children 
+with poor feeding or growth, chronic abdominal pain or 
+vomiting, and in children with dysphagia or recurrent food 
+impactions.
+•	 Diagnosis of eosinophilic esophagitis requires endoscopy 
+and biopsy. Overlap of findings is seen with gastroesophageal 
+reflux disease.
+•	 Treatment of eosinophilic esophagitis includes dietary changes 
+or topical glucocorticoid therapy.
+•	 The six food elimination diet (cow milk, soy, wheat, egg, 
+peanuts, fish/shellfish) has been recommended as an approach 
+to eosinophilic esophagitis (EoE).
+•	 A neonate with poor feeding and drooling with a nasogastric 
+tube on x-ray coiled in the neck most likely has a tracheo-
+esophageal fistula.
+•	 Button batteries in the esophagus must be removed imme-
+diately. Two or more ingested magnets should be removed 
+as soon as possible due to risk of perforation.
+CHAPTER 126
+Digestive System Assessment
+•	 Take a careful history and perform a thorough but focused 
+physical examination, using your findings to form a diag-
+nostic hypothesis and plan.
+•	 Surgical emergencies, such as bowel obstruction or appen-
+dicitis, must be identified rapidly in children with acute 
+abdominal pain. Common distinguishing characteristics 
+include pain that is accompanied by vomiting, tenderness, 
+abdominal wall rigidity, or guarding.
+•	 Extraintestinal disorders (lower lobe pneumonia, pyelone-
+phritis) may produce abdominal pain.
+•	 When evaluating recurrent abdominal pain, a complete 
+work-up must include not only a medical evaluation, but 
+also assessment of functional impairment, such as missing 
+school, and consideration of psychosocial factors influencing 
+the pain.
+•	 Recurrent abdominal pain is seen in 10% of school age 
+children and is often functional.
+•	 For patients with emesis, remember to distinguish between 
+true vomiting (forceful retching, preceded usually by nausea) 
+from regurgitation (effortless, usually no nausea) when 
+considering the differential diagnosis.
+•	 Emesis in a neonate suggests a gastrointestinal (GI) obstruc-
+tion such as pyloric stenosis or volvulus; an inborn error of 
+metabolism should be considered in the presence of acidosis, 
+hypoglycemia, or hyperammonemia.
+•	 When treating a patient with significant gastrointestinal 
+bleeding, focus on fluid resuscitation and tissue oxygenation/
+perfusion as your first priority.
+•	 Acute diarrhea is often due to viral gastroenteritis (rotavirus, 
+norovirus). Dysentery often presents with fever, pain, and 
+diarrhea with blood and mucus.
+•	 Painless rectal bleeding in a 2-year-old would suggest a 
+Meckel diverticulum; older patients may also have a polyp.
+CHAPTER 127
+Oral Cavity
+•	 Many systemic disorders affect the oral cavity, which 
+careful examination can demonstrate. Examples include 
+
+
+--- PAGE 527 ---
+506
+SECTION 17  Digestive System
+•	 Infants with pyloric stenosis develop hypochloremic, 
+hypokalemic metabolic alkalosis.
+•	 The diagnosis of pyloric stenosis may be made with abdominal 
+ultrasonography.
+•	 Helicobacter pylori cannot be reliably tested by blood tests. 
+Urea breath hydrogen testing, endoscopy with biopsies, and 
+fecal antigen testing can be considered.
+•	 Cyclic vomiting syndrome is a migraine variant that leads 
+to repeated bouts of repetitive vomiting over hours to days.
+CHAPTER 129
+Intestinal Tract
+•	 Bile-stained emesis in an infant may suggest a volvulus.
+•	 Intestinal malrotation may lead to a volvulus with subsequent 
+intestinal infarction.
+•	 Passage of first meconium after 24 hours of life should raise 
+suspicion for Hirschsprung disease.
+•	 Hirschsprung disease is diagnosed by suction rectal biopsy.
+•	 Duodenal atresia is associated with trisomy 21 and prema-
+turity. There may also be polyhydramnios.
+•	 Suspect Crohn disease in a child with poor growth, delayed 
+puberty, fatigue, and abdominal pain. Initial testing may 
+show anemia, thrombocytosis, elevated sedimentation rate 
+and C-reactive protein, and hypoalbuminemia, but can be 
+normal.
+•	 Fecal calprotectin is an inflammatory marker of intestinal 
+inflammation. Normal fecal calprotectin makes inflammatory 
+bowel disease diagnosis unlikely.
+•	 Recommended serological testing for celiac disease is the 
+tissue transglutaminase antibody immunoglobulin A (IgA). 
+Confirmation of the diagnosis by duodenal biopsy is recom-
+mended prior to initiating a gluten-free diet.
+•	 Celiac disease is associated with type 1 diabetes, thyroiditis, 
+Turner syndrome, and trisomy 21.
+•	 Intussusception is a common cause of acute colicky abdominal 
+pain in toddlers; there may also be rectal bleeding and 
+intestinal obstruction.
+•	 The diagnosis of intussusception is suggested by abdominal 
+ultrasonography but confirmed and treated by barium or 
+air enema.
+•	 Appendicitis can occur at any age but is most common in 
+adolescents and young adults.
+•	 Periumbilical pain followed by nausea followed by right 
+lower quadrant pain is suggestive of appendicitis.
+CHAPTER 130
+Liver Disease
+•	 Infants with jaundice that persists beyond a few weeks of 
+life should have both total and direct (conjugated) bilirubin 
+measured to assure that cholestasis is not missed.
+•	 Neonatal giant cell hepatitis may be due to cytomegalovirus 
+(CMV), herpes simplex, or syphilis.
+•	 Alpha 1 antitrypsin deficiency may present like neonatal 
+hepatitis.
+•	 Alagille syndrome presents with chronic cholestasis due to 
+paucity of bile ducts and is associated with itch, butterfly 
+vertebra, and ocular posterior embryotoxon.
+•	 Cholestasis in infants requires prompt investigation to identify 
+treatable causes such as biliary atresia, choledochal cyst, 
+and certain disorders of metabolism.
+•	 Work-up of hepatitis in children requires consideration of 
+more than just the classic hepatitis viruses and should include 
+evaluation for autoimmune hepatitis, Wilson disease, and 
+biliary obstruction, as well as measures of liver function.
+•	 Wilson disease is associated with low serum ceruloplasmin 
+and elevated urine copper.
+•	 Consultation with a major referral center should be sought 
+for any child with acute severe hepatitis or chronic 
+hepatitis.
+CHAPTER 131
+Pancreatic Disease
+•	 Fecal elastase is the preferred test for pancreatic 
+insufficiency.
+•	 Cystic fibrosis is the most common cause of pancreatic 
+insufficiency in the United States.
+•	 The diagnosis of acute pancreatitis is based on symptoms 
+of severe epigastric abdominal pain and tenderness, increase 
+of amylase and/or lipase more than three times the upper 
+limit of normal, and/or imaging findings of pancreatic 
+inflammation.
+•	 Complications of pancreatitis include shock, pancreatic 
+pseudocyst formation, and pancreatic abscess.
+•	 Patients with pancreatitis may feed enterally if tolerated.
+•	 In patients with recurrent pancreatitis, consider hereditary 
+disorders such as cystic fibrosis or familial pancreatitis 
+involving mutations in CFTR, PRSS1, SPINK1 or CTRC.
+CHAPTER 132
+Peritonitis
+•	 Acute abdominal pain must be investigated rapidly with a 
+comprehensive history and physical examination.
+•	 When peritonitis is suspected, appropriate laboratory and 
+imaging studies should be ordered to reveal underlying 
+conditions, such as appendicitis.
+•	 Nephrotic syndrome, heart failure, and chronic liver disease 
+are associated with an increased risk of spontaneous bacterial 
+peritonitis due to chronic presence of ascites.
+•	 Spontaneous bacterial peritonitis is most commonly caused 
+by Streptococcus pneumoniae or by Escherichia coli.
+•	 Paracentesis 
+is 
+required 
+to 
+accurately 
+diagnose 
+pancreatitis.
+•	 Analysis of ascites fluid obtained with a needle should include 
+culture, cell count with differential, amylase, albumin, and 
+lactate dehydrogenase.
+

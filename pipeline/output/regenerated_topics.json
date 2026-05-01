@@ -1,0 +1,197 @@
+[
+  {
+    "id": "nephrotic",
+    "shortTitle": "Nephrotic Syndrome",
+    "patternStrength": "Strong",
+    "historicalFrequency": {
+      "appearances": 83,
+      "papersAnalyzed": 11,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 83 of 411 questions (20.2%). Degree centrality: 5. High connectivity in knowledge graph + consistent exam presence.",
+    "subject": "Nephrology",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Nephrotic Syndrome in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "162. Nephrotic Syndrome and Proteinuria",
+    "examinerTraps": [
+      "First-line is oral prednisolone 2 mg/kg/day",
+      "Do NOT biopsy on first episode if typical",
+      "Pneumococcal vaccine before starting steroids"
+    ],
+    "relatedConcepts": [
+      "agn",
+      "proteinuria",
+      "edema",
+      "steroids",
+      "albumin"
+    ]
+  },
+  {
+    "id": "agn",
+    "shortTitle": "Acute Glomerulonephritis",
+    "patternStrength": "Strong",
+    "historicalFrequency": {
+      "appearances": 36,
+      "papersAnalyzed": 11,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 36 of 411 questions (8.8%). Degree centrality: 8. High connectivity in knowledge graph + consistent exam presence.",
+    "subject": "Nephrology",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Acute Glomerulonephritis in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "184. Glomerulonephritis",
+    "examinerTraps": [
+      "Do NOT give steroids in APSGN",
+      "C3 is low; C4 is normal (differentiates from MPGN)",
+      "Penicillin is for eradication, not treatment of GN"
+    ],
+    "relatedConcepts": [
+      "nephrotic_syndrome",
+      "streptococcus",
+      "complement_c3",
+      "hematuria",
+      "hypertension"
+    ]
+  },
+  {
+    "id": "immunization",
+    "shortTitle": "Immunization",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 5,
+      "papersAnalyzed": 4,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 5 of 411 questions (1.2%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Public Health",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Immunization in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "94. Immunization and Prophylaxis",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "bcg",
+      "opv",
+      "pentavalent",
+      "mmr",
+      "aefi"
+    ]
+  },
+  {
+    "id": "csf",
+    "shortTitle": "Cerebrospinal Fluid Analysis",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 4,
+      "papersAnalyzed": 4,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 4 of 411 questions (1.0%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Diagnostics",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Cerebrospinal Fluid Analysis in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "179. Neurology Assessment",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "meningitis",
+      "tubercular_meningitis",
+      "viral_meningitis",
+      "encephalitis"
+    ]
+  },
+  {
+    "id": "growth_assessment",
+    "shortTitle": "Growth Assessment",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 2,
+      "papersAnalyzed": 2,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 2 of 411 questions (0.5%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Procedures",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Growth Assessment in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "5. Normal Growth",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "who_growth_chart",
+      "midparental_height",
+      "growth_velocity",
+      "stunting"
+    ]
+  },
+  {
+    "id": "renal_biopsy",
+    "shortTitle": "Renal Biopsy",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 1,
+      "papersAnalyzed": 1,
+      "lastAppeared": "2025"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 1 of 411 questions (0.2%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Procedures",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Renal Biopsy in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "162. Nephrotic Syndrome and Proteinuria",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "nephrotic_syndrome",
+      "agn",
+      "lupus_nephritis",
+      "fsgs"
+    ]
+  },
+  {
+    "id": "bfhi",
+    "shortTitle": "Baby Friendly Hospital Initiative",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 1,
+      "papersAnalyzed": 1,
+      "lastAppeared": "2016"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 1 of 411 questions (0.2%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Public Health",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Baby Friendly Hospital Initiative in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "27. Diet of the Normal Infant",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "breastfeeding",
+      "skin_to_skin",
+      "rooming_in",
+      "colostrum"
+    ]
+  },
+  {
+    "id": "phototherapy",
+    "shortTitle": "Phototherapy",
+    "patternStrength": "Emerging",
+    "historicalFrequency": {
+      "appearances": 1,
+      "papersAnalyzed": 1,
+      "lastAppeared": "2020"
+    },
+    "confidenceNote": "Graph-derived topic (Option C). Appeared in 1 of 411 questions (0.2%). Degree centrality: 0. Low sample size; selected for graph centrality and syllabus completeness.",
+    "subject": "Therapeutics",
+    "examType": "Essay / Short Note",
+    "question": "Discuss Phototherapy in children.",
+    "marksBreakdown": "Definition → 2M | Clinical Features → 3M | Investigations → 2M | Management → 3M",
+    "nelsonChapter": "60. Hyperbilirubinemia",
+    "examinerTraps": [],
+    "relatedConcepts": [
+      "neonatal_jaundice",
+      "bilirubin",
+      "exchange_transfusion",
+      "kernicterus"
+    ]
+  }
+]

@@ -1,13 +1,21 @@
+export interface ExamTipData {
+  type: 'trap' | 'high-yield' | 'clinical-pearl';
+  text: string;
+}
+
 export interface TopicSection {
   title: string;
   text?: string;
   list?: string[];
   table?: { headers: string[]; rows: string[][] };
   flowchart?: {
-    nodes: { id: string; label: string; type?: 'default' | 'decision' | 'start' | 'end' }[];
+    nodes: { id: string; label: string; type?: 'default' | 'decision' | 'start' | 'end' | 'process'; subLabel?: string }[];
     edges: { from: string; to: string; label?: string }[];
+    title?: string;
   };
+  mermaid?: string;
   mnemonic?: { title: string; text: string };
+  examTip?: ExamTipData;
 }
 
 export interface HistoricalFrequency {
@@ -125,6 +133,10 @@ export const topics: Topic[] = [
           '<strong>Strep eradication:</strong> Benzathine Penicillin G <strong>600,000 U IM</strong> (&lt;27 kg) or <strong>1.2 million U IM</strong> (&gt;27 kg) single dose. Alternative: Penicillin V 250 mg PO BD-TDS x 10 days (older children). If allergic: Erythromycin or Azithromycin.',
           '<strong>Negative points:</strong> <strong>NO corticosteroids/immunosuppressants</strong> in APSGN. <strong>ACE inhibitors are NOT first-line</strong> for acute HTN (can worsen hyperkalemia + AKI). <strong>Diuretics are NOT first-line</strong> for HTN (used only for fluid overload).',
         ],
+        examTip: {
+          type: 'trap',
+          text: 'Steroids in APSGN = instant -2 marks. ACE inhibitors as first-line HTN = -1 mark. Penicillin is for strep eradication, NOT treatment of GN itself.',
+        },
         flowchart: {
           nodes: [
             { id: 'a', label: 'Child with AGN', type: 'start' },

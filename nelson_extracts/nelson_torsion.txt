@@ -1,0 +1,434 @@
+
+--- PAGE 760 ---
+739
+SECTION 26 
+ORTHOPEDICS
+Kevin D. Walter  |  J. Channing Tassone
+CHAPTER 197 
+Orthopedics Assessment
+To care for the pediatric patient, one must understand the 
+growth and development of the musculoskeletal system as well 
+as common orthopedic terms (Table 197.1). Providers should 
+recognize common mechanisms for congenital and acquired 
+orthopedic disorders (Table 197.2).
+GROWTH AND DEVELOPMENT
+The ends of the long bones contain a much higher proportion 
+of cartilage in the skeletally immature child than in an adult 
+(Figs. 197.1 and 197.2). The high cartilage content allows for 
+a unique vulnerability to trauma and infection (particularly in 
+the metaphysis).
+The physis is responsible for the longitudinal growth of the 
+long bones. Articular cartilage allows the ends of the bone 
+to enlarge and accounts for growth of smaller bones, such 
+as the tarsals. The periosteum provides for circumferential 
+growth. Trauma, infection, nutritional deficiency (rickets), 
+inborn errors of metabolism (mucopolysaccharidoses), and 
+TABLE 197.1  Common Orthopedic Terminology
+Abduction
+Movement away from midline
+Adduction
+Movement toward or across midline
+Apophysis
+Bone growth center that has a muscular insertion 
+but is not considered a growth plate (e.g., tibial 
+tubercle)
+Arthroscopy
+Surgical exploration of a joint using an 
+arthroscope
+Arthroplasty
+Surgical reconstruction of a joint
+Arthrotomy
+Surgical incision into a joint; an “open” 
+procedure
+Deformation
+Changes in limb, trunk, or head due to 
+mechanical force
+Dislocation
+Displacement of bones at a joint
+Equinus
+Plantar flexion of the forefoot, hindfoot, or entire 
+foot
+Femoral 
+anteversion
+Increased angulation of the femoral head and 
+neck with respect to the frontal plane
+Malformation
+Defect in development that occurs during fetal 
+life (e.g., syndactyly)
+Osteotomy
+Surgical division of a bone
+Pes cavus
+High medial arch of the foot
+Pes planus
+Flat foot
+Rotation, 
+internal
+Inward rotation (toward midline)
+Rotation, 
+external
+Outward rotation (away from midline)
+Subluxation
+Incomplete loss of contact between two joint 
+surfaces
+Tibial torsion
+Rotation of the tibia in an internal or external 
+fashion
+Valgus/
+valgum
+Angulation of a bone or joint in which the apex is 
+toward the midline (e.g., knock-knee)
+Varus/varum
+Angulation of a bone or joint in which the apex is 
+away from the midline (e.g., bowlegs)
+TABLE 197.2  Mechanisms of Common Pediatric 
+Orthopedic Problems
+CATEGORY
+MECHANISM
+EXAMPLE(S)
+CONGENITAL
+Malformation
+Teratogenesis before 
+12 wk of gestation
+Spina bifida
+Disruption
+Amniotic band 
+constriction
+Extremity amputation
+Fetal varicella infection
+Limb scar/atrophy
+Deformation
+Neck compression
+Torticollis
+Dysplasia
+Abnormal cell growth 
+or metabolism
+Osteogenesis imperfecta
+Skeletal dysplasias
+ACQUIRED
+Infection
+Pyogenic-
+hematogenous spread
+Septic arthritis, 
+osteomyelitis
+Inflammation
+Antigen-antibody 
+reaction
+Immune mediated
+Systemic lupus 
+erythematosus
+Juvenile idiopathic 
+arthritis
+Trauma
+Mechanical forces, 
+overuse
+Child abuse, sports 
+injuries, unintentional 
+injury, fractures, 
+dislocations, tendinitis
+Tumor
+Primary bone tumor
+Osteosarcoma
+Metastasis to bone 
+from other site
+Neuroblastoma
+Bone marrow tumor
+Leukemia, lymphoma
+
+
+--- PAGE 761 ---
+740
+SECTION 26  Orthopedics
+Gait
+Normal gait has a stance phase and swing phase; each leg should 
+have symmetrical timing with each phase. The stance phase 
+represents 60% of the gait and begins with foot contact (usually 
+the heel strike) and ends with the toe-off. During the swing 
+phase (40%), the foot is off the ground. The gait cycle is the 
+interval between stance phases on the same limb.
+Toddlers will generally walk independently by 18 months 
+of age. Their externally rotated gait is usually inconsistent, 
+is characterized by short, rapid steps, and does not have the 
+reciprocal arm swing. Gait coordination improves over time, 
+with a normal gait usually achieved by the time a child enters 
+elementary school.
+Epiphysis
+Metaphysis
+Diaphysis
+Growth
+plate
+(physis)
+Secondary
+ossification
+center
+Epiphyseal
+cartilage
+Articular
+cartilage
+Joint space
+Fibrous
+periosteum
+FIGURE 197.1  Schematic of long bone structure. 
+Neonate
+Six years
+Ten years
+FIGURE 197.2  The ends of long bones at various ages. Lightly 
+stippled areas represent cartilage composition, whereas heavily 
+darkened areas are zones of ossification. (From Tachjidan MO. Congenital 
+Dislocation of the Hip. New York: Churchill Livingstone; 1982:105.)
+other disorders (renal tubular acidosis, hypothyroid) may 
+affect each of the growth processes and produce distinct 
+aberrations.
+DEVELOPMENTAL MILESTONES
+Neurological maturation, marked by achievement of develop-
+mental motor milestones, is important for normal musculo-
+skeletal development (see Section 2). A neurological disorder 
+may cause a secondary musculoskeletal abnormality (e.g., 
+extremity contractures in Duchenne muscular dystrophy). Thus 
+normal motor development must be included in the definition 
+of a normal musculoskeletal system.
+Infants
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+In-Toeing, Out-Toeing, and Toe-Walking
+Bowlegs and Knock-Knees
+In utero positioning of the fetus may affect the angular and 
+torsional alignment (temporary or permanent) of the skeletal 
+system, especially of the lower extremity (Fig. 197.3). The 
+newborn’s hips are externally rotated. Pes planus and genu 
+varum are common. Infants are usually born with a flexed 
+posture, which usually decreases to neutral within the first 4-6 
+months. The foot is often flat and tucked under at birth; the 
+ankle will be inverted, and the forefoot is adducted when 
+compared with the hindfoot. The lateral border of the foot 
+must straighten out, even with dorsiflexion, to be considered 
+secondary to in utero positioning.
+The head and neck may also be distorted by in utero 
+positioning. The spine and upper extremities are less likely 
+to be affected. By the age of 3-4 years, the effects of in utero 
+positioning have usually resolved.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Limp
+In-Toeing, Out-Toeing, and Toe-Walking
+Limping Child
+The differential diagnosis for a limping child is often categorized 
+by age and presence or absence of a painful limp (Table 197.3). 
+The gluteus medius muscle stabilizes the pelvis during the stance 
+phase, preventing the pelvis from dropping toward the leg in 
+swing phase. An antalgic gait is a painful limp; the stance 
+phase and stride of the affected limb are shortened to decrease 
+the discomfort of weight bearing on the affected limb. The 
+Trendelenburg gait has a normal stance phase but excessive 
+swaying of the trunk. Waddling gait refers to a bilateral decrease 
+in function of the gluteus muscles.
+Toe walking is a common complaint in early walkers. 
+A physician should evaluate any child older than 3 years of 
+age who still toe walks. Although this is most likely habit, a 
+neuromuscular disorder (cerebral palsy, tethered cord), Achil-
+les tendon contracture (heel cord tightness), or a leg-length 
+discrepancy should be considered.
+
+
+--- PAGE 762 ---
+741
+CHAPTER 197  Orthopedics Assessment
+Uterine compression
+Increased mechanical forces
+Fetal constraint
+Deformations
+Intrinsic
+Oligohydramnios
+Uterine hypertonia
+Multiple fetuses
+Large fetus
+Uterine deformities
+(bicornate)
+Craniofacial
+Scaphocephaly
+Plagiocephaly
+Mandibular asymmetry
+Flattened facies
+Deviated nasal septum
+Crumpled ear
+Craniostenosis
+Extremity
+Dislocated hips
+Metatarsus adductus
+Equinovarus foot
+Calcaneovalgus foot
+Tibial bowing
+Hyperflexed hips
+Hyperextended knees
+Contractures
+Internal tibial torsion
+Other
+Extrinsic
+Small pelvis
+Bony lumbar spines
+Increased abdominal tone
+Abnormal fetal posture
+(including breech)
+Abnormal fetal 
+muscular tone
+Torticollis
+Lung hypoplasia
+Scoliosis
+FIGURE 197.3  Deformation abnormalities resulting from uterine compression. 
+TABLE 197.3  Differential Diagnosis of Limping in Children
+AGE GROUP
+DIAGNOSTIC CONSIDERATIONS
+Early walker: 1-3 yr 
+of age
+Painful limp
+Septic arthritis and osteomyelitis
+Transient monarticular synovitis
+Occult trauma (“toddler’s fracture”)
+Intervertebral diskitis
+Malignancy
+Painless limp
+Developmental dysplasia of the hip
+Neuromuscular disorder
+Cerebral palsy
+Lower extremity length inequality
+Child: 3-10 yr of 
+age
+Painful limp
+Septic arthritis, osteomyelitis, myositis
+Transient monarticular synovitis
+Trauma
+Rheumatological disorders
+Juvenile idiopathic arthritis
+Intervertebral diskitis
+Malignancy
+Painless limp
+Developmental dysplasia of the hip
+Legg-Calve-Perthes disease
+Lower extremity length inequality
+Neuromuscular disorder
+Cerebral palsy
+Muscular dystrophy (Duchenne)
+AGE GROUP
+DIAGNOSTIC CONSIDERATIONS
+Adolescent: 11 yr 
+of age to maturity
+Painful limp
+Septic arthritis, osteomyelitis, myositis
+Trauma
+Rheumatological disorder
+Slipped capital femoral epiphysis: 
+acute; unstable
+Malignancy
+Painless limp
+Slipped capital femoral epiphysis: 
+chronic; stable
+Developmental dysplasia of the hip: 
+acetabular dysplasia
+Lower extremity length inequality
+Neuromuscular disorder
+
+
+--- PAGE 763 ---
+742
+SECTION 26  Orthopedics
+Physeal Fractures
+CHAPTER 198 
+Fractures
+Fractures account for 10-15% of all childhood injuries. The 
+anatomical, biomechanical, and physiological differences in 
+children account for unique fracture patterns and management. 
+Fracture terminology helps describe fractures (Table 198.1).
+The pediatric skeleton has a higher proportion of cartilage 
+and a thicker, stronger, and more active periosteum capable of 
+producing a larger callus more rapidly than in an adult. The 
+thick periosteum may decrease the rate of displaced fractures 
+and stabilize fractures after reduction. Because of the higher 
+proportion of cartilage, the skeletally immature patient can 
+withstand more force before deformation or fracture than adult 
+bone. As children mature into adolescence, the rate of healing 
+slows and approaches that of adults.
+PEDIATRIC FRACTURE PATTERNS
+Buckle or torus fractures occur after compression of the bone; 
+the bony cortex does not truly break. These fractures will 
+typically occur in the metaphysis and are stable fractures that 
+heal in approximately 4 weeks with immobilization. A common 
+example is a fall onto an outstretched arm causing a buckle 
+fracture in the distal radius.
+Complete fractures occur when both sides of bony cortex 
+are fractured. This is the most common fracture and may be 
+classified as comminuted, oblique, transverse, or spiral, depend-
+ing on the direction of the fracture line.
+Greenstick fractures occur when a bone is angulated beyond 
+the limits of plastic deformation. The bone fails on the tension 
+side and sustains a bend deformity on the compression side. The 
+force is insufficient to cause a complete fracture (Fig. 198.1).
+Bowing fractures demonstrate no fracture line evident on 
+radiographs, but the bone is bent beyond its limit of plastic 
+deformation. This is not a true fracture but will heal with 
+periosteal reaction.
+TABLE 198.1  Useful Fracture Terminology
+Complete
+The bone fragments separate completely
+Incomplete
+The bone fragments are still partially joined
+Linear
+Referring to a fracture line that is parallel to the 
+bone’s long axis
+Transverse
+Referring to a fracture line that is at a right 
+angle to the bone’s long axis
+Oblique
+Referring to a fracture line that is diagonal to 
+the bone’s long axis
+Spiral
+Referring to a twisting fracture
+Comminution
+A fracture that results in several fragments
+Compaction
+The bone fragments are driven into each other
+Angulation
+The fragments have angular malalignment
+Rotation
+The fragments have rotational malalignment
+Shortening
+The fractured ends of the bones overlap
+Open
+A fracture in which the bone has pierced the 
+skin
+FIGURE 198.1  The greenstick fracture is an incomplete fracture. 
+(Modified from White N, Sty R. Radiological evaluation and classification 
+of pediatric fractures. Clin Pediatr Emerg Med. 2002;3:94–105.)
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Limp
+Extremity Pain
+Fractures involving the growth plate constitute about 20% of 
+all fractures in the skeletally immature patient. These fractures 
+are more common in males (2 : 1 male-female ratio). The peak 
+incidence is 13-14 years in boys and 11-12 years in girls. The 
+distal radius, distal tibia, and distal fibula are the most common 
+locations.
+Ligaments frequently insert onto epiphyses. Thus traumatic 
+forces to an extremity may be transmitted to the physis, which 
+is not as biomechanically strong as the metaphysis; it may 
+fracture with mechanisms of injury that may cause sprains 
+in the adult. The growth plate is most susceptible to torsional 
+and angular forces.
+Physeal fractures are described using Salter-Harris clas-
+sification, which allows for prognostic information regarding 
+premature closure of the growth plate and poor functional 
+outcomes. The higher the type number, the more likely the 
+patient will have complications. There are five main groups 
+(Fig. 198.2):
+• Type I: transverse fracture through the physis; growth 
+disturbance is unusual
+• Type II: fracture through a portion of the physis and meta­
+physis; most common type of Salter-Harris fracture (75%)
+• Type III: fracture through a portion of the physis and 
+epiphysis into the joint that may result in complication 
+because of intraarticular component and because of disrup-
+tion of the growing or hypertrophic zone of the physis
+• Type IV: fracture through the metaphysis, physis, and 
+epiphysis with a high risk of complication
+• Type V: a crush injury to the physis with a poor functional 
+prognosis
+

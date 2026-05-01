@@ -1,0 +1,413 @@
+
+--- PAGE 489 ---
+468
+SECTION 17  Digestive System
+liver and pancreas pain is referred to the epigastric region. 
+Gallbladder pain often is referred to the region below the right 
+scapula. Somatic pathways stimulated by small bowel visceral 
+afferents affect the periumbilical area, and colonic injury results 
+in infraumbilical referred pain.
+Acute Abdominal Pain
+Distinguishing Features
+Acute abdominal pain can signal the presence of a dangerous 
+intraabdominal process (e.g., appendicitis or bowel obstruction) 
+or may originate from extraintestinal sources (e.g., lower lobe 
+pneumonia or urinary tract stone). Not all episodes of acute 
+abdominal pain require emergency intervention. Appendicitis 
+and volvulus, for example, must be ruled out as quickly as 
+possible. Few patients presenting with acute abdominal pain 
+actually have a surgical emergency, but they must be separated 
+from cases that can be managed conservatively.
+Initial Diagnostic Evaluation
+Table 126.1 lists a diagnostic approach to acute abdominal pain 
+in children. Events that occur with a discrete, abrupt onset, 
+such as passage of a stone, perforation of a viscus, or infarction, 
+result in a sudden onset of pain. Gradual onset of pain is 
+common with infectious or inflammatory causes, such as 
+appendicitis and IBD.
+A standard group of laboratory tests usually is performed for 
+acute abdominal pain (see Table 126.1). An abdominal x-ray 
+series evaluates for bowel obstruction, fecalith, or nephrolithiasis. 
+Ultrasound or computed tomography (CT) can visualize the 
+appendix if appendicitis is suspected but the diagnosis remains 
+in doubt. If the initial evaluation suggests intussusception, a 
+barium or pneumatic (air) enema may be used to diagnose 
+and treat this condition (see Chapter 129).
+Differential Diagnosis
+Table 126.2 lists the differential diagnosis of acute abdominal 
+pain in children. The urgent task of the clinician is to rule 
+out surgical emergencies. In young children, malrotation 
+with volvulus, incarcerated hernia, congenital anomalies, 
+and intussusception are common concerns. In older children 
+and teenagers, appendicitis is more common. An acute 
+surgical abdomen is characterized by signs of peritonitis, 
+including tenderness, abdominal wall rigidity, guarding, and 
+absent or diminished bowel sounds. Helpful characteristics 
+of onset, location, referral, and quality of pain are noted in 
+Table 126.3.
+Functional Abdominal Pain and Irritable  
+Bowel Syndrome
+General Considerations
+Abdominal pain can result from injury to the intraabdominal 
+organs or overlying somatic structures in the abdominal wall, 
+or from extraabdominal diseases. Visceral pain results when 
+autonomic nerves within the gut detect injury, transmitting 
+sensation by nonmyelinated fibers. The pain is vague, dull, 
+slow in onset, and poorly localized. A variety of stimuli, 
+including normal peristalsis and various intraluminal chemi-
+cal and osmotic states, activate these fibers to some degree. 
+Regardless of the stimulus, visceral pain is perceived when a 
+threshold of intensity or duration is crossed. Lower degrees 
+of activation may result in perception of nonpainful or 
+perhaps vaguely uncomfortable sensations, whereas more 
+intensive stimulation of these fibers results in pain. Overac-
+tive sensation may be the basis of some kinds of abdominal 
+pain, such as functional abdominal pain and irritable bowel 
+syndrome (IBS).
+In contrast to visceral pain, somatic pain results when 
+overlying body structures are injured. Somatic structures 
+include the parietal peritoneum, fascia, muscles, and skin of 
+the abdominal wall. In contrast to pain emanating from visceral 
+injury, somatic nociceptive fibers are myelinated and are capable 
+of rapid transmission of well-localized painful stimuli. When 
+intraabdominal processes cause inflammation or injury to 
+the parietal peritoneum or abdominal wall structures, poorly 
+localized visceral pain becomes well-localized somatic pain. 
+For example, in acute appendicitis, the initial activation of 
+visceral nociceptive fibers yields poorly localized discomfort 
+in the midabdomen. When the inflammatory process extends 
+to the overlying parietal peritoneum, the pain becomes severe 
+and localizes to the right lower quadrant. This is called somato-
+parietal pain.
+Referred pain is a painful sensation in a body region distant 
+from the true source of pain. The location of referred pain 
+is predictable based on the locus of visceral injury. Stomach 
+pain is referred to the epigastric and retrosternal regions, and 
+FIGURE 126.1  Wireless capsule endoscopy: Aphthous ulcers (arrows) 
+in jejunum diagnostic of Crohn disease in patient with negative findings 
+on upper endoscopy and colonoscopy. 
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abdominal Pain
+Vomiting
+Recurrent abdominal pain is a common problem, affecting 
+more than 10% of all children. The peak incidence occurs 
+between ages 7 and 12 years. Although the differential diagnosis 
+of recurrent abdominal pain is fairly extensive (Table 126.4), 
+most children do not have a serious (or even identifiable) 
+underlying illness causing the pain.
+
+
+--- PAGE 490 ---
+469
+CHAPTER 126  Digestive System Assessment
+TABLE 126.1	 Diagnostic Approach to Acute Abdominal 
+Pain
+HISTORY
+Onset
+Sudden or gradual, prior episodes, association 
+with meals, history of injury
+Nature
+Sharp versus dull, colicky or constant, burning
+Location
+Epigastric, periumbilical, generalized, right or left 
+lower quadrant, change in location over time
+Associated 
+symptoms
+Fever, vomiting (bilious?), diarrhea (bloody?), 
+abdominal distention
+Extraintestinal 
+symptoms
+Cough, dyspnea, dysuria, urinary frequency, flank 
+pain
+Course of 
+symptoms
+Worsening or improving, change in nature or 
+location of pain, aggravating and alleviating 
+factors, last menstrual period
+PHYSICAL EXAMINATION
+General 
+position
+Growth and nutrition, general appearance, 
+hydration, degree of discomfort, body position
+Abdominal
+Tenderness, distention, bowel sounds, rigidity, 
+guarding, mass
+Genitalia
+Testicular torsion, hernia, pelvic inflammatory 
+disease, ectopic pregnancy
+Surrounding 
+structures
+Breath sounds, rales, rhonchi, wheezing, flank 
+tenderness, tenderness of abdominal wall 
+structures, ribs, costochondral joints
+Rectal 
+examination
+Perianal lesions, stricture, tenderness, fecal 
+impaction, blood
+LABORATORY
+CBC, 
+C-reactive 
+protein, ESR
+Evidence of infection or inflammation
+AST, ALT, 
+GGT, bilirubin
+Biliary or liver disease
+Amylase, 
+lipase
+Pancreatitis
+Urinalysis
+Urinary tract infection; bleeding due to stone, 
+trauma, or obstruction
+Pregnancy test 
+(older females)
+Ectopic pregnancy
+RADIOLOGY
+Plain flat and 
+upright 
+abdominal 
+films
+Bowel obstruction, appendiceal fecalith, free 
+intraperitoneal air, kidney stones, constipation, 
+mass
+CT scan
+Intraabdominal or pelvic abscess, appendicitis, 
+Crohn disease, pancreatitis, gallstones, kidney 
+stones
+Barium enema
+Intussusception, malrotation
+Ultrasound
+Gallstones, appendicitis, intussusception, 
+pancreatitis, kidney stones
+Endoscopy
+Colitis
+Upper 
+endoscopy
+Suspected peptic ulcer or esophagitis
+ALT, Alanine aminotransferase; AST, aspartate aminotransferase; CBC, complete 
+blood count; CT, computed tomography; ESR, erythrocyte sedimentation rate; 
+GGT, γ-glutamyltransferase.
+TABLE 126.2	 Differential Diagnosis of Acute Abdominal 
+Pain
+TRAUMATIC
+Duodenal hematoma
+Ruptured spleen
+Perforated viscus
+Traumatic pancreatitis
+FUNCTIONAL
+Constipation*
+Irritable bowel syndrome*
+Dysmenorrhea*
+Mittelschmerz (ovulation)*
+Infantile colic*
+Abdominal migraine
+INFECTIOUS
+Appendicitis*
+Viral or bacterial gastroenteritis/adenitis*
+Abscess
+Spontaneous bacterial peritonitis
+Pelvic inflammatory disease
+Cholecystitis
+Urinary tract infection*
+Pneumonia
+Bacterial typhlitis
+Hepatitis
+GENITAL
+Testicular torsion
+Ovarian torsion
+Ruptured ovarian cyst
+Ectopic pregnancy
+GENETIC
+Sickle cell crisis*
+Familial Mediterranean fever
+Porphyria
+Hereditary angioedema
+METABOLIC
+Diabetic ketoacidosis
+Fabry disease
+INFLAMMATORY
+Inflammatory bowel disease
+Vasculitis
+Henoch-Schönlein purpura*
+Pancreatitis
+OBSTRUCTIVE
+Intussusception*
+Malrotation with volvulus
+Ileus*
+Incarcerated hernia
+Continued
+
+
+--- PAGE 491 ---
+470
+SECTION 17  Digestive System
+Postoperative adhesion
+Meconium ileus equivalent (cystic fibrosis)
+Duplication cyst
+Congenital stricture
+BILIARY
+Gallstone
+Gallbladder hydrops
+Biliary dyskinesia
+PEPTIC
+Gastric or duodenal ulcer
+Gastritis*
+Esophagitis
+RENAL
+Kidney stone
+Hydronephrosis/ureteropelvic junction obstruction
+*Common.
+TABLE 126.2	 Differential Diagnosis of Acute Abdominal 
+Pain—cont’d
+TABLE 126.3	 Distinguishing Features of Abdominal Pain in Children
+DISEASE
+ONSET
+LOCATION
+REFERRAL
+QUALITY
+COMMENTS
+Functional: 
+irritable bowel 
+syndrome
+Recurrent
+Periumbilical, splenic 
+and hepatic flexures
+None
+Dull, crampy, 
+intermittent; 
+duration 2 hr
+Family stress, school phobia, 
+diarrhea and constipation; 
+hypersensitive to pain from 
+distention
+Esophageal 
+reflux
+Recurrent, after 
+meals, at bedtime
+Substernal
+Chest
+Burning
+Sour taste in mouth; Sandifer 
+syndrome
+Duodenal ulcer
+Recurrent, before 
+meals, at night
+Epigastric
+Back
+Severe burning, 
+gnawing
+Relieved by food, milk, antacids; 
+family history important; 
+gastrointestinal bleeding
+Pancreatitis
+Acute
+Epigastric-
+hypogastric
+Back
+Constant, sharp, 
+boring
+Nausea, emesis, marked 
+tenderness
+Intestinal 
+obstruction
+Acute or gradual
+Periumbilical–lower 
+abdomen
+Back
+Alternating 
+cramping (colic) 
+and painless 
+periods
+Distention, obstipation, bilious 
+emesis, increased bowel sounds
+Appendicitis
+Acute
+Periumbilical or 
+epigastric; localizes 
+to right lower 
+quadrant
+Back or pelvis if 
+retrocecal
+Sharp, steady
+Nausea, emesis, local tenderness, 
+± fever, avoids motion
+Meckel 
+diverticulum
+Recurrent
+Periumbilical–lower 
+abdomen
+None
+Sharp
+Hematochezia; painless unless 
+intussusception, diverticulitis, or 
+perforation
+Inflammatory 
+bowel disease
+Recurrent
+Depends on site of 
+involvement
+Dull cramping, 
+tenesmus
+Fever, weight loss, ±hematochezia
+Intussusception
+Acute
+Periumbilical–lower 
+abdomen
+None
+Cramping, with 
+painless periods
+Guarded position with knees 
+pulled up, currant jelly stools, 
+lethargy
+Lactose 
+intolerance
+Recurrent with milk 
+products
+Lower abdomen
+None
+Cramping
+Distention, gaseousness, diarrhea
+Urolithiasis
+Acute, sudden
+Back
+Groin
+Severe, colicky pain
+Hematuria
+Pyelonephritis
+Acute, sudden
+Back
+None
+Dull to sharp
+Fever, costochondral tenderness, 
+dysuria, urinary frequency, emesis
+Cholecystitis and 
+cholelithiasis
+Acute
+Right upper quadrant
+Right shoulder
+Severe, colicky pain
+Hemolysis ± jaundice, nausea, 
+emesis
+Modified from Andreoli TE, Carpenter CJ, Plum F, et al: Cecil Essentials of Medicine. Philadelphia: WB Saunders; 1986.
+Differential Diagnosis
+Children with functional abdominal pain characteristically 
+have pain almost daily. The pain is not associated with meals 
+or relieved by defecation and is often associated with a tendency 
+toward anxiety and perfectionism. Symptoms often result from 
+stress at school or in novel social situations. The pain often is 
+worst in the morning and often prevents or delays children 
+from attending school. IBS is a subset of functional abdominal 
+pain, characterized by onset of pain at the time of a change in 
+stool frequency or consistency, a stool pattern fluctuating 
+between diarrhea and constipation, and relief of pain with 
+defecation. Symptoms in IBS are linked to gut motility. Pain 
+is commonly accompanied in both groups of children by school 
+avoidance, secondary gains, anxiety about imagined causes, 
+lack of coping skills, and disordered peer relationships (Table 
+126.5).
+Distinguishing Features
+One needs to distinguish between functional pain/IBS and more 
+serious underlying disorders. Warning signs for underlying 
+illness are listed in Table 126.6. If present, further investigation 
+is necessary. Some laboratory evaluation is warranted even in 
+

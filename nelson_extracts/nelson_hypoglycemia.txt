@@ -1,0 +1,1528 @@
+
+--- PAGE 659 ---
+638
+SECTION 23  Endocrinology
+mediobasal hypothalamus, from which they can exert effects 
+on water balance, even in the absence of the posterior pituitary 
+gland.
+The assessment of pituitary function may be determined 
+by measuring some of the specific pituitary hormone in the 
+basal state; other assessments require the measurement after 
+stimulation. Indirect assessment of pituitary function can be 
+obtained by measuring serum concentrations of the target gland 
+hormones (Table 170.1). Several tests of pituitary function are 
+listed in Table 170.2.
+HYPOTHALAMUS
+PITUITARY
+SRIF
+(somatostatin)
+GHRH
+CRH
+GH
+ACTH
+Prolactin
+FSH, LH
+TSH
+Dopamine
+GnRH
+TRH
+Growth
+Cortisol
+Lactation
+T4, T3
+Sex steroids
+Inhibin
+Insulin-like growth factors
+(and binding proteins)
+Gametogenesis
+FIGURE 170.2  Hormonal influences of the 
+hypothalamus and pituitary gland. Solid line rep-
+resents stimulatory influence; dotted line represents 
+inhibitory influence. ACTH, Adrenocorticotropic 
+hormone; CRH, corticotropin-releasing hormone 
+or CRF; FSH, follicle-stimulating hormone; GH, 
+growth hormone; GHRH, GH-releasing hormone 
+or GRF; GnRH, gonadotropin-releasing hormone 
+or luteinizing hormone releasing factor, LRF or 
+LHRH; LH, luteinizing hormone; SRIF, somatotropin 
+release-inhibiting factor, somatostatin or SS; TRH, 
+thyrotropin-releasing hormone or TRF; TSH, thyroid-
+stimulating hormone; T3, triiodothyronine; T4, 
+thyroxine. 
+TABLE 170.1  Diagnostic Evaluation for Hypopituitarism
+MANIFESTATION
+CAUSE
+TESTS*
+Growth failure, hypothyroidism, or 
+both
+GH deficiency, TRH/TSH deficiency, or both
+Provocative GH tests, free T4, bone age, IGF-1, 
+IGF-BP3
+Hypoglycemia
+GH deficiency, ACTH insufficiency, or both
+Provocative GH tests, test of ACTH secretion, 
+IGF-1, IGFBP3
+Micropenis, pubertal delay or arrest
+Hypogonadotropic hypogonadism with or 
+without GH deficiency
+Sex steroids (E2, testosterone), basal LH and FSH 
+(analyzed by ultrasensitive assays) or after LHRH 
+administration, provocative GH tests, IGF-1, 
+IGFBP3
+Polyuria, polydipsia
+ADH deficiency
+Urine analysis (specific gravity), serum electrolytes, 
+urine and serum osmolality, water deprivation test
+*Each patient with hypopituitarism should have CNS MRI as part of evaluation to determine the etiology of the condition.
+ACTH, Adrenocorticotropic hormone; ADH, Antidiuretic hormone; CNS, central nervous system; E2, estradiol; FSH, follicle-stimulating hormone; GH, growth hormone; 
+GnRH, gonadotropin-releasing hormone; IGF-1, insulin-like growth factor-1; IGF-BP3, insulin-like growth factor-binding protein 3; LH, luteinizing hormone; LHRH, 
+luteinizing hormone releasing hormone; MRI, magnetic resonance imaging; TRH, thyrotropin-releasing hormone; TSH, thyroid-stimulating hormone; T4, thyroxine.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Visual Impairment and Leukocoria
+Amenorrhea
+Pubertal Delay
+Polyuria
+DISORDERS OF THE 
+HYPOTHALAMIC-PITUITARY AXIS
+
+
+--- PAGE 660 ---
+639
+CHAPTER 171  Diabetes Mellitus
+CHAPTER 171 
+Diabetes Mellitus
+Diabetes mellitus (DM) is characterized by hyperglycemia and 
+glycosuria and is an end-point of a few disease processes (Table 
+171.1). The most common type occurring in childhood is type 
+1 DM (T1D), which is caused by autoimmune destruction of 
+the insulin-producing β cells (islets) of the pancreas, leading 
+to permanent insulin deficiency. Type 2 DM (T2D) results 
+from insulin resistance and relative insulin deficiency usually 
+in the context of exogenous obesity. The incidence of T1D and 
+T2D in the United States is increasing. Less common types of 
+diabetes result from genetic defects of the insulin receptor or 
+inherited abnormalities in sensing of ambient glucose concentra-
+tion by pancreatic β cells (see Table 171.1).
+DEFINITION
+A diagnosis of DM is made based on four glucose abnormalities 
+that may need to be confirmed by repeat testing: (1) Fasting 
+serum glucose concentration ≥126 mg/dL, (2) a random venous 
+plasma glucose ≥200 mg/dL with symptoms of hyperglycemia, 
+(3) an abnormal oral glucose tolerance test (OGTT) with a 
+2-hour postprandial serum glucose concentration ≥200 mg/
+dL, and (4) a HgbA1c ≥6.5%.
+A patient is considered to have impaired fasting glucose 
+if fasting serum glucose concentration is 100-125 mg/dL or 
+impaired glucose tolerance if 2-hour plasma glucose following 
+an OGTT is 140-199 mg/dL. Sporadic hyperglycemia can occur 
+in children, usually in the setting of an intercurrent illness. 
+When the hyperglycemic episode is clearly related to an illness 
+Hypothalamic deficiency leads to a decrease in most 
+pituitary hormone secretions but may lead to an increase in 
+prolactin secretion. Destructive lesions of the pituitary gland or 
+hypothalamus are more common in childhood than increased 
+pituitary secretion of various hormones. A craniopharyngioma, 
+a tumor of the Rathke pouch, may descend into the sella turcica, 
+causing erosion of the bone and destruction of pituitary and 
+hypothalamic tissue. Acquired hypopituitarism also may result 
+from pituitary infections; from infiltration (Langerhans cell 
+histiocytosis [histiocytosis X], lymphoma, and sarcoidosis); after 
+radiation therapy or trauma to the CNS; and as a consequence 
+of autoimmunity against the pituitary gland.
+Congenital hypopituitarism can be caused by the absence 
+of hypothalamic-releasing factors. Without hypothalamic 
+stimulation, the pituitary gland does not release its hormones. 
+Congenital defects associated with hypopituitarism range from 
+holoprosencephaly (cyclopia, cebocephaly, orbital hypotelorism) 
+to cleft palate (6% of cases of cleft palate are associated with 
+GH deficiency). Optic nerve hypoplasia, formerly known as 
+septooptic dysplasia, may result in significant visual impair-
+ment with pendular (“roving”) nystagmus (inability to focus 
+on a target) in addition to varying degrees of hypopituitarism. 
+The magnetic resonance imaging (MRI) findings of congenital 
+hypopituitarism may include an ectopic posterior pituitary gland 
+bright spot, the appearance of a pituitary stalk transection, and/
+or small pituitary gland.
+TABLE 170.2  Anterior Pituitary Hormone Function Testing
+RANDOM HORMONE MEASUREMENTS
+PROVOCATIVE OR OTHER TESTS
+TARGET HORMONE 
+MEASUREMENT
+GH (not useful as a random determination 
+except in newborns, and in GH resistance or 
+in pituitary gigantism)
+Arginine (a weak stimulus)
+L-Dopa (useful clinically)
+Insulin-induced hypoglycemia (a dangerous but 
+accurate test)
+IGF-1, IGF-BP3 (affected by 
+malnutrition as well as GH excess)
+Clonidine (useful clinically)
+GHRH
+12- to 24-hr integrated GH levels (of questionable 
+utility)
+ACTH (early morning sample useful only if in 
+high-normal range)
+Cortisol after insulin-induced hypoglycemia (a 
+dangerous but accurate test)
+8 A.M. cortisol
+24-hr urinary free cortisol
+ACTH stimulation test (may differentiate ACTH 
+deficiency from primary adrenal insufficiency)
+TSH*
+LH, FSH*
+TRH (not commonly performed)
+GnRH (difficult to interpret in prepubertal subjects)
+FT4
+Testosterone/estradiol
+Prolactin (elevated in hypothalamic disease 
+and decreased in pituitary disease)
+TRH (not commonly performed)
+None
+*New supersensitive assays allow determination of abnormally low values found in hypopituitarism.
+ACTH, Adrenocorticotropic hormone; CRH, corticotropin-releasing hormone; FSH, follicle-stimulating hormone; FT4, free thyroxine; GH, growth hormone; GnRH, 
+gonadotropin-releasing hormone; GHRH, growth hormone-releasing hormone; IGF-1, insulin-like growth factor-1; IGF-BP3, insulin-like growth factor-binding protein 
+3; L-dopa, L-dihydroxyphenylalanine; LH, luteinizing hormone; TRH, thyrotropin-releasing hormone; TSH, thyroid-stimulating hormone.
+
+
+--- PAGE 661 ---
+640
+SECTION 23  Endocrinology
+presence of diabetes susceptibility genes, an unknown envi-
+ronmental insult presumably triggers the autoimmune process. 
+A variety of studies have produced conflicting data regarding 
+a host of environmental factors. These include cow’s milk feeding 
+at an early age, viral infectious agents (coxsackie virus, cyto-
+megalovirus, mumps, rubella), vitamin D deficiency, and 
+perinatal factors. T1D is thought to be primarily a T cell–
+mediated disease.
+Antibodies to islet cell antigens may be seen months to 
+years before the onset of β cell dysfunction (Fig. 171.1). These 
+include islet cell antibodies, insulin autoantibodies, antibod-
+ies to tyrosine phosphatase IA-2, antibodies to glutamic acid 
+decarboxylase, and others. The risk for diabetes increases 
+with the number of antibodies detected in the serum. In 
+individuals with only one detectable antibody, the risk is only 
+10-15% while in individuals with three or more antibodies 
+the risk is 55-90%. When 80-90% of the β cell mass has been 
+destroyed, the remaining β cell mass is insufficient to maintain 
+euglycemia and clinical manifestations of diabetes result (see 
+Fig. 171.1).
+Epidemiology
+The annual incidence of T1D is increasing steadily but with 
+significant geographic differences. In the United States, the 
+annual incidence is approximately 20 in 100,000. The annual 
+incidence in children ranges from a high of 40 in 100,000 among 
+Scandinavian populations to less than 1 in 100,000 in China. 
+The prevalence of T1D in the United States is highest in non-
+Hispanic whites followed by African Americans, Hispanics, 
+and American Indians.
+Genetic determinants play a role in the susceptibility to T1D, 
+although the mode of inheritance is complex and multigenic. 
+Siblings or offspring of patients with diabetes have a risk of 
+2-8% for the development of diabetes; an identical twin has a 
+30-50% risk. The human leukocyte antigen (HLA) region on 
+chromosome 6 provides the strongest determinant of susceptibil-
+ity, accounting for approximately 40% of familial inheritance 
+of T1D. Specific class II DR and DQ HLA alleles (HLA DR3 
+TABLE 171.1  Classification of Diabetes Mellitus in 
+Children and Adolescents
+TYPE
+COMMENT
+TYPE 1 (INSULIN-DEPENDENT)
+Transient neonatal
+Manifests immediately after birth; lasts 1-3 mo
+Permanent 
+neonatal
+Other pancreatic defects possible
+Classic type 1
+Glycosuria, ketonuria, hyperglycemia, islet 
+cell positive; genetic component
+TYPE 2 (NON-INSULIN-DEPENDENT)
+Secondary
+Cystic fibrosis, hemochromatosis, drugs 
+(L-asparaginase, tacrolimus)
+Adult type (classic)
+Associated with obesity, insulin resistance; 
+genetic component
+OTHER
+Gestational 
+diabetes
+Maturity-onset 
+diabetes of youth
+Mitochondrial 
+diabetes
+Abnormal glucose tolerance during 
+pregnancy only, which reverts to normal 
+postpartum; increased risk for later onset of 
+diabetes
+Autosomal dominant, onset before age of 25 
+years; not associated with obesity or 
+autoimmunity
+Single-gene mutations include hepatocyte 
+nuclear factors 1β,1α, 4α; glucokinase; insulin 
+promoter factor 1
+Associated with deafness and other 
+neurological defects, maternal 
+transmission—mtDNA point mutations
+0
+50
+100
+ β cell mass (% of max)
+0
+Time (yr) 
+GENETIC PREDISPOSITION
+IMMUNOLOGICAL ABNORMALITIES
+Progressive impairment
+in insulin release
+Overt
+diabetes
+“Honeymoon”
+period
+Normal insulin
+release
+Birth
+FIGURE 171.1  Schematic representation of the autoimmune evolution of diabetes in genetically 
+predisposed individuals. 
+or other physiological stress, the probability of incipient diabetes 
+is small (<5%).
+TYPE 1 DIABETES MELLITUS
+Etiology
+T1D results from the autoimmune destruction of insulin-
+producing β cells (islets) of the pancreas. In addition to the 
+
+
+--- PAGE 662 ---
+641
+CHAPTER 171  Diabetes Mellitus
+decreased tissue perfusion. Hyperglycemia causes an osmotic 
+diuresis that is initially compensated for by increased fluid 
+intake. As the hyperglycemia and diuresis worsen, most patients 
+are unable to maintain the large fluid intake and dehydration 
+occurs. Vomiting and increased insensible water losses caused 
+by tachypnea can worsen the dehydration. Electrolyte abnormali-
+ties occur through a loss of electrolytes in the urine and 
+transmembrane alterations resulting from acidosis. As hydrogen 
+ions accumulate as a result of ketoacidosis, intracellular potas-
+sium is exchanged for hydrogen ions. Serum concentrations 
+of potassium increase initially with acidosis then decrease as 
+serum potassium is cleared by the kidney. Depending on the 
+duration of ketoacidosis, serum potassium concentrations at 
+diagnosis may be increased, normal, or decreased, but intracel-
+lular potassium concentrations are depleted. A decreased serum 
+potassium concentration is an ominous sign of total body 
+potassium depletion. Phosphate depletion also can occur as a 
+result of the increased renal phosphate excretion required for 
+elimination of excess hydrogen ions. Sodium depletion is also 
+common in ketoacidosis resulting from renal losses of sodium 
+caused by osmotic diuresis and from gastrointestinal losses 
+from vomiting (Fig. 171.2).
+Clinical Presentation
+and HLA DR4) increase the risk of developing T1D, whereas 
+other specific HLA alleles exert a protective effect. More than 
+90% of children with T1D possess HLA DR3 alleles, HLA DR4 
+alleles, or both. The insulin gene region variable number tandem 
+repeat on chromosome 11 is also linked to T1D susceptibility. 
+There is evidence for association, beyond HLA, of more than 
+100 other loci with T1D. Genetic factors do not fully account 
+for susceptibility to T1D; environmental factors also play 
+a role.
+Clinical Manifestations
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Polyuria
+Failure to Thrive
+Hyperglycemia results when insulin secretory capacity becomes 
+inadequate to enhance peripheral glucose uptake and to suppress 
+hepatic and renal glucose production. Insulin deficiency usually 
+first causes postprandial hyperglycemia and then fasting 
+hyperglycemia. Ketogenesis is a sign of more complete insulin 
+deficiency. Lack of suppression of gluconeogenesis and 
+glycogenolysis further exacerbates hyperglycemia, while fatty 
+acid oxidation generates the ketone bodies: β-hydroxybutyrate, 
+acetoacetate, and acetone. Protein stores in muscle and fat stores 
+in adipose tissue are metabolized to provide substrates for 
+gluconeogenesis and fatty acid oxidation.
+Glycosuria occurs when the serum glucose concentration 
+exceeds the renal threshold for glucose reabsorption (from 
+160 to 190 mg/dL). Glycosuria causes an osmotic diuresis 
+(including obligate loss of sodium, potassium, and other 
+electrolytes) leading to dehydration. Polydipsia occurs as the 
+patient attempts to compensate for the excess fluid losses. Weight 
+loss results from the persistent catabolic state and the loss of 
+calories through glycosuria and ketonuria. The classic presen-
+tation of T1D includes polyuria, polydipsia, polyphagia, and 
+weight loss.
+DIABETIC KETOACIDOSIS
+If the clinical features of new-onset T1D are not detected, 
+diabetic ketoacidosis (DKA) will occur. DKA may also occur 
+in patients with known T1D if insulin injections are omitted 
+or during an intercurrent illness when greater insulin require-
+ments are unmet in the presence of elevated concentrations of 
+the counter-regulatory and stress hormones (glucagon, growth 
+hormone [GH], cortisol, and catecholamines). DKA can be 
+considered to be present if (1) the arterial pH is below 7.3, (2) 
+the serum bicarbonate level is below 15 mEq/L, and (3) ketones 
+are elevated in serum or urine.
+Pathophysiology
+In the absence of adequate insulin secretion, persistent partial 
+hepatic oxidation of fatty acids to ketone bodies occurs. Two 
+of these three ketone bodies are organic acids and lead to 
+metabolic acidosis with an elevated anion gap. Lactic acid may 
+contribute to the acidosis when severe dehydration results in 
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abdominal Pain
+Polyuria
+Acidemia
+Hypernatremia
+Patients with DKA present initially with polyuria, polydipsia, 
+nausea, and vomiting. Abdominal pain occurs frequently and 
+can mimic an acute abdomen. The abdomen may be tender 
+from vomiting or distended secondary to a paralytic ileus. The 
+presence of polyuria, despite a state of clinical dehydration, 
+indicates osmotic diuresis and differentiates patients with DKA 
+from patients with gastroenteritis or other gastrointestinal 
+disorders. Respiratory compensation for acidosis results in 
+tachypnea with deep (Küssmaul) respirations. The fruity odor 
+of acetone frequently can be detected on the patient’s breath. 
+An altered mental status can occur, ranging from disorientation 
+to coma.
+Laboratory studies reveal hyperglycemia (serum glucose 
+concentrations ranging from 200 mg/dL to >1,000 mg/
+dL). Arterial pH is below 7.30, and the serum bicarbonate 
+concentration is less than 15 mEq/L. Serum sodium con-
+centrations may be elevated, normal, or low, depending on 
+the balance of sodium and free water losses. The measured 
+serum sodium concentration is artificially low, however, 
+because of hyperglycemia. Hyperlipidemia also contributes to 
+the decrease in measured serum sodium. The level of blood 
+urea nitrogen (BUN) can be elevated with prerenal azotemia 
+secondary to dehydration. The white blood cell count is usually 
+elevated and can be left-shifted without implying the presence 
+of infection. Fever is unusual and should prompt a search 
+for infectious sources that may have triggered the episode 
+of DKA.
+
+
+--- PAGE 663 ---
+642
+SECTION 23  Endocrinology
+Hyperglycemia
+Fast-acting soluble insulin should be administered as a continu-
+ous IV infusion (0.1 U/kg/hr). Serum glucose concentrations 
+should decrease at a rate no faster than 100 mg/dL/hr. When 
+serum glucose concentrations decrease to less than 250-300 mg/
+dL, glucose should be added to the IV fluids. If serum glucose 
+concentrations decrease to less than 200 mg/dL before correction 
+of acidosis, the glucose concentration of the IV fluids should 
+be increased, but the insulin infusion should not be decreased 
+by more than half, and it should never be discontinued before 
+resolution of acidosis.
+Acidosis
+Insulin therapy decreases the production of free fatty acids and 
+protein catabolism and enhances glucose usage in target tissues. 
+These processes correct acidosis. Bicarbonate therapy should 
+be avoided. Potential adverse effects of bicarbonate administra-
+tion include paradoxical increases in central nervous system 
+(CNS) acidosis caused by increased diffusion of carbon dioxide 
+across the blood-brain barrier, potential tissue hypoxia caused 
+by shifts in the oxyhemoglobin dissociation curve, abrupt 
+osmotic changes, and increased risk of the development of 
+cerebral edema.
+As acidosis is corrected, urine ketone concentrations may 
+appear to rise. β-Hydroxybutyrate, which is not detected in 
+urine ketone assays, is converted with treatment to what the 
+assay most detects, acetoacetate. Hence minute-to-minute urine 
+ketone concentrations are not a required index of the adequacy 
+of therapy.
+Electrolyte Imbalances
+Regardless of the serum potassium concentration at presentation, 
+total body potassium depletion is likely. Serum potassium 
+concentrations can decrease rapidly as insulin and then glucose 
+therapy improves acidosis, and potassium is exchanged for 
+intracellular hydrogen ions. When adequate urine output is 
+Treatment
+INADEQUATE INSULIN SECRETION
+Fatty acid oxidation
+Gluconeogenesis
+Glycogenolysis
+KETONE BODIES
+HYPERGLYCEMIA
+ACIDOSIS
+Osmotic diuresis
+DEHYDRATION
+Renal
+sodium loss
+Peripheral glucose
+uptake and
+metabolism
+Vomiting
+Hyperkalemia
+Renal
+potassium
+loss
+Renal
+phosphate
+loss
+Increased
+insensible fluid
+losses
+Increased lactate
+Poor tissue perfusion
+FIGURE 171.2  Pathophysiology of diabetic ketoacidosis. 
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Altered Mental Status
+Acidemia
+Hypokalemia
+Therapy for patients with DKA involves careful replacement 
+of fluid deficits, correction of acidosis and hyperglycemia via 
+insulin administration, correction of electrolyte imbalances, 
+and monitoring for complications of treatment. The optimal 
+approach to management of DKA must strike a balance between 
+adequate correction of fluid losses and avoidance of rapid shifts 
+in osmolality and fluid balance. The most serious complication 
+of DKA and its treatment is cerebral edema and cerebral 
+herniation.
+A patient with severe DKA is assumed to be approximately 
+10% dehydrated. If a recent weight measurement is available, 
+the precise extent of dehydration can be calculated. An initial 
+intravenous (IV) fluid bolus of a glucose-free isotonic solution 
+(normal saline, lactated Ringer solution) at 10-20 mL/kg should 
+be given to restore intravascular volume and renal perfusion. 
+The remaining fluid deficit after the initial bolus should be 
+added to maintenance fluid requirements, and the total should 
+be replaced slowly over 36-48 hours. Ongoing losses resulting 
+from osmotic diuresis usually do not need to be replaced unless 
+urine output is large or signs of poor perfusion are present. 
+Osmotic diuresis is usually minimal when the serum glucose 
+concentration decreases to less than 300 mg/dL. To avoid rapid 
+shifts in serum osmolality, 0.9% sodium chloride can be used 
+as the replacement fluid for the initial 4-6 hours, followed by 
+0.45% sodium chloride.
+
+
+--- PAGE 664 ---
+643
+CHAPTER 171  Diabetes Mellitus
+adjustment of the insulin dose should be made over the following 
+2-3 days. A patient already diagnosed with T1D may be restarted 
+on the prior doses if they were adequate. For a patient with 
+new-onset T1D, typical starting total daily doses are approxi-
+mately 0.5-0.7 U/kg/24 hr for prepubertal patients and 
+approximately 0.7-1 U/kg/24 hr for adolescents, using any 
+number of the available insulin combinations. The best and 
+most common choice for making the transition to SC insulin 
+is to begin by giving injections of fast-acting (bolus) insulin 
+(lispro, aspart, or glulisine insulin) with each meal and long-
+acting (basal) insulin (glargine or detemir) at bedtime. This 
+regimen of multiple daily injections provides the most flexibility 
+but requires the patient to administer many injections per day 
+and to count carbohydrates in food. An alternative is a fixed 
+mixed split dosing regimen (neutral protamine Hagedorn [NPH] 
+and fasting-acting insulin) with two daily injections.
+Externally worn pumps that provide a continuous SC infusion 
+of fast-acting insulin are available, although not usually used 
+at the very onset of T1D. Insulin pumps provide fast-acting 
+insulin in small basal amounts continuously every hour and 
+will provide bolus insulin when instructed. Insulin pumps may 
+be used by all age groups who are highly motivated to achieve 
+tight control. The absence of SC depot insulin (glargine or 
+detemir) can increase the risk of DKA.
+Serum glucose concentrations should be assessed before each 
+meal, at bedtime, and periodically at 2-3 A.M. to provide informa-
+tion for adjustment of the regimen. Patients and their families 
+should begin learning the principles of diabetes care as soon 
+as possible. Demonstration of the ability to administer insulin 
+injections and test glucose concentrations using a glucose meter 
+is necessary before discharge, as is knowledge of hypoglycemia 
+management. Meal planning is crucial to control glucose in 
+T1D. Nutrition services must be part of the care delivered to 
+the families from diagnosis.
+Honeymoon Period
+In some patients with new onset of T1D, the β cell mass has 
+not been completely destroyed. The remaining functional β 
+cells seem to recover function with insulin treatment. When 
+this occurs, exogenous insulin requirements decrease. This is 
+a period of stable blood glucose control, often with nearly 
+normal glucose concentrations. This phase of the disease, known 
+as the honeymoon period, usually starts in the first weeks 
+of therapy, often continues for 3-6 months, and can last 
+2 years.
+Outpatient Type 1 Diabetes  
+Mellitus Management
+Management of T1D in children requires a comprehensive 
+approach with attention to medical, nutritional, and psychosocial 
+issues. Therapeutic strategies should be flexible with the 
+individual needs of each patient and the family taken into 
+account. Optimal care involves a team of diabetes professionals, 
+including a physician, a diabetes nurse educator, a dietitian, 
+and a social worker or psychologist.
+Goals
+The Diabetes Control and Complications Trial established that 
+intensive insulin therapy, with the goal of maintaining blood 
+shown, potassium should be added to the IV fluids. Potassium 
+replacement should be given as 50% potassium chloride and 
+50% potassium phosphate at a concentration of 20-40 mEq/L. 
+This combination provides phosphate for replacement of deficits, 
+but avoids excess phosphate administration, which may pre-
+cipitate hypocalcemia. If the serum potassium level is greater 
+than 6 mEq/L, potassium should not be added to IV fluids 
+until the potassium level decreases.
+Monitoring
+Initial laboratory measurements should include serum glucose, 
+sodium, potassium, chloride, bicarbonate, BUN, creatinine, 
+calcium, phosphate, and magnesium concentrations; arterial 
+or venous pH; and a urinalysis. Serum glucose measurement 
+should be repeated every hour during therapy; electrolyte 
+concentrations should be repeated every 2-3 hours. Calcium, 
+phosphate, and magnesium concentrations should be measured 
+every 4-6 hours during therapy. Neurological and mental status 
+should be assessed at frequent intervals. Any complaints of 
+headache or deterioration of mental status should prompt rapid 
+evaluation for possible cerebral edema. Indicative symptoms 
+include a decreased sensorium, sudden severe headache, vomit-
+ing, change in vital signs (bradycardia, hypertension, apnea), 
+a dilated pupil, ophthalmoplegia, or seizure.
+Complications
+Clinically apparent cerebral edema occurs in 1-5% of cases of 
+DKA. Cerebral edema is the most serious complication of DKA, 
+with a mortality rate of 20-80%. The pathogenesis of cerebral 
+edema likely involves osmolar shift resulting in fluid accumula-
+tion in the intracellular compartment and cell swelling. Subclini-
+cal cerebral edema is common in patients with DKA, but the 
+factors that exacerbate this process leading to symptomatic 
+brain swelling and possible cerebral herniation are not clearly 
+defined. Cerebral edema typically occurs 6-12 hours after therapy 
+for DKA is begun, often following a period of apparent clinical 
+improvement. Factors that correlate with increased risk for 
+cerebral edema include higher initial BUN concentration, lower 
+initial PCO2, failure of the serum sodium concentration to 
+increase as glucose concentration decreases during treatment, 
+and treatment with bicarbonate.
+Signs of advanced cerebral edema include obtundation, 
+papilledema, pupillary dilation or inequality, hypertension, 
+bradycardia, and apnea. Treatment involves the rapid use of 
+IV mannitol, endotracheal intubation, and ventilation and 
+may require the use of a subdural bolt. Other complications 
+of DKA are intracranial thrombosis or infarction, acute kidney 
+injury with acute renal failure caused by severe dehydration, 
+pancreatitis, arrhythmias caused by electrolyte abnormalities, 
+pulmonary edema, and bowel ischemia. Peripheral edema 
+occurs commonly 24-48 hours after therapy is initiated and 
+may be related to residual elevations in antidiuretic hormone 
+and aldosterone.
+Transition to Outpatient Management
+When the acidosis has been corrected and the patient tolerates 
+oral feedings, the IV insulin infusion can be discontinued and 
+a regimen of subcutaneous (SC) insulin injections can be initi-
+ated. The first SC insulin dose should be given 30-45 minutes 
+before discontinuation of the IV insulin infusion. Further 
+
+
+--- PAGE 665 ---
+644
+SECTION 23  Endocrinology
+children and adolescents who are highly motivated to achieve 
+tight control.
+Lispro, aspart, and glulisine insulin are synthetic human 
+insulin analogs in which amino acid alterations result in fast 
+absorption and onset of action (see Table 171.2). Because of the 
+short duration of action, these are used in combination with 
+long-acting insulin. Glargine and detemir are insulin analogs 
+with increased solubility at acidic pH and decreased solubility 
+at physiological pH. They have a duration of greater than 24 
+hours and act as a basal insulin.
+Newly diagnosed patients in the honeymoon period may 
+require 0.4-0.6 U/kg/24 hr. Prepubertal patients with diabetes 
+longer than 1-2 years typically require 0.5-1 U/kg/24 hr. During 
+middle adolescence when elevated GH concentrations produce 
+relative insulin resistance, insulin requirements increase by 
+40-50%, and doses of 1-2 U/kg/24 hr are typical.
+Nutrition
+Balancing the daily meal plan with the dosages of insulin is 
+crucial for maintaining serum glucose concentrations within 
+the target range and avoiding hypoglycemia or hyperglycemia. 
+The content and schedule of meals vary according to the type 
+of insulin regimen used. It is recommended that carbohydrates 
+contribute 50-65% of the total calories, protein 12-20%, and 
+fat <30%. Saturated fat should contribute <10% of the total 
+caloric intake, and cholesterol intake should be less than 
+300 mg/24 hr. High-fiber content is recommended.
+Patients using multiple daily injections or the insulin pump 
+can maintain a more flexible meal schedule with regard to 
+the timing of meals and the carbohydrate content. These 
+patients give an injection of insulin before or immediately 
+after each meal with the total dose calculated according to 
+the carbohydrate content of the meal. Further adjustments in 
+the dose can be made based on the measured serum glucose 
+concentration and plans for activity during the day. Children 
+using a twice-a-day combination of intermediate-acting and 
+fast-acting insulins need to maintain a relatively consistent meal 
+schedule so that carbohydrate absorption and insulin action 
+peaks correspond. A typical meal schedule for a patient using 
+this type of regimen involves three meals and three snacks 
+daily. The total carbohydrate content of the meals and snacks 
+should be kept constant.
+glucose concentrations as close to normal as possible, can delay 
+the onset and slow the progression of complications of diabetes 
+(retinopathy, nephropathy, neuropathy). Attaining this goal 
+using intensive insulin therapy can increase the risk of hypo-
+glycemia. The adverse effects of hypoglycemia in young children 
+may be significant because the immature CNS may be more 
+susceptible to glycopenia. Although the risk for diabetic 
+complications increases with duration of diabetes, there is 
+controversy as to whether the increase of risk is slower in the 
+prepubertal years than in adolescence and adulthood.
+Given the benefits of stable, near normal blood glucose 
+concentrations, a goal of HgbA1c <7.5% is set for children of 
+all ages. Preprandial blood glucose target concentrations are 
+90-130 mg/dL and concentrations before bedtime and overnight 
+of 90-150 mg/dL. Goals of therapy need to take into account 
+other individual characteristics, such as a past history of severe 
+hypoglycemia and the abilities of the patient and family.
+Insulin Regimens
+Many types of insulin differ in duration of action and time to 
+peak effect (Table 171.2). These insulins can be used in various 
+combinations, depending on the needs and goals of the indi-
+vidual patient. The most commonly used regimen is that of 
+multiple injections of fast-acting insulin given with meals in 
+combination with long-acting basal insulin given at bedtime. 
+This regimen provides flexibility but requires administration 
+of many injections per day and will require assistance for young 
+children. After the total daily dose of insulin is determined, 
+30-50% is given as long-acting insulin, and the remainder is 
+given as fast-acting insulin, divided according to the need for 
+corrections of high glucose levels and for meals. To correct for 
+hyperglycemia, one can determine the insulin sensitivity using 
+the 1,800/1,500 rule: dividing 1,800 (or 1,500) by the total daily 
+dose of insulin to determine how many milligrams per deciliter 
+of glucose will decrease with one unit of insulin. The 
+insulin:carbohydrate ratio is used to calculate insulin for the 
+carbohydrate content of food; 500 divided by the total daily 
+dose determines the number of grams of carbohydrate that 
+requires one unit of insulin.
+Insulin pumps that provide a continuous SC infusion of 
+short-acting insulin also are available and are being used by 
+TABLE 171.2  Representative Profiles of Insulin
+INSULIN
+ONSET
+PEAK ACTION
+DURATION
+VERY SHORT ACTING
+Lispro, aspart, glulisine
+5-15 min
+30-90 min
+3-5 hr
+SHORT ACTING
+Regular
+30-60 min
+2-3 hr
+5-8 hr
+INTERMEDIATE ACTING
+Neutral protamine Hagedorn (NPH) (isophane)
+2-4 hr
+4-10 hr
+10-16 hr
+LONG ACTING
+Glargine
+2-4 hr
+None
+20-24 hr
+Detemir
+2-4 hr
+6-14 hr
+16-20 hr
+Degludec
+2-4 hr
+None
+24+ hr
+Data from Wolfsdorf JI, ed. Intensive Diabetes Management. 4th ed. Alexandria, VA: American Diabetes Associations; 2009.
+
+
+--- PAGE 666 ---
+645
+CHAPTER 171  Diabetes Mellitus
+counter-regulatory responses also contribute to hypoglycemia. 
+Abnormal glucagon responses to falling serum glucose con-
+centrations develop within the first few years of the disease, 
+and abnormalities in epinephrine release occur after a longer 
+duration.
+Lack of awareness of hypoglycemia occurs in approximately 
+25% of patients with diabetes. Recent episodes of hypoglycemia 
+may play a role in the pathophysiology of hypoglycemia unaware-
+ness; after an episode of hypoglycemia, autonomic responses 
+to subsequent episodes are reduced. A return of symptoms of 
+hypoglycemia can be exhibited in these patients after 2-3 weeks 
+of strict avoidance of hypoglycemic episodes.
+Symptoms of hypoglycemia include symptoms resulting from 
+neuroglycopenia (headache, visual changes, confusion, irritabil-
+ity, or seizures) and symptoms resulting from the catecholamine 
+response (tremors, tachycardia, diaphoresis, or anxiety). Mild 
+episodes can be treated with administration of rapidly absorbed 
+oral glucose (glucose gel or tablets or fruit juices). More severe 
+episodes that result in seizures or loss of consciousness at home 
+should be treated with glucagon injections. IV glucose should 
+be given in hospital settings.
+Prognosis
+Long-term complications of T1D include retinopathy, nephropa-
+thy, neuropathy, and macrovascular disease. Evidence of organ 
+damage caused by hyperglycemia is rare in patients with diabetes 
+of less than 5-10 years’ duration; clinically apparent disease 
+rarely occurs before 10-15 years’ duration. Diabetic retinopathy 
+is the leading cause of blindness in the United States. Nephropa-
+thy eventually occurs in 30-40% and accounts for approximately 
+30% of all new adult cases of end-stage renal disease. Neuropathy 
+occurs in 30-40% of postpubertal patients with T1D and leads 
+to sensory, motor, or autonomic deficits. Macrovascular disease 
+results in an increased risk of myocardial infarction and stroke 
+among individuals with diabetes.
+Intensive control of diabetes, using frequent blood glucose 
+testing, continuous glucose monitoring, and multiple daily 
+injections of insulin or an insulin pump, can reduce the devel-
+opment or progression of diabetic complications, including 
+a 76% reduction of risk for retinopathy, a 39% reduction in 
+microalbuminuria, and a 60% reduction in clinical neuropathy. 
+For pubertal and adult patients, the benefits of intensive therapy 
+likely outweigh the increased risk for hypoglycemia. For younger 
+patients, in whom the risks for hypoglycemia are greater and the 
+benefits of tight glucose control may be lower, a less intensive 
+regimen may be appropriate.
+TYPE 2 DIABETES MELLITUS
+Pathophysiology
+T2D can occur as the result of various pathophysiological 
+processes; however, the most common form results from 
+peripheral insulin resistance and compensatory hyperinsu-
+linemia, followed by failure of the pancreas to maintain adequate 
+insulin secretion (see Table 171.1).
+Epidemiology
+The prevalence of T2D in children is increasing in parallel with 
+childhood obesity and is highest in children of ethnic groups 
+with a high prevalence of T2D in adults, including Native 
+Blood Glucose Testing
+Blood glucose should be routinely monitored before each meal 
+and at bedtime. Hypoglycemia during the night or excessive 
+variability in the morning glucose concentrations should prompt 
+additional testing at 2 or 3 A.M. to ensure that there is no 
+consistent hypoglycemia or hyperglycemia. During periods of 
+illness or when blood glucose concentrations are higher than 
+300 mg/dL, urine ketones also should be tested. Continuous 
+glucose monitors, which provide minute-to-minute blood 
+glucose concentration information, can be useful in following 
+trends of blood glucose concentrations, but should not be used 
+in calculations of mealtime insulin doses.
+Long-Term Glycemic Control
+Measurements of glycohemoglobin or hemoglobin A1c 
+(HgbA1c) reflect the average blood glucose concentration over 
+the preceding 3 months and provide a means for assessing 
+long-term glycemic control. HgbA1c should be measured four 
+times a year, and the results should be used for counseling of 
+patients. The American Diabetes Association has set HgbA1c 
+targets for children at <7.5%. Measurements of HgbA1c are 
+inaccurate in patients with hemoglobinopathies. Glycosylated 
+albumin or fructosamine can be used in these cases.
+Complications
+Patients with T1D for more than 3-5 years should receive an 
+annual ophthalmological examination for retinopathy. Urine 
+should be collected annually for assessment of microalbuminuria, 
+which suggests early renal dysfunction and indicates a high 
+risk of progression to nephropathy. Treatment with angiotensin-
+converting enzyme inhibitors may halt the progression of 
+microalbuminuria. In children with T1D, annual cholesterol 
+measurements and periodic assessment of blood pressure are 
+recommended. Early detection of hypertension and hypercho-
+lesterolemia with appropriate intervention can help limit future 
+risk of coronary disease.
+Other Disorders
+Chronic autoimmune lymphocytic thyroiditis is particularly 
+common and can result in hypothyroidism. Because symptoms 
+can be subtle, thyroid function tests should be performed 
+annually. Other disorders that occur with increased frequency 
+in children with T1D include celiac disease, immunoglobulin 
+A deficiency, Addison disease, and peptic ulcer disease.
+Special Problems: Hypoglycemia
+Hypoglycemia occurs commonly in patients with T1D. 
+For patients in adequate or better control, it is expected to 
+occur on average once or twice a week. Severe episodes of 
+hypoglycemia, resulting in seizures or coma or requiring assis-
+tance from another person, occur in 10-25% of these patients 
+per year.
+Hypoglycemia in patients with T1D results from a relative 
+excess of insulin in relation to the serum glucose concentration. 
+This excess can be caused by alterations in the dose, timing, 
+or absorption of insulin; alterations of carbohydrate intake; or 
+changes in insulin sensitivity resulting from activity. Defective 
+
+
+--- PAGE 667 ---
+646
+SECTION 23  Endocrinology
+MATURITY-ONSET DIABETES  
+OF YOUTH (MODY)
+MODY comprises a group of dominantly inherited forms of 
+relatively mild diabetes. Insulin resistance does not occur in 
+these patients; instead, the primary abnormality is an insuf-
+ficient insulin secretory response to glycemic stimulation. 
+Treatment depends on the type and can include the use of 
+sulfonylureas.
+CHAPTER 172 
+Hypoglycemia
+Hypoglycemia in infancy and childhood can result from a large 
+variety of hormonal and metabolic defects (Table 172.1). 
+Hypoglycemia occurs most frequently in the early neonatal 
+period, often as a result of transient neonatal hyperinsulinemia 
+in infants of diabetic mothers or as a result of inadequate energy 
+stores to meet the disproportionately large metabolic needs of 
+premature or small for gestational age newborns. Hypoglycemia 
+during the first few days of life in an otherwise normal newborn 
+is less frequent and warrants concern (see Chapter 6). After 
+the initial 2-3 days of life, hypoglycemia is far less common 
+and is more frequently the result of endocrine or metabolic 
+disorders (although sepsis must always be ruled out).
+DEFINITION
+Clinical hypoglycemia is defined as a plasma glucose (PG) 
+concentration low enough to cause symptoms and/or signs of 
+impaired brain function. Brain glucose utilization is reduced 
+at a PG concentration of approximately 55-65 mg/dL. Auto-
+nomic system (neurogenic) symptoms are perceived at a PG 
+concentration <55 mg/dL. Cognitive function is impaired 
+(neuroglycopenia) at a PG concentration <50 mg/dL (Table 
+172.2).
+CLINICAL MANIFESTATIONS
+Americans, Hispanic Americans, and African Americans. 
+Obesity, the metabolic syndrome, ethnicity, and a family history 
+of T2D are risk factors. Autoantibodies to the pancreas are 
+present among some clinically assumed to have T2D, compound-
+ing the difficulty in differentiating T1D from T2D at the time 
+of diagnosis.
+Clinical Manifestations and  
+Differential Diagnosis
+Fasting and postprandial glucose levels for diagnosis of T2D 
+are the same as those for T1D. The diagnosis of T2D may be 
+suspected on the basis of polyuria and polydipsia in a back-
+ground of the metabolic syndrome. Differentiating T2D from 
+T1D in children on only clinical grounds can be challenging. 
+The possibility of T2D should be considered in patients who 
+are obese, have a strong family history of T2D, have other 
+characteristics of the metabolic syndrome, or have absence of 
+antibodies to β cell antigens at the time of diagnosis of diabetes. 
+Acanthosis nigricans, a dermatological manifestation of 
+hyperinsulinism and insulin resistance, presents as hyperkera-
+totic pigmentation in the nape of the neck and in flexural areas 
+and is noted as a sign in the metabolic syndrome. Although 
+ketoacidosis occurs far more commonly in T1D, it also can 
+occur in patients with T2D under conditions of physiological 
+stress and cannot be used as an absolute differentiating factor. 
+T2D can be confirmed by the evaluation of insulin or C-peptide 
+responses to stimulation with oral carbohydrate and in the 
+absence of islet cell autoreactivity.
+Therapy
+T2D is the result of a combination of insulin resistance, relative 
+insulin deficiency, and a secretory β cell defect. Asymptomatic 
+patients with mildly elevated glucose values (slightly >126 mg/
+dL for fasting or slightly >200 mg/dL for random glucose) may 
+be managed initially with lifestyle modifications, including 
+nutrition therapy (dietary adjustments) and increased exercise. 
+Exercise has been shown to decrease insulin resistance. In most 
+children with new-onset, uncomplicated T2D, oral agents are 
+usually the first line of therapy. Only metformin, an insulin 
+secretagogue, is approved by the U.S. Food and Drug Admin-
+istration for use in children. A rare side effect of metformin is 
+lactic acidosis, occurring mainly in patients with compromised 
+renal function. The most common side effect is gastrointestinal 
+upset. If ketonuria or ketoacidosis occurs, insulin treatment is 
+necessary to first achieve adequate glycemic control, but may 
+be discontinued within weeks with continuation of oral medica-
+tions. Insulin therapy may be required if adequate glycemic 
+control is not achieved with lifestyle modifications and 
+metformin.
+Because T2D may have a long preclinical course, early 
+diagnosis is possible in subjects at risk who have the meta-
+bolic syndrome. Significant lifestyle modifications, such as 
+improved eating habits and increased exercise, have a role 
+in preventing or decreasing the morbidity of T2D. Finally, it 
+is critical to monitor and manage the other components of 
+metabolic syndrome, such as advanced pubertal development, 
+hypertension, hyperlipidemia, and polycystic ovary syndrome 
+in females.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Hypotonia and Weakness
+Altered Mental Status
+Irritable Infant
+The symptoms and signs of hypoglycemia result from direct 
+depression of the central nervous system owing to lack of energy 
+substrate and the counter-regulatory adrenergic response to 
+low glucose via catecholamine secretion designed to correct 
+hypoglycemia (see Table 172.2). Compared with older children, 
+infants do not usually show adrenergic symptoms. The signs 
+and symptoms of hypoglycemia in infants are relatively non-
+specific and include jitteriness, feeding difficulties, pallor, 
+hypotonia, hypothermia, episodes of apnea and bradycardia, 
+depressed levels of consciousness, and seizures. In older children, 
+signs and symptoms include confusion, irritability, headaches, 
+
+
+--- PAGE 668 ---
+647
+CHAPTER 172  Hypoglycemia
+and metabolic pathways (Fig. 172.1). In a normal individual, 
+a decrease in serum glucose concentrations leads to a sup-
+pression of insulin secretion and increased secretion of the 
+counter-regulatory hormones (growth hormone [GH], cortisol, 
+glucagon, and epinephrine; see Fig. 172.1). This hormonal signal 
+promotes the release of amino acids (particularly alanine) from 
+muscle to fuel gluconeogenesis and the release of triglyceride 
+from adipose tissue stores to provide free fatty acids (FFAs) for 
+hepatic ketogenesis. FFAs and ketones serve as alternate fuels 
+for muscle. This hormonal signal also stimulates the breakdown 
+of hepatic glycogen and promotes gluconeogenesis. Failure of 
+any of the components of this hormonal signal can lead to 
+hypoglycemia.
+visual changes, tremors, pallor, sweating, tachycardia, weakness, 
+seizures, and coma.
+Failure to recognize and treat severe, prolonged hypoglycemia 
+can result in serious long-term morbidity, including intellectual 
+disability and nonhypoglycemic seizures. Younger infants and 
+patients with more severe or prolonged hypoglycemia are at 
+greatest risk for adverse outcomes.
+PATHOPHYSIOLOGY
+Hormonal Signal
+Normal regulation of serum glucose concentrations requires 
+appropriate interaction of a number of hormonal signals 
+TABLE 172.1  Classification of Hypoglycemia in Infants and Children
+ABNORMALITIES IN THE HORMONAL SIGNAL INDICATING 
+HYPOGLYCEMIA
+Counter-Regulatory Hormone Deficiency
+MPHD
+Isolated growth hormone deficiency
+ACTH deficiency
+Addison disease
+Glucagon deficiency
+Epinephrine deficiency
+Hyperinsulinism
+Infant of a diabetic mother
+Infant with erythroblastosis fetalis
+β cell adenoma (insulinoma)
+Congenital hyperinsulinemic hypoglycemia
+Beckwith-Wiedemann syndrome
+Anti-insulin receptor antibodies
+Inadequate Substrate
+Prematurity/small for gestational age infant
+Ketotic hypoglycemia
+Maple syrup urine disease
+Disorders of Metabolic Response Pathways
+Glycogenolysis
+Glucose-6-phosphatase deficiency
+Amylo-1,6-glucosidase deficiency
+Liver glycogen phosphorylase deficiency
+Glycogen synthase deficiency
+Glycogen debranching enzyme deficiency
+Phosphorylase kinase deficiency
+GLUT2 transporter mutations
+Gluconeogenesis
+Fructose-1,6-diphosphatase deficiency
+Pyruvate carboxylase deficiency
+Phosphoenolpyruvate carboxykinase deficiency
+Fatty Acid Oxidation (incomplete list)
+Long-, medium-, or short-chain fatty acid acyl-CoA 
+dehydrogenase deficiency
+Carnitine deficiency (primary or secondary)
+Carnitine palmitoyltransferase deficiency
+Other
+Enzymatic defects
+  Galactosemia
+  Hereditary fructose intolerance
+  Propionic acidemia
+  Methylmalonic acidemia
+  Tyrosinosis
+  Glutaric aciduria
+  Global hepatic dysfunction
+Reye syndrome
+Hepatitis
+Heart failure
+Sepsis, shock
+Carcinoma/sarcoma (IGF-2 secretion)
+Malnutrition/starvation
+Hyperviscosity syndrome
+Drugs/Intoxications
+Oral hypoglycemic agents or insulin
+Alcohol
+Salicylates
+Propranolol
+Valproic acid
+Pentamidine
+Ackee fruit (unripe)
+Quinine
+Trimethoprim-sulfamethoxazole (with renal failure)
+ACTH, Adrenocorticotropic hormone; acyl-CoA, acyl coenzyme A; IGF-2, insulin-like growth factor-2; MPHD, multiple pituitary hormone deficiency.
+
+
+--- PAGE 669 ---
+648
+SECTION 23  Endocrinology
+Hyperinsulinism that persists beyond a few days of age can 
+result from distinct genetic disorders affecting glucose-regulated 
+insulin release, or congenital hyperinsulinism. In these infants, 
+hyperplasia of the pancreatic islet cells develops in the absence 
+of excess stimulation by maternal diabetes. There are currently 
+11 genes associated with monogenic forms of hyperinsulin-
+ism (ABCC8, KCNJ11, GLUD1, GCK, HADH1, UCP2, MCT1, 
+HNF4A, HNF1A, HK1, PGM1), as well as several syndromic 
+genetic forms of HI (e.g., Beckwith-Wiedemann, Kabuki, and 
+Turner syndromes). The most common causes for congenital 
+hyperinsulinism involve inactivating KATP channel mutations 
+and account for approximately 60% of all identifiable mutations. 
+Hyperinsulinism also can occur in Beckwith-Wiedemann syn-
+drome (a condition characterized by neonatal somatic gigantism, 
+macrosomia, macroglossia, omphalocele, visceromegaly, and 
+earlobe creases).
+Regardless of the cause, neonates with hyperinsulinism are 
+characteristically large for gestational age (see Chapter 60). 
+Hypoglycemia is severe and frequently occurs within 1-3 hours 
+of a feeding. Glucose requirements are increased, often two to 
+three times the normal basal glucose requirement of 6-8 mg/kg/
+min. The diagnosis of hyperinsulinism in children is determined 
+by evaluating markers of inappropriate insulin effects (e.g., sup-
+pressed ketogenesis) because plasma insulin concentrations are 
+frequently not clearly elevated. Diagnosis is most reliably based 
+on a closely monitored provocative fasting test that includes 
+(1) frequent sampling of plasma concentrations of glucose, 
+insulin, β-hydroxybutyrate, and FFAs and (2) terminating the 
+test when glucose concentrations decline toward 50 mg/dL with a 
+determination of the glycemic response to glucagon. The absence 
+of serum and urine ketones at the time of hypoglycemia is an 
+important diagnostic feature, distinguishing hyperinsulinism 
+from defects in counter-regulatory hormone secretion.
+Treatment initially involves the infusion of intravenous 
+(IV) glucose at high rates and of diazoxide to suppress insulin 
+secretion. If diazoxide therapy is unsuccessful, long-acting 
+somatostatin analogs can be tried. Often medical therapy for 
+persistent hyperinsulinemic hypoglycemia of the newborn is 
+unsuccessful, and subtotal (90%) pancreatectomy is required 
+to prevent long-term neurological sequelae of hypoglycemia.
+TABLE 172.2  Symptoms and Signs of Hypoglycemia
+FEATURES ASSOCIATED 
+WITH EPINEPHRINE 
+RELEASE*
+FEATURES ASSOCIATED 
+WITH CEREBRAL 
+GLYCOPENIA
+Perspiration
+Headache
+Palpitation (tachycardia)
+Mental confusion
+Pallor
+Somnolence
+Paresthesia
+Dysarthria
+Trembling
+Personality changes
+Anxiety
+Inability to concentrate
+Weakness
+Staring
+Nausea
+Hunger
+Vomiting
+Convulsions
+Ataxia
+Coma
+Diplopia
+Stroke
+*These features and perceptions of the features may be blunted if the patient 
+is receiving β-blocking agents.
+Adipose tissue
+EPI
+GLUCAGON
+TG
+FFA
+Glycerol
+Gluconeogenesis
+Glycogenolysis
+EPI
+GH
+CORTISOL
+GLUCAGON
+Ketogenesis
+Heart, kidney,
+muscle, brain
+Muscle
+CORTISOL
+Amino acids
+(alanine)
+Lactate
+Insulin
+–
+–
+Insulin
+–
+Insulin
+–
+Glucose
+Brain,
+blood cells
+FIGURE 172.1  Regulation of serum glucose. –  represents inhibitions. EPI, Epinephrine; FFA, free 
+fatty acid; GH, growth hormone; TG, triglyceride. 
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Obesity
+Hyperinsulinemia
+A lack of suppression of insulin secretion in response to low 
+serum glucose concentrations can occur in infants but is 
+uncommon beyond the neonatal period. This situation arises 
+most frequently in infants of diabetic mothers who were exposed 
+to high concentrations of maternally derived glucose in utero, 
+resulting in fetal islet cell hyperplasia. The hyperinsulinemic 
+state is transient, usually lasting hours to days.
+
+
+--- PAGE 670 ---
+649
+CHAPTER 172  Hypoglycemia
+mobilization of alanine from muscle to fuel gluconeogenesis 
+is thought to be the cause, although the condition may derive 
+mostly from having lower fuel reserves. Because there are no 
+specific diagnostic tests for this disorder, ketotic hypoglycemia 
+is a diagnosis of exclusion.
+Treatment involves avoidance of fasting and frequent feedings 
+of a high-protein, high-carbohydrate diet. Patients may require 
+hospitalization for IV glucose infusion if they cannot maintain 
+adequate oral intake during a period of illness.
+DISRUPTED METABOLIC  
+RESPONSE PATHWAYS
+Maintenance of normal serum glucose concentrations in the 
+fasting state requires glucose production via glycogenolysis and 
+gluconeogenesis and the production of alternative energy sources 
+(FFAs and ketones) via lipolysis and fatty acid oxidation.
+Glycogenolysis
+Some glycogen storage diseases (GSDs) occur in a variety of 
+subtypes that differ in severity (see Chapter 52). Among the 
+subtypes that result in hypoglycemia, the most severe form is 
+glucose-6-phosphatase deficiency, which is characterized by 
+severe hypoglycemia, massive hepatomegaly, growth retardation, 
+and lactic acidosis. In contrast, deficiencies in the glycogen 
+phosphorylase enzymes may cause isolated hepatomegaly with 
+or without hypoglycemia.
+The diagnosis of GSD is suggested by a finding of hepato-
+megaly without splenomegaly (although GSD type 0 is not 
+associated with hepatomegaly). Confirmation of the diagnosis 
+requires specific biochemical studies of leukocytes or liver 
+biopsy specimens. Treatment for the most common types 
+involves frequent high-carbohydrate feedings during the day 
+and continuous feedings at night via nasogastric tube. Feedings 
+of uncooked cornstarch overnight are sufficient to maintain 
+serum glucose concentrations in some patients.
+Gluconeogenesis
+Defects in gluconeogenesis are uncommon and include fructose-
+1,6-diphosphatase deficiency and phosphoenolpyruvate car-
+boxykinase deficiency. Affected patients exhibit fasting 
+hypoglycemia, hepatomegaly, lactic acidosis, and hyperuricemia. 
+Ketosis occurs, and FFA and alanine concentrations are high. 
+Treatment involves frequent high-carbohydrate, low-protein 
+feedings (see Chapter 52).
+Fatty Acid Oxidation
+Fatty acid oxidation disorders of ketogenesis include the fatty 
+acid acyl-coenzyme A (CoA) dehydrogenase deficiencies; 
+long-chain, medium-chain, and short-chain acyl-CoA dehy-
+drogenase deficiencies; and hereditary carnitine deficiency (see 
+Chapter 55). Of these disorders, medium-chain acyl-CoA 
+dehydrogenase deficiency is the most common; it occurs in 1 
+in 4,000-17,000 live births, depending on the population. Patients 
+often are well in infancy and have the first episode of hypo-
+glycemia at 2 years of age or older. Mild hepatomegaly may be 
+present along with mild hyperammonemia, hyperuricemia, and 
+mild elevations in hepatic transaminases. Episodes of nonketotic 
+hypoglycemia usually occur with prolonged fasting or during 
+Factitious Hyperinsulinemia
+In rare cases, insulin or a hypoglycemic medication is admin-
+istered by a parent or caregiver to a child as a form of child 
+abuse, which is a condition referred to as Munchausen syndrome 
+by proxy. This diagnosis should be suspected if extremely high 
+insulin concentrations are detected (>100 µU/mL). C-peptide 
+concentrations are low or undetectable, which confirms that 
+the insulin is from an exogenous source.
+Defects in Counter-Regulatory Hormones
+Abnormalities in the secretion of counter-regulatory hormones 
+that produce hypoglycemia usually involve GH, cortisol, or 
+both. Deficiencies in glucagon and epinephrine secretion are 
+rare. GH and cortisol deficiency occur as a result of hypopi-
+tuitarism. Hypopituitarism results from congenital hypoplasia 
+or aplasia of the pituitary or, more commonly, from deficiency 
+of hypothalamic releasing factors (see Chapter 173). Clues to 
+this diagnosis in infants include the presence of hypoglycemia 
+in association with midline facial or neurological defects (e.g., 
+cleft lip and palate or absence of the corpus callosum), pendular 
+(roving) nystagmus (indicating visual impairment from possible 
+abnormalities in the development of the optic nerves, which 
+can occur in optic nerve hypoplasia), and the presence of 
+microphallus and cryptorchidism in boys (indicating abnormali-
+ties in gonadotropin secretion). Jaundice and hepatomegaly 
+also can occur, simulating neonatal hepatitis. Despite the 
+presence of GH deficiency, these infants are usually of normal 
+size at birth.
+Deficient cortisol secretion also can occur in primary adrenal 
+insufficiency, resulting from a variety of causes. In infants it often 
+results from congenital adrenal hyperplasia, most frequently 
+as a result of 21-hydroxylase deficiency (see Chapters 177 and 
+178). In older children, primary adrenal insufficiency is seen 
+most frequently in Addison disease and other disorders (see 
+Chapter 178).
+Confirmation of GH or cortisol deficiency as the cause of 
+hypoglycemia requires the detection of low serum GH and 
+cortisol concentrations during an episode of hypoglycemia or 
+after other stimulatory testing. In contrast to hyperinsulinism, 
+serum and urine ketones are positive at the time of hypoglycemia 
+and FFAs are elevated. Treatment involves supplementation of 
+the deficient hormones in physiological doses.
+ENERGY STORES
+Sufficient energy stores in the form of glycogen, adipose tissue, 
+and muscle are necessary to respond appropriately to hypo-
+glycemia. Deficiencies in these stores are a common cause of 
+hypoglycemia in neonates who are small for gestational age or 
+premature (see Chapter 60). Beyond the early neonatal period, 
+energy stores are usually sufficient to meet the metabolic 
+requirements except in malnourished children.
+IDIOPATHIC KETOTIC HYPOGLYCEMIA
+A common cause of new-onset hypoglycemia is idiopathic 
+ketotic hypoglycemia, usually seen in children between 18 
+months and remits by 8 years of age. Patients have symptoms 
+of hypoglycemia after a period of prolonged fasting, often in 
+the setting of an intercurrent illness with decreased feeding. 
+Children with this disorder are often thin and small and may 
+have a history of being small for gestational age. Defective 
+
+
+--- PAGE 671 ---
+650
+SECTION 23  Endocrinology
+EMERGENCY MANAGEMENT
+Acute care of a patient with hypoglycemia consists of rapid 
+administration of IV glucose (2 mL/kg of 10% dextrose 
+in water). After the initial bolus, an infusion of IV glucose 
+should provide approximately 1.5 times the normal hepatic 
+glucose production rate (8-12 mg/kg/min in infants, 6-8 mg/
+kg/min in children). This infusion allows for suppression of 
+the catabolic state and prevents further decompensation in 
+patients with certain metabolic disorders. If adrenal insuffi-
+ciency is suspected, stress doses of glucocorticoids should be 
+administered.
+CHAPTER 173 
+Short Stature
+GROWTH
+Normal growth is the final common pathway of many factors, 
+including endocrine, environmental, nutritional, and genetic 
+influences (see Chapter 5). A normal linear growth pattern is 
+good evidence of overall health and can be considered a bioassay 
+for the well-being of the whole child. The effects of certain 
+hormones on growth and ultimate height are listed in Table 
+173.1. Just as various factors influence stature, stature itself 
+influences psychological, social, and potentially economic 
+well-being. Parental concern about the psychosocial conse-
+quences of abnormal stature often causes a family to seek medical 
+attention.
+Growth Hormone Physiology
+Growth hormone (GH) secretion is pulsatile, stimulated by 
+hypothalamic GH-releasing factor (GRF), and inhibited by GH 
+release inhibitory factor (somatostatin, somatotropin release-
+inhibiting factor [SRIF]), which interact with their individual 
+receptors on the pituitary somatotrope in a noncompetitive 
+manner. GH is also stimulated by a number of factors (e.g., 
+ghrelin, sex steroid hormones, clonidine, hypoglycemia, 
+episodes of intercurrent illness. Treatment involves avoidance 
+of fasting.
+OTHER METABOLIC DISORDERS
+Many metabolic disorders can lead to hypoglycemia, including 
+galactosemia, hereditary fructose intolerance, and disorders of 
+organic acid metabolism (see Table 172.1). Hypoglycemia in 
+these disorders is usually a reflection of global hepatic dysfunc-
+tion secondary to the buildup of hepatotoxic intermediates. 
+Many of these disorders present with low concentrations of 
+ketone bodies because ketogenesis also is affected. The finding 
+of non-glucose-reducing substances in the urine after ingestion 
+of offending substances suggests a diagnosis of galactosemia 
+or hereditary fructose intolerance. Treatment requires dietary 
+restriction of the specific offending substances.
+MEDICATIONS AND INTOXICATION
+Hypoglycemia can occur as an adverse effect of numerous 
+medications (see Table 172.1). Ethanol ingestion also can cause 
+hypoglycemia, especially in younger children, because the 
+metabolism of ethanol results in the depletion of cofactors 
+necessary for gluconeogenesis.
+DIAGNOSIS
+Although the list of causes of hypoglycemia is long and 
+complex, establishing the etiology in a particular patient 
+is important. Frequently it is difficult to make an accurate 
+diagnosis until one can obtain a critical sample of blood and 
+urine at the time of the hypoglycemic episode. In a child 
+with unexplained hypoglycemia, a serum sample should be 
+obtained before treatment for the measurement of glucose 
+and insulin, GH, cortisol, FFAs, and β-hydroxybutyrate and 
+acetoacetate. Measurement of serum lactate levels also should be 
+considered. A urine specimen should be obtained for measur-
+ing ketones and reducing substances. Hypoglycemia without 
+ketonuria suggests hyperinsulinism or a defect in fatty acid 
+oxidation. The results of this initial testing can establish whether 
+endocrine causes are responsible and, if not, provide initial 
+information regarding which types of metabolic disorders are 
+most likely.
+TABLE 173.1  Hormonal Effects on Growth
+HORMONE
+BONE AGE
+GROWTH RATE
+ADULT HEIGHT*
+Androgen excess
+Advanced
+Increased
+Diminished
+Androgen deficiency
+Normal or delayed
+Normal or decreased
+Increased slightly or normal
+Thyroxine excess
+Advanced
+Increased
+Normal or diminished
+Thyroxine deficiency
+Retarded
+Decreased
+Diminished
+Growth hormone excess
+Normal or advanced
+Increased
+Excessive
+Growth hormone deficiency
+Retarded
+Decreased
+Diminished
+Cortisol excess
+Retarded
+Decreased
+Diminished
+Cortisol deficiency
+Normal
+Normal
+Normal
+*Effect in most patients with treatment.
+Modified from Underwood LE, Van Wyk JJ. Normal and aberrant growth. In: Wilson JD, Foster DW, eds. Textbook of Endocrinology. 8th ed. Philadelphia: WB 
+Saunders; 1992.
+
+
+--- PAGE 672 ---
+651
+CHAPTER 173  Short Stature
+Endocrine Evaluation of Growth  
+Hormone Secretion
+etc.). GH circulates bound to a GH-binding protein (GHBP); 
+GHBP abundance reflects the abundance of GH receptors. 
+GH has direct effects on tissue and also causes production 
+and secretion of insulin-like growth factor-1 (IGF-1) in many 
+tissues. GH stimulates IGF-1 production in the liver along 
+with production of the acid-labile subunit and the IGF-binding 
+protein (IGF-BP3); this forms the complex that delivers IGF-1 
+to tissue.
+IGF-1 acts primarily as a paracrine and autocrine agent 
+and is most closely associated with postnatal growth. When 
+IGF-1 attaches to its membrane-bound receptor, second mes-
+sengers are stimulated to change the physiology of the cell 
+and produce growth effects. IGF-1 production is influenced 
+by disease states such as malnutrition, chronic renal and liver 
+disease, hypothyroidism, or obesity.
+IGF-BP3 is measurable in clinical assays and is less influenced 
+by nutrition and age than is IGF-1; measuring IGF-1 and 
+IGF-BP3 is useful in evaluating GH adequacy, particularly in 
+infancy and early childhood.
+Measurement of Growth
+The correct measurement of an infant’s length requires one 
+adult to hold the infant’s head still and another adult to extend 
+the feet with the soles perpendicular to the lower legs. A 
+caliper-like device, such as an infantometer, or the movable 
+plates on an infant scale are used so that the exact distance 
+between the two calipers or plates can be determined. Marking 
+the position of the head and feet of an infant lying on a sheet 
+of paper on the examining table leads to inaccuracies and may 
+miss true disorders of growth or create false concerns about a 
+disorder of growth in a normal child. Accurate measurements 
+of height (standing), or length (lying down), and weight should 
+be plotted on the Centers for Disease Control and Prevention 
+growth charts for the timely diagnosis of growth disorders 
+(http://www.cdc.gov/growthcharts/).
+After 2 years of age, the height of a child should be measured 
+in the standing position. Children measured in the standing 
+position should be barefoot against a hard surface. A Harpenden 
+stadiometer or equivalent device is optimal for the measurement 
+of stature. A decrease of roughly 1.25 cm in height measurement 
+may occur when the child is measured in the standing position 
+rather than in the lying position, leading to the inappropriate 
+referral of many children who appear to be not growing to a 
+subspecialist.
+Measurement of the arm span is essential when the diagnoses 
+of Marfan or Klinefelter syndrome, short-limbed dwarfism, 
+or other dysmorphic conditions are considered. Arm span is 
+measured as the distance between the tips of the fingers when the 
+patient holds both arms outstretched horizontally while standing 
+against a solid surface. The upper-to-lower segment ratio is 
+the ratio of the upper segment (determined by subtraction 
+of the measurement from the symphysis pubis to the floor 
+[known as the lower segment] from the total height) to the 
+lower segment. This ratio changes with age. A normal term 
+infant has an upper-to-lower ratio of 1.7 : 1, a 1-year-old has 
+a ratio of 1.4 : 1, and a 10-year-old has a ratio of 1 : 1. Condi-
+tions of hypogonadism, not commonly discerned or suspected 
+until after the normal age for onset of puberty, lead to greatly 
+decreased upper-to-lower ratio in an adult, whereas long-lasting 
+and untreated hypothyroidism leads to a high upper-to-lower 
+ratio in the child.
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Short Stature
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Short Stature
+GH is a 191–amino acid protein secreted by the pituitary gland 
+under the control of GRF and SRIF (see Fig. 170.2). GH secretion 
+is enhanced by α-adrenergic stimulation, hypoglycemia, starva-
+tion, exercise, early stages of sleep, and stress and inhibited by 
+β-adrenergic stimulation and hyperglycemia. Because concentra-
+tions of GH are low throughout the day, except for brief secretory 
+peaks in the middle of the night or early morning, the daytime 
+ascertainment of GH deficiency or sufficiency on the basis of 
+a single determination of a random GH concentration is impos-
+sible. Adequacy of GH secretion may be determined by a 
+stimulation test to measure peak GH secretion. A normal 
+response is a vigorous secretory peak after stimulation; the lack 
+of such a peak is consistent with GH deficiency. However, there 
+is a high false-positive rate (on any day, about 10% or more of 
+normal children may not reach the normal GH peak after even 
+two stimulatory tests). Indirect measurements of GH secretion, 
+such as serum concentrations of IGF-1 and IGF-BP3, are 
+considered better screens for GH deficiency.
+The factors responsible for postnatal growth are not the same 
+as the factors that mediate fetal growth. Thyroid hormone 
+is essential for normal postnatal growth, although a thyroid 
+hormone-deficient fetus achieves a normal birth length; similarly, 
+a GH-deficient fetus has a normal birth length, although in IGF-1 
+deficiency resulting from GH resistance (Laron dwarfism), 
+fetuses are shorter than control subjects. Adequate thyroid 
+hormone is necessary to allow the secretion of GH. Hypothyroid 
+patients may appear falsely to be GH deficient; with thyroid 
+hormone repletion, GH secretion normalizes. Gonadal steroids 
+are important in the pubertal growth spurt. The effects of other 
+hormones on growth are noted in Table 173.1.
+ABNORMALITIES OF GROWTH
+Short Stature of Nonendocrine Causes
+Short stature is defined as subnormal height relative to other 
+children of the same gender and age, taking family heights into 
+consideration. It can be caused by numerous conditions (Table 
+173.2). The Centers for Disease Control and Prevention growth 
+charts use the 3rd percentile of the growth curve as the demarca-
+tion of the lower limit. Growth failure denotes a slow growth 
+rate regardless of stature. Ultimately a slow growth rate leads 
+to short stature, but a disease process is detected sooner if the 
+decreased growth rate is noted before the stature becomes short. 
+Plotted on a growth chart, growth failure appears as a curve 
+that crosses percentiles downward and is associated with a 
+height velocity below the 5th percentile of height velocity for 
+
