@@ -63,10 +63,10 @@ export default function StructuredAnswersPage() {
             className="bg-white/[0.03] border border-white/[0.08] rounded-2xl overflow-hidden"
           >
             {/* Header */}
-            <div className="p-6 border-b border-white/[0.08]">
-              <div className="flex flex-wrap items-center gap-3 mb-3">
+            <div className="p-4 md:p-6 border-b border-white/[0.08]">
+              <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
                 <span
-                  className={`text-xs font-bold px-3 py-1 rounded-full ${
+                  className={`text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full ${
                     topic.prob === "Very High"
                       ? "bg-[#FF2D55]/15 text-[#FF2D55]"
                       : topic.prob === "High"
@@ -74,24 +74,24 @@ export default function StructuredAnswersPage() {
                       : "bg-[#007AFF]/15 text-[#007AFF]"
                   }`}
                 >
-                  {topic.prob} Probability
+                  {topic.prob}
                 </span>
-                <span className="text-xs text-white/40 font-medium px-3 py-1 rounded-full bg-white/[0.05]">
+                <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
                   {topic.subject}
                 </span>
-                <span className="text-xs text-white/40 font-medium px-3 py-1 rounded-full bg-white/[0.05]">
+                <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
                   {topic.examType}
                 </span>
               </div>
-              <h2 className="text-xl font-bold text-white mb-2">{topic.question}</h2>
-              <p className="text-white/60 text-sm">{topic.marksBreakdown}</p>
+              <h2 className="text-base md:text-xl font-bold text-white mb-2">{topic.question}</h2>
+              <p className="text-white/60 text-xs md:text-sm">{topic.marksBreakdown}</p>
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-6">
+            <div className="p-4 md:p-6 space-y-6">
               {topic.sections.map((section, si) => (
                 <div key={si}>
-                  <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                  <h3 className="text-base md:text-lg font-bold text-white mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-5 rounded-full bg-[#007AFF]" />
                     {section.title}
                   </h3>
@@ -119,7 +119,7 @@ export default function StructuredAnswersPage() {
                         <thead>
                           <tr className="bg-white/[0.05]">
                             {section.table.headers.map((h, hi) => (
-                              <th key={hi} className="text-left py-2.5 px-4 text-white/60 font-semibold text-xs uppercase tracking-wider">
+                              <th key={hi} className="text-left py-2 px-2 md:py-2.5 md:px-4 text-white/60 font-semibold text-[10px] md:text-xs uppercase tracking-wider">
                                 {h}
                               </th>
                             ))}
@@ -129,7 +129,7 @@ export default function StructuredAnswersPage() {
                           {section.table.rows.map((row, ri) => (
                             <tr key={ri} className="border-t border-white/[0.04]">
                               {row.map((cell, ci) => (
-                                <td key={ci} className="py-2.5 px-4 text-white/80 text-sm">
+                                <td key={ci} className="py-2 px-2 md:py-2.5 md:px-4 text-white/80 text-xs md:text-sm">
                                   <SafeHtml text={cell} />
                                 </td>
                               ))}
@@ -160,7 +160,7 @@ export default function StructuredAnswersPage() {
 
               {/* Scoring checklist */}
               {topic.checklist && (
-                <div className="bg-[#007AFF]/10 border border-[#007AFF]/20 rounded-xl p-5">
+                <div className="bg-[#007AFF]/10 border border-[#007AFF]/20 rounded-xl p-4 md:p-5">
                   <div className="text-[#007AFF] text-xs font-bold uppercase tracking-wider mb-3">
                     Exam Scoring Checklist
                   </div>

@@ -55,22 +55,22 @@ export function Flowchart({ nodes, edges }: FlowchartProps) {
   const maxLevel = Math.max(0, ...Array.from(levels.values()));
 
   return (
-    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-6 overflow-x-auto">
-      <div className="min-w-[300px] flex flex-col items-center gap-3">
+    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-3 md:p-6 overflow-x-auto">
+      <div className="min-w-0 md:min-w-[300px] flex flex-col items-center gap-3">
         {Array.from({ length: maxLevel + 1 }, (_, lvl) => {
           const rowNodes = rows.get(lvl) ?? [];
           const isLast = lvl === maxLevel;
           return (
             <div key={lvl} className="flex flex-col items-center gap-3 w-full">
-              <div className="flex flex-wrap justify-center gap-3 w-full">
+              <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-3 w-full">
                 {rowNodes.map((id) => {
                   const node = nodeMap.get(id)!;
                   const isDecision = node.type === 'decision';
                   const outgoing = edges.filter((e) => e.from === id);
                   return (
-                    <div key={id} className="flex flex-col items-center">
+                    <div key={id} className="flex flex-col items-center w-full md:w-auto">
                       <div
-                        className={`px-4 py-2.5 text-sm font-medium text-center min-w-[140px] max-w-[260px] rounded-xl border ${
+                        className={`px-3 py-2 text-xs md:text-sm font-medium text-center w-full md:min-w-[140px] md:max-w-[260px] rounded-xl border ${
                           isDecision
                             ? 'bg-white/[0.08] border-[#FF9500]/40 text-[#FF9500]'
                             : node.type === 'start'
