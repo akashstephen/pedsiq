@@ -31,24 +31,24 @@ const cognitiveData = [
 ];
 
 const subtopics = [
-  { topic: "AGN (PSGN)", subject: "Nephrology", count: 6, marks: 42, prob: "Very High" },
-  { topic: "Rickets", subject: "Endocrinology", count: 5, marks: 19, prob: "Very High" },
-  { topic: "Nephrotic Syndrome", subject: "Nephrology", count: 3, marks: 17, prob: "Very High" },
-  { topic: "Congenital Hypothyroidism", subject: "Endocrinology", count: 3, marks: 8, prob: "High" },
-  { topic: "Testicular Torsion", subject: "Nephrology", count: 2, marks: 6, prob: "High" },
-  { topic: "Cryptorchidism", subject: "Nephrology", count: 2, marks: 5, prob: "High" },
-  { topic: "Hematuria DDx", subject: "Nephrology", count: 2, marks: 5, prob: "High" },
-  { topic: "Portal Hypertension", subject: "GI", count: 2, marks: 4, prob: "Moderate" },
-  { topic: "Intussusception", subject: "GI", count: 2, marks: 5, prob: "Moderate" },
-  { topic: "Neonatal Hypoglycemia", subject: "Endocrinology", count: 3, marks: 5, prob: "High" },
+  { topic: "AGN (PSGN)", subject: "Nephrology", count: 6, marks: 42, pattern: "Strong" },
+  { topic: "Rickets", subject: "Endocrinology", count: 5, marks: 19, pattern: "Strong" },
+  { topic: "Nephrotic Syndrome", subject: "Nephrology", count: 3, marks: 17, pattern: "Strong" },
+  { topic: "Congenital Hypothyroidism", subject: "Endocrinology", count: 3, marks: 8, pattern: "Moderate" },
+  { topic: "Testicular Torsion", subject: "Nephrology", count: 2, marks: 6, pattern: "Moderate" },
+  { topic: "Cryptorchidism", subject: "Nephrology", count: 2, marks: 5, pattern: "Moderate" },
+  { topic: "Hematuria DDx", subject: "Nephrology", count: 2, marks: 5, pattern: "Moderate" },
+  { topic: "Portal Hypertension", subject: "GI", count: 2, marks: 4, pattern: "Emerging" },
+  { topic: "Intussusception", subject: "GI", count: 2, marks: 5, pattern: "Emerging" },
+  { topic: "Neonatal Hypoglycemia", subject: "Endocrinology", count: 3, marks: 5, pattern: "Moderate" },
 ];
 
 const COLORS = ["#FF9500", "#007AFF", "#34C759", "#5856D6"];
 
-const probColor = (prob: string) => {
-  if (prob === "Very High") return "#FF2D55";
-  if (prob === "High") return "#FF9500";
-  return "#34C759";
+const patternColor = (pattern: string) => {
+  if (pattern === "Strong") return "#34C759";
+  if (pattern === "Moderate") return "#FF9500";
+  return "#007AFF";
 };
 
 export default function SubjectsPage() {
@@ -56,7 +56,7 @@ export default function SubjectsPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-white mb-1">Subjects</h1>
-        <p className="text-white/55">Distribution and high-yield topics</p>
+        <p className="text-white/55">Distribution and historical topic frequency</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -120,7 +120,7 @@ export default function SubjectsPage() {
 
       <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
         <h3 className="text-lg font-semibold text-white mb-4">
-          High-Yield Subtopics
+          Frequently Tested Subtopics
         </h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -131,7 +131,7 @@ export default function SubjectsPage() {
                 <th className="text-left py-3 px-4 font-medium">Subject</th>
                 <th className="text-center py-3 px-4 font-medium">Count</th>
                 <th className="text-center py-3 px-4 font-medium">Marks</th>
-                <th className="text-center py-3 px-4 font-medium">Probability</th>
+                <th className="text-center py-3 px-4 font-medium">Pattern</th>
               </tr>
             </thead>
             <tbody>
@@ -144,8 +144,8 @@ export default function SubjectsPage() {
                     <span
                       className="inline-flex w-6 h-6 rounded-md items-center justify-center text-xs font-bold"
                       style={{
-                        background: i < 3 ? "rgba(255,45,85,0.15)" : "rgba(255,255,255,0.05)",
-                        color: i < 3 ? "#FF2D55" : "rgba(255,255,255,0.5)",
+                        background: i < 3 ? "rgba(52,199,89,0.15)" : "rgba(255,255,255,0.05)",
+                        color: i < 3 ? "#34C759" : "rgba(255,255,255,0.5)",
                       }}
                     >
                       {i + 1}
@@ -163,11 +163,11 @@ export default function SubjectsPage() {
                     <span
                       className="text-xs font-semibold px-2.5 py-1 rounded-full"
                       style={{
-                        background: `${probColor(s.prob)}15`,
-                        color: probColor(s.prob),
+                        background: `${patternColor(s.pattern)}15`,
+                        color: patternColor(s.pattern),
                       }}
                     >
-                      {s.prob}
+                      {s.pattern}
                     </span>
                   </td>
                 </tr>

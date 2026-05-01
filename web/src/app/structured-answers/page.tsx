@@ -4,7 +4,8 @@ import { useState } from "react";
 import { topics } from "./topics";
 import { Flowchart } from "@/components/Flowchart";
 import { SafeHtml } from "@/components/SafeHtml";
-import { Printer } from "lucide-react";
+import { Printer, Network, AlertTriangle, Calendar } from "lucide-react";
+import graphMetadata from "@/data/topic_graph_metadata.json";
 
 export default function StructuredAnswersPage() {
   const [activeTopic, setActiveTopic] = useState<string | "all">("all");
@@ -67,14 +68,17 @@ export default function StructuredAnswersPage() {
               <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3">
                 <span
                   className={`text-[10px] md:text-xs font-bold px-2 md:px-3 py-1 rounded-full ${
-                    topic.prob === "Very High"
-                      ? "bg-[#FF2D55]/15 text-[#FF2D55]"
-                      : topic.prob === "High"
+                    topic.patternStrength === "Strong"
+                      ? "bg-[#34C759]/15 text-[#34C759]"
+                      : topic.patternStrength === "Moderate"
                       ? "bg-[#FF9500]/15 text-[#FF9500]"
                       : "bg-[#007AFF]/15 text-[#007AFF]"
                   }`}
                 >
-                  {topic.prob}
+                  {topic.patternStrength} Pattern
+                </span>
+                <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
+                  {topic.historicalFrequency.appearances} / 411 questions
                 </span>
                 <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
                   {topic.subject}
@@ -84,7 +88,11 @@ export default function StructuredAnswersPage() {
                 </span>
               </div>
               <h2 className="text-base md:text-xl font-bold text-white mb-2">{topic.question}</h2>
-              <p className="text-white/60 text-xs md:text-sm">{topic.marksBreakdown}</p>
+              <p className="text-white/60 text-xs md:text-sm mb-2">{topic.marksBreakdown}</p>
+              <p className="text-white/40 text-xs italic flex items-start gap-1.5">
+                <span className="shrink-0">ℹ️</span>
+                {topic.confidenceNote}
+              </p>
             </div>
 
             {/* Content */}
@@ -174,6 +182,88 @@ export default function StructuredAnswersPage() {
                   </ul>
                 </div>
               )}
+
+              {/* References */}
+              {topic.references && (
+                <div className="border-t border-white/[0.08] pt-4 mt-4">
+                  <div className="text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
+                    References
+                  </div>
+                  <ul className="space-y-1.5">
+                    {topic.references.map((ref, ri) => (
+                      <li key={ri} className="text-white/50 text-xs italic">
+                        {ref}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Knowledge Graph Metadata */}
+              {(() => {
+                const meta = (graphMetadata as Record<string, any>)[topic.id];
+                if (!meta || (!meta.relatedConcepts?.length && !meta.examinerTraps?.length && !meta.yearsAppeared?.length)) {
+                  return null;
+                }
+                return (
+                  <div className="border-t border-white/[0.08] pt-4 mt-4 space-y-4">
+                    {meta.relatedConcepts?.length > 0 && (
+                      <div>
+                        <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
+                          <Network size={12} />
+                          Related Concepts
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {meta.relatedConcepts.map((concept: string, ci: number) => (
+                            <span
+                              key={ci}
+                              className="text-xs bg-white/[0.05] text-white/60 px-2.5 py-1 rounded-lg border border-white/[0.08]"
+                            >
+                              {concept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {meta.examinerTraps?.length > 0 && (
+                      <div>
+                        <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
+                          <AlertTriangle size={12} />
+                          Examiner Traps
+                        </div>
+                        <ul className="space-y-1.5">
+                          {meta.examinerTraps.map((trap: string, ti: number) => (
+                            <li key={ti} className="text-white/70 text-xs flex items-start gap-2">
+                              <span className="text-[#FF9500] shrink-0">•</span>
+                              {trap}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {meta.yearsAppeared?.length > 0 && (
+                      <div>
+                        <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
+                          <Calendar size={12} />
+                          Years Appeared in Past Papers
+                        </div>
+                        <div className="flex flex-wrap gap-1.5">
+                          {meta.yearsAppeared.map((year: number, yi: number) => (
+                            <span
+                              key={yi}
+                              className="text-[10px] bg-[#007AFF]/10 text-[#007AFF] px-2 py-0.5 rounded"
+                            >
+                              {year}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
           </article>
         ))}

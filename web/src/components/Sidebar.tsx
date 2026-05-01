@@ -8,7 +8,7 @@ import {
   FileText,
   BookOpen,
   BarChart3,
-  Target,
+  Activity,
   Flame,
   Menu,
   X,
@@ -20,7 +20,7 @@ const navItems = [
   { href: "/questions/", label: "Questions", icon: FileText },
   { href: "/nelson/", label: "Nelson Analysis", icon: BookOpen },
   { href: "/subjects/", label: "Subjects", icon: BarChart3 },
-  { href: "/predictions/", label: "Predictions", icon: Target },
+  { href: "/insights/", label: "Pattern Insights", icon: Activity },
   { href: "/structured-answers/", label: "Structured Answers", icon: Flame },
 ];
 

@@ -10,23 +10,34 @@ export interface TopicSection {
   mnemonic?: { title: string; text: string };
 }
 
+export interface HistoricalFrequency {
+  appearances: number;
+  papersAnalyzed: number;
+  lastAppeared: string;
+}
+
 export interface Topic {
   id: string;
   shortTitle: string;
-  prob: 'Very High' | 'High' | 'Moderate';
+  patternStrength: 'Strong' | 'Moderate' | 'Emerging';
+  historicalFrequency: HistoricalFrequency;
+  confidenceNote: string;
   subject: string;
   examType: string;
   question: string;
   marksBreakdown: string;
   sections: TopicSection[];
   checklist?: string[];
+  references?: string[];
 }
 
 export const topics: Topic[] = [
   {
     id: 'agn',
     shortTitle: 'AGN / PSGN',
-    prob: 'Very High',
+    patternStrength: 'Strong',
+    historicalFrequency: { appearances: 38, papersAnalyzed: 24, lastAppeared: '2024' },
+    confidenceNote: 'Appeared in 38 of 411 questions (9.2%). A core syllabus topic with consistent historical presence, but examiners vary sub-part emphasis.',
     subject: 'Nephrology',
     examType: 'Essay / Short Note',
     question: 'A 3-year-old child is brought with puffiness of face and tea-colored urine 10 days after a sore throat. Discuss the diagnosis, investigations, and management. (2+4+4=10)',
@@ -193,11 +204,17 @@ export const topics: Topic[] = [
       'Examiner traps: Distinguish from NS, correct first-line drugs, pediatric dosing - <strong>1M</strong>',
       'Neatness & Structure - <strong>1M</strong>',
     ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 167: Glomerulonephritis.',
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 168: Nephrotic Syndrome.',
+    ],
   },
   {
     id: 'nephrotic',
     shortTitle: 'Nephrotic Syndrome',
-    prob: 'Very High',
+    patternStrength: 'Strong',
+    historicalFrequency: { appearances: 31, papersAnalyzed: 24, lastAppeared: '2024' },
+    confidenceNote: 'Appeared in 31 of 411 questions (7.5%). A syllabus staple frequently tested in essay and short-note formats.',
     subject: 'Nephrology',
     examType: 'Essay / Short Note',
     question: 'A 4-year-old boy presents with periorbital puffiness and frothy urine. On examination, there is pitting edema of the legs and ascites. Discuss the diagnosis, investigations, and management. (2+4+4=10)',
@@ -324,11 +341,16 @@ export const topics: Topic[] = [
       'Examiner traps: Distinguish from AGN, correct steroid dose/duration, no protein restriction - <strong>1M</strong>',
       'Neatness & Structure - <strong>1M</strong>',
     ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 168: Nephrotic Syndrome.',
+    ],
   },
   {
     id: 'rickets',
     shortTitle: 'Rickets',
-    prob: 'Very High',
+    patternStrength: 'Strong',
+    historicalFrequency: { appearances: 27, papersAnalyzed: 24, lastAppeared: '2024' },
+    confidenceNote: 'Appeared in 27 of 411 questions (6.6%). Frequently rephrased but conceptually stable across exam cycles.',
     subject: 'Endocrinology',
     examType: 'Short Note / Essay',
     question: 'A 9-month-old infant is brought with delayed teething, wrist swelling, and bowing of legs. Discuss the biochemical changes, clinical features, radiological findings, and management. (2+3+2+3=10)',
@@ -424,11 +446,16 @@ export const topics: Topic[] = [
       'Prevention: 400 IU/day in infants, maternal supplementation, sun exposure - <strong>0.5M</strong>',
       'Examiner traps: PTH rises first (Ca normal early), XLH = normal Ca + normal 25-OH, distinguish from scurvy - <strong>1M</strong>',
     ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 176: Rickets and Vitamin D Disorders.',
+    ],
   },
   {
     id: 'hypothyroid',
     shortTitle: 'Hypothyroidism',
-    prob: 'High',
+    patternStrength: 'Moderate',
+    historicalFrequency: { appearances: 14, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 14 of 411 questions (3.4%). Moderate historical presence; often appears as short note or brief answer.',
     subject: 'Endocrinology',
     examType: 'Short Note',
     question: 'Describe the clinical features, screening, and management of congenital hypothyroidism. (2+2+1=5)',
@@ -515,11 +542,16 @@ export const topics: Topic[] = [
       'Management: Levothyroxine 10-15 microg/kg/day; monitor TSH/T4 every 1-2 months; avoid soy/iron - <strong>1M</strong>',
       'Prognosis: Excellent if early treatment; normal IQ - <strong>0.5M</strong>',
     ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 174: Thyroid Disorders.',
+    ],
   },
   {
     id: 'torsion',
     shortTitle: 'Testicular Torsion',
-    prob: 'High',
+    patternStrength: 'Moderate',
+    historicalFrequency: { appearances: 8, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 8 of 411 questions (1.9%). Low absolute frequency but high mark value when tested as emergency management topic.',
     subject: 'Nephrology / Surgery',
     examType: 'Short Note',
     question: 'A 12-year-old boy presents with sudden severe pain in the right scrotum and vomiting. Discuss the differential diagnosis, investigations, and emergency management. (1+1+1=3)',
@@ -568,19 +600,36 @@ export const topics: Topic[] = [
           '<strong>Salvage rate:</strong> &gt;90% if surgery within 6 hours; &lt;10% if &gt;24 hours',
         ],
       },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Confusing torsion with epididymo-orchitis — torsion has <strong>sudden onset + absent cremasteric + normal urine</strong>; epididymitis has <strong>gradual onset + fever + pyuria</strong>.',
+          '<strong>Trap 2:</strong> Forgetting <strong>bilateral orchidopexy</strong> — always fix both testes to prevent future torsion on the contralateral side.',
+          '<strong>Trap 3:</strong> Delaying surgery for imaging — <strong>do NOT wait for Doppler</strong> if clinical suspicion is high.',
+          '<strong>Trap 4:</strong> Age trap — torsion occurs in <strong>neonates AND adolescents</strong> (two peaks), not just teenagers.',
+          '<strong>Trap 5:</strong> Blue dot sign = torsion of appendix testis, NOT testicular torsion — different management (conservative).',
+          '<strong>High-yield:</strong> <strong>Absent cremasteric reflex</strong> is the most sensitive clinical sign.',
+          '<strong>High-yield:</strong> <strong>&lt;6 hours = &gt;90% salvage</strong>; &gt;24 hours = &lt;10% salvage.',
+        ],
+      },
     ],
     checklist: [
       'DDx: Torsion of appendage, epididymo-orchitis, HSP, trauma, incarcerated hernia, idiopathic edema - <strong>0.5M</strong>',
       'Clinical: Sudden pain, vomiting, high-riding testis, absent cremasteric reflex - <strong>0.5M</strong>',
       'Investigations: Color Doppler USG - absent blood flow; urine normal - <strong>0.5M</strong>',
       'Management: Emergency surgery within 6h; detorsion + bilateral orchidopexy; orchidectomy if non-viable - <strong>1M</strong>',
-      'Diagram/Flowchart - <strong>0.5M</strong>',
+      'Examiner traps: Distinguish from epididymitis, bilateral fixation, do not delay surgery - <strong>0.5M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 135: Urologic Disorders.',
     ],
   },
   {
     id: 'hematuria',
     shortTitle: 'Hematuria DDx',
-    prob: 'High',
+    patternStrength: 'Moderate',
+    historicalFrequency: { appearances: 11, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 11 of 411 questions (2.7%). Moderate pattern; often tested as differential diagnosis or investigation-based question.',
     subject: 'Nephrology',
     examType: 'Short Note',
     question: 'A 7-year-old child presents with painless hematuria. Discuss the approach to diagnosis and differential diagnosis. (1.5+1.5=3)',
@@ -617,19 +666,36 @@ export const topics: Topic[] = [
           ],
         },
       },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> RBC casts = <strong>pathognomonic for glomerular hematuria</strong>. If you see RBC casts, it is glomerular until proven otherwise.',
+          '<strong>Trap 2:</strong> Clots in urine = <strong>non-glomerular</strong>. Glomerular hematuria does NOT form clots.',
+          '<strong>Trap 3:</strong> IgA nephropathy = <strong>normal C3</strong>. Low C3 points to PSGN or MPGN.',
+          '<strong>Trap 4:</strong> Hypercalciuria is the <strong>#1 cause of isolated non-glomerular hematuria</strong> in children.',
+          '<strong>Trap 5:</strong> Alport syndrome = X-linked, <strong>hearing loss</strong>, family history of hematuria + deafness.',
+          '<strong>High-yield:</strong> <strong>Brown/smoky urine</strong> = glomerular; <strong>fresh red/pink</strong> = non-glomerular.',
+          '<strong>High-yield:</strong> <strong>Dysmorphic RBCs</strong> = glomerular; <strong>isomorphic RBCs</strong> = non-glomerular.',
+        ],
+      },
     ],
     checklist: [
       'Classification: Glomerular (dysmorphic RBCs, RBC casts, brown urine) vs Non-glomerular (isomorphic RBCs, red urine, clots) - <strong>0.5M</strong>',
       'Glomerular causes: AGN, IgA nephropathy, HSP, Alport, MPGN, TBM disease - <strong>1M</strong>',
       'Non-glomerular causes: UTI, stones, trauma, hypercalciuria, coagulopathy, sickle cell, Wilms, PUV - <strong>0.5M</strong>',
       'Investigations: Urine microscopy, culture, calcium/creatinine, C3, USG, biopsy - <strong>0.5M</strong>',
-      'Table/Flowchart - <strong>0.5M</strong>',
+      'Examiner traps: RBC casts = glomerular, clots = non-glomerular, normal C3 = IgA - <strong>0.5M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 165: Hematuria.',
     ],
   },
   {
     id: 'hypoglycemia',
     shortTitle: 'Hypoglycemia',
-    prob: 'High',
+    patternStrength: 'Moderate',
+    historicalFrequency: { appearances: 5, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 5 of 411 questions (1.2%). Low sample size; may appear in emergency medicine or neonatology contexts.',
     subject: 'Neonatology',
     examType: 'Short Note',
     question: 'Define neonatal hypoglycemia. List the risk factors, clinical features, and management. (1+1+1=3)',
@@ -674,19 +740,36 @@ export const topics: Topic[] = [
           '<strong>Refractory:</strong> Evaluate for hyperinsulinism then Diazoxide / Octreotide / Surgery',
         ],
       },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Definition confusion — <strong>old:</strong> &lt;40 mg/dL (first 24h); <strong>new AAP:</strong> &lt;47 mg/dL (operational threshold); <strong>treatment threshold:</strong> &lt;54 mg/dL.',
+          '<strong>Trap 2:</strong> Asymptomatic hypoglycemia is common — <strong>do NOT overtreat</strong>; feed and recheck.',
+          '<strong>Trap 3:</strong> SGA causes hypoglycemia via <strong>glycogen depletion</strong>; IDM causes it via <strong>hyperinsulinism</strong> — different mechanisms.',
+          '<strong>Trap 4:</strong> Giving dextrose bolus to asymptomatic baby — <strong>feed first</strong>; IV dextrose only if symptomatic or &lt;25 mg/dL.',
+          '<strong>Trap 5:</strong> Forgetting <strong>Beckwith-Wiedemann syndrome</strong> as a cause of refractory hypoglycemia (hyperinsulinism + macrosomia + macroglossia + omphalocele).',
+          '<strong>High-yield:</strong> <strong>Hypoglycemia + macrosomia + macroglossia</strong> = Beckwith-Wiedemann.',
+          '<strong>High-yield:</strong> <strong>Refractory hypoglycemia</strong> → think hyperinsulinism → Diazoxide first-line.',
+        ],
+      },
     ],
     checklist: [
-      'Definition: &lt;40 mg/dL first 24h; &lt;45 mg/dL after - <strong>0.5M</strong>',
+      'Definition: &lt;40 mg/dL first 24h; &lt;45 mg/dL after (old); &lt;47 mg/dL operational; &lt;54 mg/dL treatment threshold - <strong>0.5M</strong>',
       'Risk factors: IDM, preterm, SGA, LGA, asphyxia, sepsis, Beckwith-Wiedemann - <strong>0.5M</strong>',
       'Clinical: Jitteriness, seizures, apnea, lethargy, poor feeding, sweating - <strong>0.5M</strong>',
       'Management: Feed if asymptomatic; IV D10 bolus + maintenance if symptomatic; increase GIR; glucagon/hydrocortisone if refractory - <strong>1M</strong>',
-      'Neatness/Structure - <strong>0.5M</strong>',
+      'Examiner traps: Definition precision, feed first (asymptomatic), Beckwith-Wiedemann triad - <strong>0.5M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 87: Hypoglycemia.',
     ],
   },
   {
     id: 'intussusception',
     shortTitle: 'Intussusception',
-    prob: 'Moderate',
+    patternStrength: 'Emerging',
+    historicalFrequency: { appearances: 6, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 6 of 411 questions (1.5%). Low frequency but clinically critical; may appear as acute abdomen differential.',
     subject: 'GI Surgery',
     examType: 'Short Note / Essay',
     question: 'A 9-month-old infant is brought with episodes of severe crying, vomiting, and passing currant jelly stool. Discuss the diagnosis, investigations, and management. (2+1+2=5)',
@@ -725,6 +808,18 @@ export const topics: Topic[] = [
           '<strong>Pre-operative:</strong> IV fluids, NG tube decompression, antibiotics, correct electrolytes.',
         ],
       },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Forgetting the <strong>two peaks</strong> — idiopathic intussusception is most common at <strong>6-36 months</strong>; older children with intussusception likely have a <strong>lead point</strong> (Meckel, lymphoma, HSP).',
+          '<strong>Trap 2:</strong> Contrast enema is <strong>contraindicated</strong> if there are signs of <strong>peritonitis or perforation</strong> — surgery first in these cases.',
+          '<strong>Trap 3:</strong> Missing <strong>Dance sign</strong> (empty RLQ) — a subtle but important clinical sign.',
+          '<strong>Trap 4:</strong> Confusing with <strong>gastroenteritis</strong> — gastroenteritis has continuous diarrhea and no mass; intussusception has episodic colic, vomiting, and a sausage-shaped mass.',
+          '<strong>Trap 5:</strong> Delaying reduction — <strong>time is bowel</strong>; risk of gangrene increases after 24 hours.',
+          '<strong>High-yield:</strong> <strong>Currant jelly stool</strong> = late sign (sloughed mucosa + blood); do not wait for it.',
+          '<strong>High-yield:</strong> <strong>Ileocolic</strong> is the most common type (90%).',
+        ],
+      },
     ],
     checklist: [
       'Definition: Telescoping of bowel; most common cause of intestinal obstruction in 6-36 months - <strong>0.5M</strong>',
@@ -732,14 +827,20 @@ export const topics: Topic[] = [
       'Clinical: Severe episodic crying, vomiting, currant jelly stool, sausage-shaped mass, Dance sign - <strong>1M</strong>',
       'Investigations: USG target sign, X-ray obstruction, contrast enema coiled spring sign - <strong>0.5M</strong>',
       'Management: Air/contrast enema reduction (first line), surgery if peritonitis/perforation - <strong>1M</strong>',
+      'Examiner traps: Two age peaks, contraindications for enema, Dance sign, distinguish from gastroenteritis - <strong>0.5M</strong>',
       'Diagram/Flowchart - <strong>0.5M</strong>',
       'Neatness/Structure - <strong>1M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 138: Intussusception.',
     ],
   },
   {
     id: 'portal',
     shortTitle: 'Portal Hypertension',
-    prob: 'Moderate',
+    patternStrength: 'Emerging',
+    historicalFrequency: { appearances: 4, papersAnalyzed: 24, lastAppeared: '2022' },
+    confidenceNote: 'Appeared in 4 of 411 questions (1.0%). Low sample size; study for GI/hepatology completeness.',
     subject: 'GI',
     examType: 'Short Note / Essay',
     question: 'A 10-year-old child with chronic liver disease presents with hematemesis and abdominal distension. Discuss the diagnosis and management of portal hypertension. (2+3+3+2=10)',
@@ -799,23 +900,42 @@ export const topics: Topic[] = [
           'Hepatopulmonary syndrome / portopulmonary hypertension',
         ],
       },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Using <strong>selective beta-blockers</strong> (metoprolol) — must use <strong>non-selective</strong> (propranolol, nadolol) to reduce both cardiac output AND splanchnic vasodilation.',
+          '<strong>Trap 2:</strong> Giving <strong>NSAIDs</strong> for pain — contraindicated; they worsen bleeding risk and renal function.',
+          '<strong>Trap 3:</strong> Over-transfusion — target <strong>Hb 7-8 g/dL</strong> (not 10-12); over-transfusion increases portal pressure and rebleeding risk.',
+          '<strong>Trap 4:</strong> Forgetting <strong>antibiotic prophylaxis</strong> (Ceftriaxone) in acute variceal bleed — prevents SBP and reduces mortality.',
+          '<strong>Trap 5:</strong> Confusing <strong>hepatorenal syndrome</strong> with pre-renal azotemia — HRS does NOT improve with fluid challenge; pre-renal does.',
+          '<strong>High-yield:</strong> <strong>Endoscopy</strong> is the gold standard for diagnosing varices, NOT USG.',
+          '<strong>High-yield:</strong> <strong>Caput medusae</strong> = dilated periumbilical veins; recanalized paraumbilical vein.',
+          '<strong>High-yield:</strong> In children, <strong>portal vein thrombosis</strong> is the most common cause of pre-hepatic portal HTN.',
+        ],
+      },
     ],
     checklist: [
-      'Definition: Portal venous pressure &gt;10 mmHg or gradient &gt;5 mmHg - <strong>0.5M</strong>',
+      'Definition: Portal venous pressure >10 mmHg or gradient >5 mmHg - <strong>0.5M</strong>',
       'Pathophysiology: Increased resistance (pre-hepatic, hepatic, post-hepatic) + increased flow - <strong>1M</strong>',
       'Clinical: Splenomegaly, ascites, caput medusae, hematemesis/melena, encephalopathy - <strong>1M</strong>',
       'Investigations: USG Doppler, endoscopy (gold standard), CT/MRI, LFT, CBC - <strong>1M</strong>',
       'Acute bleed management: Fluids, blood, antibiotics, octreotide, endoscopic band ligation - <strong>1.5M</strong>',
       'Prevention: Beta-blockers, EBL, portosystemic shunt, liver transplant - <strong>1M</strong>',
       'Complications: Encephalopathy, SBP, hepatorenal syndrome - <strong>0.5M</strong>',
-      'Diagram/Flowchart - <strong>1M</strong>',
+      'Examiner traps: Non-selective beta-blockers, transfusion target Hb 7-8, antibiotic prophylaxis - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
       'Neatness/Structure - <strong>1M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 140: Portal Hypertension.',
     ],
   },
   {
     id: 'hus',
     shortTitle: 'HUS',
-    prob: 'Moderate',
+    patternStrength: 'Emerging',
+    historicalFrequency: { appearances: 3, papersAnalyzed: 24, lastAppeared: '2024' },
+    confidenceNote: 'Appeared in 3 of 411 questions (0.7%). Recent emergence may indicate syllabus inclusion, but sample is too small for reliable pattern.',
     subject: 'Nephrology',
     examType: 'Essay',
     question: 'A 3-year-old child presents with bloody diarrhea followed by pallor, petechiae, and decreased urine output. Discuss the diagnosis, investigations, and management of Hemolytic Uremic Syndrome. (2+3+3+2=10)',
@@ -873,7 +993,20 @@ export const topics: Topic[] = [
         list: [
           'Typical HUS: Mortality 3-5%. Most children recover fully. 30% may have long-term sequelae (proteinuria, hypertension, CKD).',
           'Atypical HUS: Poor prognosis without treatment. 50% mortality/ESRD in first year. Eculizumab has dramatically improved outcomes.',
-          'Poor prognostic factors: Atypical HUS, CNS involvement, prolonged anuria (&gt;7 days), severe thrombocytopenia.',
+          'Poor prognostic factors: Atypical HUS, CNS involvement, prolonged anuria (>7 days), severe thrombocytopenia.',
+        ],
+      },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Giving <strong>antibiotics</strong> in typical STEC-HUS — <strong>AVOID</strong>; antibiotics increase Shiga toxin release and worsen outcomes.',
+          '<strong>Trap 2:</strong> Giving <strong>platelet transfusion</strong> routinely — contraindicated unless active bleeding or invasive procedure; can worsen thrombosis.',
+          '<strong>Trap 3:</strong> Confusing with <strong>TTP</strong> — TTP has <strong>severe neurological symptoms</strong> and <strong>low ADAMTS13</strong>; HUS has <strong>bloody diarrhea + normal ADAMTS13</strong>.',
+          '<strong>Trap 4:</strong> Forgetting <strong>vaccinate against meningococcus</strong> before eculizumab — C5 inhibition increases meningococcal risk.',
+          '<strong>Trap 5:</strong> Using <strong>heparin/antiplatelets</strong> in typical HUS — no role; may worsen bleeding.',
+          '<strong>Trap 6:</strong> Missing <strong>pneumococcal HUS</strong> — occurs after pneumonia/meningitis; different management (antibiotics indicated, not contraindicated).',
+          '<strong>High-yield:</strong> <strong>Negative Coombs test</strong> = non-immune hemolysis = HUS/TTP, not autoimmune hemolytic anemia.',
+          '<strong>High-yield:</strong> <strong>Schistocytes</strong> on peripheral smear = microangiopathic hemolytic anemia = pathognomonic.',
         ],
       },
     ],
@@ -885,14 +1018,20 @@ export const topics: Topic[] = [
       'Investigations: CBC with schistocytes, low haptoglobin, high LDH, negative Coombs, stool STEC PCR, normal ADAMTS13 - <strong>1M</strong>',
       'Management: Supportive care, fluids/electrolytes, dialysis if indicated, AVOID antibiotics in STEC-HUS, eculizumab for aHUS - <strong>1.5M</strong>',
       'Prognosis: Typical - good recovery; Atypical - poor without eculizumab - <strong>0.5M</strong>',
-      'Diagram/Flowchart - <strong>1M</strong>',
+      'Examiner traps: No antibiotics in STEC-HUS, no platelet transfusion, distinguish from TTP, meningococcal vaccine before eculizumab - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
       'Neatness/Structure - <strong>1M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 169: Hemolytic Uremic Syndrome.',
     ],
   },
   {
     id: 'biliary',
     shortTitle: 'Biliary Atresia',
-    prob: 'Moderate',
+    patternStrength: 'Emerging',
+    historicalFrequency: { appearances: 2, papersAnalyzed: 24, lastAppeared: '2023' },
+    confidenceNote: 'Appeared in 2 of 411 questions (0.5%). Very low sample size. Study for neonatology completeness, not pattern confidence.',
     subject: 'GI Surgery / Hepatology',
     examType: 'Essay',
     question: 'A 3-week-old infant presents with progressive jaundice, pale stools, and dark urine. Discuss the diagnosis and management of biliary atresia. (2+3+3+2=10)',
@@ -947,10 +1086,23 @@ export const topics: Topic[] = [
       {
         title: '5. Prognosis',
         list: [
-          'Kasai success (jaundice-free) in 50-60% if performed &lt;60 days.',
+          'Kasai success (jaundice-free) in 50-60% if performed <60 days.',
           'Native liver survival: 50% at 5 years, 30% at 10 years.',
           'Overall survival with transplant: 80-90% at 5 years, 80% at 20 years.',
-          'Poor prognostic factors: Age &gt;90 days at Kasai, Type III, BASM syndrome, post-operative cholangitis, portal hypertension.',
+          'Poor prognostic factors: Age >90 days at Kasai, Type III, BASM syndrome, post-operative cholangitis, portal hypertension.',
+        ],
+      },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Calling it <strong>"physiological jaundice"</strong> beyond 14 days — ANY jaundice >14 days in a breastfed infant or >21 days in a formula-fed infant is <strong>pathological</strong> and needs workup.',
+          '<strong>Trap 2:</strong> Missing <strong>conjugated vs unconjugated</strong> hyperbilirubinemia — dark urine and pale stools = <strong>conjugated</strong> = obstructive = biliary atresia or neonatal hepatitis.',
+          '<strong>Trap 3:</strong> Delaying Kasai beyond <strong>60 days</strong> — success rate drops dramatically; timing is the single most important prognostic factor.',
+          '<strong>Trap 4:</strong> Forgetting <strong>BASM syndrome</strong> associations — polysplenia, situs inversus, malrotation, cardiac defects, preduodenal portal vein.',
+          '<strong>Trap 5:</strong> Confusing with <strong>neonatal hepatitis</strong> — both have conjugated hyperbilirubinemia; HIDA scan and liver biopsy help differentiate.',
+          '<strong>Trap 6:</strong> Not giving <strong>vitamin K</strong> pre-operatively — coagulopathy from vitamin K deficiency must be corrected before surgery.',
+          '<strong>High-yield:</strong> <strong>Acholic stools</strong> = most specific sign; stool color card screening programs use this.',
+          '<strong>High-yield:</strong> <strong>Triangular cord sign</strong> (>4 mm fibrous cone at porta hepatis) on USG = highly specific for BA.',
         ],
       },
     ],
@@ -960,16 +1112,22 @@ export const topics: Topic[] = [
       'BASM syndrome: Polysplenia, situs inversus, malrotation, cardiac defects - <strong>0.5M</strong>',
       'Clinical: Progressive jaundice, acholic stools (most specific), dark urine, hepatomegaly - <strong>1M</strong>',
       'Investigations: Conjugated hyperbilirubinemia, high GGT, USG (triangular cord sign), HIDA scan (non-visualization), liver biopsy - <strong>1M</strong>',
-      'Management: Kasai portoenterostomy &lt;60 days (critical), post-op steroids + antibiotics, liver transplant for failure - <strong>1.5M</strong>',
-      'Prognosis: 50-60% jaundice-free if &lt;60 days; 80-90% survival with transplant - <strong>0.5M</strong>',
-      'Diagram/Flowchart - <strong>1M</strong>',
+      'Management: Kasai portoenterostomy <60 days (critical), post-op steroids + antibiotics, liver transplant for failure - <strong>1.5M</strong>',
+      'Prognosis: 50-60% jaundice-free if <60 days; 80-90% survival with transplant - <strong>0.5M</strong>',
+      'Examiner traps: Jaundice >14 days = pathological, conjugated vs unconjugated, timing of Kasai, BASM syndrome - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
       'Neatness/Structure - <strong>1M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 139: Biliary Atresia.',
     ],
   },
   {
     id: 'dka',
     shortTitle: 'DKA Management',
-    prob: 'Moderate',
+    patternStrength: 'Emerging',
+    historicalFrequency: { appearances: 4, papersAnalyzed: 24, lastAppeared: '2024' },
+    confidenceNote: 'Appeared in 4 of 411 questions (1.0%). Recent increase may reflect clinical relevance, but too early to call a stable pattern.',
     subject: 'Endocrinology',
     examType: 'Essay',
     question: 'A 6-year-old child with Type 1 DM presents with polyuria, polydipsia, vomiting, abdominal pain, and Kussmaul breathing. Discuss the management of diabetic ketoacidosis. (2+3+3+2=10)',
@@ -1011,23 +1169,41 @@ export const topics: Topic[] = [
           '<strong>Cerebral Edema (most feared):</strong> Headache, bradycardia, hypertension, altered consciousness, seizures, pupillary changes. Treat with mannitol 0.5-1 g/kg or 3% hypertonic saline 5-10 mL/kg. Reduce fluid rate, elevate head.',
           '<strong>Hypoglycemia:</strong> Add dextrose to IV fluids.',
           '<strong>Hypokalemia:</strong> Aggressive K+ replacement.',
-          '<strong>Resolution criteria:</strong> BG &lt;200 mg/dL, pH &gt;7.30, HCO3 &gt;18 mEq/L, closed anion gap, ability to tolerate oral intake.',
+          '<strong>Resolution criteria:</strong> BG <200 mg/dL, pH >7.30, HCO3 >18 mEq/L, closed anion gap, ability to tolerate oral intake.',
+        ],
+      },
+      {
+        title: '🎯 Examiner Traps & High-Yield Points',
+        list: [
+          '<strong>Trap 1:</strong> Giving <strong>insulin bolus</strong> — NEVER bolus insulin in DKA; use continuous infusion 0.05-0.1 U/kg/hr ONLY. Bolus causes rapid osmotic shifts and cerebral edema.',
+          '<strong>Trap 2:</strong> Starting insulin <strong>before fluids</strong> — insulin drives K+ intracellularly; if dehydrated, this worsens hypovolemia and can cause shock. Give fluids FIRST for 1-2 hours.',
+          '<strong>Trap 3:</strong> Giving <strong>bicarbonate routinely</strong> — AVOID unless pH <6.9 with hemodynamic instability; bicarbonate can worsen cerebral edema and cause paradoxical CNS acidosis.',
+          '<strong>Trap 4:</strong> Stopping insulin when glucose normalizes — <strong>continue insulin</strong> until acidosis resolves (pH >7.30, HCO3 >18), adding dextrose to prevent hypoglycemia.',
+          '<strong>Trap 5:</strong> Forgetting <strong>potassium</strong> — DKA patients are TOTAL BODY K+ depleted despite normal/high serum K+. Add K+ once urine output is confirmed and K+ <5.5.',
+          '<strong>Trap 6:</strong> Overly rapid fluid resuscitation — increases risk of <strong>cerebral edema</strong>; replace deficit over 48 hours, not 24.',
+          '<strong>High-yield:</strong> <strong>Kussmaul breathing</strong> = deep, rapid, sighing respirations = respiratory compensation for metabolic acidosis.',
+          '<strong>High-yield:</strong> <strong>Cerebral edema</strong> = most feared complication; treat with mannitol or 3% saline.',
+          '<strong>High-yield:</strong> <strong>Serum K+ may be normal or high initially</strong> despite total body depletion — acidosis shifts K+ extracellularly.',
         ],
       },
     ],
     checklist: [
-      'Definition: Hyperglycemia (BG &gt;200) + Metabolic acidosis (pH &lt;7.30) + Ketonemia/ketonuria - <strong>0.5M</strong>',
+      'Definition: Hyperglycemia (BG >200) + Metabolic acidosis (pH <7.30) + Ketonemia/ketonuria - <strong>0.5M</strong>',
       'Pathophysiology: Insulin deficiency → hyperglycemia → lipolysis → ketogenesis → osmotic diuresis → dehydration + acidosis - <strong>1M</strong>',
       'Clinical: Polyuria, polydipsia, Kussmaul breathing, acetone breath, vomiting, abdominal pain, altered consciousness - <strong>1M</strong>',
       'Fluid: 0.9% NS 10-20 mL/kg over 1-2h, then 0.45-0.9% NS + dextrose; replace deficit over 48h - <strong>1M</strong>',
       'Insulin: 0.05-0.1 U/kg/hr IV after 1-2h of fluids; continue until acidosis resolves - <strong>1M</strong>',
-      'Potassium: Add 20-40 mEq/L once urine output confirmed and K+ &lt;5.5; hold insulin if K+ &lt;3.3 - <strong>0.5M</strong>',
-      'Bicarbonate: Avoid; only if pH &lt;6.9 with hemodynamic instability - <strong>0.5M</strong>',
+      'Potassium: Add 20-40 mEq/L once urine output confirmed and K+ <5.5; hold insulin if K+ <3.3 - <strong>0.5M</strong>',
+      'Bicarbonate: Avoid; only if pH <6.9 with hemodynamic instability - <strong>0.5M</strong>',
       'Cerebral edema: Most feared complication; mannitol or 3% saline, reduce fluids, elevate head - <strong>0.5M</strong>',
       'Monitoring: Glucose hourly, electrolytes/VBG every 2-4h, neuro checks hourly - <strong>0.5M</strong>',
-      'Resolution: BG &lt;200, pH &gt;7.30, HCO3 &gt;18, closed anion gap, oral tolerance - <strong>0.5M</strong>',
-      'Diagram/Flowchart - <strong>1M</strong>',
+      'Resolution: BG <200, pH >7.30, HCO3 >18, closed anion gap, oral tolerance - <strong>0.5M</strong>',
+      'Examiner traps: No insulin bolus, fluids before insulin, no routine bicarbonate, continue insulin until acidosis resolves, K+ management - <strong>0.5M</strong>',
+      'Diagram/Flowchart - <strong>0.5M</strong>',
       'Neatness/Structure - <strong>1M</strong>',
+    ],
+    references: [
+      'Marcdante KJ, Kliegman RM. Nelson Essentials of Pediatrics. 8th ed. Philadelphia: Elsevier; 2019. Chapter 175: Diabetes Mellitus.',
     ],
   },
 ];

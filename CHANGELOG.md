@@ -5,6 +5,19 @@ All notable changes to PedsIQ will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-05-01
+
+### Added
+- **Examiner Traps & High-Yield Points** sections added to all 12 structured answer topics
+  - Each topic now includes 5-6 common examiner traps with bold explanations
+  - High-yield clinical pearls for rapid recall
+  - Checklists updated to include examiner trap marks (0.5M each)
+- **AGN vs Nephrotic Syndrome** comparison table (9-feature grid)
+- **Neonatal vs Childhood features** comparison table for Hypothyroidism
+- **SafeHtml component** to replace XSS-prone `dangerouslySetInnerHTML`
+- Mobile layout fixes: scrollable filter buttons, responsive padding, stacked flowcharts
+- Print CSS fixes: scoped `.no-print` class
+
 ## [2.0.0] - 2025-05-01
 
 ### Major Rewrite
