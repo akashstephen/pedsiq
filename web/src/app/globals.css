@@ -45,6 +45,15 @@ body {
   background: rgba(255,255,255,0.2);
 }
 
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @media print {
   @page {
     size: A4;
@@ -58,9 +67,8 @@ body {
     line-height: 1.5;
   }
 
-  /* Hide sidebar and mobile toggle */
-  aside,
-  button[aria-label="Toggle navigation"] {
+  /* Hide elements marked as no-print */
+  .no-print {
     display: none !important;
   }
 
@@ -102,8 +110,4 @@ body {
     color: #111 !important;
   }
 
-  /* Hide filter buttons and print button on print */
-  button {
-    display: none !important;
-  }
 }

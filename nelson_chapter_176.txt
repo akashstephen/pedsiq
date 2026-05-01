@@ -1,0 +1,1599 @@
+
+--- PAGE 692 ---
+670
+SECTION 23  Endocrinology
+The etiology of rickets usually can be determined by an assess-
+ment of the mineral and vitamin D status (25-hydroxyvitamin D 
+<8 ng/mL suggests nutritional vitamin D deficiency) (see Table 
+176.1). Further testing of mineral balance or measurement of 
+other vitamin D metabolites may be required.
+Several forms of vitamin D can be used for treatment 
+of the different rachitic conditions, but their potencies 
+vary widely. Required dosages depend on the condition 
+being treated (see Chapter 31). Rickets may also be treated 
+with 1,25-hydroxyvitamin D and supplemental calcium. In 
+hypophosphatemic rickets, phosphate supplementation (not 
+calcium) must accompany vitamin D therapy, which is given 
+to suppress secondary hyperparathyroidism. Adequate therapy 
+restores normal skeletal growth and produces resolution of the 
+radiographic signs of rickets. Nutritional rickets is treated with 
+vitamin D given as a single large weekly dose or multiple smaller 
+replacement doses. Surgery may be required to straighten legs 
+in untreated patients with long-standing disease.
+CHAPTER 177 
+Disorders of Sexual 
+Development
+NORMAL SEXUAL DEVELOPMENT
+The successive sequence of chromosomal sex, gonadal sex, and 
+phenotypic sex leads to gender identity of the individual. Genes 
+usually determine the morphology of internal organs and of 
+gonads (gonadal sex); this directs the appearance of the external 
+genitalia that form the secondary sex characteristics (phenotypic 
+sex); self-perception of the individual (gender identity) and 
+the perception of the individual by others (gender role) follow. 
+In most children, these features blend and conform, but, in 
+some patients, one or more features may not follow this 
+sequence, leading to the disorder of sexual development (DSD; 
+see Chapter 23).
+The internal and external genitalia are formed between 6 
+and 13 weeks of gestation. Fetal gonad and external genitalia 
+are bipotential and have the capacity to support development 
+of a normal male or female phenotype (Fig. 177.1). In the 
+presence of a gene called SRY for sex-determining region on 
+the Y chromosome, the primitive fetal gonad differentiates 
+into a testis (Fig. 177.2). The Leydig cells of the testis secrete 
+serum 25-hydroxyvitamin D. Renal function is assessed by a 
+serum creatinine measurement or determination of creatinine 
+clearance (Table 176.1).
+Treatment of severe tetany or seizures resulting from hypo-
+calcemia consists of intravenous calcium gluconate (1-2 mL/kg of 
+a 10% solution) given slowly over 10 minutes while cardiac status 
+is monitored by electrocardiogram for bradycardia, which can 
+be fatal. Long-term treatment of hypoparathyroidism involves 
+administering vitamin D, preferably as 1,25-dihydroxyvitamin 
+D and calcium. Therapy is adjusted to keep the serum calcium 
+in the lower half of the normal range to avoid episodes of 
+hypercalcemia that might produce nephrocalcinosis and to 
+avoid pancreatitis.
+RICKETS
+TABLE 176.1  Important Physiological Changes in Bone and Mineral Diseases
+CONDITION
+CALCIUM
+PHOSPHATE
+PARATHYROID 
+HORMONE
+25(OH)D
+Primary hypoparathyroidism
+↓
+↑
+↓
+Nl
+Pseudohypoparathyroidism
+↓
+↑
+↑
+Nl
+Vitamin D deficiency
+Nl(↓)
+↓
+↑
+↓
+Familial hypophosphatemic rickets
+Nl
+↓
+Nl (sl↑)
+Nl
+Hyperparathyroidism
+↑
+↓
+↑
+Nl
+Immobilization
+↑
+↑
+↓
+Nl
+25(OH)D, 25-Hydroxyvitamin D; Nl, normal; sl, slight; ↑, high; ↓, low.
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Hypocalcemia
+Rickets is defined as decreased or defective bone mineralization 
+in growing children; osteomalacia is the same condition in 
+adults. The proportion of osteoid (the organic portion of bone) 
+is excessive. As a result, the bone becomes soft and the metaphy-
+ses of the long bones widen. In older infants, poor linear growth, 
+bowing of the legs on weight bearing (which can be painful), 
+thickening at the wrists and knees, and prominence of the 
+costochondral junctions (rachitic rosary) of the rib cage occur. 
+At this stage, x-ray findings are diagnostic.
+In nutritional vitamin D deficiency calcium is not absorbed 
+adequately from the intestine (see Chapter 31). Poor vitamin 
+D intake or avoidance of sunlight in infants (exacerbated by 
+those exclusively breastfed) may contribute to the develop-
+ment of rickets. Fat malabsorption resulting from hepatobiliary 
+disease (biliary atresia, neonatal hepatitis) or other causes (cystic 
+fibrosis) also may produce vitamin D deficiency because vitamin 
+D is a fat-soluble vitamin. Defects in vitamin D metabolism 
+by the kidney (renal failure, autosomal recessive deficiency 
+of 1α-hydroxylation, vitamin D-dependent rickets) or liver 
+(defect in 25-hydroxylation) also can cause rickets.
+In familial hypophosphatemic rickets, the major defect is 
+failure of the kidney to adequately reabsorb filtered phosphate so 
+that serum phosphate decreases and urinary phosphate is high. 
+The diagnosis of this X-linked disease usually is made within 
+the first few years of life and is typically more severe in males.
+
+--- PAGE 693 ---
+671
+CHAPTER 177  Disorders of Sexual Development
+absence of SRY, an ovary spontaneously develops from the 
+bipotential, primitive gonad. In the absence of fetal testicular 
+secretion of müllerian-inhibitory substance, a normal uterus, 
+fallopian tubes, and posterior third of the vagina develop out of 
+the müllerian ducts, and the wolffian ducts degenerate. In the 
+total absence of androgens, the external genitalia appear female.
+Classification
+The terminology for conditions associated with variations in 
+sexual development is evolving. Sometimes referred to as 
+intersex, disorders of sex differentiation, or differences of sex 
+development, DSDs are categorized under three main subgroups 
+according to karyotype (XX, XY, and sex chromosome for 
+mosaic karyotypes).
+testosterone, which has direct effects (stimulating development 
+of the wolffian ducts) but also is locally converted to dihydrotes-
+tosterone (DHT) by the 5α-reductase enzyme. DHT causes 
+enlargement, rugation, and fusion of the labioscrotal folds into 
+a scrotum; fusion of the ventral surface of the penis to enclose 
+a penile urethra; and enlargement of the phallus with ultimate 
+development of male external genitalia. Testicular production 
+and secretion of müllerian-inhibitory substance by Sertoli cells 
+cause the regression and disappearance of the müllerian ducts 
+and their derivatives, such as the fallopian tubes and uterus. 
+In the presence of testosterone, the wolffian ducts develop into 
+the vas deferens, seminiferous tubules, and prostate.
+The female phenotype develops unless specific male influences 
+alter development, although recent studies find there are female 
+determining genes necessary for development as well. In the 
+Genital tubercle
+Urethral folds
+Urogenital slit
+Labioscrotal swelling
+Anal pit
+Tail
+16.8 mm
+Glans
+Genital tubercle
+Urogenital slit
+Urethral folds
+Labioscrotal
+swelling
+Anus
+Glans penis
+Clitoris
+Urethral meatus
+Labia minora
+Vaginal orifice
+Labia majora
+Raphe
+Scrotum
+Anus
+49.0 mm
+45.0 mm
+FIGURE 177.1  Differentiation of male and female external genitalia as proceeding from a common 
+embryonic anlage. Testosterone acts at 9-13 weeks of gestation to virilize the bipotential anlage. In 
+the absence of testosterone action, the female phenotype develops. (From Grumbach MM, Conte 
+FA. Disorders of sexual differentiation. In: Wilson JD, Foster DW, eds. Textbook of Endocrinology. 
+8th ed. Philadelphia: WB Saunders; 1990:873; modified from Spaulding MH, Contrib Embryol Instit. 
+1921;13:69–88.)
+
+--- PAGE 694 ---
+672
+SECTION 23  Endocrinology
+common cause of female ambiguous genitalia; it is most com-
+monly the result of an enzyme deficiency that impairs synthesis 
+of glucocorticoids, but does not affect androgen production. 
+The impaired cortisol secretion leads to adrenocorticotropic 
+hormone (ACTH) hypersecretion, which stimulates hyperplasia 
+of the adrenal cortex and excessive adrenal production of 
+androgens (see Chapter 178).
+46,XY Disorders of Sexual Development
+ABNORMAL SEXUAL DEVELOPMENT
+46,XX Disorders of Sexual Development
+Testosterone
+Masculinization
+of
+urogenital sinus
+and
+external genitalia
+Androgen-
+sensitive
+cell
+Antimüllerian
+hormone
+Retrogression
+of
+müllerian ducts
+HCG (LH)
+SRY
+XY
+Testes
+Leydig cells
+Seminiferous
+tubules
+(Sertoli cells)
+Transcription
+and translation
+Dihydrotestosterone
+DHT: Androgen
+receptor
+FIGURE 177.2  A diagrammatic scheme of male sex determination 
+and differentiation. SRY is the master gene controlling male sex dif-
+ferentiation, but there are many other genes and their products that 
+control male and female sexual differentiation. DHT, Dihydrotestos-
+terone; HCG, human chorionic gonadotropin; LH, luteinizing hormone; 
+SRY, the gene for the testis-determining factor. (From Wilson JD, 
+Foster DW, eds. Williams Textbook of Endocrinology. 8th ed. Phila-
+delphia: WB Saunders; 1992:918.)
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Hypertension
+Amenorrhea
+Precocious Puberty in the Male
+Precocious Puberty in the Female
+Ambiguous Genitalia
+Alkalemia
+TABLE 177.1  Causes of Virilization in the Female
+CONDITION
+ADDITIONAL FEATURE(S)
+P-450c21 deficiency (21 hydroxylase)
+Salt loss in some
+3β-Hydroxysteroid dehydrogenase 
+deficiency
+Salt loss
+P-450c11 deficiency (11 hydroxylase)
+Salt retention/hypertension
+Androgenic drug exposure (e.g., 
+progestins)
+Exposure between 9 and 12 
+weeks of gestation
+Mixed gonadal dysgenesis or 
+mosaic Turner syndrome
+Karyotype = 46,XY/45,X
+Ovotesticular DSD
+Testicular and ovarian tissue 
+present
+Maternal virilizing adrenal or 
+ovarian tumor
+Rare, positive history
+DSD, Disorder of sexual development.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Amenorrhea
+Pubertal Delay
+Ambiguous Genitalia
+Gynecomastia
+Masculinization of the external genitalia of genotypic females 
+(except for isolated enlargement of the clitoris, which can occur 
+from later androgen exposure) is always caused by the presence 
+of excessive androgens during the critical period of development 
+(8-13 weeks of gestation) (Table 177.1). The degree of virilization 
+can range from mild clitoral enlargement to the appearance of 
+a male phallus with a penile urethra and fused scrotum with 
+raphe. Congenital virilizing adrenal hyperplasia is the most 
+Underdevelopment of the male external genitalia occurs because 
+of a relative deficiency of testosterone production or action 
+(Table 177.2). The penis is small, with various degrees of 
+hypospadias (penile or perineal) and associated chordee or 
+ventral binding of the phallus; unilateral, but more often bilateral, 
+cryptorchidism may be present. The testes should be sought 
+carefully in the inguinal canal or labioscrotal folds by palpation 
+or ultrasound. Rarely a palpable gonad in the inguinal canal 
+or labioscrotal fold represents a herniated ovary or an ovotestis. 
+The latter patients have ovarian and testicular tissue and usually 
+ambiguous external genitalia. Production of testosterone by a 
+gonad implies that testicular tissue is present and that at least 
+some cells carry the SRY gene.
+Testosterone production can be reduced by specific deficien-
+cies of the enzymes needed for androgen biosynthesis or by 
+dysplasia of the gonads. In the latter, if müllerian-inhibiting 
+substance production also is reduced, a rudimentary uterus 
+and fallopian tubes are present.
+The complete form of androgen resistance or androgen 
+insensitivity syndrome is the most dramatic example of resis-
+tance to hormone action by defects in the androgen receptor. 
+Affected patients have a 46,XY karyotype, normally formed testes 
+
+--- PAGE 695 ---
+673
+CHAPTER 177  Disorders of Sexual Development
+APPROACH TO THE INFANT WITH  
+GENITAL AMBIGUITY
+(usually located in the inguinal canal or labia majora), and female 
+external genitalia with a short vagina and no internal müllerian 
+structures. At the time of puberty, testosterone concentrations 
+increase to normal or above normal male range. Because a 
+portion of the testosterone is normally converted to estradiol 
+in peripheral tissues and the estrogen cannot be opposed by 
+the androgen, breast development ensues at the normal age of 
+puberty without growth of pubic, facial, or axillary hair or the 
+occurrence of menstruation.
+5α-Reductase deficiency presents at birth with predomi-
+nantly female phenotype or with ambiguous genitalia, including 
+perineoscrotal hypospadias. The defect is in 5α reduction of 
+testosterone to its metabolite DHT. At puberty, spontaneous 
+secondary male sexual development occurs.
+Sex Chromosome and Ovotesticular Disorders 
+of Sexual Development
+TABLE 177.2  Causes of Inadequate Masculinization in 
+the Male
+CONDITION
+ADDITIONAL FEATURE(S)
+P-450scc (StAR) deficiency
+Salt loss
+3β-Hydroxysteroid 
+dehydrogenase deficiency
+Salt loss
+P-450c17 deficiency
+Salt retention/hypokalemia/
+hypertension
+Isolated P-450c17 deficiency with 
+17,20-desmolase deficiency
+Adrenal function normal
+17β-Hydroxysteroid 
+oxidoreductase deficiency
+Adrenal function normal
+Dysgenetic testes
+Possible abnormal karyotype; 
+possible mutations in DAX1, 
+SOX9, GATA4, WT1
+Leydig cell hypoplasia
+Rare
+Complete androgen 
+insensitivity
+Female external genitalia, 
+absence of müllerian structures
+Partial androgen insensitivity
+As previous with ambiguous 
+external genitalia
+5α-Reductase deficiency
+Autosomal recessive, virilization 
+at puberty
+StAR, Steroid acute regulatory protein.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Short Stature
+Pubertal Delay
+Gynecomastia
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Pubertal Delay
+Ambiguous Genitalia
+Turner syndrome and Klinefelter syndrome and their mosaic 
+variants are classified as sex chromosome DSD. Mixed gonadal 
+dysgenesis (45,X; 46,XY) often may present with genital ambigu-
+ity, asymmetric external genitalia, and inguinal hernias. There 
+may be virilization on one side and none on the other. Similar 
+findings may be seen with ovotesticular DSD, another classifica-
+tion of DSD.
+Ambiguous genitalia in a newborn must be attended to with 
+as little delay as possible and with informed sensitivity to the 
+psychosocial context as required. The laboratory evaluations 
+required might take days or weeks to complete, delaying a sex 
+assignment and naming of the infant, such that choice often 
+precedes diagnosis. Beyond infancy and childhood, and to offset 
+any gender uncertainty in the patient and confusion in the 
+parents, health care providers must help families come to an 
+appropriate closure and gender choice. With that, most centers 
+caring for patients with ambiguous genitalia include a behavioral 
+health specialist with a focus on patients and families encounter-
+ing these issues.
+On physical examination, it is essential to note where the 
+urethral opening lies and whether there is fusion of the anterior 
+portion of the labioscrotal folds. Endogenous excessive produc-
+tion of androgen (as in congenital adrenal hyperplasia [CAH]) 
+in a female fetus between 9 and 13 weeks of gestation leads to 
+ambiguous genitalia. If the vaginal opening is normal, and there 
+is no fusion, but the clitoris is enlarged without ventral fusion 
+of the ventral urethra, the patient likely had later exposure 
+to androgens. In a patient with a fully formed scrotum, even 
+if small, and a normally formed but small penis, termed a 
+microphallus, the patient likely had normal exposure to and 
+action of androgen during 9-13 weeks of gestation.
+The major goal is a rapid identification of any life-threatening 
+disorders (salt loss and shock caused by the salt-losing form 
+of CAH). Although the classic approach to sex assignment 
+has been based on the feasibility of genital reconstruction 
+and potential fertility rather than on karyotype or gonadal 
+histology, the effects of prenatal androgen must be considered. 
+Experts recommend waiting until the child is able to be part 
+of the dialogue regarding gender identity and reconstruction 
+when appropriate. Present management of ambiguous genitalia 
+involves extensive open discussion with parents involving 
+the biology of the infant and the likely prognosis. Treatment 
+should be individualized and managed by a team, including an 
+experienced pediatric endocrinologist, urologist or gynecologist, 
+psychologist, geneticist, and the primary care physician.
+Diagnosis
+The first step toward diagnosis is to determine whether the 
+findings represent virilization of a genetic female (androgen 
+excess) or underdevelopment of a genetic male (androgen 
+deficiency; see Fig. 177.2). Inguinal gonads that are evident on 
+palpation usually are testes and indicate that incomplete develop-
+ment of a male phenotype has occurred; this pattern is not 
+consistent, and ovaries and ovotestes may feel similar. Similarly, 
+absence of female internal genitalia (detected by ultrasound) 
+implies that müllerian-inhibiting substance was present and 
+secreted by fetal testes. Karyotype determination is only one 
+
+--- PAGE 696 ---
+674
+SECTION 23  Endocrinology
+(end product is cortisol), and an inner reticularis (synthesizes 
+sex steroids). The general scheme of these synthetic steps is 
+shown in Fig. 178.1.
+Hypothalamic corticotropin-releasing hormone (CRH) 
+stimulates the release of pituitary adrenocorticotropic hormone 
+(ACTH or corticotropin), derived by selective processing from 
+pro-opiomelanocortin. ACTH governs the synthesis and release 
+of cortisol and adrenal androgens. Primary adrenal insufficiency 
+or cortisol deficiency from any defect in the adrenal gland results 
+in an oversecretion of ACTH; adrenal insufficiency may also 
+occur from ACTH (secondary) or CRH (tertiary) deficiency, 
+resulting in low serum ACTH concentrations and low cortisol. 
+Endogenous (or exogenous) glucocorticoids feedback to inhibit 
+ACTH and CRH secretion. The renin-angiotensin system and 
+potassium regulate aldosterone secretion; ACTH has little effect 
+on aldosterone production except in excess, when it may increase 
+aldosterone secretion.
+Steroids that circulate in the free form (not bound to cortisol-
+binding protein [transcortin]) may cross the placenta from 
+mother to fetus, but ACTH does not. The placenta plays an 
+important role in steroid biosynthesis in utero by acting as a 
+metabolic mediator between mother and child. As the fetal 
+CRH-ACTH-adrenal axis is operational in utero, any deficiencies 
+in cortisol synthesis lead to excessive ACTH secretion. If a viril-
+izing adrenal enzyme defect is present, such as 21-hydroxylase 
+deficiency, the fetal adrenal gland secretes excess androgens, 
+resulting in a virilized fetus. Normal variation of serum cortisol 
+and ACTH levels leads to values that are high early in the 
+morning and lower at night. This normal diurnal variation may 
+take months to years to fully develop in neonates.
+ADRENAL INSUFFICIENCY
+of many factors needed to assist the family in the decision of 
+sex of rearing; the SRY gene may be found on chromosomes 
+other than the Y chromosome, and, conversely, a Y chromosome 
+may lack an SRY gene (it may have been translocated to an X 
+chromosome, leading to the development of a 46,XX male-XX 
+sex reversal, testicular DSD).
+Statistically, most virilized females have CAH; 90% of 
+these females have 21-hydroxylase deficiency. The diagnosis 
+is established by measuring the plasma concentration of 
+17-hydroxyprogesterone and androstenedione (see Chapter 178), 
+which typically is hundreds of times above the normal range. 
+Other enzymatic defects also may be diagnosed by quantifying 
+circulating levels of the adrenal steroid precursor proximal to 
+the defective enzyme block.
+Establishing an accurate diagnosis is more difficult in under-
+developed males. When certain types of adrenal hyperplasia 
+coexist with defects in androgen production of the testes, 
+excessive ACTH secretion elevates substantially levels of specific 
+adrenal steroid precursors, allowing a diagnosis. If the defect 
+is restricted to testosterone biosynthesis, the measurement 
+of testosterone and its precursors in the basal state and after 
+stimulation by HCG may be required. Patients with normal levels 
+of testosterone either have persistent androgen resistance or have 
+had an interruption of normal morphogenesis of the genitalia. 
+Abnormalities of the sex chromosomes may be associated with 
+dysgenetic gonads, which may be associated with persistence 
+of müllerian structures.
+Treatment
+Treatment consists of replacing deficient hormones (cortisol 
+in adrenal hyperplasia or testosterone in a child with androgen 
+biosynthetic defects who will be raised as male), surgical restora-
+tion to make the individual look more appropriate for the gender 
+of rearing, and psychological support of the whole family. 
+Gonads and internal organs discordant for the gender of rearing 
+may be removed. Dysgenetic gonads with Y-genetic material 
+always should be removed because gonadoblastomas or 
+dysgerminomas may develop in the organ. Age at which 
+reconstructive surgery is recommended is controversial; some 
+advocate that surgery not be performed in infancy or early 
+childhood so that the child or young adolescent can be involved 
+in the decision. A decision for gender of rearing is recommended 
+from birth; however, the knowledge that the person with a 
+DSD may change gender later on is shared with parents from 
+the outset.
+CHAPTER 178 
+Adrenal Gland Dysfunction
+PHYSIOLOGY
+The adrenal gland consists of an outer cortex, which is respon-
+sible for the synthesis of steroids, and an inner medulla derived 
+from neuroectodermal tissue, which synthesizes catecholamines. 
+The adrenal cortex consists of three zones: an outer glomerulosa 
+(end product is the mineralocorticoid aldosterone, which 
+regulates sodium and potassium balance), a middle fasciculata 
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Ambiguous Genitalia
+Hyponatremia
+Hyperkalemia
+The clinical manifestations of inadequate adrenal function 
+result from inadequate secretion or action of glucocorticoids, 
+mineralocorticoids, or both (Table 178.1). In the case of enzyme 
+defects that affect the gonad and the adrenal gland, overproduc-
+tion or underproduction of potent androgens can occur 
+depending on the site of enzyme blockade (see Fig. 178.1). 
+Progressive prenatal virilization of the external genitalia may 
+occur in females while incomplete virilization may occur in 
+males. Ambiguity of the external genitalia is a common mani-
+festation of disordered fetal adrenal enzyme function. Precise 
+diagnosis is essential for the prescription of appropriate therapy, 
+long-term outlook, and genetic counseling. In patients with 
+enzyme defects, an elevation in the precursor steroid is present 
+proximal to the enzyme block and is metabolized through 
+remaining normal alternate enzyme pathways, whereas a 
+deficiency of steroids is present subsequent to the block.
+The dominant clinical features of congenital adrenal min-
+eralocorticoid deficiency are hyponatremia and hyperkalemia, 
+usually developing by 5-7 days after birth but not immediately 
+after birth. Vomiting, dehydration, and acidosis soon follow as 
+
+--- PAGE 697 ---
+675
+CHAPTER 178  Adrenal Gland Dysfunction
+in childhood, adolescence, or even young adulthood (not 
+as glucocorticoid or mineralocorticoid deficiencies, but as 
+androgen excess).
+In patients with congenital adrenal hypoplasia or adrenal 
+hemorrhage, the secretion of all adrenal steroids is low. In 
+contrast, CAH leads to a diagnostic steroid pattern in blood 
+and urine (see Fig. 178.1). Deficiency of 21-hydroxylase is the 
+most common form (95%) and serves as a paradigm for these 
+disorders.
+21-HYDROXYLASE DEFICIENCY
+does hypotensive shock from glucocorticoid deficiency. Death 
+may occur if the disorder remains undiagnosed and untreated. 
+In females, the ambiguity of the external genitalia is an obvious 
+clue that salt-losing congenital adrenal hyperplasia (CAH) or 
+simple virilizing CAH must be ruled out. Because these forms 
+cannot be distinguished clinically, all presentations of ambiguous 
+genitalia should involve evaluation for mineralocorticoid defi-
+ciency. In males, 21-hydroxylase deficiency (the most common 
+form of CAH) does not cause abnormal genitalia; although 
+there may be hyperpigmentation of the scrotal skin, this is a 
+subtle sign and can result in delayed diagnosis. In all infants, 
+the diagnosis of adrenal insufficiency may be overlooked or 
+confused with pyloric stenosis. In pyloric stenosis, vomiting 
+of stomach contents results in hypochloremia, low or normal 
+serum potassium, and alkalosis in contrast to CAH, which 
+has hyponatremia, hyperkalemia, and acidosis. This distinction 
+may be lifesaving in preventing unnecessary investigations or 
+inappropriate therapy.
+Not all forms of adrenal hyperplasia present at birth; 
+the spectrum of disorder ranges from severe (classic) to 
+mild (late-onset) or nonclassic. Milder forms may manifest 
+FIGURE 178.1  Diagram of the steroid biosynthetic pathways and the biosynthetic defects that 
+result in congenital hyperplasia. The defect in patients with lipoid adrenal hyperplasia is not (except 
+for one reported case) in the CYP11A1 (cholesterol side-chain cleavage) enzyme, but in StAR, the 
+steroidogenic acute regulatory protein. This protein is involved in the transport of cholesterol from 
+the outer mitochondrial membrane to the inner membrane, where the CYP11A1 enzyme is located. 
+CYP11B1 (11β-hydroxylase) catalyzes 11β-hydroxylation of deoxycorticosterone and 11β-deoxycortisol 
+primarily. CYP17 (17α-hydroxylase/17,20-lyase) catalyzes 17α-hydroxylation and splitting of the 17,20 
+bond, but for the latter it has preferential D5-17,20-lyase activity. CYP19 (aromatase) catalyzes the 
+conversion of corticosterone to aldosterone. 3β-HSD I and 3β-HSD II, 3β-hydroxysteroid 
+dehydrogenase/Δ4,5-isomerase types I and II; CYP21 (P450c21), 21-hydroxylase; 17β-HSD 3, 
+17β-hydroxysteroid dehydrogenase type 3. In the human, deletion of a homozygous null mutation of 
+CYP11A (P450ccc) is probably lethal in utero, but a heterogeneous mutation caused congenital lipoid 
+adrenal hyperplasia. (From Melmed S, Polonsky K, Kronenberg H, et al, eds. Williams Textbook of 
+Endocrinology. 10th ed. Philadelphia: Saunders; 2003:917.)
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Hypertension
+Precocious Puberty in the Male
+Precocious Puberty in the Female
+Ambiguous Genitalia
+Hirsutism
+
+--- PAGE 698 ---
+676
+SECTION 23  Endocrinology
+Therapy must be adjusted throughout childhood at regular 
+intervals. Overtreatment will cause growth stunting and weight 
+gain (cushingoid features), whereas undertreatment will cause 
+excessive height gain, skeletal advance, and early appearance 
+puberty, ultimately jeopardizing adult height potential.
+Late-onset CAH is typically noted years after birth. Affected 
+subjects have milder manifestations without ambiguous genitalia, 
+but they may have acne, hirsutism, and, in girls, irregular 
+menstrual cycles or amenorrhea. Late-onset CAH in girls may 
+be confused with polycystic ovarian syndrome.
+Biochemical diagnostic studies show elevated levels of 
+serum 17-OHP, the substrate for the defective 21-hydroxylase 
+enzyme activity. In newborns with CAH, the values are elevated 
+a 100-fold to a 1,000-fold. In late-onset CAH, an ACTH stimula-
+tion test may be necessary to show an abnormally high response 
+of 17-OHP. Serum cortisol and aldosterone levels (in salt losers) 
+are low and renin levels are high, whereas the testosterone level 
+is elevated because it is derived from 17-OHP.
+The goals of treatment are to achieve normal linear growth 
+and bone age advancement. Long-term therapy consists of 
+providing glucocorticoids at a dose of approximately 10-15 mg/
+m2/24 hr in three divided doses of oral hydrocortisone or its 
+equivalent. Mineralocorticoid therapy for salt losers consists 
+of fludrocortisone at a dose of 0.1-0.2 mg/24 hr, often with 
+sodium chloride supplementation in infancy and early child-
+hood. Surgical correction of ambiguous external genitalia may 
+be considered. The adequacy of glucocorticoid replacement 
+therapy is monitored by determining serum concentrations of 
+adrenal precursors, including androstenedione and 17-OHP 
+for 21-hydroxylase deficiency. In addition, the assessment of 
+linear growth and skeletal age, by bone age determination, is 
+required as a reflection of appropriate therapy. To avoid adrenal 
+insufficiency, threefold higher doses of glucocorticoids are given 
+during stressful states, such as febrile illnesses and surgery. 
+Intramuscular hydrocortisone is used in severe emergencies or 
+with illnesses involving emesis. Mineralocorticoid therapy is 
+monitored with serum sodium, potassium, and plasma renin 
+activity levels. Prenatal treatment with dexamethasone to sup-
+press fetal ACTH-induced androgen production can reduce 
+or eliminate the ambiguity of the external genitalia in affected 
+female fetuses, if begun at approximately 7 weeks of gestation; 
+however, this remains controversial.
+OTHER ENZYME DEFECTS
+Other enzyme defects are rare in contrast to 21-hydroxylase 
+deficiency. In 11-hydroxylase deficiency, the next most common 
+cause of CAH, virilization occurs with salt retention and 
+hypokalemia as a result of the buildup of deoxycorticosterone 
+(see Fig. 178.1), a potent mineralocorticoid. Hypertension 
+develops as a result of excessive mineralocorticoid production. 
+Table 178.2 summarizes the clinical and biochemical features 
+of adrenal insufficiency in infancy.
+ADDISON DISEASE
+The incidence of classic 21-hydroxylase deficiency is about 1 
+in 15,000 among various white populations. Nonclassic CAH 
+may occur with an incidence of 1 in 50 in certain populations. 
+The gene for 21-hydroxylase lies on the short arm of chromo-
+some 6; the genotype may be determined in a proband, permit-
+ting prenatal diagnosis in a subsequent pregnancy.
+Deficient 21-hydroxylase activity (P-450c21 deficiency) 
+impairs the conversion of 17-hydroxyprogesterone (17-OHP) 
+to 11-deoxycortisol and in the salt-losing form, of progesterone 
+to deoxycorticosterone, a mineralocorticoid proximal in the 
+pathway to the production of aldosterone. The decreased 
+production of cortisol causes hypersecretion of ACTH, which 
+stimulates the synthesis of steroids immediately proximal to the 
+block and shunting of these to overproduction of androgens. 
+The primary clinical manifestation is the virilization of the 
+external genitalia of the affected female fetus. The development 
+of the uterus, ovaries, and fallopian tubes are unaffected by 
+the androgens. The degree of virilization varies, ranging from 
+mild clitoromegaly to complete fusion of labioscrotal folds, 
+with severe clitoromegaly simulating a phallus (see Chapter 
+177). A male infant with this defect appears normal at birth, 
+although penile enlargement may be apparent thereafter. The 
+deficiency in aldosterone, found in about 75% of patients, causes 
+salt wasting with shock and dehydration until the diagnosis is 
+established and appropriate treatment is given.
+The treatment of 21-hydroxylase deficiency requires hydro-
+cortisone and fludrocortisone in the case of the salt-losing form. 
+TABLE 178.1  Clinical Manifestations of Adrenal 
+Insufficiency
+Cortisol deficiency
+  Hypoglycemia
+  Inability to withstand stress
+  Vasomotor collapse
+  Hyperpigmentation (in primary adrenal insufficiency with excess 
+of adrenocorticotropic hormone)
+  Apneic spells
+  Muscle weakness, fatigue
+Aldosterone deficiency
+  Hyponatremia
+  Hyperkalemia
+  Vomiting
+  Urinary sodium wasting
+  Salt craving
+  Acidosis
+  Failure to thrive
+  Volume depletion
+  Hypotension
+  Dehydration
+  Shock
+  Diarrhea
+  Muscle weakness
+Androgen excess or deficiency (caused by adrenal enzyme defect)
+Ambiguous genitalia in certain conditions
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Hyponatremia
+Hyperkalemia
+
+--- PAGE 699 ---
+677
+CHAPTER 178  Adrenal Gland Dysfunction
+TABLE 178.2  Clinical and Biochemical Features in Newborn Adrenal Insufficiency
+FEATURE
+ELECTROLYTE 
+DISTURBANCE*
+AMBIGUOUS GENITALIA
+SERUM 
+CORTISOL
+URINE 
+11-DEOXYCORTISOL
+17-OHP
+DHEA
+ALDOSTERONE
+17-OHCS
+17-KS
+PREGNANETRIOL
+VIRILIZED 
+FEMALE
+UNDERVIRILIZED 
+MALE
+Hypoplasia
+Severe
+No
+No
+D
+D
+D
+D
+D
+D
+D
+D
+Hemorrhage
+Moderate to 
+severe
+No
+No
+D
+D
+D
+D
+D
+D
+D
+D
+StAR deficiency
+Severe
+No
+Yes
+D
+D
+D
+D
+D
+D
+D
+D
+3β-HSD
+Severe
+Yes
+Yes
+D
+D
+D
+I
+D
+D
+I
+D
+P-450c21 deficiency
+Absent to severe
+Yes
+No
+D
+D
+I
+I
+D
+D
+I
+I
+Aldosterone 
+synthesis block
+Severe
+No
+No
+Nl
+Nl
+Nl
+Nl
+D
+Nl
+Nl
+Nl
+Pseudohypo­
+aldosteronism
+Severe
+No
+No
+Nl
+Nl
+Nl
+Nl
+I
+Nl
+Nl
+Nl
+P-450c11 deficiency
+None
+Yes
+No
+D
+I
+Nl or I
+Nl
+D
+I
+I
+Nl-sl I
+P-450c17 deficiency
+†
+No
+Yes
+D
+Nl-D
+D
+D
+Nl-D
+D
+D
+D
+Unresponsiveness 
+to ACTH
+†
+No
+No
+D
+Nl-D
+Nl-D
+Nl-D
+Nl-D
+D
+D
+Nl-D
+*Usually manifested after 5 days of age.
+†High normal Na+ and low normal to low K+.
+17-KS, 17-Ketosteroid; 17-OHCS, 17-hydroxycorticosteroid; ACTH, adrenocorticotropic hormone; D, decrease; HSD, hydroxysteroid dehydrogenase; I, increase; Nl, normal; StAR, steroid acute regulatory protein.
+
+--- PAGE 700 ---
+678
+SECTION 23  Endocrinology
+Classic clinical manifestations of Cushing syndrome in children 
+include progressive central or generalized obesity, marked failure 
+of longitudinal growth, hirsutism, weakness, a nuchal fat pad, 
+acne, striae, hypertension, and often hyperpigmentation when 
+ACTH is elevated. The most frequent cause is long-term 
+administration of exogenous glucocorticoids due to chronic 
+medical conditions. Endogenous causes include adrenal 
+adenoma, carcinoma, nodular adrenal hyperplasia, an ACTH-
+secreting pituitary microadenoma resulting in bilateral adrenal 
+hyperplasia (Cushing disease), or an extremely rare ACTH-
+secreting tumor. Diagnostic tests include 24-hour urinary 
+cortisol excretion, low-dose dexamethasone suppression test, 
+high-dose dexamethasone suppression test (helps distinguish 
+Cushing syndrome from Cushing disease), and late evening 
+salivary cortisol sampling.
+Treatment of Cushing syndrome is directed to the etiology 
+and may include excision of adrenal, pituitary, or ectopic ACTH-
+secreting tumors. Rarely, adrenalectomy is needed to control 
+the symptoms. Parenteral glucocorticoid therapy is necessary 
+during and immediately after surgical treatment to avoid acute 
+adrenal insufficiency.
+Suggested Readings
+Backeljauw PF, Chernausek SD. The insulin-like growth factors and growth 
+disorders of childhood. Endocrinol Metab Clin North Am. 
+2012;41(2):265–282.
+Kliegman RM, Stanton B, St Geme J III, et al, eds. Nelson Textbook of 
+Pediatrics. 19th ed. Philadelphia: Elsevier; 2011.
+Nimkarn S, Lin-Su K, New MI. Steroid 21 hydroxylase deficiency congenital 
+adrenal hyperplasia. Pediatr Clin North Am. 2011;58(5):1281–1300.
+Palmert MR, Dunkel L. Clinical practice: delayed puberty. N Engl J Med. 
+2012;366(5):443–453.
+Péter F, Muzsnai A. Congenital disorders of the thyroid: hypo/hyper. Pediatr 
+Clin North Am. 2011;58(5):1099–1115.
+Romero CJ, Nesi-França S, Radovick S. The molecular basis of 
+hypopituitarism. Trends Endocrinol Metab. 2009;20(10):506–516.
+Schatz DA, Haller MJ, Atkinson MA. Type 1 diabetes. Preface. Endocrinol 
+Metab Clin North Am. 2010;39(3):481–667.
+Williams RM, Ward CE, Hughes IA. Premature adrenarche. Arch Dis Child. 
+2012;97(3):250–254.
+Addison disease is a rare acquired disorder of childhood, usually 
+associated with autoimmune destruction of the adrenal cortex. 
+It is a form of primary adrenal insufficiency with absence of 
+glucocorticoid and mineralocorticoid.
+Clinical manifestations are hyperpigmentation, salt craving, 
+postural hypotension, fasting hypoglycemia, anorexia, weak-
+ness, and episodes of shock during severe illness. Subnormal 
+baseline and ACTH-stimulated cortisol values confirm the 
+diagnosis. The presence of hyponatremia, hyperkalemia, and 
+elevated plasma renin activity indicate mineralocorticoid 
+deficiency. Addison disease may occur within the context of 
+autoimmune polyglandular syndromes (APS I and APS II). 
+Other rare causes of adrenal insufficiency include adrenal 
+leukodystrophy and conditions that affect the hypothalamus-
+pituitary, whether acquired, such as in craniopharyn-
+gioma, or iatrogenic, such as in irradiation for treatment of 
+malignancy.
+Replacement treatment with 10-15 mg/m2/24 hr of hydro-
+cortisone is indicated, with supplementation during stress at 
+three times the maintenance dosage or the use of intramuscular 
+hydrocortisone. The dose is titrated to allow a normal growth 
+rate. Mineralocorticoid replacement with fludrocortisone is 
+monitored by plasma renin activity along with serum sodium 
+and potassium determinations.
+CUSHING SYNDROME
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Short Stature
+Hirsutism
+Obesity
+Alkalemia
+Hyponatremia
+Hypokalemia
+PEARLS FOR PRACTITIONERS
+CHAPTER 170
+Endocrinology Assessment
+•	 Hormones are defined as circulating messengers, with 
+action at a distance from the organ (gland) of origin of the 
+hormone.
+•	 Endocrine disorders generally manifest from one of four 
+ways: excess hormone, deficient hormone, abnormal response 
+of end-organ, gland enlargement.
+•	 The assessment of pituitary function may be determined by 
+measuring some of the specific pituitary hormone in the 
+basal state; other assessments require the measurement after 
+stimulation.
+CHAPTER 171
+Diabetes Mellitus
+•	 Type 1 diabetes mellitus is typically treated with multiple 
+daily injections of a short-acting (bolus) insulin and a single 
+dose of long acting (basal) insulin.
+•	 Type 1 diabetes is an autoimmune disease and most often 
+presents with hyperglycemia, ketoacidosis, polyuria, and 
+polydipsia.
+•	 Type 1 diabetes mellitus is a complex chronic illness that 
+requires a team of providers, including endocrinologist, 
+diabetes educator, nutritionist, social worker/psychologist, 
+and close interactions for the family for success.
+
+--- PAGE 701 ---
+679
+CHAPTER 178  Adrenal Gland Dysfunction
+•	 Type 2 diabetes is associated with obesity and insulin 
+resistance.
+CHAPTER 172
+Hypoglycemia
+•	 After the initial 2-3 days of life, hypoglycemia is far less 
+common and is more frequently the result of endocrine or 
+metabolic disorders (although sepsis must always be ruled 
+out).
+•	 Clinical hypoglycemia is defined as a plasma glucose (PG) 
+concentration low enough to cause symptoms and/or signs 
+of impaired brain function.
+•	 The most common causes for congenital hyperinsulinism 
+involve inactivating KATP channel mutations and account 
+for approximately 60% of all identifiable mutations.
+•	 The diagnosis of hyperinsulinism in children is determined 
+by evaluating markers of inappropriate insulin effects (e.g., 
+suppressed ketogenesis) because plasma insulin concentra-
+tions are frequently not clearly elevated.
+•	 Idiopathic ketotic hypoglycemia, usually begins at about 18 
+months of age in thin children and remits by 8 years of age, 
+presents with symptoms of hypoglycemia after a period of 
+prolonged fasting, often in the setting of an intercurrent 
+illness with decreased feeding.
+•	 The diagnosis of glycogen storage disease (GSD) is suggested 
+by a hypoglycemia in the setting of hepatomegaly without 
+splenomegaly (although GSD type 0 is not associated with 
+hepatomegaly).
+•	 A critical sample of blood and urine at the time of the 
+hypoglycemic episode should be obtained before treatment 
+for the measurement of glucose and insulin, growth hormone 
+(GH), cortisol, free fatty acids (FFAs), and β-hydroxybutyrate 
+and acetoacetate.
+CHAPTER 173
+Short Stature
+•	 A normal linear growth pattern is good evidence of overall 
+health and can be considered a bioassay for the well-being 
+of the whole child.
+•	 Insulin-like growth factor-1 (IGF-1) acts primarily as a 
+paracrine and autocrine agent and is most closely associated 
+with postnatal growth.
+•	 Accurate measurements of height (standing), or length (lying 
+down), and weight should be plotted on the Centers for 
+Disease Control and Prevention growth charts for the timely 
+diagnosis of growth disorders.
+•	 Short stature is defined as subnormal height relative to other 
+children of the same gender and age, taking family heights 
+into consideration.
+•	 Nutrition is the most important factor affecting growth on 
+a worldwide basis.
+•	 Adequacy of GH secretion may be determined by a stimula-
+tion test to measure peak GH secretion.
+•	 A patient with classic GH deficiency has the appearance of 
+a cherub (a chubby, immature appearance), with a high-
+pitched voice resulting from an immature larynx.
+•	 GH deficiency is treated with biosynthetic recombinant 
+DNA-derived GH. Dosage is titrated to the growth rate, 
+weight of the patient, and IGF-1 levels.
+•	 The common condition known as constitutional delay in 
+growth or puberty or both is considered a variation of normal 
+growth, caused by a reduced tempo, or cadence, of physiologi-
+cal development.
+CHAPTER 174
+Disorders of Puberty
+•	 Pubarche results from adrenal maturation or adrenarche 
+and is marked with the appearance of pubic hair, oiliness 
+of hair and skin, acne, axillary hair, and body odor; gona-
+darche is characterized by increasing secretion of gonadal 
+sex steroids as a result of the maturation of the hypothalamic-
+pituitary-gonadal axis.
+•	 Puberty is delayed when there is no sign of pubertal develop-
+ment by age 13 years in girls and 14 years in boys living in 
+the United States.
+•	 Disorders that can cause hypogonadotropic hypogonadism 
+include congenital hypopituitarism, such as midline defects, 
+tumors, infiltrative disease, and many syndromes, including 
+Laurence-Moon-Bardet-Biedl, Prader-Willi, and Kallmann 
+syndromes.
+•	 Decreased gonadotropin function occurs when voluntary 
+dieting, malnutrition, or chronic disease results in weight 
+loss to less than 80% of ideal weight.
+•	 Hypergonadotropic hypogonadism is characterized by 
+elevated gonadotropins and low sex steroid levels resulting 
+from primary gonadal failure.
+•	 Turner syndrome is a common cause of ovarian failure and 
+short stature; Klinefelter syndrome (seminiferous tubular 
+dysgenesis) is the most common cause of testicular failure.
+•	 When no secondary sexual development is present after the 
+upper age limits of normal pubertal development, serum 
+gonadotropin levels should be obtained to determine whether 
+the patient has a hypogonadotropic or hypergonadotropic 
+hypogonadism.
+•	 Central precocious puberty, resulting in gonadarche, emanates 
+from premature activation of the hypothalamic-pituitary-
+gonadal axis (gonadotropin-releasing hormone [GnRH]-
+dependent); peripheral precocious puberty, gonadarche or 
+adrenarche, does not involve the hypothalamic-pituitary-
+gonadal axis (GnRH-independent).
+•	 Compared with girls, boys with precocious puberty have a 
+higher incidence of CNS disorders, such as tumors and 
+hamartomas, precipitating the precocious puberty.
+•	 The most common cause of GnRH-independent precocious 
+puberty, McCune-Albright syndrome, is more frequent in 
+girls than boys and includes precocious gonadarche, a bone 
+disorder with polyostotic fibrous dysplasia, and hyperpig-
+mented cutaneous macules (café-au-lait spots).
+•	 The first step in evaluating sexual precocity is to determine 
+which characteristics of normal puberty are apparent and 
+whether estrogen effects, androgen effects, or both are present; 
+laboratory evaluation includes determination of adrenal 
+androgen and sex steroid levels (testosterone, estradiol, 
+DHEAS [dehydroepiandrosterone sulfate]) and baseline 
+gonadotropin concentrations.
+
+--- PAGE 702 ---
+680
+SECTION 23  Endocrinology
+•	 A prepubertal GnRH response is follicle-stimulating hormone 
+(FSH) predominant, whereas a pubertal response is more 
+luteinizing hormone (LH) predominant.
+•	 Long-acting, superactive analogs of GnRH (leuprolide depot, 
+histrelin depot) are the treatment of choice for central preco-
+cious puberty; antiandrogens, antiestrogens, and aromatase 
+inhibitors are used for peripheral precocious puberty.
+•	 Most patients with isolated pubic hair do not have progressive 
+virilization and simply have premature adrenarche (pubarche) 
+resulting from premature activation of DHEA secretion from 
+the adrenal gland; no treatment is needed.
+CHAPTER 175
+Thyroid Disease
+•	 Early treatment in congenital hypothyroidism is essential 
+to prevent delayed development.
+•	 Hypothyroidism is common in children, and treatment with 
+levothyroxine is typically initiated when a thyroid-stimulating 
+hormone (TSH) is >10 mIU/L.
+•	 Hypothyroidism must be considered in evaluation of short 
+stature, especially if not associated with weight gain.
+•	 Acquired hypothyroidism is an autoimmune disease and 
+may be associated with type 1 diabetes, Addison disease, 
+hypoparathyroidism, and celiac disease.
+•	 Hyperthyroidism is initially treated with pharmacological 
+therapy, and if remission does not occur, ablation or surgical 
+removal is initiated.
+•	 Most thyroid nodules in children and adolescents are benign.
+CHAPTER 176
+Disorders of Parathyroid Bone and Mineral 
+Endocrinology
+•	 Calcium and phosphate are regulated mainly by diet and 
+three hormones: parathyroid hormone (PTH), vitamin D, 
+and calcitonin.
+•	 Neonatal hypocalcemia has multiple causes depending on 
+timing of onset and may require treatment with intravenous 
+(IV) and/or oral calcium.
+•	 It is essential to make sure vitamin D is adequate as well as 
+magnesium when replacing calcium.
+•	 Hypocalcemia may be associated with multiple nonendocrine 
+disorders and diseases, thus requiring a complete evaluation.
+CHAPTER 177
+Disorders of Sexual Development
+•	 Genes usually determine the morphology of internal organs 
+and of gonads (gonadal sex); this directs the appearance of 
+the external genitalia that form the secondary sex charac-
+teristics (phenotypic sex). Self-perception of the individual 
+(gender identity) and the perception of the individual by 
+others (gender role) follow.
+•	 Sometimes referred to as intersex, disorders of sex differentia-
+tion, or differences of sex development, disorders of sexual 
+development (DSDs) are categorized under three main 
+subgroups according to karyotype (XX, XY, and sex chromo-
+some for mosaic karyotypes).
+•	 Congenital virilizing adrenal hyperplasia is the most common 
+cause of female ambiguous genitalia.
+•	 Testosterone production can be reduced by specific deficien-
+cies of the enzymes needed for androgen biosynthesis or 
+by dysplasia of the gonads.
+•	 Although the classic approach to sex assignment has been 
+based on the feasibility of genital reconstruction and potential 
+fertility rather than on karyotype or gonadal histology, the 
+effects of prenatal androgen must be considered; experts 
+recommend waiting until the child is able to be part of the 
+dialogue regarding gender identity and reconstruction when 
+appropriate.
+•	 The first step toward diagnosis of ambiguous genitalia is to 
+determine whether the findings represent virilization of a 
+genetic female (androgen excess) or under development of 
+a genetic male (androgen deficiency)
+•	 Treatment of DSDs consists of replacing deficient hormones 
+(cortisol in adrenal hyperplasia or testosterone in a child 
+with androgen biosynthetic defects who will be raised as 
+male), surgical restoration to make the individual look more 
+appropriate for the gender of rearing, and psychological 
+support of the whole family.
+CHAPTER 178
+Adrenal Gland Dysfunction
+•	 Early diagnosis and treatment of salt wasting congenital 
+adrenal hyperplasia involves replacement therapy with 
+hydrocortisone, fludrocortisone, and saline solution.
+•	 Adrenal insufficiency is associated with hyperpigmentation, 
+salt craving, postural hypotension, fasting hypoglycemia, 
+anorexia, weakness, and episodes of shock during severe 
+illness.
+•	 Cushing syndrome is commonly a result of chronic use of 
+high-dose oral steroids.
+
+--- PAGE 703 ---
+681
+SECTION 24 
+NEUROLOGY
+Jocelyn Huang Schiller  |  Renée A. Shellhaas
+CHAPTER 179 
+Neurology Assessment
+A neurological evaluation, including history, physical examina-
+tion, and judicious use of ancillary studies, allows the localization 
+and diagnosis of nervous system pathology. The process and 
+interpretation of the neurological examination varies with age; 
+the newborn is unique, with many transient and primitive 
+reflexes, whereas the examinations of adolescents and adults 
+are similar. Careful evaluations of social, cognitive, language, 
+fine motor, and gross motor skills, and their age appropriateness 
+are key.
+HISTORY
+Gathering neurological history follows the traditional medical 
+model with three additions: the pace and localization of the 
+problem and the developmental assessment. The symptom evolu-
+tion provides clues to the underlying process. Symptoms may 
+evolve in a progressive, static, or episodic fashion. Progressive 
+symptoms may present suddenly (seizures, stroke); acutely over 
+minutes or hours (epidural hemorrhage); subacutely over days 
+or weeks (brain tumor); or slowly over years (hereditary neu-
+ropathies). Static neurological abnormalities are observed early 
+in life and do not change in character over time (cerebral palsy). 
+Static lesions are often caused by congenital brain abnormali-
+ties or prenatal/perinatal brain injury. Intermittent attacks of 
+recurrent, stereotyped episodes suggest epilepsy or migraine 
+syndromes, among others. Episodic disorders are characterized 
+by periods of symptoms, followed by partial or complete recovery 
+(demyelinating, autoimmune, vascular diseases).
+Careful evaluations of social, cognitive, language, fine motor, 
+and gross motor skills are key (Chapter 7) to distinguish normal 
+development from isolated or global delays. Loss of skills over 
+time (regression) is particularly worrisome and may suggest 
+an underlying degenerative disease, emerging autism spectrum 
+disorder, epileptic encephalopathy, or other neurological 
+diagnoses.
+PHYSICAL EXAMINATION
+Observation of the child’s appearance, movement, and behavior 
+begins at the start of the encounter. For example, the child may 
+display an unusual posture, abnormal gait, or lack of awareness 
+of the environment.
+The brain and skin have the same embryonic origin 
+(ectoderm), so abnormalities of hair, skin, teeth, and nails are 
+associated with congenital brain disorders (neurocutaneous 
+disorders) such as neurofibromatosis (NF type 1), in which 
+café-au-lait macules (flat, light brown macules) are character-
+istic. Adenoma sebaceum (fibrovascular lesions that look like 
+acne on the nose and malar regions), nail fibromas, ash-leaf 
+spots (hypopigmented macules), and Shagreen patches (flesh-
+colored soft plaques with prominent follicular openings) are 
+commonly seen in older children and adults with tuberous 
+sclerosis.
+The head circumference is measured in its largest occipi-
+tofrontal circumference and plotted against standard growth 
+curves (Chapter 5). Microcephaly and macrocephaly represent 
+an occipitofrontal circumference 2 standard deviations below 
+or above the mean, respectively. Measurements plotted over 
+time may show an accelerating pattern (hydrocephalus) or 
+decelerating pattern (brain injury, degenerative neurological 
+disorder). The anterior fontanelle is slightly depressed and 
+pulsatile when a calm infant is upright. A tense or bulging 
+fontanelle may indicate increased intracranial pressure 
+(ICP) but may also be seen in a crying or febrile infant. 
+Premature closure of one or more sutures (craniosynostosis) 
+results in an unusual shape of the head. Abnormal shape, 
+location, or condition of the face, eyes, nares, philtrum, lips, 
+or ears (dysmorphic features) are found in many genetic 
+syndromes.
+A careful ocular examination is essential and should 
+include a search for epicanthal folds, coloboma, conjunc-
+tival telangiectasias, and cataracts. Direct ophthalmoscopy 
+assesses the optic discs and macula for abnormalities, such 
+as papilledema or a cherry red spot. A complete examination 
+of the retina involves dilating the pupil and use of indirect 
+ophthalmoscopy.
+Examination of the hands and feet may reveal abnormal 
+creases or digits (Chapters 50 and 201). The neck and spine 
+should be examined for obvious (myelomeningocele) or subtle 
+(cutaneous dimples, sinus tracts, hair tufts, subcutaneous 
+lipomas) midline defects. Nervous system abnormalities may 
+result in kyphosis or scoliosis (Chapter 202).
+NEUROLOGICAL EXAMINATION OF  
+A NEONATE
+The neonatal neurological examination primarily assesses the 
+function of the basal ganglia, brainstem, and more caudal 
+structures.
+
+--- PAGE 704 ---
+682
+SECTION 24  Neurology
+status and developmental examinations assess cerebral cortex 
+function. The cranial nerve examination evaluates the integrity 
+of the brainstem. The motor examination evaluates upper and 
+lower motor neuron function. The sensory examination assesses 
+the peripheral sensory receptors and their central reflections. 
+Deep tendon reflexes assess upper and lower motor 
+connections.
+Mental Status and Developmental Evaluation
+Alertness is assessed in infants by observing spontaneous 
+activities, feeding behavior, and visual ability to fix and follow 
+objects. Responses to tactile, visual, and auditory stimuli are 
+noted. If consciousness is altered, the response to painful stimuli 
+is noted. Observation of toddlers at play allows a nonthreatening 
+assessment of developmentally appropriate skills. In addition 
+to language function, older children can be tested for reading, 
+writing, numerical skills, fund of knowledge, abstract reasoning, 
+judgment, humor, and memory.
+The simplest way to assess intellectual abilities is through 
+language skills. Language function is receptive (understanding 
+speech or gestures) and expressive (speech and use of gestures). 
+Abnormalities of language resulting from cerebral hemisphere 
+disorders are referred to as aphasias. Anterior, expressive, or 
+Broca aphasia is characterized by sparse, nonfluent language. 
+Posterior, receptive, or Wernicke aphasia is characterized by 
+an inability to understand language, with speech that is fluent 
+but nonsensical. Global aphasia refers to impaired expressive 
+and receptive language.
+CRANIAL NERVE EVALUATION
+The cranial nerve evaluation assesses brainstem integrity, but 
+depends on the stage of brain maturation and the ability to 
+cooperate. A colorful toy may capture a young child’s attention 
+and permit observation of coordination, movement, and cranial 
+nerve function.
+Mental Status
+A healthy newborn infant should have periods of quiet, sustained 
+wakefulness interspersed with sleep. Irritability, lethargy, or 
+more severely depressed consciousness are nonspecific signs 
+of abnormal brain function.
+Reflexes
+Examination of the primitive reflexes provides assessment of 
+the functional integrity of the brainstem and basal ganglia (Table 
+179.1). Many of these stereotyped motor responses are present 
+at birth. They are symmetrical and disappear at 4-6 months of 
+age, indicating the normal maturation of descending inhibitory 
+cerebral influences. Asymmetry or persistence of the primitive 
+reflexes may indicate focal brain or peripheral nerve lesions.
+Motor Examination and Tone
+Posture is the position that a calm infant naturally assumes 
+when placed supine. An infant at 28 weeks of gestation shows 
+an extended posture. By 32 weeks, there is a trend toward 
+increase in tone and flexion of the lower extremities. At 34 
+weeks, the lower extremities are flexed; the upper extremities 
+are extended. The term infant flexes lower and upper extremities. 
+Recoil, the readiness with which an arm or leg springs back 
+to its original position after passive stretching and release, is 
+essentially absent in very premature infants but is brisk at term. 
+Because of the asymmetrical tonic neck reflex, it is essential 
+to maintain the infant’s head in a neutral position (not turned 
+to the side) during assessment of posture and tone. Spontaneous 
+movements of premature infants are slow and writhing; those 
+of term infants are more rapid.
+NEUROLOGICAL EXAMINATION OF A CHILD
+The purpose of the neurological examination is to localize or 
+identify the region from which the symptoms arise. The mental 
+TABLE 179.1  Central Nervous System Reflexes of Infancy
+REFLEX
+DESCRIPTION
+AGE AT 
+APPEARANCE
+AGE AT 
+DISAPPEARANCE
+Moro
+Light drop of head produces sudden extension followed by flexion of the 
+arms and legs
+Birth
+6 mo
+Grasp
+Placing finger in palm results in flexing of infant’s fingers
+Birth
+6 mo
+Rooting
+Tactile stimulus at the side of the mouth results in the mouth pursuing the 
+stimulus
+Birth
+4-6 mo
+Trunk incurvation 
+(Gallant)
+Stroking the skin along the edge of vertebrae produces curvature of the 
+spine with concavity on the side of the stimulus
+Birth
+4 mo
+Placing
+When dorsum of foot is brought into contact with the edge of a surface, 
+infant places foot on the surface
+Birth
+4-6 mo
+Asymmetrical tonic 
+neck
+With infant supine, turning of the head results in ipsilateral extension of 
+the arm and leg with flexion of opposite extremities in a “fencing” 
+posture
+Birth
+3 mo
+Parachute
+Infant is suspended face down by the chest. When infant is moved toward 
+a table, the arms extend as if to protect self
+8-10 mo
+Never
+Babinski
+Stroking lateral aspect of sole from heel up results in dorsiflexion of the 
+great toe and fanning of the remaining toes
+Birth
+12-18 mo
+
+--- PAGE 705 ---
+683
+CHAPTER 179  Neurology Assessment
+pinprick. Facial sensation can be functionally assessed in an 
+infant by gently brushing the cheek, which will produce the 
+rooting reflex (turns head and neck with mouthing movement, 
+as if seeking to nurse).
+Cranial Nerve VII
+Facial muscles are assessed by observing the face during rest, 
+crying, and blinking. At older, cooperative ages, children 
+can be asked to smile, blow out their cheeks, blink forc-
+ibly, and furrow their foreheads. Weakness of all unilateral 
+muscles of the face, including the forehead, eye, and mouth, 
+indicates a lesion of the ipsilateral peripheral facial nerve 
+(Bell palsy). Since the upper third of the face receives 
+bilateral cortical innervation, if the weakness affects only 
+the lower face and mouth, a contralateral lesion of upper 
+motor neurons in the brain (tumor, stroke, abscess) must be 
+considered.
+Cranial Nerve VIII
+Lesions of cranial nerve VIII cause deafness, tinnitus, and 
+vertigo. Normally, alert neonates blink in response to a bell 
+or other abrupt, loud sound. Four-month-old infants turn their 
+head and eyes to localize a sound. Hearing can be tested in 
+a verbal child by whispering a word in one ear while cover-
+ing the opposite ear. If there are any concerns about hearing, 
+formal audiologic assessment is indicated. Delayed language 
+development should trigger a referral for a formal hearing 
+assessment.
+Lesions of the vestibular component of cranial nerve VIII 
+produce symptoms of vertigo, nausea, vomiting, diaphoresis, 
+and nystagmus. Nystagmus is an involuntary beating eye move-
+ment with a rapid phase in one direction and a slow phase 
+in the opposite direction. By convention, the direction of the 
+nystagmus is defined by the fast phase and may be horizontal, 
+vertical, or rotatory.
+Cranial Nerves IX and X
+The gag reflex is brisk at all ages except the very immature 
+neonate. An absent gag reflex suggests a lesion of the brainstem, 
+cranial nerves IX or X, neuromuscular junction, or pharyn-
+geal muscles. Weak, breathy, or nasal speech, weak sucking, 
+drooling, inability to handle secretions, gagging, and nasal 
+regurgitation of food are additional symptoms of cranial nerve X 
+dysfunction.
+Cranial Nerve XI
+Observing the infant’s posture and spontaneous activity assesses 
+the functions of the trapezius and sternocleidomastoid muscles. 
+Head tilt and drooping of the shoulder suggest lesions involving 
+cranial nerve XI. In later childhood, strength in these muscles 
+can be tested directly.
+Cranial Nerve XII
+Atrophy and fasciculation of the tongue usually indicate a lesion 
+of the anterior horn cells (spinal muscular atrophy). Assessment 
+is most reliable when an infant is asleep. The tongue deviates 
+toward the weak side in unilateral lesions.
+Cranial Nerve I
+Smell can be assessed in verbal, cooperative children older 
+than 2 years of age. Aromatic substances (perfumes, vanilla) 
+should be used instead of volatile substances (ammonia), 
+which irritate the nasal mucosa and stimulate the trigeminal 
+nerve.
+Cranial Nerve II
+Full-term newborns in a quiet awake state follow human 
+faces, lights in a dark room, or large, opticokinetic strips. 
+Visual acuity has been estimated to be 20/200 in newborns 
+and gradually matures throughout childhood. Standard visual 
+charts displaying pictures instead of letters can be used to 
+assess visual acuity in toddlers. Peripheral vision is tested 
+by surreptitiously bringing objects into the visual field from 
+behind. A reduced pupillary reaction to light suggests anterior 
+visual pathway (retina, optic nerves, chiasm) lesions. Unilateral 
+lesions are identified by the swinging flashlight test. With an 
+optic nerve abnormality, both pupils constrict when light is 
+directed into the normal eye. When light is swung over to the 
+abnormal eye, both pupils dilate inappropriately; this is called 
+an afferent pupillary defect or Marcus Gunn pupil. Interruption 
+of the sympathetic innervation to the pupil produces Horner 
+syndrome (ptosis, miosis, and unilateral facial anhidrosis). In 
+this instance, anisocoria (unequal pupils) is more pronounced 
+in a dark room because the affected pupil is unable to dilate 
+appropriately. Lesions of the posterior visual pathway, including 
+the lateral geniculate, optic radiations, and occipital cortex, have 
+normal pupillary light reactions but are expressed by loss of 
+visual fields.
+Cranial Nerves III, IV, and VI
+These three cranial nerves control eye movements and 
+are most easily examined with the use of a colorful toy to 
+capture the child’s attention. For infants too young to fix 
+and follow, rotating the infant’s head assesses oculocephalic 
+vestibular reflexes (doll’s eye maneuver). If the brainstem is 
+intact, rotating a newborn or comatose patient’s head to the 
+right causes the eyes to move to the left, and vice versa. In 
+awake, older patients, voluntary eye movements mask the 
+reflex.
+Abnormalities of these cranial nerves may cause diplopia 
+(double vision). With unilateral third cranial nerve (oculo-
+motor nerve) palsy, the involved eye deviates down and out 
+(infraducted, abducted), with associated ptosis and a dilated 
+(mydriatic) pupil. Injury to cranial nerve IV (trochlear nerve) 
+causes weakness of downward eye movement with consequent 
+vertical diplopia. Cranial nerve VI (abducens nerve) palsy results 
+in the inability to move the eye outward. Cranial nerve VI has 
+a long intracranial route within the subarachnoid space; failure 
+of abduction of one or both eyes is a frequent, but nonspecific, 
+sign of increased intracranial pressure (ICP).
+Cranial Nerve V
+The muscles of mastication can be observed as an infant sucks 
+and swallows. The corneal reflex can test cranial nerves V 
+ophthalmic division and VII at any age. Facial sensation of 
+light touch and pain can be determined with cotton gauze and 
+
+--- PAGE 706 ---
+684
+SECTION 24  Neurology
+balance may be observed. The toddler gait is normally wide-
+based and unsteady. The base of the gait narrows with age. By 
+6 years, a typical child is able to walk on their toes or heels 
+and can tandem walk (heel to toe). Cerebellar dysfunction 
+results in a broad-based, unsteady gait accompanied by difficulty 
+in executing turns. Corticospinal tract dysfunction produces 
+a stiff, scissoring gait and toe walking; arm swing is decreased, 
+and the affected arm is flexed across the body. Extrapyramidal 
+dysfunction produces a slow, stiff, shuffling gait with dystonic 
+postures. A waddling gait occurs with hip weakness due to 
+lower motor neuron or neuromuscular disorders. A steppage 
+gait results from weakness of ankle dorsiflexors (common 
+peroneal palsy).
+Reflexes
+Deep tendon reflexes can be elicited at any age and are reported 
+on a five-point scale:
+0	 Absent
+1	 Trace
+2	 Normal
+3	 Exaggerated reflex, with spread to contiguous areas (tapping 
+a patellar reflex and observing a bilaterally brisk quadriceps 
+response)
+4	 Clonus (self-limited or sustained)
+These reflexes are decreased in lower motor neuron dis-
+eases and increased in upper motor neuron disease. Babinski 
+response, or extensor plantar reflex, is an upward movement of 
+the great toe and flaring of the toes on stimulation of the lateral 
+foot and is a sign of corticospinal tract dysfunction. This reflex 
+is unreliable in neonates, except when asymmetrical, because 
+the “normal” response at this age varies. By 12-18 months of 
+age, the plantar response should consistently be flexor (toes 
+flexing down).
+SENSORY EXAMINATION
+The sensory examination of newborns and infants is limited 
+to observing the behavioral response to light touch or gentle 
+sterile pinprick. Stimulation of a limb should produce a facial 
+grimace. A spinal reflex alone may produce withdrawal move-
+ment of a limb. In a cooperative child, the senses of pain, touch, 
+temperature, vibration, and joint position can be tested individu-
+ally. The cortical areas of sensation must be intact to identify 
+an object placed in the hand (stereognosis) or a number written 
+in the hand (graphesthesia) or to distinguish between two 
+sharp objects applied simultaneously and closely on the skin 
+(two-point discrimination).
+SPECIAL DIAGNOSTIC PROCEDURES
+Cerebrospinal Fluid Analysis
+Analysis of cerebrospinal fluid (CSF) is essential when central 
+nervous system infection is suspected and provides important 
+clues to other diagnoses (Table 179.2). Differentiating hemor-
+rhagic CSF caused by a traumatic lumbar puncture (LP) from a 
+true subarachnoid hemorrhage may be difficult. In most cases 
+of traumatic LP, the fluid clears significantly as the sequence of 
+tubes is collected. If there is clinical evidence of increased ICP 
+(papilledema, depression of consciousness, focal neurological 
+deficits), caution must be exercised before performing an LP 
+to limit risk of cerebral herniation. A computed tomography 
+(CT) scan should be performed and confirmed to be normal 
+MOTOR EXAMINATION
+Strength
+In infants, strength is assessed by observation of spontaneous 
+movements and movements against gravity. Extremity move-
+ments should be symmetrical and are best seen when the infant 
+is held supine with one hand supporting the buttocks and one 
+supporting the shoulders. Strength is graded as follows:
+5	 Normal
+4	 Weak but able to provide resistance
+3	 Able to move against gravity but not against resistance
+2	 Unable to move against gravity
+1	 Minimal movement
+0	 Complete paralysis
+Strength in toddlers is assessed by observing functional 
+abilities, such as walking, stooping to pick up an object, and 
+standing up from the floor. An older child should be able to 
+easily reach high above his or her head, wheelbarrow walk, 
+run, hop, go up and down stairs, and arise from the ground. 
+Cooperative children can undergo individual muscle strength 
+testing. Gower sign (child arises from lying on the floor by using 
+his arms to climb up his legs and body) is a sign of significant 
+proximal weakness. Subtle upper extremity asymmetry can 
+be detected when the child extends arms out in front with the 
+palms upward and eyes closed. The hand on the weaker side 
+cups and begins to pronate slowly (pronator drift). Muscle 
+fasciculations indicate denervation from disease of the anterior 
+horn cell or peripheral nerve.
+Tone
+Tone represents the dynamic resistance of muscles to passive 
+stretch. Lower motor and cerebellar lesions produce decreased 
+tone (hypotonia). Upper motor lesions produce increased tone 
+(spasticity). In extrapyramidal disease, an increase in resistance 
+is present throughout passive movement of a joint (rigidity).
+Bulk
+Muscle bulk may be decreased due to disuse or to lower motor 
+neuron or neuromuscular disease. Excessive muscle bulk is 
+seen in rare conditions, such as myotonia congenita; boys with 
+Duchenne muscular dystrophy have pseudohypertrophy of their 
+calves.
+Coordination
+Ataxia is the lack of coordination of movement, which is typi-
+cally due to a dysfunction of the cerebellar pathways. Observa-
+tion and functional analysis help assess coordination in infants 
+and toddlers. Watching the child sit or walk assesses truncal 
+stability. Exchanging toys or objects with the child permits 
+assessment of intention tremor and dysmetria (errors in judging 
+distance), signs of cerebellar dysfunction. Cooperative children 
+can do repetitive finger or foot tapping to test rapid alternating 
+movements. Cerebellar and corticospinal tract dysfunction 
+produce slow and irregular alternating movements.
+Gait
+Watching a child creep, crawl, cruise, or walk is the best global 
+assessment for the motor and coordination systems (Chapter 
+197). Subtle deficits and asymmetries in strength, tone, or 

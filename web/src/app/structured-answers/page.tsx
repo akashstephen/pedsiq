@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from "react";
-import Link from "next/link";
 import { topics } from "./topics";
 import { Flowchart } from "@/components/Flowchart";
+import { SafeHtml } from "@/components/SafeHtml";
 import { Printer } from "lucide-react";
 
 export default function StructuredAnswersPage() {
@@ -22,17 +22,17 @@ export default function StructuredAnswersPage() {
         </div>
         <button
           onClick={() => window.print()}
-          className="inline-flex items-center gap-2 bg-[#007AFF]/15 hover:bg-[#007AFF]/25 text-[#007AFF] border border-[#007AFF]/20 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all"
+          className="no-print inline-flex items-center gap-2 bg-[#007AFF]/15 hover:bg-[#007AFF]/25 text-[#007AFF] border border-[#007AFF]/20 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all"
         >
           <Printer size={16} />
           Print Answers
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex gap-2 overflow-x-auto pb-2 -mx-2 px-2 md:flex-wrap md:overflow-visible md:mx-0 md:px-0 no-scrollbar">
         <button
           onClick={() => setActiveTopic("all")}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+          className={`px-4 py-2 rounded-full text-sm font-medium transition-all shrink-0 ${
             activeTopic === "all"
               ? "bg-[#007AFF] text-white"
               : "bg-white/[0.05] text-white/60 hover:text-white hover:bg-white/[0.1]"
@@ -44,7 +44,7 @@ export default function StructuredAnswersPage() {
           <button
             key={t.id}
             onClick={() => setActiveTopic(t.id)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all shrink-0 ${
               activeTopic === t.id
                 ? "bg-[#007AFF] text-white"
                 : "bg-white/[0.05] text-white/60 hover:text-white hover:bg-white/[0.1]"
@@ -98,7 +98,7 @@ export default function StructuredAnswersPage() {
 
                   {section.text && (
                     <p className="text-white/70 text-sm leading-relaxed mb-3">
-                      {section.text}
+                      <SafeHtml text={section.text} />
                     </p>
                   )}
 
@@ -107,7 +107,7 @@ export default function StructuredAnswersPage() {
                       {section.list.map((item, li) => (
                         <li key={li} className="text-white/70 text-sm flex items-start gap-2">
                           <span className="text-[#007AFF] mt-1">•</span>
-                          <span dangerouslySetInnerHTML={{ __html: item }} />
+                          <SafeHtml text={item} />
                         </li>
                       ))}
                     </ul>
@@ -130,7 +130,7 @@ export default function StructuredAnswersPage() {
                             <tr key={ri} className="border-t border-white/[0.04]">
                               {row.map((cell, ci) => (
                                 <td key={ci} className="py-2.5 px-4 text-white/80 text-sm">
-                                  <span dangerouslySetInnerHTML={{ __html: cell }} />
+                                  <SafeHtml text={cell} />
                                 </td>
                               ))}
                             </tr>
@@ -168,7 +168,7 @@ export default function StructuredAnswersPage() {
                     {topic.checklist.map((item, ci) => (
                       <li key={ci} className="text-white/80 text-sm flex items-start gap-2">
                         <span className="text-[#007AFF] font-bold">{ci + 1}.</span>
-                        <span dangerouslySetInnerHTML={{ __html: item }} />
+                        <SafeHtml text={item} />
                       </li>
                     ))}
                   </ul>

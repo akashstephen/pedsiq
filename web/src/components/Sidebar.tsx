@@ -33,7 +33,7 @@ export function Sidebar() {
       {/* Mobile toggle */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 left-4 z-[200] md:hidden w-10 h-10 rounded-xl bg-[#111] border border-white/10 flex items-center justify-center text-white"
+        className="no-print fixed top-4 left-4 z-[200] md:hidden w-10 h-10 rounded-xl bg-[#111] border border-white/10 flex items-center justify-center text-white"
         aria-label="Toggle navigation"
       >
         {open ? <X size={20} /> : <Menu size={20} />}

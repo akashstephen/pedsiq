@@ -35,8 +35,15 @@ export function Flowchart({ nodes, edges }: FlowchartProps) {
   }
 
   const incoming = new Set(edges.map((e) => e.to));
+  const hasOutgoing = new Set(edges.map((e) => e.from));
   const roots = nodes.filter((n) => !incoming.has(n.id));
   roots.forEach((r) => setLevel(r.id, 0));
+
+  // Handle orphan nodes (no incoming AND no outgoing edges)
+  const orphans = nodes.filter((n) => !incoming.has(n.id) && !hasOutgoing.has(n.id));
+  orphans.forEach((o) => {
+    if (!levels.has(o.id)) levels.set(o.id, 0);
+  });
 
   // Group by level
   const rows = new Map<number, string[]>();

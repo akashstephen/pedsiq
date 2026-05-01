@@ -1,0 +1,1970 @@
+
+--- PAGE 620 ---
+598
+SECTION 21  Oncology
+TABLE 153.2  Common Manifestations of Childhood Malignancies
+SIGN/SYMPTOM
+SIGNIFICANCE
+EXAMPLE
+HEMATOLOGICAL
+Pallor, anemia
+Bone marrow infiltration
+Leukemia, neuroblastoma
+Petechiae, thrombocytopenia
+Bone marrow infiltration
+Leukemia, neuroblastoma
+Fever, neutropenia
+Bone marrow infiltration
+Leukemia, neuroblastoma
+SYSTEMIC
+Bone pain, limp, arthralgia
+Primary bone tumor, metastasis to 
+bone
+Osteosarcoma, Ewing sarcoma, leukemia, 
+neuroblastoma
+Fever of unknown origin, weight loss, 
+night sweats
+Lymphoreticular malignancy
+Hodgkin disease, non-Hodgkin lymphoma
+Painless lymphadenopathy
+Lymphoreticular malignancy, 
+metastatic solid tumor
+Leukemia, Hodgkin disease, non-Hodgkin lymphoma, 
+Burkitt lymphoma, thyroid carcinoma
+Cutaneous lesion
+Primary or metastatic disease
+Neuroblastoma, leukemia, Langerhans cell 
+histiocytosis, melanoma
+Abdominal mass
+Abdominal/pelvic organ
+Neuroblastoma, Wilms tumor, lymphoma, 
+hepatoblastoma, germ cell tumor
+Hypertension
+Sympathetic nervous system tumor
+Wilms tumor, neuroblastoma, pheochromocytoma
+Diarrhea
+Vasoactive intestinal polypeptide
+Neuroblastoma
+Soft tissue mass
+Local or metastatic tumor
+Ewing sarcoma, osteosarcoma, neuroblastoma, 
+rhabdomyosarcoma, germ cell tumor, thyroid 
+carcinoma
+Diabetes insipidus, galactorrhea, poor 
+growth
+Neuroendocrine involvement of 
+hypothalamus or pituitary gland
+Germ cell tumor, adenoma, craniopharyngioma, 
+prolactinoma, Langerhans cell histiocytosis
+Emesis, visual disturbances, ataxia, 
+headache, papilledema, cranial nerve 
+palsies
+Increased intrathecal pressure
+Primary brain tumor; metastasis to the brain
+OPHTHALMOLOGICAL
+Leukocoria
+White pupil
+Retinoblastoma
+Periorbital ecchymosis
+Metastasis
+Neuroblastoma
+Miosis, ptosis, heterochromia
+Horner syndrome: compression of 
+cervical sympathetic nerves
+Neuroblastoma
+Opsomyoclonus, ataxia
+Neurotransmitters (?)
+Neuroblastoma
+Autoimmunity (?)
+Exophthalmos, proptosis
+Orbital tumor
+Rhabdomyosarcoma, neuroblastoma, lymphoma
+THORACIC
+Anterior mediastinal mass
+Cough, stridor, pneumonia, 
+tracheal-bronchial compression
+Germ cell tumor, T-cell lymphoma/leukemia, Hodgkin 
+disease, primary mediastinal large B-cell lymphoma
+Posterior mediastinal mass
+Vertebral or nerve root compression; 
+dysphagia
+Neuroblastoma, ganglioneuroblastoma, 
+ganglioneuroma
+
+--- PAGE 621 ---
+599
+CHAPTER 154  Principles of Cancer Treatment
+Mediastinal masses from lymphoma can cause life-threatening 
+airway obstruction. Tumors with a large tumor burden (e.g., 
+lymphoma, leukemia) may affect renal function adversely from 
+tubular deposition of uric acid crystals. Allopurinol or rasbu-
+ricase can be administered before chemotherapy to minimize 
+this effect.
+A common metabolic emergency is tumor lysis syndrome, 
+often seen in treatment of leukemia and lymphoma. Large 
+amounts of phosphate, potassium, and uric acid are released 
+into the circulation from lysed cells. Overwhelming infection 
+and spinal cord compression with neurological compromise 
+are other oncological emergencies.
+SURGERY
+Appropriate imaging (usually with computed tomography 
+[CT] or magnetic resonance imaging [MRI]) for solid tumors 
+presenting as a palpable mass or mass-related symptoms (pain, 
+respiratory distress, intestinal obstruction) should be obtained 
+and followed by resection (when possible) or biopsy (if complete 
+resection is not feasible or indicated). Pediatric lymphomas 
+are chemosensitive and rarely require complete surgical 
+resection.
+It is crucial to determine the amount of tissue required and 
+the appropriate distribution of the tissue for testing so that all 
+necessary studies are performed. A general oncological surgery 
+principle is to resect not just the tumor but also, in most cases, 
+a surrounding margin of normal tissue to ensure the entire 
+tumor has been resected.
+CHAPTER 154 
+Principles of Cancer Treatment
+The overall goal of pediatric oncology is to cure all patients 
+with minimal toxicity. Treatment for children with cancer is 
+often multimodal and may involve surgery, radiation therapy, 
+chemotherapy, and immunotherapy. Surgery and radiation are 
+generally local treatment modalities (an exception is total body 
+irradiation as part of a bone marrow or stem cell transplant), 
+whereas chemotherapy and immunotherapy have both local and 
+systemic effects.
+Primary prevention strategies for most pediatric malignancies 
+are unknown. Two exceptions are the use of hepatitis B vaccine 
+to lower the rates of hepatocellular carcinoma and the use of 
+human papillomavirus vaccine to reduce the risk of genitouri-
+nary and oropharyngeal cancers. Childhood malignancies are 
+not associated with tobacco or alcohol use, dietary factors, or 
+sun exposure. Treatment with certain chemotherapy agents and 
+radiation therapy increases the rate of second malignancies. 
+Secondary prevention may be accomplished by screening the 
+at-risk child (e.g., a child with Beckwith-Wiedemann syn-
+drome or twin of a leukemia patient), but these opportunities 
+are rare.
+ONCOLOGICAL EMERGENCIES
+Adverse effects of tumors and treatments may result in onco-
+logical emergencies in children and adolescents (Table 154.1). 
+TABLE 153.3  Minimum Work-Up Required for Common Pediatric Malignancies to Assess Primary Tumor and Potential 
+Metastases*
+MALIGNANCY
+BMA/bx
+CXR
+CT Scan
+MRI
+BONE SCAN, 
+PET SCAN, or 
+PET-CT SCAN
+CSF ANALYSIS
+MARKER(S)
+OTHER
+Leukemia
+Yes
+Yes
+—
+—
+—
+Yes
+—
+—
+Non-Hodgkin 
+lymphoma
+Yes
+Yes
+Yes
+—
+Yes
+Yes
+—
+—
+Hodgkin lymphoma
+Yes
+Yes
+Yes
+—
+Yes
+—
+—
+—
+CNS tumors
+—
+—
+—
+Yes
+—
+Yes
+—
+—
+Neuroblastoma
+Yes
+—
+Yes
+—
+Yes
+—
+VMA, HVA
+mIBG scan
+Wilms tumor
+—
+Yes
+Yes
+—
+—
+—
+—
+—
+Rhabdomyosarcoma
+Yes
+Yes
+Yes
+—
+Yes
+Yes, for 
+parameningeal 
+tumors only
+—
+—
+Osteosarcoma
+—
+Yes
+Yes (chest)
+Yes (primary)
+Yes
+—
+—
+—
+Ewing sarcoma
+Yes
+Yes
+Yes (chest)
+Yes (primary)
+Yes
+—
+—
+—
+Germ cell tumors
+—
+Yes
+Yes
+—
+—
+—
+AFP, 
+β-hCG
+Consider 
+brain MRI
+Liver tumors
+—
+Yes
+Yes
+—
+—
+—
+AFP
+—
+Retinoblastoma
+±
+—
+Yes, if MRI 
+not available
+Yes (brain)
+±
+Yes
+—
+Rb gene 
+analysis
+*Individual cases may require additional studies.
+AFP, Alpha-fetoprotein; β-hCG, beta-human chorionic gonadotropin; BMA/bx, bone marrow aspirate/biopsy; CNS, central nervous system; CSF, cerebrospinal fluid; 
+CT, computed tomography; CXR, chest x-ray; HVA, homovanillic acid; mIBG, metaiodobenzylguanidine; MRI, magnetic resonance imaging; PET, positron emission 
+tomography; Rb, retinoblastoma; VMA, vanillylmandelic acid.
+
+--- PAGE 622 ---
+600
+SECTION 21  Oncology
+TABLE 154.1  Oncological Emergencies
+CONDITION
+MANIFESTATIONS
+ETIOLOGY
+MALIGNANCY
+TREATMENT
+METABOLIC
+Hyperuricemia
+Uric acid nephropathy, 
+renal insufficiency or 
+failure
+Tumor lysis syndrome
+Lymphoma, leukemia
+Allopurinol; hydration; 
+rasburicase
+Hyperkalemia
+Arrhythmias
+Tumor lysis syndrome
+Lymphoma, leukemia
+Kayexalate; sodium 
+bicarbonate; glucose plus 
+insulin
+Hyperphosphatemia
+Hypocalcemic tetany; 
+metastatic calcification, 
+photophobia, pruritus
+Tumor lysis syndrome
+Lymphoma, leukemia
+Hydration, diuresis; oral 
+aluminum hydroxide to 
+bind phosphate
+Hypercalcemia
+Anorexia, nausea, 
+polyuria, pancreatitis, 
+gastric ulcers; prolonged 
+PR/shortened QT interval
+Bone resorption; ectopic 
+parathormone, vitamin D, 
+or prostaglandins
+Metastasis to bone, 
+rhabdomyosarcoma
+Hydration and furosemide 
+diuresis; corticosteroids; 
+mithramycin; calcitonin, 
+diphosphonates
+HEMATOLOGICAL
+Anemia
+Pallor, weakness, heart 
+failure
+Bone marrow suppression 
+or infiltration; blood loss
+Any with chemotherapy
+Packed red blood cell 
+transfusion
+Thrombocytopenia
+Petechiae, hemorrhage
+Bone marrow suppression 
+or infiltration
+Any with chemotherapy
+Platelet transfusion
+Disseminated 
+intravascular coagulation
+Shock, hemorrhage
+Sepsis, hypotension, 
+tumor factors
+Promyelocytic leukemia, 
+others
+Fresh frozen plasma; 
+platelets, treat infection
+Neutropenia
+Infection
+Bone marrow suppression 
+or infiltration
+Any with chemotherapy
+If patient is febrile, 
+administer broad-
+spectrum antibiotics, 
+consider filgrastim (G-CSF)
+Hyperleukocytosis (WBC 
+≥50,000/mm3)
+Hemorrhage, thrombosis; 
+pulmonary infiltrates, 
+hypoxia; tumor lysis 
+syndrome
+Leukostasis; vascular 
+occlusion
+Leukemia
+Hydration; chemotherapy; 
+leukapheresis?
+Graft-versus-host disease
+Dermatitis, diarrhea, 
+hepatitis
+Immunosuppression and 
+nonirradiated blood 
+products; bone marrow 
+transplantation
+Any with 
+immunosuppression
+Corticosteroids; 
+cyclosporine; 
+methotrexate; tacrolimus; 
+mycophenolate mofetil; 
+antithymocyte globulin
+SPACE-OCCUPYING LESIONS
+Spinal cord compression
+Back pain, motor and 
+sensory deficits
+Invasion of spinal canal by 
+primary tumor or 
+metastases
+Neuroblastoma, 
+medulloblastoma
+MRI for diagnosis; 
+corticosteroids; radiation 
+therapy; laminectomy; 
+chemotherapy
+Increased intracranial 
+pressure
+Headache, confusion, 
+coma, emesis, headache, 
+hypertension, 
+bradycardia, seizures, 
+papilledema, 
+hydrocephalus; cranial 
+nerve III and VI palsies
+Primary or metastatic 
+brain tumor
+Astrocytoma, 
+medulloblastoma, others; 
+neuroblastoma
+CT or MRI for diagnosis; 
+corticosteroids; 
+ventriculoperitoneal shunt; 
+radiation therapy; 
+chemotherapy
+Superior vena cava 
+syndrome
+Distended neck veins, 
+plethora, edema of head 
+and neck, cyanosis, 
+proptosis; Horner 
+syndrome
+Superior mediastinal mass
+Lymphoma
+Chemotherapy; radiation 
+therapy
+Tracheal compression
+Respiratory distress
+Mediastinal mass 
+compressing trachea
+Lymphoma
+Radiation therapy, 
+corticosteroids
+CNS, Central nervous system; CT, computed tomography; G-CSF, granulocyte colony-stimulating factor; MRI, magnetic resonance imaging; WBC, white blood cell.
+
+--- PAGE 623 ---
+601
+CHAPTER 154  Principles of Cancer Treatment
+TABLE 154.2  Cancer Chemotherapy
+DRUG
+ACTION
+INDICATION
+ACUTE TOXICITY*
+ANTIMETABOLITES
+Methotrexate
+Folic acid antagonist; 
+inhibits dihydrofolate 
+reductase
+ALL, lymphoma, 
+medulloblastoma, 
+osteosarcoma
+Myelosuppression (nadir 7-10 days), 
+mucositis, dermatitis, hepatitis, renal 
+and CNS effects with high-dose 
+administration; prevent with hydration 
+and leucovorin, monitor levels
+6-Mercaptopurine
+Purine analog
+ALL
+Myelosuppression; hepatitis; mucositis; 
+allopurinol increases toxicity
+Cytosine arabinoside 
+(Ara-C)
+Pyrimidine analog; 
+inhibits DNA polymerase
+ALL, AML, lymphoma
+Myelosuppression, conjunctivitis, 
+mucositis, neurotoxicity
+ALKYLATING AGENTS
+Cyclophosphamide
+Alkylates guanine; 
+inhibits DNA synthesis
+ALL, lymphoma, sarcoma, 
+brain tumors
+Myelosuppression; hemorrhagic cystitis
+Ifosfamide
+Similar to 
+cyclophosphamide
+Lymphoma, Wilms tumor, 
+sarcoma, germ cell and 
+testicular tumors
+Similar to cyclophosphamide; 
+neurotoxicity, cardiac toxicity
+Carmustine (BCNU), 
+lomustine (CCNU)
+Carbamylation of DNA; 
+inhibits DNA synthesis
+CNS tumors, lymphoma, 
+Hodgkin disease
+Delayed myelosuppression (4-6 wk); 
+pulmonary fibrosis, carcinogenic, 
+stomatitis
+Continued
+OTHER THERAPIES
+Certain cancers have been treated with biological response 
+modifiers, tyrosine kinase inhibitors, or monoclonal antibodies 
+in addition to standard treatments. Targeted therapies specifi-
+cally target the tumor cells, sparing normal host cells. Imatinib 
+and dasatinib are tyrosine kinase inhibitors that target the effects 
+of the t(9;22) translocation (BCR-ABL) of chronic myeloid 
+leukemia and acute lymphoblastic leukemia. Rituximab is a 
+monoclonal antibody directed against the cell surface antigen 
+CD20 expressed in some lymphomas. Dinutuximab is an 
+anti-GD2 monoclonal antibody used for neuroblastoma. Chimeric 
+antigen receptor T-cell therapy and bi-specific T-cell engager 
+therapy are immunotherapies that leverage the patient’s own 
+T cells to kill cancer cells.
+Supportive care also plays an important role in pediatric 
+oncology, including the use of appropriate antimicrobial agents, 
+blood products, nutritional support, intensive care, and integra-
+tive therapies.
+ADVERSE EFFECTS
+Because chemotherapy agents are cellular toxins, numerous 
+adverse effects are associated with their use. Bone marrow 
+suppression, immunosuppression, nausea, vomiting, and alopecia 
+are general adverse effects of commonly used chemotherapy 
+drugs. Each chemotherapy drug also has specific toxicities. 
+Doxorubicin can cause cardiac damage; cisplatin can cause 
+renal damage and ototoxicity; cyclophosphamide and ifosfamide 
+can cause hemorrhagic cystitis; and vincristine can cause 
+peripheral neuropathy. Radiation therapy produces many adverse 
+effects such as mucositis, growth retardation, organ dysfunction, 
+and the later development of secondary cancers. Significant 
+therapy-related late effects may develop in pediatric cancer 
+patients (Table 154.3).
+CHEMOTHERAPY
+Because most pediatric solid tumors have a high risk for micro-
+metastatic disease at the time of diagnosis, chemotherapy is used 
+in almost all cases (Table 154.2). Exceptions include low-stage 
+neuroblastoma and Wilms tumor (particularly in infants) and 
+low-grade central nervous system (CNS) tumors. For patients 
+with localized solid tumors, chemotherapy administered 
+after removal of the primary tumor is referred to as adjuvant 
+therapy. Chemotherapy administered while the primary tumor 
+is still present is referred to as neoadjuvant chemotherapy. 
+Neoadjuvant chemotherapy has a number of potential benefits, 
+including an early attack on presumed micrometastatic disease, 
+shrinkage of the primary tumor to facilitate local control, and 
+additional time to plan for definitive surgery.
+Resistance to particular chemotherapeutic agents can develop 
+relatively quickly. Thus combinations of chemotherapy drugs are 
+used, as opposed to sequential single agents, to treat childhood 
+cancer. The blood-brain barrier prevents the penetration of 
+chemotherapeutic drugs into the CNS. Thus administration 
+of the chemotherapeutic agent directly into the cerebrospinal 
+fluid (by lumbar puncture) is used for leukemia and lym-
+phoma. Radiation therapy also circumvents the blood-brain 
+barrier.
+RADIATION THERAPY
+Radiation therapy is the process of delivering ionizing 
+radiation to malignant cells to kill them directly or, more 
+commonly, prevent them from dividing by interfering 
+with DNA replication. Conventional radiation therapy uses 
+photons, but atomic particles such as electrons, protons, and 
+neutrons can also be used. Not all tumors are radiosensitive, 
+and radiation therapy is not necessary in all tumors that are 
+radiosensitive.
+
+--- PAGE 624 ---
+602
+SECTION 21  Oncology
+DRUG
+ACTION
+INDICATION
+ACUTE TOXICITY*
+Cisplatin
+Inhibits DNA synthesis
+Osteosarcoma, 
+neuroblastoma, CNS tumors, 
+germ cell tumors
+Nephrotoxic; myelosuppression, 
+ototoxicity, neurotoxicity, hemolytic 
+uremic syndrome
+Carboplatin
+Inhibits DNA synthesis
+Same as for cisplatin
+Myelosuppression
+TOPOISOMERASE INHIBITORS
+Doxorubicin and 
+daunorubicin
+Intercalation, DNA 
+strand breaks
+ALL, AML, osteosarcoma, 
+Ewing sarcoma, lymphoma, 
+neuroblastoma
+Cardiomyopathy, red urine, tissue 
+necrosis on extravasation, 
+myelosuppression, conjunctivitis, 
+radiation dermatitis, arrhythmia
+Dactinomycin
+Intercalation, DNA 
+strand breaks
+Wilms tumor, 
+rhabdomyosarcoma, Ewing 
+sarcoma
+Tissue necrosis on extravasation, 
+myelosuppression, hepatopathy with 
+thrombocytopenia, stomatitis
+Etoposide (VP-16)
+DNA strand breaks
+ALL, AML, lymphoma, germ 
+cell tumor, sarcoma
+Myelosuppression, secondary 
+leukemia, allergic reaction
+Topotecan
+DNA strand breaks
+Neuroblastoma, 
+rhabdomyosarcoma
+Myelosuppression, diarrhea, mucositis
+TUBULIN INHIBITORS
+Vincristine
+Inhibits microtubule 
+formation
+ALL, lymphoma, Wilms tumor, 
+Hodgkin disease, Ewing 
+sarcoma, neuroblastoma, 
+rhabdomyosarcoma, brain 
+tumors
+Local cellulitis, peripheral neuropathy, 
+constipation, ileus, jaw pain, 
+inappropriate ADH secretion, seizures, 
+ptosis, minimal myelosuppression
+Vinblastine
+Inhibits microtubule 
+formation
+Hodgkin disease, Langerhans 
+cell histiocytosis
+Local cellulitis, myelosuppression
+ENZYME
+Asparaginase
+Depletion of asparagine
+ALL, AML
+Allergic reaction; pancreatitis, 
+hyperglycemia, platelet dysfunction 
+and coagulopathy, encephalopathy, 
+stroke, thrombosis
+HORMONES
+Prednisone, 
+dexamethasone
+Direct lymphocyte 
+cytotoxicity
+ALL; Hodgkin disease, 
+lymphoma
+Cushing syndrome, cataracts, diabetes, 
+hypertension, myopathy, osteoporosis, 
+infection, peptic ulceration, irritability, 
+psychosis, hunger, fluid retention
+MONOCLONAL ANTIBODIES
+Rituximab
+Anti-CD20
+CD20+ B-cell leukemia, 
+lymphoma
+Fever, chills, allergy
+Brentuximab
+Anti-CD30
+CD30+ lymphomas
+Myelosuppression, peripheral 
+neuropathy, fatigue, fever
+Blinatumomab
+Anti-CD19 and anti-CD3
+CD19+ refractory 
+B-lymphoblastic leukemia
+Cytokine release syndrome, 
+neurotoxicity
+Dinutuximab
+Anti-GD2
+High-risk neuroblastoma
+Neuropathic pain, hypotension, 
+hypoxia, fever, capillary leak syndrome, 
+hypersensitivity reactions
+SMALL MOLECULE PATHWAY INHIBITORS
+Imatinib
+Inhibits BCR-ABL, VEGF, 
+c-KIT kinases
+Ph+ CML, ALL
+Nausea, vomiting, fatigue, headache
+Dasatinib
+Inhibits BCR-ABL, c-KIT, 
+and other kinases
+Ph+ CML, ALL
+Fluid retention, rash, nausea
+MISCELLANEOUS
+Tretinoin (all-trans 
+retinoic acid) and 
+isotretinoin (cis-
+retinoic acid)
+Promotes differentiation
+Acute promyelocytic leukemia 
+(ATRA); neuroblastoma (CRA)
+Fever, respiratory distress, leukocytosis 
+(ATRA); dry mouth, hair loss, 
+pseudotumor cerebri (CRA)
+Arsenic
+Promotes differentiation, 
+apoptosis
+Acute promyelocytic leukemia
+Transaminitis, nausea, vomiting, 
+abdominal pain, QTc prolongation
+*Many drugs produce nausea and vomiting during administration; many cause alopecia with repeated doses.
+ADH, Antidiuretic hormone; ALL, acute lymphoblastic leukemia; AML, acute myeloid leukemia; ATRA, all-trans retinoic acid; CML, chronic myeloid leukemia; CNS, 
+central nervous system; VEGF, vascular endothelial growth factor.
+TABLE 154.2  Cancer Chemotherapy—cont’d
+
+--- PAGE 625 ---
+603
+CHAPTER 155  Leukemia
+EPIDEMIOLOGY
+ALL accounts for approximately 75%, acute myeloid leukemia 
+(AML) accounts for approximately 20%, and CML accounts 
+for less than 5% of leukemia cases in the pediatric population. 
+Other chronic leukemias, including juvenile myelomonocytic 
+leukemia, chronic myelomonocytic leukemia, and chronic 
+lymphocytic leukemia, are rare in childhood. ALL is the most 
+common childhood cancer, comprising 25% of cancer prior 
+to the age of 15 years (40 per 1 million children under the age 
+of 15 years) and 19% of cancer prior to the age of 20 years.
+ALL is classified according to lymphoid lineage as either 
+B cell or T cell. The incidence of B-lineage ALL peaks at 2-5 
+years of age and is slightly more common in boys than in girls. 
+T-cell ALL is associated with male predominance and an older 
+age of onset. In the United States, ALL is more common in 
+whites than in African American children. The incidence of 
+AML is relatively higher in the neonatal period, then drops 
+and stabilizes until adolescence when there is a slight increase, 
+which continues into adulthood (especially beyond 55 years of 
+age). Males and females are equally affected by AML. Hispanic 
+and African American children have a slightly higher incidence 
+of AML than white children.
+CLINICAL MANIFESTATIONS
+TABLE 154.3  Long-Term Sequelae of Cancer Therapy
+PROBLEM
+ETIOLOGICAL AGENT(S)
+Infertility
+Alkylating agents; radiation
+Second cancers
+Genetic predisposition; radiation; 
+alkylating agents, etoposide, 
+topoisomerase II inhibitors
+Sepsis
+Splenectomy
+Hepatotoxicity
+Methotrexate, 6-mercaptopurine; 
+radiation
+Hepatic venoocclusive 
+disease
+High-dose, intensive chemotherapy 
+(busulfan, cyclophosphamide) ± 
+bone marrow transplant
+Scoliosis
+Radiation
+Pulmonary (fibrosis)
+Radiation; bleomycin, busulfan
+Cardiomyopathy
+Doxorubicin, daunorubicin; radiation
+Leukoencephalopathy
+Cranial radiation, methotrexate
+Cognition/intelligence
+Cranial radiation, methotrexate
+Pituitary dysfunction 
+(growth hormone 
+deficiency, 
+panhypopituitarism)
+Cranial radiation
+Psychosocial
+Stress, anxiety, death of peers; 
+conditioned responses to 
+chemotherapy
+Thyroid dysfunction
+Radiation
+Osteonecrosis
+Corticosteroids
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Arthritis
+Extremity Pain
+Lymphadenopathy
+Anemia
+Bleeding
+CHAPTER 155 
+Leukemia
+ETIOLOGY
+The etiology of childhood leukemia is unknown and is thought 
+to be multifactorial with both genetics and environmental factors 
+contributing to malignant transformation. In chronic myeloid 
+leukemia (CML) and, less commonly, in acute lymphoblastic 
+leukemia (ALL), a translocation involving chromosomes 9 and 
+22 (Philadelphia [Ph] chromosome) creates a novel fusion gene 
+called BCR-ABL. This results in the production of a constitu-
+tively activated tyrosine kinase that drives the development of 
+CML and Ph-positive ALL. In addition, a number of genetic 
+syndromes/diseases including Down syndrome (Trisomy 
+21), Fanconi anemia, Bloom syndrome, ataxia-telangiectasia, 
+Wiskott-Aldrich syndrome, neurofibromatosis type 1, and 
+rare familial leukemia syndromes can predispose children to 
+the development of acute leukemia. Siblings of children with 
+leukemia are at an increased risk of developing leukemia with an 
+approximately two- to fourfold risk above the general pediatric 
+population (approximately 25% risk for monozygotic twins). 
+Environmental factors that may increase the risk of leukemia 
+include ionizing radiation and chemical exposures including 
+certain chemotherapy agents (particularly the topoisomerase 
+II inhibitors).
+Signs and symptoms of acute leukemia are related to the 
+infiltration of leukemic cells into normal tissues, resulting in 
+either bone marrow failure (anemia, neutropenia, thrombocy-
+topenia) and/or specific tissue infiltration (lymph nodes, liver, 
+spleen, brain, bone, skin, gingiva, testes). Common presenting 
+symptoms are fever, pallor, petechiae and/or ecchymoses, 
+lethargy, malaise, anorexia, and bone/joint pain. Physical 
+examination frequently reveals lymphadenopathy and hepato-
+splenomegaly. The testes and central nervous system (CNS) 
+are common extramedullary sites for ALL involvement; neu-
+rological symptoms or a painless enlargement of one or both 
+testes may be seen. Patients with T-cell ALL often have high 
+white blood cell (WBC) counts, an anterior mediastinal mass 
+(mediastinal adenopathy and/or thymic infiltration), cervical 
+lymphadenopathy, hepatosplenomegaly, and CNS involvement. 
+In patients with AML, extramedullary soft tissue tumors may 
+be found in various sites.
+LABORATORY AND IMAGING STUDIES
+The diagnosis of acute leukemia is confirmed by findings of 
+immature blast cells on the peripheral blood smear, bone 
+marrow aspirate, or both. Most patients have abnormal blood 
+counts; anemia and thrombocytopenia are common. The WBC 
+count may be low, normal, or high; 15-20% of patients have a 
+
+--- PAGE 626 ---
+604
+SECTION 21  Oncology
+existing or subclinical CNS leukemia. Following induction 
+therapy, patients undergo an end-of-induction bone marrow 
+evaluation to assess for remission (nearly all patients with ALL 
+achieve a remission). The intensity of postinduction therapy 
+relies on risk adaptation using a variety of prognostic tools 
+(cytogenetics, rapidity and depth of remission using tests for 
+minimal residual disease [MRD], etc.). ALL patients with CNS 
+involvement detected at diagnosis often require more intensive 
+treatment that can include an escalation in their intrathecal 
+therapy as well as the use of cranial radiation therapy. Recently, 
+the omission of cranial radiation therapy for all pediatric 
+leukemia patients holds great promise. Patients with ALL receive 
+chemotherapy for a total of 2-3 years. The treatment of AML 
+is divided into three general types including (1) acute promy-
+elocytic leukemia with a t(15;17) translocation (PML-RARA) 
+that relies heavily on all-trans retinoic acid and arsenic trioxide; 
+(2) myeloid leukemias of Down syndrome in which less intensive 
+therapy is administered, and (3) AML that parallels the risk 
+and biological features most commonly seen in adult AML. 
+The latter results in the need for intensive therapy and, in select 
+high-risk patients, the use of stem cell transplantation after 
+completing upfront intensive chemotherapy. The majority of 
+pediatric patients with AML require four cycles of intensive 
+cytarabine-based chemotherapy for low- and intermediate-risk 
+patients and stem cell transplant for high-risk patients. Much 
+like ALL, risk adaptive therapy is based on cytogenetics and 
+response to therapy. Additionally, the availability of a human 
+leukocyte antigen (HLA)-matched donor (ideally an HLA-
+matched sibling) determines the use of stem cell transplantation 
+in first remission. Unlike ALL, there is little evidence that 
+low-dose continuation therapy is helpful in AML (with the 
+exception of acute promyelocytic leukemia).
+COMPLICATIONS
+Major short-term complications associated with the treatment 
+of leukemia result from bone marrow suppression caused by 
+chemotherapy. Patients may have bleeding and significant anemia 
+that necessitates transfusion of platelets and red blood cells. 
+The development of neutropenia predisposes patients to a 
+significant risk of both bacterial and fungal infections. Cell-
+mediated immunosuppression increases the risk of Pneumocystis 
+jiroveci (carinii) pneumonia; hence, prophylaxis, most commonly 
+with oral trimethoprim-sulfamethoxazole, is recommended. 
+Prophylaxis with antibiotics and antifungal agents is becoming 
+more commonplace, particularly in patients with AML who 
+are at high risk for treatment-related mortality (obese patients 
+and adolescent/young adult patients). Long-term sequelae of 
+therapy are less common than in previous treatment eras but 
+continue to be a priority for prevention, recognition, and 
+treatment. These sequelae include neurocognitive impairment, 
+short stature, obesity, cardiac dysfunction, infertility, second 
+malignant neoplasms, and psychosocial problems (Table 154.3).
+PROGNOSIS
+Patients with ALL are classified into prognostic risk groups 
+(B-lineage ALL currently separates patients into low, average, 
+high, and very high risk) based on age, initial WBC count, 
+genetic characteristics (cytogenetics), extramedullary involve-
+ment at diagnosis (testicular and/or CNS involvement), and 
+response to induction therapy using MRD techniques. Risk 
+WBC count of 50,000/mm3 or higher (hyperleukocytosis) at 
+presentation. Definitive diagnosis requires the evaluation of 
+cell surface markers (immunophenotype) by flow cytometry. 
+Cytogenetic analysis should be undertaken in all cases of acute 
+leukemia because many reoccurring cytogenetic abnormalities 
+have prognostic implications and are used, in combination with 
+other risk factors, to assign therapy to optimize outcome. In 
+B-lineage ALL, the t(12;21) translocation (previously called TEL/
+AML; now referred to as ETV6/RUNX1) is the most common 
+(approximately 20% of all cases) and is associated with a favor-
+able prognosis when combined with other low-risk features. The 
+t(9;22) translocation occurs in 3% of cases and, historically, has a 
+poor prognosis. However, much like in CML, the use of tyrosine 
+kinase inhibitors in Ph-positive ALL has resulted in dramatic 
+improvements in outcomes. The t(4;11) translocation (and other 
+translocations involving the MLL gene on chromosome 11) 
+often occurs in infant ALL and patients with secondary AML 
+(often in patients that have been exposed to topoisomerase II 
+inhibitors). It is associated with a poor prognosis. Fluorescent in 
+situ hybridization or polymerase chain reaction techniques are 
+now used in most cases of leukemia because many chromosomal 
+abnormalities are not apparent on routine karyotypes. DNA 
+microarray techniques are becoming an important diagnostic 
+and prognostic tool. Recently, a new high-risk subgroup called 
+Philadelphia-like ALL has been identified using this technique. 
+A lumbar puncture should always be performed at the time 
+of diagnosis to evaluate the possibility of CNS involvement. A 
+chest x-ray should be obtained in all patients to assess for an 
+anterior mediastinal mass. Electrolytes (particularly potassium, 
+phosphorous, and calcium), uric acid, and renal and hepatic 
+function should be monitored in all patients to assess and treat 
+patients at risk for tumor lysis syndrome.
+DIFFERENTIAL DIAGNOSIS
+The differential diagnosis of acute leukemia includes nonma-
+lignant and malignant diseases. Infection is probably the most 
+common mimicker of acute leukemia, particularly Epstein-Barr 
+virus. Other infections (cytomegalovirus, other viruses, myco-
+bacteria) may also produce signs and symptoms common to 
+leukemia. Noninfectious considerations include aplastic anemia, 
+histiocytosis, juvenile idiopathic arthritis, immune thrombo-
+cytopenic purpura, and congenital or acquired conditions that 
+result in neutropenia or anemia. Several malignant diagnoses 
+including neuroblastoma, rhabdomyosarcoma, and Ewing 
+sarcoma can also mimic leukemia. Newborns with trisomy 21 
+may have a condition known as transient myeloproliferative 
+disorder, which produces elevated WBC counts with peripheral 
+blasts, anemia, and thrombocytopenia. It usually resolves with 
+supportive care only, but these children have a significantly 
+increased risk (30%) of developing acute leukemia (ALL or 
+AML) within the next few months to years of life.
+TREATMENT
+Patients with B-lineage ALL generally receive three- or four-agent 
+induction chemotherapy (patients with T-cell ALL receive a 
+four-agent induction) based on their initial risk group assign-
+ment. Standard-risk patients receive vincristine, corticosteroids, 
+and pegylated asparaginase over 4 weeks; high-risk patients 
+also receive an anthracycline (typically daunorubicin). Intrathe-
+cal therapy with cytarabine or methotrexate is given to treat 
+
+--- PAGE 627 ---
+605
+CHAPTER 156  Lymphoma
+B-cell or T-cell origin; Table 156.1). Chromosomal transloca-
+tions can result in unregulated/increased expression of an 
+oncogene that drives malignant transformation. In Burkitt 
+lymphoma, translocations occurring between chromosome 8 
+(c-myc oncogene) and the immunoglobulin gene locus (found 
+on chromosomes 2, 14, or 22) lead to overexpression of c-myc, 
+causing malignant transformation.
+EPIDEMIOLOGY
+The incidence of HL has a bimodal distribution with peaks in 
+the adolescent/young adult years and again after age 50; it is 
+rarely seen in children younger than 5 years of age. In children, 
+boys are affected more commonly than girls; in adolescents, 
+the gender ratio is approximately equal. The incidence of NHL 
+increases with age. It is twice as common in whites as in African 
+Americans and has a male predominance. NHL has been 
+described in association with congenital or acquired immu-
+nodeficiency states and after organ or stem cell transplantation. 
+Burkitt lymphoma is commonly divided into two forms: a 
+sporadic form, commonly seen in North America, and an 
+endemic form, with a strong association with EBV and com-
+monly seen in Africa.
+CLINICAL MANIFESTATIONS
+TABLE 155.1  General Prognostic Factors in Acute 
+Lymphoblastic Leukemia
+FACTOR
+FAVORABLE 
+(LOWER RISK)
+UNFAVORABLE 
+(HIGHER RISK)
+Age
+1-9.99 years
+<1 or ≥10 years
+Gender
+Female
+Male
+Race and ethnicity
+Caucasian, Asian/
+Pacific Islanders
+African American, 
+Hispanic, Native 
+American
+Initial WBC count
+<50,000/mm3
+≥50,000/mm3
+CNS disease at 
+diagnosis
+Absent
+Present
+Immunophenotype
+B-lineage
+T cell
+Ploidy
+Hyperdiploidy
+Hypodiploidy
+Genetics
+t(12;21), trisomies 
+of chromosomes 
+4 and 10
+t(4;11), t(9;22), 
+Ph-like, iamp21
+Minimal residual 
+disease after 
+remission induction
+Negative
+Positive
+CNS, Central nervous system; WBC, white blood cell.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Lymphadenopathy
+Neck Masses
+Abdominal Pain
+Fever
+stratification factors are evolving (Table 155.1). The overall cure 
+rate for childhood B-lineage ALL is approaching 90%. Relapse 
+of ALL occurs most commonly in the bone marrow but can 
+involve other extramedullary sites, such as the CNS or testicles. 
+Relapse therapy relies on several treatment options based on 
+the timing and location of relapse as well as the patient’s response 
+to initial reinduction with chemotherapy. Thereafter a number 
+of treatment options are employed including chemotherapy 
+only, combination of chemotherapy with immunotherapy, 
+immunotherapy alone, and stem cell transplantation. The current 
+overall cure rate for childhood AML is approximately 65%. 
+The prognosis for relapsed AML is poor, particularly in patients 
+who have received a stem cell transplant.
+CHAPTER 156 
+Lymphoma
+ETIOLOGY
+Lymphomas are malignancies of lymphoid tissues and are 
+the third most common malignancy in childhood, behind 
+leukemias and central nervous system (CNS) tumors. There 
+are two major types of lymphoma: Hodgkin lymphoma (HL) 
+and non-Hodgkin lymphoma (NHL). The etiologies are mul-
+tifactorial. Both congenital and acquired immunodeficiencies 
+are more commonly associated with NHL, whereas the 
+Epstein-Barr virus (EBV) has been associated with both HL 
+and NHL.
+Almost all cases of NHL in childhood are diffuse, highly 
+malignant, and show little differentiation. NHL has three his-
+tological subtypes: small noncleaved cell (Burkitt lymphoma), 
+lymphoblastic, and large cell. For simplicity, these may be 
+regarded as B cell, T cell, and large cell (which may be of 
+The most common clinical presentation of HL is painless, firm 
+lymphadenopathy often confined to one or two contiguous 
+lymph node areas (most commonly the supraclavicular and 
+cervical nodes). Mediastinal lymphadenopathy, which produces 
+cough or shortness of breath, is a frequent presenting symptom. 
+The presence of one of three B symptoms has prognostic value: 
+fever (>38°C for 3 consecutive days), drenching night sweats, 
+and unintentional weight loss of 10% or more within 6 months 
+of diagnosis.
+The sporadic (North American) form of Burkitt lymphoma 
+more commonly has an abdominal presentation (typically with 
+pain), whereas the endemic (African) form frequently presents 
+with tumors of the jaw. The anterior mediastinum and cervical 
+nodes are the usual primary sites for T-cell lymphomas. These 
+lymphomas may cause airway or superior vena cava obstruction, 
+pleural effusion, or both.
+The diagnosis of lymphoma is established by biopsy of 
+an involved lymph node. Systemic symptoms such as fever 
+and weight loss may be present, particularly in patients with 
+anaplastic large cell lymphoma (ALCL), which can be insidious 
+in onset. If the bone marrow contains 25% or greater blasts, the 
+disease is classified as acute leukemia (either B-lineage acute 
+lymphoblastic leukemia [ALL], T-cell ALL, or Burkitt leukemia). 
+This distinction makes little prognostic or therapeutic difference 
+as they all require aggressive, systemic therapy in addition to 
+CNS-directed therapy.
+
+--- PAGE 628 ---
+606
+SECTION 21  Oncology
+have Stage II involvement at presentation (I 19%, II 49%, III 
+19%, IV 13%), and about 39% will have B symptoms.
+DIFFERENTIAL DIAGNOSIS
+The differential diagnosis for lymphomas in children includes 
+leukemia, rhabdomyosarcoma, nasopharyngeal carcinoma, germ 
+cell tumors, and thymomas. Nonmalignant diagnoses include 
+infectious mononucleosis (EBV infection), branchial cleft and 
+thyroglossal duct cysts, cat scratch disease (Bartonella henselae), 
+bacterial or viral lymphadenitis, mycobacterial infection, 
+toxoplasmosis, and even tinea capitis, all of which can produce 
+significant lymphadenopathy that can mimic lymphoma. Patients 
+with acute abdominal pain from Burkitt lymphoma may be 
+misdiagnosed as having appendicitis.
+TREATMENT
+Pediatric HL is highly curable even with advanced disease; 
+overall survival rates now exceed 90%. Risk-adaptive therapy 
+using stage, the presence of bulky disease, the presence or 
+absence of B symptoms, serum albumin, and the response to 
+upfront chemotherapy has been employed to reduce the need 
+for radiation therapy and excess chemotherapy. Multiagent 
+chemotherapy usually consists of drugs such as doxorubicin, 
+vincristine, bleomycin, vinblastine, etoposide, prednisone, and 
+cyclophosphamide. In general, four to six courses of chemo-
+therapy are given. The use of anti-CD30 monoclonal therapy 
+(Brentuximab vedotin) and the elimination of bleomycin 
+are currently under investigation in pediatric HL. Response 
+to therapy is often assessed after two cycles of upfront che-
+motherapy, relying on PET (to assess metabolic response) 
+and computed tomography (CT; to assess bulk reduction) 
+to determine the need for subsequent chemotherapy (slow 
+response obligates more aggressive chemotherapy) and the 
+need for radiation therapy. Of interest, patients with Stage 
+I (single-node with complete resection) nodular lymphocyte 
+predominant HL are cured with surgery alone 80% of the time.
+Distant, noncontiguous metastases are common in child-
+hood NHL. Systemic chemotherapy is mandatory and should 
+be administered to all children with NHL, even those with 
+clinically localized disease at diagnosis. B- and T-cell lym-
+phoblastic lymphoma and ALCL are generally treated with 
+aggressive multidrug regimens similar to the regimens used in 
+ALL. Surgery and radiation therapy are not commonly used 
+because the disease is rarely localized and is highly sensitive 
+to chemotherapy. Burkitt lymphoma and diffuse large B-cell 
+LABORATORY/IMAGING STUDIES
+Patients suspected of having lymphoma should have a complete 
+blood count, erythrocyte sedimentation rate, and measurement 
+of serum electrolytes (particularly potassium, phosphorous, 
+and calcium), lactate dehydrogenase, and uric acid as well 
+as a chest x-ray to assess for a mediastinal mass (Fig. 156.1). 
+The diagnosis ultimately requires a pathological confirmation 
+from tissue or fluid sampling (pleural or peritoneal fluid). For 
+staging purposes, a bone marrow evaluation, positron emis-
+sion tomography (PET) and, less commonly, a bone scan are 
+indicated to assess extent of disease (staging). The pathological 
+hallmark of HL is the identification of Reed-Sternberg cells. 
+Histopathological subtypes in childhood HL are the same as 
+those reported in adults. Nodular sclerosis (NS) is the most 
+common subtype in adolescents/young adults, whereas mixed 
+cellularity subtypes and nodular lymphocyte predominant are 
+more common in younger children. Staging of HL is according 
+to the Ann Arbor system. About half of pediatric patients will 
+TABLE 156.1  Subtypes of Non-Hodgkin Lymphoma in Children
+HISTOLOGICAL 
+CATEGORY
+IMMUNOPHENOTYPE
+USUAL PRIMARY SITE
+MOST COMMON 
+TRANSLOCATION(S)
+Small noncleaved (Burkitt 
+lymphoma)
+Mature B-cell (surface 
+immunoglobulin present)
+Abdomen (sporadic form)
+Head and neck (endemic form)
+t(8;14)(q24;q32)
+t(2;8)(p11;q24)
+t(8;22)(q24;q11)
+Lymphoblastic
+T-cell (rarely pre-B-cell)
+Neck and/or anterior 
+mediastinum
+Many
+Large cell
+T-cell, B-cell, or indeterminate
+Lymph nodes, skin, soft tissue, 
+bone
+t(2;5)(p23;q35)
+FIGURE 156.1  Chest x-ray of a 15-year-old boy demonstrating a 
+large superior anterior mediastinal mass (large arrows) compressing 
+the trachea and deviating it to the right (arrowheads). Biopsy revealed 
+non-Hodgkin lymphoma. 
+
+--- PAGE 629 ---
+607
+CHAPTER 157  Central Nervous System Tumors
+Children with certain inherited syndromes, such as 
+neurofibromatosis (types 1 and 2), Li-Fraumeni syndrome, 
+tuberous sclerosis, Turcot syndrome, and von Hippel-Lindau 
+syndrome, have an increased risk for developing a CNS tumor. 
+However, most CNS tumors arise in children with no known 
+underlying disorder or risk factor.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abnormal Head Size, Shape, and Fontanels
+Visual Impairment and Leukocoria
+Strabismus
+Vomiting
+Headaches
+Ataxia
+lymphomas are highly curable with cyclophosphamide, vincris-
+tine, prednisolone, and doxorubicin. Much like HL treatment, 
+monoclonal antibody therapy is being added to the traditional 
+chemotherapy backbone in Burkitt lymphoma (anti-CD20) and 
+in ALCL (anti-CD30).
+COMPLICATIONS
+The short-term complications from the treatment of lymphoma 
+are similar to other pediatric malignancies and commonly 
+include immunosuppression, related sequelae from myelosup-
+pression, nausea, vomiting, and alopecia. Late adverse effects 
+include second malignant neoplasms (acute myeloid leukemia 
+or myelodysplasia, thyroid malignancies, and breast cancer), 
+hypothyroidism, impaired soft tissue and bone growth, cardiac 
+dysfunction, and pulmonary fibrosis.
+PROGNOSIS
+Children and adolescents with HL are classified as low, inter-
+mediate, or high risk according to stage, nodal bulk, the presence 
+of B symptoms, and the serum albumin at presentation. The 
+prognosis is generally excellent with overall survival exceeding 
+90% for most patients (approaching 100% for low-risk patients). 
+The overall 3-year survival rates for B-cell, T-cell, and large 
+cell NHL are 70-90%.
+CHAPTER 157 
+Central Nervous System Tumors
+ETIOLOGY
+Most central nervous system (CNS) tumors in children and 
+adolescents are primary tumors that originate in the CNS and 
+include gliomas (especially low-grade gliomas) and embryonic 
+neoplasms (such as medulloblastoma and CNS primitive 
+neuroectodermal tumors). In contrast, CNS tumors in adults 
+are often high-grade astrocytomas or secondary tumors that 
+are metastatic from other carcinomas. CNS tumors also may 
+arise in patients previously treated with radiation therapy. CNS 
+tumors are likely multifactorial in etiology. The classification 
+of CNS tumors is complex and evolving, with the World 
+Health Organization classification being the most complete 
+and accurate system.
+EPIDEMIOLOGY
+CNS tumors are the most common solid tumors in children, 
+second to leukemia in overall cancer incidence during childhood. 
+However, due primarily to improved outcomes for leukemia, 
+CNS tumors are now the leading cause of childhood cancer 
+deaths. About 1,700 new cases occur each year in the United 
+States; the rate is approximately 33 cases per 1 million children 
+under 15 years of age. The incidence peaks before age 10 years 
+and then decreases until a second peak after age 70. For medul-
+loblastoma and ependymoma, males are more affected than 
+females; for other tumor types, no gender differences exist. In 
+the first 2-3 years of life, whites are affected more than nonwhite 
+children; otherwise incidence rates are essentially equal for 
+whites and nonwhite children.
+Brain tumors can cause symptoms by impingement on normal 
+tissue (usually cranial nerves) or by an increase in intracranial 
+pressure caused either by obstruction of cerebrospinal fluid 
+(CSF) flow or by a direct mass effect. Tumors that obstruct the 
+flow of CSF quickly become symptomatic. Symptoms of 
+increased intracranial pressure are lethargy, headache, and 
+vomiting (particularly in the morning on awakening). Irritability, 
+anorexia, poor school performance, and loss of developmental 
+milestones all may be signs of slow-growing CNS tumors. In 
+young children with open cranial sutures, an increase in head 
+circumference may occur. Optic pathway tumors may lead to 
+loss of visual acuity or visual field defects. Inability to abduct 
+the eye as the result of sixth cranial nerve palsy is a common 
+sign of increased intracranial pressure. Other cranial nerve 
+deficits suggest involvement of the brainstem. Seizures occur 
+in 20-50% of patients with supratentorial tumors; focal weakness 
+or sensory changes also may be seen. Pituitary involvement 
+can produce neuroendocrine effects such as precocious puberty 
+or diabetes insipidus. Cerebellar tumors are associated with 
+ataxia and diminished coordination. A history and physical 
+examination are fundamental for evaluation and should include 
+a careful neurological assessment, including visual fields and 
+a funduscopic examination.
+LABORATORY/IMAGING STUDIES
+If an intracranial lesion is suspected, magnetic resonance 
+imaging (MRI) is currently the examination of choice (Fig. 
+157.1). Examination of CSF by cytocentrifuge histological testing 
+is indicated to determine the presence of metastatic disease in 
+primitive neuroectodermal tumors, germ cell tumors, and pineal 
+region tumors. A lumbar puncture should not be performed 
+before imaging has been obtained to evaluate for evidence 
+of increased intracranial pressure. If a tumor is suspected 
+to have metastatic potential (medulloblastoma), MRI of the 
+entire spine should be obtained before surgery to assess for 
+neuraxial dissemination. A postoperative MRI study of the 
+brain should be obtained within 24-48 hours of surgery to 
+assess the extent of resection. During follow-up, magnetic reso-
+nance spectroscopy can help distinguish recurrent tumor from 
+radiation necrosis.
+
+--- PAGE 630 ---
+608
+SECTION 21  Oncology
+TABLE 157.1  Location, Incidence, and Prognosis of 
+Central Nervous System Tumors in Children
+LOCATION
+INCIDENCE 
+(%)
+5-YEAR 
+SURVIVAL (%)
+Infratentorial (posterior fossa)
+50-60
+Astrocytoma (cerebellum)
+15
+90
+Medulloblastoma
+15
+50-80
+Glioma (brainstem)
+15
+High grade: 0-5; 
+low grade: 30
+Ependymoma
+5
+50-60
+Supratentorial (cerebral 
+hemispheres)
+35-45
+Astrocytoma
+20
+50-75
+Glioblastoma multiforme
+10
+0-5
+Ependymoma
+5
+50-75
+Choroid plexus papilloma
+2
+95
+Midline
+10-15
+Craniopharyngioma
+6
+70-90
+Germ cell tumors
+3
+65-95
+Pineal
+1
+65-75
+Optic nerve glioma
+3
+90
+FIGURE 157.1  Magnetic resonance imaging scan of a 9-year-old 
+boy showing a heterogeneously enhancing fourth ventricular mass 
+(arrow). It was resected, and pathology revealed medulloblastoma. 
+DIFFERENTIAL DIAGNOSIS
+The differential diagnosis of a CNS mass lesion includes 
+malignant tumor, benign tumor, arteriovenous malformation, 
+aneurysm, brain abscess, cysticercosis, granulomatous disease 
+(tuberculosis, sarcoid), intracranial hemorrhage, pseudotumor 
+cerebri, vasculitis, and, rarely, metastatic tumor.
+TREATMENT
+The therapy for children with CNS tumors is individualized 
+and depends on the tumor type, location, size, and associated 
+symptoms. High-dose dexamethasone is often administered 
+immediately to reduce tumor-associated edema. Surgical objec-
+tives are complete excision, if possible, and maximal debulking 
+if a complete excision is not possible. In children, radiation 
+therapy is often combined with chemotherapy; in young children, 
+radiation therapy may be delayed or avoided altogether. Proton 
+radiation therapy is an emerging therapy that holds promise 
+for decreased toxicity. Primitive neuroectodermal tumors 
+(including medulloblastoma) and germ cell tumors are sensitive 
+to chemotherapy; gliomas are less sensitive to chemotherapy. 
+Chemotherapy plays an especially important role in infants in 
+whom the effects of high-dose CNS radiation may have devastat-
+ing effects on growth and neurocognitive development.
+COMPLICATIONS
+Short-term adverse effects of therapy include nausea, vomiting, 
+anorexia, fatigue, immunosuppression, and cushingoid features. 
+Long-term adverse effects include neurocognitive deficits, 
+endocrinological sequelae, decreased bone growth, ototoxicity, 
+renal insufficiency, cataracts, infertility, and second malignant 
+neoplasms. The neurocognitive deficits can be significant, 
+particularly in infants and young children, and are the primary 
+reason for the continued search for the lowest efficacious 
+radiation therapy dose and the most conformal delivery methods 
+for the radiation therapy boosts. Posterior fossa syndrome 
+(also known as “cerebellar mutism”) occurs in up to 25% of 
+patients after resection of a posterior fossa tumor and is 
+characterized by an acute decrease in speech, behavioral changes 
+(e.g., irritability, apathy, or both), diffuse cerebellar dysfunction, 
+and other neurological abnormalities. It may begin within hours 
+to days of surgery and is usually self-resolving within weeks 
+to months, although some neurological complications may 
+persist. Somnolence syndrome, which is characterized by 
+excessive fatigue and sleepiness, may occur in the months after 
+completion of radiation therapy and is self-limited.
+PROGNOSIS
+Improvements in neurodiagnosis, neurosurgical techniques, 
+chemotherapy regimens, and radiation therapy techniques 
+have improved overall outcome. The 5-year overall survival 
+rate associated with all childhood CNS tumors is approximately 
+50-60%, resulting in large measure from the high curability of 
+cerebellar astrocytomas and the increasing cure rate for patients 
+with medulloblastoma (Table 157.1). Intrinsic brainstem gliomas 
+and glioblastoma multiforme have extremely poor prognoses.
+CHAPTER 158 
+Neuroblastoma
+ETIOLOGY
+Neuroblastoma is derived from neural crest cells that form 
+the adrenal medulla and the sympathetic nervous system. The 
+
+--- PAGE 631 ---
+609
+CHAPTER 158  Neuroblastoma
+chest, abdomen, and pelvis; a bone scan and/or metaiodoben-
+zylguanidine scan; bilateral bone marrow aspiration and biopsies; 
+and urinary catecholamines complete the evaluation.
+DIFFERENTIAL DIAGNOSIS
+The abdominal presentation of neuroblastoma must be dif-
+ferentiated from Wilms tumor, which also presents as an 
+abdominal or flank mass. Ultrasound or CT examination 
+usually differentiates the tumors prior to surgery. Periorbital 
+ecchymoses from orbital metastases can be mistaken for child 
+abuse. Because children with bone marrow involvement may 
+have anemia, thrombocytopenia, or neutropenia, leukemia is 
+often considered in the differential.
+TREATMENT
+Treatment of neuroblastoma is based on risk classification (Table 
+158.1), an evolving scheme based on emerging genetic discover-
+ies, and treatment advances. Complete surgical excision is the 
+initial treatment of choice for localized neuroblastoma. Children 
+with very low– or low-risk tumors who undergo a gross total 
+resection require no further therapy. Patients with intermediate-
+risk disease are usually treated with surgery and 4-8 cycles of 
+chemotherapy. In patients with high-risk disease, combination 
+chemotherapy is given after confirmation of the diagnosis. The 
+most commonly used agents are vincristine, cyclophosphamide, 
+topotecan, doxorubicin, cisplatin, and etoposide. Resection of 
+the primary tumor is undertaken after several courses of 
+chemotherapy. Patients then undergo high-dose chemotherapy 
+with autologous stem cell rescue; recent data suggest two 
+courses of high-dose therapy are better than one. Radiation 
+therapy is then administered to the primary tumor bed and 
+areas of metastatic disease. Finally, cis-retinoic acid (isotreti-
+noin) and Dinutuximab (a form of immunotherapy directed 
+against the GD2 antigen) are administered to treat minimal 
+residual disease.
+COMPLICATIONS
+Spinal cord compression from neuroblastoma may cause an 
+irreversible neurological deficit and is an oncological emergency. 
+Children with opsomyoclonus syndrome may suffer from 
+developmental delay. The aggressive chemotherapy and radiation 
+therapies currently used to treat high-risk neuroblastoma may 
+result in complications such as ototoxicity, nephrotoxicity, 
+growth problems, and second malignancies.
+PROGNOSIS
+The prognosis is affected by age at diagnosis, stage (based on 
+presence or absence of metastasis and image-defined risk 
+factors), DNA ploidy, MYCN status, 11q aberration, and his-
+topathology (grade of tumor differentiation). Currently, children 
+with neuroblastoma can be divided into four groups: very low, 
+low, intermediate, and high risk. Patients with favorable biology 
+tend to be younger and often have localized disease. Older 
+patients with metastatic disease most commonly have unfavor-
+able biology; approximately 50% will ultimately relapse due to 
+drug-resistant residual disease. Although neuroblastoma 
+represents only 8% of cases of childhood cancer, it is responsible 
+for 15% of cancer deaths in children.
+cause is unknown. Most cases occur in young children. Neu-
+roblastoma may rarely (1-2% of cases) be hereditary. Mutations 
+in the ALK, PHOX2B, and TP53 genes have been associated 
+with familial cases. In sporadic cases, several somatic genetic 
+mutations have been identified, with MYCN amplification being 
+the most common.
+EPIDEMIOLOGY
+Neuroblastoma is the most common extracranial solid tumor 
+of childhood and the most common malignancy in infancy. 
+The median age at diagnosis is 17 months. There are approxi-
+mately 800 new cases of neuroblastoma in the United States 
+each year. The prevalence is estimated to be 1 in 7,000 live 
+births.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abdominal Masses
+Neck Masses
+Abnormal Eye Movements
+Limp
+Pancytopenia
+Neuroblastoma is remarkable for its broad spectrum of clinical 
+behavior ranging from spontaneous regression to rapid progres-
+sion with metastases resulting in death. Children with localized 
+disease are often asymptomatic at diagnosis, whereas children 
+with metastases often appear ill and have systemic complaints 
+such as fever, weight loss, and pain. The most common presenta-
+tion is abdominal pain or mass. The mass is often palpated in 
+the abdomen or flank and is hard and nontender. Approximately 
+45% of tumors arise in the adrenal gland, and 25% arise in the 
+retroperitoneal sympathetic ganglia. Other sites of origin are 
+the paravertebral ganglia of the chest and neck. Paraspinal 
+tumors may invade through the neural foramina and cause 
+spinal cord compression. Horner syndrome is sometimes seen 
+with neck or apical masses. Several paraneoplastic syndromes, 
+including secretory diarrhea, profuse sweating, and opsomy-
+oclonus, are associated with neuroblastoma.
+Neuroblastoma may metastasize to multiple organs, including 
+the liver, bone, bone marrow, and lymph nodes. Periorbital 
+ecchymoses are a sign of orbital bone metastases. A unique 
+category of neuroblastoma, stage MS, is defined in infants (<18 
+months old) with metastases limited to skin, liver, or bone 
+marrow. It is associated with a favorable outcome.
+LABORATORY/IMAGING STUDIES
+A complete blood count and plain radiographs may help identify 
+patients with neuroblastoma. Calcification within abdominal 
+neuroblastoma tumors is often observed on plain radiographs 
+of the abdomen. About 90% of neuroblastomas produce cat-
+echolamines (vanillylmandelic acid; homovanillic acid) that 
+can be detected in the urine. Definitive diagnosis of neuro-
+blastoma requires tissue biopsy for microscopic examination 
+and genetic testing. A computed tomography (CT) scan of the 
+
+--- PAGE 632 ---
+610
+SECTION 21  Oncology
+TABLE 158.1  International Neuroblastoma Risk Group Pretreatment Classification Schema
+INRG 
+STAGE
+AGE 
+(MONTHS)
+HISTOLOGICAL 
+CATEGORY
+GRADE OF TUMOR 
+DIFFERENTIATION
+MYCN
+11q 
+ABERRATION
+PLOIDY
+PRETREATMENT 
+RISK GROUP
+L1/L2
+GN maturing, 
+GNB 
+intermixed
+A (very low)
+L1
+Any, except 
+GN maturing 
+or
+NA
+B (very low)
+GNB 
+intermixed
+Amplified
+K (high)
+L2
+<18
+Any, except 
+GN maturing 
+or
+NA
+No
+D (low)
+GNB 
+intermixed
+Yes
+G (intermediate)
+≥18
+GNB nodular 
+neuroblastoma
+Differentiating
+NA
+No
+E (low)
+Yes
+H (intermediate)
+Poorly differentiated 
+or undifferentiated
+NA
+H (intermediate)
+Amplified
+N (high)
+M
+<18
+NA
+Hyperdiploid
+F (low)
+<12
+NA
+Diploid
+I (intermediate)
+12-<18
+NA
+Diploid
+J (intermediate)
+<18
+Amplified
+O (high)
+≥18
+P (high)
+MS
+<18
+NA
+No
+C (very low)
+Yes
+Q (high)
+Amplified
+R (high)
+GN, Ganglioneuroma; GNB, ganglioneuroblastoma; INRG, International Neuroblastoma Risk Group; NA, not amplified.
+Reprinted with permission. Copyright American Society of Clinical Oncology. All rights reserved. From Cohn SL, Pearson AD, London WB, et al. The International 
+Neuroblastoma Risk Group (INRG) Classification System: An INRG Task Force Report. J Clin Oncol. 2009;27(2):289–297 (Fig 2).
+CHAPTER 159 
+Wilms Tumor
+ETIOLOGY AND EPIDEMIOLOGY
+Wilms tumor is thought to arise from primitive, metanephric 
+blastema, the precursor of a normal kidney. Nephrogenic 
+rests are foci of embryonal cells that are rarely (<1%) found 
+in normal infant kidneys but commonly (25-40%) found 
+in Wilms tumor–bearing kidneys. Although the cause of 
+Wilms tumor is unknown, approximately 15-20% of spo-
+radic tumors have WT1 mutations or deletions. Over 70% 
+of Wilms tumors demonstrate loss of imprinting or loss of 
+heterozygosity at 11p15, leading to overexpression of IGF2, 
+thought to play a key role in tumorigenesis. Certain syndromes 
+including Beckwith-Wiedemann and WAGR (Wilms tumor, 
+aniridia, genitourinary anomalies, and retardation; mutation 
+involving 11p13 region) are at increased risk of developing 
+the disease.
+Wilms tumor is the most common malignant renal tumor 
+of childhood, with approximately 500 new cases per year in the 
+United States. Unilateral tumors have a median age of diagnosis 
+of 44 months versus bilateral tumors, which have a median age 
+of diagnosis of 31 months. Bilateral presentations are commonly 
+associated with hereditary forms of the disease.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abdominal Pain
+Abdominal Masses
+Hematuria
+Most children with Wilms tumor are brought to medical atten-
+tion because they have an abdominal mass that is discovered 
+by their parents. Although many children do not have complaints 
+at the time that the mass is first noted, associated symptoms 
+may include abdominal pain (often mistaken for constipation), 
+fever, hypertension, and hematuria.
+
+--- PAGE 633 ---
+611
+CHAPTER 160  Sarcomas
+CHAPTER 160 
+Sarcomas
+Sarcomas are divided into soft tissue sarcomas and bone cancers. 
+Soft tissue sarcomas arise primarily from the connective tissues 
+of the body, such as muscle tissue, fibrous tissue, and adipose 
+tissue. Rhabdomyosarcoma (RMS), the most common soft 
+tissue sarcoma in children, is derived from mesenchymal cells 
+of muscle lineage. Less common soft tissue sarcomas include 
+fibrosarcoma, synovial sarcoma, and extraosseous Ewing 
+sarcoma. The most common malignant bone cancers in children 
+are osteosarcoma and Ewing sarcoma. Osteosarcomas derive 
+from primitive bone-forming mesenchymal stem cells. Ewing 
+sarcomas are thought to be of neural crest cell origin.
+ETIOLOGY
+The cause is unknown for most children diagnosed with sarcoma, 
+although a few observations have been made regarding risks. 
+Individuals with Li-Fraumeni syndrome (associated with a 
+germline p53 mutation) and neurofibromatosis (associated with 
+NF1 mutations) have an increased risk of soft tissue sarcomas. 
+There is a 500-fold increased risk for osteosarcoma for individu-
+als with hereditary retinoblastoma. Prior treatment for childhood 
+cancer with radiation therapy or chemotherapy (specifically 
+alkylating agents), or both, increases the risk for osteosarcoma 
+as a second malignancy.
+EPIDEMIOLOGY
+In the United States, 850-900 children and adolescents under 
+20 years of age are diagnosed with soft tissue sarcomas each 
+year; approximately 350 are RMS. The incidence of RMS peaks 
+in children 2-6 years old and again in adolescents. The early 
+peak is associated with tumors in the genitourinary region, 
+head, and neck; the later peak is associated with tumors in 
+the extremities, trunk, and male genitourinary tract. Boys are 
+affected 1.5 times more often than girls. Of the 650-700 U.S. 
+children and adolescents under 20 years of age diagnosed 
+with bone tumors each year, approximately two thirds have 
+osteosarcoma and one third have Ewing sarcoma. Osteosarcoma 
+most commonly affects adolescents; the peak incidence occurs 
+during the period of maximum growth velocity. The incidence 
+of Ewing sarcoma peaks between ages 10 and 20 years but may 
+occur at any age. Ewing sarcoma primarily affects whites; it 
+rarely occurs in African American children or Asian children.
+CLINICAL MANIFESTATIONS
+LABORATORY/IMAGING STUDIES
+An abdominal ultrasound or computed tomography (CT) scan 
+can usually distinguish an intrarenal mass from a mass arising 
+from the adrenal gland (most commonly neuroblastoma) or 
+other surrounding structures. Evaluation of the inferior vena 
+cava is crucial because the tumor may extend from the kidney 
+into the vena cava. The diagnostic work-up includes a complete 
+blood count, urinalysis, liver and renal function studies, as well 
+as a CT scan of the chest, abdomen, and pelvis to assess for 
+metastatic involvement (pulmonary involvement is the most 
+common metastatic site). The diagnosis is confirmed by his-
+tological examination of the tumor.
+DIFFERENTIAL DIAGNOSIS
+The differential diagnosis of Wilms tumor includes hydro-
+nephrosis and polycystic disease of the kidney; benign renal 
+tumors, such as mesoblastic nephroma and hamartoma; and 
+other malignant tumors, such as neuroblastoma, renal cell 
+carcinoma, lymphoma, and retroperitoneal rhabdomyosarcoma.
+TREATMENT
+The timing of nephrectomy for unilateral, resectable Wilms 
+tumor remains divided between the North American approach 
+and the European approach. Both approaches have a similar 
+overall survival. The North American approach recommends 
+an upfront nephrectomy (confirming tissue diagnosis) followed 
+by adjuvant chemotherapy with or without radiation therapy, 
+whereas the European approach is to make a diagnosis relying 
+predominantly on imaging (sometimes a biopsy), provide 
+upfront (neoadjuvant) chemotherapy, then nephrectomy of the 
+involved kidney followed by adjuvant chemotherapy with or 
+without radiation therapy. The Children’s Oncology Group 
+(North American approach) relies on stage, histology (favorable 
+versus anaplastic/unfavorable), patient age, tumor weight, loss 
+of heterozygosity of 1p and 16q, and imaging response of 
+pulmonary nodules after initial chemotherapy to risk stratify 
+patients. Most patients will receive a 2-3 drug chemotherapy 
+regimen (vincristine, actinomycin, with or without doxorubicin) 
+as well as radiation therapy for those with high-risk features. 
+Patients designated with very-low-risk unilateral Wilms tumor 
+can often be cured with nephrectomy only.
+Bilateral Wilms tumor is present in about 5% of children 
+on initial presentation. The treatment goal for patients with 
+bilateral Wilms tumor is to balance the need to achieve 
+a cure while retaining as much normal kidney function as 
+possible.
+PROGNOSIS AND COMPLICATIONS
+The overall survival rate for Wilms tumor is 90%. Unfor-
+tunately, 25% of survivors will experience serious chronic 
+health conditions. Survivors of Wilms tumor are at risk for 
+cardiomyopathy, scoliosis, hypertension and prehypertension, 
+renal and bladder insufficiency, pulmonary dysfunction, hepatic 
+dysfunction, infertility, and second malignancies. Patients with 
+bilateral Wilms tumor are sometimes left with renal insuf-
+ficiency or failure. Female survivors may have complicated 
+pregnancies and deliveries most commonly associated with 
+flank radiation.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Extremity Pain
+Limp
+Neck Masses
+Scrotal Swelling (Painless)
+Vaginal Discharge
+Lymphadenopathy
+
+--- PAGE 634 ---
+612
+SECTION 21  Oncology
+(MRI) before starting chemotherapy to determine surgical 
+resection options. Osteosarcoma tends to metastasize to the 
+lungs, most commonly, and rarely to other bones. Metastatic 
+evaluation includes a chest CT scan and a bone scan (or 
+PET scan).
+The diagnosis of Ewing sarcoma is established with immu-
+nohistochemical analysis along with cytogenetic and molecular 
+diagnostic studies of the biopsy material. Ewing sarcoma is 
+characterized by a specific chromosomal translocation, t(11;22), 
+which is seen in 95% of tumors. MRI of the primary lesion 
+should be performed to delineate extent of the lesion and any 
+associated soft tissue mass. Metastatic evaluation involves a 
+PET scan (when available), chest CT scan, and bilateral bone 
+marrow aspiration/biopsy.
+DIFFERENTIAL DIAGNOSIS
+Patients with Ewing sarcoma may be misdiagnosed as having 
+osteomyelitis; children with osteogenic sarcoma are often 
+initially believed to have pain and swelling related to trauma. 
+The differential diagnosis for RMS depends on the location of 
+the tumor. Tumors of the trunk and extremities often present 
+as a painless mass and may initially be thought to be benign 
+tumors. Head and neck RMS may be misdiagnosed as aller-
+gies, orbital cellulitis, or chronic infection of ears or sinuses. 
+The differential diagnosis for intraabdominal RMS includes 
+other abdominal malignancies, such as Wilms tumor and 
+neuroblastoma.
+TREATMENT
+Treatment of RMS is currently based on a staging system that 
+incorporates a number of diagnostic features including primary 
+site, histological subtype, FOXO1 fusion status, stage (local, 
+regional or metastatic involvement), and surgical grouping (the 
+ability or inability to achieve a gross total resection prior to 
+chemotherapy/radiation). The most common chemotherapy 
+agents used in RMS are vincristine, dactinomycin, and cyclo-
+phosphamide. Other active agents include irinotecan, ifosfamide, 
+and etoposide. The use of temsirolimus, temozolomide, and 
+ganitumab (anti-IGF-1R monoclonal antibody) is currently 
+under investigation. Radiation is administered to the primary 
+tumor when surgical resection is incomplete or would be morbid. 
+It may also be administered to involved regional nodal sites, 
+and sometimes to distant metastatic sites.
+The current treatment of osteosarcoma involves neoadjuvant 
+chemotherapy, surgical resection of the primary tumor, followed 
+by adjuvant chemotherapy. The most common chemotherapy 
+agents used for osteosarcoma are high-dose methotrexate, 
+doxorubicin, and cisplatin. Radiation therapy is ineffective 
+for osteosarcoma, although it is sometimes used for palliative 
+intent to treat pain. The treatment for Ewing sarcoma is similar 
+to osteosarcoma and requires neoadjuvant chemotherapy, local 
+control measures, followed by adjuvant chemotherapy. The most 
+common chemotherapy agents used for Ewing sarcoma are 
+vincristine, doxorubicin, and cyclophosphamide in combination 
+with ifosfamide and etoposide. The addition of topotecan in 
+nonmetastatic patients and ganitumab in metastatic patients 
+is currently under investigation. In contrast to osteosarcoma, 
+Ewing sarcoma is radiation sensitive, and radiation therapy is 
+administered to patients where the primary tumor cannot be 
+safely resected as well as for metastatic sites.
+The clinical presentation of RMS varies, depending on the site 
+of origin, subsequent mass effect, and presence of metastatic 
+disease. Periorbital swelling, proptosis, and limitation of extra-
+ocular motion may be seen with an orbital tumor. Nasal mass, 
+chronic otitis media, ear discharge, dysphagia, neck mass, and 
+cranial nerve involvement may be noted with tumors in other 
+head and neck sites. Urethral or vaginal masses, paratesticular 
+swelling, hematuria, and urinary frequency or retention may 
+be noted with tumors in the genitourinary tract. Trunk or 
+extremity lesions tend to present as rapidly growing masses 
+that may or may not be painful. If there is metastatic disease 
+to bone or bone marrow, limb pain and evidence of marrow 
+failure may be present.
+Osteosarcoma is often located at the epiphysis or metaphysis 
+of long bones that are associated with maximum growth velocity 
+(distal femur, proximal tibia, proximal humerus), but any bone 
+may be involved. It presents with pain and may be associated 
+with a palpable mass. Because the pain and swelling often are 
+initially thought to be related to trauma, radiographs of the 
+affected region are frequently obtained; the radiographs usually 
+reveal a lytic lesion, sometimes associated with calcification 
+in the soft tissue surrounding the lesion. Although 75-80% of 
+patients with osteosarcoma have apparently localized disease at 
+diagnosis, most patients are believed to have micrometastatic 
+disease as well.
+Although Ewing sarcoma can occur in almost any bone in 
+the body, the femur and pelvis are the most common sites. 
+In addition to local pain and swelling, clinical manifestations 
+may include constitutional symptoms such as fever, fatigue, 
+and weight loss.
+LABORATORY/IMAGING STUDIES
+Tissue biopsy is needed for a definitive diagnosis of sarcoma. 
+Selection of the biopsy site is important and has implications 
+for future surgical resection and radiation therapy. Under light 
+microscopy, RMS and Ewing sarcoma appear as small, round, 
+blue cell tumors. Osteosarcomas are distinguishable by the 
+presence of osteoid.
+Immunohistochemical staining for muscle-specific proteins, 
+such as actin and myosin, helps confirm the diagnosis of RMS. 
+Two major histological variants exist for RMS: embryonal and 
+alveolar. The embryonal (ERMS; embryonal RMS) histologi-
+cal variant is most common in younger children with head, 
+neck, and genitourinary primary tumors. The alveolar (ARMS; 
+alveolar RMS) histological variant occurs in older patients and 
+is seen most commonly in trunk and extremity tumors. Alveolar 
+RMS is often characterized by specific translocations: t(2;13) or 
+t(1;13). Although histology is still used to determine risk group 
+assignment/treatment, FOXO1 fusion status is more predictive 
+of outcome. The vast majority of ARMS are PAX3-FOXO1 or 
+PAX7-FOXO1 translocation positive. Metastatic evaluation for 
+patients with RMS should include positron emission tomography 
+(PET) scan (when available), chest computed tomography 
+(CT), and bilateral bone marrow aspiration/biopsy. A lumbar 
+puncture is required in patients with a parameningeal primary 
+site due to the risk of direct extension into the central nervous 
+system (CNS).
+The diagnosis of osteosarcoma is established with the 
+presence of osteoid and immunohistochemical analysis of 
+the biopsy material. The extent of the primary tumor should 
+be delineated carefully with magnetic resonance imaging 
+
+--- PAGE 635 ---
+613
+CHAPTER 160  Sarcomas
+tumor necrosis after neoadjuvant chemotherapy have an overall 
+survival rate of approximately 80% versus approximately 50% 
+for patients who have <90% tumor necrosis. The overall cure 
+rate for patients with localized osteosarcoma and Ewing sarcoma 
+is approximately 60-70%. Patients who have lung metastasis 
+at diagnosis have a cure rate of approximately 30%. Patients 
+with metastases to other bones have a very poor prognosis 
+(less than 20%).
+Suggested Readings
+Adamson PC. Improving the outcome for children with cancer: 
+development of targeted new agents. CA Cancer J Clin. 2015;65: 
+212–220.
+Allen CE, Kelly KM, Bollard CM. Pediatric lymphomas and histiocytic 
+disorders of childhood. Pediatr Clin North Am. 2015;62:139–165.
+Chintagumpala M, Gajjar A. Brain tumors. Pediatr Clin North Am. 
+2015;62:167–178.
+Cooper SL, Brown PA. Treatment of pediatric acute lymphoblastic 
+leukemia. Pediatr Clin North Am. 2015;62:61–73.
+HaDuong JH, Martin AA, Skapek SX, et al. Sarcomas. Pediatr Clin North 
+Am. 2015;62:179–200.
+Malkan AD, Loh A, Bahrami A, et al. An approach to renal masses in 
+pediatrics. Pediatrics. 2015;135:142–158.
+Pinto NR, Applebaum MA, Volchenboum SL, et al. Advances in risk 
+classification and treatment strategies for neuroblastoma. J Clin Oncol. 
+2015;33:3008–3017.
+COMPLICATIONS
+In addition to potential late effects from the chemotherapy, 
+children with sarcomas may have complications related to 
+local control of the tumor. If the local disease is controlled 
+with surgery, the long-term sequelae may include loss of limb 
+or limitation of function. If local control is accomplished 
+with radiation therapy, the late effects depend on the dose 
+of radiation given, the extent of the radiated site, and the 
+development of the child at the time of radiation therapy. 
+Irradiating tissues interferes with growth and development, 
+causes organ damage, and increases the risk of second malignant 
+neoplasms.
+PROGNOSIS
+For all children with sarcoma, presence or absence of metastatic 
+disease at presentation is the most important prognostic factor. 
+The outlook remains poor for patients who have distant metas-
+tases from Ewing sarcoma, RMS, or osteosarcoma. Patients with 
+localized RMSs in favorable sites have an excellent prognosis 
+when treated with surgery followed by chemotherapy. In patients 
+with osteosarcoma, the amount of tumor necrosis after preopera-
+tive chemotherapy is prognostic. Patients who achieve >90% 
+PEARLS FOR PRACTITIONERS
+CHAPTER 153
+Oncology Assessment
+•	 The most common cancers in children and adolescents are 
+leukemia, brain tumors, and lymphoma followed by sarcomas 
+of soft tissue and bone.
+•	 Cancers that are seen almost exclusively in children, as 
+opposed to adolescents and adults, include neuroblastoma, 
+Wilms tumor, retinoblastoma, and hepatoblastoma.
+•	 Many signs and symptoms of childhood cancer are non-
+specific. Pain, fatigue, pallor, bruising/petechiae/bleeding, 
+and a growing mass are all common on presentation.
+•	 In general, malignant lymph nodes tend to be large, firm, 
+fixed, and nontender; reactive lymph nodes tend to be small, 
+soft, mobile, and tender.
+•	 Almost all cancers require a biopsy of some type to make 
+a definitive diagnosis.
+•	 A child with an abdominal mass should prompt consideration 
+for neuroblastoma, Wilms tumor, and hepatoblastoma.
+•	 In general, toddlers and older children with neuroblastoma 
+are ill, whereas children with Wilms tumor have few 
+associated symptoms.
+•	 Serum (and/or cerebrospinal fluid) alpha-fetoprotein (AFP) 
+and beta-human chorionic gonadotropin (β-HCG) are tumor 
+markers for germ cell tumors. AFP is a tumor marker for 
+hepatoblastoma.
+•	 Urine homovanillic acid (HVA) and vanillylmandelic acid 
+(VMA) are tumor markers for neuroblastoma.
+•	 The prognosis for children with cancer has improved dramati-
+cally in the past 60 years, with long-term survival improving 
+from about 20% to 80%.
+•	 Prognostic factors include age, histology, and the presence 
+or absence of metastases. However, genetic factors (of both 
+the cancer and the patient) and response to initial therapy 
+are becoming more powerful determinants of survival.
+CHAPTER 154
+Principles of Cancer Treatment
+•	 Treatment for children with cancer is usually multimodal 
+and may involve surgery, radiation therapy, chemotherapy, 
+and immunotherapy. Targeted therapies and immuno-
+therapies are more commonly being used to treat pedi-
+atric cancers, often with dramatic results and manageable 
+toxicities.
+•	 Current primary prevention strategies for pediatric malig-
+nancy are uncommon but include use of the hepatitis B 
+vaccine (hepatocellular carcinoma) and human papilloma-
+virus vaccine (GU/oropharyngeal cancers).
+•	 Adverse effects of treatment may lead to oncological 
+emergencies.
+•	 Tumor lysis syndrome may be seen in patients with 
+leukemia and lymphoma. It is best treated with hydration, 
+allopurinol and/or rasburicase (to treat hyperuricemia), 
+and treating the underlying cancer.

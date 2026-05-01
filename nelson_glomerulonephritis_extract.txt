@@ -1,0 +1,1461 @@
+
+--- PAGE 636 ---
+614
+SECTION 21  Oncology
+•	 Airway compression, spinal cord compression, and 
+infection are other oncological emergencies.
+•	 Many survivors of childhood cancer suffer from long-term 
+side effects from the treatment.
+•	 As the prognosis for childhood cancer improves, clinical 
+trials are shifting focus from improving survival to 
+decreasing long-term side effects.
+CHAPTER 155
+Leukemia
+•	 Children with cytopenias and/or leukocytosis should be 
+considered for bone marrow aspiration to assess for acute 
+leukemia.
+•	 Acute lymphoblastic leukemia (ALL) accounts for approxi-
+mately 75% of pediatric leukemia; acute myeloid leukemia 
+(AML) accounts for approximately 20% and chronic myeloid 
+leukemia (CML) accounts for less than 5%.
+•	 ALL is more common in whites, whereas AML has a 
+slightly higher incidence in Hispanic and African Ameri-
+can children.
+•	 ALL is classified as B-cell or T-cell.
+•	 The incidence of B-cell ALL peaks at 2-5 years of age 
+with a slight male predominance. T-cell ALL has a male 
+predominance and presents at an older age.
+•	 The diagnosis of acute leukemia is confirmed by findings 
+of immature blast cells on a peripheral blood smear or bone 
+marrow aspirate.
+•	 Cytogenetic analysis should be undertaken because cyto-
+genetic abnormalities have prognostic indications and can 
+be used to tailor treatment.
+•	 Unlike adults, children with acute lymphoblastic leukemia 
+generally have an excellent prognosis (90% survival). Children 
+with acute myeloid leukemia have a more guarded prognosis 
+(65% survival).
+CHAPTER 156
+Lymphoma
+•	 Lymphomas are the third most common pediatric malig-
+nancy (following leukemia and central nervous system 
+tumors).
+•	 Hodgkin lymphoma peaks in the adolescent/young adult 
+years (and again after age 50). It most commonly presents 
+as painless, firm lymphadenopathy. Diagnosis is established 
+by biopsy of an involved lymph node. It is highly curable, 
+even with advanced disease.
+•	 Non-Hodgkin lymphoma (NHL) incidence increases with 
+age, is more common in whites, and has a male predomi-
+nance. Distant, noncontiguous metastases are common in 
+childhood NHL. Systemic chemotherapy is mandatory.
+CHAPTER 157
+Central Nervous System Tumors
+•	 Most central nervous system (CNS) tumors in children and 
+adolescents are primary tumors that originate in the CNS 
+and include low-grade astrocytomas or embryonic neoplasms 
+(such as medulloblastoma and CNS primitive neuroecto-
+dermal tumors).
+•	 CNS tumors are the most common solid tumor in child-
+hood and are now the leading cause of childhood cancer 
+deaths.
+•	 Lethargy, headache, ataxia, and morning vomiting are 
+common presenting symptoms of brain tumors; these 
+symptoms should prompt consideration for imaging the 
+brain (computed tomography [CT] and/or magnetic reso-
+nance imaging [MRI]).
+•	 Treatment is individualized and may include surgery, 
+chemotherapy, and/or radiation therapy. Radiation therapy 
+is often delayed or avoided in young children.
+•	 The 5-year survival is improving. It is now 50-60%, resulting, 
+in large part, because of the curability of cerebellar astro-
+cytomas and the increasing cure rate for medulloblastoma.
+CHAPTER 158
+Neuroblastoma
+•	 Neuroblastoma is the most common malignancy in 
+infancy.
+•	 Compared with toddlers and older children, infants with 
+neuroblastoma are generally well, have less aggressive 
+disease, and an excellent prognosis.
+•	 The most common presentation of neuroblastoma is an 
+abdominal mass or pain.
+•	 Children with high-risk neuroblastoma have a guarded 
+prognosis, even with aggressive treatment including che-
+motherapy, surgery, radiation therapy, retinoid acid, and 
+immunotherapy.
+CHAPTER 159
+Wilms Tumor
+•	 Wilms tumor is thought to arise from primitive, metanephric 
+blastema.
+•	 Over 70% of Wilms tumors demonstrate loss of imprinting 
+or loss of heterozygosity at 11p15.
+•	 The most common presentation is an abdominal mass.
+•	 Treatment of Wilms tumor is nephrectomy and chemotherapy 
+with or without radiation therapy.
+•	 The overall survival rate is 90%, although 25% of survivors 
+experience chronic health problems.
+
+--- PAGE 637 ---
+615
+CHAPTER 160  Sarcomas
+CHAPTER 160
+Sarcomas
+•	 There are two types of sarcomas: soft tissue sarcomas 
+(rhabdomyosarcoma) or bone cancers (osteosarcoma, Ewing 
+sarcoma).
+•	 Sarcomas originating in the bone, such as osteosarcoma and 
+Ewing sarcoma, usually present with a mass and/or pain.
+•	 Prognostic factors for patients with sarcomas include the 
+presence or absence of metastases, the extent of surgical 
+resection, and the response to chemotherapy (usually 
+measured by the amount of tumor necrosis).
+•	 Survival in patients with localized rhabdomyosarcoma 
+is excellent following surgery and chemotherapy.
+•	 Patients with osteosarcoma with >90% tumor necrosis 
+following chemotherapy have a >80% survival rate (50% 
+survival if <90% tumor necrosis).
+•	 Overall survival for localized osteosarcoma or Ewing 
+sarcoma is 60-70%.
+•	 Survival with lung metastases is ~30%.
+•	 Survival with metastases to other bones is <20%.
+
+--- PAGE 638 ---
+This page intentionally left blank
+
+--- PAGE 639 ---
+617
+SECTION 22 
+NEPHROLOGY AND UROLOGY
+Hiren P. Patel  |  John D. Mahan
+CHAPTER 161 
+Nephrology and Urology 
+Assessment
+The kidneys preserve homeostasis through (1) maintaining 
+fluid and electrolyte balance; (2) excreting metabolic waste 
+products through glomerular filtration and tubular secretion; 
+(3) generating energy (gluconeogenesis); and (4) producing 
+important endocrine hormones (renin, vitamin D metabolites, 
+erythropoietin). Renal disorders, by disturbing homeostasis, 
+can affect growth and development and cause a variety of clinical 
+manifestations (Table 161.1). Renal disorders in children may 
+be intrinsic renal diseases or derive from systemic conditions 
+(Table 161.2).
+HISTORY
+Fetal urine production contributes to amniotic fluid volume, 
+lung maturation, and somatic development. Congenital renal 
+disorders may be associated with reduced (oligohydramnios) 
+or increased amniotic fluid volume (polyhydramnios). Pulmo-
+nary hypoplasia and fetal maldevelopment of the face and 
+extremities may result from insufficient amniotic fluid (Potter 
+syndrome; see Chapters 58 and 60).
+Risk factors for renal disease (e.g., perinatal hypoxia-ischemia, 
+acute tubular necrosis, renal vein thrombosis) can often be 
+detected by a careful history. A detailed family history may 
+identify hereditary renal conditions. Poor growth and/or feeding 
+and abnormal fluid intake and/or output may indicate underlying 
+renal dysfunction. Common manifestations of renal and urinary 
+tract disorders are listed in Table 161.1.
+PHYSICAL EXAMINATION
+Renal diseases in children may be initially asymptomatic and 
+detected during routine visits. Abnormal growth, hypertension 
+(HTN), dehydration, or edema may suggest underlying renal 
+disease (see Chapter 33). Abnormal facial features may suggest 
+syndromes associated with renal disorders (fetal alcohol syn-
+drome, Down syndrome). Preauricular tags, external ear 
+deformities, or ophthalmological abnormalities (keratoconus, 
+aniridia, iridocyclitis, cataracts) can be associated with congenital 
+renal defects. Abdominal examination may reveal renal masses 
+or bladder distention due to urine-concentrating defect or 
+urinary tract obstruction.
+RENAL PHYSIOLOGY
+Normal renal function depends on intact glomerular filtration 
+and tubular function (proximal tubule [PT], loop of Henle, 
+and distal tubule [DT]) to produce urine (Fig. 161.1). Net 
+glomerular pressure favors movement of fluid out of glomerular 
+capillaries into Bowman’s space. Intraglomerular pressure is 
+regulated by afferent and, particularly, efferent arteriolar tone. 
+Renin is generated by cells in the juxtaglomerular apparatus, 
+located at the base of each glomerulus near the afferent/efferent 
+arterioles and DT of that nephron. Renin is released in response 
+to glomerular flow and perfusion.
+The PT conducts isosmotic reabsorption (see Fig. 161.1) to 
+reclaim two thirds of filtered volume, sodium, and chloride. 
+Glucose, amino acids, potassium, and phosphate are almost 
+completely reabsorbed. Approximately 75% of filtered bicar-
+bonate is reabsorbed in the PT. When filtered bicarbonate 
+exceeds the PT threshold, it is spilled into the urine. The PT 
+also secretes compounds such as organic acids, penicillins, and 
+other drugs. The most potent vitamin D analog—1,25(OH)2-
+cholecalciferol (calcitriol)—is produced by PT cells in response 
+to parathyroid hormone and intracellular calcium/phosphorus 
+concentrations.
+The loop of Henle is the site of reabsorption of 25% of 
+filtered sodium chloride (see Fig. 161.1). Active chloride 
+transport drives the countercurrent multiplier and constructs 
+the medullary interstitial hypertonic gradient required for 
+urinary concentration.
+The DT is composed of the distal convoluted tubule (DCT) 
+and collecting ducts (CD). The DCT is water impermeable 
+and contributes to urine dilution by active sodium chloride 
+absorption. The CD is the primary site of antidiuretic hormone 
+(vasopressin) response, which leads to urine concentration. 
+Sodium-potassium and sodium-hydrogen exchange in the CD 
+is regulated by aldosterone. Active hydrogen ion secretion, 
+responsible for final acidification of the urine, also occurs in 
+the CD.
+Renal ammonia production and intraluminal generation 
+of ammonium (NH4
++) facilitate urine hydrogen ion excretion. 
+Urinary NH4
++ is not easily measured but can be inferred by 
+calculation of the urinary anion gap. The gap between measured 
+anions and cations largely consists of NH4
++. Problems with renal 
+acid excretion or ammonia production decrease the urinary 
+anion gap. A urinary gap of approximately 1 mEq/kg body 
+weight is typical in normal children.
+Maximum urinary concentrating capacity in a preterm 
+newborn (~400 mOsm/L) is less than in a full-term newborn 
+(600-800 mOsm/L), which is less than in older children and 
+
+--- PAGE 640 ---
+618
+SECTION 22  Nephrology and Urology
+adults (~1,200 mOsm/L). Neonates can dilute urine similar 
+to adults (75-90 mOsm/L), but because glomerular filtration 
+rate (GFR) is lower, the capacity to excrete a water load is 
+less in infants. GFR reaches adult levels by 1-2 years of age. 
+Tubular reabsorption of sodium, potassium, bicarbonate, and 
+phosphate and excretion of hydrogen are all reduced in infants 
+relative to adults. These functions mature independently and 
+at different ages, so a neonate rapidly develops the ability to 
+reabsorb sodium efficiently, but it takes 2 years for bicar-
+bonate reabsorption to mature. Erythropoietin is secreted 
+by interstitial cells in the renal medulla in response to low 
+oxygen delivery and helps regulate bone marrow red blood cell 
+production.
+COMMON MANIFESTATIONS
+TABLE 161.1  Common Manifestations of Renal Disease by Age
+FINDING
+SIGNIFICANCE
+NEONATE
+Flank mass
+Multicystic dysplasia, UT obstruction (hydronephrosis), polycystic disease, tumor
+Hematuria
+UTI, acute tubular/cortical necrosis, UT malformation, trauma, renal vein thrombosis
+Anuria and oliguria
+Renal agenesis, obstruction, acute tubular necrosis, vascular thrombosis
+CHILD/ADOLESCENT
+Cola red-colored urine
+Hemoglobinuria (hemolysis), myoglobinuria (rhabdomyolysis), pigmenturia (porphyria, urate, beets, 
+drugs), hematuria (UTI, GN, Henoch-Schönlein purpura, hypercalciuria, stones)
+Gross hematuria
+UTI, GN, trauma, benign hematuria, nephrolithiasis, tumor
+Edema
+Nephrotic syndrome, GN, acute/chronic renal failure, cardiac/liver disease
+Hypertension
+Acute GN, acute/chronic renal failure, obstruction, cysts, dysplasia, coarctation of the aorta, renal 
+artery stenosis
+Polyuria
+Diabetes mellitus, central and nephrogenic diabetes insipidus, obstruction, dysplasia, hypokalemia, 
+hypercalcemia, psychogenic polydipsia, sickle disease/trait, polyuric renal failure, diuretic abuse
+Oliguria
+Dehydration, acute tubular necrosis, acute GN, interstitial nephritis, hemolytic uremic syndrome
+Dysfunctional voiding/urgency
+Neurogenic bladder, UTI, vaginitis, hypercalciuria, foreign body
+GN, Glomerulonephritis; UT, Urinary tract; UTI, urinary tract infection.
+TABLE 161.2  Primary and Systemic Causes of Renal 
+Disease in Children
+PRIMARY
+SECONDARY (SYSTEMIC)
+Minimal change 
+nephrotic syndrome
+Postinfectious glomerulonephritis
+Focal segmental 
+glomerulosclerosis
+IgA nephropathy
+Membranoproliferative 
+glomerulonephritis
+Henoch-Schönlein purpura-related 
+nephritis
+Membranoproliferative 
+glomerulonephritis (related to chronic 
+infection, liver disease)
+Membranous 
+nephropathy
+Hemolytic uremic syndrome
+Systemic lupus erythematosus
+Granulomatosis with polyangiitis and 
+other vasculitides
+Congenital nephrotic 
+syndrome
+Tubular toxins
+Alport syndrome
+Antibiotics
+Intrinsic tubular disorders
+Chemotherapeutic agents
+Structural renal disorders
+Hemoglobin/myoglobin
+Congenital urinary tract 
+abnormalities
+Tubular disorders
+Polycystic kidney disease
+Cystinosis, oxalosis
+Renal/urinary tract tumor
+Galactosemia, hereditary fructose 
+intolerance
+Stones
+Sickle disease/trait
+Trauma
+Extrarenal malignancy (leukemia, 
+lymphoma)
+Ig, Immunoglobulin.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Dysuria
+Enuresis
+Red Urine and Hematuria
+Renal disorders can be classified as primary or secondary (due 
+to systemic illnesses; see Table 161.2). Renal diseases may present 
+with obvious signs (hematuria or edema), or with subtle signs 
+detected on screening examinations (abdominal or flank mass, 
+HTN, proteinuria). Fever, irritability, and vomiting may be 
+presenting symptoms in neonates and infants with urinary 
+tract infections (UTIs), whereas frequency and dysuria suggest 
+UTI in older children. Chronic kidney disease is often associated 
+with poor growth and feeding, but may be initially detected 
+on screening examinations (HTN, hematuria). An abnormal 
+urine stream may indicate posterior urethral valves other 
+obstructive lesions or bladder disorders.
+
+--- PAGE 641 ---
+619
+CHAPTER 161  Nephrology and Urology Assessment
+breakdown. The correlation between creatinine and GFR can 
+be used to estimate GFR. The revised Schwartz formula is the 
+following:
+GFR
+Ht
+Crserum
+=
+×
+0 413
+.
+(height in cm; serum creatinine in mg/dL). This formula is 
+most useful when body habitus and muscle mass are reason-
+ably normal and when renal function is relatively stable. This 
+formula is most accurate in GFR range of 15-75 mL/min per 
+1.73 m2. Values greater than 75 are typically reported as greater 
+than 75 rather than as a specific number. Creatinine clearance 
+([UCr]V/[PCr]) estimates GFR, but overestimates GFR when renal 
+function is decreased.
+Urinalysis is a useful screen for renal abnormalities. In addi-
+tion to urine color and turbidity, macroscopic urinalysis uses 
+a urine dipstick for pH and the presence of protein, glucose, 
+ketones, blood, and leukocytes. Dilute urine may result in a 
+false-negative result for protein; false-positive results may occur 
+with extremely alkaline or concentrated urine or if there is a 
+delay in reading the test. Dipsticks are exquisitely sensitive to 
+presence of hemoglobin (or myoglobin); there are few false-
+negative test results but many false-positive results. Glucose is 
+detected via glucose oxidase-peroxidase reaction, and leukocytes 
+are detected via leukocyte esterase reaction. The nitrite test 
+may detect bacteriuria if the bacteria can reduce nitrate to nitrite 
+DIAGNOSTIC STUDIES
+Laboratory Studies
+GFR is measured most accurately by infusion of a substance 
+that is freely filtered by the glomerulus but not metabolized, 
+reabsorbed, or secreted in or by the tubules. GFR is calculated 
+as follows:
+GFR
+U V P
+= [ ]
+[ ]
+where [U] is urine concentration, [P] is serum concentration 
+of a substance (mg/dL) used to measure clearance, and V is 
+urine flow rate (mL/min).
+By convention, GFR is corrected to body surface area of 
+1.73 m2 to allow comparison between different-sized individuals. 
+In a full-term newborn, an uncorrected GFR of 4-5 mL/min 
+corrects to approximately 40 mL/min per 1.73 m2. GFR increases 
+rapidly during the first 2 years of life until it achieves adult 
+values (100-120 mL/min per 1.73 m2). After that, GFR and 
+body size increase proportionately, so GFR/1.73 m2 remains 
+stable.
+Plasma creatinine reflects muscle mass, increases with age, 
+and is used to approximate GFR. Creatinine is also secreted 
+by the PT, resulting in less accurate measurement of GFR 
+with immature kidneys or with decreased renal function. 
+Blood urea nitrogen is affected by renal function, but is 
+also affected by hydration, nutrition, catabolism, and tissue 
+Na+
+H+
+H+
+HCO3– H2O
+Glu Na+ Cl–
+(Vasa recta)
+SEGMENTAL NEPHRON FUNCTION
+Ca++
+Ca++
+Na+
+K+
+H+
+NaCl  
+ADH +  ADH –
+Ca++
+Ca++
+K+
+Cl–
+Na+
+H2O
+H2O
+H2O
+H2O
+OA  
+NaCl  
+NaCl  
+1200
+1200
+600
+300
+300
+50
+50
+50
+600
+50
+1200
+50
+300
+600
+200
+100
+300
+CORTEX
+MEDULLA
+PAPILLA
+LOOP OF HENLE
+FIGURE 161.1  Major transport functions of each nephron segment, including representative osmolalities 
+in vasa recta, interstitium, and tubule at different levels within the kidney. ADH, Antidiuretic hormone; 
+Glu, glucose; OA, organic acid. (From Andreoli TE, Carpenter CCJ, Plum F, et al., ed. Cecil Essentials 
+of Medicine. Philadelphia: WB Saunders;1986.)
+
+--- PAGE 642 ---
+620
+SECTION 22  Nephrology and Urology
+compartments and plasma volume contraction. Renal blood flow 
+and glomerular filtration rate are not usually diminished. Edema 
+results from reduction in effective circulating blood volume and 
+increase in tubular sodium chloride reabsorption secondary 
+to activation of the renin-angiotensin-aldosterone system. 
+Hypoproteinemia stimulates hepatic lipoprotein synthesis and 
+diminishes lipoprotein metabolism, leading to elevated serum 
+lipids (cholesterol, triglycerides) and lipoproteins.
+NS may be primary or secondary (Table 162.1). A child with 
+apparent primary NS, prior to renal biopsy, is considered to have 
+idiopathic nephrotic syndrome. Minimal change nephrotic 
+syndrome (MCNS) is the most common histological form of 
+primary NS in children. More than 80% of children less than 7 
+years of age with NS have MCNS. Children 7-16 years old with 
+NS have a ~50% chance of having MCNS. Males are affected 
+more frequently than females (2 : 1).
+Focal segmental glomerulosclerosis (FSGS) accounts for 
+~10-20% of children with primary NS. It may present like MCNS 
+or with less impressive proteinuria. FSGS may develop from 
+MCNS or represent a separate entity. A circulating factor that 
+increases glomerular permeability is found in some patients 
+with FSGS. More than 35% of children with FSGS progress 
+to renal failure.
+Membranoproliferative glomerulonephritis (MPGN) is 
+characterized by hypocomplementemia with signs of glomerular 
+renal disease. MPGN represents 5-15% of children with primary 
+NS, is typically persistent, and has a high likelihood of progres-
+sion to renal failure over time.
+Membranous nephropathy represents <5% of children 
+with primary NS. It is seen most commonly in adolescents 
+and children with systemic infections (hepatitis B, syphilis, 
+malaria, and toxoplasmosis) or specific medications (gold, 
+penicillamine).
+Congenital NS presents during the first 2 months of life. 
+There are two common types. The Finnish type is an autosomal 
+recessive disorder most common in persons of Scandinavian 
+descent and is due to a mutation in the nephrin protein 
+component in the glomerular filtration slit. The second type 
+is a heterogeneous group of abnormalities, including diffuse 
+mesangial sclerosis and conditions associated with drugs or 
+and have sufficient urine contact time. False-negative results 
+occur with frequent voiding, low urine bacterial count, urinary 
+tract obstruction, and infection with bacteria unable to generate 
+nitrite. Gross hematuria or prolonged contact (uncircumcised 
+boys) may result in a false-positive nitrite test. Microscopic 
+urinalysis is used to confirm pyuria and hematuria and detect 
+casts and crystals.
+Proteinuria can be further defined by a spot urine protein/
+creatinine (UPr/Cr) in a single urine specimen. This unit-less value 
+correlates very well with 24-hour urine protein excretion: spot 
+UPr/Cr approximates 24-hour urine protein/m2 per day (normal 
+<0.20; nephrotic range >2.0 in children).
+IMAGING STUDIES
+Ultrasound reliably assesses kidney size, determines degree of 
+dilation, and differentiates cortex and medulla. The bladder 
+also can be visualized. Pulsed Doppler studies assess arterial 
+and venous blood flow and can provide the vascular resistive 
+index in each kidney.
+A voiding cystourethrogram involves filling of the bladder 
+to detect vesicoureteral reflux and to evaluate the urethra. 
+Computed tomography and magnetic resonance imaging 
+have mostly replaced the intravenous pyelogram to evaluate 
+kidney structure and function. Radionuclide studies can define 
+renal size, scars, and renal function/excretion.
+CHAPTER 162 
+Nephrotic Syndrome  
+and Proteinuria
+ETIOLOGY AND EPIDEMIOLOGY
+Small amounts of protein are found in urine of healthy children 
+(<4 mg/m2 per hour or UPr/Cr <0.2). Nephrotic proteinuria in 
+children is defined as protein >40 mg/m2 per hour or U Pr/Cr 
+>2.0. Proteinuria between these levels is mildly to moderately 
+elevated but not nephrotic.
+Proteinuria may be transient or persistent, asymptomatic 
+or symptomatic, and orthostatic (present in the upright posi-
+tion but not in the recumbent position) or fixed (present in 
+all positions). Proteinuria may be glomerular (disruptions of 
+the normal glomerular barrier to protein filtration) or tubular 
+(increased filtration, impaired reabsorption, or secretion of 
+proteins).
+Nephrotic syndrome (NS) is characterized by persistent 
+heavy proteinuria (mainly albuminuria; >2 g/m2 per 24 hour); 
+hypoproteinemia (serum albumin <3.0 g/dL); hypercholester-
+olemia (>250 mg/dL); and edema. Age, race, and geography 
+affect the incidence of NS. Certain human leukocyte antigen 
+(HLA) types (HLA-DR7, HLA-B8, and HLA-B12) are associated 
+with increased incidence of NS. Increased glomerular perme-
+ability is due to alterations in the normal glomerular cellular 
+and basement membrane barrier that restrict serum protein 
+filtration. The resultant massive proteinuria leads to decreased 
+serum proteins, especially albumin. Plasma oncotic pressure is 
+diminished, leading to fluid shifts from vascular to interstitial 
+TABLE 162.1  Primary and Secondary Forms of  
+Nephrotic Syndrome
+PRIMARY
+SECONDARY
+Minimal change nephrotic 
+syndrome
+Primary focal 
+glomerulosclerosis
+Membranoproliferative 
+glomerulonephritis
+Idiopathic membranous 
+nephropathy
+Systemic lupus erythematosus
+Henoch-Schönlein purpura, 
+Granulomatosis with polyangiitis 
+and other vasculitides
+Chronic infections (hepatitis B, 
+hepatitis C, malaria, human 
+immunodeficiency virus)
+Allergic reactions
+Diabetes
+Amyloidosis
+Malignancies
+Congestive heart failure, 
+constrictive pericarditis
+Renal vein thrombosis
+
+--- PAGE 643 ---
+621
+CHAPTER 162  Nephrotic Syndrome and Proteinuria 
+or chemotherapeutic agents. The combination of tubular 
+proteinuria with tubular electrolyte wasting and glycosuria is 
+termed Fanconi syndrome.
+Glomerular proteinuria is characterized by a combination 
+of urine large and small molecular weight proteins, variable 
+levels of proteinuria, and often other evidence of glomerular 
+disease (hematuria, red blood cell casts, HTN, and renal insuf-
+ficiency). Causes of glomerular proteinuria include glomerular 
+capillary disruption (hemolytic uremic syndrome, crescentic 
+glomerulonephritis); glomerular capillary immune complex 
+deposition (poststreptococcal glomerulonephritis and lupus 
+nephritis); and altered glomerular capillary permeability (MCNS, 
+congenital NS).
+TREATMENT
+Because greater than 80% of children less than 13 years of age 
+with primary NS have steroid-responsive forms (chiefly MCNS), 
+steroid therapy may be initiated without a renal biopsy if a 
+child has typical features of NS. Typical therapy for MCNS is 
+prednisone, 2 mg/kg per day (60 mg/m2 per 24 hour, maximum 
+60 mg/day), provided once a day or split into multiple doses. 
+Over 90% of children who respond to steroids do so within 4 
+weeks. Responders should receive steroids for 12 weeks for 
+best long-term results. A renal biopsy is indicated for nonre-
+sponders because steroid resistance decreases the chance that 
+MCNS is the underlying disease. Frequent relapses or steroid 
+resistance may necessitate additional immunosuppressive 
+therapy.
+Treatment responses in FSGS are highly variable. Approxi-
+mately 35% respond to steroid therapy; others may respond 
+to immunosuppressive therapy. MPGN and membranous 
+glomerulonephritis often improve with chronic steroid or 
+immunosuppressive therapy but do not reliably remit with 
+standard NS steroid therapy. Aggressive medical therapy of 
+familial congenital NS, with early nephrectomy, dialysis, and 
+transplantation, is the only effective approach to this syndrome.
+NS edema is treated by restricting salt intake. Severe edema 
+may require use of loop diuretics. When these therapies do not 
+alleviate severe edema, cautious parenteral administration of 
+25% albumin (0.5-1.0 g/kg intravenously over 1-2 hours) with 
+an intravenous loop diuretic usually results in diuresis. The 
+administered albumin is excreted rapidly, and thus salt restriction 
+and diuretics must be continued. Significant pleural effusions 
+may require drainage. Acute HTN is treated with β-blockers 
+or calcium channel blockers. Persistent HTN usually responds 
+to angiotensin-converting enzyme inhibitors.
+COMPLICATIONS
+An increased incidence of serious infections, particularly 
+bacteremia and peritonitis (particularly Streptococcus pneu-
+moniae, Escherichia coli, or Klebsiella), is due to urinary loss 
+of immunoglobulins and complement. Side effects of steroids 
+are most common in steroid-dependent and frequently relapsing 
+patients. Hypovolemia may result from diarrhea or diuretic 
+use. Loss of coagulation factors, antithrombin, and plasminogen 
+may lead to a hypercoagulable state with a risk of thrombo-
+embolism (TE). Warfarin, Lovenox, low-dose aspirin, or 
+dipyridamole may minimize risk of thrombosis in NS patients 
+with a history of TE or high risk for TE. Hyperlipidemia 
+promotes increased atherosclerotic vascular disease.
+infections. Prenatal onset is supported by elevated levels of 
+maternal alpha-fetoprotein.
+Secondary NS may result from many different causes in 
+children and are listed in Table 162.1.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Abdominal Pain
+Red Urine and Hematuria
+Proteinuria
+Edema
+The sudden onset of dependent pitting edema or ascites is the 
+most common presentation for children with NS. Anorexia, 
+malaise, and abdominal pain are often present. Blood pressure 
+may be elevated in up to 25% of children on presentation; 
+acute tubular necrosis and significant hypotension may occur 
+with sudden decline in serum albumin and significant volume 
+depletion. Diarrhea (intestinal edema) and respiratory distress 
+(pulmonary edema or pleural effusion) may be present. Typical 
+MCNS is characterized by absence of gross hematuria, renal 
+insufficiency, hypertension (HTN), and hypocomplementemia.
+DIAGNOSTIC STUDIES
+Proteinuria of 1+ or higher on 2-3 random urine specimens 
+suggests persistent proteinuria that should be further quantified. 
+A UPr/Cr >0.2 on a first morning specimen excludes orthostatic 
+proteinuria. UPr/Cr >2.0 indicates nephrotic range proteinuria.
+In addition to a demonstration of proteinuria, hypercho-
+lesterolemia, and hypoalbuminemia, routine testing typically 
+includes a serum C3 complement. A low serum C3 implies a 
+lesion other than MCNS, and a renal biopsy is indicated before 
+trial of corticosteroid therapy. Microscopic hematuria may be 
+present in up to 25% of cases of MCNS but does not predict 
+response to steroids. Additional laboratory tests, including 
+electrolytes, blood urea nitrogen, creatinine, total protein, 
+and serum albumin level, are performed based on history and 
+physical examination features. Renal ultrasound is often useful. 
+Biopsy is performed when MCNS is not suspected.
+DIFFERENTIAL DIAGNOSIS
+Transient proteinuria can be seen after vigorous exercise, fever, 
+dehydration, seizures, and adrenergic agonist therapy. Protein-
+uria usually is mild (UPr/Cr <1), glomerular in origin, and always 
+resolves within a few days. It does not indicate renal disease.
+Postural (orthostatic) proteinuria is a benign condition 
+defined by normal protein excretion while recumbent but 
+significant proteinuria when upright. It is glomerular in origin, 
+more common in adolescents and tall, thin individuals, and not 
+associated with progressive renal disease. Many children with 
+orthostatic proteinuria continue this process into adulthood.
+Tubular proteinuria is characterized by preponderance of 
+urine low molecular weight proteins and is seen with acute 
+tubular necrosis, pyelonephritis, structural renal disorders, 
+polycystic kidney disease, and tubular toxins such as antibiotics 
+
+--- PAGE 644 ---
+622
+SECTION 22  Nephrology and Urology
+Immune-mediated inflammation causes most glomerulo-
+nephritis (GN). Poststreptococcal glomerulonephritis (PSGN) 
+is the most common form of acute GN, and immunoglobulin 
+(Ig)A nephropathy is the most common chronic GN, but many 
+other types of GN can occur. The most common identifiable 
+lower urinary tract causes of hematuria include urinary tract 
+infection (UTI), kidney stones, and hypercalciuria.
+CLINICAL MANIFESTATIONS
+PROGNOSIS
+Most children with NS eventually go into remission. Nearly 
+80% of children with MCNS experience NS relapse, defined as 
+heavy proteinuria that persists for 3 or more consecutive days. 
+Transient proteinuria (up to 3 days) may occur with intercur-
+rent infection in children with MCNS and is not considered 
+a relapse. Steroid therapy is typically effective for true relapse. 
+Steroid-responsive patients have little risk of chronic renal 
+failure. Patients with FSGS may initially respond to steroids 
+but later develop resistance. Many children with FSGS pro-
+gress to end-stage kidney failure (see Chapter 165). Recur-
+rence of FSGS occurs in ~30% of children who undergo renal 
+transplantation.
+CHAPTER 163 
+Glomerulonephritis  
+and Hematuria
+ETIOLOGY AND EPIDEMIOLOGY
+A child with gross hematuria may have a serious disease and 
+requires prompt evaluation. Microscopic hematuria, defined 
+as >3-5 red blood cells (RBCs) per high-power field on freshly 
+voided and centrifuged urine, can be benign. Isolated asymp-
+tomatic microscopic hematuria is found in up to 4% of healthy 
+children. In most cases this is a transient finding. Hematuria 
+may originate from glomerular, tubulointerstitial, or lower 
+urinary tract disorders (Table 163.1).
+TABLE 163.1  Differential Diagnosis of Red Urine/
+Hematuria
+FACTITIOUS HEMATURIA
+Nonpathological (urate crystals in infants, ingested foods, 
+medications, dyes)
+Pathological (hemoglobinuria from hemolytic anemia, 
+myoglobinuria from rhabdomyolysis)
+GLOMERULAR
+Immunological injury (GN—e.g., PSGN, IgA nephropathy, MPGN, 
+systemic diseases)
+Structural disorder (Alport syndrome, thin basement membrane 
+disease)
+Toxin-mediated injury (HUS)
+TUBULOINTERSTITIAL/PARENCHYMAL
+Inflammation (interstitial nephritis, pyelonephritis)
+Vascular (sickle cell trait/disease, Nutcracker syndrome)
+Structural (cyst rupture, Wilms tumor, urinary tract obstruction, 
+renal trauma)
+LOWER URINARY TRACT
+Inflammation (cystitis, hemorrhagic cystitis, urethritis)
+Injury (trauma, kidney stone)
+Hypercalciuria
+GN, Glomerulonephritis; HUS, hemolytic uremic syndrome; Ig, immunoglobulin; 
+MPGN, membranoproliferative glomerulonephritis; PSGN, poststreptococcal 
+glomerulonephritis.
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Red Urine and Hematuria
+Proteinuria
+Edema
+Hypertension
+Children with acute GN commonly present with hematuria 
+(gross or microscopic) and other cardinal features of glomerular 
+injury (proteinuria, hypertension, edema, oliguria, renal insuf-
+ficiency). PSGN occurs most frequently in children 2-12 years 
+of age and is more common in boys. Manifestations of PSGN 
+are typical of acute GN and develop 5-21 days (average 10 
+days) after streptococcal pharyngitis infections and 4-6 weeks 
+after impetigo. Acute postinfectious GN presents similar to 
+PSGN following infections with other bacterial and viral 
+pathogens. PSGN can develop even in the child treated with 
+antibiotics for the infection. Special attention must be paid to 
+the blood pressure as hypertension may be severe enough to 
+cause heart failure, seizures, and/or encephalopathy.
+The presentation of IgA nephropathy is more variable and 
+may take the form of acute GN, asymptomatic microscopic 
+hematuria, or recurrent gross hematuria concurrent with an 
+upper respiratory infection (rather than several days later, as 
+with PSGN). Children with hematuria secondary to systemic 
+disorders such as Henoch-Schönlein purpura nephritis, lupus 
+nephritis, and vasculitis-associated GN typically present with 
+other systemic features of the respective disease.
+A special form of GN is rapidly progressive glomerulone-
+phritis (RPGN) that presents with typical features of acute GN 
+where renal insufficiency progresses more quickly and severely. 
+Renal biopsy shows glomerular epithelial cell proliferation with 
+crescents. RPGN may be idiopathic or secondary to any type of 
+GN. Early recognition of RPGN is crucial to prevent progression 
+to end-stage renal disease (ESRD) that occurs without prompt 
+treatment.
+Alport syndrome is typically caused by X-linked chromo-
+some mutations, but has also been associated with mutations of 
+genes for type IV collagen, both leading to abnormal glomerular 
+basement membrane (GBM). The disease may present with 
+either asymptomatic microscopic or gross hematuria. Males 
+typically develop progressive renal failure and sensorineural 
+hearing loss during adolescence and young adulthood. Females 
+typically have a more benign course but usually have at least 
+microscopic hematuria. Thin basement membrane disease 
+(benign familial hematuria) is caused by mutations leading to 
+isolated GBM thinning; these mutations are often autosomal 
+dominant with hematuria frequently noted in first-degree 
+relatives. As opposed to Alport syndrome, thin basement 
+
+--- PAGE 645 ---
+623
+CHAPTER 163  Glomerulonephritis and Hematuria 
+A suggested algorithm for the evaluation of hematuria is 
+given in Fig. 163.1. Gross hematuria and microscopic hematuria 
+with associated concerning findings should have additional 
+laboratory evaluation. Presence of low C3 complement narrows 
+the differential diagnosis to PSGN, membranoproliferative GN, 
+and lupus nephritis. Children with isolated, asymptomatic 
+microscopic hematuria may be observed with repeat urinalyses. 
+If hematuria is persistent, additional evaluation may then be 
+appropriate.
+THERAPY
+Therapy for PSGN is supportive and involves dietary sodium 
+restriction, diuretics, and antihypertensive agents as needed. 
+Although treating the streptococcal infection does not prevent 
+PSGN, antibiotic treatment is still warranted with active 
+streptococcal infection. Therapies for children with other 
+forms of GN depend on underlying cause and severity. In 
+some cases, antiinflammatory therapy involving corticosteroids 
+and/or other immunosuppressive agents may be warranted. 
+Treatment with angiotensin-converting enzyme inhibitors 
+may reduce proteinuria and glomerular hyperperfusion, but 
+should be used with caution in the setting of acute kidney 
+injury.
+PROGNOSIS AND PREVENTION
+PSGN usually has a benign outcome. In typical cases, the gross 
+hematuria, proteinuria, and edema decline quickly (5-10 days). 
+Microscopic hematuria may persist for months or even years; 
+membrane disease is typically not progressive and usually has 
+an excellent prognosis.
+The presentation of nonglomerular causes of hematuria is 
+more variable and related to the underlying etiology. Hematuria 
+due to tubular disorders is usually microscopic and may be 
+associated with proteinuria, glycosuria, and polyuria. These 
+children typically do not have hypertension and develop renal 
+insufficiency only with more severe disease. Painless gross 
+hematuria may be seen with strenuous exercise, sickle cell 
+trait/disease, or Wilms tumor. Hematuria may be associated 
+with pain when due to bleeding from renal cysts or Nutcracker 
+syndrome (renal vein compression). Gross hematuria following 
+trauma may signify more severe renal or lower urinary tract 
+injury. UTI is typically associated with dysuria and urinary 
+frequency. Urolithiasis may be associated with asymptomatic 
+hematuria or with flank or abdominal pain. Hypercalciuria 
+can cause both gross and microscopic hematuria and may be 
+associated with urinary tract symptoms such as dysuria and 
+urinary frequency or may be asymptomatic.
+DIAGNOSTIC STUDIES
+All patients with hematuria should have a careful history and 
+physical (including blood pressure) along with urinalysis includ-
+ing microscopic examination to identify RBCs. Glomerular 
+hematuria is suggested by brownish (tea- or cola-colored) urine 
+and presence of RBC casts and/or dysmorphic RBCs on urine 
+microscopy. A urine color that is more bright red without RBC 
+casts or dysmorphic RBCs is more suggestive of lower urinary 
+tract source. However, there may be overlap of these findings.
+History and physical
+Urinalysis to confirm RBCs
+Directed evaluation studies
+based on suspected cause
+Cause apparent on H&P
+e.g., UTI, trauma,
+kidney stone, GN
+Urinalysis
+Cause not apparent
+on H&P
+Urate crystals in infants
+Medications, foods, dyes
+Urine microscopy
+Negative for blood
+Positive for blood
+Hemolytic anemia
+Rhabdomyolysis
+Minimal RBCs
+Repeat urinalysis x2 at least one week apart
+Tests to consider if hematuria persistent:
+Urine calcium to creatinine ratio
+Test first degree relatives for hematuria
+Hgb electrophoresis to rule out sickle cell
+Serum chemistries
+Renal ultrasound
+RBCs confirmed
+Isolated microscopic
+hematuria
+Urine culture
+Urine calcium to creatinine ratio
+Urine protein to creatinine ratio
+Serum chemistries
+Serum albumin
+C3 and C4 complement
+Complete blood count
+Renal ultrasound
+Renal biopsy in selected cases
+RBCs confirmed
+Symptomatic microscopic hematuria
+or gross hematuria
+FIGURE 163.1  Suggested algorithm for evaluation of red urine/hematuria. GN, Glomerulonephritis; 
+Hgb, hemoglobin; H&P, history and physical; RBCs, red blood cells; UTI, urinary tract infection. 
+
+--- PAGE 646 ---
+624
+SECTION 22  Nephrology and Urology
+involvement, including seizures, occurs in up to 25% of cases. 
+Other potential organ involvement includes pancreatitis, cardiac 
+dysfunction, and colonic perforation.
+Children without evidence of diarrheal prodrome may have 
+a similar microangiopathic syndrome, identified as thrombotic 
+thrombocytopenic purpura (TTP). Children with TTP typically 
+have predominant CNS symptoms but may also have significant 
+renal disease. Recurrent episodes are common. Because CNS 
+involvement is also seen in HUS, TTP can be difficult to dis-
+tinguish from HUS in some cases. Deficiencies of ADAMTS13, 
+a von Willebrand factor-cleaving protease, have been identified 
+in children affected with TTP.
+DIAGNOSTIC STUDIES
+Common laboratory findings in HUS are listed in Table 164.1. 
+Peripheral blood smear reveals evidence of microangiopathic 
+hemolysis. Coombs test is negative. Diarrhea and presence of 
+toxin-producing E. coli may have resolved by the time HUS is 
+diagnosed.
+TREATMENT AND PROGNOSIS
+Therapy for HUS is supportive and includes volume repletion, 
+hypertension control, and managing complications of renal 
+insufficiency, including dialysis when indicated. Red blood cell 
+transfusions are provided as needed. Platelet transfusions should 
+be avoided because they may add to the thrombotic microan-
+giopathy and are indicated only by active hemorrhage or prior 
+to a procedure. Antibiotics and antidiarrheal agents may increase 
+risk of developing HUS. Early hydration during the diarrheal 
+phase may lessen the severity of renal insufficiency. Most 
+children (>95%) with D + HUS survive the acute phase and 
+recover normal renal function, although some may have evidence 
+of long-term renal and other morbidity.
+greater than 95% of children recover completely with no long-
+term sequelae.
+Children with IgA nephropathy and other forms of chronic 
+GN have greater risk of progression to ESRD. The prognosis 
+for renal recovery in chronic GN and in RPGN is variable 
+and related to the underlying disorder and disease severity. 
+The presence of persistent, heavy proteinuria, hypertension, 
+decreased kidney function, and severe glomerular lesions on 
+biopsy is associated with poor outcomes.
+Children with idiopathic isolated, asymptomatic microscopic 
+hematuria or suspected thin basement membrane disease typi-
+cally have an excellent renal prognosis. Long-term follow-up, 
+including yearly urinalysis (to rule out proteinuria) and blood 
+pressure measurement, is required to exclude progressive forms 
+of renal disease.
+CHAPTER 164 
+Hemolytic Uremic Syndrome
+ETIOLOGY AND EPIDEMIOLOGY
+Hemolytic uremic syndrome (HUS) is characterized by the 
+triad of microangiopathic hemolytic anemia, thrombocyto-
+penia, and renal injury and is an important cause of acute 
+kidney injury in children. HUS typically occurs in children 
+less than 5 years of age, but can occur in older children. The 
+most common type of HUS is associated with a prodromal 
+diarrheal illness (D + HUS). Contamination of meat, fruit, 
+vegetables, or water with verotoxin (VT)-producing Escherichia 
+coli (most commonly E. coli O157:H7) is responsible for many 
+outbreaks. VT may be produced by other E. coli strains as well 
+as other bacteria such as Shigella. VT causes hemorrhagic 
+enterocolitis of variable severity and results in HUS in ~5-15% 
+of affected children.
+HUS presenting without a prodrome of diarrhea (atypical 
+HUS) may occur at any age. The clinical course is usually 
+more severe than D + HUS. Atypical HUS can be secondary 
+to infection (Streptococcus pneumonia, human immunodeficiency 
+virus), genetic and acquired defects in complement regulation, 
+medications, malignancy, systemic lupus erythematosus, and 
+pregnancy.
+CLINICAL MANIFESTATIONS
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Diarrhea
+Petechiae/Purpura
+TABLE 164.1  Common Laboratory Findings With 
+Hemolytic Uremic Syndrome
+EVIDENCE OF MICROANGIOPATHIC HEMOLYTIC ANEMIA
+Anemia
+Thrombocytopenia
+Presence of schistocytes, helmet cells, and burr cells on peripheral 
+blood smear
+Increased LDH
+Decreased haptoglobin
+Increased indirect bilirubin
+Increased AST
+Elevated reticulocyte count
+EVIDENCE OF RENAL INJURY
+Elevated creatinine
+Presence of hematuria, proteinuria, pyuria, casts on urinalysis
+OTHER POTENTIAL FINDINGS
+Leukocytosis
+Positive stool culture for E. coli O157:H7
+Positive stool test for shiga-toxin
+Elevated amylase/lipase
+AST, Aspartate aminotransferase; E. coli, Escherichia coli; LDH, lactate 
+dehydrogenase.
+Classic D + HUS begins with enterocolitis, often with bloody 
+stools, followed in 7-10 days by weakness, lethargy, and oliguria/
+anuria. Physical examination reveals irritability, pallor, and 
+petechiae. Dehydration is frequent; however, some children 
+have volume overload. Hypertension may be due to volume 
+overload and/or renal injury. Central nervous system (CNS) 
+
+--- PAGE 647 ---
+625
+CHAPTER 165  Acute and Chronic Renal Failure
+depending on the severity of the injury. Glomerular and vascular 
+disorders may present with hematuria, edema, hypertension, 
+and oliguria. The urine output with postrenal AKI may be low 
+or normal and may be associated with flank masses or a dis-
+tended bladder on examination. Depending on the underlying 
+cause and severity of illness, AKI can be associated with signs 
+of dehydration or volume overload.
+Diagnostic Studies
+A urinalysis (UA) should be obtained in all children with AKI. 
+In prerenal azotemia, UA is unremarkable with high specific 
+gravity reflecting appropriate renal retention of water associated 
+with renal hypoperfusion. However, neonates are not able to 
+CHAPTER 165 
+Acute and Chronic Renal Failure
+ACUTE KIDNEY INJURY
+Etiology
+Acute kidney injury (AKI), formerly termed acute renal failure, 
+refers to an abrupt decrease in glomerular filtration rate (GFR) 
+and tubular function. This may lead to decreased excretion of 
+waste products (e.g., urea) and disturbance in fluid and elec-
+trolyte homeostasis. Early recognition and management of AKI 
+are crucial.
+AKI may be oliguric (<1 mL/kg/hr in neonates and infants, 
+<0.5 mL/kg/hr in children) or nonoliguric, which is more 
+difficult to recognize. Although urine output in nonoliguric 
+AKI is normal or polyuric, electrolyte disturbances and uremia 
+may become significant. Major causes of AKI may be divided 
+into prerenal (renal hypoperfusion), intrinsic renal (tubular, 
+glomerular, or vascular injury), and postrenal (urinary tract 
+obstruction) categories (Table 165.1). In many cases, the cause 
+of AKI is multifactorial.
+Prerenal azotemia is most commonly due to dehydration, 
+but may be secondary to other mechanisms of glomerular 
+hypoperfusion. Tubular injury encompasses the most common 
+causes of intrinsic AKI in children. Tubular injury may occur 
+from hypoxia-ischemia (acute tubular necrosis), infection 
+(sepsis), nephrotoxic agents (medications, contrast, myoglobin), 
+and inflammation (interstitial nephritis). Postrenal AKI may be 
+due to either structural or functional urinary tract obstruction.
+Clinical Manifestations
+TABLE 165.1  Causes of Acute Kidney Injury
+PRERENAL
+Dehydration
+Hemorrhage
+Septic shock
+Burns
+Heart failure
+Cirrhosis
+POSTRENAL (OBSTRUCTION)
+Urethral obstruction (stricture, posterior urethral valves)
+Ureteral obstruction
+Ureterocele
+Extrinsic tumor compressing bladder outlet
+Neurogenic bladder (myelomeningocele, spinal cord injury)
+INTRINSIC
+Acute tubular necrosis
+Nephrotoxins (medications, contrast, myoglobin)
+Infection (sepsis)
+Interstitial nephritis
+Glomerular injury (primary glomerulonephritis, vasculitis, hemolytic 
+uremic syndrome)
+Vascular (renal vein thrombosis, arterial emboli, malignant 
+hypertension)
+ Decision-Making Algorithm
+Available @ StudentConsult.com
+Hypertension
+TABLE 165.2  Laboratory and Clinical Evaluation of Acute Kidney Injury
+LABORATORY/CLINICAL 
+FEATURE
+PRERENAL
+RENAL
+POSTRENAL
+CHILD
+NEONATE
+CHILD
+NEONATE
+Urine output
+Low
+Low, normal, or high
+Low or normal
+Urinalysis
+Normal
+RBCs, WBCs, protein, casts
+Variable
+Urine Na+ (mEq/L)
+<15
+<20-30
+>40
+>50
+Variable, may be >40
+FENa* (%)
+<1
+<2.5
+>2
+>2.5
+Variable, may be >2
+Urine osmolality (mOsm/L)
+>500
+>350
+~300
+~300
+Variable, may be <300
+Renal ultrasound
+Normal
+Increased echogenicity, decreased 
+corticomedullary differentiation
+Hydronephrosis
+*FENa (%) = [(urine sodium/plasma sodium) ÷ (urine creatinine/plasma creatinine)] × 100.
+FENa, Fractional excretion of sodium; RBCs, red blood cells; WBCs, white blood cells.
+History, physical examination, and basic studies usually allow 
+proper classification of the child with AKI (Table 165.2). Prerenal 
+azotemia is characterized by history of precipitating factors 
+and oliguria. Intrinsic tubular injury is associated with precipitat-
+ing factors, but urine output may be low, normal, or high, 
+
+--- PAGE 648 ---
+626
+SECTION 22  Nephrology and Urology
+CHRONIC KIDNEY DISEASE
+Etiology and Epidemiology
+Congenital anomalies of the kidney and urinary tract (CAKUT) 
+are the most common causes of CKD that present between birth 
+and 10 years of age. After age 10, acquired renal diseases, such 
+as focal segmental glomerulosclerosis and glomerulonephritis 
+(GN), are more common causes of CKD. Risk of progression 
+to end-stage renal disease (ESRD) is related to the underlying 
+cause and severity of CKD. During puberty, renal function 
+may deteriorate if the damaged kidneys are not able to grow 
+and adapt to increased demands. CKD is staged to facilitate 
+appropriate evaluation and monitoring (Table 165.4). GFR can be 
+estimated in children using the Schwartz formula (see Chapter 
+161). Most complications of CKD do not manifest until at least 
+stage 3 CKD. In stage 4 CKD, complications become more 
+numerous and severe. Children with stage 5 CKD (ESRD) are 
+typically treated with either dialysis or renal transplantation.
+Clinical Manifestations
+The clinical presentation of a child with CKD is related to both 
+underlying cause and complications of CKD. A child with 
+CAKUT may have polyuria, polydipsia, and recurrent urinary 
+tract infections. A child with glomerular disease may have 
+hematuria, proteinuria, edema, and hypertension. Common 
+complications of CKD in children are listed in Table 165.5. 
+concentrate urine as well. With intrinsic tubular injury and 
+postrenal AKI, UA may show mild hematuria and/or proteinuria 
+with specific gravity 1.015 or less. With glomerular and vascular 
+injury, hematuria and proteinuria are usually moderate to severe. 
+In oliguric states, differentiation between prerenal azotemia 
+and acute tubular necrosis may be aided by determining urine 
+osmolality and fractional excretion of sodium (see Table 165.2). 
+Renal ultrasound is often helpful in defining AKI category 
+(see Table 165.2). Renal biopsy is indicated only in select cases.
+Common electrolyte abnormalities seen with AKI include 
+hyperkalemia, metabolic acidosis, hypocalcemia, and hyper-
+phosphatemia. These labs may need to be monitored frequently, 
+depending on initial results and clinical course. A complete blood 
+count should be obtained as anemia is frequently observed. 
+Other studies may be obtained as clinically indicated.
+Treatment
+In some cases the underlying disorder can be treated. Examples 
+include volume repletion in dehydration, stopping an offending 
+nephrotoxic medication, and relieving urinary tract obstruction. 
+In all cases efforts should be made to limit additional renal 
+injury (e.g., ensuring adequate renal perfusion and avoiding 
+nephrotoxic medications). Medication dosages should be 
+adjusted for decreased renal function as appropriate.
+Fluid therapy depends on volume status and urine output. 
+If hypovolemia is present, intravascular volume should be 
+expanded by intravenous saline administration. If hypervolemia 
+is present, 1-2 mg/kg of furosemide and fluid restriction may 
+be attempted. If euvolemia is present, total fluid input should 
+be adjusted to meet the urine output, which may be higher or 
+lower than normal. Assessment of intake and output should be 
+augmented with serial body weight measurements.
+AKI treatment particularly involves management of potential 
+complications. Electrolyte disorders are treated as appropriate. 
+Potassium intake and medications that increase potassium should 
+be restricted. If hyperkalemia is present, intravenous calcium 
+will lower the risk of arrhythmia while measures are initiated 
+to shift potassium into cells (bicarbonate, β-agonists, insulin/
+dextrose) and hasten removal (diuretics, sodium-potassium 
+exchange resins, dialysis). Preferred treatment of hypocalcemia 
+involves oral calcium supplementation and calcitriol; intrave-
+nous (IV) calcium is reserved for severe cases. Hypertension 
+may be treated with diuretics, calcium channel blockers, and 
+vasodilators. Angiotensin-converting enzyme (ACE) inhibitors 
+are usually avoided in the setting of AKI.
+Major indications for acute dialysis are listed in Table 
+165.3. Medical therapy may be attempted before initiating 
+renal replacement therapy. There is no set blood urea nitrogen 
+or creatinine level at which dialysis is started in AKI. Renal 
+replacement options in children include peritoneal dialysis, 
+hemodialysis, and continuous renal replacement therapy. The 
+mode is selected based on individual factors.
+Prognosis
+Recovery from AKI depends on etiology, severity, availability 
+of specific treatments, and other patient aspects. Nonoliguric 
+AKI usually recovers well, whereas outcomes with oliguric AKI 
+are more variable. Even with seemingly good recovery, a history 
+of AKI places the child at increased risk for future renal 
+complications, including chronic kidney disease (CKD).
+TABLE 165.3  Indications for Renal Replacement Therapy
+ACUTE AND/OR CHRONIC DIALYSIS
+Volume overload
+Metabolic acidosis
+Electrolyte abnormalities
+Uremia
+ACUTE DIALYSIS
+Certain ingestions
+Hyperammonemia
+CHRONIC DIALYSIS
+Poor growth
+Stage 5 chronic kidney disease (end-stage renal disease)
+TABLE 165.4  Classification of the Stages of Chronic 
+Kidney Disease
+STAGE
+GFR (mL/min/ 
+1.73 m2)*
+DESCRIPTION
+1
+>90
+Minimal kidney damage
+2
+60-89
+Kidney damage with mild 
+reduction of GFR
+3
+30-59
+Moderate reduction of GFR
+4
+15-29
+Severe reduction of GFR
+5
+<15 (or dialysis)
+End-stage renal disease
+*GFR ranges apply for children 2 years of age and older.
+GFR, Glomerular filtration rate.
+From National Kidney Foundation Kidney Disease Outcomes Quality Initiative.
+
+--- PAGE 649 ---
+627
+CHAPTER 166  Hypertension
+The optimal treatment of ESRD is renal transplantation. 
+Both deceased and living donors can be used for renal transplan-
+tation. Living donors are preferred when available. Maintenance 
+dialysis is effective for a child awaiting renal transplantation 
+or when renal transplantation is not possible. Indications for 
+chronic dialysis are given in Table 165.3. Peritoneal dialysis 
+is done at home by the family. Hemodialysis is typically done 
+three times a week at a dialysis facility.
+Prognosis
+Children with mild CKD (stages 1 and 2) may do well but need 
+to be monitored for progressive loss of kidney function. Children 
+with stages 3 and 4 CKD have a high likelihood of progressing 
+to ESRD at some point, although the timing can vary. Children 
+with kidney transplants generally do well, but have to take 
+immunosuppressive medications associated with a variety of 
+side effects, including infections, nephrotoxicity, cardiovascular 
+complications, and increased risk for certain malignancies. 
+Unfortunately, most transplanted kidneys fail over time but 
+can last for >10-20 years. Children on maintenance dialysis 
+have the highest morbidity and mortality, especially with longer 
+time spent on dialysis. Thus the primary goal is to provide a 
+kidney transplant for children with ESRD.
+CHAPTER 166 
+Hypertension
+DEFINITION
+In children, hypertension (HTN) is defined as blood pressure 
+(BP) greater than 95th percentile for age, gender, and height 
+measured on at least three different occasions. The context of 
+BP measurement (e.g., cuff size, pain, anxiety) is important. 
+Staging of HTN is listed in Table 166.1. Hypertensive emergency 
+is defined as severe BP elevation associated with target organ 
+damage (encephalopathy, heart failure).
+ETIOLOGY
+Pediatric HTN has many causes (Table 166.2) that are either 
+primary (essential) or secondary. Essential HTN is the most 
+common cause of HTN in younger children and adolescents. 
+Obese children are more likely to develop essential HTN. 
+Secondary HTN should be suspected with younger age and 
+more severely elevated BP. Renal disease is the most common 
+cause of secondary HTN in children.
+Most of these complications are multifactorial in etiology. For 
+example, factors associated with growth failure include poor 
+nutrition, CKD-mineral bone disorder (CKD-MBD), metabolic 
+acidosis, hormonal abnormalities, and resistance to growth 
+hormone. Anemia results primarily from a failure to produce 
+adequate erythropoietin and iron deficiency. CKD-MBD is 
+usually due to secondary hyperparathyroidism as a result of 
+diminished renal 1,25-dihydroxyvitamin D production, hypo-
+calcemia, and hyperphosphatemia (from decreased renal 
+excretion). If prolonged and/or severe, CKD-MBD may lead 
+to rickets and bone deformities. Hypertension and left ven-
+tricular hypertrophy are common cardiovascular complications. 
+Delayed puberty results from altered gonadotropin secretion 
+and regulation. Learning and school performance may also be 
+impaired in CKD.
+Treatment
+The management of children with advanced CKD requires a 
+multidisciplinary team of pediatric practitioners. Adequate 
+nutrition should be provided even if this requires dietary 
+supplements and tube feedings. In infants, a low-solute formula 
+may be indicated. Unless a child is oliguric, fluid restriction is 
+not necessary. Many children with CAKUT require supplemental 
+salt due to urine sodium wasting. Conversely, children with 
+GN tend to retain sodium and may become hypertensive or 
+edematous if given excess salt. Common treatment consider-
+ations for other CKD complications are given in Table 165.5.
+Measures can be taken to preserve kidney function or slow 
+progression of CKD. Hypertension and proteinuria can be 
+treated with ACE inhibitors or angiotensin receptor blockers. 
+Potentially nephrotoxic medications should be avoided when 
+feasible. Medication adjustment for reduced kidney function is 
+important. Protein intake is typically not restricted in pediatric 
+CKD.
+TABLE 165.5  Common Complications and Treatments of 
+Chronic Kidney Disease
+COMPLICATION
+TREATMENT
+1.	 Poor growth
+Increased caloric intake, treat acidosis, 
+treat CKD-MBD, recombinant GH
+2.	 Anemia
+Erythropoietin, iron supplementation
+3.	 CKD-Mineral Bone 
+Disorder/secondary 
+hyperparathyroidism
+1,25-Dihydroxyvitamin D 
+supplementation, calcium 
+supplementation, dietary phosphorous 
+restriction, phosphate binders
+4.	 Cardiovascular
+4a.	 Hypertension
+Antihypertensive medications
+4b.	 Left ventricular 
+hypertrophy
+Volume control
+5.	 Electrolyte 
+abnormalities
+5a.	 Hyperkalemia
+Low K diet, furosemide, sodium 
+polystyrene sulfonate
+5b.	 Hyponatremia
+Sodium supplementation
+5c.	 Metabolic 
+acidosis
+Alkali replacement
+CKD, Chronic kidney disease; CKD-MBD, chronic kidney disease—mineral bone 
+disorder; GH, growth hormone; K, potassium.
+TABLE 166.1  Classification of Blood Pressure
+BLOOD PRESSURE 
+CATEGORY
+BLOOD PRESSURE 
+PERCENTILE (%)
+Normal
+<90th
+Prehypertension
+90th-95th*
+Stage 1 hypertension
+95th to (99th + 5 mm Hg)
+Stage 2 hypertension
+>99th + 5 mm Hg
+*If 90th % is greater than 120/80, use 120/80 as the lower limit.
+
+--- PAGE 650 ---
+628
+SECTION 22  Nephrology and Urology
+tachycardia with flushing and diaphoresis (pheochromocytoma); 
+and truncal obesity, acne, striae, and buffalo hump (Cushing 
+syndrome). Signs of underlying kidney disease may be present.
+DIAGNOSTIC STUDIES
+In addition to history and physical examination, evaluation of 
+children with confirmed HTN includes:
+1.	 Baseline etiological assessment (urinalysis, electrolytes, blood 
+urea nitrogen, creatinine, and renal ultrasound)
+2.	 Focused studies based on clinical suspicion (e.g., plasma 
+metanephrines, thyroid studies, vascular imaging)
+3.	 Assessment for target organ damage (echocardiogram for 
+left ventricular hypertrophy)
+4.	 Assessment of other cardiovascular risk factors (lipids, fasting 
+glucose, uric acid)
+TREATMENT
+Therapeutic lifestyle changes (diet, exercise) should be initiated 
+for asymptomatic stage 1 HTN without target organ damage 
+or systemic disease. Medication should be started for stage 2 
+or symptomatic HTN and stage 1 HTN that fails to respond 
+to lifestyle changes over 6-12 months. Calcium channel blockers 
+or angiotensin-converting enzyme inhibitors are the most 
+frequently chosen first-line options in children. Angiotensin 
+receptor blockers, β-blockers, or diuretics are also effective 
+first-line antihypertensive agents. More than one agent may be 
+needed. Hypertensive emergency requires prompt hospitalization 
+and may require parenteral antihypertensive treatment with 
+nicardipine, labetalol, esmolol, or sodium nitroprusside.
+PROGNOSIS
+Prognosis depends on underlying etiology and BP control. 
+Essential HTN is usually not associated with morbidity at 
+presentation. Left untreated, however, even asymptomatic stage 
+1 HTN may increase risk for cardiovascular, central nervous 
+system, and renal morbidity in adults.
+CHAPTER 167 
+Vesicoureteral Reflux
+ETIOLOGY AND EPIDEMIOLOGY
+Vesicoureteral reflux (VUR) is retrograde flow of urine from 
+the bladder up the ureter or even into the kidney. Most VUR 
+results from congenital incompetence of the ureterovesical (UV) 
+junction, a structure that matures through early childhood. In 
+a significant minority of children, structural UV abnormalities 
+exist that never resolve. VUR may be familial; 30-40% of siblings 
+of a child with VUR also have VUR. VUR may also be secondary 
+to distal bladder obstruction or other urinary tract anomalies.
+VUR exposes the kidney to increased hydrodynamic pressure 
+during voiding and increases likelihood of renal infection due 
+to incomplete emptying of the ureter and bladder (see Chapter 
+114). Reflux nephropathy refers to development and progression 
+of renal scarring. This is a particular risk if VUR is associated 
+with urinary tract infection (UTI) or obstruction. Although a 
+CLINICAL MANIFESTATIONS
+TABLE 166.2  Causes of Hypertension
+PRIMARY HYPERTENSION
+Essential hypertension
+Metabolic syndrome
+RENAL CAUSES
+Congenital anomalies (renal dysplasia, obstructive uropathy)
+Structural disorders (Wilms tumor, polycystic kidney disease)
+Glomerulonephritis
+Acquired injury (renal scarring, acute tubular necrosis)
+ENDOCRINE CAUSES
+Catecholamine-secreting tumors (pheochromocytoma, 
+neuroblastoma)
+Hypercortisolism (Cushing syndrome)
+Hyperaldosteronism
+Hyperthyroidism
+NEUROLOGICAL CAUSES
+Increased sympathetic activity (stress, anxiety, pain)
+Dysautonomia
+Increased intracranial pressure
+VASCULAR CAUSES
+Coarctation of the aorta
+Renal artery embolism (from umbilical artery catheter)
+Renal vein thrombosis
+Renal artery stenosis
+Vasculitis
+OTHER CAUSES
+Obstructive sleep apnea
+Medications, illicit drugs
+ Decision-Making Algorithms
+Available @ StudentConsult.com
+Red Urine and Hematuria
+Hypertension
+Headaches
+Obesity
+Alkalemia
+Most children with HTN have no symptoms. Signs and symp-
+toms associated with severe HTN include encephalopathy 
+(headache, vomiting, seizures), heart failure, stroke, and 
+retinopathy (blurred vision, flame hemorrhage, and cotton wool 
+spots on retinal exam). Neonatal history (low birth weight or 
+use of umbilical artery catheter); family history of HTN, stroke, 
+or heart disease; and dietary history (excessive salt or caffeine, 
+drugs) are important. Additional findings that may suggest 
+specific causes include abdominal bruit (renal artery stenosis); 
+diminished leg pressure and weak femoral pulse (coarctation 
+of aorta); café-au-lait spots (neurofibromatosis-associated renal 
+artery stenosis); flank mass (hydronephrosis, Wilms tumor); 

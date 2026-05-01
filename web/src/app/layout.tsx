@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="flex min-h-screen bg-black">
           <Sidebar />
-          <main className="flex-1 ml-0 md:ml-[280px] p-6 md:p-8 max-w-[1400px]">
+          <main className="flex-1 ml-0 md:ml-[280px] pt-16 pl-14 pr-4 pb-6 md:pt-8 md:pl-8 md:pr-8 max-w-[1400px]">
             {children}
           </main>
         </div>
