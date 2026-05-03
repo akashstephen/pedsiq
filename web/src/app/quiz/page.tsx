@@ -11,7 +11,7 @@ import mcqs from '@/data/mcqs.json';
 import { type McqQuestion, type Topic, TOPIC_LABELS, DIFFICULTY_LABELS, MASTERY_LABELS, MASTERY_COLORS } from '@/types/mcq';
 import { loadProfile, getOverallAccuracy } from '@/lib/storage';
 import { generateWeaknessReport, generateInsights } from '@/lib/analytics';
-import { loadActiveSession } from '@/lib/session';
+import { loadActiveSession } from '@/lib/storage';
 import {
   Zap,
   Target,
