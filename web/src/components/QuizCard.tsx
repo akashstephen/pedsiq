@@ -1,18 +1,27 @@
 /**
- * QuizCard — Core MCQ interaction component
- * Displays question, options, handles selection and reveal.
+ * QuizCard — Controlled MCQ interaction component
+ *
+ * All state is external (controlled). The parent orchestrator manages
+ * selection, reveal, and reset between questions.
  */
 
 'use client';
 
-import { useState, useCallback } from 'react';
 import { type McqQuestion } from '@/types/mcq';
 import { Check, X, ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 
 interface QuizCardProps {
   question: McqQuestion;
-  onAnswer: (selectedIndex: number) => void;
+  /** 0-based selected option, or null if none */
+  selectedOption: number | null;
+  /** Has the answer been revealed? */
+  isRevealed: boolean;
+  /** Callback when user selects (but does not submit) an option */
+  onSelect: (index: number) => void;
+  /** Callback when user clicks Submit */
+  onSubmit: () => void;
+  /** Callback when user clicks Next (after reveal) */
   onNext: () => void;
   questionNumber: number;
   totalQuestions: number;
@@ -20,32 +29,18 @@ interface QuizCardProps {
 
 export function QuizCard({
   question,
-  onAnswer,
+  selectedOption,
+  isRevealed,
+  onSelect,
+  onSubmit,
   onNext,
   questionNumber,
   totalQuestions,
 }: QuizCardProps) {
-  const [selected, setSelected] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
-
-  const handleSelect = useCallback((index: number) => {
-    if (revealed) return;
-    setSelected(index);
-  }, [revealed]);
-
-  const handleSubmit = useCallback(() => {
-    if (selected === null || revealed) return;
-    setRevealed(true);
-    onAnswer(selected);
-  }, [selected, revealed, onAnswer]);
-
-  const handleNext = useCallback(() => {
-    setSelected(null);
-    setRevealed(false);
-    onNext();
-  }, [onNext]);
-
-  const isCorrect = selected === question.correctIndex;
+  const handleSelect = (index: number) => {
+    if (isRevealed) return;
+    onSelect(index);
+  };
 
   return (
     <div className="flex flex-col h-full">
@@ -69,16 +64,16 @@ export function QuizCard({
       {/* Options */}
       <div className="space-y-3 flex-1">
         {question.options.map((option, index) => {
-          const isSelected = selected === index;
+          const isSelected = selectedOption === index;
           const isCorrectOption = index === question.correctIndex;
-          const showCorrect = revealed && isCorrectOption;
-          const showIncorrect = revealed && isSelected && !isCorrectOption;
+          const showCorrect = isRevealed && isCorrectOption;
+          const showIncorrect = isRevealed && isSelected && !isCorrectOption;
 
           return (
             <button
               key={index}
               onClick={() => handleSelect(index)}
-              disabled={revealed}
+              disabled={isRevealed}
               className={clsx(
                 'w-full text-left px-5 py-4 rounded-xl border transition-all duration-200 min-h-[56px]',
                 'flex items-center gap-4',
@@ -89,7 +84,7 @@ export function QuizCard({
                   : isSelected
                   ? 'bg-[#007AFF]/10 border-[#007AFF]/40 text-white'
                   : 'bg-white/[0.03] border-white/[0.08] text-white/80 hover:bg-white/[0.06] hover:border-white/15',
-                revealed && !isSelected && !isCorrectOption && 'opacity-50'
+                isRevealed && !isSelected && !isCorrectOption && 'opacity-50'
               )}
               aria-pressed={isSelected}
               aria-label={`Option ${String.fromCharCode(65 + index)}`}
@@ -114,7 +109,9 @@ export function QuizCard({
                   String.fromCharCode(65 + index)
                 )}
               </span>
-              <span className="text-[15px] leading-snug">{option.replace(/^[A-D]\.\s*/, '')}</span>
+              <span className="text-[15px] leading-snug">
+                {option.replace(/^[A-D]\.\s*/, '')}
+              </span>
             </button>
           );
         })}
@@ -122,13 +119,13 @@ export function QuizCard({
 
       {/* Action Button */}
       <div className="mt-6">
-        {!revealed ? (
+        {!isRevealed ? (
           <button
-            onClick={handleSubmit}
-            disabled={selected === null}
+            onClick={onSubmit}
+            disabled={selectedOption === null}
             className={clsx(
               'w-full py-3.5 rounded-xl font-semibold text-base transition-all',
-              selected !== null
+              selectedOption !== null
                 ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90 active:scale-[0.98]'
                 : 'bg-white/[0.06] text-white/30 cursor-not-allowed'
             )}
@@ -137,7 +134,7 @@ export function QuizCard({
           </button>
         ) : (
           <button
-            onClick={handleNext}
+            onClick={onNext}
             className="w-full py-3.5 rounded-xl font-semibold text-base bg-[#007AFF] text-white hover:bg-[#007AFF]/90 active:scale-[0.98] flex items-center justify-center gap-2"
           >
             Next Question

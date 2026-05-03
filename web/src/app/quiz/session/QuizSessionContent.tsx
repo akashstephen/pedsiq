@@ -1,16 +1,16 @@
 /**
  * QuizSessionContent — Inner component wrapped in Suspense
+ *
+ * Uses useQuizSession orchestrator for all state management.
  */
 
 'use client';
 
-import { useState, useCallback, useEffect, useMemo } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import mcqs from '@/data/mcqs.json';
-import { type McqQuestion, type QuizSession, type QuizResponse, type ConfidenceLevel } from '@/types/mcq';
-import { createSession, recordResponse, isSessionComplete } from '@/lib/session';
-import { saveActiveSession, clearActiveSession, loadActiveSession } from '@/lib/storage';
-import { updatePerformance, updateSpacedRepetition } from '@/lib/analytics';
+import { type McqQuestion } from '@/types/mcq';
+import { useQuizSession } from '@/hooks/useQuizSession';
 import { QuizCard } from '@/components/QuizCard';
 import { ExplanationPanel } from '@/components/ExplanationPanel';
 import { ArrowLeft, Pause } from 'lucide-react';
@@ -18,116 +18,49 @@ import Link from 'next/link';
 
 export function QuizSessionContent() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const allQuestions = mcqs as McqQuestion[];
 
-  const [session, setSession] = useState<QuizSession | null>(null);
-  const [currentQuestion, setCurrentQuestion] = useState<McqQuestion | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
-  const [startTime, setStartTime] = useState<number>(0);
-  const [confidence, setConfidence] = useState<ConfidenceLevel | null>(null);
+  const {
+    session,
+    currentQuestion,
+    currentIndex,
+    totalQuestions,
+    isRevealed,
+    selectedOption,
+    canSubmit,
+    progress,
+    selectOption,
+    submitAnswer,
+    rateConfidence,
+    goToNext,
+    pauseSession,
+  } = useQuizSession(allQuestions);
 
-  const allQuestions = useMemo(() => mcqs as McqQuestion[], []);
-
-  useEffect(() => {
-    const active = loadActiveSession();
-    if (active && active.status === 'active') {
-      setSession(active);
-      const q = allQuestions.find((q) => q.id === active.questionIds[active.currentIndex]);
-      if (q) setCurrentQuestion(q);
-      setStartTime(Date.now());
-      return;
-    }
-
-    const mode = (searchParams.get('mode') as QuizSession['mode']) || 'quick_10';
-    const topicsParam = searchParams.get('topics');
-    const topics = topicsParam ? topicsParam.split(',') as McqQuestion['meta']['topic'][] : undefined;
-    const countParam = searchParams.get('count');
-    const questionCount = countParam ? parseInt(countParam, 10) : undefined;
-
-    const newSession = createSession(allQuestions, {
-      mode,
-      topics,
-      questionCount,
-    });
-
-    setSession(newSession);
-    saveActiveSession(newSession);
-    const q = allQuestions.find((q) => q.id === newSession.questionIds[0]);
-    if (q) setCurrentQuestion(q);
-    setStartTime(Date.now());
-  }, [searchParams, allQuestions]);
-
-  const handleAnswer = useCallback(
+  const handleSelect = useCallback(
     (index: number) => {
-      setSelectedIndex(index);
-      setRevealed(true);
-
-      if (!session || !currentQuestion) return;
-
-      const timeSpent = Date.now() - startTime;
-      const correct = index === currentQuestion.correctIndex;
-
-      updatePerformance(currentQuestion, {
-        questionId: currentQuestion.id,
-        selectedIndex: index,
-        correct,
-        timeSpentMs: timeSpent,
-        confidence: 'unsure',
-      });
+      if (!isRevealed) {
+        selectOption(index);
+      }
     },
-    [session, currentQuestion, startTime]
+    [isRevealed, selectOption]
   );
 
-  const handleConfidenceRated = useCallback(
-    (conf: ConfidenceLevel) => {
-      setConfidence(conf);
-      if (!session || !currentQuestion || selectedIndex === null) return;
-
-      const correct = selectedIndex === currentQuestion.correctIndex;
-
-      updateSpacedRepetition(currentQuestion.id, correct, conf);
-
-      const updatedSession = recordResponse(session, {
-        questionId: currentQuestion.id,
-        selectedIndex,
-        correct,
-        timeSpentMs: Date.now() - startTime,
-        confidence: conf,
-      });
-
-      setSession(updatedSession);
-      saveActiveSession(updatedSession);
-    },
-    [session, currentQuestion, selectedIndex, startTime]
-  );
+  const handleSubmit = useCallback(() => {
+    if (selectedOption !== null && !isRevealed) {
+      submitAnswer();
+    }
+  }, [selectedOption, isRevealed, submitAnswer]);
 
   const handleNext = useCallback(() => {
-    if (!session) return;
-
-    if (isSessionComplete({ ...session, currentIndex: session.currentIndex + 1 })) {
-      const completedSession = { ...session, status: 'completed' as const, completedAt: new Date().toISOString() };
-      saveActiveSession(null);
+    const { completed } = goToNext();
+    if (completed && session) {
       router.push(`/quiz/results/?session=${session.id}`);
-      return;
     }
-
-    const nextIndex = session.currentIndex + 1;
-    const nextQ = allQuestions.find((q) => q.id === session.questionIds[nextIndex]);
-
-    setCurrentQuestion(nextQ || null);
-    setSelectedIndex(null);
-    setRevealed(false);
-    setConfidence(null);
-    setStartTime(Date.now());
-  }, [session, allQuestions, router]);
+  }, [goToNext, session, router]);
 
   const handlePause = useCallback(() => {
-    if (session) {
-      saveActiveSession({ ...session, status: 'paused' });
-      router.push('/quiz/');
-    }
-  }, [session, router]);
+    pauseSession();
+  }, [pauseSession]);
 
   if (!session || !currentQuestion) {
     return (
@@ -138,8 +71,6 @@ export function QuizSessionContent() {
       </div>
     );
   }
-
-  const progress = ((session.currentIndex) / session.questionIds.length) * 100;
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -174,20 +105,23 @@ export function QuizSessionContent() {
       <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-6">
         <QuizCard
           question={currentQuestion}
-          onAnswer={handleAnswer}
+          selectedOption={selectedOption}
+          isRevealed={isRevealed}
+          onSelect={handleSelect}
+          onSubmit={handleSubmit}
           onNext={handleNext}
-          questionNumber={session.currentIndex + 1}
-          totalQuestions={session.questionIds.length}
+          questionNumber={currentIndex + 1}
+          totalQuestions={totalQuestions}
         />
       </div>
 
       {/* Explanation Panel */}
-      {revealed && selectedIndex !== null && (
+      {isRevealed && selectedOption !== null && (
         <div className="mt-6 bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 md:p-6">
           <ExplanationPanel
             question={currentQuestion}
-            selectedIndex={selectedIndex}
-            onConfidenceRated={handleConfidenceRated}
+            selectedIndex={selectedOption}
+            onConfidenceRated={rateConfidence}
           />
         </div>
       )}
