@@ -10,6 +10,7 @@ import {
   BarChart3,
   Activity,
   Flame,
+  Brain,
   Menu,
   X,
 } from "lucide-react";
@@ -17,6 +18,7 @@ import clsx from "clsx";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/quiz/", label: "MCQ Practice", icon: Brain },
   { href: "/questions/", label: "Questions", icon: FileText },
   { href: "/nelson/", label: "Nelson Analysis", icon: BookOpen },
   { href: "/subjects/", label: "Subjects", icon: BarChart3 },

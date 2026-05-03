@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "PedsIQ — KUHS Pediatrics Exam Intelligence",
-  description: "Previous Year Question analysis, pattern insights, and structured answers for KUHS Pediatrics exams. Study the full syllabus — patterns describe the past, they do not predict the future.",
+  description: "MCQ practice with 250+ clinically-validated questions, previous year question analysis, pattern insights, and structured answers for KUHS Pediatrics exams. Study the full syllabus — patterns describe the past, they do not predict the future.",
 };
 
 export default function RootLayout({
