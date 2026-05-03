@@ -48,11 +48,11 @@ CASE_VIGNETTE_PATTERNS = [
 BLOOM_KEYWORDS: dict[BloomLevel, list[str]] = {
     BloomLevel.RECALL: [
         "define", "list", "name", "identify", "state", "mention", "enumerate",
-        "what is", "what are", "classify",
+        "what is", "what are",
     ],
     BloomLevel.UNDERSTAND: [
         "explain", "describe", "discuss", "compare", "contrast", "differentiate",
-        "distinguish", "classify", "outline", "summarize",
+        "distinguish", "outline", "summarize",
     ],
     BloomLevel.APPLY: [
         "apply", "demonstrate", "calculate", "interpret", "use", "illustrate",
@@ -139,7 +139,14 @@ def classify_bloom(question: ParsedQuestion) -> BloomLevel:
     if question.sub_parts and len(question.sub_parts) >= 3:
         scores[BloomLevel.ANALYZE] += 1
 
-    return max(scores, key=lambda k: scores[k])
+    max_score = max(scores.values())
+    candidates = [level for level, score in scores.items() if score == max_score]
+    # Deterministic tie-breaker: prefer higher cognitive level when tied
+    bloom_order = [BloomLevel.EVALUATE, BloomLevel.ANALYZE, BloomLevel.APPLY, BloomLevel.UNDERSTAND, BloomLevel.RECALL]
+    for level in bloom_order:
+        if level in candidates:
+            return level
+    return BloomLevel.RECALL
 
 
 def classify_content_depth(question: ParsedQuestion) -> ContentDepth:

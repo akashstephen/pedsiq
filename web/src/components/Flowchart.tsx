@@ -1,12 +1,12 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useMemo } from 'react';
+import { graphlib, layout } from '@dagrejs/dagre';
 
 interface FlowchartNode {
   id: string;
   label: string;
   type?: 'default' | 'decision' | 'start' | 'end' | 'process';
-  subLabel?: string;
 }
 
 interface FlowchartEdge {
@@ -21,187 +21,257 @@ interface FlowchartProps {
   title?: string;
 }
 
-export function Flowchart({ nodes, edges, title }: FlowchartProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [nodePositions, setNodePositions] = useState<Map<string, { x: number; y: number; width: number; height: number }>>(new Map());
+const NODE_PAD_X = 24;
+const NODE_PAD_Y = 14;
+const FONT_SIZE = 13;
+const LINE_H = 18;
+const CHAR_W = 7.0;
+const MIN_W = 100;
+const MIN_H = 42;
 
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const positions = new Map<string, { x: number; y: number; width: number; height: number }>();
-    nodes.forEach((node) => {
-      const el = document.getElementById(`flow-node-${node.id}`);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        const containerRect = containerRef.current!.getBoundingClientRect();
-        positions.set(node.id, {
-          x: rect.left - containerRect.left + rect.width / 2,
-          y: rect.top - containerRect.top + rect.height / 2,
-          width: rect.width,
-          height: rect.height,
-        });
-      }
-    });
-    setNodePositions(positions);
-  }, [nodes]);
+function measureText(text: string) {
+  const lines = text.split('\n');
+  const maxChars = Math.max(...lines.map((l) => l.length));
+  const w = Math.max(MIN_W, maxChars * CHAR_W + NODE_PAD_X * 2);
+  const h = Math.max(MIN_H, lines.length * LINE_H + NODE_PAD_Y * 2);
+  return { w, h, lines };
+}
 
-  // Compute levels (topological layering)
-  const levels = new Map<string, number>();
-  const visited = new Set<string>();
-
-  function setLevel(id: string, level: number) {
-    if (visited.has(id)) return;
-    visited.add(id);
-    const current = levels.get(id) ?? 0;
-    levels.set(id, Math.max(current, level));
-    edges
-      .filter((e) => e.from === id)
-      .forEach((e) => setLevel(e.to, level + 1));
+function getNodeBox(node: FlowchartNode) {
+  const { w, h } = measureText(node.label);
+  switch (node.type) {
+    case 'decision': {
+      const s = Math.max(130, w, h) * 1.2;
+      return { w: s, h: s };
+    }
+    case 'start':
+    case 'end': {
+      const s = Math.max(110, w + 24, h + 10);
+      return { w: s, h: s * 0.58 };
+    }
+    default:
+      return { w, h };
   }
+}
 
-  const incoming = new Set(edges.map((e) => e.to));
-  const roots = nodes.filter((n) => !incoming.has(n.id));
-  roots.forEach((r) => setLevel(r.id, 0));
+function nodeColors(type?: string) {
+  switch (type) {
+    case 'start':
+      return { fill: 'rgba(0,122,255,0.12)', stroke: 'rgba(0,122,255,0.45)', text: '#5CADFF', glow: 'rgba(0,122,255,0.08)' };
+    case 'end':
+      return { fill: 'rgba(52,199,89,0.12)', stroke: 'rgba(52,199,89,0.45)', text: '#5BD778', glow: 'rgba(52,199,89,0.08)' };
+    case 'decision':
+      return { fill: 'rgba(255,149,0,0.10)', stroke: 'rgba(255,149,0,0.45)', text: '#FFBD4A', glow: 'rgba(255,149,0,0.08)' };
+    case 'process':
+      return { fill: 'rgba(88,86,214,0.10)', stroke: 'rgba(88,86,214,0.45)', text: '#8A88E6', glow: 'rgba(88,86,214,0.08)' };
+    default:
+      return { fill: 'rgba(255,255,255,0.05)', stroke: 'rgba(255,255,255,0.18)', text: 'rgba(255,255,255,0.88)', glow: 'rgba(255,255,255,0.03)' };
+  }
+}
 
-  // Handle orphans
-  const hasOutgoing = new Set(edges.map((e) => e.from));
-  const orphans = nodes.filter((n) => !incoming.has(n.id) && !hasOutgoing.has(n.id));
-  orphans.forEach((o) => {
-    if (!levels.has(o.id)) levels.set(o.id, 0);
-  });
+function edgePath(points: { x: number; y: number }[]) {
+  if (points.length < 2) return '';
+  // Smooth orthogonal-ish path using cubic beziers between waypoints
+  let d = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
+  for (let i = 1; i < points.length; i++) {
+    const p0 = points[i - 1];
+    const p1 = points[i];
+    const mx = (p0.x + p1.x) / 2;
+    d += ` C ${mx.toFixed(1)} ${p0.y.toFixed(1)}, ${mx.toFixed(1)} ${p1.y.toFixed(1)}, ${p1.x.toFixed(1)} ${p1.y.toFixed(1)}`;
+  }
+  return d;
+}
 
-  // Group by level
-  const rows = new Map<number, string[]>();
-  levels.forEach((lvl, id) => {
-    if (!rows.has(lvl)) rows.set(lvl, []);
-    rows.get(lvl)!.push(id);
-  });
+function diamondPath(w: number, h: number) {
+  const hw = w / 2;
+  const hh = h / 2;
+  return `M 0 ${(-hh).toFixed(1)} L ${hw.toFixed(1)} 0 L 0 ${hh.toFixed(1)} L ${(-hw).toFixed(1)} 0 Z`;
+}
 
-  const maxLevel = Math.max(0, ...Array.from(levels.values()));
-  const nodeMap = new Map(nodes.map((n) => [n.id, n]));
+function pillPath(w: number, h: number) {
+  const r = h / 2;
+  const hw = w / 2;
+  const hh = h / 2;
+  return `M ${(-hw + r).toFixed(1)} ${(-hh).toFixed(1)} A ${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${(hw - r).toFixed(1)} ${(-hh).toFixed(1)} L ${(hw - r).toFixed(1)} ${hh.toFixed(1)} A ${r.toFixed(1)} ${r.toFixed(1)} 0 0 1 ${(-hw + r).toFixed(1)} ${hh.toFixed(1)} Z`;
+}
 
-  // Generate SVG paths for edges
-  const getPathD = (fromId: string, toId: string): string => {
-    const from = nodePositions.get(fromId);
-    const to = nodePositions.get(toId);
-    if (!from || !to) return '';
-    
-    const startY = from.y + from.height / 2;
-    const endY = to.y - to.height / 2;
-    const midY = (startY + endY) / 2;
-    
-    return `M ${from.x} ${startY} C ${from.x} ${midY}, ${to.x} ${midY}, ${to.x} ${endY}`;
-  };
+function rectPath(w: number, h: number) {
+  const hw = w / 2;
+  const hh = h / 2;
+  const r = 10;
+  return `M ${(-hw + r).toFixed(1)} ${(-hh).toFixed(1)} L ${(hw - r).toFixed(1)} ${(-hh).toFixed(1)} A ${r} ${r} 0 0 1 ${hw.toFixed(1)} ${(-hh + r).toFixed(1)} L ${hw.toFixed(1)} ${(hh - r).toFixed(1)} A ${r} ${r} 0 0 1 ${(hw - r).toFixed(1)} ${hh.toFixed(1)} L ${(-hw + r).toFixed(1)} ${hh.toFixed(1)} A ${r} ${r} 0 0 1 ${(-hw).toFixed(1)} ${(hh - r).toFixed(1)} L ${(-hw).toFixed(1)} ${(-hh + r).toFixed(1)} A ${r} ${r} 0 0 1 ${(-hw + r).toFixed(1)} ${(-hh).toFixed(1)} Z`;
+}
 
-  const getNodeStyle = (type?: string) => {
-    switch (type) {
-      case 'start':
-        return 'bg-[#007AFF]/15 border-[#007AFF]/30 text-[#007AFF] rounded-full';
-      case 'end':
-        return 'bg-[#34C759]/15 border-[#34C759]/30 text-[#34C759] rounded-full';
-      case 'decision':
-        return 'bg-[#FF9500]/10 border-[#FF9500]/30 text-[#FF9500]';
-      case 'process':
-        return 'bg-[#5856D6]/10 border-[#5856D6]/30 text-[#5856D6]';
-      default:
-        return 'bg-white/[0.06] border-white/[0.12] text-white/90';
-    }
-  };
+function getShapePath(type: string | undefined, w: number, h: number) {
+  switch (type) {
+    case 'decision':
+      return diamondPath(w, h);
+    case 'start':
+    case 'end':
+      return pillPath(w, h);
+    default:
+      return rectPath(w, h);
+  }
+}
 
-  const getNodeShape = (type?: string) => {
-    switch (type) {
-      case 'decision':
-        return 'rounded-lg transform rotate-0'; // Could add diamond shape with clip-path
-      default:
-        return 'rounded-xl';
-    }
-  };
+export function Flowchart({ nodes, edges, title }: FlowchartProps) {
+  const data = useMemo(() => {
+    const g = new graphlib.Graph({ directed: true, compound: false, multigraph: false });
+    g.setGraph({ rankdir: 'TB', nodesep: 44, edgesep: 28, ranksep: 72, marginx: 24, marginy: 24 });
+    g.setDefaultEdgeLabel(() => ({}));
+
+    nodes.forEach((n) => {
+      const box = getNodeBox(n);
+      g.setNode(n.id, { label: n.label, width: box.w, height: box.h, type: n.type });
+    });
+
+    edges.forEach((e) => {
+      g.setEdge(e.from, e.to, { label: e.label });
+    });
+
+    layout(g);
+
+    const nodeMap = new Map<string, { x: number; y: number; w: number; h: number; type?: string; label: string; lines: string[] }>();
+    g.nodes().forEach((id) => {
+      const n = g.node(id);
+      nodeMap.set(id, { x: n.x, y: n.y, w: n.width, h: n.height, type: n.type, label: n.label, lines: measureText(n.label).lines });
+    });
+
+    const edgeList: { points: { x: number; y: number }[]; label?: string }[] = [];
+    g.edges().forEach((e) => {
+      const edgeObj = g.edge(e);
+      edgeList.push({ points: edgeObj.points, label: edgeObj.label });
+    });
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    nodeMap.forEach((n) => {
+      minX = Math.min(minX, n.x - n.w / 2);
+      minY = Math.min(minY, n.y - n.h / 2);
+      maxX = Math.max(maxX, n.x + n.w / 2);
+      maxY = Math.max(maxY, n.y + n.h / 2);
+    });
+    edgeList.forEach((e) => {
+      e.points.forEach((p) => {
+        minX = Math.min(minX, p.x);
+        minY = Math.min(minY, p.y);
+        maxX = Math.max(maxX, p.x);
+        maxY = Math.max(maxY, p.y);
+      });
+    });
+
+    const pad = 32;
+    const vb = `${minX - pad} ${minY - pad} ${maxX - minX + pad * 2} ${maxY - minY + pad * 2}`;
+    const vw = maxX - minX + pad * 2;
+    const vh = maxY - minY + pad * 2;
+
+    return { nodeMap, edgeList, vb, vw, vh };
+  }, [nodes, edges]);
+
+  const { nodeMap, edgeList, vb, vw, vh } = data;
 
   return (
-    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 md:p-6 overflow-x-auto my-4 relative">
+    <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-4 md:p-6 overflow-x-auto my-4">
       {title && (
         <div className="text-white/50 text-xs font-bold uppercase tracking-wider mb-4 text-center">
           {title}
         </div>
       )}
-      <div ref={containerRef} className="relative min-w-[300px]">
-        {/* SVG overlay for connectors */}
-        <svg 
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{ width: '100%', height: '100%' }}
-        >
+      <div className="flex justify-center min-w-fit">
+        <svg viewBox={vb} width={vw} height={vh} className="max-w-full h-auto" style={{ minWidth: Math.min(vw, 640) }}>
           <defs>
-            <marker
-              id="arrowhead"
-              markerWidth="10"
-              markerHeight="7"
-              refX="9"
-              refY="3.5"
-              orient="auto"
-            >
-              <polygon
-                points="0 0, 10 3.5, 0 7"
-                fill="rgba(255,255,255,0.2)"
-              />
+            <marker id="fc-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="rgba(255,255,255,0.3)" />
             </marker>
+            <filter id="fc-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
           </defs>
-          {edges.map((edge, i) => {
-            const d = getPathD(edge.from, edge.to);
+
+          {/* Edges */}
+          {edgeList.map((edge, i) => {
+            const d = edgePath(edge.points);
             if (!d) return null;
+            // Find a good label position: midpoint of the path
+            const midIdx = Math.max(1, Math.floor(edge.points.length / 2));
+            const mid = edge.points[midIdx];
+            const prev = edge.points[midIdx - 1];
+            const angle = Math.atan2(mid.y - prev.y, mid.x - prev.x);
+            // Offset perpendicular to edge direction
+            const off = 12;
+            const lx = mid.x + Math.sin(angle) * off;
+            const ly = mid.y - Math.cos(angle) * off;
+
             return (
-              <g key={i}>
-                <path
-                  d={d}
-                  fill="none"
-                  stroke="rgba(255,255,255,0.15)"
-                  strokeWidth="1.5"
-                  markerEnd="url(#arrowhead)"
-                />
+              <g key={`e${i}`}>
+                <path d={d} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" markerEnd="url(#fc-arrow)" />
+                {edge.label && (
+                  <g>
+                    <rect
+                      x={lx - (edge.label.length * 3.5 + 8)}
+                      y={ly - 9}
+                      width={edge.label.length * 7 + 16}
+                      height={18}
+                      rx={9}
+                      fill="rgba(10,10,10,0.9)"
+                      stroke="rgba(255,255,255,0.10)"
+                    />
+                    <text
+                      x={lx}
+                      y={ly + 3}
+                      textAnchor="middle"
+                      fill="rgba(255,255,255,0.6)"
+                      fontSize="10"
+                      fontWeight="600"
+                      fontFamily="system-ui, -apple-system, sans-serif"
+                    >
+                      {edge.label}
+                    </text>
+                  </g>
+                )}
+              </g>
+            );
+          })}
+
+          {/* Nodes */}
+          {Array.from(nodeMap.entries()).map(([id, n]) => {
+            const c = nodeColors(n.type);
+            const shapeD = getShapePath(n.type, n.w, n.h);
+            return (
+              <g key={id} transform={`translate(${n.x.toFixed(1)}, ${n.y.toFixed(1)})`}>
+                <path d={shapeD} fill={c.fill} stroke={c.stroke} strokeWidth="1.5" filter="url(#fc-glow)" />
+                <path d={shapeD} fill={c.fill} stroke={c.stroke} strokeWidth="1.5" />
+                {n.lines.length === 1 ? (
+                  <text
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    fill={c.text}
+                    fontSize={FONT_SIZE}
+                    fontWeight="500"
+                    fontFamily="system-ui, -apple-system, sans-serif"
+                  >
+                    {n.label}
+                  </text>
+                ) : (
+                  n.lines.map((line, i) => (
+                    <text
+                      key={i}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      y={((i - (n.lines.length - 1) / 2) * LINE_H).toFixed(1)}
+                      fill={c.text}
+                      fontSize={FONT_SIZE}
+                      fontWeight="500"
+                      fontFamily="system-ui, -apple-system, sans-serif"
+                    >
+                      {line}
+                    </text>
+                  ))
+                )}
               </g>
             );
           })}
         </svg>
-
-        {/* Nodes */}
-        <div className="relative z-10 flex flex-col items-center gap-6">
-          {Array.from({ length: maxLevel + 1 }, (_, lvl) => {
-            const rowNodes = rows.get(lvl) ?? [];
-            const isLast = lvl === maxLevel;
-            return (
-              <div key={lvl} className="flex flex-col items-center gap-4 w-full">
-                <div className="flex flex-wrap items-start justify-center gap-4 w-full">
-                  {rowNodes.map((id) => {
-                    const node = nodeMap.get(id)!;
-                    const outgoing = edges.filter((e) => e.from === id);
-                    return (
-                      <div key={id} className="flex flex-col items-center">
-                        <div
-                          id={`flow-node-${node.id}`}
-                          className={`px-4 py-2.5 text-xs md:text-sm font-medium text-center min-w-[120px] max-w-[280px] border ${getNodeStyle(node.type)} ${getNodeShape(node.type)} shadow-sm`}
-                        >
-                          <div>{node.label}</div>
-                          {node.subLabel && (
-                            <div className="text-[10px] opacity-70 mt-0.5">{node.subLabel}</div>
-                          )}
-                        </div>
-                        {outgoing.length > 0 && outgoing.some((e) => e.label) && (
-                          <div className="flex gap-2 mt-1.5 flex-wrap justify-center">
-                            {outgoing.map((e, i) =>
-                              e.label ? (
-                                <span key={i} className="text-[10px] font-semibold text-white/50 bg-white/[0.05] px-2 py-0.5 rounded-full">
-                                  {e.label}
-                                </span>
-                              ) : null
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </div>
   );

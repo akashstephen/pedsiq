@@ -1,0 +1,3326 @@
+[
+  {
+    "id": "gastro_001",
+    "question": "A 4-week-old infant is brought with progressive jaundice, dark urine, and acholic stools since 2 weeks of age. On examination, the liver is firm and enlarged 4 cm below the costal margin. Ultrasound shows a triangular cord sign measuring 5 mm. What is the most appropriate next step in management?",
+    "options": [
+      "A. Start ursodeoxycholic acid and observe for 2 weeks",
+      "B. Perform intraoperative cholangiogram and Kasai portoenterostomy urgently",
+      "C. Order a HIDA scan to confirm biliary patency before surgery",
+      "D. Initiate high-dose phenobarbital to stimulate bile flow"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The triangular cord sign (>4 mm) on ultrasound is highly specific for biliary atresia. The infant is already 4 weeks old; delay beyond 60 days worsens prognosis after Kasai. Intraoperative cholangiogram with proceeding to Kasai portoenterostomy is the standard of care without waiting for further imaging.",
+      "distractors": [
+        "A. Ursodeoxycholic acid is supportive but does not treat the obliterated extrahepatic bile ducts; observation wastes critical time.",
+        "This is the correct answer. The triangular cord sign (>4 mm) on ultrasound is highly specific for biliary atresia. The infant is...",
+        "B. Kasai is correct, but waiting for HIDA in a classic presentation with a positive triangular cord sign unnecessarily delays surgery.",
+        "C. Phenobarbital stimulates bile flow but has no role in relieving the mechanical obstruction of biliary atresia."
+      ],
+      "misconception": "Students often order confirmatory HIDA scans and delay surgery, not appreciating the time-critical nature of Kasai before 60 days.",
+      "takeaway": "Triangular cord sign >4 mm + acholic stools = urgent Kasai; do not delay with unnecessary imaging.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "triangular-cord-sign",
+        "kasai"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_002",
+    "question": "Which of the following is the most sensitive and specific ultrasonographic finding for biliary atresia in a cholestatic infant?",
+    "options": [
+      "A. Gallbladder length less than 15 mm",
+      "B. Absent gallbladder",
+      "C. Triangular cord sign at the porta hepatis",
+      "D. Hepatic artery diameter >2 mm"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The triangular cord sign (echogenic fibrous cone >4 mm at the porta hepatis) is the most sensitive and specific ultrasound finding for biliary atresia, with specificity >90% in experienced centers.",
+      "distractors": [
+        "A. A small gallbladder can be seen in biliary atresia but is also seen in other cholestatic disorders and is not the most specific sign.",
+        "B. An absent gallbladder is suggestive but can occur in other conditions and has lower specificity than the triangular cord sign.",
+        "This is the correct answer. The triangular cord sign (echogenic fibrous cone >4 mm at the porta hepatis) is the most sensitive a...",
+        "C. Hepatic artery enlargement may be present but is not the defining or most specific diagnostic feature."
+      ],
+      "misconception": "Students often think absent gallbladder is pathognomonic, but the triangular cord sign is more specific.",
+      "takeaway": "Triangular cord sign >4 mm at porta hepatis is the most specific USG finding for biliary atresia.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "ultrasound",
+        "triangular-cord-sign"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_003",
+    "question": "An infant with biliary atresia undergoes a successful Kasai portoenterostomy at 45 days of life. Which factor most strongly predicts a good long-term outcome with native liver survival?",
+    "options": [
+      "A. Absence of splenomegaly at presentation",
+      "B. Age at surgery less than 60 days",
+      "C. Normal gamma-glutamyl transferase level",
+      "D. Bilirubin clearance within 3 months post-surgery"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Age at Kasai portoenterostomy is the strongest predictor of outcome. Surgery before 60 days of life is associated with significantly better bile flow, reduced jaundice, and improved native liver survival.",
+      "distractors": [
+        "A. While splenomegaly may suggest portal hypertension, it is not the strongest predictor of post-Kasai success.",
+        "This is the correct answer. Age at Kasai portoenterostomy is the strongest predictor of outcome. Surgery before 60 days of life ...",
+        "B. GGT is typically elevated in biliary atresia; normal GGT would suggest an alternative diagnosis like PFIC.",
+        "C. Bilirubin clearance (jaundice-free by 3 months) is a good postoperative marker, but age at surgery remains the strongest preoperative predictor."
+      ],
+      "misconception": "Students confuse postoperative clearance with the preoperative predictor; age <60 days is the key prognostic factor.",
+      "takeaway": "Kasai before 60 days = best predictor of native liver survival in biliary atresia.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "kasai",
+        "prognosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_004",
+    "question": "A 3-week-old infant presents with jaundice. Laboratory studies show: total bilirubin 12 mg/dL, direct bilirubin 8 mg/dL, AST 120 U/L, ALT 98 U/L, GGT 450 U/L. What is the most likely diagnosis?",
+    "options": [
+      "A. Physiological jaundice",
+      "B. Breast milk jaundice",
+      "C. Biliary atresia",
+      "D. Hereditary spherocytosis"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Conjugated hyperbilirubinemia (direct bilirubin >1 mg/dL or >20% of total) in a 3-week-old infant is pathological. The elevated GGT strongly suggests biliary obstruction, most commonly biliary atresia.",
+      "distractors": [
+        "A. Physiological jaundice is unconjugated and resolves by 2 weeks.",
+        "B. Breast milk jaundice is unconjugated hyperbilirubinemia and does not cause acholic stools or elevated GGT.",
+        "This is the correct answer. Conjugated hyperbilirubinemia (direct bilirubin >1 mg/dL or >20% of total) in a 3-week-old infant is...",
+        "C. Hereditary spherocytosis causes hemolytic unconjugated hyperbilirubinemia with anemia and spherocytes on smear."
+      ],
+      "misconception": "Students may miss that direct bilirubin is elevated and assume breast milk jaundice because the infant is breastfed.",
+      "takeaway": "Conjugated hyperbilirubinemia + elevated GGT in a neonate = biliary atresia until proven otherwise.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 357. Cholestasis",
+      "tags": [
+        "cholestasis",
+        "conjugated-hyperbilirubinemia",
+        "biliary-atresia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_005",
+    "question": "Which of the following conditions is the most common cause of neonatal cholestasis?",
+    "options": [
+      "A. Alpha-1 antitrypsin deficiency",
+      "B. Biliary atresia",
+      "C. Neonatal hepatitis",
+      "D. Choledochal cyst"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Biliary atresia is the most common cause of neonatal cholestasis requiring surgical intervention and accounts for approximately one-third of all cholestatic infants.",
+      "distractors": [
+        "A. Alpha-1 antitrypsin deficiency is an important metabolic cause but is less common than biliary atresia.",
+        "This is the correct answer. Biliary atresia is the most common cause of neonatal cholestasis requiring surgical intervention and...",
+        "B. Neonatal hepatitis is a diagnosis of exclusion and historically overdiagnosed; true idiopathic neonatal hepatitis is less common than biliary atresia.",
+        "C. Choledochal cyst is a rare congenital anomaly and not the most common cause."
+      ],
+      "misconception": "Students often think neonatal hepatitis is the most common because of the broad older terminology.",
+      "takeaway": "Biliary atresia is the most common cause of pathological neonatal cholestasis.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 357. Cholestasis",
+      "tags": [
+        "neonatal-cholestasis",
+        "biliary-atresia",
+        "epidemiology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_006",
+    "question": "A neonate with biliary atresia is being evaluated for Kasai portoenterostomy. Which preoperative finding suggests advanced disease and a poorer prognosis?",
+    "options": [
+      "A. Direct bilirubin of 6 mg/dL",
+      "B. Ascites and splenomegaly",
+      "C. Acholic stools for 2 weeks",
+      "D. Firm hepatomegaly 3 cm below costal margin"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Ascites and splenomegaly indicate established portal hypertension and cirrhosis, suggesting advanced fibrosis and a poorer response to Kasai with worse native liver survival.",
+      "distractors": [
+        "A. Direct bilirubin of 6 mg/dL is expected in biliary atresia and does not by itself indicate advanced cirrhosis.",
+        "This is the correct answer. Ascites and splenomegaly indicate established portal hypertension and cirrhosis, suggesting advanced...",
+        "B. Acholic stools are typical of biliary atresia but do not correlate with disease stage as strongly as portal hypertension signs.",
+        "C. Hepatomegaly is common early in the disease and does not necessarily imply cirrhosis."
+      ],
+      "misconception": "Students may equate jaundice severity alone with prognosis, missing that portal hypertension signs indicate irreversible damage.",
+      "takeaway": "Ascites + splenomegaly in biliary atresia = portal hypertension and advanced disease = poorer Kasai outcome.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "portal-hypertension",
+        "prognosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_007",
+    "question": "In an infant with suspected biliary atresia, which of the following is the gold standard for establishing the diagnosis?",
+    "options": [
+      "A. Percutaneous liver biopsy",
+      "B. MR cholangiopancreatography (MRCP)",
+      "C. Intraoperative cholangiogram with liver biopsy",
+      "D. Hepatobiliary iminodiacetic acid (HIDA) scan"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The gold standard for diagnosing biliary atresia is intraoperative cholangiogram demonstrating absent or obliterated extrahepatic bile ducts, combined with a liver biopsy showing bile duct proliferation and portal fibrosis.",
+      "distractors": [
+        "A. Percutaneous liver biopsy is supportive but not definitive, as histology can overlap with neonatal hepatitis.",
+        "B. MRCP is increasingly used but cannot reliably visualize the microscopic obliteration seen in biliary atresia.",
+        "This is the correct answer. The gold standard for diagnosing biliary atresia is intraoperative cholangiogram demonstrating absen...",
+        "C. HIDA scan shows absent excretion into the intestine but is not specific and can be falsely positive in severe intrahepatic cholestasis."
+      ],
+      "misconception": "Students often think HIDA scan or MRCP alone can definitively diagnose biliary atresia, but intraoperative cholangiogram remains the gold standard.",
+      "takeaway": "Gold standard for biliary atresia = intraoperative cholangiogram + liver biopsy.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "diagnosis",
+        "gold-standard"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_008",
+    "question": "A 6-week-old infant with biliary atresia is being considered for liver transplantation. Which of the following is the most common indication for proceeding to transplant after Kasai?",
+    "options": [
+      "A. Failure to clear jaundice by 3 months post-Kasai",
+      "B. Persistent pruritus despite cholestyramine",
+      "C. Development of an umbilical hernia",
+      "D. Growth failure at 6 months of age"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Failure to achieve bilirubin clearance (persistent jaundice) by 3 months after Kasai is the most important predictor of need for liver transplantation and is the most common indication.",
+      "distractors": [
+        "This is the correct answer. Failure to achieve bilirubin clearance (persistent jaundice) by 3 months after Kasai is the most imp...",
+        "A. Pruritus is a symptom of cholestasis but is managed medically and is not the primary transplant indication.",
+        "B. Umbilical hernia is common in infants with ascites but is not an indication for liver transplant.",
+        "C. Growth failure is a consequence of chronic liver disease but typically follows failure of bile drainage."
+      ],
+      "misconception": "Students may list complications like ascites or pruritus as transplant indications, but failure to drain after Kasai is the key driver.",
+      "takeaway": "No jaundice clearance by 3 months post-Kasai = most common indication for liver transplant in biliary atresia.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "liver-transplant",
+        "kasai"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_009",
+    "question": "Which viral infection is most commonly associated with the embryonic form of biliary atresia?",
+    "options": [
+      "A. Cytomegalovirus",
+      "B. Hepatitis B virus",
+      "C. Rotavirus",
+      "D. Reovirus type 3"
+    ],
+    "correctIndex": 3,
+    "explanation": {
+      "correct": "Reovirus type 3 has been epidemiologically and experimentally linked to the embryonic (early) form of biliary atresia, although the exact etiology remains multifactorial.",
+      "distractors": [
+        "A. CMV can cause neonatal hepatitis and cholestasis but is not the classic virus associated with biliary atresia pathogenesis.",
+        "B. HBV is vertically transmitted but is not specifically linked to biliary atresia.",
+        "C. Rotavirus is associated with infantile gastroenteritis and intussusception, not biliary atresia.",
+        "This is the correct answer. Reovirus type 3 has been epidemiologically and experimentally linked to the embryonic (early) form o..."
+      ],
+      "misconception": "Students often guess CMV because it is a common perinatal infection, but reovirus is the classically associated virus in embryonic biliary atresia.",
+      "takeaway": "Reovirus type 3 is classically linked to embryonic biliary atresia pathogenesis.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "etiology",
+        "reovirus"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_010",
+    "question": "A 1-month-old infant with cholestasis is found to have polysplenia and situs inversus. Which biliary anomaly should be strongly suspected?",
+    "options": [
+      "A. Choledochal cyst",
+      "B. Biliary atresia splenic malformation (BASM) syndrome",
+      "C. Alagille syndrome",
+      "D. Caroli disease"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Biliary atresia splenic malformation (BASM) syndrome is strongly associated with heterotaxy features including polysplenia, situs inversus, and cardiac anomalies. These infants have a poorer prognosis after Kasai.",
+      "distractors": [
+        "A. Choledochal cyst is a cystic dilatation of the bile duct and is not associated with splenic anomalies.",
+        "This is the correct answer. Biliary atresia splenic malformation (BASM) syndrome is strongly associated with heterotaxy features...",
+        "B. Alagille syndrome is characterized by bile duct paucity, butterfly vertebrae, and cardiac defects, not polysplenia.",
+        "C. Caroli disease is a congenital dilatation of intrahepatic bile ducts and is not associated with situs anomalies."
+      ],
+      "misconception": "Students may confuse BASM with Alagille syndrome because both have cardiac associations, but polysplenia points specifically to BASM.",
+      "takeaway": "Biliary atresia + polysplenia/situs inversus = BASM syndrome.",
+      "relatedTopic": "biliary"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "neonatal_cholestasis",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 359. Biliary Atresia",
+      "tags": [
+        "biliary-atresia",
+        "BASM",
+        "heterotaxy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_011",
+    "question": "A 2-day-old newborn develops bilious vomiting and abdominal distension. On examination, the abdomen is scaphoid. A nasogastric tube yields bilious aspirate. What is the most appropriate immediate next step?",
+    "options": [
+      "A. Upper GI contrast study",
+      "B. Abdominal X-ray and urgent surgical consultation",
+      "C. Rectal biopsy",
+      "D. Trial of rectal saline washouts"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Bilious vomiting in a neonate is intestinal obstruction until proven otherwise and constitutes a surgical emergency. An abdominal X-ray (supine and erect/decubitus) with urgent surgical consultation is the immediate step to evaluate for malrotation/volvulus, atresia, or meconium ileus.",
+      "distractors": [
+        "A. Upper GI study is useful for diagnosing malrotation but should not delay resuscitation and surgical evaluation.",
+        "This is the correct answer. Bilious vomiting in a neonate is intestinal obstruction until proven otherwise and constitutes a sur...",
+        "B. Rectal biopsy is used for Hirschsprung disease, which typically presents with delayed meconium passage, not acute bilious vomiting.",
+        "C. Rectal washouts are therapeutic for Hirschsprung disease but inappropriate as first-line for acute bilious vomiting."
+      ],
+      "misconception": "Students may order a contrast study first, not recognizing that bilious vomiting in a neonate is a surgical emergency requiring immediate imaging and surgical consultation.",
+      "takeaway": "Neonate + bilious vomiting = surgical emergency; X-ray and urgent surgical consult first.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "bilious_vomiting",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "bilious-vomiting",
+        "neonate",
+        "intestinal-obstruction"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_012",
+    "question": "A newborn with bilious vomiting is found to have a 'double bubble' sign on abdominal X-ray with no distal gas. What is the most likely diagnosis?",
+    "options": [
+      "A. Midgut volvulus",
+      "B. Jejunal atresia",
+      "C. Duodenal atresia",
+      "D. Hirschsprung disease"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The 'double bubble' sign (dilated stomach and duodenal bulb) with absent distal gas is pathognomonic for duodenal atresia, often associated with Down syndrome.",
+      "distractors": [
+        "A. Midgut volvulus can show a double bubble but typically has some distal gas and shows a corkscrew on upper GI series.",
+        "B. Jejunal atresia presents with multiple dilated loops and air-fluid levels, not an isolated double bubble.",
+        "This is the correct answer. The 'double bubble' sign (dilated stomach and duodenal bulb) with absent distal gas is pathognomonic...",
+        "C. Hirschsprung disease presents with a transition zone on contrast enema and delayed meconium, not double bubble."
+      ],
+      "misconception": "Students may confuse duodenal atresia with volvulus because both can show double bubble, but absent distal gas is classic for atresia.",
+      "takeaway": "Double bubble + no distal gas = duodenal atresia.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "intestinal_obstruction",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "duodenal-atresia",
+        "double-bubble",
+        "neonate"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_013",
+    "question": "An infant with bilious vomiting undergoes an upper GI contrast study which shows the duodenojejunal flexure to the right of the spine and below the pylorus, with a corkscrew appearance of the duodenum and jejunum. What is the diagnosis?",
+    "options": [
+      "A. Duodenal atresia",
+      "B. Malrotation with midgut volvulus",
+      "C. Hypertrophic pyloric stenosis",
+      "D. Annular pancreas"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "An abnormally positioned duodenojejunal flexure (right of spine, below pylorus) with a corkscrew appearance of the small bowel is diagnostic of malrotation with midgut volvulus, a surgical emergency.",
+      "distractors": [
+        "A. Duodenal atresia shows a double bubble with no distal gas, not a corkscrew pattern.",
+        "This is the correct answer. An abnormally positioned duodenojejunal flexure (right of spine, below pylorus) with a corkscrew app...",
+        "B. HPS presents with non-bilious projectile vomiting and a string sign on upper GI, not a corkscrew.",
+        "C. Annular pancreas causes duodenal obstruction and may show a double bubble, not a corkscrew appearance."
+      ],
+      "misconception": "Students may confuse the corkscrew sign with duodenal atresia; the corkscrew is specific for volvulus.",
+      "takeaway": "Corkscrew duodenum/jejunum on UGI = malrotation with midgut volvulus.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malrotation",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "malrotation",
+        "midgut-volvulus",
+        "corkscrew"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_014",
+    "question": "A term infant fails to pass meconium within 48 hours of birth and develops progressive abdominal distension and bilious vomiting. Rectal examination reveals a tight anal canal with explosive stool discharge. What is the definitive diagnostic test?",
+    "options": [
+      "A. Barium enema",
+      "B. Rectal suction biopsy",
+      "C. Anorectal manometry",
+      "D. Abdominal ultrasound"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The clinical picture is classic for Hirschsprung disease (aganglionic megacolon). Rectal suction biopsy demonstrating absent ganglion cells and hypertrophic nerve trunks is the gold standard for diagnosis.",
+      "distractors": [
+        "A. Barium enema may show a transition zone but is not definitive and can be normal in neonates.",
+        "This is the correct answer. The clinical picture is classic for Hirschsprung disease (aganglionic megacolon). Rectal suction bio...",
+        "B. Anorectal manometry shows absent rectoanal inhibitory reflex but is technically difficult in neonates and is not the definitive test.",
+        "C. Abdominal ultrasound has no role in diagnosing Hirschsprung disease."
+      ],
+      "misconception": "Students often choose barium enema because of the classic transition zone, but rectal biopsy is the gold standard.",
+      "takeaway": "Hirschsprung disease: definitive diagnosis = rectal suction biopsy showing aganglionosis.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "hirschsprung_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 362. Hirschsprung Disease",
+      "tags": [
+        "hirschsprung",
+        "aganglionosis",
+        "rectal-biopsy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_015",
+    "question": "Which of the following is the most common site of aganglionosis in Hirschsprung disease?",
+    "options": [
+      "A. Entire colon (total colonic aganglionosis)",
+      "B. Rectosigmoid region",
+      "C. Small intestine only",
+      "D. Rectum only"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Approximately 75-80% of cases of Hirschsprung disease involve the rectosigmoid region (short-segment disease).",
+      "distractors": [
+        "A. Total colonic aganglionosis occurs in approximately 5-10% of cases and has a worse prognosis.",
+        "This is the correct answer. Approximately 75-80% of cases of Hirschsprung disease involve the rectosigmoid region (short-segment...",
+        "B. Small intestine involvement is rare and typically associated with total colonic aganglionosis.",
+        "C. Rectum-only involvement is less common than rectosigmoid involvement."
+      ],
+      "misconception": "Students may think the rectum alone is most common, but the rectosigmoid region is the classic and most common site.",
+      "takeaway": "Most common site of Hirschsprung aganglionosis = rectosigmoid region (75-80%).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "hirschsprung_disease",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 362. Hirschsprung Disease",
+      "tags": [
+        "hirschsprung",
+        "aganglionosis",
+        "rectosigmoid"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_016",
+    "question": "A newborn with jejunal atresia undergoes laparotomy. The surgeon finds multiple atretic segments resembling a 'string of sausages.' Which embryological mechanism is most likely responsible?",
+    "options": [
+      "A. Failure of recanalization",
+      "B. Vascular accident in utero",
+      "C. Failure of midgut rotation and fixation",
+      "D. Abnormal notochordal development"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Jejunal atresia (and ileal atresia) is thought to result from an in-utero vascular accident causing ischemia and resorption of the bowel. The 'apple peel' or 'string of sausages' appearance is characteristic.",
+      "distractors": [
+        "A. Failure of recanalization is the mechanism for duodenal atresia, not jejunal atresia.",
+        "This is the correct answer. Jejunal atresia (and ileal atresia) is thought to result from an in-utero vascular accident causing ...",
+        "B. Failure of rotation causes malrotation, not atresia.",
+        "C. Notochordal development abnormalities are associated with vertebral anomalies, not intestinal atresia."
+      ],
+      "misconception": "Students often apply the duodenal atresia mechanism (failed recanalization) to all intestinal atresias.",
+      "takeaway": "Jejunal/ileal atresia = in-utero vascular accident; duodenal atresia = failed recanalization.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "intestinal_obstruction",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "jejunal-atresia",
+        "vascular-accident",
+        "embryology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_017",
+    "question": "A 3-day-old infant is diagnosed with malrotation. During the Ladd procedure, what is the most critical step to prevent recurrent volvulus?",
+    "options": [
+      "A. Resection of the dilated proximal duodenum",
+      "B. Division of Ladd's bands and broadening of the mesentery",
+      "C. Appendectomy",
+      "D. Pyloromyotomy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The Ladd procedure involves counterclockwise detorsion of the volvulus, division of Ladd's bands, broadening of the mesentery to stabilize it, and appendectomy. Broadening the mesentery is the key step to prevent recurrent volvulus.",
+      "distractors": [
+        "A. Resection of the duodenum is not part of the Ladd procedure unless there is gangrenous bowel.",
+        "This is the correct answer. The Ladd procedure involves counterclockwise detorsion of the volvulus, division of Ladd's bands, br...",
+        "B. Appendectomy is performed because the appendix ends up on the left side, making future diagnosis difficult, but it does not prevent volvulus.",
+        "C. Pyloromyotomy is for hypertrophic pyloric stenosis and has no role in malrotation."
+      ],
+      "misconception": "Students may think appendectomy is the most critical step, but mesenteric broadening is what prevents recurrence.",
+      "takeaway": "Ladd procedure: division of bands + broadening of mesentery prevents recurrent volvulus.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malrotation",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "malrotation",
+        "ladd-procedure",
+        "volvulus"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_018",
+    "question": "A newborn with cystic fibrosis presents with meconium ileus. On abdominal X-ray, there are bubbly or granular appearances in the right lower quadrant due to trapped air in thick meconium. What is this sign called?",
+    "options": [
+      "A. Double bubble sign",
+      "B. Ground glass appearance",
+      "C. Water-soluble contrast enema sign",
+      "D. Pneumatosis intestinalis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The 'ground glass' or 'soap bubble' appearance in the right lower quadrant on plain abdominal X-ray is characteristic of meconium ileus, caused by trapped air bubbles in thick, tenacious meconium.",
+      "distractors": [
+        "A. Double bubble is seen in duodenal atresia.",
+        "This is the correct answer. The 'ground glass' or 'soap bubble' appearance in the right lower quadrant on plain abdominal X-ray ...",
+        "B. Water-soluble contrast enema is a therapeutic procedure, not an X-ray sign.",
+        "C. Pneumatosis intestinalis indicates necrotizing enterocolitis, not meconium ileus."
+      ],
+      "misconception": "Students may confuse ground glass with pneumatosis; ground glass is specific for meconium ileus.",
+      "takeaway": "Ground glass / soap bubble appearance in RLQ = meconium ileus.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "intestinal_obstruction",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "meconium-ileus",
+        "ground-glass",
+        "cystic-fibrosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_019",
+    "question": "A neonate with meconium ileus fails to respond to water-soluble contrast enema. Laparotomy reveals a segment of ileum that is markedly dilated and filled with thick meconium, with a microcolon. Which intraoperative procedure is most appropriate?",
+    "options": [
+      "A. Ileostomy with irrigation and staged closure",
+      "B. Total colectomy with ileoanal pull-through",
+      "C. Resection with primary anastomosis",
+      "D. Appendectomy only"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "For complicated meconium ileus (failure of enema, perforation, or atresia), the standard approach is enterotomy or ileostomy with irrigation to remove thick meconium, with staged closure once the bowel is decompressed and healthy.",
+      "distractors": [
+        "This is the correct answer. For complicated meconium ileus (failure of enema, perforation, or atresia), the standard approach is...",
+        "A. Total colectomy is for total colonic Hirschsprung disease, not meconium ileus.",
+        "B. Primary anastomosis risks leak in the setting of dilated, inflamed bowel.",
+        "C. Appendectomy alone does not relieve the mechanical obstruction."
+      ],
+      "misconception": "Students may choose primary anastomosis, not appreciating that staged management is safer in complicated meconium ileus.",
+      "takeaway": "Complicated meconium ileus = enterotomy/ileostomy with irrigation and staged closure.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "intestinal_obstruction",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "meconium-ileus",
+        "surgery",
+        "cystic-fibrosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_020",
+    "question": "Which of the following is the most serious early complication of untreated midgut volvulus in a neonate?",
+    "options": [
+      "A. Biliary atresia",
+      "B. Necrosis of the entire midgut",
+      "C. Gastric perforation",
+      "D. Pyloric stenosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Midgut volvulus twists the superior mesenteric artery, compromising blood supply to the entire midgut (distal duodenum to proximal transverse colon). Untreated, it leads to midgut necrosis, short bowel syndrome, or death.",
+      "distractors": [
+        "A. Biliary atresia is a congenital anomaly unrelated to volvulus.",
+        "This is the correct answer. Midgut volvulus twists the superior mesenteric artery, compromising blood supply to the entire midgu...",
+        "B. Gastric perforation can occur but is not the primary life-threatening complication of volvulus.",
+        "C. Pyloric stenosis is unrelated to malrotation/volvulus."
+      ],
+      "misconception": "Students may not appreciate the extent of bowel at risk in midgut volvulus, focusing only on duodenal obstruction.",
+      "takeaway": "Untreated midgut volvulus = midgut necrosis due to SMA compromise = surgical emergency.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malrotation",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "midgut-volvulus",
+        "necrosis",
+        "SMA"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_021",
+    "question": "A 4-month-old infant presents with frequent regurgitation, irritability during feeds, and poor weight gain. There is no bilious vomiting. Which of the following is the first-line management?",
+    "options": [
+      "A. Start omeprazole 1 mg/kg/day immediately",
+      "B. Thicken feeds, position upright after feeds, and reassess",
+      "C. Perform an upper GI endoscopy",
+      "D. Refer for Nissen fundoplication"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This infant has symptomatic GERD. First-line management includes conservative measures: thickened feeds, smaller frequent feeds, upright positioning after feeds, and avoiding tobacco smoke. Pharmacotherapy is reserved for failed conservative therapy.",
+      "distractors": [
+        "A. PPIs are effective but are second-line after conservative measures fail in infants.",
+        "This is the correct answer. This infant has symptomatic GERD. First-line management includes conservative measures: thickened fe...",
+        "B. Endoscopy is invasive and reserved for alarm symptoms (hematemesis, anemia, dysphagia) or treatment failure.",
+        "C. Nissen fundoplication is reserved for severe, refractory GERD or complications."
+      ],
+      "misconception": "Students often jump to PPIs immediately, not recognizing that conservative management is first-line in infants.",
+      "takeaway": "Infant GERD: thickened feeds + positioning first; PPIs if conservative measures fail.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "gerd",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 334. Gastroesophageal Reflux",
+      "tags": [
+        "GERD",
+        "infant",
+        "first-line-management"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_022",
+    "question": "An adolescent with chronic abdominal pain is diagnosed with peptic ulcer disease. Testing for Helicobacter pylori is positive. Which is the most appropriate first-line eradication regimen?",
+    "options": [
+      "A. Omeprazole + amoxicillin for 7 days",
+      "B. Bismuth subsalicylate + metronidazole + tetracycline + PPI for 14 days",
+      "C. Clarithromycin triple therapy for 14 days without local resistance data",
+      "D. Ranitidine + amoxicillin for 10 days"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In regions with high clarithromycin resistance (including India), bismuth-based quadruple therapy (PPI + bismuth + tetracycline + metronidazole) for 14 days is the recommended first-line empiric regimen for H. pylori eradication.",
+      "distractors": [
+        "A. Dual therapy with PPI + amoxicillin is not recommended as first-line.",
+        "This is the correct answer. In regions with high clarithromycin resistance (including India), bismuth-based quadruple therapy (P...",
+        "B. Clarithromycin triple therapy should only be used where local resistance is known to be low (<15%).",
+        "C. Ranitidine is no longer recommended due to safety concerns, and this is not a valid eradication regimen."
+      ],
+      "misconception": "Students often choose clarithromycin triple therapy by reflex, not considering local resistance patterns.",
+      "takeaway": "In high clarithromycin resistance regions (India), bismuth quadruple therapy is first-line for H. pylori.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "peptic_ulcer_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 336. Peptic Ulcer Disease",
+      "tags": [
+        "H-pylori",
+        "quadruple-therapy",
+        "bismuth"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_023",
+    "question": "A 12-year-old with recurrent oral ulcers, abdominal pain, bloody diarrhea, and weight loss is diagnosed with Crohn disease. Colonoscopy reveals skip lesions, cobblestoning, and transmural inflammation. Which extraintestinal manifestation is most commonly associated with this condition?",
+    "options": [
+      "A. Primary sclerosing cholangitis",
+      "B. Erythema nodosum",
+      "C. Sacroiliitis",
+      "D. Uveitis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Erythema nodosum is the most common skin manifestation and one of the most frequent extraintestinal manifestations of Crohn disease in children.",
+      "distractors": [
+        "A. Primary sclerosing cholangitis is more strongly associated with ulcerative colitis than Crohn disease.",
+        "This is the correct answer. Erythema nodosum is the most common skin manifestation and one of the most frequent extraintestinal ...",
+        "B. Sacroiliitis is common but less frequent than erythema nodosum.",
+        "C. Uveitis occurs in IBD but is less common than skin manifestations."
+      ],
+      "misconception": "Students may choose PSC because it is a classic association, but it is more specific to ulcerative colitis.",
+      "takeaway": "Most common extraintestinal manifestation of Crohn disease = erythema nodosum.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "inflammatory_bowel_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 338. Inflammatory Bowel Disease",
+      "tags": [
+        "crohn-disease",
+        "extraintestinal",
+        "erythema-nodosum"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_024",
+    "question": "A 10-year-old with ulcerative colitis has been in remission on mesalamine for 2 years. During a routine visit, which test is most important for long-term surveillance?",
+    "options": [
+      "A. Fecal calprotectin every 3 months",
+      "B. Colonoscopy with biopsies every 1-2 years after 8-10 years of disease",
+      "C. Upper GI endoscopy annually",
+      "D. Abdominal CT scan every year"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Patients with ulcerative colitis have an increased risk of colorectal cancer proportional to disease duration and extent. Surveillance colonoscopy with biopsies is recommended every 1-2 years after 8-10 years of disease.",
+      "distractors": [
+        "A. Fecal calprotectin is useful for monitoring disease activity but does not screen for dysplasia.",
+        "This is the correct answer. Patients with ulcerative colitis have an increased risk of colorectal cancer proportional to disease...",
+        "B. Upper GI endoscopy is not routinely indicated unless there are upper GI symptoms.",
+        "C. CT scan exposes the patient to unnecessary radiation and is not used for dysplasia surveillance."
+      ],
+      "misconception": "Students may choose fecal calprotectin because it is trendy, but colonoscopy is the surveillance standard for cancer risk.",
+      "takeaway": "UC surveillance: colonoscopy with biopsies every 1-2 years after 8-10 years of disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "inflammatory_bowel_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 338. Inflammatory Bowel Disease",
+      "tags": [
+        "ulcerative-colitis",
+        "surveillance",
+        "colonoscopy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_025",
+    "question": "A 3-year-old with chronic diarrhea, failure to thrive, and abdominal distension has a tissue transglutaminase (tTG) IgA level of 120 U/mL (normal <10). What is the next best step to confirm celiac disease?",
+    "options": [
+      "A. Start a strict gluten-free diet immediately",
+      "B. Perform an upper GI endoscopy with duodenal biopsies",
+      "C. Check HLA-DQ2/DQ8 status",
+      "D. Order anti-gliadin antibody testing"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "A markedly elevated tTG IgA in a symptomatic child has high positive predictive value, but the diagnosis of celiac disease still requires duodenal biopsies showing villous atrophy, crypt hyperplasia, and increased intraepithelial lymphocytes.",
+      "distractors": [
+        "A. Starting a gluten-free diet before biopsy can mask histology and make future confirmation difficult.",
+        "This is the correct answer. A markedly elevated tTG IgA in a symptomatic child has high positive predictive value, but the diagn...",
+        "B. HLA testing is useful to rule out celiac disease (high negative predictive value) but is not confirmatory.",
+        "C. Anti-gliadin antibodies are outdated and less specific than tTG IgA."
+      ],
+      "misconception": "Students often start a gluten-free diet based on serology alone, but biopsy remains the gold standard for diagnosis.",
+      "takeaway": "High tTG IgA + symptoms = confirm with duodenal biopsy before starting gluten-free diet.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "celiac_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 340. Celiac Disease",
+      "tags": [
+        "celiac-disease",
+        "tTG-IgA",
+        "biopsy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_026",
+    "question": "Which serological marker has the highest sensitivity and specificity for diagnosing celiac disease in children older than 2 years?",
+    "options": [
+      "A. Anti-gliadin antibody IgG",
+      "B. Tissue transglutaminase (tTG) IgA",
+      "C. Anti-endomysial antibody IgA",
+      "D. Deamidated gliadin peptide (DGP) IgG"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Tissue transglutaminase (tTG) IgA is the recommended first-line serological test for celiac disease due to its high sensitivity and specificity, ease of performance, and lower cost compared to endomysial antibody.",
+      "distractors": [
+        "A. Anti-gliadin antibodies have lower sensitivity and specificity and are no longer recommended as first-line tests.",
+        "This is the correct answer. Tissue transglutaminase (tTG) IgA is the recommended first-line serological test for celiac disease ...",
+        "B. Anti-endomysial antibody is highly specific but operator-dependent and more expensive; it is a confirmatory test.",
+        "C. DGP IgG is useful in IgA-deficient patients but is not the primary screening test."
+      ],
+      "misconception": "Students may choose endomysial antibody because of its specificity, but tTG IgA is the preferred initial test.",
+      "takeaway": "tTG IgA is the first-line screening test of choice for celiac disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "celiac_disease",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 340. Celiac Disease",
+      "tags": [
+        "celiac-disease",
+        "tTG-IgA",
+        "serology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_027",
+    "question": "A child with Crohn disease fails to respond to corticosteroids and mesalamine. Which biologic agent is most appropriate as the next step?",
+    "options": [
+      "A. Infliximab",
+      "B. Vedolizumab",
+      "C. Ustekinumab",
+      "D. Adalimumab"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Infliximab (anti-TNF-alpha) is the first-line biologic for moderate-to-severe Crohn disease in children that is refractory to conventional therapy. It induces and maintains remission and is effective for fistulizing disease.",
+      "distractors": [
+        "This is the correct answer. Infliximab (anti-TNF-alpha) is the first-line biologic for moderate-to-severe Crohn disease in child...",
+        "A. Vedolizumab is an integrin inhibitor used in adults or after anti-TNF failure.",
+        "B. Ustekinumab is used for anti-TNF refractory disease.",
+        "C. Adalimumab is also an anti-TNF but is typically used after infliximab failure or in patients who prefer subcutaneous administration."
+      ],
+      "misconception": "Students may choose adalimumab because it is subcutaneous, but infliximab is the standard first anti-TNF in pediatric Crohn disease.",
+      "takeaway": "First-line biologic for refractory pediatric Crohn disease = infliximab.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "inflammatory_bowel_disease",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 338. Inflammatory Bowel Disease",
+      "tags": [
+        "crohn-disease",
+        "infliximab",
+        "biologic"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_028",
+    "question": "Which complication of GERD in infants is the strongest indication for performing a Nissen fundoplication?",
+    "options": [
+      "A. Frequent regurgitation despite thickened feeds",
+      "B. Recurrent aspiration pneumonia and chronic lung disease",
+      "C. Fussiness during feeds",
+      "D. Sandifer syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Recurrent aspiration pneumonia and chronic lung disease are life-threatening complications of GERD that constitute strong indications for surgical fundoplication when medical therapy fails.",
+      "distractors": [
+        "A. Frequent regurgitation alone is managed conservatively; surgery is not indicated without complications.",
+        "This is the correct answer. Recurrent aspiration pneumonia and chronic lung disease are life-threatening complications of GERD t...",
+        "B. Fussiness during feeds is a symptom that often improves with conservative measures and acid suppression.",
+        "C. Sandifer syndrome (posturing) responds to medical management and is not an absolute surgical indication."
+      ],
+      "misconception": "Students may choose Sandifer syndrome because it sounds dramatic, but aspiration is the most serious complication.",
+      "takeaway": "Recurrent aspiration pneumonia from GERD = strongest indication for Nissen fundoplication.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "gerd",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 334. Gastroesophageal Reflux",
+      "tags": [
+        "GERD",
+        "fundoplication",
+        "aspiration"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_029",
+    "question": "A 14-year-old with ulcerative colitis presents with severe bloody diarrhea (>8 stools/day), fever 39 C, tachycardia, and anemia (Hb 7.2 g/dL). The CRP is 45 mg/L. What is the most appropriate immediate management?",
+    "options": [
+      "A. Start oral mesalamine and outpatient follow-up",
+      "B. Hospitalize, IV corticosteroids, and surgical consultation",
+      "C. Start oral prednisolone 1 mg/kg and azathioprine",
+      "D. Initiate anti-TNF therapy as an outpatient"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This patient has severe ulcerative colitis (Truelove-Witts criteria: >6 bloody stools/day, fever, tachycardia, anemia, elevated CRP). This requires hospitalization, IV fluids, IV corticosteroids, and early surgical consultation in case of failure or toxic megacolon.",
+      "distractors": [
+        "A. Oral mesalamine is for mild disease; severe UC requires hospitalization and IV steroids.",
+        "This is the correct answer. This patient has severe ulcerative colitis (Truelove-Witts criteria: >6 bloody stools/day, fever, ta...",
+        "B. Oral prednisolone and azathioprine are inappropriate for severe acute flares.",
+        "C. Outpatient anti-TNF is unsafe in severe acute colitis due to perforation risk."
+      ],
+      "misconception": "Students may under-treat severe UC by prescribing oral medications, not recognizing the need for hospitalization.",
+      "takeaway": "Severe UC (Truelove-Witts) = hospitalize + IV steroids + surgical backup.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "inflammatory_bowel_disease",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 338. Inflammatory Bowel Disease",
+      "tags": [
+        "ulcerative-colitis",
+        "severe-colitis",
+        "truelove-witts"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_030",
+    "question": "A child with celiac disease has been strictly gluten-free for 6 months but continues to have elevated tTG IgA antibodies and persistent symptoms. Which is the most common cause of non-responsive celiac disease?",
+    "options": [
+      "A. Refractory celiac disease type II",
+      "B. Ongoing gluten ingestion",
+      "C. Associated microscopic colitis",
+      "D. T-cell lymphoma"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The most common cause of non-responsive celiac disease in children is ongoing, often inadvertent, gluten ingestion. Dietary review with a dietitian should be the first step before investigating rarer causes.",
+      "distractors": [
+        "A. Refractory celiac disease is rare in children and is a diagnosis of exclusion after ruling out gluten exposure.",
+        "This is the correct answer. The most common cause of non-responsive celiac disease in children is ongoing, often inadvertent, gl...",
+        "B. Microscopic colitis can coexist but is not the most common cause of persistent symptoms.",
+        "C. Enteropathy-associated T-cell lymphoma is extremely rare in children and presents with severe malabsorption and weight loss."
+      ],
+      "misconception": "Students may jump to rare causes like refractory celiac disease or lymphoma, forgetting that gluten contamination is the most common culprit.",
+      "takeaway": "Non-responsive celiac disease in children: #1 cause = ongoing gluten ingestion.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "celiac_disease",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 340. Celiac Disease",
+      "tags": [
+        "celiac-disease",
+        "non-responsive",
+        "gluten-free-diet"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_031",
+    "question": "A 9-month-old infant is brought with acute watery diarrhea for 2 days and moderate dehydration (skin pinch returns in 2 seconds, restless, irritable). According to WHO guidelines, which plan should be implemented?",
+    "options": [
+      "A. Plan A: Increased fluids at home",
+      "B. Plan B: ORS 75 mL/kg over 4 hours in the clinic",
+      "C. Plan C: Rapid IV fluids with Ringer lactate",
+      "D. Plan B: ORS 50 mL/kg over 2 hours"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Moderate dehydration (irritable, skin pinch returns in 2 seconds, thirsty) is managed with WHO Plan B: ORS 75 mL/kg over 4 hours in a health facility, with reassessment.",
+      "distractors": [
+        "A. Plan A is for no or mild dehydration, managed at home with extra fluids and continued feeding.",
+        "This is the correct answer. Moderate dehydration (irritable, skin pinch returns in 2 seconds, thirsty) is managed with WHO Plan ...",
+        "B. Plan C is for severe dehydration (lethargy, sunken eyes, skin pinch >2 seconds, unable to drink) requiring IV/IO fluids.",
+        "C. Plan B uses 75 mL/kg over 4 hours; 50 mL/kg over 2 hours is not the standard WHO regimen."
+      ],
+      "misconception": "Students often confuse Plan B dose and duration, or send moderate dehydration home with Plan A.",
+      "takeaway": "Moderate dehydration = WHO Plan B: ORS 75 mL/kg over 4 hours in clinic.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "diarrhea",
+        "ORS",
+        "WHO-plan-B",
+        "moderate-dehydration"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_032",
+    "question": "According to the WHO low-osmolarity ORS formula, what is the sodium concentration (in mmol/L)?",
+    "options": [
+      "A. 45 mmol/L",
+      "B. 75 mmol/L",
+      "C. 90 mmol/L",
+      "D. 60 mmol/L"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "WHO low-osmolarity ORS contains 75 mmol/L of sodium (and 75 mmol/L of glucose), with a total osmolarity of 245 mOsm/L.",
+      "distractors": [
+        "A. 45 mmol/L sodium is found in some maintenance solutions but not in WHO ORS.",
+        "This is the correct answer. WHO low-osmolarity ORS contains 75 mmol/L of sodium (and 75 mmol/L of glucose), with a total osmolar...",
+        "B. 90 mmol/L was the sodium content of the older standard WHO ORS before the low-osmolarity reformulation.",
+        "C. 60 mmol/L is not the WHO ORS sodium concentration."
+      ],
+      "misconception": "Students often remember the old standard ORS (90 mmol/L sodium) and do not recall the updated low-osmolarity formula.",
+      "takeaway": "WHO low-osmolarity ORS: Na 75 mmol/L, glucose 75 mmol/L, total osmolarity 245 mOsm/L.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "ORS",
+        "WHO",
+        "sodium",
+        "osmolarity"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_033",
+    "question": "A 10-month-old with acute diarrhea is being managed at home. According to WHO and IAP guidelines, what is the correct zinc supplementation regimen?",
+    "options": [
+      "A. Zinc 10 mg once daily for 5 days",
+      "B. Zinc 20 mg once daily for 10-14 days",
+      "C. Zinc 20 mg twice daily for 7 days",
+      "D. Zinc 10 mg twice daily for 14 days"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "For infants and children >6 months with acute diarrhea, the recommended zinc dose is 20 mg once daily for 10-14 days. For infants <6 months, it is 10 mg once daily for 10-14 days.",
+      "distractors": [
+        "A. 10 mg for 5 days is an underdosed and shortened regimen.",
+        "This is the correct answer. For infants and children >6 months with acute diarrhea, the recommended zinc dose is 20 mg once dail...",
+        "B. 20 mg twice daily is excessive and not recommended.",
+        "C. 10 mg twice daily is not the standard; the dose is weight/age-based once daily."
+      ],
+      "misconception": "Students often underdose or shorten the duration, not appreciating that 10-14 days is essential for reducing recurrence.",
+      "takeaway": "Zinc in diarrhea: >6 months = 20 mg OD; <6 months = 10 mg OD; both for 10-14 days.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "zinc",
+        "diarrhea",
+        "IAP",
+        "WHO"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_034",
+    "question": "A 2-year-old with severe acute watery diarrhea is lethargic, has sunken eyes, a skin pinch that returns in 3 seconds, and is unable to drink. What is the first-line fluid management according to WHO Plan C?",
+    "options": [
+      "A. ORS 100 mL/kg over 4 hours via nasogastric tube",
+      "B. Ringer lactate or normal saline 30 mL/kg IV rapidly, followed by 70 mL/kg over 5 hours",
+      "C. 5% dextrose in normal saline at maintenance rate",
+      "D. ORS 75 mL/kg over 2 hours"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Severe dehydration (Plan C) requires immediate IV resuscitation with Ringer lactate or normal saline: 30 mL/kg rapidly over 30 minutes (repeat if shock persists), then 70 mL/kg over the next 5 hours.",
+      "distractors": [
+        "A. NG ORS is an alternative only if IV access is impossible, not first-line.",
+        "This is the correct answer. Severe dehydration (Plan C) requires immediate IV resuscitation with Ringer lactate or normal saline...",
+        "B. 5% dextrose in normal saline is hypotonic and inappropriate for resuscitation; it can cause hyponatremia.",
+        "C. ORS 75 mL/kg over 2 hours is not a WHO plan and is unsafe in severe dehydration with altered sensorium."
+      ],
+      "misconception": "Students may choose ORS via NG tube, not recognizing that severe dehydration with lethargy requires IV fluids.",
+      "takeaway": "Severe dehydration (Plan C): IV Ringer lactate 30 mL/kg rapidly, then 70 mL/kg over 5 hours.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "severe-dehydration",
+        "plan-C",
+        "IV-fluids",
+        "ringer-lactate"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_035",
+    "question": "During the management of acute diarrhea, which of the following is an absolute contraindication to giving ORS?",
+    "options": [
+      "A. Vomiting",
+      "B. Moderate dehydration",
+      "C. Severe dehydration with shock and altered sensorium",
+      "D. Age less than 2 months"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "ORS is contraindicated in severe dehydration with shock or altered sensorium because the child cannot drink adequately and requires IV resuscitation to restore circulating volume rapidly.",
+      "distractors": [
+        "A. Vomiting is not a contraindication; ORS can be given in small, frequent sips or via NG tube.",
+        "B. Moderate dehydration is the classic indication for ORS (Plan B).",
+        "This is the correct answer. ORS is contraindicated in severe dehydration with shock or altered sensorium because the child canno...",
+        "C. ORS is safe even in young infants; the dose and monitoring differ but it is not contraindicated."
+      ],
+      "misconception": "Students may think vomiting is a contraindication, but shock/altered sensorium is the true contraindication.",
+      "takeaway": "ORS is contraindicated only in severe dehydration with shock or altered consciousness.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "ORS",
+        "contraindication",
+        "severe-dehydration"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_036",
+    "question": "A 6-month-old with acute watery diarrhea has the following serum electrolytes: Na 152 mEq/L, K 3.2 mEq/L, Cl 110 mEq/L. Which type of dehydration is most likely present?",
+    "options": [
+      "A. Isotonic dehydration",
+      "B. Hypotonic dehydration",
+      "C. Hypertonic dehydration",
+      "D. Normonatremic dehydration"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Serum sodium >150 mEq/L defines hypertonic (hypernatremic) dehydration. This is often seen when water loss exceeds sodium loss, such as with high-solute feeds or inadequate breastfeeding.",
+      "distractors": [
+        "A. Isotonic dehydration has serum sodium 130-150 mEq/L.",
+        "B. Hypotonic dehydration has serum sodium <130 mEq/L.",
+        "This is the correct answer. Serum sodium >150 mEq/L defines hypertonic (hypernatremic) dehydration. This is often seen when wate...",
+        "C. Normonatremic is synonymous with isotonic dehydration (Na 130-150)."
+      ],
+      "misconception": "Students may misclassify dehydration because they focus only on clinical signs without looking at serum sodium.",
+      "takeaway": "Na >150 mEq/L = hypertonic dehydration; Na <130 = hypotonic; 130-150 = isotonic.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "dehydration",
+        "hypernatremic",
+        "electrolytes"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_037",
+    "question": "Which of the following correctly describes the glucose-to-sodium ratio in WHO low-osmolarity ORS, and why is it important?",
+    "options": [
+      "A. 1:1 ratio; facilitates co-transport of sodium and water across the intestinal mucosa",
+      "B. 2:1 ratio; prevents osmotic diarrhea from excess glucose",
+      "C. 1:2 ratio; maintains isotonicity of the solution",
+      "D. 3:1 ratio; maximizes caloric supplementation"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "WHO low-osmolarity ORS has a 1:1 glucose-to-sodium molar ratio (75 mmol/L each). This optimal ratio allows coupled sodium-glucose co-transport (SGLT1) across the intestinal brush border, driving water absorption even in secretory diarrhea.",
+      "distractors": [
+        "This is the correct answer. WHO low-osmolarity ORS has a 1:1 glucose-to-sodium molar ratio (75 mmol/L each). This optimal ratio ...",
+        "A. A 2:1 ratio would actually impair sodium absorption and could cause osmotic diarrhea.",
+        "B. A 1:2 ratio would provide insufficient glucose to drive sodium co-transport.",
+        "C. A 3:1 ratio is too high in glucose and would cause osmotic worsening of diarrhea."
+      ],
+      "misconception": "Students may think the ratio is 2:1 or arbitrary, not understanding the physiological co-transport mechanism.",
+      "takeaway": "WHO ORS glucose:Na = 1:1 (75:75 mmol/L) for optimal SGLT1-mediated absorption.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "ORS",
+        "glucose-sodium-cotransport",
+        "SGLT1"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_038",
+    "question": "A 1-year-old with acute diarrhea is given ORS at home under Plan A. The mother asks when she should return to the health facility. Which of the following is NOT a danger sign requiring immediate return?",
+    "options": [
+      "A. Blood in the stool",
+      "B. Drinking poorly or unable to drink",
+      "C. Persistently watery stools despite ORS",
+      "D. Fever with lethargy"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Persistently watery stools are expected in acute diarrhea and do not by themselves indicate danger if the child is drinking, passing urine, and not showing signs of dehydration. Danger signs include blood in stool, inability to drink, lethargy, persistent vomiting, and worsening dehydration.",
+      "distractors": [
+        "A. Blood in stool suggests dysentery and requires evaluation.",
+        "B. Drinking poorly or inability to drink indicates worsening dehydration and possible need for IV fluids.",
+        "This is the correct answer. Persistently watery stools are expected in acute diarrhea and do not by themselves indicate danger i...",
+        "C. Fever with lethargy suggests sepsis or severe infection."
+      ],
+      "misconception": "Mothers and students often panic about watery stools alone, not understanding that hydration status is the key danger sign.",
+      "takeaway": "Plan A danger signs: blood in stool, unable to drink, lethargy, worsening dehydration; watery stools alone are expected.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "diarrhea",
+        "plan-A",
+        "danger-signs"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_039",
+    "question": "A 5-month-old infant with acute diarrhea and some dehydration is being rehydrated with ORS. When should the mother resume feeding?",
+    "options": [
+      "A. Only after diarrhea completely stops",
+      "B. After 4 hours of ORS, if vomiting has stopped",
+      "C. Immediately after initiating ORS, with continued breastfeeding",
+      "D. After 24 hours of clear fluids only"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Feeding should never be stopped in acute diarrhea. Breastfeeding should continue throughout rehydration, and age-appropriate feeding should resume as soon as the child is rehydrated (usually after 4 hours of ORS under Plan B). Early feeding promotes gut recovery and reduces malnutrition.",
+      "distractors": [
+        "A. Waiting until diarrhea stops prolongs illness and causes malnutrition.",
+        "B. While feeding often resumes after 4 hours of ORS, breastfeeding should never be interrupted.",
+        "This is the correct answer. Feeding should never be stopped in acute diarrhea. Breastfeeding should continue throughout rehydrat...",
+        "C. Clear fluids only for 24 hours is an outdated practice (BRAT diet myth) that worsens outcomes."
+      ],
+      "misconception": "Students often think feeding should be withheld during diarrhea, not recognizing that early refeeding is essential.",
+      "takeaway": "Never stop feeds in diarrhea; continue breastfeeding and resume age-appropriate diet early.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "diarrhea",
+        "feeding",
+        "breastfeeding",
+        "ORS"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_040",
+    "question": "A child with acute diarrhea is treated with ORS and zinc. The mother asks if antimotility agents like loperamide can be given. What is the correct advice?",
+    "options": [
+      "A. Loperamide can be given to reduce stool frequency in children >2 years",
+      "B. Loperamide is safe in all children if the dose is reduced",
+      "C. Antimotility agents are contraindicated in children <5 years due to risk of ileus and sedation",
+      "D. Loperamide should be given only if the stool is watery and not bloody"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Antimotility agents (loperamide, diphenoxylate) are contraindicated in young children with acute diarrhea because they can cause ileus, sedation, and prolong the course of infection, especially in invasive/dysenteric diarrhea.",
+      "distractors": [
+        "A. Loperamide is not recommended even in children >2 years with acute infectious diarrhea.",
+        "B. Reducing the dose does not eliminate the risks of ileus and central nervous system effects.",
+        "This is the correct answer. Antimotility agents (loperamide, diphenoxylate) are contraindicated in young children with acute dia...",
+        "C. Bloody diarrhea is an additional contraindication, but antimotility agents are contraindicated regardless of stool appearance in young children."
+      ],
+      "misconception": "Students may think loperamide is safe in older children or at lower doses; it is generally avoided in pediatric acute diarrhea.",
+      "takeaway": "Antimotility agents are contraindicated in children <5 years with acute diarrhea.",
+      "relatedTopic": "diarrhea"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "diarrhea_dehydration",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 341. Diarrhea and Dehydration",
+      "tags": [
+        "diarrhea",
+        "loperamide",
+        "contraindicated"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_041",
+    "question": "A 7-year-old child presents with jaundice, dark urine, and pale stools. Serology shows anti-HAV IgM positive, anti-HAV IgG negative. What is the most likely clinical course?",
+    "options": [
+      "A. Chronic carrier state with risk of cirrhosis",
+      "B. Self-limited acute hepatitis with lifelong immunity thereafter",
+      "C. Fulminant hepatic failure in 50% of cases",
+      "D. Progression to hepatocellular carcinoma within 10 years"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Anti-HAV IgM indicates acute hepatitis A infection. Hepatitis A never causes chronic infection or carrier state. It is usually self-limited, and recovery confers lifelong immunity (anti-HAV IgG develops).",
+      "distractors": [
+        "A. Hepatitis A does not have a chronic carrier state; this is a feature of hepatitis B, C, and D.",
+        "This is the correct answer. Anti-HAV IgM indicates acute hepatitis A infection. Hepatitis A never causes chronic infection or ca...",
+        "B. Fulminant hepatic failure occurs in <1% of hepatitis A cases, not 50%.",
+        "C. Hepatitis A does not cause hepatocellular carcinoma because it does not lead to chronic hepatitis."
+      ],
+      "misconception": "Students may confuse hepatitis A with hepatitis B/C, thinking all hepatitis viruses can become chronic.",
+      "takeaway": "Hepatitis A = acute, self-limited, no chronic state, lifelong immunity after recovery.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "viral_hepatitis",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 355. Viral Hepatitis",
+      "tags": [
+        "hepatitis-A",
+        "IgM",
+        "acute-hepatitis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_042",
+    "question": "A newborn is born to an HBsAg-positive mother. Which is the most effective intervention to prevent mother-to-child transmission?",
+    "options": [
+      "A. Hepatitis B vaccine alone within 24 hours of birth",
+      "B. Hepatitis B immunoglobulin (HBIG) alone within 12 hours",
+      "C. Hepatitis B vaccine + HBIG within 12 hours of birth, followed by completion of vaccine series",
+      "D. Maternal antiviral therapy with tenofovir during the third trimester only"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The most effective strategy for preventing perinatal HBV transmission is the combination of hepatitis B vaccine and HBIG given within 12 hours of birth, followed by completion of the vaccine series. This reduces transmission risk from ~90% to <5%.",
+      "distractors": [
+        "A. Vaccine alone is less effective than the combined regimen for perinatal prophylaxis.",
+        "B. HBIG alone provides temporary passive immunity but does not induce active immunity.",
+        "This is the correct answer. The most effective strategy for preventing perinatal HBV transmission is the combination of hepatiti...",
+        "C. Maternal tenofovir is an adjunct for high viral load mothers but is not sufficient alone without infant prophylaxis."
+      ],
+      "misconception": "Students may think vaccine alone is sufficient, but combined vaccine + HBIG is standard for HBsAg-positive mothers.",
+      "takeaway": "HBV perinatal prophylaxis = vaccine + HBIG within 12 hours + complete vaccine series.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "viral_hepatitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 355. Viral Hepatitis",
+      "tags": [
+        "hepatitis-B",
+        "perinatal",
+        "HBIG",
+        "vaccine"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_043",
+    "question": "An adolescent with acute liver failure presents with confusion, asterixis, and a declining Glasgow Coma Scale. Which grade of hepatic encephalopathy is most consistent with these findings?",
+    "options": [
+      "A. Grade I",
+      "B. Grade II",
+      "C. Grade III",
+      "D. Grade IV"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Grade III hepatic encephalopathy is characterized by somnolence but arousable, confusion, asterixis, and abnormal EEG. Grade IV is coma (unresponsive).",
+      "distractors": [
+        "A. Grade I has mild confusion and inverted sleep rhythm but no asterixis or significant consciousness change.",
+        "B. Grade II has lethargy, disorientation, and asterixis, but the patient is still conversant.",
+        "This is the correct answer. Grade III hepatic encephalopathy is characterized by somnolence but arousable, confusion, asterixis,...",
+        "C. Grade IV is coma; the patient is unarousable."
+      ],
+      "misconception": "Students often confuse Grade III and IV; the presence of arousability distinguishes Grade III from coma.",
+      "takeaway": "Grade III HE = somnolent but arousable, confused, asterixis; Grade IV = coma.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "hepatic_encephalopathy",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "hepatic-encephalopathy",
+        "grades",
+        "asterixis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_044",
+    "question": "A 15-year-old with acute liver failure (INR 3.5, ammonia 180 micromol/L) develops cerebral edema. Which of the following is the most important immediate intervention to reduce intracranial pressure?",
+    "options": [
+      "A. Intravenous mannitol 0.5-1 g/kg",
+      "B. Hypertonic saline to maintain serum sodium 145-155 mEq/L",
+      "C. Hyperventilation to PaCO2 25-30 mmHg",
+      "D. Lumbar puncture to drain CSF"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Mannitol is the first-line osmotic agent for elevated intracranial pressure in acute liver failure with cerebral edema. It should be given as a bolus of 0.5-1 g/kg if serum osmolality is <320 mOsm/kg.",
+      "distractors": [
+        "This is the correct answer. Mannitol is the first-line osmotic agent for elevated intracranial pressure in acute liver failure w...",
+        "A. Hypertonic saline is used as an adjunct but mannitol remains the primary agent.",
+        "B. Hyperventilation causes cerebral vasoconstriction and is reserved for acute herniation as a bridge.",
+        "C. Lumbar puncture is contraindicated in suspected cerebral edema due to risk of tonsillar herniation."
+      ],
+      "misconception": "Students may choose hyperventilation because it is used in traumatic brain injury, but mannitol is the standard for ALF-related cerebral edema.",
+      "takeaway": "Cerebral edema in ALF: first-line = mannitol 0.5-1 g/kg bolus.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "acute_liver_failure",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "acute-liver-failure",
+        "cerebral-edema",
+        "mannitol"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_045",
+    "question": "Which of the following is the most common cause of acute liver failure in children in developing countries like India?",
+    "options": [
+      "A. Acetaminophen overdose",
+      "B. Hepatitis A and E viruses",
+      "C. Wilson disease",
+      "D. Autoimmune hepatitis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In developing countries, viral hepatitis (particularly hepatitis A and E) is the most common cause of acute liver failure in children, related to fecal-oral transmission and poor sanitation.",
+      "distractors": [
+        "A. Acetaminophen overdose is the leading cause in developed Western countries but is less common in India.",
+        "This is the correct answer. In developing countries, viral hepatitis (particularly hepatitis A and E) is the most common cause o...",
+        "B. Wilson disease can present as ALF but is not the most common cause.",
+        "C. Autoimmune hepatitis is an important cause but is less common than viral hepatitis in developing regions."
+      ],
+      "misconception": "Students trained on Western literature may choose acetaminophen, but viral hepatitis dominates in India.",
+      "takeaway": "Most common cause of pediatric ALF in India = hepatitis A and E viruses.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "acute_liver_failure",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "acute-liver-failure",
+        "hepatitis-A",
+        "hepatitis-E",
+        "India"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_046",
+    "question": "A 12-year-old with Wilson disease presents with acute hemolysis, Coombs-negative anemia, and acute liver failure. Which biochemical finding is most characteristic?",
+    "options": [
+      "A. Elevated serum ceruloplasmin",
+      "B. Low serum alkaline phosphatase",
+      "C. Normal serum copper",
+      "D. Elevated alpha-fetoprotein"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In Wilsonian acute liver failure, serum alkaline phosphatase is disproportionately low relative to bilirubin, and the alkaline phosphatase-to-total bilirubin ratio is <4. This reflects the underlying copper toxicity impairing hepatocellular function.",
+      "distractors": [
+        "A. Ceruloplasmin is typically low in Wilson disease, not elevated.",
+        "This is the correct answer. In Wilsonian acute liver failure, serum alkaline phosphatase is disproportionately low relative to b...",
+        "B. Serum copper may be normal or low in ALF because it is released from damaged hepatocytes and excreted.",
+        "C. Alpha-fetoprotein is a tumor marker for hepatocellular carcinoma and is not characteristic of Wilson disease."
+      ],
+      "misconception": "Students may look for high serum copper, but in ALF copper is often normal; low alkaline phosphatase is the characteristic clue.",
+      "takeaway": "Wilson disease ALF: low alkaline phosphatase, Coombs-negative hemolysis, low ceruloplasmin.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "acute_liver_failure",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "wilson-disease",
+        "acute-liver-failure",
+        "alkaline-phosphatase"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_047",
+    "question": "Which of the following is the most sensitive test to detect chronic hepatitis B infection in a child?",
+    "options": [
+      "A. HBsAg",
+      "B. Anti-HBc IgM",
+      "C. HBV DNA (viral load)",
+      "D. Anti-HBs"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "HBV DNA (viral load) is the most sensitive marker for detecting active hepatitis B replication and is essential for diagnosing chronic infection, guiding treatment, and monitoring response.",
+      "distractors": [
+        "A. HBsAg indicates infection but can be cleared or mutated; it is less sensitive than HBV DNA for low-level replication.",
+        "B. Anti-HBc IgM indicates acute infection, not chronic infection.",
+        "This is the correct answer. HBV DNA (viral load) is the most sensitive marker for detecting active hepatitis B replication and i...",
+        "C. Anti-HBs indicates immunity from vaccination or recovery, not active infection."
+      ],
+      "misconception": "Students often rely on HBsAg alone, but HBV DNA is the most sensitive marker of active replication.",
+      "takeaway": "HBV DNA is the most sensitive marker for active HBV replication and chronic infection.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "viral_hepatitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 355. Viral Hepatitis",
+      "tags": [
+        "hepatitis-B",
+        "HBV-DNA",
+        "chronic-hepatitis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_048",
+    "question": "A child with chronic hepatitis B and active replication (HBeAg positive, HBV DNA >20,000 IU/mL, elevated ALT) is being considered for treatment. Which is the preferred first-line oral antiviral agent in children?",
+    "options": [
+      "A. Lamivudine",
+      "B. Entecavir",
+      "C. Tenofovir disoproxil fumarate",
+      "D. Interferon-alpha"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Entecavir is a potent nucleoside analogue with a high barrier to resistance and is approved as first-line oral therapy for chronic hepatitis B in children.",
+      "distractors": [
+        "A. Lamivudine has a low barrier to resistance and is no longer recommended as first-line monotherapy.",
+        "This is the correct answer. Entecavir is a potent nucleoside analogue with a high barrier to resistance and is approved as first...",
+        "B. Tenofovir is approved for adolescents (>=12 years) but entecavir is preferred for younger children.",
+        "C. Interferon-alpha is an injectable immunomodulator used in select cases but is not the first-line oral agent."
+      ],
+      "misconception": "Students may choose lamivudine because it is older and cheaper, but entecavir is the current first-line standard.",
+      "takeaway": "First-line oral antiviral for pediatric chronic HBV = entecavir (or tenofovir in adolescents).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "viral_hepatitis",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 355. Viral Hepatitis",
+      "tags": [
+        "hepatitis-B",
+        "entecavir",
+        "antiviral"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_049",
+    "question": "Which of the following clinical signs is most specific for hepatic encephalopathy in a child with acute liver failure?",
+    "options": [
+      "A. Jaundice",
+      "B. Asterixis",
+      "C. Hepatomegaly",
+      "D. Splenomegaly"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Asterixis (flapping tremor) is a specific sign of hepatic encephalopathy resulting from impaired neuromuscular coordination due to elevated ammonia and other neurotoxins.",
+      "distractors": [
+        "A. Jaundice indicates liver dysfunction but is not specific to encephalopathy.",
+        "This is the correct answer. Asterixis (flapping tremor) is a specific sign of hepatic encephalopathy resulting from impaired neu...",
+        "B. Hepatomegaly is a sign of liver disease but does not indicate encephalopathy.",
+        "C. Splenomegaly suggests portal hypertension, not encephalopathy."
+      ],
+      "misconception": "Students may confuse jaundice as a sign of encephalopathy; asterixis is the specific neuromuscular sign.",
+      "takeaway": "Asterixis is the classic specific physical sign of hepatic encephalopathy.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "hepatic_encephalopathy",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "hepatic-encephalopathy",
+        "asterixis",
+        "neurology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_050",
+    "question": "A 6-year-old with acute liver failure develops progressive coagulopathy (INR 4.5), encephalopathy grade III, and anuria. Which criterion makes liver transplantation most urgently indicated?",
+    "options": [
+      "A. Peak bilirubin >10 mg/dL",
+      "B. INR >4 and grade III-IV encephalopathy not improving with medical therapy",
+      "C. Elevated serum ammonia >200 micromol/L",
+      "D. Hepatomegaly >5 cm below costal margin"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Refractory coagulopathy (INR >4) combined with worsening encephalopathy (grade III-IV) despite maximal medical therapy is a clear indication for urgent liver transplantation in acute liver failure.",
+      "distractors": [
+        "A. Bilirubin alone, even if >10 mg/dL, does not determine transplant urgency if other markers improve.",
+        "This is the correct answer. Refractory coagulopathy (INR >4) combined with worsening encephalopathy (grade III-IV) despite maxim...",
+        "B. Ammonia correlates with encephalopathy risk but is not a standalone transplant criterion.",
+        "C. Hepatomegaly is not a criterion for transplantation."
+      ],
+      "misconception": "Students may focus on ammonia levels, but the King's College or Clichy criteria use INR and encephalopathy grade as the key transplant determinants.",
+      "takeaway": "ALF transplant criteria: INR >4 + grade III-IV encephalopathy refractory to therapy = urgent transplant.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "acute_liver_failure",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 356. Acute Liver Failure",
+      "tags": [
+        "acute-liver-failure",
+        "liver-transplant",
+        "INR",
+        "encephalopathy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_051",
+    "question": "A 10-year-old with chronic liver disease presents with hematemesis. Endoscopy reveals large esophageal varices with red whale markings and active bleeding. What is the most appropriate immediate endoscopic therapy?",
+    "options": [
+      "A. Sclerotherapy with sodium tetradecyl sulfate",
+      "B. Endoscopic variceal band ligation (EVL)",
+      "C. Injection of cyanoacrylate glue",
+      "D. Argon plasma coagulation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Endoscopic variceal band ligation (EVL) is the first-line endoscopic treatment for acute esophageal variceal bleeding in children. It has lower rebleeding rates and fewer complications than sclerotherapy.",
+      "distractors": [
+        "A. Sclerotherapy is effective but has a higher risk of esophageal stricture and ulceration; it is second-line to EVL.",
+        "This is the correct answer. Endoscopic variceal band ligation (EVL) is the first-line endoscopic treatment for acute esophageal ...",
+        "B. Cyanoacrylate glue is used for gastric varices, not esophageal varices.",
+        "C. Argon plasma coagulation is used for vascular ectasias and mucosal lesions, not variceal bleeding."
+      ],
+      "misconception": "Students may choose sclerotherapy because it is older, but EVL is the current first-line endoscopic therapy.",
+      "takeaway": "Acute esophageal variceal bleed: first-line endoscopic therapy = EVL (band ligation).",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "variceal-bleed",
+        "EVL",
+        "endoscopy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_052",
+    "question": "After controlling an acute variceal bleed with EVL in a child with portal hypertension, which pharmacological agent is most appropriate for secondary prophylaxis?",
+    "options": [
+      "A. Isosorbide mononitrate",
+      "B. Propranolol",
+      "C. Nifedipine",
+      "D. Atropine"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Non-selective beta-blockers (propranolol or nadolol) reduce portal pressure by decreasing cardiac output and splanchnic vasoconstriction. They are the standard for secondary prophylaxis after a variceal bleed.",
+      "distractors": [
+        "A. Isosorbide mononitrate is a vasodilator that can cause hypotension and is not first-line in children.",
+        "This is the correct answer. Non-selective beta-blockers (propranolol or nadolol) reduce portal pressure by decreasing cardiac ou...",
+        "B. Nifedipine is a calcium channel blocker with no proven role in portal hypertension prophylaxis.",
+        "C. Atropine increases heart rate and has no role in variceal prophylaxis."
+      ],
+      "misconception": "Students may confuse nitrates with beta-blockers; beta-blockers are the standard for portal pressure reduction.",
+      "takeaway": "Secondary prophylaxis after variceal bleed = non-selective beta-blocker (propranolol) + repeat EVL.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "portal-hypertension",
+        "propranolol",
+        "secondary-prophylaxis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_053",
+    "question": "A child with portal hypertension develops recurrent ascites resistant to diuretics. Which procedure is most appropriate for long-term management?",
+    "options": [
+      "A. Serial therapeutic paracentesis",
+      "B. Transjugular intrahepatic portosystemic shunt (TIPS)",
+      "C. Peritoneovenous shunt",
+      "D. Liver transplantation evaluation"
+    ],
+    "correctIndex": 3,
+    "explanation": {
+      "correct": "Refractory ascites in a child with portal hypertension indicates decompensated liver disease. Liver transplantation is the definitive treatment and should be evaluated. TIPS is a bridge in select cases but is not definitive.",
+      "distractors": [
+        "A. Serial paracentesis is temporary and carries risks of infection and protein loss.",
+        "B. TIPS can reduce portal pressure but is associated with encephalopathy and is a bridge, not definitive therapy.",
+        "C. Peritoneovenous shunts are rarely used due to high complication rates.",
+        "This is the correct answer. Refractory ascites in a child with portal hypertension indicates decompensated liver disease. Liver ..."
+      ],
+      "misconception": "Students may choose TIPS as the definitive answer, but transplantation is the ultimate goal in decompensated disease.",
+      "takeaway": "Refractory ascites in portal hypertension = evaluate for liver transplantation.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "refractory-ascites",
+        "liver-transplant",
+        "TIPS"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_054",
+    "question": "Which of the following is the most common cause of portal hypertension in children?",
+    "options": [
+      "A. Cirrhosis due to chronic hepatitis C",
+      "B. Extrahepatic portal vein obstruction (EHPVO)",
+      "C. Budd-Chiari syndrome",
+      "D. Non-cirrhotic portal fibrosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Extrahepatic portal vein obstruction (EHPVO), often due to umbilical sepsis or thrombosis, is the most common cause of portal hypertension in children worldwide, especially in developing countries.",
+      "distractors": [
+        "A. Hepatitis C cirrhosis is rare in children and not the most common cause.",
+        "This is the correct answer. Extrahepatic portal vein obstruction (EHPVO), often due to umbilical sepsis or thrombosis, is the mo...",
+        "B. Budd-Chiari syndrome is a rare cause of hepatic venous outflow obstruction.",
+        "C. Non-cirrhotic portal fibrosis is seen in adults (especially in India) but is less common than EHPVO in children."
+      ],
+      "misconception": "Students often assume cirrhosis is the most common cause, but EHPVO is more common in the pediatric population.",
+      "takeaway": "Most common cause of portal hypertension in children = extrahepatic portal vein obstruction (EHPVO).",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "portal-hypertension",
+        "EHPVO",
+        "epidemiology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_055",
+    "question": "A child with known portal hypertension presents with a massive upper GI bleed. The hemoglobin is 5.8 g/dL, and the child is hemodynamically unstable. What is the correct sequence of immediate management?",
+    "options": [
+      "A. Endoscopy first, then blood transfusion",
+      "B. Blood transfusion + IV fluids + vasoactive drugs (terlipressin/octreotide), then urgent endoscopy",
+      "C. Immediate TIPS procedure before any medical therapy",
+      "D. Oral propranolol and observation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The standard management of acute variceal bleeding is: (1) resuscitate with blood and fluids (target Hb ~7-8 g/dL), (2) start vasoactive therapy (terlipressin or octreotide) to reduce splanchnic flow, and (3) perform urgent endoscopy within 12 hours.",
+      "distractors": [
+        "A. Endoscopy should not be performed before hemodynamic stabilization.",
+        "This is the correct answer. The standard management of acute variceal bleeding is: (1) resuscitate with blood and fluids (target...",
+        "B. TIPS is a rescue therapy for failed endoscopic/medical management, not first-line.",
+        "C. Oral propranolol is for prophylaxis, not acute bleeding, and oral absorption is unreliable in shock."
+      ],
+      "misconception": "Students may rush to endoscopy before stabilizing the patient; resuscitation and vasoactive drugs come first.",
+      "takeaway": "Acute variceal bleed: resuscitate + vasoactive drugs -> urgent endoscopy within 12 hours.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "variceal-bleed",
+        "management-sequence",
+        "resuscitation"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_056",
+    "question": "A child with extrahepatic portal vein obstruction (EHPVO) has recurrent variceal bleeds despite two sessions of EVL. Which surgical procedure is most appropriate?",
+    "options": [
+      "A. Liver transplantation",
+      "B. Mesocaval shunt",
+      "C. Proximal splenorenal shunt (Warren shunt) or distal splenorenal shunt",
+      "D. Portocaval shunt"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "For EHPVO with recurrent bleeding despite endoscopic therapy, a proximal or distal splenorenal shunt (Warren shunt) is preferred because it selectively decompresses the varices while maintaining portal perfusion and reduces encephalopathy risk.",
+      "distractors": [
+        "A. Liver transplantation is not indicated in EHPVO because liver function is preserved; the problem is prehepatic.",
+        "B. Mesocaval shunt is an option but is less physiologic and has higher encephalopathy rates.",
+        "This is the correct answer. For EHPVO with recurrent bleeding despite endoscopic therapy, a proximal or distal splenorenal shunt...",
+        "C. Portocaval shunt causes total portal diversion and high encephalopathy rates; it is not preferred in children."
+      ],
+      "misconception": "Students may think liver transplant is needed for any portal hypertension, but EHPVO spares the liver.",
+      "takeaway": "EHPVO + recurrent bleed post-EVL = selective shunt (splenorenal/Warren shunt).",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "EHPVO",
+        "splenorenal-shunt",
+        "recurrent-bleed"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_057",
+    "question": "Which of the following is the primary goal of primary prophylaxis in a child with large esophageal varices but no history of bleeding?",
+    "options": [
+      "A. Eradicate all varices with repeated EVL sessions",
+      "B. Reduce portal pressure and prevent the first bleed",
+      "C. Surgically create a portosystemic shunt before bleeding occurs",
+      "D. Perform liver transplantation electively"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Primary prophylaxis aims to prevent the first variceal bleed by reducing portal pressure, typically with non-selective beta-blockers or in select cases, EVL. The first bleed carries high mortality.",
+      "distractors": [
+        "A. Variceal eradication is the goal of secondary prophylaxis after a bleed has occurred.",
+        "This is the correct answer. Primary prophylaxis aims to prevent the first variceal bleed by reducing portal pressure, typically ...",
+        "B. Prophylactic shunt surgery is not recommended due to morbidity; shunts are for refractory cases.",
+        "C. Elective transplant is considered for decompensated cirrhosis, not solely for varices without other indications."
+      ],
+      "misconception": "Students may confuse primary and secondary prophylaxis; primary prophylaxis prevents the first bleed.",
+      "takeaway": "Primary prophylaxis = prevent first variceal bleed using beta-blockers (or EVL in selected cases).",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "primary-prophylaxis",
+        "varices",
+        "beta-blockers"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_058",
+    "question": "A child with cirrhosis and portal hypertension develops thrombocytopenia (platelets 60,000/mcL) but no active bleeding. What is the most likely mechanism?",
+    "options": [
+      "A. Bone marrow suppression from hepatitis virus",
+      "B. Hypersplenism due to splenic sequestration",
+      "C. Autoimmune destruction by anti-platelet antibodies",
+      "D. Folate deficiency from malabsorption"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Portal hypertension causes splenomegaly and hypersplenism, leading to sequestration and destruction of platelets (and sometimes neutrophils and RBCs) in the enlarged spleen.",
+      "distractors": [
+        "A. Bone marrow suppression is not the typical cause of thrombocytopenia in portal hypertension.",
+        "This is the correct answer. Portal hypertension causes splenomegaly and hypersplenism, leading to sequestration and destruction ...",
+        "B. Autoimmune thrombocytopenia is not the mechanism; platelet-associated antibodies are not the primary issue.",
+        "C. Folate deficiency causes macrocytic anemia, not isolated thrombocytopenia."
+      ],
+      "misconception": "Students may assume viral suppression or ITP, but hypersplenism is the classic mechanism in portal hypertension.",
+      "takeaway": "Thrombocytopenia in portal hypertension = hypersplenism and splenic sequestration.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "portal-hypertension",
+        "hypersplenism",
+        "thrombocytopenia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_059",
+    "question": "In a child with acute variceal bleeding, which vasoactive agent acts by causing splanchnic vasoconstriction through V1 receptor agonism?",
+    "options": [
+      "A. Octreotide",
+      "B. Terlipressin",
+      "C. Propranolol",
+      "D. Vasopressin"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Terlipressin is a V1 receptor agonist that causes splanchnic vasoconstriction, reducing portal blood flow and portal pressure. It is the preferred vasoactive agent in many guidelines.",
+      "distractors": [
+        "A. Octreotide acts by inhibiting the release of splanchnic vasodilators like glucagon, not through V1 receptors.",
+        "This is the correct answer. Terlipressin is a V1 receptor agonist that causes splanchnic vasoconstriction, reducing portal blood...",
+        "B. Propranolol is a non-selective beta-blocker used for prophylaxis, not acute bleeding.",
+        "C. Vasopressin also causes splanchnic vasoconstriction but has more systemic side effects; terlipressin is the preferred synthetic analog."
+      ],
+      "misconception": "Students may confuse terlipressin with vasopressin; terlipressin is the preferred agent due to better safety profile.",
+      "takeaway": "Terlipressin = V1 agonist causing splanchnic vasoconstriction; drug of choice for acute variceal bleed.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "terlipressin",
+        "V1-agonist",
+        "variceal-bleed"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_060",
+    "question": "A child with portal hypertension is found to have gastric varices without esophageal varices. Which endoscopic treatment is most effective for gastric variceal bleeding?",
+    "options": [
+      "A. Endoscopic variceal band ligation (EVL)",
+      "B. Injection sclerotherapy with sodium morrhuate",
+      "C. Endoscopic injection of N-butyl-2-cyanoacrylate glue",
+      "D. Thermal coagulation with heater probe"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "N-butyl-2-cyanoacrylate glue injection is the endoscopic treatment of choice for bleeding gastric varices. EVL is less effective and more technically difficult in the stomach.",
+      "distractors": [
+        "A. EVL is first-line for esophageal varices but is less effective for gastric varices due to the thicker wall and anatomy.",
+        "B. Sclerotherapy can be used but has lower efficacy and higher complication rates than cyanoacrylate for gastric varices.",
+        "This is the correct answer. N-butyl-2-cyanoacrylate glue injection is the endoscopic treatment of choice for bleeding gastric va...",
+        "C. Thermal coagulation is ineffective for large variceal channels and carries high perforation risk."
+      ],
+      "misconception": "Students may apply the esophageal varix algorithm (EVL) to gastric varices, but glue is the standard for gastric varices.",
+      "takeaway": "Gastric variceal bleed = cyanoacrylate glue injection; esophageal varices = EVL.",
+      "relatedTopic": "portal"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "portal_hypertension",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "conceptual",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 358. Portal Hypertension",
+      "tags": [
+        "gastric-varices",
+        "cyanoacrylate",
+        "glue"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_061",
+    "question": "An 8-year-old presents with severe epigastric pain radiating to the back, vomiting, and fever. Serum lipase is 1200 U/L (normal <60). What is the most common etiology of acute pancreatitis in children?",
+    "options": [
+      "A. Gallstones",
+      "B. Trauma",
+      "C. Systemic disease (viral infections, drugs, sepsis)",
+      "D. Hereditary pancreatitis (PRSS1 mutation)"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "In children, the most common causes of acute pancreatitis are systemic conditions including viral infections (mumps, EBV, CMV), drugs (valproate, L-asparaginase), and sepsis. Biliary and hereditary causes are less common in the general pediatric population.",
+      "distractors": [
+        "A. Gallstones are a leading cause in adults but are less common in children unless there is hemolysis or obesity.",
+        "B. Trauma can cause pancreatitis but is not the most common etiology overall.",
+        "This is the correct answer. In children, the most common causes of acute pancreatitis are systemic conditions including viral in...",
+        "C. Hereditary pancreatitis is rare and typically presents with recurrent episodes and family history."
+      ],
+      "misconception": "Students often apply adult etiologies (gallstones, alcohol) to children, but systemic causes predominate in pediatrics.",
+      "takeaway": "Most common cause of pediatric acute pancreatitis = systemic (viral, drugs, sepsis).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "pancreatitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 348. Pancreatitis",
+      "tags": [
+        "acute-pancreatitis",
+        "etiology",
+        "lipase"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_062",
+    "question": "Which of the following is the most specific and sensitive enzyme for diagnosing acute pancreatitis in children?",
+    "options": [
+      "A. Serum amylase",
+      "B. Serum lipase",
+      "C. Urinary trypsinogen-2",
+      "D. Serum alkaline phosphatase"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Serum lipase is more specific and remains elevated longer than amylase in acute pancreatitis. It is not affected by salivary gland disorders or macroamylasemia.",
+      "distractors": [
+        "A. Amylase rises early but is less specific (also elevated in salivary gland disease, intestinal obstruction).",
+        "This is the correct answer. Serum lipase is more specific and remains elevated longer than amylase in acute pancreatitis. It is ...",
+        "B. Urinary trypsinogen-2 is a promising biomarker but is not as widely validated or available as lipase.",
+        "C. Alkaline phosphatase is a marker of biliary obstruction or bone disease, not pancreatitis."
+      ],
+      "misconception": "Students may choose amylase because it is classically taught, but lipase is the preferred diagnostic test.",
+      "takeaway": "Serum lipase >3x upper limit of normal = most specific test for acute pancreatitis.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "pancreatitis",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 348. Pancreatitis",
+      "tags": [
+        "pancreatitis",
+        "lipase",
+        "diagnosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_063",
+    "question": "A newborn with meconium ileus is found to have a mutation in the CFTR gene. Which is the earliest gastrointestinal manifestation of cystic fibrosis?",
+    "options": [
+      "A. Rectal prolapse",
+      "B. Meconium ileus",
+      "C. Distal intestinal obstruction syndrome (DIOS)",
+      "D. Steatorrhea"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Meconium ileus is the earliest gastrointestinal manifestation of cystic fibrosis, occurring in utero or in the neonatal period due to thick, inspissated meconium obstructing the distal ileum.",
+      "distractors": [
+        "A. Rectal prolapse occurs later in infancy due to bulky stools and malnutrition.",
+        "This is the correct answer. Meconium ileus is the earliest gastrointestinal manifestation of cystic fibrosis, occurring in utero...",
+        "B. DIOS occurs in older children and adolescents with CF.",
+        "C. Steatorrhea develops after pancreatic insufficiency manifests, usually within the first months of life but after birth."
+      ],
+      "misconception": "Students may think steatorrhea is the earliest sign, but meconium ileus presents at birth.",
+      "takeaway": "Earliest GI manifestation of CF = meconium ileus (presents in neonatal period).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "cystic_fibrosis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 349. Cystic Fibrosis",
+      "tags": [
+        "cystic-fibrosis",
+        "meconium-ileus",
+        "CFTR"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_064",
+    "question": "A 2-year-old with cystic fibrosis has failure to thrive, steatorrhea, and recurrent respiratory infections. Which test is the gold standard for confirming the diagnosis?",
+    "options": [
+      "A. Genotyping for deltaF508 mutation",
+      "B. Sweat chloride test >60 mmol/L on two occasions",
+      "C. Fecal elastase <100 mcg/g",
+      "D. Nasal potential difference measurement"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The sweat chloride test remains the gold standard for diagnosing cystic fibrosis. A value >60 mmol/L on two separate occasions is diagnostic. Values 30-60 are intermediate and require further testing.",
+      "distractors": [
+        "A. DeltaF508 is the most common mutation but CFTR genotyping alone is insufficient because many mutations are not included in standard panels.",
+        "This is the correct answer. The sweat chloride test remains the gold standard for diagnosing cystic fibrosis. A value >60 mmol/L...",
+        "B. Fecal elastase <100 mcg/g indicates pancreatic insufficiency but does not diagnose CF.",
+        "C. Nasal potential difference is a research tool and not the gold standard for clinical diagnosis."
+      ],
+      "misconception": "Students may choose genotyping because it sounds definitive, but sweat chloride is the diagnostic gold standard.",
+      "takeaway": "CF diagnosis: sweat chloride >60 mmol/L on two occasions = gold standard.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "cystic_fibrosis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 349. Cystic Fibrosis",
+      "tags": [
+        "cystic-fibrosis",
+        "sweat-chloride",
+        "diagnosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_065",
+    "question": "A 5-year-old with cystic fibrosis has a fecal elastase of 45 mcg/g. Which pancreatic enzyme replacement strategy is most appropriate?",
+    "options": [
+      "A. Pancrelipase with every snack only",
+      "B. Pancrelipase with all meals and snacks, with dose based on fat content and weight",
+      "C. Pancrelipase once daily before breakfast",
+      "D. No enzymes needed if the child is growing well"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Pancreatic enzyme replacement therapy (PERT) with pancrelipase should be given with every meal and snack. The dose is titrated based on the fat content of the meal and the child's weight, typically 500-2500 lipase units/kg/meal.",
+      "distractors": [
+        "A. Enzymes are needed with all meals and snacks, not just snacks.",
+        "This is the correct answer. Pancreatic enzyme replacement therapy (PERT) with pancrelipase should be given with every meal and s...",
+        "B. Once-daily dosing is ineffective because enzymes are destroyed by gastric acid and need to be present with each feed.",
+        "C. Fecal elastase <100 mcg/g confirms pancreatic insufficiency; enzymes are essential regardless of growth."
+      ],
+      "misconception": "Students may think enzymes are given only with large meals, but they must accompany every meal and snack.",
+      "takeaway": "PERT in CF: pancrelipase with every meal and snack; titrate to fat intake and weight.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "cystic_fibrosis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 349. Cystic Fibrosis",
+      "tags": [
+        "cystic-fibrosis",
+        "pancrelipase",
+        "PERT"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_066",
+    "question": "Which of the following is the most sensitive imaging modality for detecting early chronic pancreatitis in children?",
+    "options": [
+      "A. Plain abdominal X-ray",
+      "B. Abdominal ultrasound",
+      "C. Magnetic resonance cholangiopancreatography (MRCP)",
+      "D. Endoscopic ultrasound (EUS)"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "MRCP is the most sensitive non-invasive imaging modality for detecting early changes of chronic pancreatitis, including ductal irregularities, strictures, and side-branch ectasia. It is preferred over CT in children due to lack of radiation.",
+      "distractors": [
+        "A. Plain X-ray has no role in diagnosing pancreatitis.",
+        "B. Ultrasound is the first-line modality for acute pancreatitis but is less sensitive for early chronic changes.",
+        "This is the correct answer. MRCP is the most sensitive non-invasive imaging modality for detecting early changes of chronic panc...",
+        "C. EUS is highly sensitive but is invasive and less available in pediatric centers."
+      ],
+      "misconception": "Students often choose ultrasound because it is first-line for acute pancreatitis, but MRCP is best for chronic changes.",
+      "takeaway": "MRCP = most sensitive non-invasive imaging for early chronic pancreatitis in children.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "pancreatitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 348. Pancreatitis",
+      "tags": [
+        "chronic-pancreatitis",
+        "MRCP",
+        "imaging"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_067",
+    "question": "An infant with failure to thrive, steatorrhea, and acrodermatitis enteropathica-like rash is found to have low serum zinc. The diarrhea improves dramatically with zinc supplementation. Which condition should be suspected?",
+    "options": [
+      "A. Cystic fibrosis",
+      "B. Acrodermatitis enteropathica (zinc deficiency)",
+      "C. Shwachman-Diamond syndrome",
+      "D. Abetalipoproteinemia"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Acrodermatitis enteropathica is an autosomal recessive disorder of zinc absorption. It presents with periorificial and acral dermatitis, alopecia, diarrhea, and failure to thrive. Dramatic response to oral zinc is diagnostic.",
+      "distractors": [
+        "A. Cystic fibrosis causes steatorrhea but does not cause the characteristic acral rash.",
+        "This is the correct answer. Acrodermatitis enteropathica is an autosomal recessive disorder of zinc absorption. It presents with...",
+        "B. Shwachman-Diamond syndrome presents with pancreatic insufficiency and neutropenia but not zinc-responsive rash.",
+        "C. Abetalipoproteinemia causes fat malabsorption and acanthocytosis but not zinc-responsive dermatitis."
+      ],
+      "misconception": "Students may confuse the rash with cystic fibrosis or other malabsorption syndromes; the zinc responsiveness is pathognomonic.",
+      "takeaway": "Acrodermatitis enteropathica = zinc deficiency + periorificial rash; dramatic response to zinc = diagnostic.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malabsorption",
+      "system": "GIT",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 350. Malabsorption",
+      "tags": [
+        "zinc-deficiency",
+        "acrodermatitis-enteropathica",
+        "rash"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "gastro_068",
+    "question": "Which of the following is the most common cause of primary malabsorption in children in developing countries?",
+    "options": [
+      "A. Cystic fibrosis",
+      "B. Celiac disease",
+      "C. Tropical sprue",
+      "D. Lactose intolerance"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Celiac disease is the most common cause of primary malabsorption in children worldwide, with a prevalence of approximately 1% in many populations. It is increasingly diagnosed in India as well.",
+      "distractors": [
+        "A. Cystic fibrosis is the most common cause of pancreatic malabsorption but is less common than celiac disease overall.",
+        "This is the correct answer. Celiac disease is the most common cause of primary malabsorption in children worldwide, with a preva...",
+        "B. Tropical sprue is rare in children and is typically seen in adults in endemic tropical regions.",
+        "C. Lactose intolerance is common but typically causes milder symptoms and is secondary to other gut diseases in young children."
+      ],
+      "misconception": "Students may think tropical sprue is common in India, but celiac disease is the most common primary malabsorption syndrome in children.",
+      "takeaway": "Most common cause of primary malabsorption in children = celiac disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malabsorption",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 340. Celiac Disease",
+      "tags": [
+        "celiac-disease",
+        "malabsorption",
+        "epidemiology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_069",
+    "question": "A 3-year-old with chronic diarrhea and fat-soluble vitamin deficiencies (low vitamins A, D, E, K) is found to have a normal sweat chloride test and normal small bowel biopsy. Which test would most likely confirm the diagnosis?",
+    "options": [
+      "A. 72-hour fecal fat collection showing >7% fat excretion",
+      "B. Serum trypsinogen level",
+      "C.  stool reducing substances",
+      "D. D-xylose absorption test"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "A 72-hour fecal fat collection showing increased fat excretion (>7% of ingested fat) confirms fat malabsorption. In the absence of celiac disease and cystic fibrosis, other causes such as chronic pancreatitis, abetalipoproteinemia, or bile acid malabsorption should be investigated.",
+      "distractors": [
+        "This is the correct answer. A 72-hour fecal fat collection showing increased fat excretion (>7% of ingested fat) confirms fat ma...",
+        "A. Serum trypsinogen is low in cystic fibrosis but is not a test for general fat malabsorption.",
+        "B. Stool reducing substances detect carbohydrate malabsorption, not fat malabsorption.",
+        "C. D-xylose test assesses proximal small bowel mucosal absorption, not fat malabsorption."
+      ],
+      "misconception": "Students may confuse carbohydrate and fat malabsorption tests; fecal fat collection is the gold standard for fat malabsorption.",
+      "takeaway": "72-hour fecal fat collection >7% = gold standard for confirming fat malabsorption.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malabsorption",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 350. Malabsorption",
+      "tags": [
+        "fat-malabsorption",
+        "fecal-fat",
+        "vitamin-deficiency"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_070",
+    "question": "A child with Shwachman-Diamond syndrome presents with steatorrhea, neutropenia, and metaphyseal dysostosis. Which organ is primarily affected?",
+    "options": [
+      "A. Liver",
+      "B. Pancreas",
+      "C. Small intestine",
+      "D. Colon"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Shwachman-Diamond syndrome is characterized by pancreatic exocrine insufficiency (due to fatty replacement of the pancreas), bone marrow dysfunction (neutropenia), and skeletal abnormalities (metaphyseal dysostosis).",
+      "distractors": [
+        "A. Liver involvement is not a primary feature of Shwachman-Diamond syndrome.",
+        "This is the correct answer. Shwachman-Diamond syndrome is characterized by pancreatic exocrine insufficiency (due to fatty repla...",
+        "B. Small intestine is structurally normal; the problem is lack of pancreatic enzymes.",
+        "C. Colon is not primarily affected."
+      ],
+      "misconception": "Students may confuse Shwachman-Diamond with cystic fibrosis; the pancreatic insufficiency + neutropenia + skeletal changes are the triad.",
+      "takeaway": "Shwachman-Diamond syndrome = pancreatic insufficiency + neutropenia + metaphyseal dysostosis.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "malabsorption",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 349. Cystic Fibrosis",
+      "tags": [
+        "shwachman-diamond",
+        "pancreas",
+        "neutropenia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_071",
+    "question": "A 7-year-old boy presents with periumbilical pain that migrated to the right lower quadrant, anorexia, and low-grade fever. On examination, there is tenderness at McBurney's point and guarding. What is the most appropriate next step?",
+    "options": [
+      "A. Immediate appendectomy without imaging",
+      "B. Abdominal ultrasound as the first-line imaging modality",
+      "C. CT abdomen with IV contrast",
+      "D. Barium enema"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In children with suspected appendicitis, abdominal ultrasound is the first-line imaging modality because it avoids radiation, has good sensitivity, and can identify an appendicolith or periappendiceal fluid. CT is reserved for equivocal cases.",
+      "distractors": [
+        "A. Immediate surgery without imaging is not standard; imaging reduces negative appendectomy rates.",
+        "This is the correct answer. In children with suspected appendicitis, abdominal ultrasound is the first-line imaging modality bec...",
+        "B. CT has higher sensitivity but exposes the child to radiation; it is second-line after equivocal ultrasound.",
+        "C. Barium enema has no role in diagnosing appendicitis."
+      ],
+      "misconception": "Students may choose CT because it is most sensitive, but ultrasound is the recommended first-line test in children.",
+      "takeaway": "Suspected appendicitis in children: first-line imaging = abdominal ultrasound.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 363. Appendicitis",
+      "tags": [
+        "appendicitis",
+        "ultrasound",
+        "McBurney"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_072",
+    "question": "A 10-month-old infant presents with intermittent episodes of severe crying, drawing up of legs, and vomiting. Between episodes, the infant appears lethargic. On examination, a sausage-shaped mass is palpated in the right upper quadrant. What is the most likely diagnosis?",
+    "options": [
+      "A. Appendicitis",
+      "B. Intussusception",
+      "C. Malrotation with volvulus",
+      "D. Incarcerated inguinal hernia"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The classic triad of intussusception includes intermittent colicky abdominal pain (crying with legs drawn up), vomiting, and currant jelly stool. A sausage-shaped abdominal mass is pathognomonic.",
+      "distractors": [
+        "A. Appendicitis is rare in infants and presents with constant RLQ pain, not intermittent episodes.",
+        "This is the correct answer. The classic triad of intussusception includes intermittent colicky abdominal pain (crying with legs ...",
+        "B. Malrotation with volvulus presents with bilious vomiting and does not typically have a sausage-shaped mass.",
+        "C. Incarcerated hernia presents with a tender groin mass and bowel obstruction signs, not a RUQ sausage mass."
+      ],
+      "misconception": "Students may not recognize the classic intermittent pattern and sausage mass as intussusception.",
+      "takeaway": "Intermittent colicky pain + vomiting + sausage-shaped mass = intussusception.",
+      "relatedTopic": "intussusception"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 364. Intussusception",
+      "tags": [
+        "intussusception",
+        "sausage-mass",
+        "currant-jelly"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_073",
+    "question": "A child with suspected intussusception undergoes abdominal ultrasound. Which sonographic finding is diagnostic?",
+    "options": [
+      "A. Dilated loops of bowel with air-fluid levels",
+      "B. Target or doughnut sign on transverse view",
+      "C. Double bubble sign",
+      "D. Pneumatosis intestinalis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The target sign (doughnut sign) on transverse ultrasound and the pseudokidney sign on longitudinal view are diagnostic of intussusception. Ultrasound is both sensitive and specific.",
+      "distractors": [
+        "A. Dilated loops with air-fluid levels suggest bowel obstruction but are not specific for intussusception.",
+        "This is the correct answer. The target sign (doughnut sign) on transverse ultrasound and the pseudokidney sign on longitudinal v...",
+        "B. Double bubble sign is diagnostic of duodenal atresia.",
+        "C. Pneumatosis intestinalis indicates necrotizing enterocolitis."
+      ],
+      "misconception": "Students may confuse the target sign with other radiological signs; the doughnut sign on USG is specific for intussusception.",
+      "takeaway": "Target/doughnut sign on transverse abdominal USG = diagnostic of intussusception.",
+      "relatedTopic": "intussusception"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 364. Intussusception",
+      "tags": [
+        "intussusception",
+        "ultrasound",
+        "target-sign"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_074",
+    "question": "A 9-month-old with ileocolic intussusception is hemodynamically stable with no signs of peritonitis. What is the most appropriate initial treatment?",
+    "options": [
+      "A. Emergency laparotomy and manual reduction",
+      "B. Air or contrast enema reduction under fluoroscopy",
+      "C. Observation with IV fluids only",
+      "D. Nasogastric decompression and antibiotics for 24 hours"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "For hemodynamically stable children with ileocolic intussusception and no signs of peritonitis or perforation, non-operative reduction with air or contrast enema is the treatment of choice. Air enema is preferred due to lower radiation and higher success rates.",
+      "distractors": [
+        "A. Laparotomy is reserved for failed enema reduction, perforation, or peritonitis.",
+        "This is the correct answer. For hemodynamically stable children with ileocolic intussusception and no signs of peritonitis or pe...",
+        "B. Observation alone is inappropriate because intussusception can progress to bowel necrosis.",
+        "C. NG decompression and antibiotics are adjuncts but do not treat the mechanical obstruction."
+      ],
+      "misconception": "Students may choose surgery first, not appreciating that stable intussusception is treated non-operatively.",
+      "takeaway": "Stable ileocolic intussusception = air/contrast enema reduction first.",
+      "relatedTopic": "intussusception"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 364. Intussusception",
+      "tags": [
+        "intussusception",
+        "air-enema",
+        "non-operative"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_075",
+    "question": "Which of the following is the most common pathological lead point for intussusception in children older than 2 years?",
+    "options": [
+      "A. Meckel diverticulum",
+      "B. Ileal lymphoid hyperplasia",
+      "C. Henoch-Schonlein purpura (intestinal hematoma)",
+      "D. Polyps"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "In children older than 2 years, pathological lead points are more common. Meckel diverticulum is the most common lead point, followed by polyps, duplication cysts, and lymphoma.",
+      "distractors": [
+        "This is the correct answer. In children older than 2 years, pathological lead points are more common. Meckel diverticulum is the...",
+        "A. Ileal lymphoid hyperplasia is a common lead point in infants but is less common in older children.",
+        "B. HSP can cause intussusception but is not the most common lead point.",
+        "C. Polyps are a lead point but are less common than Meckel diverticulum."
+      ],
+      "misconception": "Students may think lymphoid hyperplasia is the most common lead point in all ages, but Meckel diverticulum predominates in older children.",
+      "takeaway": "Most common pathological lead point for intussusception in children >2 years = Meckel diverticulum.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 364. Intussusception",
+      "tags": [
+        "intussusception",
+        "lead-point",
+        "meckel-diverticulum"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_076",
+    "question": "A 4-year-old presents with painless rectal bleeding. A technetium-99m pertechnetate scan shows uptake in the right lower quadrant. What is the most likely diagnosis?",
+    "options": [
+      "A. Appendicitis",
+      "B. Meckel diverticulum with gastric mucosa",
+      "C. Intussusception",
+      "D. Crohn disease"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Technetium-99m pertechnetate is taken up by gastric mucosa. A Meckel diverticulum containing ectopic gastric mucosa will show focal uptake in the RLQ, causing painless rectal bleeding due to ulceration of adjacent ileal mucosa.",
+      "distractors": [
+        "A. Appendicitis does not contain gastric mucosa and does not show uptake on technetium scan.",
+        "This is the correct answer. Technetium-99m pertechnetate is taken up by gastric mucosa. A Meckel diverticulum containing ectopic...",
+        "B. Intussusception does not contain gastric mucosa and is diagnosed by ultrasound or enema.",
+        "C. Crohn disease does not show focal technetium uptake in the RLQ."
+      ],
+      "misconception": "Students may not connect the technetium scan with gastric mucosa; the scan identifies ectopic gastric mucosa in Meckel diverticulum.",
+      "takeaway": "Technetium scan uptake in RLQ + painless rectal bleeding = Meckel diverticulum with gastric mucosa.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 365. Meckel Diverticulum",
+      "tags": [
+        "meckel-diverticulum",
+        "technetium-scan",
+        "gastric-mucosa"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_077",
+    "question": "Which of the following is the most common complication of Meckel diverticulum in children?",
+    "options": [
+      "A. Intestinal obstruction",
+      "B. Gastrointestinal bleeding",
+      "C. Diverticulitis",
+      "D. Malignant transformation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Gastrointestinal bleeding due to ulceration from ectopic gastric mucosa is the most common complication of Meckel diverticulum in children, presenting as painless rectal bleeding (melena or hematochezia).",
+      "distractors": [
+        "A. Intestinal obstruction can occur (volvulus, intussusception, band) but is less common than bleeding in children.",
+        "This is the correct answer. Gastrointestinal bleeding due to ulceration from ectopic gastric mucosa is the most common complicat...",
+        "B. Diverticulitis is more common in adults and is rare in children.",
+        "C. Malignant transformation is extremely rare in children."
+      ],
+      "misconception": "Students may think obstruction is the most common because of the 'rule of 2s,' but bleeding is the most common complication in children.",
+      "takeaway": "Most common complication of Meckel diverticulum in children = GI bleeding from ectopic gastric mucosa.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 365. Meckel Diverticulum",
+      "tags": [
+        "meckel-diverticulum",
+        "bleeding",
+        "complications"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_078",
+    "question": "A child with acute appendicitis is found to have a perforated appendix with localized abscess on CT. The child is hemodynamically stable and afebrile. What is the most appropriate management?",
+    "options": [
+      "A. Immediate laparoscopic appendectomy",
+      "B. Percutaneous drainage + IV antibiotics, followed by interval appendectomy",
+      "C. Observation with oral antibiotics only",
+      "D. Total colectomy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "For a stable child with perforated appendicitis and a well-localized abscess, the standard approach is percutaneous or surgical drainage combined with broad-spectrum IV antibiotics, followed by an interval appendectomy in 6-8 weeks.",
+      "distractors": [
+        "A. Immediate appendectomy in the setting of a large abscess is technically difficult and carries higher morbidity.",
+        "This is the correct answer. For a stable child with perforated appendicitis and a well-localized abscess, the standard approach ...",
+        "B. Oral antibiotics alone are insufficient for a perforated appendix with abscess.",
+        "C. Total colectomy is never indicated for appendicitis."
+      ],
+      "misconception": "Students may rush to immediate surgery, but drainage and interval appendectomy is safer for localized abscess.",
+      "takeaway": "Perforated appendicitis + localized abscess = drain + IV antibiotics + interval appendectomy.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 363. Appendicitis",
+      "tags": [
+        "appendicitis",
+        "perforation",
+        "abscess",
+        "interval-appendectomy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_079",
+    "question": "Which of the following physical examination signs is most specific for retrocecal appendicitis?",
+    "options": [
+      "A. Rovsing sign",
+      "B. Psoas sign",
+      "C. Obturator sign",
+      "D. McBurney point tenderness"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The psoas sign (pain on right hip extension) indicates irritation of the psoas muscle by a retrocecal or retroperitoneal appendix. It is the most specific physical sign for retrocecal appendicitis.",
+      "distractors": [
+        "A. Rovsing sign (pain in RLQ on left-sided palpation) indicates peritoneal irritation but is not specific to retrocecal location.",
+        "This is the correct answer. The psoas sign (pain on right hip extension) indicates irritation of the psoas muscle by a retroceca...",
+        "B. Obturator sign (pain on internal rotation of flexed right hip) suggests a pelvic appendix.",
+        "C. McBurney point tenderness is present in most cases of appendicitis regardless of position."
+      ],
+      "misconception": "Students may confuse the psoas and obturator signs; psoas sign = retrocecal, obturator sign = pelvic.",
+      "takeaway": "Psoas sign = most specific for retrocecal appendicitis; obturator sign = pelvic appendix.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 363. Appendicitis",
+      "tags": [
+        "appendicitis",
+        "psoas-sign",
+        "retrocecal"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_080",
+    "question": "A 3-year-old with intussusception undergoes successful air enema reduction. Which of the following is the most important post-reduction observation?",
+    "options": [
+      "A. Immediate discharge home",
+      "B. Observation for 12-24 hours to detect early recurrence and ensure clinical improvement",
+      "C. Barium follow-through within 48 hours",
+      "D. Prophylactic appendectomy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "After successful enema reduction of intussusception, children should be observed for 12-24 hours to monitor for recurrence (which occurs in 5-10%), ensure return of bowel function, and confirm clinical improvement before discharge.",
+      "distractors": [
+        "A. Immediate discharge is unsafe because recurrence can occur within hours.",
+        "This is the correct answer. After successful enema reduction of intussusception, children should be observed for 12-24 hours to ...",
+        "B. Barium follow-through is not routinely needed after successful reduction unless there is concern for a lead point.",
+        "C. Appendectomy is not indicated after intussusception reduction."
+      ],
+      "misconception": "Students may think successful reduction means immediate discharge, but observation is essential due to recurrence risk.",
+      "takeaway": "After intussusception reduction: observe 12-24 hours for recurrence and clinical improvement.",
+      "relatedTopic": "intussusception"
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "appendicitis",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 364. Intussusception",
+      "tags": [
+        "intussusception",
+        "post-reduction",
+        "recurrence"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_081",
+    "question": "A 4-week-old infant presents with non-bilious projectile vomiting after every feed. On examination, a small mobile olive-shaped mass is palpated in the epigastrium. Laboratory tests show hypochloremic metabolic alkalosis. What is the diagnosis?",
+    "options": [
+      "A. Pyloric stenosis",
+      "B. Gastroesophageal reflux disease",
+      "C. Duodenal atresia",
+      "D. Malrotation with volvulus"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "The triad of non-bilious projectile vomiting, palpable olive-shaped pyloric mass, and hypochloremic metabolic alkalosis is diagnostic of hypertrophic pyloric stenosis (HPS).",
+      "distractors": [
+        "This is the correct answer. The triad of non-bilious projectile vomiting, palpable olive-shaped pyloric mass, and hypochloremic ...",
+        "A. GERD causes regurgitation but not projectile vomiting or metabolic alkalosis.",
+        "B. Duodenal atresia causes bilious vomiting and a double bubble on X-ray.",
+        "C. Malrotation with volvulus causes bilious vomiting, not non-bilious projectile vomiting."
+      ],
+      "misconception": "Students may confuse HPS with GERD, but projectile vomiting + olive mass + metabolic alkalosis is pathognomonic for HPS.",
+      "takeaway": "Non-bilious projectile vomiting + olive mass + hypochloremic metabolic alkalosis = HPS.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "miscellaneous",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "pyloric-stenosis",
+        "olive-mass",
+        "metabolic-alkalosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_082",
+    "question": "A newborn with severe respiratory distress has a scaphoid abdomen, and breath sounds are heard in the left hemithorax. The heart sounds are shifted to the right. What is the most likely diagnosis?",
+    "options": [
+      "A. Congenital diaphragmatic hernia (Bochdalek)",
+      "B. Congenital lobar emphysema",
+      "C. Pneumothorax",
+      "D. Tracheoesophageal fistula"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Congenital diaphragmatic hernia (Bochdalek type, left posterolateral) presents with respiratory distress, scaphoid abdomen, and mediastinal shift with bowel herniation into the chest. Heart sounds are displaced contralaterally.",
+      "distractors": [
+        "This is the correct answer. Congenital diaphragmatic hernia (Bochdalek type, left posterolateral) presents with respiratory dist...",
+        "A. Congenital lobar emphysema causes hyperinflation of a lobe but does not cause a scaphoid abdomen.",
+        "B. Pneumothorax causes respiratory distress but does not cause a scaphoid abdomen or bowel in the chest.",
+        "C. Tracheoesophageal fistula presents with excessive salivation, choking with feeds, and gastric distension."
+      ],
+      "misconception": "Students may not connect the scaphoid abdomen with CDH; the combination of respiratory distress + scaphoid abdomen + shifted heart sounds is diagnostic.",
+      "takeaway": "Respiratory distress + scaphoid abdomen + bowel in chest + shifted heart sounds = Bochdalek hernia.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "miscellaneous",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "congenital-diaphragmatic-hernia",
+        "bochdalek",
+        "scaphoid-abdomen"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_083",
+    "question": "A 2-year-old with chronic constipation and painful defecation has a small tear in the posterior midline anal margin with a sentinel skin tag. What is the most appropriate management?",
+    "options": [
+      "A. Lateral internal sphincterotomy",
+      "B. Dietary modification with increased fiber and water, plus stool softeners",
+      "C. Hemorrhoidectomy",
+      "D. Rectal biopsy to rule out Hirschsprung disease"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This child has an anal fissure. First-line management is conservative: increased dietary fiber, adequate hydration, stool softeners (lactulose or polyethylene glycol), and topical anesthetics. Surgery is reserved for chronic, refractory fissures.",
+      "distractors": [
+        "A. Lateral sphincterotomy is effective but is reserved for chronic fissures unresponsive to medical therapy.",
+        "This is the correct answer. This child has an anal fissure. First-line management is conservative: increased dietary fiber, adeq...",
+        "B. Hemorrhoidectomy is inappropriate for pediatric anal fissure.",
+        "C. Rectal biopsy is unnecessary unless there are features of Hirschsprung disease (delayed meconium, abdominal distension)."
+      ],
+      "misconception": "Students may rush to surgery for anal fissure, but conservative management cures most pediatric fissures.",
+      "takeaway": "Pediatric anal fissure: first-line = fiber, fluids, stool softeners; surgery only if refractory.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "miscellaneous",
+      "system": "GIT",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 366. Anorectal Malformations",
+      "tags": [
+        "anal-fissure",
+        "constipation",
+        "stool-softeners"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_084",
+    "question": "A newborn is noted to have a moist, pink, mucosal protrusion at the umbilicus with a small central opening. Fluid is seen leaking from the opening. What is the most appropriate management?",
+    "options": [
+      "A. Emergency laparotomy",
+      "B. Excision of the tract with exploration for underlying connection",
+      "C. Observation until 1 year of age",
+      "D. Topical antibiotic ointment only"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This is a patent vitellointestinal duct (omphalomesenteric duct remnant) which connects the ileum to the umbilicus. It can cause intestinal obstruction, bleeding, or prolapse. Excision of the tract with exploration and resection of any connection to the ileum is required.",
+      "distractors": [
+        "A. Emergency laparotomy is not needed unless there is obstruction or strangulation; elective excision is sufficient.",
+        "This is the correct answer. This is a patent vitellointestinal duct (omphalomesenteric duct remnant) which connects the ileum to...",
+        "B. Observation is unsafe because the tract can cause complications including intussusception or prolapse.",
+        "C. Topical antibiotics do not address the underlying congenital anomaly."
+      ],
+      "misconception": "Students may mistake this for a simple umbilical granuloma; a patent vitellointestinal duct requires surgical excision.",
+      "takeaway": "Patent vitellointestinal duct = excision + exploration for ileal connection.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "miscellaneous",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "vitellointestinal-duct",
+        "umbilicus",
+        "surgery"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "gastro_085",
+    "question": "Which of the following is the most common type of tracheoesophageal fistula (TEF)?",
+    "options": [
+      "A. Esophageal atresia with distal fistula (Gross type C)",
+      "B. Esophageal atresia without fistula (Gross type A)",
+      "C. H-type fistula without esophageal atresia (Gross type E)",
+      "D. Esophageal atresia with proximal fistula (Gross type B)"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Esophageal atresia with distal tracheoesophageal fistula (Gross type C) accounts for approximately 85% of all TEF cases. The proximal esophagus ends in a blind pouch, and the distal esophagus connects to the trachea.",
+      "distractors": [
+        "This is the correct answer. Esophageal atresia with distal tracheoesophageal fistula (Gross type C) accounts for approximately 8...",
+        "A. Type A (isolated esophageal atresia without fistula) accounts for about 8% of cases.",
+        "B. Type E (H-type fistula without atresia) is rare (~4%).",
+        "C. Type B (proximal fistula only) is very rare (~1%)."
+      ],
+      "misconception": "Students often confuse the types; type C (distal fistula) is by far the most common.",
+      "takeaway": "Most common TEF = Gross type C: esophageal atresia + distal TEF (~85%).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "gastroenterology",
+      "subtopic": "miscellaneous",
+      "system": "GIT",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 361. Intestinal Obstruction",
+      "tags": [
+        "tracheoesophageal-fistula",
+        "Gross-type-C",
+        "esophageal-atresia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  }
+]

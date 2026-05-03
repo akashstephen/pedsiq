@@ -5,6 +5,33 @@ All notable changes to PedsIQ will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2025-05-02
+
+### Reverted
+- **Removed Mermaid.js integration** — `beautiful-mermaid` produced poor visual quality on the dark theme. Reverted all diagrams back to the custom `Flowchart` component.
+- Removed `beautiful-mermaid` dependency and `MermaidDiagram` component usage.
+
+## [2.1.1] - 2025-05-01
+
+### Security
+- **SVG sanitization in MermaidDiagram** — Added `sanitizeSvg()` defense-in-depth layer to strip scripts, event handlers, and non-SVG tags before `dangerouslySetInnerHTML`
+- **HTML injection prevention in generate_dashboard.py** — `json.dumps()` output now escapes `</script>` tags before interpolating into HTML
+- **Removed hardcoded absolute paths** in `classify.py`, `extract_questions.py`, `extract_questions_v3.py`, and `generate_dashboard.py`; all now resolve relative to `__file__`
+
+### Fixed
+- **classify.py error handling** — Added `FileNotFoundError` / `JSONDecodeError` guards, wrapped execution in `main()` function
+- **Bloom keyword overlap** — Removed duplicate `"classify"` from `RECALL` and `UNDERSTAND` lists; added deterministic tie-breaker preferring higher cognitive levels
+- **Python 3.12 deprecation** — Replaced `datetime.utcnow` with `datetime.now(timezone.utc)` in `models.py`
+- **Magic number** — Extracted marks tolerance (`5.0`) into named constant `MARKS_TOLERANCE` in `validators.py`
+- **Type safety** — Replaced unsafe `Record<string, any>` cast with `TopicGraphMeta` interface in `structured-answers/page.tsx`
+- **Dead code removal** — Removed unused `subLabel` property from `FlowchartNode` interface and `Flowchart.tsx` rendering
+
+### Changed
+- **AGENTS.md** — Officially allows Mermaid.js via `beautiful-mermaid` as the preferred diagram tool; marks legacy root-level Python scripts as deprecated in favor of `pipeline/src/pedsiq/cli.py`
+
+### Added
+- **Ontology tests** — `test_no_duplicate_concept_ids` and `test_all_concepts_have_category` in `pipeline/tests/test_models.py`
+
 ## [2.1.0] - 2025-05-01
 
 ### Added

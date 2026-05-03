@@ -1,9 +1,15 @@
+# DEPRECATED: Use pipeline/src/pedsiq/extract/pdf_parser.py instead.
+# This script is retained for reference only.
+
 import pdfplumber
 import re
 import os
 import json
+import sys
+from pathlib import Path
 
-OUTPUT_DIR = "/Users/akashstephen/Developer/Pediatrics Exam"
+SCRIPT_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = str(SCRIPT_DIR)
 
 def extract_text_from_pdf(pdf_path):
     """Extract all text from a PDF file preserving page order."""

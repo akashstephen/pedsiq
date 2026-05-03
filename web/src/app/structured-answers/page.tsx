@@ -3,12 +3,17 @@
 import { useState } from "react";
 import { topics } from "./topics";
 import { Flowchart } from "@/components/Flowchart";
-import { MermaidDiagram } from "@/components/MermaidDiagram";
 import { SafeHtml } from "@/components/SafeHtml";
 import { ExamTip } from "@/components/ExamTip";
 import { MarkBadge } from "@/components/MarkBadge";
 import { Printer, Network, AlertTriangle, Calendar } from "lucide-react";
 import graphMetadata from "@/data/topic_graph_metadata.json";
+
+interface TopicGraphMeta {
+  relatedConcepts?: string[];
+  examinerTraps?: string[];
+  yearsAppeared?: number[];
+}
 
 export default function StructuredAnswersPage() {
   const [activeTopic, setActiveTopic] = useState<string | "all">("all");
@@ -151,12 +156,6 @@ export default function StructuredAnswersPage() {
                     </div>
                   )}
 
-                  {section.mermaid && (
-                    <div className="mb-3">
-                      <MermaidDiagram code={section.mermaid} />
-                    </div>
-                  )}
-
                   {section.flowchart && (
                     <div className="mb-3">
                       <Flowchart nodes={section.flowchart.nodes} edges={section.flowchart.edges} />
@@ -230,20 +229,20 @@ export default function StructuredAnswersPage() {
 
               {/* Knowledge Graph Metadata */}
               {(() => {
-                const meta = (graphMetadata as Record<string, any>)[topic.id];
+                const meta = (graphMetadata as Record<string, TopicGraphMeta>)[topic.id];
                 if (!meta || (!meta.relatedConcepts?.length && !meta.examinerTraps?.length && !meta.yearsAppeared?.length)) {
                   return null;
                 }
                 return (
                   <div className="border-t border-white/[0.08] pt-4 mt-4 space-y-4">
-                    {meta.relatedConcepts?.length > 0 && (
+                    {(meta.relatedConcepts?.length ?? 0) > 0 && (
                       <div>
                         <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
                           <Network size={12} />
                           Related Concepts
                         </div>
                         <div className="flex flex-wrap gap-2">
-                          {meta.relatedConcepts.map((concept: string, ci: number) => (
+                          {meta.relatedConcepts!.map((concept: string, ci: number) => (
                             <span
                               key={ci}
                               className="text-xs bg-white/[0.05] text-white/60 px-2.5 py-1 rounded-lg border border-white/[0.08]"
@@ -255,14 +254,14 @@ export default function StructuredAnswersPage() {
                       </div>
                     )}
 
-                    {meta.examinerTraps?.length > 0 && (
+                    {(meta.examinerTraps?.length ?? 0) > 0 && (
                       <div>
                         <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
                           <AlertTriangle size={12} />
                           Examiner Traps
                         </div>
                         <ul className="space-y-1.5">
-                          {meta.examinerTraps.map((trap: string, ti: number) => (
+                          {meta.examinerTraps!.map((trap: string, ti: number) => (
                             <li key={ti} className="text-white/70 text-xs flex items-start gap-2">
                               <span className="text-[#FF9500] shrink-0">•</span>
                               {trap}
@@ -272,14 +271,14 @@ export default function StructuredAnswersPage() {
                       </div>
                     )}
 
-                    {meta.yearsAppeared?.length > 0 && (
+                    {(meta.yearsAppeared?.length ?? 0) > 0 && (
                       <div>
                         <div className="flex items-center gap-2 text-white/40 text-xs font-bold uppercase tracking-wider mb-2">
                           <Calendar size={12} />
                           Years Appeared in Past Papers
                         </div>
                         <div className="flex flex-wrap gap-1.5">
-                          {meta.yearsAppeared.map((year: number, yi: number) => (
+                          {meta.yearsAppeared!.map((year: number, yi: number) => (
                             <span
                               key={yi}
                               className="text-[10px] bg-[#007AFF]/10 text-[#007AFF] px-2 py-0.5 rounded"

@@ -1,0 +1,3214 @@
+[
+  {
+    "id": "endo_001",
+    "question": "A 3-week-old newborn screened at a hospital in Kerala has a filter-paper TSH of 45 mIU/L (cutoff >20). The infant appears normal on examination. What is the most appropriate next step?",
+    "options": [
+      "A. Reassure the mother and repeat screening at 6 weeks",
+      "B. Order an urgent serum TSH and free T4",
+      "C. Perform a thyroid ultrasound before starting any treatment",
+      "D. Begin levothyroxine 5 mcg/kg/day immediately"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "An elevated screening TSH requires urgent confirmation with serum TSH and free T4. In congenital hypothyroidism, early diagnosis within the first 2 weeks is critical to prevent irreversible neurodevelopmental impairment. Treatment should not be delayed for imaging if labs confirm hypothyroidism.",
+      "distractors": [
+        "Why option A is wrong \u2014 Delaying confirmation risks permanent intellectual disability; congenital hypothyroidism requires immediate evaluation, not reassurance.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Imaging is helpful for etiology but should not delay biochemical confirmation or treatment initiation if hypothyroidism is confirmed.",
+        "Why option D is wrong \u2014 While early treatment is vital, levothyroxine should be started only after serum confirmation; 5 mcg/kg is also below the standard starting dose of 10-15 mcg/kg/day."
+      ],
+      "misconception": "Students often think imaging must precede treatment in congenital hypothyroidism, delaying critical hormone replacement.",
+      "takeaway": "Screen-positive TSH \u2192 urgent serum TSH + free T4; treat confirmed CH with levothyroxine 10-15 mcg/kg/day without awaiting imaging.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypothyroidism",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "newborn screening",
+        "TSH",
+        "congenital hypothyroidism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "endo_002",
+    "question": "An 8-year-old girl is brought with fatigue, constipation, weight gain, and poor school performance. Examination reveals a firm, non-tender goiter. Her height is at the 10th percentile (down from 50th at age 5). Which autoantibody pair is most specific for the likely diagnosis?",
+    "options": [
+      "A. Thyroid-stimulating immunoglobulin (TSI) and TSH receptor antibody (TRAb)",
+      "B. Anti-thyroid peroxidase (anti-TPO) and anti-thyroglobulin (anti-Tg)",
+      "C. Islet cell antibody (ICA) and anti-GAD65",
+      "D. TSH receptor blocking antibody and anti-TPO"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The presentation of acquired hypothyroidism with goiter in a school-age girl is classic for Hashimoto thyroiditis. Anti-TPO and anti-thyroglobulin antibodies are the hallmark serologic markers. TSI/TRAb are seen in Graves disease.",
+      "distractors": [
+        "Why option A is wrong \u2014 TSI and TRAb are diagnostic of Graves disease (hyperthyroidism), which presents with weight loss, tremors, and tachycardia, not weight gain and constipation.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 ICA and GAD65 are markers of type 1 diabetes mellitus, not thyroid disease.",
+        "Why option D is wrong \u2014 TSH receptor blocking antibodies cause atrophic hypothyroidism without goiter; this patient has a goiter, making Hashimoto much more likely."
+      ],
+      "misconception": "Students confuse the antibody profiles of Hashimoto thyroiditis and Graves disease, especially when both involve the thyroid.",
+      "takeaway": "Hashimoto = hypothyroidism + goiter + anti-TPO/anti-Tg; Graves = hyperthyroidism + TRAb/TSI.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "acquired_hypothyroidism",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Hashimoto",
+        "goiter",
+        "anti-TPO",
+        "hypothyroidism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_003",
+    "question": "A 7-day-old infant with confirmed congenital hypothyroidism (TSH 280 mIU/L, free T4 0.4 ng/dL) is started on levothyroxine. What is the recommended starting dose and target for normalization of T4?",
+    "options": [
+      "A. 5 mcg/kg/day; target free T4 in the lower half of normal range",
+      "B. 10-15 mcg/kg/day; target free T4 in the upper half of normal range",
+      "C. 25 mcg/kg/day; target free T4 above normal to ensure adequacy",
+      "D. 2 mcg/kg/day; titrate slowly to avoid cardiac toxicity"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The recommended starting dose of levothyroxine in congenital hypothyroidism is 10-15 mcg/kg/day (higher than adult dosing due to rapid T4 metabolism in infancy). The goal is to normalize free T4 within 2 weeks, targeting the upper half of the reference range to ensure adequate brain development.",
+      "distractors": [
+        "Why option A is wrong \u2014 5 mcg/kg is subtherapeutic and may leave the infant hypothyroid, risking developmental delay.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 25 mcg/kg is excessive and risks iatrogenic hyperthyroidism, tachycardia, and craniosynostosis.",
+        "Why option D is wrong \u2014 2 mcg/kg is far too low; while cardiac toxicity is a theoretical concern, the benefits of rapid normalization far outweigh risks at proper dosing."
+      ],
+      "misconception": "Students often underdose infants with CH due to fear of toxicity, not realizing that higher per-kg doses are required for neuroprotection.",
+      "takeaway": "CH treatment: levothyroxine 10-15 mcg/kg/day PO; aim for free T4 in upper-normal range within 2 weeks.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypothyroidism_treatment",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "levothyroxine",
+        "congenital hypothyroidism",
+        "dosing"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_004",
+    "question": "A 6-year-old boy presents with short stature. His bone age is delayed by 3 years. Growth hormone stimulation testing is normal, but TSH is 18 mIU/L and free T4 is 0.6 ng/dL. What is the most likely explanation for his growth failure?",
+    "options": [
+      "A. Growth hormone deficiency with falsely normal stimulation test",
+      "B. Primary hypothyroidism causing growth retardation",
+      "C. Constitutional delay of growth and puberty",
+      "D. Turner syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Primary hypothyroidism is a well-established cause of growth retardation in children. It causes delayed bone age, and when severe, can mimic GH deficiency (Van Wyk-Grumbach syndrome). The elevated TSH and low free T4 confirm the diagnosis. Thyroid replacement alone restores growth velocity.",
+      "distractors": [
+        "Why option A is wrong \u2014 The GH stimulation test is a validated pharmacologic test; falsely normal results are uncommon, and the thyroid abnormalities provide a complete explanation.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Constitutional delay is a diagnosis of exclusion with normal thyroid function, normal labs, and bone age matching height age.",
+        "Why option D is wrong \u2014 Turner syndrome occurs in females and is associated with distinctive stigmata (webbed neck, broad chest); this is a male patient with no such features."
+      ],
+      "misconception": "Students often overlook hypothyroidism as a reversible cause of short stature and prematurely diagnose GH deficiency or constitutional delay.",
+      "takeaway": "Always check TSH and free T4 in the workup of short stature; hypothyroidism is a reversible cause of growth failure.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "hypothyroidism_growth",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "short stature",
+        "hypothyroidism",
+        "growth failure",
+        "bone age"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_005",
+    "question": "A 2-week-old infant is diagnosed with congenital hypothyroidism. Which of the following is the most common underlying etiology?",
+    "options": [
+      "A. Iodine deficiency in the mother during pregnancy",
+      "B. Thyroid dysgenesis (agenesis, ectopy, or hypoplasia)",
+      "C. Thyroid dyshormonogenesis (inborn errors of thyroid hormone synthesis)",
+      "D. TSH receptor inactivating mutation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Thyroid dysgenesis (including agenesis, ectopy, and hypoplasia) accounts for approximately 80-85% of congenital hypothyroidism cases worldwide. Iodine deficiency is a significant cause in endemic regions but not the most common etiology globally. Dyshormonogenesis accounts for about 10-15%.",
+      "distractors": [
+        "Why option A is wrong \u2014 Iodine deficiency causes endemic cretinism and is important in certain geographic regions, but it is not the most common cause of sporadic congenital hypothyroidism in most populations.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Dyshormonogenesis is the second most common cause and often presents with a goiter, but it is far less common than dysgenesis.",
+        "Why option D is wrong \u2014 TSH receptor mutations are rare and typically cause severe, permanent congenital hypothyroidism with an absent or small thyroid gland."
+      ],
+      "misconception": "Students often assume iodine deficiency is the most common cause of congenital hypothyroidism because of its prominence in public health discussions.",
+      "takeaway": "Thyroid dysgenesis > dyshormonogenesis > iodine deficiency as causes of congenital hypothyroidism.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypothyroidism_etiology",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "congenital hypothyroidism",
+        "thyroid dysgenesis",
+        "etiology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "endo_006",
+    "question": "A 10-year-old girl with untreated Hashimoto thyroiditis is noted to have galactorrhea. Pelvic ultrasound shows multicystic ovaries. Which mechanism best explains these findings?",
+    "options": [
+      "A. Elevated TRH stimulating prolactin and FSH secretion",
+      "B. Primary ovarian failure with compensatory hyperprolactinemia",
+      "C. Pituitary macroadenoma causing mass effect",
+      "D. Growth hormone excess causing ovarian cysts"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Severe primary hypothyroidism causes elevated TRH, which stimulates prolactin secretion (causing galactorrhea) and can also stimulate FSH secretion, leading to ovarian cysts and precocious puberty-like findings (Van Wyk-Grumbach syndrome). This resolves with thyroxine replacement.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Primary ovarian failure would show elevated FSH/LH with low estradiol; this patient has reversible findings due to hypothyroidism.",
+        "Why option C is wrong \u2014 A macroadenoma would cause headaches, visual field defects, and persist despite thyroid replacement; imaging would show a mass.",
+        "Why option D is wrong \u2014 GH excess causes acromegaly/gigantism and different metabolic effects, not galactorrhea and ovarian cysts in this context."
+      ],
+      "misconception": "Students may misdiagnose Van Wyk-Grumbach syndrome as a prolactinoma or ovarian pathology, missing the unifying diagnosis of severe hypothyroidism.",
+      "takeaway": "Severe hypothyroidism can cause hyperprolactinemia and ovarian cysts via TRH elevation; always correct thyroid first.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "hypothyroidism_complications",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Hashimoto",
+        "galactorrhea",
+        "Van Wyk-Grumbach",
+        "TRH"
+      ],
+      "validated": true,
+      "confidenceScore": 0.94
+    }
+  },
+  {
+    "id": "endo_007",
+    "question": "During a medical camp in a hilly district of Kerala, you encounter a 4-year-old child with coarse facial features, a large protuberant tongue, umbilical hernia, and delayed developmental milestones. The child did not undergo newborn screening. What is the most likely permanent neurologic consequence if treatment is delayed beyond 3 months of age?",
+    "options": [
+      "A. Sensorineural hearing loss",
+      "B. Irreversible intellectual disability",
+      "C. Spastic diplegia",
+      "D. Cortical blindness"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This child has classic features of untreated congenital hypothyroidism (cretinism): coarse facies, macroglossia, umbilical hernia, and developmental delay. Thyroid hormone is essential for CNS myelination and development in the first 2-3 years. Delay in treatment beyond 3 months causes irreversible intellectual disability.",
+      "distractors": [
+        "Why option A is wrong \u2014 Hearing loss can occur in congenital infections (TORCH) or certain syndromes but is not the hallmark of untreated hypothyroidism.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Spastic diplegia is characteristic of periventricular leukomalacia and cerebral palsy, not hypothyroidism.",
+        "Why option D is wrong \u2014 Cortical blindness is associated with hypoxic-ischemic encephalopathy or occipital lobe injury, not hypothyroidism."
+      ],
+      "misconception": "Students may recognize cretinism but not appreciate the narrow therapeutic window for preventing permanent neurologic damage.",
+      "takeaway": "Untreated congenital hypothyroidism causes irreversible intellectual disability if treatment is delayed beyond 3 months; newborn screening is critical.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypothyroidism_neuro",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "cretinism",
+        "intellectual disability",
+        "newborn screening",
+        "development"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_008",
+    "question": "A 14-year-old girl with Hashimoto thyroiditis on stable levothyroxine presents with palpitations, tremors, and insomnia. Her TSH is 0.1 mIU/L and free T4 is 2.1 ng/dL. Which is the most likely cause?",
+    "options": [
+      "A. Development of Graves disease (hashitoxicosis)",
+      "B. Excessive levothyroxine dosing",
+      "C. Natural resolution of Hashimoto thyroiditis",
+      "D. Intercurrent viral thyroiditis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The most common cause of iatrogenic hyperthyroidism in a patient on levothyroxine is excessive dosing. The suppressed TSH and elevated free T4 confirm over-replacement. Dose reduction is indicated. While hashitoxicosis is possible, it is far less common than simple over-dosing in a patient already on replacement.",
+      "distractors": [
+        "Why option A is wrong \u2014 Hashitoxicosis (transient hyperthyroidism in Hashimoto) is possible but uncommon; iatrogenic over-replacement is the most likely explanation in a patient on exogenous thyroxine.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Hashimoto thyroiditis does not resolve naturally; it typically progresses to permanent hypothyroidism.",
+        "Why option D is wrong \u2014 Subacute (de Quervain) thyroiditis causes painful thyroid and transient hyperthyroidism, but this patient has painless chronic autoimmune thyroiditis on replacement therapy."
+      ],
+      "misconception": "Students may jump to rare explanations like hashitoxicosis without first considering medication dosing errors, which are far more common.",
+      "takeaway": "In a hypothyroid patient on levothyroxine who develops hyperthyroid symptoms, check compliance and dosing first before considering rare etiologies.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "hypothyroidism_overtreatment",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Hashimoto",
+        "levothyroxine",
+        "hyperthyroidism",
+        "over-replacement"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_009",
+    "question": "A newborn with Down syndrome is being monitored closely. At 4 weeks, the TSH is 25 mIU/L and free T4 is 0.9 ng/dL. What is the recommended management?",
+    "options": [
+      "A. Repeat labs at 3 months since Down syndrome has physiologically higher TSH",
+      "B. Start levothyroxine because congenital hypothyroidism is common in Down syndrome",
+      "C. Order thyroid ultrasound to confirm gland presence before treatment",
+      "D. Start methimazole to prevent progression to hyperthyroidism"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Congenital hypothyroidism occurs in approximately 1 in 140 infants with Down syndrome. An elevated TSH with low-normal or low free T4 in a symptomatic or at-risk infant warrants treatment. Delaying treatment risks neurodevelopmental impairment.",
+      "distractors": [
+        "Why option A is wrong \u2014 While Down syndrome may have slightly altered thyroid function, an elevated TSH with low free T4 is not physiologic; it represents true hypothyroidism requiring treatment.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Imaging is not required to initiate treatment in biochemically confirmed hypothyroidism; treatment should not be delayed.",
+        "Why option D is wrong \u2014 Methimazole treats hyperthyroidism; this infant is hypothyroid and requires levothyroxine, not antithyroid medication."
+      ],
+      "misconception": "Students may attribute abnormal thyroid labs in Down syndrome to the syndrome itself rather than recognizing the increased risk of true hypothyroidism.",
+      "takeaway": "Down syndrome has a 25-50x increased risk of congenital and acquired hypothyroidism; treat confirmed hypothyroidism promptly.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "hypothyroidism_down_syndrome",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Down syndrome",
+        "congenital hypothyroidism",
+        "screening"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_010",
+    "question": "Which of the following laboratory findings best distinguishes primary hypothyroidism from secondary (pituitary) hypothyroidism?",
+    "options": [
+      "A. Primary: low TSH, low free T4; Secondary: high TSH, low free T4",
+      "B. Primary: high TSH, low free T4; Secondary: low/normal TSH, low free T4",
+      "C. Primary: high TSH, high free T4; Secondary: low TSH, low free T4",
+      "D. Primary: low TSH, high free T4; Secondary: high TSH, low free T4"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In primary hypothyroidism, the thyroid gland fails, so TSH rises as feedback inhibition is lost. In secondary (pituitary) hypothyroidism, TSH is inappropriately low or normal despite low free T4 because the pituitary cannot secrete TSH.",
+      "distractors": [
+        "Why option A is wrong \u2014 This reverses the patterns; low TSH with low T4 is secondary, not primary.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 High TSH with high free T4 suggests thyroid hormone resistance, not primary hypothyroidism.",
+        "Why option D is wrong \u2014 Low TSH with high free T4 is classic for hyperthyroidism or exogenous thyroid hormone excess."
+      ],
+      "misconception": "Students often assume TSH is always elevated in hypothyroidism and miss the diagnosis of secondary hypothyroidism with low TSH.",
+      "takeaway": "Primary hypothyroidism = high TSH + low T4; Secondary hypothyroidism = low/normal TSH + low T4.",
+      "relatedTopic": "hypothyroid"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "hypothyroidism_primary_vs_secondary",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "TSH",
+        "free T4",
+        "primary hypothyroidism",
+        "secondary hypothyroidism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_011",
+    "question": "A 15-year-old girl presents with 3 months of weight loss, heat intolerance, palpitations, and tremor. Examination reveals a diffuse goiter, exophthalmos, and resting tachycardia (120 bpm). Which test is most specific for confirming the underlying autoimmune etiology?",
+    "options": [
+      "A. Serum TSH receptor antibody (TRAb) or TSI",
+      "B. Thyroid peroxidase antibody (anti-TPO)",
+      "C. Radioactive iodine uptake and scan",
+      "D. Thyroid ultrasound with Doppler"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "The clinical picture is classic for Graves disease (autoimmune hyperthyroidism). TSH receptor antibodies (TRAb) or thyroid-stimulating immunoglobulins (TSI) are pathognomonic for Graves disease and confirm the autoimmune etiology. Anti-TPO is nonspecific and can be positive in other thyroid diseases.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Anti-TPO is present in Hashimoto thyroiditis and is nonspecific; it does not confirm Graves disease.",
+        "Why option C is wrong \u2014 RAIU shows diffusely increased uptake in Graves but does not establish the autoimmune nature; it is also contraindicated in pregnancy and avoided in children if possible.",
+        "Why option D is wrong \u2014 Ultrasound shows diffuse thyroid enlargement and increased vascularity but is not specific for autoimmune etiology."
+      ],
+      "misconception": "Students often use anti-TPO or ultrasound to diagnose Graves disease, not realizing that TRAb/TSI are the specific serologic markers.",
+      "takeaway": "Graves disease diagnosis: clinical picture + TRAb/TSI positivity; anti-TPO alone is insufficient.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "graves_disease_diagnosis",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Graves disease",
+        "TRAb",
+        "TSI",
+        "hyperthyroidism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_012",
+    "question": "A 14-year-old with newly diagnosed Graves disease has mild disease without ophthalmopathy. What is the recommended first-line treatment?",
+    "options": [
+      "A. Radioactive iodine ablation",
+      "B. Subtotal thyroidectomy",
+      "C. Antithyroid drugs (methimazole or PTU)",
+      "D. Propranolol alone until spontaneous remission"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Antithyroid drugs (ATDs) are the first-line treatment for Graves disease in children and adolescents. Methimazole is preferred over PTU due to better safety profile (except in first-trimester pregnancy). ATDs induce remission in 30-40% of children after 1-2 years of therapy.",
+      "distractors": [
+        "Why option A is wrong \u2014 Radioactive iodine is generally avoided as first-line in children due to concerns about malignancy risk, though it is used in some centers for refractory cases or when other options fail.",
+        "Why option B is wrong \u2014 Thyroidectomy is reserved for patients with very large goiters, suspicious nodules, or failure of medical therapy; it is not first-line.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 Beta-blockers provide symptomatic relief but do not treat the underlying autoimmune disease; spontaneous remission is uncommon without ATDs."
+      ],
+      "misconception": "Students may think radioactive iodine or surgery are first-line for Graves disease because they are definitive, but ATDs are preferred in pediatric patients.",
+      "takeaway": "Pediatric Graves disease: antithyroid drugs (methimazole preferred) are first-line; RAI and surgery are reserved for refractory cases.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "graves_disease_management",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Graves disease",
+        "methimazole",
+        "antithyroid drugs",
+        "first-line"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_013",
+    "question": "A 16-year-old girl on methimazole for Graves disease develops jaundice and right upper quadrant pain. Liver enzymes show AST 450 U/L and ALT 520 U/L. Which antithyroid drug is most commonly associated with this complication, and what is the appropriate management?",
+    "options": [
+      "A. Methimazole; reduce the dose and add hepatoprotective agents",
+      "B. Propylthiouracil (PTU); stop immediately and switch to methimazole or consider definitive therapy",
+      "C. Methimazole; stop immediately and switch to PTU",
+      "D. PTU; continue with close monitoring since hepatotoxicity is usually mild"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "PTU is associated with severe, potentially fatal hepatotoxicity (including fulminant hepatic failure) in children and adults. Methimazole has a much better hepatic safety profile. Current guidelines recommend methimazole as the first-line antithyroid drug. If PTU causes hepatotoxicity, it must be stopped permanently, and alternative therapy (methimazole, RAI, or surgery) should be pursued.",
+      "distractors": [
+        "Why option A is wrong \u2014 Methimazole can cause cholestatic injury but is far less hepatotoxic than PTU; reducing dose is not appropriate for severe hepatitis, and the drug in question is PTU.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 This reverses the drugs; methimazole does not typically cause severe hepatotoxicity, and switching from methimazole to PTU would worsen hepatic risk.",
+        "Why option D is wrong \u2014 PTU hepatotoxicity can be life-threatening and is not 'usually mild'; continuing the drug risks fatal hepatic failure."
+      ],
+      "misconception": "Students may not appreciate the significant difference in hepatotoxicity risk between PTU and methimazole, or may think PTU is safer in children.",
+      "takeaway": "PTU carries risk of severe hepatotoxicity; methimazole is preferred in children. If PTU causes hepatitis, stop permanently.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "antithyroid_drug_hepatotoxicity",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "PTU",
+        "methimazole",
+        "hepatotoxicity",
+        "Graves disease"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_014",
+    "question": "A mother with active Graves disease gives birth to a full-term infant. At 48 hours, the infant is irritable, tachycardic (180 bpm), has a small goiter, and is feeding poorly. What is the pathophysiology of this condition?",
+    "options": [
+      "A. Placental transfer of maternal thyroxine causing transient hyperthyroidism",
+      "B. Transplacental passage of TSH receptor-stimulating antibodies (TSI/TRAb)",
+      "C. Autosomal dominant mutation in the TSH receptor",
+      "D. Iodine excess from maternal prenatal vitamins"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Neonatal Graves disease is caused by transplacental passage of maternal TSH receptor-stimulating antibodies (TSI or TRAb). These antibodies stimulate the fetal thyroid gland, causing hyperthyroidism. It occurs in 1-5% of infants born to mothers with Graves disease, even if the mother is euthyroid on treatment.",
+      "distractors": [
+        "Why option A is wrong \u2014 Maternal thyroxine crosses the placenta but does not cause significant neonatal hyperthyroidism; the fetal HPT axis is autonomous, and maternal T4 does not suppress fetal TSH effectively.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Germline TSH receptor activating mutations cause non-autoimmune congenital hyperthyroidism, which is rare and not related to maternal thyroid disease.",
+        "Why option D is wrong \u2014 Iodine excess can cause transient hypothyroidism or hyperthyroidism (Jod-Basedow) but is not the mechanism in infants of mothers with Graves disease."
+      ],
+      "misconception": "Students may attribute neonatal Graves to maternal thyroid hormone transfer rather than antibody-mediated pathophysiology.",
+      "takeaway": "Neonatal Graves disease is caused by transplacental TSI/TRAb; treat with antithyroid drugs, beta-blockers, and iodide if severe.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "neonatal_graves_disease",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "neonatal Graves",
+        "TSI",
+        "TRAb",
+        "transplacental"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_015",
+    "question": "A 12-year-old with Graves disease develops high fever (40\u00b0C), severe tachycardia, agitation, and vomiting 2 days after stopping methimazole due to a viral illness. What is the most appropriate immediate pharmacologic intervention?",
+    "options": [
+      "A. Restart methimazole and add propranolol",
+      "B. Give potassium iodide (SSKI) alone to block hormone release",
+      "C. Administer hydrocortisone 100 mg/m2 IV and supportive care only",
+      "D. Start propylthiouracil plus potassium iodide, propranolol, and hydrocortisone"
+    ],
+    "correctIndex": 3,
+    "explanation": {
+      "correct": "This patient has thyroid storm, a life-threatening hyperthyroid crisis. Management requires multiple simultaneous interventions: (1) antithyroid drug to block synthesis (PTU or methimazole), (2) iodide given 1 hour after ATD to block release (Wolff-Chaikoff effect), (3) beta-blocker for adrenergic symptoms, and (4) glucocorticoids to block T4-to-T3 conversion and treat relative adrenal insufficiency.",
+      "distractors": [
+        "Why option A is wrong \u2014 Restarting methimazole and propranolol alone is insufficient for thyroid storm; iodide and steroids are also required.",
+        "Why option B is wrong \u2014 Iodide alone stimulates new hormone synthesis (Jod-Basedow phenomenon) and can worsen the crisis if given without an antithyroid drug first.",
+        "Why option C is wrong \u2014 Steroids and supportive care alone do not block thyroid hormone synthesis or release; ATDs are essential.",
+        "Why option D is wrong \u2014 This IS the correct answer."
+      ],
+      "misconception": "Students often administer iodide first in thyroid storm, forgetting that it must be given after antithyroid drugs to prevent exacerbating hormone synthesis.",
+      "takeaway": "Thyroid storm: ATD first, then iodide 1 hour later, plus beta-blockers and hydrocortisone.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "thyroid_storm",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "thyroid storm",
+        "thyrotoxicosis",
+        "emergency management"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_016",
+    "question": "A 9-year-old boy presents with a solitary thyroid nodule and biochemical hyperthyroidism. There is no family history of thyroid disease. What is the most appropriate next step in management?",
+    "options": [
+      "A. Start methimazole and observe for 6 months",
+      "B. Perform fine-needle aspiration cytology (FNAC) followed by surgical resection",
+      "C. Administer radioactive iodine ablation",
+      "D. Reassure and repeat ultrasound in 1 year"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Thyroid nodules in children have a higher risk of malignancy (approximately 20-25%) compared to adults (5-10%). A hyperfunctioning ('toxic') nodule in a child is often an autonomously functioning adenoma, but malignancy must be excluded. FNAC is indicated, and surgical resection is often recommended for definitive diagnosis and treatment in children.",
+      "distractors": [
+        "Why option A is wrong \u2014 Medical management alone delays diagnosis of potential malignancy; children with thyroid nodules require tissue diagnosis.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Radioactive iodine is generally avoided in children due to concerns about malignancy and is not appropriate without first excluding cancer.",
+        "Why option D is wrong \u2014 Observation alone is inappropriate given the significantly higher malignancy rate of thyroid nodules in children."
+      ],
+      "misconception": "Students often apply adult management (observation or RAI) to pediatric thyroid nodules, not recognizing the higher malignancy risk in children.",
+      "takeaway": "Pediatric thyroid nodules have 20-25% malignancy risk; evaluate with FNAC and consider surgical resection.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "thyroid_nodule_pediatric",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "thyroid nodule",
+        "hyperthyroidism",
+        "FNAC",
+        "pediatric"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_017",
+    "question": "An adolescent with Graves disease on methimazole asks about the chance of permanent remission if antithyroid drugs are continued for 2 years. What is the approximate remission rate in children?",
+    "options": [
+      "A. Less than 10%",
+      "B. 30-40%",
+      "C. 70-80%",
+      "D. Greater than 90%"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The remission rate with antithyroid drugs in children with Graves disease is approximately 30-40%, which is lower than in adults (40-50%). Children often require longer treatment duration or definitive therapy (RAI or surgery) compared to adults.",
+      "distractors": [
+        "Why option A is wrong \u2014 While remission rates in children are lower than adults, they are not as low as 10%; ATDs are still a reasonable first-line approach.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 70-80% remission is higher than observed in pediatric populations and may reflect adult data or overly optimistic expectations.",
+        "Why option D is wrong \u2014 Greater than 90% remission is unrealistic for Graves disease with any treatment modality."
+      ],
+      "misconception": "Students may overestimate remission rates in pediatric Graves disease based on adult literature, leading to inappropriate expectations about medical therapy alone.",
+      "takeaway": "Pediatric Graves disease remission with ATDs is ~30-40%; many children eventually require RAI or surgery.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "graves_disease_remission",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 33. Thyroid Disorders",
+      "tags": [
+        "Graves disease",
+        "remission",
+        "antithyroid drugs",
+        "pediatric"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_018",
+    "question": "A 5-year-old boy is referred for evaluation of short stature. His height is 95 cm (<3rd percentile), and he has grown only 3 cm in the past year. His birth weight was 3.2 kg at term. His parents' heights are at the 50th percentile. What is the most appropriate initial screening test?",
+    "options": [
+      "A. Growth hormone stimulation test with clonidine and arginine",
+      "B. Serum IGF-1 and IGFBP-3 levels",
+      "C. Karyotype analysis",
+      "D. MRI of the hypothalamus and pituitary"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "IGF-1 and IGFBP-3 are the best initial screening tests for GH deficiency. They reflect integrated GH secretion over time. If screening is low, a GH stimulation test is performed for confirmation. Karyotype is indicated for girls with short stature (Turner syndrome), and MRI is reserved for confirmed GH deficiency or neurologic signs.",
+      "distractors": [
+        "Why option A is wrong \u2014 GH stimulation tests are confirmatory, not screening, and are invasive, time-consuming, and expensive; they should not be the first test.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Karyotype is important in girls with short stature but is not the initial test for a boy unless there are dysmorphic features suggesting a syndrome.",
+        "Why option D is wrong \u2014 MRI is indicated after confirming GH deficiency or if there are CNS symptoms; it is not a screening test."
+      ],
+      "misconception": "Students often jump directly to GH stimulation tests without first screening with IGF-1/IGFBP-3, or order expensive imaging prematurely.",
+      "takeaway": "Short stature workup: screen with IGF-1/IGFBP-3 first; if low, proceed to GH stimulation testing.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "short_stature_screening",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "short stature",
+        "IGF-1",
+        "IGFBP-3",
+        "GH deficiency",
+        "screening"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_019",
+    "question": "A 6-year-old boy with confirmed GH deficiency starts recombinant human GH therapy at 0.3 mg/kg/week. What is the expected growth velocity in the first year of treatment?",
+    "options": [
+      "A. 3-4 cm/year (minimal change from pretreatment)",
+      "B. 6-7 cm/year (moderate improvement)",
+      "C. 8-12 cm/year (catch-up growth)",
+      "D. 15-20 cm/year (excessive growth)"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Children with GH deficiency typically show dramatic catch-up growth in the first year of GH therapy, with growth velocity increasing to 8-12 cm/year (sometimes higher). This is 2-3 times their pretreatment growth velocity. The response gradually attenuates in subsequent years.",
+      "distractors": [
+        "Why option A is wrong \u2014 3-4 cm/year indicates treatment failure or incorrect diagnosis; pretreatment velocity in GH deficiency is typically 3-4 cm/year.",
+        "Why option B is wrong \u2014 6-7 cm/year is below the expected response and may indicate partial GH deficiency, poor compliance, or another diagnosis.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 15-20 cm/year is excessive and suggests over-dosing or another disorder; normal catch-up growth rarely exceeds 12 cm/year."
+      ],
+      "misconception": "Students may not appreciate the magnitude of catch-up growth with GH therapy and expect only modest improvements.",
+      "takeaway": "GH deficiency treatment: expect 8-12 cm/year growth velocity in year 1; attenuation occurs in years 2-3.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "gh_therapy_response",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "GH therapy",
+        "growth velocity",
+        "catch-up growth"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_020",
+    "question": "A 13-year-old boy is short (height 3rd percentile) but has grown consistently along his growth curve. His bone age is 11 years. His father had his growth spurt at age 15. The boy has no dysmorphic features and normal IGF-1/IGFBP-3. What is the most likely diagnosis?",
+    "options": [
+      "A. Growth hormone deficiency",
+      "B. Constitutional delay of growth and puberty (CDGP)",
+      "C. Familial short stature",
+      "D. Hypothyroidism"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Constitutional delay of growth and puberty (CDGP) is characterized by short stature with delayed bone age, family history of delayed puberty, normal growth velocity for bone age, and normal GH-IGF axis. The growth curve is consistent (following a percentile), and there is no evidence of organic disease.",
+      "distractors": [
+        "Why option A is wrong \u2014 GH deficiency causes decreased growth velocity, delayed bone age disproportionate to height age, and low IGF-1/IGFBP-3; this patient has normal screening labs.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Familial short stature is associated with short parents and bone age matching chronological age; this patient's bone age is delayed, and his parents are of normal height.",
+        "Why option D is wrong \u2014 Hypothyroidism would cause delayed bone age but also symptoms like fatigue, constipation, and abnormal thyroid function tests."
+      ],
+      "misconception": "Students often confuse CDGP with GH deficiency or familial short stature, not recognizing the importance of growth velocity and bone age correlation.",
+      "takeaway": "CDGP: delayed bone age, family history of late puberty, normal labs, consistent growth curve for bone age.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "constitutional_delay_growth_puberty",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "constitutional delay",
+        "CDGP",
+        "bone age",
+        "short stature"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_021",
+    "question": "A 4-year-old girl born small for gestational age (birth weight 1.8 kg at term) has not shown catch-up growth. Her current height is -2.8 SD. She is otherwise healthy with normal development. Which treatment is indicated?",
+    "options": [
+      "A. Recombinant human growth hormone (GH) therapy",
+      "B. Testosterone enanthate injections to stimulate growth",
+      "C. High-dose thyroxine to accelerate skeletal maturation",
+      "D. Observation alone until puberty"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Children born SGA who fail to demonstrate catch-up growth by age 2-4 years are candidates for GH therapy. GH is FDA-approved for SGA without catch-up growth. The dose is typically higher than for GH deficiency (0.48 mg/kg/week). Testosterone would accelerate epiphyseal fusion and compromise final height.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Androgens accelerate bone age and epiphyseal fusion, reducing final adult height; they are contraindicated for height augmentation in prepubertal children.",
+        "Why option C is wrong \u2014 High-dose thyroxine without hypothyroidism causes iatrogenic hyperthyroidism, bone loss, and cardiac toxicity without improving growth.",
+        "Why option D is wrong \u2014 Observation beyond age 2-4 misses the therapeutic window; catch-up growth rarely occurs spontaneously after this age in SGA children."
+      ],
+      "misconception": "Students may think SGA children will always catch up spontaneously or may consider inappropriate hormonal therapies like androgens for short stature.",
+      "takeaway": "SGA without catch-up by age 2-4 years \u2192 GH therapy indicated; do NOT use androgens or thyroid hormone.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "sga_gh_therapy",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "SGA",
+        "small for gestational age",
+        "GH therapy",
+        "catch-up growth"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_022",
+    "question": "A 12-year-old girl with short stature, webbed neck, low posterior hairline, and broad chest with widely spaced nipples is evaluated. Which karyotype finding and GH therapy indication are most likely?",
+    "options": [
+      "A. 47,XXY; GH therapy not indicated",
+      "B. 45,X; GH therapy is FDA-approved to increase adult height",
+      "C. 46,XX; GH therapy is contraindicated due to risk of malignancy",
+      "D. 47,XXX; GH therapy only if GH deficiency is confirmed"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The clinical features are classic for Turner syndrome (45,X or mosaic). GH therapy is FDA-approved for Turner syndrome to increase adult height, even in the absence of biochemical GH deficiency. Treatment should begin early (around 4-6 years) to maximize height gain before estrogen therapy.",
+      "distractors": [
+        "Why option A is wrong \u2014 47,XXY is Klinefelter syndrome (males with tall stature, small testes, gynecomastia), not Turner syndrome.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Turner syndrome is not 46,XX, and GH therapy is not contraindicated; it is specifically approved for this condition.",
+        "Why option D is wrong \u2014 47,XXX (Triple X syndrome) does not cause the characteristic stigmata of Turner syndrome, and GH in Turner does not require documented GH deficiency."
+      ],
+      "misconception": "Students may not recognize Turner syndrome stigmata or may think GH therapy requires documented GH deficiency in Turner syndrome.",
+      "takeaway": "Turner syndrome (45,X): webbed neck, broad chest, lymphedema; GH therapy approved to increase height regardless of GH status.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "turner_syndrome",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "Turner syndrome",
+        "45X",
+        "GH therapy",
+        "short stature"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_023",
+    "question": "A 7-year-old boy on GH therapy for 18 months complains of progressive right hip and knee pain and begins to limp. Examination reveals limited internal rotation of the right hip. What is the most likely complication?",
+    "options": [
+      "A. Juvenile idiopathic arthritis",
+      "B. Slipped capital femoral epiphysis (SCFE)",
+      "C. Rickets due to vitamin D deficiency",
+      "D. Growing pains with no pathologic significance"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "GH therapy accelerates growth and can predispose to slipped capital femoral epiphysis (SCFE), particularly in children with underlying risk factors (obesity, hypothyroidism, GH deficiency itself). Hip or knee pain with limp in a child on GH requires urgent hip radiographs to evaluate for SCFE.",
+      "distractors": [
+        "Why option A is wrong \u2014 JIA causes joint swelling, morning stiffness, and elevated inflammatory markers; it is not specifically associated with GH therapy.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Rickets causes metaphyseal changes and bone pain but not acute hip pain with limited rotation; it is unrelated to GH therapy.",
+        "Why option D is wrong \u2014 Growing pains are bilateral, nocturnal, and not associated with limp or limited range of motion; limp is always pathologic."
+      ],
+      "misconception": "Students may dismiss hip/knee pain in GH-treated children as 'growing pains,' missing the potentially serious diagnosis of SCFE.",
+      "takeaway": "GH therapy is a risk factor for SCFE; any child on GH with hip/knee pain and limp needs urgent hip X-ray.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "gh_therapy_complications",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "GH therapy",
+        "SCFE",
+        "hip pain",
+        "complications"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_024",
+    "question": "In interpreting a growth chart, a child whose height percentile has dropped from the 50th to the 10th over 2 years is most concerning for which of the following?",
+    "options": [
+      "A. Familial short stature",
+      "B. Constitutional delay of growth and puberty",
+      "C. Pathologic growth failure",
+      "D. Normal variant within genetic potential"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Crossing percentiles downward (decelerating growth) is a red flag for pathologic growth failure. Familial short stature and constitutional delay are characterized by consistent growth along a percentile or parallel to normal curves. Any child dropping >2 major percentile lines requires evaluation for organic disease.",
+      "distractors": [
+        "Why option A is wrong \u2014 Familial short stature follows a consistent, low percentile channel matching parental heights; there is no downward crossing.",
+        "Why option B is wrong \u2014 Constitutional delay may show delayed bone age but typically maintains a consistent height percentile for bone age, not progressive downward crossing.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 A drop from 50th to 10th percentile is never a normal variant and mandates investigation for endocrine, nutritional, or systemic disease."
+      ],
+      "misconception": "Students may confuse normal variants (familial short stature, CDGP) with pathologic growth deceleration, missing the significance of crossing growth percentiles.",
+      "takeaway": "Downward crossing of >2 major percentile lines = pathologic growth failure until proven otherwise.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "growth_chart_interpretation",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "growth chart",
+        "percentile crossing",
+        "growth failure",
+        "screening"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_025",
+    "question": "A 9-year-old boy with craniopharyngioma resection 6 months ago now presents with polyuria (5 L/day), polydipsia, and nocturia. Serum sodium is 148 mEq/L, urine specific gravity is 1.002. What is the most likely diagnosis?",
+    "options": [
+      "A. Syndrome of inappropriate antidiuretic hormone (SIADH)",
+      "B. Central diabetes insipidus",
+      "C. Type 1 diabetes mellitus",
+      "D. Psychogenic polydipsia"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Craniopharyngioma surgery commonly damages the posterior pituitary or pituitary stalk, causing central diabetes insipidus (DI). The hallmark is dilute polyuria (low specific gravity/osmolality) with hypernatremia and dehydration if fluid intake is inadequate. This contrasts with SIADH (concentrated urine, hyponatremia) and diabetes mellitus (glucosuria, hyperglycemia).",
+      "distractors": [
+        "Why option A is wrong \u2014 SIADH causes water retention, concentrated urine, and hyponatremia; this patient has dilute urine and hypernatremia.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Type 1 DM causes polyuria due to osmotic diuresis from glucosuria, but urine specific gravity would be high (due to glucose), and blood glucose would be elevated.",
+        "Why option D is wrong \u2014 Psychogenic polydipsia causes polyuria but typically results in dilutional hyponatremia, not hypernatremia, and is unlikely post-neurosurgery."
+      ],
+      "misconception": "Students may confuse the polyuria of DI with diabetes mellitus or psychogenic polydipsia, not checking urine specific gravity or serum sodium.",
+      "takeaway": "Post-pituitary surgery + dilute polyuria + hypernatremia = central DI; confirm with water deprivation test and response to DDAVP.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "central_diabetes_insipidus",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "diabetes insipidus",
+        "craniopharyngioma",
+        "polyuria",
+        "posterior pituitary"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_026",
+    "question": "A child with central diabetes insipidus undergoes a water deprivation test. After 4 hours, urine osmolality remains <300 mOsm/kg while serum osmolality rises to 305 mOsm/kg. After DDAVP administration, urine osmolality increases to 650 mOsm/kg. What does this confirm?",
+    "options": [
+      "A. Nephrogenic diabetes insipidus",
+      "B. Primary polydipsia",
+      "C. Central diabetes insipidus",
+      "D. Partial diabetes insipidus of unclear etiology"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The water deprivation test distinguishes central DI, nephrogenic DI, and primary polydipsia. In central DI, urine does not concentrate during deprivation (low urine osmolality) but responds to exogenous DDAVP (vasopressin analog) because the renal tubules are intact. Nephrogenic DI does not respond to DDAVP.",
+      "distractors": [
+        "Why option A is wrong \u2014 Nephrogenic DI shows no response to DDAVP because the renal collecting ducts are resistant to vasopressin.",
+        "Why option B is wrong \u2014 Primary polydipsia shows urine concentration during water deprivation before DDAVP is given, as ADH secretion is intact.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 The clear response to DDAVP localizes the defect to the posterior pituitary/hypothalamus, making the etiology clear."
+      ],
+      "misconception": "Students may confuse the response patterns in water deprivation testing, particularly differentiating central from nephrogenic DI.",
+      "takeaway": "Water deprivation test: no concentration + DDAVP response = central DI; no concentration + no DDAVP response = nephrogenic DI.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "water_deprivation_test",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "diagnostic_reasoning",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "diabetes insipidus",
+        "water deprivation test",
+        "DDAVP",
+        "urine osmolality"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_027",
+    "question": "A 6-year-old girl is brought to clinic because her mother noticed breast budding. On examination, there is Tanner stage 2 breast development, but no pubic hair. Bone age is advanced by 2 years. Which test best distinguishes true central precocious puberty from peripheral causes?",
+    "options": [
+      "A. Serum estradiol level",
+      "B. GnRH stimulation test (LH response)",
+      "C. Pelvic ultrasound for ovarian volume",
+      "D. Serum DHEAS level"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The GnRH stimulation test is the gold standard for diagnosing central precocious puberty (CPP). In CPP, LH rises predominately (LH/FSH ratio >1) after GnRH administration, reflecting activation of the hypothalamic-pituitary-gonadal axis. Peripheral causes do not show a pubertal LH response.",
+      "distractors": [
+        "Why option A is wrong \u2014 Estradiol is elevated in both central and peripheral precocious puberty and does not distinguish the site of the disorder.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Pelvic ultrasound may show enlarged ovaries or uterus in CPP but is supportive, not diagnostic; peripheral causes can also cause ovarian enlargement.",
+        "Why option D is wrong \u2014 DHEAS reflects adrenal androgen production and is useful for diagnosing premature adrenarche or adrenal tumors, not for distinguishing central vs. peripheral gonadal puberty."
+      ],
+      "misconception": "Students often rely on imaging or basal hormone levels rather than the GnRH stimulation test to diagnose central precocious puberty.",
+      "takeaway": "GnRH stimulation test with pubertal LH response is diagnostic of central precocious puberty; peripheral causes do not activate the HPG axis.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "precocious_puberty_diagnosis",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "precocious puberty",
+        "GnRH stimulation",
+        "LH",
+        "CPP"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_028",
+    "question": "A 5-year-old girl has rapidly progressive breast development, vaginal bleeding, and acne over 3 months. Bone age is advanced by 4 years. GnRH stimulation test shows prepubertal LH response. What is the most likely underlying mechanism?",
+    "options": [
+      "A. Early activation of hypothalamic GnRH pulse generator",
+      "B. Autonomous ovarian estrogen secretion (peripheral precocious puberty)",
+      "C. Exogenous GnRH analog administration",
+      "D. Adrenal androgen excess with peripheral aromatization"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The prepubertal LH response to GnRH stimulation rules out central precocious puberty. Rapidly progressive feminization with autonomous estrogen secretion suggests an ovarian etiology such as an estrogen-secreting ovarian cyst or granulosa cell tumor. This is peripheral (gonadotropin-independent) precocious puberty.",
+      "distractors": [
+        "Why option A is wrong \u2014 Activation of the GnRH pulse generator causes central precocious puberty, which would show a pubertal LH response to GnRH stimulation.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Exogenous GnRH analogs suppress the HPG axis and are used to treat CPP, not cause it; they would not produce a prepubertal LH response in this context.",
+        "Why option D is wrong \u2014 Adrenal androgen excess causes virilization (pubic hair, clitoromegaly, acne) but not breast development and vaginal bleeding as primary features."
+      ],
+      "misconception": "Students may not appreciate that rapidly progressive puberty with a prepubertal GnRH response indicates an autonomous peripheral (gonadal or adrenal) source of sex steroids.",
+      "takeaway": "Prepubertal LH on GnRH test + rapid feminization = peripheral precocious puberty; evaluate ovaries and adrenal glands for tumors.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "peripheral_precocious_puberty",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "peripheral precocious puberty",
+        "ovarian tumor",
+        "GnRH test",
+        "autonomous"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_029",
+    "question": "A 7-year-old girl with confirmed central precocious puberty has a bone age of 10 years and predicted adult height of 145 cm. What is the treatment of choice to preserve adult height?",
+    "options": [
+      "A. Recombinant growth hormone to accelerate growth velocity",
+      "B. GnRH analog (leuprolide) to suppress gonadotropin secretion",
+      "C. Medroxyprogesterone to inhibit breast development",
+      "D. Observation since early puberty does not affect final height"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "GnRH analogs (leuprolide, triptorelin) are the treatment of choice for central precocious puberty. They suppress pituitary gonadotropin secretion, halt pubertal progression, and slow bone age advancement, thereby preserving adult height. GH is not indicated unless there is concomitant GH deficiency.",
+      "distractors": [
+        "Why option A is wrong \u2014 GH accelerates growth but also advances bone age; without GnRH suppression, it would not improve predicted adult height and might worsen it.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Progestins may reduce breast development but do not suppress the HPG axis or slow bone age advancement effectively.",
+        "Why option D is wrong \u2014 Early puberty causes premature epiphyseal fusion and significantly reduces adult height; observation is inappropriate when height compromise is predicted."
+      ],
+      "misconception": "Students may think GH alone can treat short stature in CPP without understanding that suppressing puberty is essential to preserving growth potential.",
+      "takeaway": "CPP with threatened height \u2192 GnRH analog is first-line; it halts puberty and preserves growth potential.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "central_precocious_puberty_treatment",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "precocious puberty",
+        "GnRH analog",
+        "leuprolide",
+        "adult height"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_030",
+    "question": "A 15-year-old boy has no testicular enlargement (testicular volume <4 mL), sparse pubic hair, and a height at the 3rd percentile. His father and paternal uncle had their growth spurts at age 16. Bone age is 12 years. What is the most likely diagnosis?",
+    "options": [
+      "A. Klinefelter syndrome (47,XXY)",
+      "B. Constitutional delay of growth and puberty (CDGP)",
+      "C. Isolated hypogonadotropic hypogonadism (Kallmann syndrome)",
+      "D. Primary testicular failure"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Constitutional delay of growth and puberty (CDGP) is the most common cause of delayed puberty in boys. It is characterized by delayed bone age, family history of delayed puberty, and normal growth velocity for bone age. The key distinguishing feature is the positive family history and absence of pathologic signs.",
+      "distractors": [
+        "Why option A is wrong \u2014 Klinefelter syndrome causes tall stature, small firm testes, gynecomastia, and learning difficulties; this patient has short stature and small but prepubertal testes.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Kallmann syndrome (hypogonadotropic hypogonadism with anosmia) is a pathologic cause of delayed puberty; this patient has no anosmia or other neurologic findings, and CDGP is far more common.",
+        "Why option D is wrong \u2014 Primary testicular failure would show elevated LH/FSH with low testosterone; in CDGP, gonadotropins are low, consistent with delayed activation of the HPG axis."
+      ],
+      "misconception": "Students may over-diagnose rare conditions like Kallmann syndrome without first considering the much more common constitutional delay, especially with a positive family history.",
+      "takeaway": "Delayed puberty in boys: CDGP > pathologic causes; family history of late puberty strongly supports CDGP.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "delayed_puberty_boys",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "delayed puberty",
+        "constitutional delay",
+        "CDGP",
+        "boys"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_031",
+    "question": "A 14-year-old boy with delayed puberty has no sense of smell (anosmia) and color blindness. His testicular volume is 3 mL, and serum testosterone is 50 ng/dL. MRI shows absent olfactory bulbs. What is the diagnosis?",
+    "options": [
+      "A. Prader-Willi syndrome",
+      "B. Kallmann syndrome",
+      "C. Turner syndrome",
+      "D. Noonan syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Kallmann syndrome is characterized by isolated hypogonadotropic hypogonadism with anosmia or hyposmia, due to defective migration of GnRH neurons and olfactory bulbs. It is the second most common cause of delayed puberty in boys (after CDGP) and is distinguished by the associated anosmia.",
+      "distractors": [
+        "Why option A is wrong \u2014 Prader-Willi syndrome causes hypogonadism, obesity, hypotonia, hyperphagia, and intellectual disability, but not anosmia or absent olfactory bulbs.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Turner syndrome occurs in females (45,X) and presents with short stature, webbed neck, and primary amenorrhea, not in males with anosmia.",
+        "Why option D is wrong \u2014 Noonan syndrome causes short stature, webbed neck, congenital heart defects, and bleeding diathesis; puberty may be delayed but anosmia is not a feature."
+      ],
+      "misconception": "Students may not link anosmia with delayed puberty, missing the classic diagnosis of Kallmann syndrome.",
+      "takeaway": "Delayed puberty + anosmia + absent olfactory bulbs = Kallmann syndrome (isolated hypogonadotropic hypogonadism).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "kallmann_syndrome",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "Kallmann syndrome",
+        "delayed puberty",
+        "anosmia",
+        "hypogonadotropic"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_032",
+    "question": "A 4-year-old girl has irregular caf\u00e9-au-lait spots with irregular ('coast of Maine') borders, precocious puberty with vaginal bleeding, and fibrous dysplasia of the right femur on X-ray. Which genetic mutation is most likely responsible?",
+    "options": [
+      "A. NF1 gene mutation on chromosome 17",
+      "B. GNAS activating mutation (McCune-Albright syndrome)",
+      "C. LH receptor activating mutation",
+      "D. Aromatase gene mutation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The triad of precocious puberty, caf\u00e9-au-lait spots with irregular borders, and polyostotic fibrous dysplasia is pathognomonic for McCune-Albright syndrome, caused by a postzygotic activating mutation in the GNAS gene (Gs-alpha protein). The precocious puberty is peripheral (gonadotropin-independent) due to autonomous ovarian activation.",
+      "distractors": [
+        "Why option A is wrong \u2014 NF1 causes neurofibromatosis with caf\u00e9-au-lait spots (smooth 'coast of California' borders), neurofibromas, and Lisch nodules, but not the characteristic bone lesions or gonadotropin-independent precocious puberty.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 LH receptor activating mutations cause familial male-limited precocious puberty (testotoxicosis) in boys, not this phenotype in girls.",
+        "Why option D is wrong \u2014 Aromatase excess syndrome causes gynecomastia in boys and precocious puberty, but not caf\u00e9-au-lait spots or fibrous dysplasia."
+      ],
+      "misconception": "Students may confuse the caf\u00e9-au-lait spots of McCune-Albright syndrome (irregular borders) with those of NF1 (smooth borders), missing the diagnosis.",
+      "takeaway": "McCune-Albright = irregular caf\u00e9-au-lait spots + peripheral precocious puberty + fibrous dysplasia; caused by GNAS mutation.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "mccune_albright_syndrome",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "McCune-Albright",
+        "GNAS",
+        "precocious puberty",
+        "fibrous dysplasia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_033",
+    "question": "An 11-year-old girl with central precocious puberty is treated with a GnRH analog. Which expected outcome best indicates successful therapy?",
+    "options": [
+      "A. Resumption of menses within 6 months",
+      "B. Slowing of linear growth velocity to <4 cm/year",
+      "C. Deceleration of bone age advancement relative to chronologic age",
+      "D. Development of secondary sexual characteristics appropriate for bone age"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Successful GnRH analog therapy should halt pubertal progression and slow bone age advancement so that the ratio of bone age to chronologic age improves. The goal is to preserve or improve predicted adult height. Growth velocity may decrease initially but should be appropriate for the new, younger bone age.",
+      "distractors": [
+        "Why option A is wrong \u2014 Resumption of menses indicates treatment failure or discontinuation; successful therapy should suppress menses.",
+        "Why option B is wrong \u2014 Growth velocity slowing excessively may indicate over-suppression; the goal is appropriate growth for bone age, not just slow growth.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 Development of secondary sexual characteristics indicates pubertal progression and treatment failure."
+      ],
+      "misconception": "Students may think slowing growth velocity alone indicates success, not realizing that the critical goal is preserving height potential by matching bone age to chronologic age.",
+      "takeaway": "GnRH analog success = halted puberty + bone age advancing slower than chronologic age + improved predicted adult height.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "gnrh_analog_monitoring",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "GnRH analog",
+        "precocious puberty",
+        "bone age",
+        "treatment response"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_034",
+    "question": "In a 14-year-old boy, which finding represents the first reliable sign of pubertal onset?",
+    "options": [
+      "A. Appearance of pubic hair (Tanner stage 2)",
+      "B. Testicular enlargement to >4 mL volume",
+      "C. Voice change and acne",
+      "D. Growth spurt exceeding 6 cm/year"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Testicular enlargement to >4 mL (or longest axis >2.5 cm) is the first reliable sign of true gonadarche in boys. Pubic hair can result from adrenal androgen secretion (adrenarche) independent of gonadal activation. Voice change, acne, and growth spurt are later pubertal events.",
+      "distractors": [
+        "Why option A is wrong \u2014 Pubic hair (pubarche) can occur due to adrenal maturation (adrenarche) and does not necessarily indicate true gonadal puberty.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Voice change and acne are mid-to-late pubertal changes driven by testosterone and typically occur after testicular enlargement.",
+        "Why option D is wrong \u2014 The growth spurt occurs in mid-puberty (Tanner stages 3-4) and is not the first sign of pubertal onset."
+      ],
+      "misconception": "Students often mistake pubarche (pubic hair) for the first sign of puberty in boys, not realizing that testicular enlargement is the true marker of gonadarche.",
+      "takeaway": "First sign of puberty in boys = testicular enlargement >4 mL; pubic hair alone may be adrenarche.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "puberty_onset_boys",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "puberty",
+        "testicular enlargement",
+        "gonadarche",
+        "boys"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_035",
+    "question": "A 16-year-old girl with primary amenorrhea has a height of 142 cm, webbed neck, low posterior hairline, and widely spaced nipples. Her FSH is 85 mIU/L and estradiol is <10 pg/mL. Which karyotype and associated endocrine condition are most likely?",
+    "options": [
+      "A. 46,XX; primary ovarian insufficiency",
+      "B. 45,X; increased risk of autoimmune thyroiditis",
+      "C. 47,XXX; fragile X premutation",
+      "D. 46,XY; androgen insensitivity syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This is Turner syndrome (45,X or mosaic), characterized by short stature, webbed neck, primary ovarian failure (hypergonadotropic hypogonadism), and primary amenorrhea. Turner syndrome is associated with increased risk of autoimmune thyroiditis (Hashimoto), type 1 diabetes, celiac disease, and cardiovascular anomalies (coarctation, bicuspid aortic valve).",
+      "distractors": [
+        "Why option A is wrong \u2014 46,XX with primary ovarian insufficiency would not have the characteristic somatic stigmata (webbed neck, low hairline) of Turner syndrome.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 47,XXX causes tall stature, learning difficulties, and increased anxiety but not short stature or Turner stigmata.",
+        "Why option D is wrong \u2014 46,XY with androgen insensitivity presents with female external genitalia, absent pubic/axillary hair, and normal or tall stature; FSH would not be this elevated."
+      ],
+      "misconception": "Students may recognize Turner syndrome but forget the associated autoimmune conditions, particularly thyroid disease, which requires regular screening.",
+      "takeaway": "Turner syndrome (45,X): hypergonadotropic hypogonadism, short stature; screen for Hashimoto thyroiditis, celiac disease, and cardiac defects.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "turner_syndrome_endocrine",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 38. Puberty",
+      "tags": [
+        "Turner syndrome",
+        "primary amenorrhea",
+        "autoimmune thyroiditis",
+        "45X"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_036",
+    "question": "An 8-year-old boy with known type 1 diabetes mellitus presents with 2 days of vomiting, abdominal pain, and rapid breathing. His blood glucose is 480 mg/dL, pH is 7.12, bicarbonate is 8 mEq/L, and ketones are large in urine. How is the severity of his diabetic ketoacidosis (DKA) classified?",
+    "options": [
+      "A. Mild DKA (pH 7.25-7.30)",
+      "B. Moderate DKA (pH 7.00-7.24)",
+      "C. Severe DKA (pH <7.10)",
+      "D. He does not meet criteria for DKA"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "DKA severity is classified by pH and bicarbonate: Mild (pH 7.25-7.30, HCO3 15-18), Moderate (pH 7.00-7.24, HCO3 10-15), and Severe (pH <7.00, HCO3 <10). This patient has pH 7.12 and HCO3 8, which meets criteria for moderate DKA (pH 7.00-7.24). Severe DKA requires pH <7.00.",
+      "distractors": [
+        "Why option A is wrong \u2014 Mild DKA requires pH \u22657.25; this patient's pH of 7.12 is well below the mild threshold.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Severe DKA is defined as pH <7.00 (or HCO3 <5 in some classifications); pH 7.12 is moderate, not severe.",
+        "Why option D is wrong \u2014 This patient has the triad of hyperglycemia (glucose >200), ketonemia/ketonuria, and metabolic acidosis (pH <7.30); he unequivocally has DKA."
+      ],
+      "misconception": "Students may misclassify DKA severity by not knowing the exact pH cutoffs, leading to inappropriate management intensity.",
+      "takeaway": "DKA severity: Mild pH 7.25-7.30, Moderate pH 7.00-7.24, Severe pH <7.00.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "dka_classification",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "DKA",
+        "severity",
+        "pH",
+        "classification"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_037",
+    "question": "A 6-year-old child presents in severe DKA with signs of hypovolemic shock (tachycardia, poor perfusion, hypotension). What is the most appropriate initial fluid management?",
+    "options": [
+      "A. 0.45% saline at maintenance rate",
+      "B. Isotonic (0.9%) saline 10-20 mL/kg bolus over 1-2 hours, repeat if needed",
+      "C. D5 0.9% saline to prevent hypoglycemia",
+      "D. Start insulin infusion at 0.1 U/kg/hour immediately"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The first priority in DKA is restoration of intravascular volume with isotonic saline. A bolus of 10-20 mL/kg (up to 40-60 mL/kg total) is given to restore perfusion. Insulin is started AFTER 1-2 hours of fluid resuscitation to avoid precipitating hypokalemia and worsening shock. Hypotonic fluids (0.45%) and dextrose-containing fluids are not used initially.",
+      "distractors": [
+        "Why option A is wrong \u2014 0.45% saline is hypotonic and can cause rapid osmolar shifts and cerebral edema; it is not used for initial resuscitation.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 D5-containing fluids provide free water and can worsen cerebral edema; dextrose is added only when glucose drops to 200-250 mg/dL.",
+        "Why option D is wrong \u2014 Starting insulin before fluids can worsen hypovolemia, cause hypokalemia, and precipitate cardiovascular collapse."
+      ],
+      "misconception": "Students may start insulin immediately or use hypotonic/dextrose fluids first, not understanding that volume resuscitation takes priority in DKA.",
+      "takeaway": "DKA management: fluids FIRST (isotonic saline), then insulin after 1-2 hours; never start insulin before fluids in hypovolemic patients.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "dka_fluid_resuscitation",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "DKA",
+        "fluid resuscitation",
+        "isotonic saline",
+        "shock"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "endo_038",
+    "question": "A 10-year-old in DKA has received 2 hours of fluid resuscitation. Blood glucose is 420 mg/dL. When should intravenous insulin infusion be started, and at what dose?",
+    "options": [
+      "A. Start immediately at 0.05 U/kg/hour because the child is young",
+      "B. Start now at 0.1 U/kg/hour with a goal to drop glucose by 50-90 mg/dL per hour",
+      "C. Wait until glucose falls below 250 mg/dL to start insulin",
+      "D. Give an IV insulin bolus of 0.1 U/kg, then 0.1 U/kg/hour infusion"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Insulin is started 1-2 hours after fluid resuscitation begins, at a dose of 0.1 U/kg/hour (or 0.05-0.1 U/kg/hour). The goal is a gradual glucose decline of 50-90 mg/dL per hour. An insulin bolus is not recommended in children due to increased risk of cerebral edema. Insulin is never delayed until normoglycemia.",
+      "distractors": [
+        "Why option A is wrong \u2014 While younger children may receive lower doses, 0.05 U/kg/hour is below standard; the standard starting dose is 0.1 U/kg/hour with adjustment as needed.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Delaying insulin until glucose is normal would allow continued ketogenesis and acidosis; insulin must be started early to halt lipolysis and ketone production.",
+        "Why option D is wrong \u2014 Insulin boluses are not recommended in pediatric DKA due to increased risk of hypoglycemia and cerebral edema; continuous infusion only."
+      ],
+      "misconception": "Students may give insulin boluses or delay insulin, not understanding that continuous low-dose infusion started after initial fluids is the safest approach in children.",
+      "takeaway": "Pediatric DKA: start insulin 1-2 hours after fluids at 0.1 U/kg/hour; no bolus; target glucose fall 50-90 mg/dL/hr.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "dka_insulin_therapy",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "application",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "DKA",
+        "insulin",
+        "pediatric",
+        "dosing"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_039",
+    "question": "A child with DKA has a serum potassium of 3.2 mEq/L after 2 hours of fluid resuscitation. Urine output is adequate. What is the correct management?",
+    "options": [
+      "A. Hold potassium replacement until K+ normalizes to avoid hyperkalemia",
+      "B. Add 40 mEq/L potassium chloride to IV fluids and monitor serial levels",
+      "C. Give a potassium chloride bolus of 0.5 mEq/kg over 10 minutes",
+      "D. No potassium needed because insulin will raise K+ spontaneously"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Total body potassium is depleted in DKA despite normal or even elevated serum levels (due to acidosis and insulin deficiency). Once urine output is confirmed, potassium should be added to IV fluids (20-40 mEq/L) to prevent dangerous hypokalemia as insulin drives potassium intracellularly. Bolus potassium is never given due to cardiac arrest risk.",
+      "distractors": [
+        "Why option A is wrong \u2014 Withholding potassium replacement is dangerous; insulin administration will rapidly lower serum K+, potentially causing life-threatening arrhythmias.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Potassium should never be given as a bolus; it must be infused slowly in fluids to avoid cardiac toxicity and arrest.",
+        "Why option D is wrong \u2014 Insulin drives potassium INTO cells, lowering serum K+; without replacement, severe hypokalemia and arrhythmias will occur."
+      ],
+      "misconception": "Students may withhold potassium in DKA fearing hyperkalemia, not recognizing that total body potassium is depleted and insulin will cause precipitous drops.",
+      "takeaway": "DKA: add K+ 20-40 mEq/L to fluids once urine output is established; never give K+ bolus; monitor serial levels.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "dka_potassium_management",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "application",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "DKA",
+        "potassium",
+        "hypokalemia",
+        "insulin"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_040",
+    "question": "A 7-year-old with DKA, after 4 hours of treatment, develops a severe headache, bradycardia (heart rate 60), hypertension (150/100), and altered mental status. What is the most appropriate immediate intervention?",
+    "options": [
+      "A. Increase insulin infusion to clear ketones faster",
+      "B. Administer mannitol 1 g/kg IV and reduce fluid administration rate",
+      "C. Give sodium bicarbonate to correct acidosis",
+      "D. Increase fluid rate to improve cerebral perfusion"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This patient has cerebral edema, the most feared complication of DKA treatment. The classic triad includes headache, bradycardia, and hypertension (Cushing triad). Immediate management includes mannitol 1 g/kg IV over 15 minutes, reduction of fluid rate, and elevation of the head. Hypertonic saline (3%) is an alternative if mannitol is not available.",
+      "distractors": [
+        "Why option A is wrong \u2014 Increasing insulin will lower glucose and osmolality further, potentially worsening cerebral edema by increasing fluid shifts into brain cells.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Bicarbonate is contraindicated in DKA except in extreme cases (pH <6.9 with hemodynamic instability); it can worsen cerebral edema by causing paradoxical CSF acidosis and increased CO2.",
+        "Why option D is wrong \u2014 Increasing fluids in the setting of cerebral edema worsens intracranial pressure; fluids should be reduced or maintained cautiously."
+      ],
+      "misconception": "Students may treat worsening DKA symptoms with more insulin or fluids, not recognizing the life-threatening diagnosis of cerebral edema.",
+      "takeaway": "DKA + headache + bradycardia + hypertension = cerebral edema; give mannitol 1 g/kg, reduce fluids, elevate head.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "dka_cerebral_edema",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "DKA",
+        "cerebral edema",
+        "mannitol",
+        "complication"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_041",
+    "question": "A 9-year-old newly diagnosed with type 1 DM is started on basal-bolus insulin. After 3 weeks, his insulin requirement drops from 0.8 U/kg/day to 0.2 U/kg/day while maintaining normal glucose. What phenomenon explains this?",
+    "options": [
+      "A. Development of type 2 diabetes with improved insulin sensitivity",
+      "B. Honeymoon phase with residual beta-cell function recovery",
+      "C. Incorrect initial diagnosis; he had stress hyperglycemia",
+      "D. Autoimmune destruction of insulin receptors causing insulin resistance"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The 'honeymoon phase' occurs in newly diagnosed type 1 DM when residual beta cells temporarily recover function after initiation of insulin therapy, leading to reduced exogenous insulin requirements. This phase typically lasts weeks to months and is eventually followed by permanent beta-cell failure and return to full insulin requirements.",
+      "distractors": [
+        "Why option A is wrong \u2014 Type 2 diabetes in a 9-year-old would present with obesity, insulin resistance, and detectable C-peptide; the honeymoon phase is specific to type 1 DM.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Stress hyperglycemia resolves completely without insulin; this patient still requires insulin, just at a lower dose, consistent with partial beta-cell recovery.",
+        "Why option D is wrong \u2014 Autoimmune insulin receptor destruction (type B insulin resistance) is extremely rare and causes severe insulin resistance, not decreased requirements."
+      ],
+      "misconception": "Students may misinterpret reduced insulin needs as incorrect diagnosis or type 2 DM, not recognizing the classic honeymoon phase of type 1 DM.",
+      "takeaway": "Honeymoon phase: transient reduction in insulin needs weeks-months after T1DM diagnosis due to partial beta-cell recovery; warn families it is temporary.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "honeymoon_phase_t1dm",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 1 diabetes",
+        "honeymoon phase",
+        "beta cell",
+        "insulin"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_042",
+    "question": "A 12-year-old with T1DM develops gastroenteritis with vomiting and is unable to eat solid food. Her blood glucose is 220 mg/dL, and urine ketones are moderate. What is the most appropriate sick-day management?",
+    "options": [
+      "A. Stop all insulin until she can eat normally to avoid hypoglycemia",
+      "B. Continue basal insulin, check ketones every 2-3 hours, and give rapid-acting insulin correction doses",
+      "C. Switch to oral hypoglycemic agents temporarily",
+      "D. Give only rapid-acting insulin and stop basal insulin since she is not eating"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Sick-day management in T1DM requires continuing basal insulin at all times (never stop insulin, as this risks DKA), checking ketones frequently, and giving correction doses of rapid-acting insulin based on glucose and ketone levels. Fluid intake with carbohydrates should be encouraged to prevent hypoglycemia and starvation ketosis.",
+      "distractors": [
+        "Why option A is wrong \u2014 Stopping all insulin is dangerous and can precipitate DKA within hours; insulin is required even when fasting to prevent lipolysis and ketogenesis.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Oral hypoglycemic agents are ineffective in T1DM due to absolute insulin deficiency; they do not replace insulin.",
+        "Why option D is wrong \u2014 Stopping basal insulin eliminates the background insulin needed to suppress hepatic glucose production and ketogenesis; basal insulin must always continue."
+      ],
+      "misconception": "Students and families often stop insulin during illness fearing hypoglycemia, not understanding that insulin deficiency during illness causes DKA.",
+      "takeaway": "Sick-day rules in T1DM: NEVER stop insulin; continue basal, monitor ketones, give correction doses, maintain hydration.",
+      "relatedTopic": "dka"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t1dm_sick_day_management",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "application",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 1 diabetes",
+        "sick day",
+        "ketones",
+        "basal insulin"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_043",
+    "question": "A 15-year-old with T1DM on insulin glargine and lispro has persistent fasting hyperglycemia (180-220 mg/dL) despite normal pre-dinner glucose. His mother checks his 2 AM glucose, which is 60 mg/dL. What is the most likely explanation?",
+    "options": [
+      "A. Dawn phenomenon with early morning GH and cortisol surge",
+      "B. Somogyi effect with nocturnal hypoglycemia and rebound hyperglycemia",
+      "C. Insulin glargine wearing off before 24 hours",
+      "D. Inadequate dinner carbohydrate counting"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The Somogyi effect (rebound hyperglycemia) occurs when nocturnal hypoglycemia triggers counter-regulatory hormone release (glucagon, cortisol, GH, epinephrine), causing morning hyperglycemia. The documented 2 AM hypoglycemia (60 mg/dL) confirms this mechanism. Management involves reducing evening/basal insulin rather than increasing it.",
+      "distractors": [
+        "Why option A is wrong \u2014 Dawn phenomenon causes early morning hyperglycemia without preceding nocturnal hypoglycemia; the 2 AM glucose of 60 rules this out.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Insulin glargine typically lasts 20-24 hours; if it wore off early, the 2 AM glucose would be elevated, not low.",
+        "Why option D is wrong \u2014 Inadequate carb counting at dinner would cause post-dinner hyperglycemia, not isolated fasting hyperglycemia with nocturnal hypoglycemia."
+      ],
+      "misconception": "Students may confuse dawn phenomenon with Somogyi effect; checking 2-3 AM glucose is essential to differentiate them.",
+      "takeaway": "Fasting hyperglycemia + nocturnal hypoglycemia = Somogyi effect; reduce evening insulin. Normal 2 AM glucose + morning high = dawn phenomenon.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "somogyi_vs_dawn_phenomenon",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 1 diabetes",
+        "Somogyi",
+        "dawn phenomenon",
+        "fasting hyperglycemia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_044",
+    "question": "Which autoantibody panel is most specific for confirming the autoimmune etiology of type 1 diabetes mellitus in a newly diagnosed child?",
+    "options": [
+      "A. Anti-TPO, anti-thyroglobulin, and TSH receptor antibodies",
+      "B. GAD65, IA-2 (ICA512), insulin autoantibodies (IAA), and ZnT8",
+      "C. Anti-endomysial and anti-tissue transglutaminase antibodies",
+      "D. Islet cell antibodies (ICA) alone"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Type 1 DM is an autoimmune disease mediated by T-cell destruction of pancreatic beta cells. The most specific autoantibodies are GAD65, IA-2 (ICA512), insulin autoantibodies (IAA), and ZnT8. These markers help confirm autoimmune etiology and can identify risk in relatives. Anti-TPO is for thyroid disease, and anti-endomysial is for celiac disease.",
+      "distractors": [
+        "Why option A is wrong \u2014 Anti-TPO, anti-thyroglobulin, and TRAb are thyroid autoantibodies seen in Hashimoto and Graves disease, not type 1 DM.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Anti-endomysial and anti-tTG are celiac disease antibodies; while celiac is associated with T1DM, these do not confirm diabetes etiology.",
+        "Why option D is wrong \u2014 Islet cell antibodies (ICA) are an older, less specific marker that has been largely replaced by the more specific GAD65, IA-2, IAA, and ZnT8 antibodies."
+      ],
+      "misconception": "Students may confuse thyroid or celiac antibodies with T1DM autoantibodies, not knowing the specific panel for beta-cell autoimmunity.",
+      "takeaway": "T1DM autoantibodies: GAD65, IA-2, IAA, ZnT8; confirm autoimmune etiology and distinguish from other forms of diabetes.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t1dm_autoantibodies",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 1 diabetes",
+        "autoantibodies",
+        "GAD65",
+        "IA-2",
+        "ZnT8"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_045",
+    "question": "According to ADA guidelines, what is the recommended glycemic target (HbA1c) for most children and adolescents with type 1 diabetes mellitus?",
+    "options": [
+      "A. <6.0% to minimize long-term complications",
+      "B. <7.5% to balance glycemic control with hypoglycemia risk",
+      "C. <8.5% because children are less susceptible to complications",
+      "D. <9.0% to allow normal growth and development"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The ADA recommends an HbA1c target of <7.5% for most children and adolescents with T1DM. This target balances the need for good glycemic control to prevent long-term microvascular complications with the risk of hypoglycemia, which is more dangerous in young children due to impaired counter-regulatory responses and hypoglycemia unawareness.",
+      "distractors": [
+        "Why option A is wrong \u2014 <6.0% is too aggressive for most children and significantly increases the risk of severe hypoglycemia, which can cause seizures and brain injury.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 <8.5% is too lenient and increases the risk of long-term complications; children are susceptible to complications, though they may take longer to manifest.",
+        "Why option D is wrong \u2014 <9.0% is well above recommended targets and would significantly increase the risk of diabetic retinopathy, nephropathy, and neuropathy over time."
+      ],
+      "misconception": "Students may apply adult HbA1c targets (<7.0%) to children without recognizing the higher hypoglycemia risk in pediatric patients.",
+      "takeaway": "Pediatric T1DM HbA1c target: <7.5% (ADA); balance glycemic control with hypoglycemia risk.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t1dm_a1c_target",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 1 diabetes",
+        "HbA1c",
+        "target",
+        "ADA guidelines"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_046",
+    "question": "A 13-year-old obese boy (BMI >95th percentile) with a family history of type 2 DM is asymptomatic. When should screening for type 2 diabetes begin, and which test is preferred?",
+    "options": [
+      "A. Screen at age 18 with fasting plasma glucose only",
+      "B. Screen every 3 years starting at age 10 or onset of puberty with fasting glucose or HbA1c",
+      "C. No screening needed if asymptomatic",
+      "D. Screen annually with 2-hour oral glucose tolerance test"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The ADA recommends screening for type 2 DM in asymptomatic children who are overweight (BMI >85th percentile) and have risk factors (family history, high-risk ethnicity, signs of insulin resistance). Screening should begin at age 10 or onset of puberty, whichever comes first, and repeat every 3 years using fasting plasma glucose, HbA1c, or oral glucose tolerance test.",
+      "distractors": [
+        "Why option A is wrong \u2014 Waiting until age 18 misses the window when T2DM can develop in adolescence; early detection prevents complications.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Asymptomatic children with risk factors should be screened; T2DM in youth is often asymptomatic at diagnosis.",
+        "Why option D is wrong \u2014 Annual screening with OGTT is excessive; every 3 years is sufficient, and fasting glucose or HbA1c are preferred as less burdensome tests."
+      ],
+      "misconception": "Students may think T2DM only affects adults and does not require pediatric screening, missing the rising incidence in obese youth.",
+      "takeaway": "Screen for T2DM in obese children with risk factors starting at age 10 or puberty, every 3 years, using fasting glucose or HbA1c.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t2dm_screening_pediatric",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 2 diabetes",
+        "screening",
+        "obesity",
+        "pediatric",
+        "ADA"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_047",
+    "question": "A 16-year-old obese adolescent is newly diagnosed with diabetes. He has acanthosis nigricans, no ketones in urine, detectable C-peptide, and negative T1DM autoantibodies. What is the most likely diagnosis?",
+    "options": [
+      "A. Type 1 diabetes mellitus with partial remission",
+      "B. Type 2 diabetes mellitus",
+      "C. Maturity-onset diabetes of the young (MODY)",
+      "D. Steroid-induced diabetes mellitus"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The clinical picture (obesity, acanthosis nigricans indicating insulin resistance, absence of ketones, detectable C-peptide, negative autoantibodies) is classic for type 2 DM in youth. T1DM would show ketonuria, low C-peptide, and positive autoantibodies. MODY typically occurs in non-obese individuals with strong family history of early-onset diabetes.",
+      "distractors": [
+        "Why option A is wrong \u2014 Partial remission (honeymoon phase) in T1DM still shows positive autoantibodies and eventually progresses to absolute insulin deficiency; this patient has negative antibodies and insulin resistance markers.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 MODY is a monogenic form of diabetes typically seen in non-obese individuals with autosomal dominant family history and negative autoantibodies; acanthosis nigricans suggests insulin resistance, not MODY.",
+        "Why option D is wrong \u2014 Steroid-induced diabetes requires a history of glucocorticoid use; there is no such history provided, and the obesity and acanthosis point to T2DM."
+      ],
+      "misconception": "Students may assume all diabetes in children is type 1 and miss the diagnosis of T2DM, which is increasing in obese youth.",
+      "takeaway": "Youth with obesity + acanthosis nigricans + negative T1DM antibodies + C-peptide present = type 2 diabetes.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t2dm_vs_t1dm_diagnosis",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 2 diabetes",
+        "obesity",
+        "acanthosis nigricans",
+        "C-peptide",
+        "autoantibodies"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_048",
+    "question": "A 14-year-old obese girl is diagnosed with type 2 diabetes mellitus. Her HbA1c is 8.2% and she has no ketonuria. What is the recommended initial pharmacologic therapy?",
+    "options": [
+      "A. Basal insulin (glargine) plus prandial insulin (lispro)",
+      "B. Metformin plus lifestyle modification (diet and exercise)",
+      "C. Sulfonylurea (glipizide) monotherapy",
+      "D. GLP-1 receptor agonist (liraglutide) as first-line"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "For pediatric type 2 DM without ketonuria and with HbA1c <8.5-9%, metformin plus intensive lifestyle modification is the recommended first-line therapy. Insulin is reserved for patients with ketonuria, severe hyperglycemia (HbA1c >9%), or metabolic decompensation. Sulfonylureas and GLP-1 agonists are not first-line in children.",
+      "distractors": [
+        "Why option A is wrong \u2014 Insulin is indicated if there is ketonuria, HbA1c >9%, or evidence of catabolism; this patient has milder disease without these features.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Sulfonylureas are not recommended as first-line in pediatric T2DM due to risk of hypoglycemia and weight gain; they are second-line options in adults.",
+        "Why option D is wrong \u2014 GLP-1 agonists are approved for T2DM in adults and some adolescents but are not first-line; metformin remains the initial drug of choice."
+      ],
+      "misconception": "Students may initiate insulin for all new pediatric diabetes cases, not recognizing that T2DM in youth can be managed with metformin and lifestyle initially.",
+      "takeaway": "Pediatric T2DM without ketonuria/A1c <9%: metformin + lifestyle first-line; insulin if ketonuria or severe hyperglycemia.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "t2dm_treatment_pediatric",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "type 2 diabetes",
+        "metformin",
+        "first-line",
+        "pediatric",
+        "lifestyle"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_049",
+    "question": "A 12-year-old obese boy has a dark, velvety hyperpigmented patch on the posterior neck and axillae. His fasting insulin is 35 \u03bcU/mL (elevated). What is the clinical significance of this skin finding?",
+    "options": [
+      "A. Addison disease with increased ACTH stimulation",
+      "B. Insulin resistance marker (acanthosis nigricans)",
+      "C. Fungal infection requiring topical antifungal therapy",
+      "D. Post-inflammatory hyperpigmentation from eczema"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Acanthosis nigricans is a cutaneous marker of hyperinsulinemia and insulin resistance. It appears as dark, velvety, hyperpigmented patches in intertriginous areas (neck, axillae, groin). In obese children, it strongly suggests underlying metabolic syndrome and increased risk for type 2 diabetes.",
+      "distractors": [
+        "Why option A is wrong \u2014 Addison disease causes diffuse hyperpigmentation of sun-exposed areas, palmar creases, and mucous membranes due to elevated ACTH, not localized velvety plaques in skin folds.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Tinea versicolor causes hypopigmented or hyperpigmented macules with fine scale, not thick velvety plaques; it is unrelated to insulin levels.",
+        "Why option D is wrong \u2014 Post-inflammatory hyperpigmentation follows skin inflammation or trauma and does not have the characteristic velvety texture or distribution of acanthosis nigricans."
+      ],
+      "misconception": "Students may mistake acanthosis nigricans for fungal infection or poor hygiene, missing the important marker of insulin resistance and metabolic risk.",
+      "takeaway": "Acanthosis nigricans = marker of hyperinsulinemia and insulin resistance; screen obese children with this finding for T2DM and metabolic syndrome.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "acanthosis_nigricans",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "acanthosis nigricans",
+        "insulin resistance",
+        "obesity",
+        "metabolic syndrome"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_050",
+    "question": "A 15-year-old obese girl with irregular menses, acne, and hirsutism is evaluated. Ultrasound shows enlarged ovaries with multiple small follicles. Which endocrine disorder is most likely, and what is the first-line intervention?",
+    "options": [
+      "A. Cushing syndrome; dexamethasone suppression test and surgery",
+      "B. Polycystic ovary syndrome (PCOS); lifestyle modification and weight loss",
+      "C. Congenital adrenal hyperplasia; glucocorticoid replacement",
+      "D. Ovarian tumor; surgical resection"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The triad of obesity, menstrual irregularity, and hyperandrogenism (acne, hirsutism) in an adolescent is classic for PCOS. First-line management is lifestyle modification with diet and exercise to achieve 5-10% weight loss, which often restores ovulatory cycles and improves metabolic parameters. Metformin may be added if there is insulin resistance or prediabetes.",
+      "distractors": [
+        "Why option A is wrong \u2014 Cushing syndrome causes central obesity, purple striae, proximal muscle weakness, and hypertension, not primarily ovarian morphology changes or hirsutism.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 CAH causes virilization, precocious puberty (in severe cases), and elevated 17-OH progesterone; it does not typically present with obesity and polycystic ovaries in adolescence.",
+        "Why option D is wrong \u2014 Ovarian tumors causing virilization are rare and usually present with rapidly progressive symptoms and a unilateral ovarian mass, not bilateral polycystic morphology."
+      ],
+      "misconception": "Students may attribute adolescent menstrual irregularity and acne solely to normal puberty, missing the diagnosis of PCOS and the opportunity for early metabolic intervention.",
+      "takeaway": "Adolescent PCOS: obesity + irregular menses + hyperandrogenism; first-line = lifestyle modification and weight loss.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "pcos_adolescent",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "PCOS",
+        "polycystic ovary syndrome",
+        "adolescent",
+        "obesity",
+        "lifestyle"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_051",
+    "question": "Which of the following best defines metabolic syndrome in children and adolescents?",
+    "options": [
+      "A. Obesity plus any one of: hypertension, dyslipidemia, or elevated fasting glucose",
+      "B. Obesity plus at least two of: elevated triglycerides, low HDL, hypertension, or elevated fasting glucose",
+      "C. Elevated fasting glucose plus hypertension and dyslipidemia regardless of BMI",
+      "D. BMI >99th percentile with family history of cardiovascular disease"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Metabolic syndrome in children is defined as obesity (BMI >95th percentile or waist circumference >90th percentile) plus at least two of the following: elevated triglycerides (\u2265150 mg/dL), low HDL (<40 mg/dL), hypertension (\u226590th percentile for age/sex/height), or elevated fasting glucose (\u2265100 mg/dL). This differs from adult criteria which require three of five components.",
+      "distractors": [
+        "Why option A is wrong \u2014 Only one additional metabolic abnormality is insufficient; at least two are required for the diagnosis in children.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Metabolic syndrome requires obesity as the central component; isolated glucose, BP, and lipid abnormalities without obesity do not constitute metabolic syndrome.",
+        "Why option D is wrong \u2014 Family history is a risk factor but is not part of the diagnostic criteria for metabolic syndrome."
+      ],
+      "misconception": "Students may apply adult metabolic syndrome criteria (3 of 5) to children or may diagnose metabolic syndrome based on obesity alone without metabolic abnormalities.",
+      "takeaway": "Pediatric metabolic syndrome = obesity + \u22652 of: elevated TG, low HDL, hypertension, elevated glucose.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "metabolic_syndrome_pediatric",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "metabolic syndrome",
+        "obesity",
+        "pediatric",
+        "criteria"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_052",
+    "question": "A 10-year-old obese child is found to have elevated alanine aminotransferase (ALT 85 U/L) on routine screening. He denies alcohol use, viral hepatitis serologies are negative, and ultrasound shows increased hepatic echogenicity. What is the most likely diagnosis?",
+    "options": [
+      "A. Autoimmune hepatitis",
+      "B. Non-alcoholic fatty liver disease (NAFLD)",
+      "C. Wilson disease",
+      "D. Alpha-1 antitrypsin deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Non-alcoholic fatty liver disease (NAFLD) is the most common cause of chronic liver disease in obese children. It is strongly associated with insulin resistance, metabolic syndrome, and obesity. Elevated ALT and increased hepatic echogenicity on ultrasound are characteristic. Management focuses on weight loss and metabolic control.",
+      "distractors": [
+        "Why option A is wrong \u2014 Autoimmune hepatitis causes elevated transaminases but is associated with positive autoantibodies (ANA, SMA, LKM) and elevated IgG, not specifically with obesity and metabolic syndrome.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Wilson disease causes liver disease and neuropsychiatric symptoms with low ceruloplasmin and elevated urinary copper; it is not associated with obesity or increased hepatic echogenicity.",
+        "Why option D is wrong \u2014 Alpha-1 antitrypsin deficiency causes liver disease and emphysema; it is diagnosed by low alpha-1 antitrypsin levels and PiZZ genotype, not by obesity."
+      ],
+      "misconception": "Students may not recognize NAFLD as a common complication of childhood obesity and may pursue extensive workup for rare liver diseases instead.",
+      "takeaway": "Obese child + elevated ALT + increased hepatic echogenicity = NAFLD; manage with weight loss and metabolic control.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "nafld_pediatric",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 34. Diabetes Mellitus",
+      "tags": [
+        "NAFLD",
+        "non-alcoholic fatty liver disease",
+        "obesity",
+        "ALT",
+        "metabolic syndrome"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_053",
+    "question": "A newborn female infant has ambiguous genitalia (enlarged clitoris, fused labioscrotal folds). At day 10 of life, she develops vomiting, dehydration, hyponatremia (125 mEq/L), and hyperkalemia (6.8 mEq/L). What is the most likely enzymatic defect?",
+    "options": [
+      "A. 11-beta-hydroxylase deficiency",
+      "B. 21-hydroxylase deficiency (salt-wasting form)",
+      "C. 3-beta-hydroxysteroid dehydrogenase deficiency",
+      "D. 17-alpha-hydroxylase deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "21-hydroxylase deficiency is the most common cause of congenital adrenal hyperplasia (CAH) and presents in the salt-wasting form with ambiguous genitalia in females and adrenal crisis (vomiting, dehydration, hyponatremia, hyperkalemia) around days 7-14 of life due to aldosterone deficiency. 11-beta deficiency causes virilization and hypertension (not salt-wasting).",
+      "distractors": [
+        "Why option A is wrong \u2014 11-beta-hydroxylase deficiency causes virilization and hypertension due to accumulation of deoxycorticosterone (DOC), a weak mineralocorticoid; salt-wasting does not occur.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 3-beta-HSD deficiency causes salt-wasting and mild virilization in females, but it is rare (1-2% of CAH cases) compared to 21-OH deficiency (~95%).",
+        "Why option D is wrong \u2014 17-alpha-hydroxylase deficiency causes hypertension and hypokalemia (due to DOC accumulation) and sexual infantilism, not salt-wasting or ambiguous genitalia in females."
+      ],
+      "misconception": "Students may confuse the different CAH enzyme deficiencies, particularly not recognizing that 21-OH deficiency is by far the most common and presents with salt-wasting in the classic form.",
+      "takeaway": "21-OH deficiency = most common CAH; salt-wasting form presents with adrenal crisis at 7-14 days + ambiguous genitalia in females.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "cah_21_hydroxylase_deficiency",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "CAH",
+        "21-hydroxylase",
+        "salt-wasting",
+        "ambiguous genitalia",
+        "newborn"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_054",
+    "question": "Newborn screening for congenital adrenal hyperplasia (CAH) is performed by measuring which metabolite on a filter-paper blood spot?",
+    "options": [
+      "A. Serum cortisol",
+      "B. 17-hydroxyprogesterone (17-OHP)",
+      "C. Plasma renin activity",
+      "D. Serum aldosterone"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Newborn screening for CAH uses 17-hydroxyprogesterone (17-OHP) measured on a filter-paper blood spot. 17-OHP accumulates proximal to the blocked 21-hydroxylase enzyme. Elevated levels prompt confirmatory testing with serum 17-OHP, electrolytes, and androgen levels.",
+      "distractors": [
+        "Why option A is wrong \u2014 Cortisol is low in CAH but is not used for screening because it is difficult to measure on filter paper and levels overlap with normal newborns.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Plasma renin is elevated in salt-wasting CAH but is not used for newborn screening due to technical challenges and lower specificity.",
+        "Why option D is wrong \u2014 Aldosterone is low or inappropriately normal in salt-wasting CAH but is not elevated and is not used for screening."
+      ],
+      "misconception": "Students may guess cortisol or aldosterone for CAH screening, not knowing that 17-OHP is the specific metabolite measured in newborn screening programs.",
+      "takeaway": "CAH newborn screening = 17-hydroxyprogesterone (17-OHP) on filter paper; elevated 17-OHP indicates 21-OH deficiency.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "cah_newborn_screening",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "CAH",
+        "newborn screening",
+        "17-OHP",
+        "21-hydroxylase"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "endo_055",
+    "question": "An infant with classic salt-wasting congenital adrenal hyperplasia is being started on maintenance therapy. Which medications are required for optimal treatment?",
+    "options": [
+      "A. Glucocorticoids (hydrocortisone) only",
+      "B. Glucocorticoids plus mineralocorticoids (fludrocortisone) plus sodium chloride supplementation",
+      "C. Mineralocorticoids only, since cortisol is not essential in infancy",
+      "D. Androgen blockers (spironolactone) plus glucocorticoids"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Salt-wasting CAH requires three components: (1) glucocorticoids (hydrocortisone) to replace deficient cortisol and suppress ACTH-driven androgen overproduction, (2) mineralocorticoids (fludrocortisone) to replace aldosterone and prevent salt-wasting crisis, and (3) sodium chloride supplementation (1-2 g/day in infants) because breast milk and standard formulas are low in sodium.",
+      "distractors": [
+        "Why option A is wrong \u2014 Glucocorticoids alone do not replace aldosterone; infants with salt-wasting CAH will still develop hyponatremia, hyperkalemia, and dehydration without mineralocorticoids.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Cortisol is essential for life; without glucocorticoids, infants develop hypoglycemia, hypotension, and shock, and ACTH-driven virilization worsens.",
+        "Why option D is wrong \u2014 Spironolactone is a mineralocorticoid antagonist and would worsen salt-wasting; it is not used in CAH treatment."
+      ],
+      "misconception": "Students may forget that salt-wasting CAH requires both glucocorticoid AND mineralocorticoid replacement, plus sodium supplementation in infancy.",
+      "takeaway": "Salt-wasting CAH treatment: hydrocortisone + fludrocortisone + sodium chloride; all three are essential in infants.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "cah_salt_wasting_treatment",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "application",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "CAH",
+        "salt-wasting",
+        "fludrocortisone",
+        "hydrocortisone",
+        "treatment"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_056",
+    "question": "A 3-year-old with known salt-wasting CAH presents with vomiting, lethargy, and shock after an episode of gastroenteritis. What is the most appropriate immediate management?",
+    "options": [
+      "A. Oral hydrocortisone and increased fluid intake at home",
+      "B. IV normal saline bolus followed by continuous IV fluids with dextrose and IV hydrocortisone 50-100 mg/m2",
+      "C. IM dexamethasone once daily until oral intake resumes",
+      "D. Oral fludrocortisone doubled and urgent outpatient follow-up"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Adrenal crisis in CAH is a life-threatening emergency requiring immediate IV resuscitation: isotonic saline bolus for shock, continuous IV fluids with dextrose to correct hypoglycemia and dehydration, and stress-dose hydrocortisone (50-100 mg/m2 IV bolus, then 50-100 mg/m2/day divided q6h). Oral medications are inadequate in a vomiting, shocked child.",
+      "distractors": [
+        "Why option A is wrong \u2014 Oral hydrocortisone cannot be absorbed in a vomiting child, and home management is inappropriate for shock; this requires emergency department care.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Dexamethasone has minimal mineralocorticoid activity and a long half-life, making it difficult to titrate; hydrocortisone is preferred for adrenal crisis because it has both glucocorticoid and mineralocorticoid effects.",
+        "Why option D is wrong \u2014 Doubling oral fludrocortisone without stress-dose glucocorticoids and IV resuscitation is insufficient and dangerous in adrenal crisis."
+      ],
+      "misconception": "Students may underestimate the severity of adrenal crisis and suggest outpatient or oral management instead of immediate IV resuscitation and stress-dose steroids.",
+      "takeaway": "Adrenal crisis = emergency: IV fluids + IV hydrocortisone 50-100 mg/m2 bolus, then divided doses; never manage orally if vomiting or shock.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "adrenal_crisis_management",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "adrenal crisis",
+        "CAH",
+        "hydrocortisone",
+        "shock",
+        "emergency"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_057",
+    "question": "A 5-year-old girl is being evaluated for precocious puberty. She has clitoromegaly, pubic hair, and advanced bone age, but no history of salt-wasting crises and normal electrolytes. Which form of CAH is most likely?",
+    "options": [
+      "A. Salt-wasting 21-hydroxylase deficiency",
+      "B. Simple virilizing 21-hydroxylase deficiency",
+      "C. 11-beta-hydroxylase deficiency",
+      "D. 17-alpha-hydroxylase deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Simple virilizing 21-hydroxylase deficiency is characterized by partial enzyme activity (1-2% of normal) that preserves sufficient aldosterone synthesis to prevent salt-wasting, but cortisol synthesis is impaired, leading to ACTH-driven adrenal androgen excess and virilization. The absence of salt-wasting crises and normal electrolytes distinguishes it from the salt-wasting form.",
+      "distractors": [
+        "Why option A is wrong \u2014 Salt-wasting 21-OH deficiency presents with adrenal crisis (vomiting, dehydration, hyponatremia, hyperkalemia) in infancy; this patient has normal electrolytes and no such history.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 11-beta-hydroxylase deficiency causes virilization AND hypertension/hypokalemia due to DOC accumulation; this patient has normal electrolytes and no hypertension.",
+        "Why option D is wrong \u2014 17-alpha-hydroxylase deficiency causes hypertension, hypokalemia, and sexual infantilism (no puberty, no virilization), which is the opposite of this presentation."
+      ],
+      "misconception": "Students may not recognize that 21-OH deficiency has two distinct phenotypes (salt-wasting and simple virilizing) based on residual enzyme activity.",
+      "takeaway": "Simple virilizing CAH = virilization without salt-wasting; due to partial 21-OH deficiency with preserved aldosterone synthesis.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "simple_virilizing_cah",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "CAH",
+        "simple virilizing",
+        "21-hydroxylase",
+        "virilization"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_058",
+    "question": "A 12-year-old boy presents with increasing pigmentation of skin creases, gums, and scars. He has postural dizziness, hypotension, and hyponatremia (130 mEq/L) with hyperkalemia (5.9 mEq/L). What is the most specific confirmatory test?",
+    "options": [
+      "A. Morning serum cortisol level alone",
+      "B. ACTH stimulation test (cosyntropin 250 mcg IV) with cortisol measurement at 0 and 60 minutes",
+      "C. Plasma ACTH level",
+      "D. Aldosterone-to-renin ratio"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The presentation (hyperpigmentation, hypotension, hyponatremia, hyperkalemia) is classic for primary adrenal insufficiency (Addison disease). The ACTH stimulation test (cosyntropin test) is the gold standard for diagnosis. A peak cortisol <18-20 mcg/dL at 30 or 60 minutes confirms adrenal insufficiency. ACTH is elevated in primary AI but does not assess cortisol reserve.",
+      "distractors": [
+        "Why option A is wrong \u2014 A single morning cortisol level can be misleading; it may fall within the normal range in partial adrenal insufficiency or be falsely low due to timing. The stimulation test is required to assess adrenal reserve.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Plasma ACTH is elevated in primary adrenal insufficiency but does not confirm the diagnosis; it distinguishes primary from secondary AI but cannot assess cortisol secretory capacity.",
+        "Why option D is wrong \u2014 Aldosterone-to-renin ratio is used to screen for primary hyperaldosteronism (Conn syndrome), not adrenal insufficiency."
+      ],
+      "misconception": "Students may order a single morning cortisol or ACTH level alone, not understanding that the ACTH stimulation test is required to confirm adrenal insufficiency.",
+      "takeaway": "Addison disease diagnosis: ACTH stimulation test (cosyntropin 250 mcg) with peak cortisol <18-20 mcg/dL confirming adrenal insufficiency.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "addison_disease_diagnosis",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "Addison disease",
+        "adrenal insufficiency",
+        "ACTH stimulation test",
+        "cosyntropin",
+        "hyperpigmentation"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_059",
+    "question": "A child who has been on chronic high-dose prednisone for nephrotic syndrome has the dose tapered rapidly and stopped. Two days later, he presents with fatigue, abdominal pain, and hypotension. Laboratory studies show sodium 132 mEq/L and potassium 4.0 mEq/L. What is the most likely diagnosis?",
+    "options": [
+      "A. Primary adrenal insufficiency (Addison disease)",
+      "B. Secondary adrenal insufficiency from chronic steroid suppression",
+      "C. Acute steroid withdrawal causing pure mineralocorticoid deficiency",
+      "D. Relapse of nephrotic syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Chronic exogenous glucocorticoid use suppresses the hypothalamic-pituitary-adrenal (HPA) axis, causing secondary adrenal insufficiency. Rapid tapering or cessation can precipitate adrenal crisis. Unlike primary adrenal insufficiency, secondary AI spares the renin-angiotensin-aldosterone system, so hyperkalemia is absent (potassium is 4.0), and hyperpigmentation is not present because ACTH is low.",
+      "distractors": [
+        "Why option A is wrong \u2014 Primary adrenal insufficiency causes hyperkalemia (due to aldosterone deficiency) and hyperpigmentation (due to elevated ACTH); this patient has normal potassium and no pigmentation.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Steroid withdrawal does not cause mineralocorticoid deficiency because aldosterone synthesis is primarily regulated by renin-angiotensin, not ACTH; mineralocorticoid function remains intact.",
+        "Why option D is wrong \u2014 Relapse of nephrotic syndrome would cause edema, proteinuria, and hypoalbuminemia, not hypotension and fatigue suggestive of adrenal insufficiency."
+      ],
+      "misconception": "Students may not recognize secondary adrenal insufficiency in the context of steroid withdrawal, or may expect hyperkalemia as in primary AI.",
+      "takeaway": "Secondary adrenal insufficiency: chronic steroid use + rapid taper; normal potassium (aldosterone intact), no hyperpigmentation (ACTH low).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "secondary_adrenal_insufficiency",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "secondary adrenal insufficiency",
+        "steroid withdrawal",
+        "HPA axis suppression",
+        "hypotension"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_060",
+    "question": "An adolescent with episodic severe headaches, palpitations, sweating, and hypertension (180/110 during episodes) is evaluated. A 24-hour urine collection shows elevated metanephrines and normetanephrines. What is the most likely diagnosis?",
+    "options": [
+      "A. Primary hyperaldosteronism",
+      "B. Pheochromocytoma",
+      "C. Cushing syndrome",
+      "D. Coarctation of the aorta"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The triad of episodic hypertension, headaches, palpitations, and diaphoresis is classic for pheochromocytoma, a catecholamine-secreting tumor of the adrenal medulla. Elevated urine or plasma metanephrines confirm the diagnosis. In children, pheochromocytomas may be associated with genetic syndromes (MEN2, VHL, NF1).",
+      "distractors": [
+        "Why option A is wrong \u2014 Primary hyperaldosteronism causes sustained hypertension with hypokalemia and metabolic alkalosis, not episodic catecholamine symptoms like sweating and palpitations.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Cushing syndrome causes central obesity, purple striae, proximal muscle weakness, and glucose intolerance, not episodic hypertension with catecholamine excess.",
+        "Why option D is wrong \u2014 Coarctation of the aorta causes upper extremity hypertension with weak femoral pulses and a systolic murmur, not episodic sweating and elevated catecholamines."
+      ],
+      "misconception": "Students may not recognize the classic episodic presentation of pheochromocytoma and may attribute symptoms to anxiety or essential hypertension.",
+      "takeaway": "Episodic hypertension + headache + palpitations + sweating + elevated metanephrines = pheochromocytoma.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "pheochromocytoma",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "pheochromocytoma",
+        "metanephrines",
+        "hypertension",
+        "catecholamines"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_061",
+    "question": "A child with primary hyperaldosteronism is evaluated. Which set of laboratory findings is most consistent with this diagnosis?",
+    "options": [
+      "A. Hypertension, hypokalemia, metabolic alkalosis, suppressed renin",
+      "B. Hypertension, hyperkalemia, metabolic acidosis, elevated renin",
+      "C. Hypotension, hyponatremia, hyperkalemia, elevated renin",
+      "D. Normal blood pressure, hypokalemia, metabolic alkalosis, elevated renin"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Primary hyperaldosteronism (Conn syndrome) is characterized by autonomous aldosterone secretion from an adrenal adenoma or hyperplasia. Aldosterone causes sodium retention (hypertension), potassium wasting (hypokalemia), and hydrogen ion excretion (metabolic alkalosis). Renin is suppressed due to negative feedback from volume expansion.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Hyperkalemia, metabolic acidosis, and elevated renin are features of primary adrenal insufficiency or secondary hyperaldosteronism, not primary hyperaldosteronism.",
+        "Why option C is wrong \u2014 Hypotension, hyponatremia, and hyperkalemia are features of primary adrenal insufficiency (Addison disease), where aldosterone is deficient.",
+        "Why option D is wrong \u2014 Elevated renin indicates secondary hyperaldosteronism (e.g., renal artery stenosis, diuretic use), where renin drives aldosterone production; primary hyperaldosteronism suppresses renin."
+      ],
+      "misconception": "Students may confuse primary and secondary hyperaldosteronism, particularly regarding renin levels and potassium status.",
+      "takeaway": "Primary hyperaldosteronism = HTN + hypokalemia + metabolic alkalosis + suppressed renin; secondary = elevated renin.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "primary_hyperaldosteronism",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 36. Adrenal Disorders",
+      "tags": [
+        "hyperaldosteronism",
+        "aldosterone",
+        "renin",
+        "hypokalemia",
+        "hypertension"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_062",
+    "question": "A newborn boy has a midline cleft lip and palate, micropenis, and hypoglycemia on day 2 of life. His cortisol is 2 mcg/dL and GH is <0.1 ng/mL. Which congenital syndrome should be suspected, and what is the first hormone to replace?",
+    "options": [
+      "A. Prader-Willi syndrome; start growth hormone",
+      "B. Septo-optic dysplasia; start hydrocortisone",
+      "C. Congenital hypopituitarism with midline defects; start hydrocortisone",
+      "D. Kallmann syndrome; start testosterone"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Midline facial defects (cleft lip/palate) with micropenis and neonatal hypoglycemia are classic for congenital hypopituitarism. The hypoglycemia is due to ACTH/cortisol and GH deficiency. Hydrocortisone must be started FIRST because cortisol deficiency is life-threatening (risk of shock, hypoglycemia, seizures). GH and thyroid replacement can follow once adrenal function is secured.",
+      "distractors": [
+        "Why option A is wrong \u2014 Prader-Willi syndrome causes hypotonia, obesity, almond-shaped eyes, and hypogonadism but not midline cleft defects or neonatal hypoglycemia; GH is used later in infancy.",
+        "Why option B is wrong \u2014 Septo-optic dysplasia causes optic nerve hypoplasia, midline brain defects, and pituitary dysfunction but typically does not include cleft lip/palate; while hydrocortisone is correct, the diagnosis here is better explained by congenital hypopituitarism with midline defects.",
+        "Why option C is wrong \u2014 This IS the correct answer.",
+        "Why option D is wrong \u2014 Kallmann syndrome causes delayed puberty and anosmia but does not present with neonatal hypoglycemia, micropenis (beyond small size at birth), or midline facial defects; testosterone is contraindicated in infancy."
+      ],
+      "misconception": "Students may start GH before cortisol in hypopituitarism, not recognizing that untreated adrenal insufficiency can be fatal.",
+      "takeaway": "Congenital hypopituitarism with midline defects: replace hydrocortisone FIRST (life-saving), then thyroid and GH.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypopituitarism",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "congenital hypopituitarism",
+        "midline defects",
+        "micropenis",
+        "hydrocortisone",
+        "hypoglycemia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_063",
+    "question": "A 10-year-old child with septo-optic dysplasia is being monitored. Which associated endocrine deficiency is most likely to be present?",
+    "options": [
+      "A. Isolated growth hormone deficiency only",
+      "B. Multiple pituitary hormone deficiencies (GH, ACTH, TSH, ADH)",
+      "C. Primary adrenal hyperplasia with cortisol excess",
+      "D. Hyperprolactinemia from pituitary stalk compression"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Septo-optic dysplasia (de Morsier syndrome) is characterized by optic nerve hypoplasia, midline brain defects (agenesis of the septum pellucidum), and hypothalamic-pituitary dysfunction. Multiple pituitary hormone deficiencies are common, including GH, ACTH, TSH, gonadotropins, and ADH (diabetes insipidus). Patients require comprehensive endocrine evaluation and lifelong monitoring.",
+      "distractors": [
+        "Why option A is wrong \u2014 While GH deficiency is common, septo-optic dysplasia typically involves multiple pituitary hormone deficiencies, not isolated GH deficiency.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Primary adrenal hyperplasia with cortisol excess (Cushing syndrome) is not associated with septo-optic dysplasia; instead, ACTH deficiency causing adrenal insufficiency is common.",
+        "Why option D is wrong \u2014 Hyperprolactinemia from stalk compression can occur in pituitary tumors but is not a typical feature of septo-optic dysplasia."
+      ],
+      "misconception": "Students may think septo-optic dysplasia only causes visual impairment, missing the high prevalence of multiple pituitary hormone deficiencies.",
+      "takeaway": "Septo-optic dysplasia = optic nerve hypoplasia + midline brain defects + multiple pituitary hormone deficiencies; needs full endocrine workup.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "septo_optic_dysplasia",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "septo-optic dysplasia",
+        "multiple pituitary hormone deficiency",
+        "optic nerve hypoplasia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_064",
+    "question": "A child with central diabetes insipidus is started on DDAVP (desmopressin). Which statement about DDAVP therapy is most accurate?",
+    "options": [
+      "A. It can be given orally, intranasally, or parenterally and acts on V2 receptors in renal collecting ducts",
+      "B. It acts on V1 receptors to cause vasoconstriction and reduce polyuria",
+      "C. It is ineffective in central DI and only works for nephrogenic DI",
+      "D. It must be given as a continuous IV infusion because oral absorption is negligible"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "DDAVP (desmopressin) is a synthetic analog of vasopressin (ADH) that selectively acts on V2 receptors in the renal collecting ducts to increase water reabsorption. It is effective for central DI and can be administered via multiple routes: intranasal spray, oral tablet, or subcutaneous/IV injection. It has minimal V1 (vasoconstrictor) activity compared to native vasopressin.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 DDAVP has minimal V1 receptor activity; its antidiuretic effect is mediated via V2 receptors in the kidney, not vasoconstriction.",
+        "Why option C is wrong \u2014 DDAVP is effective in central DI because the renal tubules are responsive; it is ineffective in nephrogenic DI due to renal resistance to ADH.",
+        "Why option D is wrong \u2014 Oral DDAVP is well-absorbed and commonly used, though bioavailability is lower than intranasal; continuous IV infusion is reserved for perioperative or acute settings."
+      ],
+      "misconception": "Students may think DDAVP requires IV administration or works via vasoconstriction, not understanding its selective V2 action and multiple routes of administration.",
+      "takeaway": "DDAVP for central DI: V2 receptor agonist, increases water reabsorption; available oral, intranasal, and IV.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "ddavp_therapy",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "DDAVP",
+        "desmopressin",
+        "central DI",
+        "V2 receptor"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_065",
+    "question": "A 5-year-old post-operative neurosurgery patient develops hyponatremia (Na 128 mEq/L). He is euvolemic with normal skin turgor. Urine sodium is 45 mEq/L and urine osmolality is 650 mOsm/kg. What is the most likely diagnosis?",
+    "options": [
+      "A. Cerebral salt wasting with volume depletion",
+      "B. Syndrome of inappropriate antidiuretic hormone (SIADH)",
+      "C. Dilutional hyponatremia from excessive IV fluid administration",
+      "D. Adrenal insufficiency with cortisol deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "SIADH is common post-neurosurgery and is characterized by euvolemic hyponatremia with inappropriately concentrated urine (urine osmolality >100 mOsm/kg, usually >300) and elevated urine sodium (>20 mEq/L). The key is euvolemia with concentrated urine despite low serum osmolality, indicating inappropriate ADH secretion.",
+      "distractors": [
+        "Why option A is wrong \u2014 Cerebral salt wasting causes hypovolemia (dehydration, tachycardia, orthostatic hypotension) with high urine sodium; this patient is euvolemic.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Excessive free water administration causes dilutional hyponatremia, but urine osmolality would be appropriately low (<100 mOsm/kg) as the kidneys attempt to excrete free water.",
+        "Why option D is wrong \u2014 Adrenal insufficiency causes hyponatremia with hyperkalemia, volume depletion, and elevated renin; this patient has normal potassium and is euvolemic."
+      ],
+      "misconception": "Students may confuse SIADH with cerebral salt wasting or fluid overload, not checking volume status and urine osmolality.",
+      "takeaway": "Post-neurosurgery + euvolemic hyponatremia + concentrated urine + high urine Na = SIADH; treat with fluid restriction.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "siadh_post_neurosurgery",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "SIADH",
+        "hyponatremia",
+        "post-operative",
+        "neurosurgery",
+        "urine osmolality"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_066",
+    "question": "A child with SIADH has a serum sodium of 125 mEq/L and is asymptomatic. What is the most appropriate initial management?",
+    "options": [
+      "A. 3% hypertonic saline to rapidly correct sodium to normal",
+      "B. Fluid restriction to 800-1000 mL/m2/day or 60-70% of maintenance",
+      "C. Oral furosemide to promote free water clearance",
+      "D. Demeclocycline to induce nephrogenic diabetes insipidus"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Mild to moderate asymptomatic SIADH is managed with fluid restriction, typically 800-1000 mL/m2/day or 60-70% of maintenance fluids. This allows the kidneys to excrete free water and gradually correct hyponatremia. Rapid correction with hypertonic saline is reserved for severe symptomatic hyponatremia (seizures, altered mental status).",
+      "distractors": [
+        "Why option A is wrong \u2014 Hypertonic saline is reserved for severe, symptomatic hyponatremia (Na <120 with seizures or altered mental status); rapid correction risks osmotic demyelination syndrome (central pontine myelinolysis).",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Furosemide can promote free water excretion but is not first-line in children with SIADH and can worsen electrolyte abnormalities; fluid restriction is preferred.",
+        "Why option D is wrong \u2014 Demeclocycline is used in adults with chronic SIADH but is contraindicated in children due to bone and teeth effects; it is not first-line therapy."
+      ],
+      "misconception": "Students may aggressively correct mild hyponatremia with hypertonic saline, risking dangerous osmotic demyelination.",
+      "takeaway": "Asymptomatic SIADH: fluid restriction 800-1000 mL/m2/day; hypertonic saline ONLY for severe symptomatic hyponatremia.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "siadh_management",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "SIADH",
+        "fluid restriction",
+        "hyponatremia",
+        "management"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_067",
+    "question": "A child with central diabetes insipidus is treated with DDAVP. The mother reports that the child sometimes becomes confused and lethargic in the late afternoon. Which complication of DDAVP therapy should be suspected?",
+    "options": [
+      "A. Hypoglycemia from suppression of glucagon",
+      "B. Hyponatremia from excessive water retention",
+      "C. Hypernatremia from inadequate DDAVP dosing",
+      "D. Hypokalemia from renal potassium wasting"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Excessive DDAVP can cause water retention and dilutional hyponatremia, particularly if the child drinks large volumes of free water. Symptoms include headache, nausea, confusion, and lethargy. This is avoided by allowing intermittent breakthrough of polyuria (drug holidays) or carefully titrating the dose to match physiologic needs.",
+      "distractors": [
+        "Why option A is wrong \u2014 DDAVP does not affect glucagon secretion or glucose metabolism; hypoglycemia is not a side effect of vasopressin therapy.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Hypernatremia from inadequate DDAVP would cause thirst, polyuria, and dehydration, not confusion and lethargy in the afternoon after morning dosing.",
+        "Why option D is wrong \u2014 DDAVP does not cause significant renal potassium wasting; hypokalemia is not a recognized side effect of desmopressin."
+      ],
+      "misconception": "Students may not recognize that DDAVP can cause hyponatremia if water intake is not regulated, focusing only on the risk of hypernatremia from under-treatment.",
+      "takeaway": "DDAVP over-treatment + excessive water intake = hyponatremia; allow periodic drug-free intervals to prevent water intoxication.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "ddavp_complications",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "DDAVP",
+        "hyponatremia",
+        "water intoxication",
+        "central DI"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_068",
+    "question": "After transsphenoidal surgery for craniopharyngioma, a child initially has polyuria, then develops hyponatremia 5 days post-op, followed by recurrent polyuria 10 days later. What is this classic pattern called?",
+    "options": [
+      "A. Diabetes insipidus triphasic response",
+      "B. Cerebral salt wasting syndrome",
+      "C. Inappropriate ADH syndrome with recovery",
+      "D. Pituitary apoplexy"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "The triphasic response of diabetes insipidus after pituitary surgery is: Phase 1 - acute DI due to axonal shock and lack of ADH release; Phase 2 - inappropriate ADH release from necrosing posterior pituitary tissue causing hyponatremia (SIADH-like); Phase 3 - permanent DI when stores are depleted. This pattern is classic after craniopharyngioma or pituitary surgery.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Cerebral salt wasting causes hyponatremia with volume depletion but does not have the characteristic initial and recurrent polyuria phases.",
+        "Why option C is wrong \u2014 While phase 2 resembles SIADH, the full triphasic pattern with initial and final polyuria is specific to post-surgical posterior pituitary injury, not isolated SIADH.",
+        "Why option D is wrong \u2014 Pituitary apoplexy is acute hemorrhage or infarction of the pituitary, presenting with sudden headache, vision loss, and adrenal crisis, not this triphasic fluid pattern."
+      ],
+      "misconception": "Students may not recognize the classic triphasic response after pituitary surgery and may misdiagnose the phases as separate unrelated conditions.",
+      "takeaway": "Post-pituitary surgery triphasic response: DI \u2192 SIADH (hyponatremia) \u2192 permanent DI; anticipate and monitor all phases.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "di_triphasic_response",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "diabetes insipidus",
+        "triphasic response",
+        "craniopharyngioma",
+        "post-surgical"
+      ],
+      "validated": true,
+      "confidenceScore": 0.94
+    }
+  },
+  {
+    "id": "endo_069",
+    "question": "A newborn with hypoglycemia is found to have low cortisol, low T4, low testosterone, and low GH. MRI shows an ectopic posterior pituitary bright spot and absent pituitary stalk. Which transcription factor mutation is most commonly associated with this phenotype?",
+    "options": [
+      "A. HESX1",
+      "B. PROP1",
+      "C. POU1F1 (Pit-1)",
+      "D. GNAS"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "PROP1 (prophet of Pit1) is the most common genetic cause of congenital hypopituitarism. Mutations cause combined pituitary hormone deficiency (CPHD) affecting GH, TSH, prolactin, and gonadotropins, with variable ACTH involvement. The ectopic posterior pituitary and absent stalk are characteristic MRI findings.",
+      "distractors": [
+        "Why option A is wrong \u2014 HESX1 mutations cause septo-optic dysplasia with optic nerve hypoplasia and midline defects, not specifically the absent stalk/ectopic posterior pituitary pattern seen with PROP1.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 POU1F1 (Pit-1) mutations cause deficiencies of GH, prolactin, and TSH but typically spare ACTH and gonadotropins; the phenotype is less severe than PROP1.",
+        "Why option D is wrong \u2014 GNAS mutations cause McCune-Albright syndrome (precocious puberty, caf\u00e9-au-lait spots, fibrous dysplasia) or pseudohypoparathyroidism, not congenital hypopituitarism."
+      ],
+      "misconception": "Students may not know the specific genetic causes of congenital hypopituitarism and may confuse them with other endocrine genetic syndromes.",
+      "takeaway": "PROP1 mutation = most common genetic cause of combined pituitary hormone deficiency; MRI shows ectopic posterior pituitary and absent stalk.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "congenital_hypopituitarism_genetics",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 35. Hypothalamus and Pituitary",
+      "tags": [
+        "PROP1",
+        "combined pituitary hormone deficiency",
+        "ectopic posterior pituitary",
+        "genetics"
+      ],
+      "validated": true,
+      "confidenceScore": 0.93
+    }
+  },
+  {
+    "id": "endo_070",
+    "question": "Which of the following is the most sensitive initial screening test for growth hormone deficiency in a child with short stature?",
+    "options": [
+      "A. Random serum GH level measured in the morning",
+      "B. Serum IGF-1 and IGFBP-3 levels",
+      "C. 24-hour urinary GH excretion",
+      "D. GH stimulation test with clonidine and arginine"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Serum IGF-1 and IGFBP-3 are the best screening tests for GH deficiency because they reflect integrated GH secretion over time. GH is secreted in pulsatile bursts, so random levels are often undetectable even in normal children. GH stimulation tests are confirmatory, not screening. Urinary GH is not clinically useful.",
+      "distractors": [
+        "Why option A is wrong \u2014 Random GH levels are not useful because GH is secreted in pulses with low baseline levels between bursts; a low random level does not confirm deficiency.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 24-hour urinary GH is not a validated or clinically available test for GH deficiency screening.",
+        "Why option D is wrong \u2014 GH stimulation tests are the gold standard for confirmation but are invasive, time-consuming, and expensive; they should only be performed after screening with IGF-1/IGFBP-3 is suggestive."
+      ],
+      "misconception": "Students often order random GH levels or jump directly to stimulation tests without first screening with IGF-1/IGFBP-3.",
+      "takeaway": "GH deficiency screening: IGF-1 and IGFBP-3 first; stimulation testing is confirmatory, not screening.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "gh_deficiency_screening",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 37. Growth",
+      "tags": [
+        "GH deficiency",
+        "IGF-1",
+        "IGFBP-3",
+        "screening",
+        "short stature"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_071",
+    "question": "An 18-month-old toddler is brought with bowing of the legs and a prominent anterior chest wall. Examination reveals widening of the wrists and ankles. X-ray of the wrist shows cupping and fraying of the metaphyses. Which is the most likely diagnosis?",
+    "options": [
+      "A. Scurvy with subperiosteal hemorrhage",
+      "B. Nutritional rickets due to vitamin D deficiency",
+      "C. Blount disease with tibial varus deformity",
+      "D. Achondroplasia with rhizomelic shortening"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The clinical presentation (bowed legs, rachitic rosary, wrist widening) and classic X-ray findings (cupping, fraying, and splaying of metaphyses) are pathognomonic for nutritional rickets due to vitamin D deficiency. This occurs in toddlers who have been exclusively breastfed without vitamin D supplementation or have limited sun exposure.",
+      "distractors": [
+        "Why option A is wrong \u2014 Scurvy causes subperiosteal hemorrhage, gingival bleeding, and corkscrew hairs; X-rays show a dense line of Fraenkel (white line) at the metaphysis, not cupping and fraying.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Blount disease causes progressive tibia vara in obese toddlers but does not cause wrist widening, rachitic rosary, or metaphyseal cupping on X-ray.",
+        "Why option D is wrong \u2014 Achondroplasia causes rhizomelic limb shortening (proximal segments), macrocephaly, and midface hypoplasia; bone mineralization is normal, and metaphyseal changes are not present."
+      ],
+      "misconception": "Students may confuse Blount disease or scurvy with rickets, not recognizing the characteristic metaphyseal X-ray changes of rickets.",
+      "takeaway": "Cupping + fraying + splaying of metaphyses + clinical rachitic features = nutritional rickets; the X-ray is diagnostic.",
+      "relatedTopic": "rickets"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "nutritional_rickets_diagnosis",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 40. Bone Disorders",
+      "tags": [
+        "rickets",
+        "vitamin D deficiency",
+        "cupping",
+        "fraying",
+        "metaphysis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_072",
+    "question": "A 10-month-old infant with nutritional rickets is started on treatment. Which regimen is most appropriate for achieving rapid healing?",
+    "options": [
+      "A. Vitamin D 400 IU daily (maintenance dose) indefinitely",
+      "B. Vitamin D 2000 IU daily for 3 months, followed by maintenance 400 IU daily",
+      "C. Vitamin D 50,000 IU daily for 1 week (stoss therapy), then stop all supplementation",
+      "D. Calcium supplements alone without vitamin D"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The treatment for nutritional rickets is high-dose vitamin D (2000 IU/day for 3 months or stoss therapy with 50,000-150,000 IU single oral dose) followed by maintenance dosing of 400 IU/day. Calcium supplementation (30-75 mg/kg/day of elemental calcium) is also provided if dietary intake is inadequate. Maintenance dose alone (400 IU) is insufficient for treating established rickets.",
+      "distractors": [
+        "Why option A is wrong \u2014 400 IU/day is the maintenance/prevention dose for healthy infants; it is inadequate to heal established rickets and correct vitamin D deficiency.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 While stoss therapy is effective, stopping all supplementation after one week leads to recurrent deficiency; maintenance vitamin D must continue after the high-dose treatment phase.",
+        "Why option D is wrong \u2014 Calcium alone cannot heal rickets without vitamin D, which is required for intestinal calcium absorption and bone mineralization."
+      ],
+      "misconception": "Students may use maintenance doses (400 IU) to treat active rickets, not understanding that therapeutic doses are required initially.",
+      "takeaway": "Treat nutritional rickets with vitamin D 2000 IU/day x 3 months OR stoss therapy, then maintenance 400 IU/day; add calcium if intake is low.",
+      "relatedTopic": "rickets"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "nutritional_rickets_treatment",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "application",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 40. Bone Disorders",
+      "tags": [
+        "rickets",
+        "vitamin D",
+        "treatment",
+        "stoss therapy",
+        "calcium"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_073",
+    "question": "A 3-year-old child has short stature, bowed legs, and delayed walking. Laboratory studies show serum calcium 9.2 mg/dL (normal), phosphate 2.1 mg/dL (low), alkaline phosphatase 1200 U/L (elevated), PTH 45 pg/mL (normal), and 25-OH vitamin D 28 ng/mL (normal). What is the most likely diagnosis?",
+    "options": [
+      "A. Nutritional vitamin D deficiency rickets",
+      "B. X-linked hypophosphatemic rickets",
+      "C. Vitamin D-dependent rickets type 1",
+      "D. Renal osteodystrophy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "X-linked hypophosphatemic rickets (XLH) is characterized by hypophosphatemia with normal calcium, normal or mildly elevated PTH, normal 25-OH vitamin D, and elevated alkaline phosphatase. It is caused by mutations in the PHEX gene leading to renal phosphate wasting. Treatment requires phosphate supplementation and active vitamin D (calcitriol), not nutritional vitamin D alone.",
+      "distractors": [
+        "Why option A is wrong \u2014 Nutritional rickets causes low calcium, elevated PTH, and low 25-OH vitamin D; this patient has normal calcium and normal vitamin D levels.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Vitamin D-dependent rickets type 1 (1-alpha-hydroxylase deficiency) causes low calcium, elevated PTH, and low 1,25-(OH)2 vitamin D; this patient has normal calcium and the pattern is one of phosphate wasting.",
+        "Why option D is wrong \u2014 Renal osteodystrophy occurs in chronic kidney disease with elevated BUN/creatinine, hyperphosphatemia, and low calcium; this patient has normal renal function and low phosphate."
+      ],
+      "misconception": "Students may assume all rickets is nutritional vitamin D deficiency, missing the distinctive phosphate-wasting pattern of X-linked hypophosphatemic rickets.",
+      "takeaway": "XLH: hypophosphatemia + normal calcium + normal 25-OH D + normal PTH; treat with phosphate + calcitriol, not vitamin D alone.",
+      "relatedTopic": "rickets"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "x_linked_hypophosphatemic_rickets",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 40. Bone Disorders",
+      "tags": [
+        "XLH",
+        "hypophosphatemic rickets",
+        "PHEX",
+        "phosphate wasting"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "endo_074",
+    "question": "A child with chronic kidney disease stage 4 develops bone pain and deformities. Laboratory studies show calcium 8.5 mg/dL, phosphate 6.2 mg/dL, PTH 450 pg/mL, and 25-OH vitamin D 18 ng/mL. What is the primary pathophysiologic mechanism of renal osteodystrophy?",
+    "options": [
+      "A. Excessive vitamin D activation causing hypercalcemia and bone resorption",
+      "B. Deficient 1-alpha-hydroxylation of 25-OH vitamin D leading to hypocalcemia, hyperphosphatemia, and secondary hyperparathyroidism",
+      "C. Primary parathyroid hyperplasia causing autonomous PTH secretion independent of renal function",
+      "D. Calcium deficiency due to inadequate dietary intake alone"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In chronic kidney disease, the kidneys lose the ability to 1-alpha-hydroxylate 25-OH vitamin D to active 1,25-(OH)2 vitamin D (calcitriol). This causes hypocalcemia, reduced intestinal calcium absorption, and hyperphosphatemia (reduced renal excretion). The resulting hypocalcemia and hyperphosphatemia stimulate PTH secretion, causing secondary hyperparathyroidism and renal osteodystrophy.",
+      "distractors": [
+        "Why option A is wrong \u2014 Renal osteodystrophy is caused by vitamin D DEFICIENCY, not excess; calcitriol levels are low in CKD, not high.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 While tertiary hyperparathyroidism can develop after long-standing secondary hyperparathyroidism, the initial mechanism is appropriate PTH elevation in response to hypocalcemia and hyperphosphatemia, not autonomous secretion.",
+        "Why option D is wrong \u2014 Dietary calcium deficiency alone does not explain the hyperphosphatemia, elevated PTH, and low calcitriol seen in renal osteodystrophy."
+      ],
+      "misconception": "Students may think renal osteodystrophy is simply due to calcium deficiency, not understanding the central role of impaired vitamin D activation and phosphate retention.",
+      "takeaway": "Renal osteodystrophy: CKD \u2192 decreased 1-alpha-hydroxylation \u2192 low calcitriol \u2192 hypocalcemia + hyperphosphatemia \u2192 secondary hyperparathyroidism.",
+      "relatedTopic": "rickets"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "renal_osteodystrophy",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 40. Bone Disorders",
+      "tags": [
+        "renal osteodystrophy",
+        "CKD",
+        "secondary hyperparathyroidism",
+        "calcitriol"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_075",
+    "question": "A 2-year-old with rickets has low calcium (8.0 mg/dL), elevated PTH (180 pg/mL), low phosphate (2.5 mg/dL), normal 25-OH vitamin D, and low 1,25-(OH)2 vitamin D. Which enzyme deficiency is most likely responsible?",
+    "options": [
+      "A. 25-hydroxylase deficiency",
+      "B. 1-alpha-hydroxylase deficiency (vitamin D-dependent rickets type 1)",
+      "C. Vitamin D receptor mutation (vitamin D-dependent rickets type 2)",
+      "D. Parathyroid hormone deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Vitamin D-dependent rickets type 1 is caused by mutations in the CYP27B1 gene encoding 1-alpha-hydroxylase, the enzyme that converts 25-OH vitamin D to active 1,25-(OH)2 vitamin D. The hallmark is low/normal 25-OH vitamin D with inappropriately low 1,25-(OH)2 vitamin D, causing hypocalcemia, secondary hyperparathyroidism, and rickets. Treatment requires calcitriol (active vitamin D), not nutritional vitamin D.",
+      "distractors": [
+        "Why option A is wrong \u2014 25-hydroxylase deficiency is extremely rare and would cause low 25-OH vitamin D; this patient has normal 25-OH vitamin D with low active hormone.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 Vitamin D-dependent rickets type 2 (VDR mutation) causes elevated 1,25-(OH)2 vitamin D due to end-organ resistance; this patient has LOW active vitamin D.",
+        "Why option D is wrong \u2014 PTH deficiency would cause hypocalcemia with LOW PTH, not elevated PTH; the elevated PTH here is appropriate secondary hyperparathyroidism."
+      ],
+      "misconception": "Students may not differentiate between vitamin D-dependent rickets types 1 and 2 based on 1,25-(OH)2 vitamin D levels, or may confuse this with nutritional rickets.",
+      "takeaway": "Vitamin D-dependent rickets type 1: low 1,25-(OH)2 D with normal 25-OH D; treat with calcitriol. Type 2: HIGH 1,25-(OH)2 D with end-organ resistance.",
+      "relatedTopic": "rickets"
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "vitamin_d_dependent_rickets_type1",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 40. Bone Disorders",
+      "tags": [
+        "vitamin D-dependent rickets",
+        "1-alpha-hydroxylase",
+        "calcitriol",
+        "hypocalcemia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.94
+    }
+  },
+  {
+    "id": "endo_076",
+    "question": "An exclusively breastfed 6-month-old infant presents with hypocalcemic seizures. Serum calcium is 6.8 mg/dL, phosphate is 8.5 mg/dL, and PTH is undetectable. The mother has a history of thyroid surgery. Which diagnosis is most likely?",
+    "options": [
+      "A. Nutritional vitamin D deficiency rickets",
+      "B. Transient congenital hypoparathyroidism due to maternal hyperparathyroidism",
+      "C. DiGeorge syndrome (22q11.2 deletion)",
+      "D. Pseudohypoparathyroidism type 1a"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Maternal hyperparathyroidism (e.g., after thyroid surgery with unrecognized parathyroid damage, or primary hyperparathyroidism) causes hypercalcemia in the mother, which suppresses fetal parathyroid development. After birth, the infant has transient hypoparathyroidism with hypocalcemia, hyperphosphatemia, and undetectable PTH. This resolves spontaneously over weeks to months.",
+      "distractors": [
+        "Why option A is wrong \u2014 Nutritional rickets causes hypocalcemia with elevated PTH and low phosphate due to vitamin D deficiency; this infant has undetectable PTH and high phosphate.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 DiGeorge syndrome causes hypoparathyroidism but is associated with thymic hypoplasia, congenital heart defects, and characteristic facies; the maternal history of thyroid surgery points to maternal hyperparathyroidism as the cause.",
+        "Why option D is wrong \u2014 Pseudohypoparathyroidism causes hypocalcemia and hyperphosphatemia but with ELEVATED PTH due to end-organ resistance; PTH is undetectable in this infant."
+      ],
+      "misconception": "Students may not consider maternal hyperparathyroidism as a cause of neonatal hypocalcemia and may pursue extensive genetic testing instead.",
+      "takeaway": "Neonatal hypocalcemia + hyperphosphatemia + undetectable PTH + maternal parathyroid/thyroid surgery history = transient congenital hypoparathyroidism from maternal hyperparathyroidism.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "transient_congenital_hypoparathyroidism",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 39. Calcium and Phosphorus Disorders",
+      "tags": [
+        "hypoparathyroidism",
+        "neonatal hypocalcemia",
+        "maternal hyperparathyroidism",
+        "PTH"
+      ],
+      "validated": true,
+      "confidenceScore": 0.94
+    }
+  },
+  {
+    "id": "endo_077",
+    "question": "A 3-day-old infant born at term develops jitteriness and seizures. Serum calcium is 6.5 mg/dL, phosphate is 5.8 mg/dL, and PTH is 5 pg/mL (low-normal). The infant's mother has well-controlled gestational diabetes. What is the most likely cause of hypocalcemia?",
+    "options": [
+      "A. Early neonatal hypocalcemia from maternal diabetes and birth asphyxia",
+      "B. DiGeorge syndrome with thymic aplasia",
+      "C. Primary hypoparathyroidism with permanent calcium deficiency",
+      "D. Vitamin D deficiency from maternal malnutrition"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Early neonatal hypocalcemia (within 72 hours) is common in infants of diabetic mothers, premature infants, and those with birth asphyxia. Maternal hyperglycemia causes fetal hyperglycemia and hyperinsulinemia, which increases cellular uptake of glucose and phosphate, leading to functional hypoparathyroidism and hypocalcemia. This is usually transient and resolves within days.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 DiGeorge syndrome causes hypocalcemia but is typically associated with congenital heart disease, thymic hypoplasia, and characteristic facies; it usually presents later (days 1-2 weeks) and the mother does not have diabetes.",
+        "Why option C is wrong \u2014 Primary hypoparathyroidism is rare and permanent; early neonatal hypocalcemia in IDM is transient and functional, not permanent gland failure.",
+        "Why option D is wrong \u2014 Maternal vitamin D deficiency causes rickets and hypocalcemia but typically presents later (weeks to months) and is associated with low 25-OH vitamin D and elevated PTH, not low PTH."
+      ],
+      "misconception": "Students may not associate maternal diabetes with neonatal hypocalcemia, instead pursuing extensive genetic workup for rare causes.",
+      "takeaway": "Early neonatal hypocalcemia (first 72 hours): common in IDM, prematurity, and asphyxia; usually transient and self-limited.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "early_neonatal_hypocalcemia",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 39. Calcium and Phosphorus Disorders",
+      "tags": [
+        "neonatal hypocalcemia",
+        "infant of diabetic mother",
+        "IDM",
+        "transient hypoparathyroidism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_078",
+    "question": "An infant is diagnosed with DiGeorge syndrome (22q11.2 deletion). Which classic triad of findings is most characteristic?",
+    "options": [
+      "A. Hypoparathyroidism, thymic hypoplasia, congenital heart disease",
+      "B. Hyperparathyroidism, macrocephaly, renal cysts",
+      "C. Hypothyroidism, polydactyly, cleft palate",
+      "D. Adrenal insufficiency, microcephaly, sensorineural deafness"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "DiGeorge syndrome (22q11.2 deletion syndrome) classically presents with the triad of: (1) conotruncal cardiac anomalies (tetralogy of Fallot, interrupted aortic arch, truncus arteriosus), (2) thymic hypoplasia leading to T-cell immunodeficiency, and (3) hypoparathyroidism causing hypocalcemia. Additional features include characteristic facies, palatal abnormalities, and developmental delay.",
+      "distractors": [
+        "Why option A is wrong \u2014 This IS the correct answer.",
+        "Why option B is wrong \u2014 Hyperparathyroidism, macrocephaly, and renal cysts are features of McCune-Albright syndrome or other disorders, not DiGeorge syndrome.",
+        "Why option C is wrong \u2014 Hypothyroidism, polydactyly, and cleft palate are features of other syndromes (e.g., Pallister-Hall) but not the classic triad of DiGeorge.",
+        "Why option D is wrong \u2014 Adrenal insufficiency, microcephaly, and deafness are not characteristic of 22q11.2 deletion syndrome."
+      ],
+      "misconception": "Students may not recall the complete classic triad of DiGeorge syndrome, particularly forgetting the thymic component or cardiac associations.",
+      "takeaway": "DiGeorge syndrome (22q11.2) = CHD + thymic hypoplasia + hypoparathyroidism; also characteristic facies and palatal anomalies.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "digeorge_syndrome",
+      "system": "ENDO",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "recall",
+      "nelsonRef": "Chapter 39. Calcium and Phosphorus Disorders",
+      "tags": [
+        "DiGeorge",
+        "22q11.2",
+        "hypoparathyroidism",
+        "thymic hypoplasia",
+        "congenital heart disease"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "endo_079",
+    "question": "A 3-month-old infant with failure to thrive is found to have serum calcium 12.5 mg/dL, phosphate 2.8 mg/dL, and PTH 8 pg/mL (low). The infant has a characteristic 'elfin facies,' supravalvular aortic stenosis murmur, and friendly personality. What is the most likely diagnosis?",
+    "options": [
+      "A. Primary hyperparathyroidism from parathyroid adenoma",
+      "B. Williams syndrome (idiopathic infantile hypercalcemia)",
+      "C. Familial hypocalciuric hypercalcemia (FHH)",
+      "D. Vitamin D intoxication from excessive supplementation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Williams syndrome is characterized by the triad of: (1) distinctive 'elfin facies' with periorbital fullness, (2) supravalvular aortic stenosis and other cardiovascular anomalies, and (3) transient idiopathic infantile hypercalcemia. It is caused by a microdeletion at 7q11.23 including the ELN gene. Hypercalcemia typically resolves by age 1-2 years but requires dietary calcium restriction during infancy.",
+      "distractors": [
+        "Why option A is wrong \u2014 Primary hyperparathyroidism from parathyroid adenoma is rare in infancy and causes elevated PTH; this infant has low PTH and characteristic dysmorphic features not seen in primary hyperparathyroidism.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 FHH causes mild, asymptomatic hypercalcemia with normal or slightly elevated PTH and low urine calcium; it does not cause elfin facies or cardiac anomalies.",
+        "Why option D is wrong \u2014 Vitamin D intoxication causes hypercalcemia with hyperphosphatemia and elevated 25-OH vitamin D; there is no history of excessive supplementation, and the dysmorphic features point to a genetic syndrome."
+      ],
+      "misconception": "Students may not recognize Williams syndrome in infants and may pursue extensive metabolic workup for hypercalcemia without noticing the characteristic facies and cardiac findings.",
+      "takeaway": "Williams syndrome = elfin facies + supravalvular AS + infantile hypercalcemia; caused by 7q11.23 microdeletion (ELN gene).",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "williams_syndrome",
+      "system": "ENDO",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 39. Calcium and Phosphorus Disorders",
+      "tags": [
+        "Williams syndrome",
+        "infantile hypercalcemia",
+        "elfin facies",
+        "supravalvular aortic stenosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "endo_080",
+    "question": "A 12-year-old girl has short stature, obesity, round face, shortened 4th and 5th metacarpals, and subcutaneous calcifications. Her calcium is 7.2 mg/dL, phosphate is 5.8 mg/dL, and PTH is 185 pg/mL (elevated). What is the most likely diagnosis?",
+    "options": [
+      "A. Primary hypoparathyroidism",
+      "B. Pseudohypoparathyroidism type 1a (Albright hereditary osteodystrophy)",
+      "C. Chronic kidney disease with secondary hyperparathyroidism",
+      "D. Familial short stature with incidental brachydactyly"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Pseudohypoparathyroidism type 1a (PHP1a) is caused by a mutation in the GNAS gene encoding the Gs-alpha protein. It causes end-organ resistance to PTH, resulting in hypocalcemia, hyperphosphatemia, and elevated PTH (appropriate for the resistance). Associated features include Albright hereditary osteodystrophy (AHO): short stature, obesity, round face, brachydactyly (shortened 4th/5th metacarpals), and subcutaneous ossifications.",
+      "distractors": [
+        "Why option A is wrong \u2014 Primary hypoparathyroidism causes hypocalcemia and hyperphosphatemia but with LOW PTH, not elevated PTH; there are no AHO features.",
+        "Why option B is wrong \u2014 This IS the correct answer.",
+        "Why option C is wrong \u2014 CKD causes secondary hyperparathyroidism but is associated with elevated creatinine/BUN, hyperphosphatemia, and renal osteodystrophy, not the characteristic AHO phenotype.",
+        "Why option D is wrong \u2014 Familial short stature does not cause brachydactyly of specifically the 4th and 5th digits, obesity, round face, or calcium/phosphate abnormalities."
+      ],
+      "misconception": "Students may not recognize the constellation of AHO features with calcium abnormalities as pseudohypoparathyroidism, instead attributing findings to separate unrelated conditions.",
+      "takeaway": "PHP1a = hypocalcemia + hyperphosphatemia + elevated PTH + AHO phenotype (short stature, obesity, brachydactyly, subcutaneous calcifications); caused by GNAS mutation.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "endocrinology",
+      "subtopic": "pseudohypoparathyroidism",
+      "system": "ENDO",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 39. Calcium and Phosphorus Disorders",
+      "tags": [
+        "pseudohypoparathyroidism",
+        "PHP1a",
+        "Albright hereditary osteodystrophy",
+        "GNAS",
+        "brachydactyly"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  }
+]

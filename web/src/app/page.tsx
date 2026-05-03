@@ -227,6 +227,15 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <div className="mt-8 pt-6 border-t border-white/[0.08] text-center">
+        <p className="text-sm text-white/50 font-medium">© Akash Stephen</p>
+        <p className="text-xs text-white/40 mt-1">Final Year MBBS Student</p>
+        <p className="text-[11px] text-white/30 mt-2">
+          Built for KUHS Pediatrics Exam Preparation
+        </p>
+      </div>
     </div>
   );
 }

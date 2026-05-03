@@ -1,0 +1,3391 @@
+[
+  {
+    "id": "nephro_001",
+    "question": "A 7-year-old boy develops cola-colored urine, periorbital edema, and hypertension 2 weeks after recovering from streptococcal pharyngitis. Which organism is the most common cause of this condition?",
+    "options": [
+      "A. Staphylococcus aureus",
+      "B. Group A beta-hemolytic Streptococcus",
+      "C. Streptococcus pneumoniae",
+      "D. Escherichia coli"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Post-streptococcal glomerulonephritis (PSGN) is most commonly caused by nephritogenic strains of Group A beta-hemolytic Streptococcus (GAS), particularly types 12, 4, 1, and 49. It classically follows a latent period of 1-3 weeks after pharyngitis.",
+      "distractors": [
+        "Staphylococcus aureus can cause infective endocarditis-associated glomerulonephritis or shunt nephritis, but it is not the classic cause of post-infectious GN following pharyngitis.",
+        "Post-streptococcal glomerulonephritis (PSGN) is most commonly caused by nephritogenic strains of Group A beta-hemolytic Streptococcus (GAS), particularly types 12, 4, 1, and 49. It classically follows a latent period of 1-3 weeks after pharyngitis.",
+        "Streptococcus pneumoniae is associated with invasive pneumococcal disease and empyema, not typical PSGN.",
+        "Escherichia coli is the most common cause of urinary tract infections and Shiga toxin-associated HUS, not PSGN."
+      ],
+      "misconception": "Students often confuse the organism causing PSGN with those causing other common pediatric infections.",
+      "takeaway": "PSGN = Group A beta-hemolytic strep nephritogenic strains; latent period 1-3 weeks post-pharyngitis.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "etiology",
+        "Group A strep"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_002",
+    "question": "In a child with suspected post-streptococcal glomerulonephritis following pharyngitis, when does the anti-streptolysin O (ASO) titer typically peak?",
+    "options": [
+      "A. 3-5 days after the onset of pharyngitis",
+      "B. 3-4 weeks after the onset of pharyngitis",
+      "C. 2-3 months after the onset of pharyngitis",
+      "D. It does not rise after skin infections"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "ASO titers peak at 3-4 weeks after the onset of streptococcal pharyngitis and return to baseline over 6-12 months. This timing helps correlate the infection with the onset of glomerulonephritis.",
+      "distractors": [
+        "3-5 days is too early; ASO requires time for antibody production and typically begins to rise at 1 week.",
+        "ASO titers peak at 3-4 weeks after the onset of streptococcal pharyngitis and return to baseline over 6-12 months. This timing helps correlate the infection with the onset of glomerulonephritis.",
+        "2-3 months is too late; titers have usually peaked and begun to decline by this time.",
+        "While ASO often does not rise significantly after streptococcal skin infections (ASKase is better for pyoderma), this option does not answer when ASO peaks after pharyngitis."
+      ],
+      "misconception": "Students often confuse the timing of ASO rise with the clinical onset of nephritis or think it rises immediately.",
+      "takeaway": "ASO peaks at 3-4 weeks post-pharyngitis; use ASKase for skin infections.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "ASO",
+        "serology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_003",
+    "question": "Which complement profile is most characteristic of acute post-streptococcal glomerulonephritis?",
+    "options": [
+      "A. Low C3 and low C4",
+      "B. Low C3 with normal C4",
+      "C. Normal C3 and low C4",
+      "D. Normal C3 and normal C4"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "PSGN activates the alternative complement pathway, resulting in low C3 with a normal C4 level. C3 typically returns to normal within 6-8 weeks, which is an important diagnostic and prognostic feature.",
+      "distractors": [
+        "Low C3 and low C4 suggests classical pathway activation, which is seen in lupus nephritis and MPGN type I, not typical PSGN.",
+        "PSGN activates the alternative complement pathway, resulting in low C3 with a normal C4 level. C3 typically returns to normal within 6-8 weeks, which is an important diagnostic and prognostic feature.",
+        "Normal C3 with low C4 is unusual and not characteristic of common post-infectious glomerulonephritides.",
+        "Normal C3 and normal C4 effectively rules out PSGN and suggests another diagnosis such as IgA nephropathy."
+      ],
+      "misconception": "Students often assume both C3 and C4 are low in PSGN because it is an immune complex disease, not realizing the alternative pathway predominates.",
+      "takeaway": "PSGN: low C3, normal C4 (alternative pathway); C3 normalizes in 6-8 weeks.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "complement",
+        "C3",
+        "C4"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_004",
+    "question": "A 6-year-old girl with PSGN has moderate edema and a blood pressure at the 98th percentile. Which is the most appropriate initial management step?",
+    "options": [
+      "A. Start oral corticosteroids",
+      "B. Restrict sodium and fluid intake",
+      "C. Administer intravenous albumin",
+      "D. Begin prophylactic penicillin for 6 months"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Management of PSGN is supportive. Sodium and fluid restriction, along with antihypertensives if needed, addresses the edema and hypertension. Corticosteroids are not indicated in uncomplicated PSGN.",
+      "distractors": [
+        "Corticosteroids have no proven benefit in typical PSGN and are reserved for rapidly progressive forms with crescents.",
+        "Management of PSGN is supportive. Sodium and fluid restriction, along with antihypertensives if needed, addresses the edema and hypertension. Corticosteroids are not indicated in uncomplicated PSGN.",
+        "Intravenous albumin is not routine in PSGN; it is used in nephrotic syndrome for symptomatic hypoalbuminemia or hypovolemia.",
+        "Prophylactic penicillin for 6 months is not standard after acute PSGN; antibiotics are only given if there is evidence of active streptococcal infection."
+      ],
+      "misconception": "Students often extrapolate nephrotic syndrome management (albumin, steroids) to PSGN, or overuse antibiotics.",
+      "takeaway": "PSGN management is supportive: fluid/sodium restriction, BP control; no steroids or routine albumin.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "management",
+        "supportive care"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_005",
+    "question": "A child with acute nephritic syndrome suddenly develops seizures, altered sensorium, and papilledema. Blood pressure is 170/110 mmHg. What is the most likely complication?",
+    "options": [
+      "A. Uremic encephalopathy",
+      "B. Hypertensive encephalopathy",
+      "C. Hypocalcemic tetany",
+      "D. Cerebral venous sinus thrombosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Hypertensive encephalopathy is a feared complication of acute glomerulonephritis, presenting with seizures, altered consciousness, visual disturbances, and papilledema in the setting of severe hypertension. It requires urgent BP control.",
+      "distractors": [
+        "Uremic encephalopathy occurs with severe renal failure and azotemia but typically develops more gradually; hypertension is the acute driver here.",
+        "Hypertensive encephalopathy is a feared complication of acute glomerulonephritis, presenting with seizures, altered consciousness, visual disturbances, and papilledema in the setting of severe hypertension. It requires urgent BP control.",
+        "Hypocalcemic tetany presents with carpopedal spasm and neuromuscular irritability, not seizures with papilledema in this context.",
+        "Cerebral venous sinus thrombosis can cause seizures and altered sensorium but is not the classic acute complication of nephritic syndrome with severe hypertension."
+      ],
+      "misconception": "Students may attribute seizures in nephritic syndrome solely to uremia or electrolyte imbalance without recognizing hypertensive encephalopathy as the most acute threat.",
+      "takeaway": "In nephritic syndrome with severe HTN and seizures, think hypertensive encephalopathy; treat BP urgently.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "hypertension",
+        "encephalopathy",
+        "complication"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_006",
+    "question": "An 8-year-old boy presents with gross hematuria and mild flank pain that began 1 day after an upper respiratory tract infection. Serum C3 is normal. What is the most likely diagnosis?",
+    "options": [
+      "A. Post-streptococcal glomerulonephritis",
+      "B. IgA nephropathy",
+      "C. Alport syndrome",
+      "D. Thin basement membrane disease"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "IgA nephropathy classically presents with synpharyngitic hematuria (within 1-3 days of a mucosal infection), normal C3 levels, and recurrent episodes. This contrasts with PSGN, which has a longer latent period and low C3.",
+      "distractors": [
+        "PSGN has a latent period of 1-3 weeks after pharyngitis and typically shows low C3, making it inconsistent with this presentation.",
+        "IgA nephropathy classically presents with synpharyngitic hematuria (within 1-3 days of a mucosal infection), normal C3 levels, and recurrent episodes. This contrasts with PSGN, which has a longer latent period and low C3.",
+        "Alport syndrome presents with persistent microscopic hematuria, hearing loss, ocular defects, and progressive renal failure, not episodic gross hematuria after URI.",
+        "Thin basement membrane disease causes persistent microscopic hematuria with benign course, not gross hematuria acutely after infections."
+      ],
+      "misconception": "Students often equate post-infectious hematuria exclusively with PSGN and forget IgA nephropathy causes synpharyngitic hematuria with normal complement.",
+      "takeaway": "Synpharyngitic hematuria + normal C3 = IgA nephropathy; latent period + low C3 = PSGN.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "IgA nephropathy",
+        "hematuria",
+        "differential diagnosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_007",
+    "question": "A 10-year-old child presents with hematuria, proteinuria, edema, and rapidly rising creatinine over 2 weeks. Renal biopsy shows crescentic glomerulonephritis. What is the most appropriate next step in management?",
+    "options": [
+      "A. Observation with weekly monitoring",
+      "B. High-dose corticosteroids with or without cyclophosphamide",
+      "C. Prophylactic antibiotics for 6 months",
+      "D. Angiotensin-converting enzyme inhibitor alone"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Rapidly progressive glomerulonephritis (RPGN) with crescents on biopsy requires urgent immunosuppressive therapy, typically high-dose corticosteroids (pulse methylprednisolone) often combined with cyclophosphamide or mycophenolate, depending on the underlying cause.",
+      "distractors": [
+        "Observation is contraindicated in RPGN, as irreversible renal failure can occur within days to weeks without treatment.",
+        "Rapidly progressive glomerulonephritis (RPGN) with crescents on biopsy requires urgent immunosuppressive therapy, typically high-dose corticosteroids (pulse methylprednisolone) often combined with cyclophosphamide or mycophenolate, depending on the underlying cause.",
+        "Prophylactic antibiotics do not treat immune-mediated crescentic GN and are only indicated if there is active infection.",
+        "ACE inhibitors reduce proteinuria and slow chronic kidney disease but do not treat the acute inflammatory process of RPGN."
+      ],
+      "misconception": "Students may underestimate the urgency of RPGN and choose conservative management, or confuse it with uncomplicated PSGN.",
+      "takeaway": "RPGN with crescents = emergency; treat with high-dose steroids + cyclophosphamide promptly.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "RPGN",
+        "crescentic GN",
+        "immunosuppression"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_008",
+    "question": "Which statement correctly describes the typical latent period between streptococcal skin infection and the onset of post-streptococcal glomerulonephritis?",
+    "options": [
+      "A. 1-3 days",
+      "B. 1-3 weeks",
+      "C. 3-6 weeks",
+      "D. 2-3 months"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "After streptococcal pyoderma (skin infection), the latent period for PSGN is typically longer, around 3-6 weeks. After pharyngitis, it is shorter at 1-3 weeks.",
+      "distractors": [
+        "1-3 days is too short and represents the incubation period of the infection itself, not the latent period for glomerulonephritis.",
+        "1-3 weeks is the typical latent period after pharyngitis, not skin infection.",
+        "After streptococcal pyoderma (skin infection), the latent period for PSGN is typically longer, around 3-6 weeks. After pharyngitis, it is shorter at 1-3 weeks.",
+        "2-3 months is too long; the immune response and glomerular injury occur much earlier."
+      ],
+      "misconception": "Students often confuse the latent period after skin infection with that after pharyngitis, or conflate it with the ASO peak timing.",
+      "takeaway": "PSGN latent period: 1-3 weeks post-pharyngitis, 3-6 weeks post-pyoderma.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "latent period",
+        "pyoderma"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_009",
+    "question": "What is the long-term renal prognosis for children with typical post-streptococcal glomerulonephritis?",
+    "options": [
+      "A. Most develop chronic kidney disease within 10 years",
+      "B. Complete recovery occurs in >95% of children",
+      "C. Progression to end-stage renal disease is common without immunosuppression",
+      "D. Most require lifelong nephrology follow-up for progressive proteinuria"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Typical PSGN in children has an excellent prognosis, with complete recovery in more than 95% of cases. Chronic kidney disease and end-stage renal disease are rare in uncomplicated cases.",
+      "distractors": [
+        "Chronic kidney disease within 10 years is uncommon in typical childhood PSGN and more likely in atypical or adult cases.",
+        "Typical PSGN in children has an excellent prognosis, with complete recovery in more than 95% of cases. Chronic kidney disease and end-stage renal disease are rare in uncomplicated cases.",
+        "Progression to ESRD is rare in children with typical PSGN, unlike crescentic or rapidly progressive forms.",
+        "Lifelong follow-up for progressive proteinuria is unnecessary in the vast majority who recover completely; persistent abnormalities warrant re-evaluation."
+      ],
+      "misconception": "Students sometimes extrapolate the poor prognosis of RPGN or chronic GN to typical PSGN, fearing inevitable progression.",
+      "takeaway": "Typical childhood PSGN has excellent prognosis; >95% recover completely.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "PSGN",
+        "prognosis",
+        "recovery"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_010",
+    "question": "A child with acute nephritic syndrome is found to have RBC casts on urine microscopy. What does this finding most specifically indicate?",
+    "options": [
+      "A. Lower urinary tract bleeding",
+      "B. Glomerular inflammation",
+      "C. Renal tubular acidosis",
+      "D. Urinary tract infection"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "RBC casts are formed in the renal tubules when red blood cells leak through inflamed glomeruli and become embedded in a protein matrix. They are pathognomonic of glomerular bleeding.",
+      "distractors": [
+        "Lower urinary tract bleeding produces isomorphic RBCs and clots but not RBC casts, as casts form only in the renal tubules.",
+        "RBC casts are formed in the renal tubules when red blood cells leak through inflamed glomeruli and become embedded in a protein matrix. They are pathognomonic of glomerular bleeding.",
+        "Renal tubular acidosis causes electrolyte disturbances and may cause nephrocalcinosis, but it does not cause hematuria or RBC casts.",
+        "UTI typically causes pyuria, bacteriuria, and occasionally hematuria, but RBC casts are not a feature of infection lower in the urinary tract."
+      ],
+      "misconception": "Students may associate hematuria in general with UTI or lower tract causes without recognizing that RBC casts localize the problem to the glomerulus.",
+      "takeaway": "RBC casts = glomerular bleeding; always indicate glomerulonephritis.",
+      "relatedTopic": "agn"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "agn_psgn",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "RBC casts",
+        "hematuria",
+        "glomerulonephritis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_011",
+    "question": "A 3-year-old boy presents with generalized edema and ascites. Urinalysis shows 4+ proteinuria and serum albumin is 1.8 g/dL. What is the most likely histopathological diagnosis?",
+    "options": [
+      "A. Focal segmental glomerulosclerosis",
+      "B. Minimal change disease",
+      "C. Membranoproliferative glomerulonephritis",
+      "D. IgA nephropathy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Minimal change disease (MCD) accounts for approximately 80-90% of nephrotic syndrome in children younger than 6 years. It is characterized by selective proteinuria, normal complement, and excellent response to corticosteroids.",
+      "distractors": [
+        "FSGS is more common in older children and adolescents, often presents with non-selective proteinuria, hematuria, and steroid resistance.",
+        "Minimal change disease (MCD) accounts for approximately 80-90% of nephrotic syndrome in children younger than 6 years. It is characterized by selective proteinuria, normal complement, and excellent response to corticosteroids.",
+        "MPGN is uncommon in this age group, typically presents with low C3, hematuria, and mixed nephritic-nephrotic features.",
+        "IgA nephropathy presents with recurrent gross hematuria, often synpharyngitic, and is not the typical cause of isolated nephrotic syndrome in a toddler."
+      ],
+      "misconception": "Students may select FSGS because it is emphasized as a cause of steroid-resistant nephrotic syndrome, forgetting that MCD is by far the most common overall cause in young children.",
+      "takeaway": "In a child <6 years with nephrotic syndrome, MCD is most likely until proven otherwise.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "nephrotic syndrome",
+        "minimal change disease",
+        "edema"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_012",
+    "question": "A child with nephrotic syndrome is treated with prednisolone 2 mg/kg/day. By what time should complete remission (protein-free urine for 3 consecutive days) occur for the patient to be classified as steroid-sensitive?",
+    "options": [
+      "A. Within 2 weeks",
+      "B. Within 4 weeks",
+      "C. Within 8 weeks",
+      "D. Within 12 weeks"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Steroid-sensitive nephrotic syndrome is defined as complete remission within 8 weeks of daily prednisolone therapy (typically 2 mg/kg/day or 60 mg/m2/day). The majority of children with MCD respond within 2-4 weeks, but the cutoff is 8 weeks.",
+      "distractors": [
+        "While many children respond within 2-4 weeks, the formal definition of steroid sensitivity allows up to 8 weeks.",
+        "4 weeks is the typical response time for most, but it is not the formal cutoff for defining steroid sensitivity versus resistance.",
+        "Steroid-sensitive nephrotic syndrome is defined as complete remission within 8 weeks of daily prednisolone therapy (typically 2 mg/kg/day or 60 mg/m2/day). The majority of children with MCD respond within 2-4 weeks, but the cutoff is 8 weeks.",
+        "12 weeks exceeds the standard cutoff; failure to respond by 8 weeks defines steroid-resistant nephrotic syndrome."
+      ],
+      "misconception": "Students often confuse the typical response time (2-4 weeks) with the formal definition cutoff (8 weeks), or conflate it with the 12-week steroid taper protocol.",
+      "takeaway": "Steroid-sensitive = remission within 8 weeks of daily prednisolone; most MCD responds in 2-4 weeks.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "steroid-sensitive",
+        "remission",
+        "prednisolone"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_013",
+    "question": "A 4-year-old with nephrotic syndrome develops fever and abdominal pain. Ascitic fluid shows 500 cells/mm3 with 80% neutrophils. Gram stain is negative. What is the most likely organism causing spontaneous bacterial peritonitis?",
+    "options": [
+      "A. Streptococcus pneumoniae",
+      "B. Escherichia coli",
+      "C. Staphylococcus aureus",
+      "D. Klebsiella pneumoniae"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Streptococcus pneumoniae is the most common cause of spontaneous bacterial peritonitis (SBP) in children with nephrotic syndrome, followed by E. coli. The altered opsonization and loss of complement factors in the ascitic fluid predispose to encapsulated organisms.",
+      "distractors": [
+        "Streptococcus pneumoniae is the most common cause of spontaneous bacterial peritonitis (SBP) in children with nephrotic syndrome, followed by E. coli. The altered opsonization and loss of complement factors in the ascitic fluid predispose to encapsulated organisms.",
+        "Escherichia coli is the second most common cause and a common urinary pathogen, but S. pneumoniae predominates in SBP.",
+        "Staphylococcus aureus is more commonly associated with skin infections, catheter-related infections, or peritonitis in dialysis patients, not typical SBP in nephrotic syndrome.",
+        "Klebsiella pneumoniae is a less common cause of SBP in this setting compared to S. pneumoniae."
+      ],
+      "misconception": "Students often select E. coli because it is a common peritoneal pathogen, but in nephrotic syndrome SBP, S. pneumoniae is classically the most common due to complement loss and impaired opsonization.",
+      "takeaway": "SBP in nephrotic syndrome: think S. pneumoniae first; give ceftriaxone + consider albumin.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "SBP",
+        "peritonitis",
+        "Streptococcus pneumoniae",
+        "complication"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_014",
+    "question": "A newborn presents with massive proteinuria, edema, and umbilical hernia within the first week of life. There is no response to corticosteroids. What is the most likely diagnosis?",
+    "options": [
+      "A. Minimal change disease",
+      "B. Congenital nephrotic syndrome (Finnish type)",
+      "C. Focal segmental glomerulosclerosis",
+      "D. Mesangial proliferative glomerulonephritis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Congenital nephrotic syndrome of the Finnish type, caused by mutations in the NPHS1 gene (nephrin), presents in the first 3 months of life with massive proteinuria, edema, and failure to thrive. It is unresponsive to steroids and requires aggressive management often leading to nephrectomy and dialysis/transplant.",
+      "distractors": [
+        "Minimal change disease rarely presents in the neonatal period and typically responds to corticosteroids.",
+        "Congenital nephrotic syndrome of the Finnish type, caused by mutations in the NPHS1 gene (nephrin), presents in the first 3 months of life with massive proteinuria, edema, and failure to thrive. It is unresponsive to steroids and requires aggressive management often leading to nephrectomy and dialysis/transplant.",
+        "FSGS can present in infancy but usually does not present in the first week of life with the classic Finnish type phenotype.",
+        "Mesangial proliferative glomerulonephritis is not a typical cause of congenital nephrotic syndrome and usually presents later with hematuria and proteinuria."
+      ],
+      "misconception": "Students may assume all nephrotic syndrome in infancy is steroid-responsive MCD, not recognizing the distinct entity of congenital nephrotic syndrome.",
+      "takeaway": "Neonatal nephrotic syndrome with steroid resistance = congenital nephrotic syndrome (Finnish type, NPHS1 mutation).",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "congenital nephrotic syndrome",
+        "Finnish type",
+        "NPHS1",
+        "neonate"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_015",
+    "question": "A child with steroid-sensitive nephrotic syndrome has been in remission for 2 months. He now has 3+ proteinuria on dipstick for 4 consecutive days. How is this best classified?",
+    "options": [
+      "A. Steroid resistance",
+      "B. Relapse",
+      "C. Frequent relapse",
+      "D. Steroid dependence"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "A relapse is defined as recurrence of proteinuria (3+ or 4+ on dipstick or urine protein/creatinine >2 mg/mg) for 3 or more consecutive days after achieving remission. This child meets the criteria.",
+      "distractors": [
+        "Steroid resistance is failure to achieve remission after 8 weeks of daily prednisolone, not recurrence after prior remission.",
+        "A relapse is defined as recurrence of proteinuria (3+ or 4+ on dipstick or urine protein/creatinine >2 mg/mg) for 3 or more consecutive days after achieving remission. This child meets the criteria.",
+        "Frequent relapse requires 2 or more relapses within 6 months of initial response or 4 or more in any 12-month period; a single episode is just a relapse.",
+        "Steroid dependence is defined as 2 consecutive relapses during steroid therapy or within 14 days of stopping steroids, not a single episode off therapy."
+      ],
+      "misconception": "Students often prematurely label a single recurrence as frequent relapse or steroid dependence without understanding the specific temporal definitions.",
+      "takeaway": "Relapse = 3+ proteinuria for >=3 consecutive days after remission.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "relapse",
+        "definitions",
+        "proteinuria"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_016",
+    "question": "A 5-year-old with minimal change disease has had 3 relapses in the past 8 months, all responding within 2 weeks of prednisolone. What classification best describes this pattern?",
+    "options": [
+      "A. Infrequent relapser",
+      "B. Frequent relapser",
+      "C. Steroid-dependent",
+      "D. Steroid-resistant"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "A frequent relapser is defined as having 2 or more relapses within 6 months of the initial response, or 4 or more relapses in any 12-month period. This child had 3 relapses in 8 months, meeting the criterion.",
+      "distractors": [
+        "Infrequent relapser is defined as 1 relapse within 6 months of initial response or 1-3 relapses in any 12-month period; this child exceeds that.",
+        "A frequent relapser is defined as having 2 or more relapses within 6 months of the initial response, or 4 or more relapses in any 12-month period. This child had 3 relapses in 8 months, meeting the criterion.",
+        "Steroid-dependent requires relapses during steroid therapy or within 14 days of cessation, which is not stated here.",
+        "Steroid-resistant means no remission after 8 weeks of daily steroids, whereas this child responds promptly to steroids."
+      ],
+      "misconception": "Students often confuse frequent relapse with steroid dependence; the key is whether relapses occur while on or very soon after stopping steroids.",
+      "takeaway": "Frequent relapser = >=2 relapses in 6 months or >=4 in 12 months; steroid-dependent = relapse on/within 14 days of stopping steroids.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "frequent relapse",
+        "definitions",
+        "prednisolone"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_017",
+    "question": "Renal biopsy in a child with steroid-sensitive nephrotic syndrome most commonly shows which histological finding?",
+    "options": [
+      "A. Mesangial IgA deposition",
+      "B. Diffuse foot process effacement on electron microscopy",
+      "C. Segmental sclerosis and hyalinosis",
+      "D. Subepithelial immune complex humps"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Minimal change disease shows normal glomeruli on light microscopy but diffuse effacement of podocyte foot processes on electron microscopy. Immunofluorescence is typically negative.",
+      "distractors": [
+        "Mesangial IgA deposition is characteristic of IgA nephropathy, not MCD.",
+        "Minimal change disease shows normal glomeruli on light microscopy but diffuse effacement of podocyte foot processes on electron microscopy. Immunofluorescence is typically negative.",
+        "Segmental sclerosis and hyalinosis are the defining features of FSGS, which typically presents with steroid-resistant nephrotic syndrome.",
+        "Subepithelial immune complex humps are seen in post-streptococcal glomerulonephritis, not MCD."
+      ],
+      "misconception": "Students may recall that MCD has 'normal' light microscopy and thus forget the EM finding of foot process effacement, which is the diagnostic clue.",
+      "takeaway": "MCD: normal LM, negative IF, diffuse foot process effacement on EM.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "MCD",
+        "histopathology",
+        "foot process effacement",
+        "EM"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_018",
+    "question": "A child with nephrotic syndrome presents with severe pallor, cold extremities, and a blood pressure of 70/40 mmHg. What is the most appropriate immediate intervention?",
+    "options": [
+      "A. High-dose furosemide bolus",
+      "B. Intravenous 25% albumin infusion",
+      "C. Oral prednisolone doubling",
+      "D. Therapeutic paracentesis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "This child is in hypovolemic shock due to intravascular volume depletion from capillary leak and low oncotic pressure. Intravenous 25% albumin expands the intravascular volume and raises oncotic pressure. Diuretics would worsen hypovolemia.",
+      "distractors": [
+        "High-dose furosemide would further deplete intravascular volume and exacerbate hypotension and shock in this hypovolemic child.",
+        "This child is in hypovolemic shock due to intravascular volume depletion from capillary leak and low oncotic pressure. Intravenous 25% albumin expands the intravascular volume and raises oncotic pressure. Diuretics would worsen hypovolemia.",
+        "Doubling oral prednisolone does not address the acute hemodynamic compromise of hypovolemic shock.",
+        "Therapeutic paracentesis is not indicated for shock and could worsen hemodynamics by removing fluid and protein."
+      ],
+      "misconception": "Students may see edema and assume the child is fluid overloaded, but nephrotic patients can have intravascular depletion despite total body edema.",
+      "takeaway": "Nephrotic syndrome with shock = hypovolemia; give IV albumin, not diuretics.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "hypovolemia",
+        "shock",
+        "albumin",
+        "nephrotic syndrome"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_019",
+    "question": "A child with nephrotic syndrome is started on furosemide for severe edema. Two days later, he develops abdominal pain and lethargy. Laboratory evaluation reveals a serum sodium of 128 mEq/L and potassium of 2.8 mEq/L. What is the most likely explanation?",
+    "options": [
+      "A. Acute kidney injury from nephrotoxicity",
+      "B. Hypovolemic hyponatremia with hypokalemia from diuretic use",
+      "C. Syndrome of inappropriate antidiuretic hormone secretion",
+      "D. Spontaneous bacterial peritonitis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Loop diuretics like furosemide cause natriuresis and kaliuresis. In nephrotic syndrome, aggressive diuresis can lead to intravascular volume depletion, hyponatremia, and hypokalemia. Diuretics must be used cautiously.",
+      "distractors": [
+        "Acute kidney injury from furosemide nephrotoxicity is uncommon; the electrolyte abnormalities are more consistent with volume and electrolyte depletion from diuresis.",
+        "Loop diuretics like furosemide cause natriuresis and kaliuresis. In nephrotic syndrome, aggressive diuresis can lead to intravascular volume depletion, hyponatremia, and hypokalemia. Diuretics must be used cautiously.",
+        "SIADH causes euvolemic hyponatremia with concentrated urine, but this child has volume depletion and hypokalemia more consistent with diuretic effect.",
+        "SBP would present with fever, abdominal tenderness, and neutrophilic ascites, not primarily with hyponatremia and hypokalemia."
+      ],
+      "misconception": "Students may attribute all abdominal pain in nephrotic syndrome to SBP, missing that diuretic complications are common and present with electrolyte disturbances.",
+      "takeaway": "Diuretics in nephrotic syndrome risk hypovolemia, hyponatremia, and hypokalemia; use cautiously.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "diuretics",
+        "hypokalemia",
+        "hyponatremia",
+        "complications"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_020",
+    "question": "An 8-year-old girl presents with nephrotic syndrome, arthritis, and a malar rash. She is found to have positive anti-dsDNA antibodies and low complement levels. What is the underlying cause of her nephrotic syndrome?",
+    "options": [
+      "A. Minimal change disease",
+      "B. Lupus nephritis",
+      "C. Amyloidosis",
+      "D. Hepatitis B-associated membranous nephropathy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Systemic lupus erythematosus can cause secondary nephrotic syndrome, most commonly proliferative lupus nephritis (classes III and IV). The combination of nephrotic syndrome, arthritis, malar rash, anti-dsDNA positivity, and hypocomplementemia is classic.",
+      "distractors": [
+        "Minimal change disease is a primary nephrotic syndrome and does not cause systemic features like arthritis, rash, or autoantibodies.",
+        "Systemic lupus erythematosus can cause secondary nephrotic syndrome, most commonly proliferative lupus nephritis (classes III and IV). The combination of nephrotic syndrome, arthritis, malar rash, anti-dsDNA positivity, and hypocomplementemia is classic.",
+        "Amyloidosis is rare in children and presents with nephrotic syndrome and multi-organ involvement, but not with this autoimmune serology and rash.",
+        "Hepatitis B-associated membranous nephropathy can cause nephrotic syndrome but does not explain the malar rash, arthritis, or anti-dsDNA positivity."
+      ],
+      "misconception": "Students may focus only on the nephrotic syndrome and ignore the systemic features that point to a secondary cause like lupus.",
+      "takeaway": "Nephrotic syndrome + rash + arthritis + low complement + anti-dsDNA = lupus nephritis.",
+      "relatedTopic": "nephrotic"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "nephrotic_syndrome",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "secondary nephrotic syndrome",
+        "SLE",
+        "lupus nephritis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_021",
+    "question": "A 3-month-old infant with fever and irritability has a urine sample obtained by suprapubic aspiration. What colony count on culture is considered diagnostic of a urinary tract infection?",
+    "options": [
+      "A. >1,000 CFU/mL",
+      "B. >10,000 CFU/mL",
+      "C. >50,000 CFU/mL",
+      "D. Any growth of a single uropathogen"
+    ],
+    "correctIndex": 3,
+    "explanation": {
+      "correct": "Suprapubic aspiration bypasses the distal urethra and perineal flora. Therefore, any growth of a single uropathogen is considered diagnostic of UTI, as the bladder urine is normally sterile.",
+      "distractors": [
+        ">1,000 CFU/mL is sometimes used as a threshold for catheterized specimens in some contexts, but SPA is more stringent.",
+        ">10,000 CFU/mL is the threshold for catheter-obtained urine, not SPA.",
+        ">50,000 CFU/mL is the traditional threshold for clean-catch midstream urine in older children and adults, not for SPA.",
+        "Suprapubic aspiration bypasses the distal urethra and perineal flora. Therefore, any growth of a single uropathogen is considered diagnostic of UTI, as the bladder urine is normally sterile."
+      ],
+      "misconception": "Students often apply clean-catch thresholds (>10^5 CFU/mL) to suprapubic aspirates, not realizing SPA has the highest diagnostic specificity.",
+      "takeaway": "SPA: any growth of a single uropathogen = UTI; catheter: >10^4 CFU/mL; clean catch: >10^5 CFU/mL.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "UTI",
+        "suprapubic aspiration",
+        "diagnostic criteria",
+        "culture"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_022",
+    "question": "A 4-month-old boy is diagnosed with his first febrile urinary tract infection. According to standard guidelines, what is the most appropriate initial imaging sequence?",
+    "options": [
+      "A. DMSA scan within 24 hours",
+      "B. Renal and bladder ultrasonography",
+      "C. Micturating cystourethrogram immediately",
+      "D. CT urogram within 1 week"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Renal and bladder ultrasonography is the recommended initial imaging study after the first febrile UTI in infants. It is non-invasive and detects structural abnormalities such as hydronephrosis, obstruction, or abscess. DMSA and MCU are considered based on USG findings and clinical course.",
+      "distractors": [
+        "DMSA scans are used to detect cortical defects and scarring, but are not the initial study and are best done 4-6 months after acute infection for scarring, though acute DMSA may be used in some protocols.",
+        "Renal and bladder ultrasonography is the recommended initial imaging study after the first febrile UTI in infants. It is non-invasive and detects structural abnormalities such as hydronephrosis, obstruction, or abscess. DMSA and MCU are considered based on USG findings and clinical course.",
+        "MCU is indicated if VUR or posterior urethral valves are suspected, particularly after an abnormal ultrasound or in males, but not as the first-line test for all first UTIs.",
+        "CT urogram involves significant radiation and is reserved for complex cases where other imaging is inconclusive, not routine initial evaluation."
+      ],
+      "misconception": "Students may think all children need invasive imaging like MCU immediately after a first UTI, but current guidelines favor USG first with selective further imaging.",
+      "takeaway": "First febrile UTI: renal USG first; DMSA and MCU based on results and risk factors.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "UTI",
+        "imaging",
+        "ultrasonography",
+        "first febrile UTI"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_023",
+    "question": "On micturating cystourethrogram, contrast is seen refluxing into a dilated ureter and pelvicalyceal system with blunting of the calyces but no ureteral tortuosity. What is the grade of vesicoureteral reflux?",
+    "options": [
+      "A. Grade II",
+      "B. Grade III",
+      "C. Grade IV",
+      "D. Grade V"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Grade III VUR is characterized by reflux into the ureter and pelvicalyceal system with mild-to-moderate dilatation and blunting of the calyces, without significant ureteral tortuosity. Grade IV has moderate dilatation with tortuosity, and Grade V has gross dilatation and tortuosity.",
+      "distractors": [
+        "Grade II shows reflux into the ureter, pelvis, and calyces without dilatation; blunting of calyces indicates at least Grade III.",
+        "Grade III VUR is characterized by reflux into the ureter and pelvicalyceal system with mild-to-moderate dilatation and blunting of the calyces, without significant ureteral tortuosity. Grade IV has moderate dilatation with tortuosity, and Grade V has gross dilatation and tortuosity.",
+        "Grade IV includes moderate dilatation and tortuosity of the ureter; the absence of tortuosity makes Grade IV less likely.",
+        "Grade V shows gross dilatation and tortuosity of the ureter with loss of papillary impressions; this description is less severe."
+      ],
+      "misconception": "Students often confuse the specific criteria for VUR grades, particularly distinguishing between calyceal blunting (Grade III) and ureteral tortuosity (Grades IV-V).",
+      "takeaway": "VUR grading: I=ureter only; II=ureter+pelvis+calyces no dilation; III=mild dilation+blunting; IV=moderate dilation+tortuosity; V=gross dilation+tortuosity.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "VUR",
+        "grading",
+        "MCU",
+        "vesicoureteral reflux"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_024",
+    "question": "A 3-year-old girl with Grade III vesicoureteral reflux and recurrent febrile UTIs is started on antibiotic prophylaxis. Which antibiotic is most commonly recommended for long-term prophylaxis?",
+    "options": [
+      "A. Nitrofurantoin",
+      "B. Trimethoprim-sulfamethoxazole",
+      "C. Ciprofloxacin",
+      "D. Gentamicin"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Trimethoprim-sulfamethoxazole (TMP-SMX) is commonly used for long-term UTI prophylaxis in children with VUR because it is effective, well-tolerated, and achieves high urinary concentrations. Nitrofurantoin is also used but is less preferred in very young children due to gastrointestinal intolerance and contraindication in G6PD deficiency.",
+      "distractors": [
+        "Nitrofurantoin is effective for prophylaxis but is contraindicated in infants under 1 month and in G6PD deficiency, and causes more GI side effects.",
+        "Trimethoprim-sulfamethoxazole (TMP-SMX) is commonly used for long-term UTI prophylaxis in children with VUR because it is effective, well-tolerated, and achieves high urinary concentrations. Nitrofurantoin is also used but is less preferred in very young children due to gastrointestinal intolerance and contraindication in G6PD deficiency.",
+        "Ciprofloxacin is generally avoided in young children due to concerns about cartilage and tendon damage; it is not a first-line prophylactic agent.",
+        "Gentamicin is an aminoglycoside used for acute pyelonephritis but is nephrotoxic and ototoxic; it is not used for oral long-term prophylaxis."
+      ],
+      "misconception": "Students may choose nitrofurantoin because it is used in adults, but TMP-SMX is the most common first choice in children with VUR.",
+      "takeaway": "UTI prophylaxis in VUR: TMP-SMX is commonly used; nitrofurantoin is an alternative in older children.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "VUR",
+        "prophylaxis",
+        "antibiotics",
+        "TMP-SMX"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_025",
+    "question": "A child had an acute febrile urinary tract infection 2 weeks ago. When is the optimal time to perform a DMSA scan to evaluate for renal cortical scarring?",
+    "options": [
+      "A. Immediately during the acute infection",
+      "B. 4-6 months after the acute infection",
+      "C. 1 year after the acute infection",
+      "D. Only if a second UTI occurs"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "DMSA scanning performed 4-6 months after acute pyelonephritis is optimal for detecting permanent cortical scarring. Acute DMSA during infection may show photopenic defects due to acute pyelonephritis, which may resolve and do not represent true scarring.",
+      "distractors": [
+        "Acute DMSA can identify pyelonephritis but cannot reliably distinguish acute inflammatory changes from permanent scars; many acute defects resolve.",
+        "DMSA scanning performed 4-6 months after acute pyelonephritis is optimal for detecting permanent cortical scarring. Acute DMSA during infection may show photopenic defects due to acute pyelonephritis, which may resolve and do not represent true scarring.",
+        "Waiting 1 year is unnecessary delay; scarring is reliably detectable by 4-6 months.",
+        "Delaying DMSA until a second UTI misses the opportunity to identify at-risk kidneys and intervene early to prevent further damage."
+      ],
+      "misconception": "Students may think DMSA should be done urgently during infection to see the damage, not realizing acute defects often resolve and the scan is best delayed for scarring assessment.",
+      "takeaway": "DMSA for scarring: best done 4-6 months after acute pyelonephritis.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "DMSA",
+        "timing",
+        "renal scarring",
+        "pyelonephritis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_026",
+    "question": "Which of the following best defines recurrent urinary tract infection in a child?",
+    "options": [
+      "A. Two or more UTIs within 1 month",
+      "B. Two episodes of pyelonephritis, or three episodes of cystitis, or two UTIs with upper tract symptoms",
+      "C. Any UTI occurring after antibiotic prophylaxis is stopped",
+      "D. Positive urine culture within 7 days of completing antibiotics"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Recurrent UTI is defined as 2 or more episodes of upper tract infection (pyelonephritis/febrile UTI), 3 or more episodes of lower tract infection (cystitis), or 2 or more episodes of pyelonephritis specifically. This distinguishes true recurrence from relapse or reinfection patterns.",
+      "distractors": [
+        "Two UTIs within 1 month may represent a relapse or inadequate treatment rather than the formal definition of recurrent UTI.",
+        "Recurrent UTI is defined as 2 or more episodes of upper tract infection (pyelonephritis/febrile UTI), 3 or more episodes of lower tract infection (cystitis), or 2 or more episodes of pyelonephritis specifically. This distinguishes true recurrence from relapse or reinfection patterns.",
+        "A UTI after stopping prophylaxis is expected in some patients and does not by itself define recurrence.",
+        "A positive culture within 7 days of completing antibiotics usually indicates treatment failure or relapse with the same organism, not recurrent UTI."
+      ],
+      "misconception": "Students often confuse recurrent UTI with relapse (same organism within 2 weeks) or reinfection, not knowing the specific numerical definitions.",
+      "takeaway": "Recurrent UTI: >=2 pyelonephritis, >=3 cystitis, or >=2 upper tract infections.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "recurrent UTI",
+        "definitions",
+        "pyelonephritis",
+        "cystitis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_027",
+    "question": "A 2-year-old girl is diagnosed with Grade II vesicoureteral reflux after a febrile UTI. What is the most appropriate initial management?",
+    "options": [
+      "A. Immediate ureteric reimplantation surgery",
+      "B. Antibiotic prophylaxis with close follow-up",
+      "C. Daily catheterization and anticholinergics",
+      "D. Observation without any intervention"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Low-grade VUR (Grades I-III) in young children is managed conservatively with low-dose antibiotic prophylaxis, treatment of constipation, timed voiding, and regular follow-up. Many cases resolve spontaneously as the child grows.",
+      "distractors": [
+        "Ureteric reimplantation is reserved for high-grade VUR (IV-V), breakthrough infections despite prophylaxis, or progressive renal scarring, not Grade II initially.",
+        "Low-grade VUR (Grades I-III) in young children is managed conservatively with low-dose antibiotic prophylaxis, treatment of constipation, timed voiding, and regular follow-up. Many cases resolve spontaneously as the child grows.",
+        "Daily catheterization is used for neurogenic bladder management, not for uncomplicated VUR.",
+        "Observation without prophylaxis places the child at risk for recurrent pyelonephritis and renal scarring, especially after a documented febrile UTI."
+      ],
+      "misconception": "Students may assume all VUR requires surgical correction, not recognizing that low-grade VUR often resolves spontaneously with conservative management.",
+      "takeaway": "Grade I-III VUR: conservative management with prophylaxis; surgery for high-grade or breakthrough infections.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "VUR",
+        "management",
+        "Grade II",
+        "conservative"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_028",
+    "question": "Which virulence factor of uropathogenic Escherichia coli is most important for ascending infection and pyelonephritis?",
+    "options": [
+      "A. Capsular polysaccharide",
+      "B. P fimbriae (pyelonephritis-associated pili)",
+      "C. Shiga toxin",
+      "D. Beta-lactamase production"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "P fimbriae (pyelonephritis-associated pili) mediate adhesion to uroepithelial cells and promote ascending infection from the bladder to the kidneys. They are a key virulence factor in pyelonephritis-causing E. coli strains.",
+      "distractors": [
+        "Capsular polysaccharide helps evade phagocytosis and is important for systemic infections, but P fimbriae are more specific for ascending UTI pathogenesis.",
+        "P fimbriae (pyelonephritis-associated pili) mediate adhesion to uroepithelial cells and promote ascending infection from the bladder to the kidneys. They are a key virulence factor in pyelonephritis-causing E. coli strains.",
+        "Shiga toxin is produced by enterohemorrhagic E. coli (STEC) and causes HUS, not typical ascending UTIs.",
+        "Beta-lactamase production confers antibiotic resistance but does not directly contribute to tissue invasion or ascending infection."
+      ],
+      "misconception": "Students may confuse virulence factors with resistance mechanisms, or confuse Shiga toxin-producing E. coli with uropathogenic E. coli.",
+      "takeaway": "P fimbriae on uropathogenic E. coli are critical for ascending infection and pyelonephritis.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "E. coli",
+        "P fimbriae",
+        "virulence",
+        "pyelonephritis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_029",
+    "question": "A urine sample is collected from a 6-month-old girl using an adhesive bag for culture. The result shows mixed flora with 10,000 CFU/mL of E. coli. What is the most appropriate interpretation?",
+    "options": [
+      "A. Definite lower urinary tract infection",
+      "B. Definite upper urinary tract infection",
+      "C. Contamination; requires confirmation with catheterized or suprapubic sample",
+      "D. Indication for immediate intravenous antibiotics"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Bag urine specimens are highly susceptible to perineal and skin contamination. Mixed flora and even single organisms at low counts in bag specimens are unreliable. Confirmation with a catheterized specimen or suprapubic aspiration is required before diagnosing UTI and starting treatment.",
+      "distractors": [
+        "A lower UTI cannot be definitively diagnosed from a bag specimen due to high contamination rates.",
+        "An upper UTI (pyelonephritis) is a clinical diagnosis supported by culture from a sterilely obtained specimen, not a bag specimen.",
+        "Bag urine specimens are highly susceptible to perineal and skin contamination. Mixed flora and even single organisms at low counts in bag specimens are unreliable. Confirmation with a catheterized specimen or suprapubic aspiration is required before diagnosing UTI and starting treatment.",
+        "Immediate IV antibiotics should not be started based solely on a bag urine culture because the result may be false-positive due to contamination."
+      ],
+      "misconception": "Students often treat bag urine culture results as definitive, not recognizing the high false-positive rate and need for confirmatory testing.",
+      "takeaway": "Bag urine cultures are unreliable; confirm positive results with catheterized or suprapubic specimens.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "bag urine",
+        "contamination",
+        "culture",
+        "UTI diagnosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_030",
+    "question": "A newborn boy is noted to have a poor urinary stream and a palpable thick-walled bladder. Bilateral hydronephrosis is seen on antenatal ultrasound. What is the most likely diagnosis?",
+    "options": [
+      "A. Vesicoureteral reflux",
+      "B. Ureteropelvic junction obstruction",
+      "C. Posterior urethral valves",
+      "D. Neurogenic bladder"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Posterior urethral valves (PUV) are the most common congenital obstructive lesion of the urethra in boys. The classic triad includes a poor urinary stream, palpable thick-walled bladder, and bilateral hydroureteronephrosis due to bladder outlet obstruction.",
+      "distractors": [
+        "Vesicoureteral reflux causes hydronephrosis but does not typically cause bladder wall thickening or a poor stream in neonates.",
+        "UPJ obstruction causes unilateral hydronephrosis without bladder outlet obstruction or poor stream.",
+        "Posterior urethral valves (PUV) are the most common congenital obstructive lesion of the urethra in boys. The classic triad includes a poor urinary stream, palpable thick-walled bladder, and bilateral hydroureteronephrosis due to bladder outlet obstruction.",
+        "Neurogenic bladder can cause urinary retention and a thick-walled bladder but is less common in newborns without spinal dysraphism or other neurologic signs."
+      ],
+      "misconception": "Students may think of VUR first in a male infant with hydronephrosis, but the poor stream and thick-walled bladder point to outlet obstruction, specifically PUV.",
+      "takeaway": "Male newborn + poor stream + thick-walled bladder + bilateral hydronephrosis = posterior urethral valves.",
+      "relatedTopic": "uti"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "uti_vur",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 21. Urinary Tract Infections",
+      "tags": [
+        "posterior urethral valves",
+        "PUV",
+        "hydronephrosis",
+        "newborn"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_031",
+    "question": "A 3-year-old child presents with pallor, oliguria, and bloody diarrhea after eating undercooked beef. Peripheral smear shows fragmented red blood cells. What is the classic triad of this condition?",
+    "options": [
+      "A. Fever, thrombocytosis, and hematuria",
+      "B. Microangiopathic hemolytic anemia, thrombocytopenia, and acute kidney injury",
+      "C. Hematuria, proteinuria, and hypoalbuminemia",
+      "D. Jaundice, hepatomegaly, and coagulopathy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The classic triad of hemolytic uremic syndrome (HUS) is microangiopathic hemolytic anemia (schistocytes, high LDH, low haptoglobin), thrombocytopenia, and acute kidney injury. It is commonly preceded by bloody diarrhea due to Shiga toxin-producing E. coli.",
+      "distractors": [
+        "Fever and thrombocytosis are not features of HUS; thrombocytopenia is present, and fever is more typical of TTP.",
+        "The classic triad of hemolytic uremic syndrome (HUS) is microangiopathic hemolytic anemia (schistocytes, high LDH, low haptoglobin), thrombocytopenia, and acute kidney injury. It is commonly preceded by bloody diarrhea due to Shiga toxin-producing E. coli.",
+        "Hematuria, proteinuria, and hypoalbuminemia describe nephritic or nephrotic syndrome, not the microangiopathic process of HUS.",
+        "Jaundice, hepatomegaly, and coagulopathy are more suggestive of liver disease or DIC, not the specific triad of HUS."
+      ],
+      "misconception": "Students may confuse the HUS triad with nephritic syndrome features or think thrombocytosis occurs instead of thrombocytopenia.",
+      "takeaway": "HUS triad: MAHA + thrombocytopenia + AKI; think STEC after bloody diarrhea.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "HUS",
+        "triad",
+        "STEC",
+        "bloody diarrhea"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_032",
+    "question": "Which serotype of Shiga toxin-producing Escherichia coli is most commonly associated with epidemic hemorrhagic colitis and typical HUS in children?",
+    "options": [
+      "A. O157:H7",
+      "B. O111:H8",
+      "C. O104:H4",
+      "D. O6:H1"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "E. coli O157:H7 is the most common serotype associated with hemorrhagic colitis and typical HUS in children. It produces Shiga toxins (Stx1 and Stx2) that damage endothelial cells, particularly in the kidneys and brain.",
+      "distractors": [
+        "E. coli O157:H7 is the most common serotype associated with hemorrhagic colitis and typical HUS in children. It produces Shiga toxins (Stx1 and Stx2) that damage endothelial cells, particularly in the kidneys and brain.",
+        "O111 and other non-O157 serotypes can cause HUS but are less common than O157:H7 in typical epidemics.",
+        "O104:H4 caused a large European outbreak in adults associated with fenugreek sprouts, but it is not the most common serotype in typical childhood HUS.",
+        "O6:H1 is a common uropathogenic serotype but does not typically produce Shiga toxin or cause HUS."
+      ],
+      "misconception": "Students may have heard of the O104 outbreak and incorrectly generalize it as the most common cause, rather than O157:H7.",
+      "takeaway": "O157:H7 is the classic STEC serotype causing childhood HUS after undercooked beef or unpasteurized milk.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "STEC",
+        "O157:H7",
+        "serotype",
+        "E. coli"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_033",
+    "question": "A child with HUS develops a serum potassium of 7.2 mEq/L, ECG showing peaked T waves, and persistent oliguria despite furosemide. What is the definitive management?",
+    "options": [
+      "A. Intravenous calcium gluconate and sodium polystyrene sulfonate only",
+      "B. Emergent peritoneal dialysis or hemodialysis",
+      "C. High-dose corticosteroid pulse therapy",
+      "D. Therapeutic plasma exchange"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Severe hyperkalemia with ECG changes and oliguria unresponsive to diuretics is a clear indication for dialysis in HUS. Dialysis rapidly corrects hyperkalemia, fluid overload, and uremia.",
+      "distractors": [
+        "IV calcium and kayexalate are temporizing measures but do not address the underlying anuric state or remove potassium effectively in oliguric renal failure.",
+        "Severe hyperkalemia with ECG changes and oliguria unresponsive to diuretics is a clear indication for dialysis in HUS. Dialysis rapidly corrects hyperkalemia, fluid overload, and uremia.",
+        "High-dose corticosteroids are used in RPGN and some glomerulonephritides but have no role in typical STEC-HUS.",
+        "Therapeutic plasma exchange is the treatment of choice for TTP and atypical HUS, not for typical STEC-HUS where it has not shown benefit and may be harmful."
+      ],
+      "misconception": "Students may choose temporizing measures for hyperkalemia without recognizing that dialysis is definitive in oliguric AKI, or confuse TTP treatment with HUS treatment.",
+      "takeaway": "Refractory hyperkalemia + oliguria in HUS = dialysis indication; plasma exchange is for TTP/atypical HUS.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "HUS",
+        "dialysis",
+        "hyperkalemia",
+        "indications"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_034",
+    "question": "A 2-year-old develops HUS without preceding diarrhea. Laboratory studies show persistently low C3 and normal ADAMTS13 activity. Family history reveals a sibling who died of HUS. What is the most likely underlying mechanism?",
+    "options": [
+      "A. Shiga toxin-mediated endothelial injury",
+      "B. Complement alternative pathway dysregulation",
+      "C. Autoimmune inhibition of ADAMTS13",
+      "D. Disseminated intravascular coagulation"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Atypical HUS (aHUS) is caused by dysregulation of the alternative complement pathway due to mutations in genes such as CFH, CFI, MCP, or C3. It is not associated with STEC, often has a familial component, and has a poor prognosis without targeted therapy like eculizumab.",
+      "distractors": [
+        "Shiga toxin-mediated endothelial injury is the mechanism of typical HUS, which is preceded by bloody diarrhea and does not typically involve complement gene mutations.",
+        "Atypical HUS (aHUS) is caused by dysregulation of the alternative complement pathway due to mutations in genes such as CFH, CFI, MCP, or C3. It is not associated with STEC, often has a familial component, and has a poor prognosis without targeted therapy like eculizumab.",
+        "Autoimmune inhibition of ADAMTS13 causes acquired TTP, which presents with similar MAHA and thrombocytopenia but more prominent neurologic involvement and normal complement levels.",
+        "DIC causes microangiopathy but is characterized by coagulopathy with low fibrinogen and high D-dimer, not isolated complement dysregulation."
+      ],
+      "misconception": "Students often assume all HUS is STEC-related and may not recognize the distinct pathophysiology and poor prognosis of atypical HUS.",
+      "takeaway": "Atypical HUS = no STEC, complement dysregulation, familial, poor prognosis; consider eculizumab.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "atypical HUS",
+        "complement",
+        "aHUS",
+        "familial"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_035",
+    "question": "A 9-year-old girl presents with fever, confusion, petechiae, and renal dysfunction. Laboratory studies show schistocytes and thrombocytopenia. Which additional feature completes the classic pentad of thrombotic thrombocytopenic purpura?",
+    "options": [
+      "A. Disseminated purpura and elevated D-dimer",
+      "B. Neurologic abnormalities and fever (already present), plus renal involvement and MAHA and thrombocytopenia",
+      "C. The complete pentad is fever, MAHA, thrombocytopenia, renal involvement, and neurologic changes",
+      "D. Hypofibrinogenemia and prolonged PT/aPTT"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The classic pentad of TTP consists of fever, microangiopathic hemolytic anemia, thrombocytopenia, renal involvement, and neurologic abnormalities. This patient already has fever, confusion (neurologic), renal dysfunction, MAHA (schistocytes), and thrombocytopenia (petechiae), so the pentad is complete.",
+      "distractors": [
+        "Disseminated purpura and elevated D-dimer are features of DIC, not the TTP pentad.",
+        "This option describes the pentad components but does not identify which feature is missing or complete the answer clearly; option C states the pentad correctly.",
+        "The classic pentad of TTP consists of fever, microangiopathic hemolytic anemia, thrombocytopenia, renal involvement, and neurologic abnormalities. This patient already has fever, confusion (neurologic), renal dysfunction, MAHA (schistocytes), and thrombocytopenia (petechiae), so the pentad is complete.",
+        "Hypofibrinogenemia and prolonged coagulation times are characteristic of DIC, not TTP, where coagulation tests are typically normal."
+      ],
+      "misconception": "Students often confuse TTP with DIC and HUS, not knowing the specific pentad that distinguishes TTP (prominent neurologic and fever).",
+      "takeaway": "TTP pentad: Fever + MAHA + Thrombocytopenia + Renal involvement + Neurologic changes; treat with plasma exchange.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "TTP",
+        "pentad",
+        "neurologic",
+        "MAHA"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_036",
+    "question": "A child with septic shock develops bleeding from venipuncture sites, epistaxis, and oozing from a central line. Laboratory studies show prolonged PT and aPTT, low fibrinogen, and elevated D-dimer. What is the underlying pathophysiology?",
+    "options": [
+      "A. Isolated thrombocytopenia from bone marrow suppression",
+      "B. Widespread activation of coagulation with consumption of clotting factors and platelets",
+      "C. Autoimmune destruction of von Willebrand factor multimers",
+      "D. Direct endothelial toxin-mediated hemolysis without coagulopathy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Disseminated intravascular coagulation (DIC) is characterized by widespread activation of coagulation, leading to thrombin generation, fibrin deposition, consumption of clotting factors (low fibrinogen, prolonged PT/aPTT), and platelets, with secondary fibrinolysis (elevated D-dimer).",
+      "distractors": [
+        "Isolated thrombocytopenia does not explain the prolonged coagulation times and low fibrinogen seen in this patient.",
+        "Disseminated intravascular coagulation (DIC) is characterized by widespread activation of coagulation, leading to thrombin generation, fibrin deposition, consumption of clotting factors (low fibrinogen, prolonged PT/aPTT), and platelets, with secondary fibrinolysis (elevated D-dimer).",
+        "Autoimmune destruction of vWF multimers is the mechanism of TTP, which typically has normal coagulation studies.",
+        "Direct endothelial toxin-mediated hemolysis without coagulopathy describes HUS, where PT/aPTT are usually normal."
+      ],
+      "misconception": "Students may confuse DIC with TTP/HUS, but the key distinguishing feature of DIC is abnormal coagulation studies (prolonged PT/aPTT, low fibrinogen).",
+      "takeaway": "DIC = prolonged PT/aPTT + low fibrinogen + high D-dimer + thrombocytopenia; treat the underlying cause.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "DIC",
+        "coagulopathy",
+        "sepsis",
+        "fibrinogen"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_037",
+    "question": "A child presents with microangiopathic hemolytic anemia and thrombocytopenia. Which clinical feature most strongly favors thrombotic thrombocytopenic purpura over typical hemolytic uremic syndrome?",
+    "options": [
+      "A. Bloody diarrhea preceding the illness",
+      "B. Severe renal failure requiring dialysis",
+      "C. Recurrent fevers and fluctuating neurologic deficits",
+      "D. Low C3 complement levels"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Prominent neurologic symptoms (confusion, seizures, focal deficits) and fever are more characteristic of TTP than typical HUS. HUS primarily affects the kidneys, while TTP affects the brain more prominently. Bloody diarrhea and significant renal failure favor HUS.",
+      "distractors": [
+        "Bloody diarrhea preceding the illness is classic for STEC-associated typical HUS, not TTP.",
+        "Severe renal failure requiring dialysis is more typical of HUS; TTP can have renal involvement but it is usually less severe.",
+        "Prominent neurologic symptoms (confusion, seizures, focal deficits) and fever are more characteristic of TTP than typical HUS. HUS primarily affects the kidneys, while TTP affects the brain more prominently. Bloody diarrhea and significant renal failure favor HUS.",
+        "Low C3 is seen in atypical HUS (complement-mediated) but not in typical HUS or TTP; it does not distinguish TTP from typical HUS."
+      ],
+      "misconception": "Students often cannot distinguish TTP from HUS because both have MAHA and thrombocytopenia; the neurologic prominence and fever point to TTP.",
+      "takeaway": "TTP: MAHA + thrombocytopenia + fever + neurologic changes; HUS: MAHA + thrombocytopenia + AKI + diarrhea.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "TTP",
+        "HUS",
+        "differential diagnosis",
+        "neurologic"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_038",
+    "question": "Which toxin produced by enterohemorrhagic Escherichia coli O157:H7 is primarily responsible for the endothelial damage seen in typical hemolytic uremic syndrome?",
+    "options": [
+      "A. Cholera toxin",
+      "B. Shiga toxin (verocytotoxin)",
+      "C. Heat-labile enterotoxin",
+      "D. Botulinum toxin"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Shiga toxin (also called verocytotoxin) binds to globotriaosylceramide (Gb3) receptors on endothelial cells, particularly in the kidneys and brain, inhibiting protein synthesis and causing cell death. This leads to the microangiopathic process characteristic of HUS.",
+      "distractors": [
+        "Cholera toxin is produced by Vibrio cholerae and causes secretory diarrhea by activating adenylate cyclase; it is unrelated to HUS.",
+        "Shiga toxin (also called verocytotoxin) binds to globotriaosylceramide (Gb3) receptors on endothelial cells, particularly in the kidneys and brain, inhibiting protein synthesis and causing cell death. This leads to the microangiopathic process characteristic of HUS.",
+        "Heat-labile enterotoxin is produced by enterotoxigenic E. coli (ETEC) and causes travelers diarrhea by the same mechanism as cholera toxin.",
+        "Botulinum toxin is produced by Clostridium botulinum and causes neuromuscular blockade and flaccid paralysis, not HUS."
+      ],
+      "misconception": "Students may confuse the various E. coli toxins and their clinical syndromes, not recognizing that Shiga toxin specifically causes HUS.",
+      "takeaway": "Shiga toxin (verocytotoxin) from STEC causes endothelial damage and HUS; ETEC causes travelers diarrhea; cholera toxin causes secretory diarrhea.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "Shiga toxin",
+        "verocytotoxin",
+        "STEC",
+        "pathophysiology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.98
+    }
+  },
+  {
+    "id": "nephro_039",
+    "question": "In a child with suspected HUS, which peripheral blood smear finding is most diagnostic?",
+    "options": [
+      "A. Target cells and spherocytes",
+      "B. Schistocytes and helmet cells",
+      "C. Howell-Jolly bodies and basophilic stippling",
+      "D. Sickle cells and nucleated red blood cells"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Schistocytes (fragmented red blood cells) and helmet cells are the hallmark of microangiopathic hemolytic anemia in HUS. They result from mechanical shearing of RBCs as they pass through narrowed, fibrin-coated vessels.",
+      "distractors": [
+        "Target cells and spherocytes are seen in liver disease and hereditary spherocytosis, respectively, not HUS.",
+        "Schistocytes (fragmented red blood cells) and helmet cells are the hallmark of microangiopathic hemolytic anemia in HUS. They result from mechanical shearing of RBCs as they pass through narrowed, fibrin-coated vessels.",
+        "Howell-Jolly bodies and basophilic stippling suggest hyposplenism, lead poisoning, or thalassemia, not microangiopathy.",
+        "Sickle cells and nucleated RBCs are characteristic of sickle cell disease and severe hemolysis or marrow stress, not the specific microangiopathic process of HUS."
+      ],
+      "misconception": "Students may recognize hemolysis in HUS but forget that the specific morphology is schistocytes, which distinguishes MAHA from other hemolytic anemias.",
+      "takeaway": "HUS peripheral smear: schistocytes and helmet cells = MAHA; no coagulopathy.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "HUS",
+        "peripheral smear",
+        "schistocytes",
+        "MAHA"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_040",
+    "question": "A 7-year-old with TTP is admitted to the ICU. What is the treatment of choice to prevent irreversible neurologic and renal damage?",
+    "options": [
+      "A. High-dose corticosteroids alone",
+      "B. Therapeutic plasma exchange (plasmapheresis)",
+      "C. Platelet transfusion",
+      "D. Hemodialysis alone"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Therapeutic plasma exchange is the first-line treatment for TTP. It removes ultra-large vWF multimers and autoantibodies against ADAMTS13 while replenishing the deficient enzyme from donor plasma. It reduces mortality from >90% to <20%.",
+      "distractors": [
+        "Corticosteroids may be used as adjunctive therapy to suppress autoantibody production but are not sufficient as monotherapy for acute TTP.",
+        "Therapeutic plasma exchange is the first-line treatment for TTP. It removes ultra-large vWF multimers and autoantibodies against ADAMTS13 while replenishing the deficient enzyme from donor plasma. It reduces mortality from >90% to <20%.",
+        "Platelet transfusion is contraindicated in TTP unless there is life-threatening bleeding, as it can worsen thrombotic microangiopathy.",
+        "Hemodialysis treats renal failure but does not address the underlying ADAMTS13 deficiency or remove pathologic antibodies."
+      ],
+      "misconception": "Students may choose platelet transfusion for severe thrombocytopenia without realizing it is dangerous in TTP, or confuse TTP treatment with HUS treatment.",
+      "takeaway": "TTP treatment = urgent plasma exchange; avoid platelet transfusions; steroids are adjunctive.",
+      "relatedTopic": "hus"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hus_ttp",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 22. Hemolytic Uremic Syndrome",
+      "tags": [
+        "TTP",
+        "plasma exchange",
+        "treatment",
+        "ADAMTS13"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_041",
+    "question": "A 12-year-old with chronic kidney disease has an estimated GFR of 35 mL/min/1.73m2 for 3 months. What is the correct CKD stage?",
+    "options": [
+      "A. Stage 2",
+      "B. Stage 3a",
+      "C. Stage 3b",
+      "D. Stage 4"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "CKD stage 3b is defined as an eGFR of 30-44 mL/min/1.73m2. Stage 3a is 45-59, Stage 4 is 15-29, and Stage 5 is <15. Accurate staging guides management, including preparation for renal replacement therapy.",
+      "distractors": [
+        "Stage 2 requires an eGFR of 60-89 with evidence of kidney damage; this child has more severe reduction.",
+        "Stage 3a is 45-59 mL/min/1.73m2; this child has lower GFR placing them in 3b.",
+        "CKD stage 3b is defined as an eGFR of 30-44 mL/min/1.73m2. Stage 3a is 45-59, Stage 4 is 15-29, and Stage 5 is <15. Accurate staging guides management, including preparation for renal replacement therapy.",
+        "Stage 4 is 15-29 mL/min/1.73m2; this child is not yet in that range."
+      ],
+      "misconception": "Students often confuse the exact GFR cutoffs, particularly between Stage 3a and 3b, which have different management implications.",
+      "takeaway": "CKD staging: 3a=45-59, 3b=30-44, 4=15-29, 5=<15 mL/min/1.73m2.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "CKD",
+        "staging",
+        "GFR",
+        "eGFR"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_042",
+    "question": "Which of the following is an indication for initiating dialysis in a child with acute kidney injury?",
+    "options": [
+      "A. Serum creatinine rising from 1.0 to 2.5 mg/dL over 48 hours",
+      "B. Refractory fluid overload causing respiratory distress",
+      "C. Mild metabolic acidosis with bicarbonate of 18 mEq/L",
+      "D. Hyperkalemia of 5.5 mEq/L responsive to calcium gluconate"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Refractory fluid overload causing pulmonary edema or respiratory distress despite diuretics is a classic indication for dialysis (the 'A' in AEIOU: Acidosis, Electrolytes, Intoxications, Overload, Uremia).",
+      "distractors": [
+        "A rising creatinine alone, while concerning, does not necessarily require dialysis if there are no complications.",
+        "Refractory fluid overload causing pulmonary edema or respiratory distress despite diuretics is a classic indication for dialysis (the 'A' in AEIOU: Acidosis, Electrolytes, Intoxications, Overload, Uremia).",
+        "Mild metabolic acidosis (bicarbonate 18) can usually be managed with bicarbonate supplementation; dialysis is reserved for severe acidosis (pH <7.1 or bicarbonate <10-12).",
+        "Hyperkalemia of 5.5 responsive to medical therapy does not require dialysis; dialysis is indicated for severe, refractory hyperkalemia (>6.5 or with ECG changes) unresponsive to treatment."
+      ],
+      "misconception": "Students may think any rise in creatinine or any hyperkalemia mandates dialysis, not understanding the specific thresholds and refractory nature required.",
+      "takeaway": "Dialysis indications (AEIOU): severe Acidosis, refractory Electrolyte problems, Intoxications, fluid Overload, Uremic complications.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "dialysis",
+        "indications",
+        "fluid overload",
+        "AKI"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_043",
+    "question": "In pediatric renal transplantation, what is the most common cause of long-term graft loss after the first post-transplant year?",
+    "options": [
+      "A. Acute cellular rejection",
+      "B. Chronic allograft nephropathy (interstitial fibrosis and tubular atrophy)",
+      "C. Recurrence of primary disease",
+      "D. Surgical complications"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Chronic allograft nephropathy, characterized by interstitial fibrosis and tubular atrophy (IF/TA), is the leading cause of late graft loss. It results from cumulative immune and non-immune injuries, including subclinical rejection, calcineurin inhibitor toxicity, and hypertension.",
+      "distractors": [
+        "Acute cellular rejection is common in the first 6 months but is usually treatable and not the leading cause of late graft loss.",
+        "Chronic allograft nephropathy, characterized by interstitial fibrosis and tubular atrophy (IF/TA), is the leading cause of late graft loss. It results from cumulative immune and non-immune injuries, including subclinical rejection, calcineurin inhibitor toxicity, and hypertension.",
+        "Recurrence of primary disease (e.g., FSGS, atypical HUS) causes graft loss in a subset but is less common overall than chronic allograft nephropathy.",
+        "Surgical complications are important early but are rare causes of late graft loss."
+      ],
+      "misconception": "Students often focus on acute rejection as the main threat, not realizing that chronic, smoldering damage is the dominant cause of long-term graft failure.",
+      "takeaway": "Late graft loss is most commonly due to chronic allograft nephropathy (IF/TA), not acute rejection.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "renal transplant",
+        "graft loss",
+        "chronic allograft nephropathy",
+        "IF/TA"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_044",
+    "question": "Which form of renal replacement therapy is generally preferred as the initial modality for an infant with end-stage kidney disease awaiting transplantation?",
+    "options": [
+      "A. Hemodialysis via femoral catheter",
+      "B. Peritoneal dialysis",
+      "C. Continuous renal replacement therapy",
+      "D. Nocturnal home hemodialysis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Peritoneal dialysis (PD) is preferred in infants and small children because it can be performed continuously at home, does not require large vascular access, preserves residual renal function, and is better tolerated hemodynamically.",
+      "distractors": [
+        "Hemodialysis via femoral catheter is used for acute dialysis but is not sustainable long-term for infants due to vascular access challenges and hemodynamic instability.",
+        "Peritoneal dialysis (PD) is preferred in infants and small children because it can be performed continuously at home, does not require large vascular access, preserves residual renal function, and is better tolerated hemodynamically.",
+        "CRRT is used in the ICU for acute, hemodynamically unstable patients, not as chronic outpatient therapy.",
+        "Nocturnal home hemodialysis requires mature vascular access and patient cooperation, making it impractical for infants."
+      ],
+      "misconception": "Students may assume hemodialysis is the default for all ESRD, not recognizing the pediatric preference for PD in small children.",
+      "takeaway": "PD is preferred in infants and small children with ESRD; HD reserved for older children or PD failures.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "peritoneal dialysis",
+        "ESRD",
+        "infant",
+        "renal replacement therapy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_045",
+    "question": "A 6-year-old with CKD stage 4 has severe growth failure with a height below the 3rd percentile. Which therapy is most effective for improving long-term growth?",
+    "options": [
+      "A. High-dose oral calcium supplements",
+      "B. Recombinant human growth hormone",
+      "C. High-protein dietary supplementation",
+      "D. Erythropoietin injections"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Recombinant human growth hormone (rhGH) is FDA-approved and effective for growth failure in CKD. It overcomes GH resistance caused by uremia and improves growth velocity, especially when started before epiphyseal closure.",
+      "distractors": [
+        "Calcium supplements treat renal osteodystrophy and hyperphosphatemia but do not directly improve linear growth.",
+        "Recombinant human growth hormone (rhGH) is FDA-approved and effective for growth failure in CKD. It overcomes GH resistance caused by uremia and improves growth velocity, especially when started before epiphyseal closure.",
+        "High-protein diets can worsen uremia and metabolic acidosis; children with CKD need adequate but not excessive protein intake.",
+        "Erythropoietin treats anemia of CKD, which can improve energy and appetite, but it does not directly stimulate linear growth like rhGH."
+      ],
+      "misconception": "Students may think nutrition alone corrects growth failure in CKD, not knowing that rhGH is the specific, evidence-based treatment for this complication.",
+      "takeaway": "Growth failure in CKD: treat with recombinant human growth hormone (rhGH); start early.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "growth failure",
+        "CKD",
+        "growth hormone",
+        "rhGH"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_046",
+    "question": "A child with chronic kidney disease develops bone pain, radiographic findings of subperiosteal resorption, and an elevated intact parathyroid hormone level. What is the primary underlying mechanism?",
+    "options": [
+      "A. Excessive calcium absorption from the gut",
+      "B. Hyperphosphatemia with decreased renal activation of vitamin D",
+      "C. Primary hyperparathyroidism from parathyroid adenoma",
+      "D. Excessive aluminum deposition from phosphate binders"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In CKD, reduced phosphate excretion leads to hyperphosphatemia, and decreased 1-alpha-hydroxylase activity reduces conversion of 25-OH vitamin D to active 1,25-OH vitamin D. This causes hypocalcemia, secondary hyperparathyroidism, and renal osteodystrophy.",
+      "distractors": [
+        "Excessive calcium absorption is not the problem; in fact, calcium absorption is impaired due to low active vitamin D levels.",
+        "In CKD, reduced phosphate excretion leads to hyperphosphatemia, and decreased 1-alpha-hydroxylase activity reduces conversion of 25-OH vitamin D to active 1,25-OH vitamin D. This causes hypocalcemia, secondary hyperparathyroidism, and renal osteodystrophy.",
+        "Primary hyperparathyroidism from an adenoma is rare in children and would not be secondary to CKD; this is secondary hyperparathyroidism.",
+        "Aluminum deposition from older phosphate binders caused adynamic bone disease but is now rare with non-aluminum binders and not the primary mechanism of osteodystrophy."
+      ],
+      "misconception": "Students may confuse primary and secondary hyperparathyroidism, or think aluminum is the main cause, not understanding the phosphate-vitamin D-calcium axis in CKD.",
+      "takeaway": "Renal osteodystrophy: hyperphosphatemia + low active vitamin D -> secondary hyperparathyroidism -> bone disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "renal osteodystrophy",
+        "hyperparathyroidism",
+        "vitamin D",
+        "CKD"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_047",
+    "question": "A 10-year-old with CKD stage 4 has a hemoglobin of 6.8 g/dL, normal iron studies, and a low serum erythropoietin level. What is the treatment of choice?",
+    "options": [
+      "A. Blood transfusion every 2 weeks",
+      "B. Oral iron supplementation alone",
+      "C. Recombinant human erythropoietin or darbepoetin",
+      "D. Folic acid and vitamin B12 supplementation"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Anemia of CKD is primarily due to erythropoietin deficiency from reduced renal mass. Recombinant human erythropoietin (epoetin) or long-acting darbepoetin alfa is the treatment of choice, along with iron supplementation to ensure adequate response.",
+      "distractors": [
+        "Chronic blood transfusions are reserved for severe, symptomatic anemia or before surgery; they cause iron overload and alloimmunization.",
+        "Oral iron alone will not correct the anemia if erythropoietin deficiency is the primary problem, though iron repletion is necessary for epoetin to work.",
+        "Anemia of CKD is primarily due to erythropoietin deficiency from reduced renal mass. Recombinant human erythropoietin (epoetin) or long-acting darbepoetin alfa is the treatment of choice, along with iron supplementation to ensure adequate response.",
+        "Folic acid and B12 deficiencies cause megaloblastic anemia, not the normocytic anemia of CKD with low EPO."
+      ],
+      "misconception": "Students may treat CKD anemia with iron alone, not realizing that EPO deficiency is the primary driver and requires recombinant EPO.",
+      "takeaway": "CKD anemia = EPO deficiency; treat with recombinant EPO/darbepoetin + ensure iron repletion.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "anemia",
+        "erythropoietin",
+        "CKD",
+        "darbepoetin"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_048",
+    "question": "Which immunosuppressive agent is commonly used as part of the maintenance triple therapy regimen in pediatric renal transplantation?",
+    "options": [
+      "A. Cyclophosphamide",
+      "B. Tacrolimus",
+      "C. Rituximab",
+      "D. Methotrexate"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Tacrolimus (a calcineurin inhibitor) is a cornerstone of maintenance immunosuppression in pediatric renal transplantation, typically combined with an antiproliferative agent (mycophenolate) and corticosteroids (triple therapy).",
+      "distractors": [
+        "Cyclophosphamide is used in lupus nephritis and vasculitis but is not standard maintenance therapy in renal transplantation due to toxicity.",
+        "Tacrolimus (a calcineurin inhibitor) is a cornerstone of maintenance immunosuppression in pediatric renal transplantation, typically combined with an antiproliferative agent (mycophenolate) and corticosteroids (triple therapy).",
+        "Rituximab (anti-CD20) is used for antibody-mediated rejection or desensitization, not routine maintenance triple therapy.",
+        "Methotrexate is used in some solid organ protocols but is not standard in renal transplant maintenance regimens."
+      ],
+      "misconception": "Students may confuse induction agents, treatment for rejection, and maintenance immunosuppression; tacrolimus is the standard maintenance calcineurin inhibitor.",
+      "takeaway": "Maintenance triple therapy in renal transplant: calcineurin inhibitor (tacrolimus) + antiproliferative (MMF) + steroid.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "immunosuppression",
+        "tacrolimus",
+        "renal transplant",
+        "triple therapy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_049",
+    "question": "A child with advanced CKD has a metabolic acidosis with a serum bicarbonate of 14 mEq/L. What is the primary mechanism?",
+    "options": [
+      "A. Excessive bicarbonate loss from proximal tubular dysfunction",
+      "B. Inability to excrete the daily acid load due to reduced nephron mass",
+      "C. Lactic acidosis from tissue hypoperfusion",
+      "D. Ketoacidosis from insulin deficiency"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In advanced CKD, the remaining nephrons cannot excrete the daily metabolic acid load (approximately 1 mEq/kg/day of H+), leading to retention of hydrogen ions and metabolic acidosis. This contributes to bone demineralization and growth failure.",
+      "distractors": [
+        "Proximal tubular bicarbonate wasting causes proximal RTA (Type 2), which can occur in some tubular diseases but is not the primary mechanism of acidosis in advanced CKD from glomerular disease.",
+        "In advanced CKD, the remaining nephrons cannot excrete the daily metabolic acid load (approximately 1 mEq/kg/day of H+), leading to retention of hydrogen ions and metabolic acidosis. This contributes to bone demineralization and growth failure.",
+        "Lactic acidosis from hypoperfusion occurs in shock and is an acute process, not the chronic metabolic acidosis of CKD.",
+        "Ketoacidosis from insulin deficiency is diabetic ketoacidosis, unrelated to CKD unless the patient has diabetes, which is uncommon in this context."
+      ],
+      "misconception": "Students may attribute CKD acidosis to tubular defects like RTA, but in advanced CKD it is primarily due to insufficient nephron mass to excrete the daily acid load.",
+      "takeaway": "CKD metabolic acidosis: reduced nephron mass cannot excrete daily acid load; treat with bicarbonate/citrate supplements.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "metabolic acidosis",
+        "CKD",
+        "acid load",
+        "bicarbonate"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_050",
+    "question": "A 14-year-old with suspected CKD stage 5 has small, echogenic kidneys on ultrasound. Which statement best explains why renal biopsy is generally contraindicated in this scenario?",
+    "options": [
+      "A. The biopsy would reveal normal histology",
+      "B. The risk of bleeding and procedural complications outweighs the diagnostic yield",
+      "C. Biopsy is only indicated in children under 10 years of age",
+      "D. The patient must be on dialysis for 6 months before biopsy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In advanced CKD with small, echogenic kidneys, the diagnostic yield of renal biopsy is low because there is extensive global sclerosis and the tissue remaining is inadequate to identify the original disease. Additionally, the risk of bleeding is higher due to uremic platelet dysfunction and hypertension.",
+      "distractors": [
+        "The biopsy would not reveal normal histology; it would show nonspecific end-stage changes, but this is not the primary reason to avoid biopsy.",
+        "In advanced CKD with small, echogenic kidneys, the diagnostic yield of renal biopsy is low because there is extensive global sclerosis and the tissue remaining is inadequate to identify the original disease. Additionally, the risk of bleeding is higher due to uremic platelet dysfunction and hypertension.",
+        "There is no age restriction of 10 years for biopsy; renal biopsy is commonly performed in children of all ages when indicated.",
+        "There is no requirement for 6 months of dialysis before biopsy; in fact, biopsy is usually performed earlier in the disease course when kidneys are normal-sized."
+      ],
+      "misconception": "Students may think biopsy is always needed for diagnosis, not recognizing that in small, echogenic kidneys it is high-risk and low-yield.",
+      "takeaway": "Small, echogenic kidneys in ESRD = contraindication to biopsy due to high risk and low diagnostic yield.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "ckd_dialysis_transplant",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 23. Chronic Kidney Disease",
+      "tags": [
+        "renal biopsy",
+        "contraindication",
+        "small kidneys",
+        "ESRD"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_051",
+    "question": "A 4-year-old child presents with failure to thrive, polyuria, dehydration, and metabolic acidosis. Serum potassium is 2.8 mEq/L and urine pH is 7.2 despite acidemia. What is the most likely diagnosis?",
+    "options": [
+      "A. Proximal renal tubular acidosis (Type 2)",
+      "B. Distal renal tubular acidosis (Type 1)",
+      "C. Type 4 renal tubular acidosis",
+      "D. Diabetic ketoacidosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Distal RTA (Type 1) is characterized by inability to acidify urine in the distal tubule, resulting in urine pH >5.5 despite systemic acidosis, hypokalemia, hyperchloremic metabolic acidosis, and nephrocalcinosis. Polyuria and dehydration occur due to impaired urinary concentration.",
+      "distractors": [
+        "Proximal RTA (Type 2) involves bicarbonate wasting; urine pH is high when serum bicarbonate is above the renal threshold, but becomes <5.5 once systemic acidosis is established because the distal acidification mechanism is intact.",
+        "Distal RTA (Type 1) is characterized by inability to acidify urine in the distal tubule, resulting in urine pH >5.5 despite systemic acidosis, hypokalemia, hyperchloremic metabolic acidosis, and nephrocalcinosis. Polyuria and dehydration occur due to impaired urinary concentration.",
+        "Type 4 RTA is characterized by hyperkalemia and mild acidosis due to aldosterone deficiency or resistance; hypokalemia rules this out.",
+        "Diabetic ketoacidosis causes anion gap metabolic acidosis with ketonemia, not a hyperchloremic normal anion gap acidosis with alkaline urine."
+      ],
+      "misconception": "Students may confuse the types of RTA; the key to distal RTA is persistently alkaline urine despite acidemia and hypokalemia.",
+      "takeaway": "Distal RTA (Type 1): urine pH >5.5 despite acidemia + hypokalemia + hyperchloremic NAGMA.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "renal_tubular_acidosis",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 24. Tubular Disorders",
+      "tags": [
+        "RTA",
+        "distal RTA",
+        "Type 1",
+        "hypokalemia",
+        "nephrocalcinosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_052",
+    "question": "A child with Fanconi syndrome has glycosuria, aminoaciduria, phosphaturia, and proximal renal tubular acidosis. What happens to the urine pH when the child develops severe systemic acidosis?",
+    "options": [
+      "A. It remains alkaline (>7.0) despite severe acidosis",
+      "B. It becomes appropriately acidic (<5.5)",
+      "C. It rises paradoxically above 8.0",
+      "D. It remains unchanged at 6.0 regardless of acidosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "In proximal RTA (Type 2), the defect is in bicarbonate reabsorption. Once the filtered bicarbonate load drops below the impaired reabsorptive threshold due to severe acidosis, the distal acidification mechanisms can acidify the urine to <5.5. This contrasts with distal RTA, where urine cannot be acidified regardless.",
+      "distractors": [
+        "Persistently alkaline urine despite acidosis is characteristic of distal (Type 1) RTA, not proximal RTA.",
+        "In proximal RTA (Type 2), the defect is in bicarbonate reabsorption. Once the filtered bicarbonate load drops below the impaired reabsorptive threshold due to severe acidosis, the distal acidification mechanisms can acidify the urine to <5.5. This contrasts with distal RTA, where urine cannot be acidified regardless.",
+        "A paradoxical rise above 8.0 is not a feature of proximal RTA and is physiologically implausible in this context.",
+        "Urine pH does change in proximal RTA; it is variable and depends on the serum bicarbonate level and filtered load."
+      ],
+      "misconception": "Students often think all RTA types have alkaline urine; the ability to acidify urine once severely acidemic distinguishes proximal from distal RTA.",
+      "takeaway": "Proximal RTA (Type 2): urine pH is high with bicarbonate wasting, but can drop to <5.5 when serum bicarbonate is very low; distal RTA cannot acidify at all.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "renal_tubular_acidosis",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 24. Tubular Disorders",
+      "tags": [
+        "proximal RTA",
+        "Type 2",
+        "Fanconi syndrome",
+        "urine pH"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_053",
+    "question": "A child with obstructive uropathy and chronic kidney disease develops mild metabolic acidosis and a serum potassium of 6.2 mEq/L. Urine pH is 5.8. Which type of renal tubular acidosis is most likely?",
+    "options": [
+      "A. Type 1 (distal) RTA",
+      "B. Type 2 (proximal) RTA",
+      "C. Type 4 (hyporeninemic hypoaldosteronism) RTA",
+      "D. Type 3 (mixed) RTA"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Type 4 RTA is due to aldosterone deficiency or resistance, commonly seen in obstructive uropathy, diabetic nephropathy, and chronic kidney disease. It presents with hyperkalemia, mild hyperchloremic metabolic acidosis, and a urine pH that is usually <5.5 (unlike Type 1).",
+      "distractors": [
+        "Type 1 RTA presents with hypokalemia and inability to acidify urine (pH >5.5), not hyperkalemia.",
+        "Type 2 RTA presents with hypokalemia, bicarbonate wasting, and Fanconi syndrome features; hyperkalemia is not typical.",
+        "Type 4 RTA is due to aldosterone deficiency or resistance, commonly seen in obstructive uropathy, diabetic nephropathy, and chronic kidney disease. It presents with hyperkalemia, mild hyperchloremic metabolic acidosis, and a urine pH that is usually <5.5 (unlike Type 1).",
+        "Type 3 RTA (mixed) is a rare, obsolete term sometimes used for carbonate-poor distal RTA in infants; it does not fit this obstructive uropathy presentation."
+      ],
+      "misconception": "Students may assume all RTA causes hypokalemia and alkaline urine; Type 4 is the exception with hyperkalemia and mild acidosis.",
+      "takeaway": "Type 4 RTA: hyperkalemia + mild acidosis + low aldosterone effect; common in CKD and obstructive uropathy.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "renal_tubular_acidosis",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 24. Tubular Disorders",
+      "tags": [
+        "Type 4 RTA",
+        "hyperkalemia",
+        "aldosterone",
+        "obstructive uropathy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_054",
+    "question": "A newborn with ambiguous genitalia presents with vomiting, dehydration, hyponatremia, and hyperkalemia. Serum 17-hydroxyprogesterone is markedly elevated. Which electrolyte pattern can this condition mimic?",
+    "options": [
+      "A. Type 1 renal tubular acidosis",
+      "B. Type 4 renal tubular acidosis",
+      "C. Bartter syndrome",
+      "D. Gitelman syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Salt-wasting congenital adrenal hyperplasia (21-hydroxylase deficiency) presents with hyponatremia and hyperkalemia due to aldosterone deficiency, mimicking Type 4 RTA. The elevated 17-OHP confirms the diagnosis of CAH, distinguishing it from primary renal causes.",
+      "distractors": [
+        "Type 1 RTA presents with hypokalemia and metabolic acidosis, not hyperkalemia.",
+        "Salt-wasting congenital adrenal hyperplasia (21-hydroxylase deficiency) presents with hyponatremia and hyperkalemia due to aldosterone deficiency, mimicking Type 4 RTA. The elevated 17-OHP confirms the diagnosis of CAH, distinguishing it from primary renal causes.",
+        "Bartter syndrome presents with hypokalemia, metabolic alkalosis, and salt wasting, not hyperkalemia and hyponatremia.",
+        "Gitelman syndrome also presents with hypokalemia, metabolic alkalosis, and hypomagnesemia, the opposite electrolyte pattern."
+      ],
+      "misconception": "Students may focus on the genital ambiguity and miss that the electrolyte pattern of salt-wasting CAH mimics Type 4 RTA or adrenal insufficiency.",
+      "takeaway": "Salt-wasting CAH (21-OH deficiency): hyponatremia + hyperkalemia + metabolic acidosis + high 17-OHP; mimics aldosterone deficiency.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "renal_tubular_acidosis",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 24. Tubular Disorders",
+      "tags": [
+        "CAH",
+        "salt-wasting",
+        "21-hydroxylase deficiency",
+        "hyperkalemia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.94
+    }
+  },
+  {
+    "id": "nephro_055",
+    "question": "Which combination of findings best distinguishes distal renal tubular acidosis (Type 1) from proximal renal tubular acidosis (Type 2)?",
+    "options": [
+      "A. Hyperchloremic metabolic acidosis with hypokalemia in both types",
+      "B. Urine pH >5.5 despite acidemia in Type 1, versus urine pH that can fall below 5.5 in severe acidosis in Type 2",
+      "C. Nephrocalcinosis in Type 2 but not in Type 1",
+      "D. Glycosuria and aminoaciduria in Type 1 but not in Type 2"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The key distinguishing feature is the ability to acidify urine. In distal RTA, the collecting duct cannot secrete H+, so urine pH remains >5.5 regardless of acidemia. In proximal RTA, the distal acidification mechanism is intact, so once filtered bicarbonate is low enough, urine pH can drop below 5.5.",
+      "distractors": [
+        "Both types can have hypokalemia and hyperchloremic metabolic acidosis, so this does not distinguish them.",
+        "The key distinguishing feature is the ability to acidify urine. In distal RTA, the collecting duct cannot secrete H+, so urine pH remains >5.5 regardless of acidemia. In proximal RTA, the distal acidification mechanism is intact, so once filtered bicarbonate is low enough, urine pH can drop below 5.5.",
+        "Nephrocalcinosis is a complication of distal RTA due to persistently alkaline urine and hypercalciuria; it is not typical of proximal RTA.",
+        "Glycosuria and aminoaciduria are features of proximal tubular dysfunction (Fanconi syndrome, Type 2 RTA), not Type 1."
+      ],
+      "misconception": "Students often rely on associated findings rather than the fundamental pathophysiologic distinction in urine acidification capacity.",
+      "takeaway": "Distal vs proximal RTA: urine pH >5.5 despite acidemia = Type 1; ability to acidify to <5.5 in severe acidosis = Type 2.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "renal_tubular_acidosis",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "conceptual",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 24. Tubular Disorders",
+      "tags": [
+        "RTA",
+        "Type 1",
+        "Type 2",
+        "urine pH",
+        "differential diagnosis"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_056",
+    "question": "A 3-year-old child is found to have a large, smooth, non-tender abdominal mass that does not cross the midline. What is the most likely diagnosis?",
+    "options": [
+      "A. Neuroblastoma",
+      "B. Wilms tumor",
+      "C. Hepatoblastoma",
+      "D. Rhabdomyosarcoma"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Wilms tumor (nephroblastoma) is the most common renal malignancy in children, typically presenting as a large, smooth, non-tender flank or abdominal mass in a child aged 2-5 years. It usually does not cross the midline unless very large, and it arises from the kidney.",
+      "distractors": [
+        "Neuroblastoma often presents as a hard, irregular mass that can cross the midline and is frequently associated with periorbital ecchymosis and skin nodules.",
+        "Wilms tumor (nephroblastoma) is the most common renal malignancy in children, typically presenting as a large, smooth, non-tender flank or abdominal mass in a child aged 2-5 years. It usually does not cross the midline unless very large, and it arises from the kidney.",
+        "Hepatoblastoma arises from the liver and is usually in the right upper quadrant, not the flank.",
+        "Rhabdomyosarcoma of the genitourinary tract can present as a pelvic mass but is less common than Wilms tumor and usually occurs in older children."
+      ],
+      "misconception": "Students may confuse Wilms tumor and neuroblastoma; the smooth, encapsulated nature and renal origin favor Wilms, while irregularity and midline crossing favor neuroblastoma.",
+      "takeaway": "Smooth flank mass in toddler <5 years = Wilms tumor; irregular, midline-crossing mass = neuroblastoma.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "Wilms tumor",
+        "abdominal mass",
+        "nephroblastoma",
+        "differential"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_057",
+    "question": "A child with Wilms tumor undergoes nephrectomy. Pathology confirms tumor limited to the kidney, completely resected with intact capsule, and no vascular invasion. What is the stage according to the NWTS/COG system?",
+    "options": [
+      "A. Stage I",
+      "B. Stage II",
+      "C. Stage III",
+      "D. Stage IV"
+    ],
+    "correctIndex": 0,
+    "explanation": {
+      "correct": "Stage I Wilms tumor is confined to the kidney and completely resected with an intact capsule, without rupture, biopsy, or vascular invasion. The renal sinus may be involved, but the tumor does not extend beyond the kidney.",
+      "distractors": [
+        "Stage I Wilms tumor is confined to the kidney and completely resected with an intact capsule, without rupture, biopsy, or vascular invasion. The renal sinus may be involved, but the tumor does not extend beyond the kidney.",
+        "Stage II involves tumor extension beyond the kidney (penetration of capsule, invasion of soft tissue, blood vessels) but is completely resected.",
+        "Stage III includes residual tumor confined to the abdomen (positive margins, peritoneal implants, spillage, or unresectable tumor).",
+        "Stage IV involves hematogenous metastases, most commonly to the lung, or distant lymph node involvement."
+      ],
+      "misconception": "Students often confuse Stage I and II; the key is whether the tumor extends beyond the renal capsule or invades adjacent structures.",
+      "takeaway": "NWTS Stage I: confined to kidney, completely resected, intact capsule, no vascular invasion.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "Wilms tumor",
+        "staging",
+        "NWTS",
+        "Stage I"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_058",
+    "question": "A newborn with aniridia is found to have genitourinary anomalies and later develops Wilms tumor. Which gene is most likely involved?",
+    "options": [
+      "A. WT2 at 11p15",
+      "B. WT1 at 11p13",
+      "C. MYCN amplification",
+      "D. VHL gene"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "WT1 deletion at 11p13 is associated with WAGR syndrome (Wilms tumor, Aniridia, Genitourinary anomalies, intellectual disability/mental Retardation). WT1 is a tumor suppressor gene critical for normal kidney and gonadal development.",
+      "distractors": [
+        "WT2 at 11p15 is associated with Beckwith-Wiedemann syndrome (macroglossia, macrosomia, hemihypertrophy, Wilms tumor), not aniridia.",
+        "WT1 deletion at 11p13 is associated with WAGR syndrome (Wilms tumor, Aniridia, Genitourinary anomalies, intellectual disability/mental Retardation). WT1 is a tumor suppressor gene critical for normal kidney and gonadal development.",
+        "MYCN amplification is characteristic of high-risk neuroblastoma, not Wilms tumor.",
+        "VHL gene mutations cause von Hippel-Lindau syndrome with renal cell carcinoma and hemangioblastomas, not Wilms tumor."
+      ],
+      "misconception": "Students may confuse the WT1 and WT2 loci and their associated syndromes (WAGR vs Beckwith-Wiedemann).",
+      "takeaway": "WAGR syndrome = WT1 deletion (11p13): Wilms tumor + Aniridia + GU anomalies + intellectual disability.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "Wilms tumor",
+        "WT1",
+        "WAGR",
+        "aniridia"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_059",
+    "question": "A 2-year-old with an abdominal mass is found to have elevated urinary vanillylmandelic acid (VMA) and homovanillic acid (HVA). Which tumor is most likely?",
+    "options": [
+      "A. Wilms tumor",
+      "B. Neuroblastoma",
+      "C. Rhabdoid tumor of the kidney",
+      "D. Clear cell sarcoma of the kidney"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Neuroblastoma arises from neural crest cells of the sympathetic nervous system and secretes catecholamines. Elevated urinary VMA and HVA (catecholamine metabolites) are diagnostic markers and are used for monitoring treatment response.",
+      "distractors": [
+        "Wilms tumor does not produce catecholamines; its markers are not biochemical but rather identified by histology (triphasic pattern) and imaging.",
+        "Neuroblastoma arises from neural crest cells of the sympathetic nervous system and secretes catecholamines. Elevated urinary VMA and HVA (catecholamine metabolites) are diagnostic markers and are used for monitoring treatment response.",
+        "Rhabdoid tumor of the kidney is an aggressive malignancy associated with SMARCB1 mutations and does not produce VMA/HVA.",
+        "Clear cell sarcoma of the kidney (the 'bone-metastasizing renal tumor of childhood') does not secrete catecholamines."
+      ],
+      "misconception": "Students may not associate VMA/HVA with neuroblastoma because these metabolites are less commonly discussed than other tumor markers.",
+      "takeaway": "Elevated urinary VMA and HVA = neuroblastoma; Wilms tumor does not produce catecholamines.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "neuroblastoma",
+        "VMA",
+        "HVA",
+        "catecholamines"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_060",
+    "question": "At nephrectomy for Wilms tumor, the pathologist identifies persistent metanephric blastema in the surrounding renal parenchyma. What is the significance of this finding?",
+    "options": [
+      "A. It indicates metastatic spread of the tumor",
+      "B. It is a precursor lesion called nephroblastomatosis with increased risk of bilateral Wilms tumor",
+      "C. It represents a benign hamartoma requiring no further treatment",
+      "D. It confirms the diagnosis of mesoblastic nephroma"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Nephroblastomatosis refers to the presence of persistent metanephric blastema beyond 36 weeks of gestation. It is a precursor lesion for Wilms tumor and increases the risk of developing bilateral disease or metachronous tumors, requiring close surveillance.",
+      "distractors": [
+        "Nephroblastomatosis is not metastatic spread; it represents persistent embryonal tissue within the kidney.",
+        "Nephroblastomatosis refers to the presence of persistent metanephric blastema beyond 36 weeks of gestation. It is a precursor lesion for Wilms tumor and increases the risk of developing bilateral disease or metachronous tumors, requiring close surveillance.",
+        "While it is benign in itself, nephroblastomatosis is not a harmless hamartoma because it carries a significant risk of malignant transformation into Wilms tumor.",
+        "Mesoblastic nephroma is a separate benign renal tumor in neonates composed of spindle cells, not metanephric blastema."
+      ],
+      "misconception": "Students may think nephroblastomatosis is benign and insignificant, not recognizing it as a premalignant condition requiring surveillance.",
+      "takeaway": "Nephroblastomatosis = persistent metanephric blastema; precursor to Wilms tumor; risk of bilateral disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "nephroblastomatosis",
+        "Wilms tumor",
+        "precursor",
+        "metanephric blastema"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_061",
+    "question": "On physical examination, a left-sided abdominal mass in an infant is found to cross the midline and is associated with a hard, nodular texture. What is the most likely diagnosis?",
+    "options": [
+      "A. Wilms tumor",
+      "B. Neuroblastoma",
+      "C. Hydronephrosis",
+      "D. Renal cyst"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Neuroblastoma typically arises from the adrenal medulla or sympathetic chain and can cross the midline. It often feels hard and nodular and may encase major vessels. Wilms tumor is usually smooth, encapsulated, and remains confined to one side until very large.",
+      "distractors": [
+        "Wilms tumor is usually smooth, encapsulated, and does not typically cross the midline unless massive.",
+        "Neuroblastoma typically arises from the adrenal medulla or sympathetic chain and can cross the midline. It often feels hard and nodular and may encase major vessels. Wilms tumor is usually smooth, encapsulated, and remains confined to one side until very large.",
+        "Hydronephrosis presents as a fluctuant, often ballotable mass that may be cystic on imaging, not a hard, nodular mass crossing the midline.",
+        "A renal cyst would be smooth, fluid-filled, and localized to the kidney; it would not present as a hard, nodular midline-crossing mass."
+      ],
+      "misconception": "Students may not know that midline crossing and hard texture strongly favor neuroblastoma over Wilms tumor.",
+      "takeaway": "Abdominal mass crossing midline + hard/nodular texture = neuroblastoma; smooth, encapsulated, unilateral = Wilms tumor.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "neuroblastoma",
+        "Wilms tumor",
+        "physical exam",
+        "midline"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_062",
+    "question": "A child with Wilms tumor undergoes staging evaluation. What is the most common site of metastasis?",
+    "options": [
+      "A. Brain",
+      "B. Bone",
+      "C. Lung",
+      "D. Liver"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "The lung is the most common site of metastasis for Wilms tumor, detected on chest CT in approximately 10-15% of patients at diagnosis. Brain and bone metastases are much less common and usually occur in more aggressive histologies like anaplastic Wilms tumor.",
+      "distractors": [
+        "Brain metastases are rare in Wilms tumor and are more typical of neuroblastoma stage IV-S or other solid tumors.",
+        "Bone metastases are characteristic of neuroblastoma and clear cell sarcoma of the kidney, not typical favorable-histology Wilms tumor.",
+        "The lung is the most common site of metastasis for Wilms tumor, detected on chest CT in approximately 10-15% of patients at diagnosis. Brain and bone metastases are much less common and usually occur in more aggressive histologies like anaplastic Wilms tumor.",
+        "Liver metastases can occur but are less common than lung metastases; they are more typical in hepatoblastoma or stage IV-S neuroblastoma."
+      ],
+      "misconception": "Students may think bone is the most common metastatic site for all pediatric solid tumors, not realizing lung is the primary site for Wilms tumor.",
+      "takeaway": "Wilms tumor metastasizes most commonly to the lung; always get a chest CT for staging.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "Wilms tumor",
+        "metastasis",
+        "lung",
+        "staging"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_063",
+    "question": "According to the NWTS/COG staging system, a Wilms tumor that extends beyond the kidney but is completely resected without spillage is classified as which stage?",
+    "options": [
+      "A. Stage I",
+      "B. Stage II",
+      "C. Stage III",
+      "D. Stage IV"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Stage II Wilms tumor extends beyond the kidney (penetration of renal capsule, invasion of adjacent soft tissue, blood vessels, or renal sinus) but is completely resected without residual tumor or spillage.",
+      "distractors": [
+        "Stage I is confined to the kidney with an intact capsule and no vascular invasion.",
+        "Stage II Wilms tumor extends beyond the kidney (penetration of renal capsule, invasion of adjacent soft tissue, blood vessels, or renal sinus) but is completely resected without residual tumor or spillage.",
+        "Stage III involves residual tumor confined to the abdomen, such as positive margins, peritoneal contamination, or unresectable tumor.",
+        "Stage IV involves distant metastases, most commonly to the lung."
+      ],
+      "misconception": "Students may think any extension beyond the kidney automatically makes it Stage III; however, if completely resected without spillage, it is Stage II.",
+      "takeaway": "NWTS Stage II: tumor extends beyond kidney but is completely resected without spillage or residual disease.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "Wilms tumor",
+        "staging",
+        "NWTS",
+        "Stage II"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_064",
+    "question": "A 1-year-old boy presents with a large renal mass, hypercalcemia, and a concurrent brain tumor. Histology shows sheets of malignant rhabdoid cells. Which gene mutation is most likely?",
+    "options": [
+      "A. WT1",
+      "B. SMARCB1 (INI1)",
+      "C. N-MYC",
+      "D. VHL"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Rhabdoid tumor of the kidney is characterized by loss of SMARCB1 (INI1) tumor suppressor gene function. It is highly aggressive, often associated with atypical teratoid/rhabdoid tumors (AT/RT) of the brain, and has a very poor prognosis.",
+      "distractors": [
+        "WT1 mutations are associated with Denys-Drash syndrome and WAGR syndrome with Wilms tumor, not rhabdoid tumor.",
+        "Rhabdoid tumor of the kidney is characterized by loss of SMARCB1 (INI1) tumor suppressor gene function. It is highly aggressive, often associated with atypical teratoid/rhabdoid tumors (AT/RT) of the brain, and has a very poor prognosis.",
+        "N-MYC amplification is characteristic of high-risk neuroblastoma, not rhabdoid tumor.",
+        "VHL mutations are associated with von Hippel-Lindau syndrome and renal cell carcinoma, not pediatric rhabdoid tumors."
+      ],
+      "misconception": "Students may not recognize rhabdoid tumor as a distinct entity from Wilms tumor and may not know its association with SMARCB1 and CNS tumors.",
+      "takeaway": "Rhabdoid tumor of kidney = SMARCB1/INI1 mutation; aggressive; associated with brain AT/RT.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 3,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "rhabdoid tumor",
+        "SMARCB1",
+        "INI1",
+        "brain tumor"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_065",
+    "question": "A newborn is found to have a solid renal mass detected on antenatal ultrasound. Postnatally, the mass is well-circumscribed, does not invade surrounding tissue, and histology shows bundles of spindle cells resembling leiomyoma. What is the most likely diagnosis?",
+    "options": [
+      "A. Wilms tumor",
+      "B. Congenital mesoblastic nephroma",
+      "C. Rhabdoid tumor",
+      "D. Neuroblastoma"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Congenital mesoblastic nephroma is the most common renal tumor in neonates. It is typically benign, well-circumscribed, composed of spindle cells, and cured by complete nephrectomy. It is rarely metastatic.",
+      "distractors": [
+        "Wilms tumor is rare in the neonatal period and typically presents after infancy; it shows triphasic histology (blastemal, stromal, epithelial), not pure spindle cells.",
+        "Congenital mesoblastic nephroma is the most common renal tumor in neonates. It is typically benign, well-circumscribed, composed of spindle cells, and cured by complete nephrectomy. It is rarely metastatic.",
+        "Rhabdoid tumor is highly malignant, occurs in infants, and shows rhabdoid cells with loss of INI1, not benign spindle cell morphology.",
+        "Neuroblastoma arises from the adrenal medulla or sympathetic chain, not the kidney, and would show small round blue cells with rosette formation."
+      ],
+      "misconception": "Students may assume all neonatal renal masses are malignant Wilms tumors, not recognizing mesoblastic nephroma as the most common benign renal tumor in newborns.",
+      "takeaway": "Most common renal tumor in neonates = congenital mesoblastic nephroma (benign, spindle cells); Wilms tumor is rare in newborns.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "wilms_tumor_renal_masses",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 25. Renal Tumors",
+      "tags": [
+        "mesoblastic nephroma",
+        "neonate",
+        "renal tumor",
+        "benign"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_066",
+    "question": "A 6-year-old child presents with cola-colored urine 2 weeks after a sore throat. Urine microscopy shows dysmorphic red blood cells and RBC casts. Where is the bleeding most likely originating?",
+    "options": [
+      "A. Urethra",
+      "B. Bladder",
+      "C. Glomerulus",
+      "D. Ureter"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Dysmorphic RBCs (irregular, fragmented cells) and RBC casts are pathognomonic of glomerular bleeding. The distorted morphology results from passage of RBCs through the damaged glomerular basement membrane and exposure to the hypertonic tubular environment.",
+      "distractors": [
+        "Urethral bleeding produces fresh, isomorphic RBCs and may be associated with trauma or meatitis, not RBC casts.",
+        "Bladder bleeding (e.g., from infection, stones, or tumor) produces isomorphic RBCs and clots but not RBC casts.",
+        "Dysmorphic RBCs (irregular, fragmented cells) and RBC casts are pathognomonic of glomerular bleeding. The distorted morphology results from passage of RBCs through the damaged glomerular basement membrane and exposure to the hypertonic tubular environment.",
+        "Ureteral bleeding from stones or obstruction produces isomorphic RBCs without casts."
+      ],
+      "misconception": "Students may see hematuria and assume infection or lower tract causes, missing the significance of dysmorphic RBCs and casts that localize the lesion to the glomerulus.",
+      "takeaway": "Dysmorphic RBCs + RBC casts = glomerular hematuria; isomorphic RBCs + clots = lower tract bleeding.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "hematuria",
+        "dysmorphic RBC",
+        "RBC casts",
+        "glomerular"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_067",
+    "question": "Which statement about red blood cell morphology in urine is correct?",
+    "options": [
+      "A. Isomorphic RBCs suggest glomerular origin",
+      "B. Dysmorphic RBCs indicate bleeding from the lower urinary tract",
+      "C. Acanthocytes (ring-form cells) are highly specific for glomerular hematuria",
+      "D. RBC casts are commonly seen in bladder infections"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "Acanthocytes (ring-form dysmorphic RBCs with blebs) are highly specific for glomerular hematuria. They form when RBCs pass through a damaged glomerular basement membrane and experience osmotic stress in the nephron.",
+      "distractors": [
+        "Isomorphic (uniform, biconcave) RBCs suggest lower urinary tract bleeding because they have not passed through the glomerular barrier or tubules.",
+        "Dysmorphic RBCs indicate glomerular origin, not lower tract bleeding.",
+        "Acanthocytes (ring-form dysmorphic RBCs with blebs) are highly specific for glomerular hematuria. They form when RBCs pass through a damaged glomerular basement membrane and experience osmotic stress in the nephron.",
+        "RBC casts form in the renal tubules and are pathognomonic of glomerulonephritis; they are not seen in uncomplicated bladder infections."
+      ],
+      "misconception": "Students often reverse the significance of isomorphic and dysmorphic RBCs, or do not know that acanthocytes are the most specific marker of glomerular bleeding.",
+      "takeaway": "Acanthocytes (ring-form dysmorphic RBCs) = highly specific for glomerular hematuria; isomorphic RBCs = lower tract.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "RBC morphology",
+        "acanthocytes",
+        "glomerular hematuria",
+        "urine microscopy"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_068",
+    "question": "A 14-year-old adolescent has dipstick-positive proteinuria on a school health screening. A first-morning urine sample is negative for protein, but an afternoon sample is positive. What is the most likely diagnosis?",
+    "options": [
+      "A. Minimal change disease",
+      "B. Orthostatic proteinuria",
+      "C. IgA nephropathy",
+      "D. Focal segmental glomerulosclerosis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Orthostatic proteinuria is characterized by proteinuria in the upright position that resolves in the supine position. It is common in adolescents, benign, and does not indicate renal disease. The first-morning (supine) sample being negative confirms the diagnosis.",
+      "distractors": [
+        "Minimal change disease causes persistent proteinuria in all positions, typically with edema and hypoalbuminemia, not position-dependent proteinuria.",
+        "Orthostatic proteinuria is characterized by proteinuria in the upright position that resolves in the supine position. It is common in adolescents, benign, and does not indicate renal disease. The first-morning (supine) sample being negative confirms the diagnosis.",
+        "IgA nephropathy presents with recurrent gross hematuria, not isolated orthostatic proteinuria.",
+        "FSGS causes persistent, often non-selective proteinuria that does not resolve with recumbency and may be steroid-resistant."
+      ],
+      "misconception": "Students may think any proteinuria in an adolescent indicates serious renal disease, not recognizing orthostatic proteinuria as a common benign finding.",
+      "takeaway": "Orthostatic proteinuria: proteinuria when upright, absent when supine; benign, common in adolescents.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "orthostatic proteinuria",
+        "adolescent",
+        "benign",
+        "proteinuria"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_069",
+    "question": "A 10-year-old boy has recurrent episodes of gross hematuria beginning 1-2 days after upper respiratory infections. Serum C3 is normal. Renal biopsy shows mesangial IgA deposition. What is the diagnosis?",
+    "options": [
+      "A. Post-streptococcal glomerulonephritis",
+      "B. IgA nephropathy",
+      "C. Thin basement membrane disease",
+      "D. Alport syndrome"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "IgA nephropathy is diagnosed by renal biopsy showing predominant mesangial IgA deposition. It presents with synpharyngitic hematuria (within 1-3 days of URI), normal complement, and recurrent episodes.",
+      "distractors": [
+        "PSGN presents 1-3 weeks after pharyngitis with low C3 and subepithelial immune complex deposits, not mesangial IgA.",
+        "IgA nephropathy is diagnosed by renal biopsy showing predominant mesangial IgA deposition. It presents with synpharyngitic hematuria (within 1-3 days of URI), normal complement, and recurrent episodes.",
+        "Thin basement membrane disease causes persistent microscopic hematuria with normal renal function and thin GBM on EM, not episodic gross hematuria after infections.",
+        "Alport syndrome presents with persistent hematuria, hearing loss, ocular abnormalities, and progressive renal failure due to COL4A5 mutations."
+      ],
+      "misconception": "Students may confuse the timing and biopsy findings of IgA nephropathy with PSGN, not recognizing mesangial IgA as the diagnostic feature.",
+      "takeaway": "IgA nephropathy = synpharyngitic hematuria + normal C3 + mesangial IgA on biopsy.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "IgA nephropathy",
+        "biopsy",
+        "mesangial IgA",
+        "hematuria"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_070",
+    "question": "An 8-year-old boy has persistent microscopic hematuria, sensorineural hearing loss, and a maternal uncle with end-stage renal disease. What is the most likely diagnosis?",
+    "options": [
+      "A. IgA nephropathy",
+      "B. Alport syndrome",
+      "C. Thin basement membrane disease",
+      "D. Post-infectious glomerulonephritis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Alport syndrome is an X-linked (most commonly) inherited disorder caused by mutations in COL4A5, affecting type IV collagen in the glomerular basement membrane, cochlea, and eye. It presents with hematuria, progressive renal failure, sensorineural deafness, and ocular abnormalities.",
+      "distractors": [
+        "IgA nephropathy causes episodic gross hematuria after infections but does not cause hearing loss or have X-linked inheritance.",
+        "Alport syndrome is an X-linked (most commonly) inherited disorder caused by mutations in COL4A5, affecting type IV collagen in the glomerular basement membrane, cochlea, and eye. It presents with hematuria, progressive renal failure, sensorineural deafness, and ocular abnormalities.",
+        "Thin basement membrane disease (benign familial hematuria) causes persistent microscopic hematuria with normal renal function and hearing, and does not progress to ESRD.",
+        "Post-infectious GN is acute, self-limited, and does not cause chronic hematuria, hearing loss, or familial clustering."
+      ],
+      "misconception": "Students may not connect hematuria with hearing loss and family history, missing the classic triad of Alport syndrome.",
+      "takeaway": "Hematuria + sensorineural hearing loss + family history of ESRD = Alport syndrome (X-linked, COL4A5 mutation).",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "Alport syndrome",
+        "hematuria",
+        "hearing loss",
+        "COL4A5"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_071",
+    "question": "A 12-year-old girl has persistent microscopic hematuria identified on routine screening. She is asymptomatic, has normal renal function, and no proteinuria. Her mother and maternal grandfather also had lifelong microscopic hematuria with normal kidney function. What is the most likely diagnosis?",
+    "options": [
+      "A. Alport syndrome",
+      "B. Thin basement membrane disease",
+      "C. IgA nephropathy",
+      "D. Lupus nephritis"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Thin basement membrane disease (benign familial hematuria) is an autosomal dominant condition characterized by persistent microscopic hematuria, normal renal function, and thin glomerular basement membrane on electron microscopy. It has an excellent prognosis and does not progress to renal failure.",
+      "distractors": [
+        "Alport syndrome causes progressive renal failure and hearing loss; affected males typically develop ESRD, unlike this benign family history.",
+        "Thin basement membrane disease (benign familial hematuria) is an autosomal dominant condition characterized by persistent microscopic hematuria, normal renal function, and thin glomerular basement membrane on electron microscopy. It has an excellent prognosis and does not progress to renal failure.",
+        "IgA nephropathy usually presents with episodic gross hematuria after infections and does not typically have this strong autosomal dominant family pattern with exclusively normal renal function.",
+        "Lupus nephritis causes proteinuria, hematuria, and systemic features (rash, arthritis, low complement) with variable prognosis, not isolated familial microscopic hematuria."
+      ],
+      "misconception": "Students may assume all familial hematuria is Alport syndrome, not recognizing thin basement membrane disease as the benign alternative with normal prognosis.",
+      "takeaway": "Familial microscopic hematuria + normal renal function + no hearing loss = thin basement membrane disease (benign familial hematuria).",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "thin basement membrane disease",
+        "benign familial hematuria",
+        "hematuria",
+        "autosomal dominant"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_072",
+    "question": "A 7-year-old child is found to have asymptomatic microscopic hematuria on two separate occasions. What is the most appropriate next step in the diagnostic workup?",
+    "options": [
+      "A. Immediate renal biopsy",
+      "B. Urine microscopy to assess RBC morphology and exclude RBC casts",
+      "C. CT urogram with contrast",
+      "D. Cystoscopy"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The first step in evaluating asymptomatic microscopic hematuria is urine microscopy to distinguish glomerular from non-glomerular causes. Dysmorphic RBCs and RBC casts suggest glomerular disease, while isomorphic RBCs suggest lower tract bleeding, guiding further investigation.",
+      "distractors": [
+        "Immediate renal biopsy is invasive and not indicated before basic evaluation including microscopy, urine culture, and calcium/creatinine ratio.",
+        "The first step in evaluating asymptomatic microscopic hematuria is urine microscopy to distinguish glomerular from non-glomerular causes. Dysmorphic RBCs and RBC casts suggest glomerular disease, while isomorphic RBCs suggest lower tract bleeding, guiding further investigation.",
+        "CT urogram involves radiation and contrast and is reserved for suspected structural abnormalities or stones after initial evaluation.",
+        "Cystoscopy is rarely indicated in children with isolated microscopic hematuria and is used for visualizing bladder lesions in selected cases."
+      ],
+      "misconception": "Students may rush to invasive tests like biopsy or imaging without first performing urine microscopy, which is the most informative initial test.",
+      "takeaway": "Microscopic hematuria workup: start with urine microscopy (RBC morphology, casts) to localize the lesion.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "hematuria",
+        "workup",
+        "urine microscopy",
+        "RBC morphology"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_073",
+    "question": "Which definition of persistent microscopic hematuria in children is most accurate?",
+    "options": [
+      "A. >=3 RBCs per high-power field on a single urinalysis",
+      "B. >=5 RBCs per high-power field on at least 3 separate properly collected urine samples",
+      "C. >=10 RBCs per high-power field on any one occasion",
+      "D. Any RBCs visible on dipstick testing"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Persistent microscopic hematuria is typically defined as >=5 RBCs per high-power field on at least 3 separate properly collected urine samples. This excludes transient causes like exercise, fever, or mild trauma.",
+      "distractors": [
+        "A single urinalysis finding is insufficient to establish persistence; transient hematuria can occur with exercise, fever, or menstruation.",
+        "Persistent microscopic hematuria is typically defined as >=5 RBCs per high-power field on at least 3 separate properly collected urine samples. This excludes transient causes like exercise, fever, or mild trauma.",
+        ">=10 RBCs/HPF is a more stringent criterion but not the standard definition for persistence; >=5 on multiple occasions is sufficient.",
+        "Dipstick testing detects heme but cannot distinguish RBCs from free hemoglobin or myoglobin; microscopy is required for confirmation."
+      ],
+      "misconception": "Students may think a single positive dipstick or one urinalysis is sufficient for diagnosis, not knowing persistence must be confirmed on multiple samples.",
+      "takeaway": "Persistent microscopic hematuria: >=5 RBC/HPF on >=3 separate urine samples.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "hematuria",
+        "definitions",
+        "persistent",
+        "microscopic"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_074",
+    "question": "A child with nephrotic-range proteinuria has a spot urine protein-to-creatinine ratio of 3.5 mg/mg. What does this value indicate?",
+    "options": [
+      "A. Normal urinary protein excretion",
+      "B. Mild proteinuria consistent with orthostatic proteinuria",
+      "C. Nephrotic-range proteinuria",
+      "D. Tubular proteinuria"
+    ],
+    "correctIndex": 2,
+    "explanation": {
+      "correct": "A spot urine protein-to-creatinine ratio >2.0 mg/mg (or >200 mg/mmol) indicates nephrotic-range proteinuria. Values <0.2 are normal in children, 0.2-2.0 indicate mild-to-moderate proteinuria, and >2.0 indicates nephrotic-range proteinuria.",
+      "distractors": [
+        "Normal urinary protein excretion corresponds to a urine protein/creatinine ratio <0.2 mg/mg in children.",
+        "Orthostatic proteinuria typically has a ratio <1.0 and resolves with recumbency; it does not reach nephrotic range.",
+        "A spot urine protein-to-creatinine ratio >2.0 mg/mg (or >200 mg/mmol) indicates nephrotic-range proteinuria. Values <0.2 are normal in children, 0.2-2.0 indicate mild-to-moderate proteinuria, and >2.0 indicates nephrotic-range proteinuria.",
+        "Tubular proteinuria is characterized by low-molecular-weight proteins (beta-2 microglobulin) with typically mild proteinuria and a ratio usually <2.0."
+      ],
+      "misconception": "Students may not know the specific cutoff values for the urine protein-to-creatinine ratio and what constitutes nephrotic-range proteinuria.",
+      "takeaway": "Spot urine protein/creatinine ratio: >2.0 mg/mg = nephrotic-range proteinuria; <0.2 = normal; 0.2-2.0 = mild-moderate.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 20. Nephrotic Syndrome",
+      "tags": [
+        "proteinuria",
+        "protein-creatinine ratio",
+        "nephrotic range",
+        "quantification"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_075",
+    "question": "A 16-year-old athlete develops transient gross hematuria after a marathon run. Urine microscopy shows isomorphic RBCs, and renal function is normal. The hematuria resolves completely after 48 hours of rest. What is the most likely cause?",
+    "options": [
+      "A. IgA nephropathy",
+      "B. Exercise-induced hematuria",
+      "C. Renal cell carcinoma",
+      "D. Urinary tract infection"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Exercise-induced hematuria is a well-described phenomenon in athletes, particularly after strenuous or prolonged exercise. It is characterized by transient hematuria with isomorphic RBCs, normal renal function, and rapid resolution with rest. No further workup is needed if it resolves.",
+      "distractors": [
+        "IgA nephropathy causes recurrent gross hematuria, often synpharyngitic, with dysmorphic RBCs and would not resolve so quickly and completely after rest alone.",
+        "Exercise-induced hematuria is a well-described phenomenon in athletes, particularly after strenuous or prolonged exercise. It is characterized by transient hematuria with isomorphic RBCs, normal renal function, and rapid resolution with rest. No further workup is needed if it resolves.",
+        "Renal cell carcinoma is exceedingly rare in adolescents and would cause persistent or progressive hematuria, not transient post-exercise hematuria.",
+        "UTI typically causes dysuria, frequency, pyuria, and bacteriuria, and hematuria would not be strictly limited to post-exercise periods."
+      ],
+      "misconception": "Students may over-investigate transient post-exercise hematuria in young athletes, not recognizing it as a benign, self-limited phenomenon.",
+      "takeaway": "Transient gross hematuria after strenuous exercise with isomorphic RBCs + normal renal function = exercise-induced hematuria; benign.",
+      "relatedTopic": "hematuria"
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "hematuria_proteinuria",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 19. Glomerular Disease",
+      "tags": [
+        "exercise-induced hematuria",
+        "athlete",
+        "transient",
+        "isomorphic RBCs"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_076",
+    "question": "A 6-year-old boy wets the bed every night but has no daytime urinary symptoms, no urgency, and no frequency. What is the most appropriate classification?",
+    "options": [
+      "A. Non-monosymptomatic nocturnal enuresis",
+      "B. Monosymptomatic nocturnal enuresis",
+      "C. Overactive bladder",
+      "D. Neurogenic bladder"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Monosymptomatic nocturnal enuresis (MNE) is defined as nighttime wetting in a child >5 years of age without any daytime lower urinary tract symptoms (urgency, frequency, daytime incontinence, constipation). This child fits the criteria perfectly.",
+      "distractors": [
+        "Non-monosymptomatic nocturnal enuresis is associated with daytime symptoms such as urgency, frequency, or daytime incontinence, which are absent here.",
+        "Monosymptomatic nocturnal enuresis (MNE) is defined as nighttime wetting in a child >5 years of age without any daytime lower urinary tract symptoms (urgency, frequency, daytime incontinence, constipation). This child fits the criteria perfectly.",
+        "Overactive bladder presents with daytime urgency, frequency, and sometimes incontinence, not isolated nocturnal wetting.",
+        "Neurogenic bladder is associated with neurologic conditions (e.g., spina bifida) and causes both daytime and nighttime incontinence with abnormal voiding patterns."
+      ],
+      "misconception": "Students may label all bedwetting as non-monosymptomatic if there is any associated issue, but the absence of daytime symptoms is the defining feature of MNE.",
+      "takeaway": "Monosymptomatic enuresis = bedwetting only, no daytime symptoms; non-monosymptomatic = bedwetting + daytime LUTS.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "monosymptomatic enuresis",
+        "nocturnal enuresis",
+        "bedwetting",
+        "classification"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_077",
+    "question": "A 7-year-old with monosymptomatic nocturnal enuresis is started on desmopressin. What is the mechanism of action of this medication?",
+    "options": [
+      "A. It increases bladder capacity by relaxing detrusor muscle",
+      "B. It reduces nocturnal urine production by acting on V2 receptors in the collecting duct",
+      "C. It stimulates the pontine micturition center to increase arousal from sleep",
+      "D. It reduces urethral resistance by relaxing the external sphincter"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Desmopressin is a synthetic analog of vasopressin (ADH) that acts on V2 receptors in the renal collecting duct to increase water reabsorption. This reduces nocturnal urine volume, addressing the nocturnal polyuria that contributes to enuresis in many children.",
+      "distractors": [
+        "Anticholinergics like oxybutynin increase bladder capacity by relaxing the detrusor; desmopressin does not act on bladder smooth muscle.",
+        "Desmopressin is a synthetic analog of vasopressin (ADH) that acts on V2 receptors in the renal collecting duct to increase water reabsorption. This reduces nocturnal urine volume, addressing the nocturnal polyuria that contributes to enuresis in many children.",
+        "Desmopressin does not stimulate the pontine micturition center; alarm therapy works partly by conditioning arousal.",
+        "Alpha-blockers reduce urethral resistance; desmopressin has no effect on the urethral sphincter."
+      ],
+      "misconception": "Students may confuse desmopressin with anticholinergics or think it works on the bladder rather than the kidney.",
+      "takeaway": "Desmopressin = synthetic ADH analog; acts on renal V2 receptors to reduce nocturnal urine output.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "desmopressin",
+        "mechanism",
+        "V2 receptor",
+        "nocturnal polyuria"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_078",
+    "question": "Which statement about enuresis alarm therapy is most accurate?",
+    "options": [
+      "A. It works by pharmacologically suppressing urine production at night",
+      "B. It is a conditioning therapy that teaches the child to wake in response to a full bladder",
+      "C. It is most effective when used intermittently, only on weekends",
+      "D. It is contraindicated in children over 8 years of age"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "The enuresis alarm is a conditioning (behavioral) therapy that uses a moisture sensor to wake the child when urination begins. Over time, the child learns to associate bladder distension with arousal, leading to improved nighttime continence. It has the best long-term cure rates.",
+      "distractors": [
+        "Pharmacologic suppression of urine production is the mechanism of desmopressin, not the alarm.",
+        "The enuresis alarm is a conditioning (behavioral) therapy that uses a moisture sensor to wake the child when urination begins. Over time, the child learns to associate bladder distension with arousal, leading to improved nighttime continence. It has the best long-term cure rates.",
+        "Alarm therapy requires consistent nightly use for several weeks to months; intermittent use is ineffective.",
+        "Alarm therapy is not contraindicated in older children; it can be used at any age where the child is motivated and cooperative."
+      ],
+      "misconception": "Students may think alarm therapy works like a medication or is only for young children, not understanding its behavioral conditioning mechanism.",
+      "takeaway": "Alarm therapy = conditioning device; best long-term cure rates for nocturnal enuresis; requires consistent nightly use.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "alarm therapy",
+        "conditioning",
+        "enuresis",
+        "behavioral"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_079",
+    "question": "A 5-year-old girl has nocturnal enuresis accompanied by daytime urgency, frequency, and occasional daytime wetting. She also has chronic constipation. What classification best fits this presentation?",
+    "options": [
+      "A. Monosymptomatic nocturnal enuresis",
+      "B. Non-monosymptomatic nocturnal enuresis",
+      "C. Primary nocturnal enuresis without daytime symptoms",
+      "D. Isolated nocturnal polyuria"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Non-monosymptomatic nocturnal enuresis is characterized by nighttime wetting associated with daytime lower urinary tract symptoms (urgency, frequency, daytime incontinence) or other conditions like constipation. This requires a broader evaluation and treatment approach.",
+      "distractors": [
+        "Monosymptomatic nocturnal enuresis requires the absence of all daytime urinary symptoms, which is not the case here.",
+        "Non-monosymptomatic nocturnal enuresis is characterized by nighttime wetting associated with daytime lower urinary tract symptoms (urgency, frequency, daytime incontinence) or other conditions like constipation. This requires a broader evaluation and treatment approach.",
+        "Primary nocturnal enuresis without daytime symptoms is essentially monosymptomatic enuresis, which does not fit this presentation.",
+        "Isolated nocturnal polyuria describes increased nighttime urine production without daytime symptoms or incontinence."
+      ],
+      "misconception": "Students may classify all bedwetting as monosymptomatic without carefully evaluating for associated daytime symptoms and constipation.",
+      "takeaway": "Non-monosymptomatic enuresis = nocturnal wetting + daytime LUTS (urgency, frequency, daytime incontinence) or constipation.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "non-monosymptomatic enuresis",
+        "daytime symptoms",
+        "urgency",
+        "constipation"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_080",
+    "question": "A 7-year-old girl has recurrent urinary tract infections and a staccato, interrupted urinary stream. Uroflowmetry shows peaks and plateaus. She does not have neurologic disease. What is the most likely diagnosis?",
+    "options": [
+      "A. Posterior urethral valves",
+      "B. Dysfunctional voiding",
+      "C. Neurogenic detrusor overactivity",
+      "D. Vesicoureteral reflux"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Dysfunctional voiding is characterized by failure to relax the external urethral sphincter and pelvic floor during voiding, leading to a staccato stream, incomplete bladder emptying, recurrent UTIs, and abnormal uroflowmetry. It is a learned behavior, not due to neurologic disease.",
+      "distractors": [
+        "Posterior urethral valves occur in boys and cause a poor stream and bilateral hydronephrosis, not a staccato stream in girls.",
+        "Dysfunctional voiding is characterized by failure to relax the external urethral sphincter and pelvic floor during voiding, leading to a staccato stream, incomplete bladder emptying, recurrent UTIs, and abnormal uroflowmetry. It is a learned behavior, not due to neurologic disease.",
+        "Neurogenic detrusor overactivity is due to spinal cord or neurologic disease and causes urgency incontinence and abnormal sphincter activity, but this child has no neurologic disease.",
+        "Vesicoureteral reflux can cause recurrent UTIs but does not cause a staccato urinary stream by itself."
+      ],
+      "misconception": "Students may attribute recurrent UTIs in girls solely to VUR without considering dysfunctional voiding as a common cause.",
+      "takeaway": "Dysfunctional voiding = staccato stream + recurrent UTIs + abnormal uroflow; due to failure to relax sphincter during voiding.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "analyze",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "dysfunctional voiding",
+        "staccato stream",
+        "UTI",
+        "uroflowmetry"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_081",
+    "question": "A 6-year-old with urgency and daytime incontinence is started on oxybutynin. What is the primary mechanism of action of this medication?",
+    "options": [
+      "A. Alpha-adrenergic agonist causing urethral sphincter contraction",
+      "B. Anticholinergic inhibiting detrusor muscle contractions",
+      "C. Beta-3 adrenergic agonist relaxing the bladder neck",
+      "D. Muscarinic agonist stimulating bladder emptying"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Oxybutynin is an anticholinergic (antimuscarinic) medication that inhibits detrusor muscle contractions by blocking acetylcholine at muscarinic receptors. This increases functional bladder capacity and reduces urgency and incontinence in overactive bladder.",
+      "distractors": [
+        "Alpha-adrenergic agonists like pseudoephedrine increase urethral sphincter tone and are used for stress incontinence, not overactive bladder.",
+        "Oxybutynin is an anticholinergic (antimuscarinic) medication that inhibits detrusor muscle contractions by blocking acetylcholine at muscarinic receptors. This increases functional bladder capacity and reduces urgency and incontinence in overactive bladder.",
+        "Beta-3 adrenergic agonists like mirabegron relax the detrusor and are a newer class, but oxybutynin is not a beta-3 agonist.",
+        "Muscarinic agonists like bethanechol stimulate bladder contraction and are used for urinary retention, not overactive bladder."
+      ],
+      "misconception": "Students may confuse the mechanisms of different bladder medications, not recognizing oxybutynin as an anticholinergic.",
+      "takeaway": "Oxybutynin = anticholinergic; blocks muscarinic receptors -> relaxes detrusor -> increases bladder capacity.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "conceptual",
+      "bloomLevel": "understand",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "oxybutynin",
+        "anticholinergic",
+        "overactive bladder",
+        "mechanism"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_082",
+    "question": "According to ICCS and standard pediatric guidelines, at what age is nocturnal enuresis typically diagnosed?",
+    "options": [
+      "A. After 3 years of age",
+      "B. After 5 years of age",
+      "C. After 7 years of age",
+      "D. After 10 years of age"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Nocturnal enuresis is typically diagnosed after 5 years of age, as this is the age by which most children have achieved nighttime continence. Before age 5, bedwetting is considered part of normal development.",
+      "distractors": [
+        "By age 3, many children are still developing continence; diagnosing enuresis at this age would be premature.",
+        "Nocturnal enuresis is typically diagnosed after 5 years of age, as this is the age by which most children have achieved nighttime continence. Before age 5, bedwetting is considered part of normal development.",
+        "While 7 years is sometimes used in some older literature, the modern standard and ICCS definition use 5 years as the diagnostic threshold.",
+        "Waiting until 10 years would delay evaluation and treatment for children with pathologic or bothersome enuresis."
+      ],
+      "misconception": "Students may use adult criteria or older literature that suggests 7 years, not knowing that current pediatric guidelines use 5 years.",
+      "takeaway": "Nocturnal enuresis is diagnosed after 5 years of age; before this, bedwetting is often developmental.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 1,
+      "type": "conceptual",
+      "bloomLevel": "remember",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "enuresis",
+        "age cutoff",
+        "diagnosis",
+        "ICCS"
+      ],
+      "validated": true,
+      "confidenceScore": 0.97
+    }
+  },
+  {
+    "id": "nephro_083",
+    "question": "A 6-year-old girl has daytime urinary incontinence with urgency and frequency but no nocturnal enuresis. She has no neurologic abnormalities. What is the most likely underlying cause?",
+    "options": [
+      "A. Diabetes insipidus",
+      "B. Overactive bladder",
+      "C. Posterior urethral valves",
+      "D. Chronic kidney disease stage 5"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Overactive bladder (OAB) in children presents with urgency, frequency, and daytime incontinence due to involuntary detrusor contractions. It is a common cause of daytime wetting in neurologically normal children and is treated with behavioral therapy and sometimes anticholinergics.",
+      "distractors": [
+        "Diabetes insipidus causes polyuria and polydipsia with dilute urine but does not typically cause urgency incontinence in a neurologically normal child.",
+        "Overactive bladder (OAB) in children presents with urgency, frequency, and daytime incontinence due to involuntary detrusor contractions. It is a common cause of daytime wetting in neurologically normal children and is treated with behavioral therapy and sometimes anticholinergics.",
+        "Posterior urethral valves occur only in boys and cause poor stream, bladder outlet obstruction, and bilateral hydronephrosis.",
+        "CKD stage 5 causes oliguria, not frequency and urgency, and would have other systemic findings."
+      ],
+      "misconception": "Students may assume daytime incontinence in girls is due to anatomic abnormalities, not recognizing overactive bladder as the most common functional cause.",
+      "takeaway": "Daytime urgency + frequency + incontinence in a neurologically normal child = overactive bladder; treat with anticholinergics and bladder training.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "daytime incontinence",
+        "overactive bladder",
+        "urgency",
+        "frequency"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  },
+  {
+    "id": "nephro_084",
+    "question": "An 8-year-old girl experiences complete bladder emptying whenever she laughs hard during play. She has no other urinary symptoms and normal voiding patterns. What is this phenomenon called?",
+    "options": [
+      "A. Stress incontinence from pelvic floor weakness",
+      "B. Giggle incontinence",
+      "C. Vaginal reflux of urine",
+      "D. Detrusor-sphincter dyssynergia"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Giggle incontinence (enuresis risoria) is a specific condition characterized by complete bladder emptying triggered by laughter. It is thought to be a form of cataplexy involving the detrusor muscle. Most children outgrow it, though methylphenidate has been used in refractory cases.",
+      "distractors": [
+        "Stress incontinence from pelvic floor weakness is rare in children and typically causes small leaks with coughing or sneezing, not complete emptying with laughter.",
+        "Giggle incontinence (enuresis risoria) is a specific condition characterized by complete bladder emptying triggered by laughter. It is thought to be a form of cataplexy involving the detrusor muscle. Most children outgrow it, though methylphenidate has been used in refractory cases.",
+        "Vaginal reflux of urine (vaginal voiding) causes post-void dribbling and dampness but not complete emptying with laughter.",
+        "Detrusor-sphincter dyssynergia is a neurologic condition causing interrupted stream and retention, not laughter-induced voiding."
+      ],
+      "misconception": "Students may confuse giggle incontinence with stress incontinence or vaginal voiding, not recognizing it as a distinct, usually self-limiting entity.",
+      "takeaway": "Giggle incontinence = complete bladder emptying with laughter; distinct entity, usually self-limiting.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "giggle incontinence",
+        "enuresis risoria",
+        "laughter",
+        "incontinence"
+      ],
+      "validated": true,
+      "confidenceScore": 0.95
+    }
+  },
+  {
+    "id": "nephro_085",
+    "question": "A 5-year-old boy has daytime urinary frequency (every 30 minutes), small voided volumes, and occasional urgency incontinence. He has no nocturia or nocturnal enuresis. Urinalysis and culture are normal. What is the most likely diagnosis?",
+    "options": [
+      "A. Diabetes mellitus",
+      "B. Overactive bladder",
+      "C. Urethral stricture",
+      "D. Posterior urethral valves"
+    ],
+    "correctIndex": 1,
+    "explanation": {
+      "correct": "Overactive bladder in children presents with urinary frequency, urgency, small voided volumes, and occasional incontinence due to involuntary detrusor contractions. Normal urinalysis and absence of nocturnal symptoms support a functional rather than organic cause.",
+      "distractors": [
+        "Diabetes mellitus causes polyuria with large voided volumes, polydipsia, and often nocturia; urine would show glucosuria.",
+        "Overactive bladder in children presents with urinary frequency, urgency, small voided volumes, and occasional incontinence due to involuntary detrusor contractions. Normal urinalysis and absence of nocturnal symptoms support a functional rather than organic cause.",
+        "Urethral stricture causes a weak stream, straining, and incomplete emptying, not frequency with small volumes.",
+        "Posterior urethral valves occur only in boys and cause poor stream, bladder outlet obstruction, and hydronephrosis, not isolated daytime frequency."
+      ],
+      "misconception": "Students may over-investigate functional daytime frequency with diabetes or structural abnormalities, not recognizing overactive bladder as a common benign cause.",
+      "takeaway": "Daytime frequency + small volumes + urgency + normal urine culture = overactive bladder in children; treat with bladder training +/- anticholinergics.",
+      "relatedTopic": null
+    },
+    "meta": {
+      "topic": "nephrology",
+      "subtopic": "enuresis_voiding_dysfunction",
+      "system": "GU",
+      "difficulty": 2,
+      "type": "clinical_vignette",
+      "bloomLevel": "apply",
+      "nelsonRef": "Chapter 26. Voiding Disorders",
+      "tags": [
+        "overactive bladder",
+        "daytime frequency",
+        "urgency",
+        "pediatric"
+      ],
+      "validated": true,
+      "confidenceScore": 0.96
+    }
+  }
+]

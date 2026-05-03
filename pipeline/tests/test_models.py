@@ -89,3 +89,15 @@ class TestKnowledgeGraph:
         )
         related = graph.get_related("agn")
         assert "hematuria" in related
+
+
+class TestOntology:
+    def test_no_duplicate_concept_ids(self) -> None:
+        from pedsiq.graph.ontology import CORE_CONCEPTS
+        ids = [c.id for c in CORE_CONCEPTS]
+        assert len(ids) == len(set(ids)), f"Duplicate concept IDs found: {[i for i in ids if ids.count(i) > 1]}"
+
+    def test_all_concepts_have_category(self) -> None:
+        from pedsiq.graph.ontology import CORE_CONCEPTS
+        for concept in CORE_CONCEPTS:
+            assert concept.category is not None, f"Concept {concept.id} missing category"

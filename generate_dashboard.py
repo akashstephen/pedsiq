@@ -1,13 +1,24 @@
 import json
 import os
+import sys
+from pathlib import Path
 
-OUTPUT_DIR = "/Users/akashstephen/Developer/Pediatrics Exam"
+# Resolve paths relative to this script's directory
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 # Load all classified batches
 all_q = []
-for i in range(1,5):
-    with open(os.path.join(OUTPUT_DIR, f"classified_batch_{i}.json"), 'r', encoding='utf-8') as f:
-        all_q.extend(json.load(f))
+for i in range(1, 5):
+    batch_path = SCRIPT_DIR / f"classified_batch_{i}.json"
+    if not batch_path.exists():
+        print(f"WARNING: Batch file not found: {batch_path}", file=sys.stderr)
+        continue
+    try:
+        with batch_path.open('r', encoding='utf-8') as f:
+            all_q.extend(json.load(f))
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Invalid JSON in {batch_path}: {e}", file=sys.stderr)
+        sys.exit(1)
 
 # Standardize formats
 for q in all_q:
@@ -27,8 +38,8 @@ for q in all_q:
             ch_name = parts[1].strip()
             q['nelson_chapter'] = f"{ch_num}. {ch_name}"
 
-# Embed data as JSON string
-questions_json = json.dumps(all_q, ensure_ascii=False)
+# Embed data as JSON string — escape </script> to prevent HTML injection
+questions_json = json.dumps(all_q, ensure_ascii=False).replace("</script>", "<\\/script>").replace("</SCRIPT>", "<\\/SCRIPT>)")
 
 html_content = f'''<!DOCTYPE html>
 <html lang="en">
@@ -1480,12 +1491,12 @@ html_content = f'''<!DOCTYPE html>
 </html>
 '''
 
-output_path = os.path.join(OUTPUT_DIR, "dashboard.html")
-with open(output_path, 'w', encoding='utf-8') as f:
+output_path = SCRIPT_DIR / "dashboard.html"
+with output_path.open('w', encoding='utf-8') as f:
     f.write(html_content)
 
 print(f"Generated dashboard: {output_path}")
-print(f"File size: {os.path.getsize(output_path) / 1024:.1f} KB")
+print(f"File size: {output_path.stat().st_size / 1024:.1f} KB")
 print(f"\nTo view, run:")
-print(f"  cd '{OUTPUT_DIR}' && python -m http.server 8080")
+print(f"  cd '{SCRIPT_DIR}' && python -m http.server 8080")
 print(f"Then open: http://localhost:8080/dashboard.html")

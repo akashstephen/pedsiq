@@ -1,9 +1,56 @@
 import json
 import re
+import sys
+from pathlib import Path
 
-# Load input
-with open('/Users/akashstephen/Developer/Pediatrics Exam/questions_batch_3.json', 'r', encoding='utf-8') as f:
-    questions = json.load(f)
+# Resolve paths relative to this script's directory
+SCRIPT_DIR = Path(__file__).resolve().parent
+INPUT_PATH = SCRIPT_DIR / "questions_batch_3.json"
+OUTPUT_PATH = SCRIPT_DIR / "classified_batch_3.json"
+
+def main() -> None:
+    if not INPUT_PATH.exists():
+        print(f"ERROR: Input file not found: {INPUT_PATH}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        with INPUT_PATH.open('r', encoding='utf-8') as f:
+            questions = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"ERROR: Invalid JSON in {INPUT_PATH}: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    results = []
+    section_counts = {}
+
+    for q in questions:
+        text = q["question_text"]
+        section_num, chapter_num, chapter_name = classify(text)
+        section_name = SECTIONS[section_num]["name"]
+        q["nelson_section"] = f"SECTION {section_num}: {section_name}"
+        q["nelson_chapter"] = f"Ch{chapter_num}: {chapter_name}"
+        results.append(q)
+        section_counts[section_num] = section_counts.get(section_num, 0) + 1
+
+    # Save output
+    with OUTPUT_PATH.open('w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+    # Print summary
+    print("=== Classification Summary ===")
+    print(f"Total questions: {len(results)}")
+    print()
+    for sec_num in sorted(section_counts.keys()):
+        sec_name = SECTIONS[sec_num]["name"]
+        count = section_counts[sec_num]
+        print(f"SECTION {sec_num}: {sec_name} -> {count} questions")
+
+    print()
+    print(f"Saved to {OUTPUT_PATH.name}")
+
+
+if __name__ == "__main__":
+    main()
 
 # Chapter mapping based on Nelson Essentials of Pediatrics, 8th Edition typical TOC
 SECTIONS = {
@@ -535,30 +582,6 @@ def classify(text):
     # Then keyword classifier
     return classify_question(text)
 
-results = []
-section_counts = {}
 
-for q in questions:
-    text = q["question_text"]
-    section_num, chapter_num, chapter_name = classify(text)
-    section_name = SECTIONS[section_num]["name"]
-    q["nelson_section"] = f"SECTION {section_num}: {section_name}"
-    q["nelson_chapter"] = f"Ch{chapter_num}: {chapter_name}"
-    results.append(q)
-    section_counts[section_num] = section_counts.get(section_num, 0) + 1
-
-# Save output
-with open('/Users/akashstephen/Developer/Pediatrics Exam/classified_batch_3.json', 'w', encoding='utf-8') as f:
-    json.dump(results, f, indent=2, ensure_ascii=False)
-
-# Print summary
-print("=== Classification Summary ===")
-print(f"Total questions: {len(results)}")
-print()
-for sec_num in sorted(section_counts.keys()):
-    sec_name = SECTIONS[sec_num]["name"]
-    count = section_counts[sec_num]
-    print(f"SECTION {sec_num}: {sec_name} -> {count} questions")
-
-print()
-print("Saved to classified_batch_3.json")
+if __name__ == "__main__":
+    main()

@@ -108,9 +108,9 @@ The `@media print` block in `globals.css` handles A4 printing:
 - Adds page breaks between `article` elements
 - Do NOT use Tailwind arbitrary selectors in print CSS (causes build errors)
 
-### 6. Flowcharts (NO Mermaid)
+### 6. Flowcharts
 
-Never use Mermaid.js. Use the custom `Flowchart` component:
+Use the custom `Flowchart` component for all diagrams:
 
 ```tsx
 import { Flowchart } from '@/components/Flowchart';
@@ -168,17 +168,16 @@ cd web && npx wrangler pages deploy dist --project-name pedsiq --branch main
 
 ## Data Pipeline (Python)
 
-If you need to regenerate the question database:
+The canonical pipeline lives in `pipeline/src/pedsiq/` and is run via the CLI:
 
 ```bash
 # From project root (not web/)
-python extract_questions_v3.py
-python classify_questions_v2.py
-python consolidate_data.py
-cp consolidated_questions.json web/src/data/questions.json
+cd pipeline
+python -m pedsiq.cli run /path/to/pdfs --output output/
+cp output/questions.json ../web/src/data/questions.json
 ```
 
-Scripts are in the parent directory, not in `web/`.
+Legacy root-level scripts (`extract_questions_v3.py`, `classify_questions_v2.py`, etc.) are deprecated and retained only for reference. Use the `pedsiq` package for all new work.
 
 ## Common Pitfalls
 

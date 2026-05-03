@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Any
 
@@ -189,7 +189,7 @@ class KnowledgeGraph(BaseModel):
     concepts: dict[str, MedicalConcept] = Field(default_factory=dict)
     relationships: list[ConceptRelationship] = Field(default_factory=list)
     version: str = "1.0.0"
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     def add_concept(self, concept: MedicalConcept) -> None:
         self.concepts[concept.id] = concept

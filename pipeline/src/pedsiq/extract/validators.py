@@ -9,6 +9,10 @@ from pedsiq.models import ExamMetadata, ParsedQuestion, ValidationResult, Valida
 logger = structlog.get_logger()
 
 
+# Tolerance for marks-mismatch warnings (e.g., partial credit, rounding)
+MARKS_TOLERANCE = 5.0
+
+
 def validate_paper(
     metadata: ExamMetadata, questions: list[ParsedQuestion]
 ) -> ValidationResult:
@@ -45,7 +49,7 @@ def validate_paper(
 
     # Check total marks if declared
     if metadata.total_marks is not None:
-        if abs(total_marks - metadata.total_marks) > 5.0:
+        if abs(total_marks - metadata.total_marks) > MARKS_TOLERANCE:
             logger.warning(
                 "marks_mismatch",
                 filename=filename,
