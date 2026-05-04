@@ -5,6 +5,27 @@ All notable changes to PedsIQ will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2025-05-04
+
+### Added
+- **7 new structured answer topics** (39 → 46 total)
+  - **PKU (pku)** — PAH deficiency pathophysiology, newborn screening (Guthrie test, tandem MS), clinical features (musty odor, hypopigmentation, ID), classification table (classic/mild/non-PKU/BH4 deficiency), management algorithm (low-Phe diet, sapropterin trial, pegvaliase), maternal PKU teratogenicity
+  - **HBV Neonatal Prophylaxis (hbv-neonatal)** — Risk stratification by HBeAg status, immediate HBIG 0.5 mL + vaccine <12h, separate injection sites, 0-1-6 month schedule, premature <2kg 4-dose protocol, maternal tenofovir from 28-32 weeks, breastfeeding safety, anti-HBs follow-up at 9-12 months
+  - **Polyuria & Diabetes Insipidus (polyuria)** — Definition >40 mL/kg/day, solute vs water diuresis, full central vs nephrogenic DI comparison table, fluid deprivation test + desmopressin response algorithm, etiology tables, management (desmopressin for central, thiazides + low-solute for nephrogenic), emergency Na+ correction limits
+  - **Drugs Causing Nephrotic Syndrome (drugs-nephrotic)** — Comprehensive table of 10 drugs with pathology (MCD/membranous/FSGS), mechanism, and management. Emphasizes NSAIDs as #1 cause and reversible nature upon drug withdrawal
+  - **Renal Biopsy in Children (renal-biopsy)** — Absolute indications (atypical nephritic, SRNS, persistent hypocomplementemia, unexplained AKI), relative indications (frequent relapses, congenital NS), contraindications table, complications, pre/post-procedure care
+  - **UTI Imaging in Children (uti-imaging)** — Role and timing of USG KUB (first-line), DMSA scan (scarring at 3-6 months), MCU/VCUG (VUR grading and PUV), DTPA/MAG3 (differential function). Includes imaging algorithm flowchart and AAP guideline references
+  - **ACTH & HPA Axis Disorders (acth)** — Physiology (CRH→ACTH→cortisol, diurnal rhythm, negative feedback), ACTH deficiency/secondary AI (causes, features, primary vs secondary comparison table), Cushing disease (pituitary adenoma, growth failure hallmark in children), diagnostic algorithm (dexamethasone suppression tests, ACTH levels, MRI pituitary), management (hydrocortisone replacement, transsphenoidal surgery, ketoconazole/metyrapone)
+- **Topic graph metadata** updated for all 7 new topics with related concepts, examiner traps, years appeared, and Nelson chapter references
+- All 7 topics include flowcharts, examiner traps, scoring checklists with `<strong>X.M</strong>` weights, and Nelson Essentials of Pediatrics 8th ed references
+
+### Security & Safety
+- Red team audit performed on all 7 new topics before deployment
+- No Kayexalate in any pediatric protocol
+- No ceftriaxone contraindications violated
+- All drug doses weight-based with appropriate max caps
+- Cross-referenced against existing topics.ts content for consistency
+
 ## [2.1.2] - 2025-05-02
 
 ### Reverted
