@@ -156,7 +156,7 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
   }, [engine.feedback, engine.combo, spawnPopup, spawnParticles, triggerSurge]);
 
   return (
-    <div className="flex flex-col min-h-screen relative" style={{ background: '#03050E', fontFamily: "'DM Sans', sans-serif", color: '#D8E8F8' }}>
+    <div className="flex flex-col h-full relative" style={{ background: '#03050E', fontFamily: "'DM Sans', sans-serif", color: '#D8E8F8' }}>
       {/* Grid + scanlines */}
       <div className="pointer-events-none fixed inset-0 z-0"
            style={{ background: 'radial-gradient(ellipse at 50% 0%,rgba(34,204,255,0.06) 0%,transparent 55%), repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px), repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px)' }} />
@@ -320,7 +320,7 @@ export default function DoseSniperPage() {
   return (
     <ArcadeShell gameId="dose-sniper" themeClass="theme-dose-sniper">
       <GoogleFontsLoader families={['Orbitron:wght@700;900', 'IBM+Plex+Mono:wght@400;600;700', 'DM+Sans:wght@400;500;600']} />
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-[100dvh]">
         <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
           <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
         </div>

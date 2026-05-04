@@ -138,7 +138,7 @@ function GameScreen({
     : null;
 
   return (
-    <div className="flex flex-col min-h-screen px-4 py-4 max-w-xl mx-auto"
+    <div className="flex flex-col h-full px-4 py-4 max-w-xl mx-auto overflow-y-auto"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       {/* Flash overlay */}
       {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
@@ -370,7 +370,7 @@ export default function DoseDuelPage() {
   return (
     <ArcadeShell gameId="dose-duel" themeClass="theme-dose-duel">
       <GoogleFontsLoader families={['Space+Mono:wght@400;700', 'DM+Sans:wght@300;400;500;600']} />
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-[100dvh]">
         <div className={`arcade-screen ${state.phase === 'splash' ? '' : 'hidden-down'}`}>
           <SplashScreen onStart={startGame} highScore={stats.highScore} />
         </div>

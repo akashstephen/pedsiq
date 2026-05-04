@@ -140,7 +140,7 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
   };
 
   return (
-    <div className="flex flex-col min-h-screen relative"
+    <div className="flex flex-col h-full relative overflow-hidden"
          style={{ background: '#040812', fontFamily: "'DM Sans', sans-serif", color: '#CDD9E8' }}>
       {/* Scanline texture */}
       <div className="pointer-events-none fixed inset-0 z-[100]"
@@ -499,7 +499,7 @@ export default function FeatureWarsPage() {
   return (
     <ArcadeShell gameId="feature-wars" themeClass="theme-feature-wars">
       <GoogleFontsLoader families={['Syne:wght@700;800', 'IBM+Plex+Mono:wght@400;500;600', 'DM+Sans:wght@300;400;500;600']} />
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-[100dvh]">
         <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
           <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
         </div>

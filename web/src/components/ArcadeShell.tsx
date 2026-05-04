@@ -44,7 +44,7 @@ export function ArcadeShell({ gameId, themeClass, children }: ArcadeShellProps) 
   }, [handleKeyDown]);
 
   return (
-    <div className="fixed inset-0 z-[300] overflow-hidden">
+    <div className="fixed inset-0 z-[300]">
       {children}
 
       {/* Quit Confirmation Modal */}

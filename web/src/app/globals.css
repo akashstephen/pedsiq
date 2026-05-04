@@ -352,17 +352,20 @@ body[data-arcade-active] {
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow-y: auto;
 }
 
 .arcade-screen.hidden {
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .arcade-screen.hidden-down {
   opacity: 0;
   pointer-events: none;
   transform: translateY(16px);
+  overflow: hidden;
 }
 
 /* Reduced motion support */
