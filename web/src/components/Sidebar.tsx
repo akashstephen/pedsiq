@@ -13,6 +13,8 @@ import {
   Brain,
   Menu,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import clsx from "clsx";
 
@@ -37,13 +39,11 @@ function useFocusTrap(
   useEffect(() => {
     if (!isActive) return;
 
-    // Store the currently focused element so we can restore it later
     previouslyFocused.current = document.activeElement as HTMLElement;
 
     const container = containerRef.current;
     if (!container) return;
 
-    // Find all focusable elements inside the container
     const focusableSelectors = [
       'a[href]',
       'button:not([disabled])',
@@ -56,7 +56,6 @@ function useFocusTrap(
     const getFocusable = () =>
       Array.from(container!.querySelectorAll<HTMLElement>(focusableSelectors));
 
-    // Focus the first focusable element (the close toggle or first nav link)
     const focusable = getFocusable();
     if (focusable.length > 0) {
       focusable[0].focus();
@@ -87,7 +86,6 @@ function useFocusTrap(
     document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      // Restore focus when trap is deactivated
       previouslyFocused.current?.focus();
     };
   }, [isActive, containerRef]);
@@ -121,23 +119,22 @@ function useEscape(handler: () => void, enabled: boolean) {
   }, [enabled, handler]);
 }
 
-export function Sidebar() {
+interface SidebarProps {
+  collapsed: boolean;
+  onToggle: () => void;
+}
+
+export function Sidebar({ collapsed, onToggle }: SidebarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const sidebarRef = useRef<HTMLElement>(null);
 
   const closeSidebar = useCallback(() => setOpen(false), []);
 
-  // Lock body scroll when mobile sidebar is open
   useBodyScrollLock(open);
-
-  // Close on Escape key
   useEscape(closeSidebar, open);
-
-  // Trap focus inside sidebar when open
   useFocusTrap(sidebarRef, open);
 
-  // Close sidebar on route change (mobile)
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
@@ -161,27 +158,51 @@ export function Sidebar() {
         ref={sidebarRef}
         id={SIDEBAR_ID}
         className={clsx(
-          "fixed top-0 left-0 h-screen w-[280px] bg-[#0a0a0a] border-r border-white/[0.08] z-[100] flex flex-col",
-          "motion-safe:transition-transform motion-safe:duration-300",
-          open ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+          "fixed top-0 left-0 h-screen bg-[#0a0a0a] border-r border-white/[0.08] z-[100] flex flex-col",
+          "motion-safe:transition-[width,transform] motion-safe:duration-300",
+          open ? "translate-x-0 w-[280px]" : "-translate-x-full md:translate-x-0",
+          !open && collapsed && "md:w-[72px]",
+          !open && !collapsed && "md:w-[280px]"
         )}
         aria-label="Main navigation"
       >
-        <div className="p-6 pb-4 border-b border-white/[0.08]">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#007AFF] to-[#5856D6] flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-shadow">
+        {/* Header */}
+        <div className="p-4 pb-3 border-b border-white/[0.08] flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 group overflow-hidden">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#007AFF] to-[#5856D6] flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-shadow shrink-0">
               P
             </div>
-            <div>
-              <div className="text-lg font-bold tracking-tight text-white">PedsIQ</div>
-              <div className="text-[11px] text-white/55 font-medium uppercase tracking-wider">
+            <div
+              className={clsx(
+                "overflow-hidden motion-safe:transition-all motion-safe:duration-300",
+                collapsed && "md:w-0 md:opacity-0",
+                !collapsed && "md:w-auto md:opacity-100"
+              )}
+            >
+              <div className="text-lg font-bold tracking-tight text-white whitespace-nowrap">PedsIQ</div>
+              <div className="text-[11px] text-white/55 font-medium uppercase tracking-wider whitespace-nowrap">
                 KUHS PYQ Analyzer
               </div>
             </div>
           </Link>
+
+          {/* Desktop collapse toggle */}
+          <button
+            type="button"
+            onClick={onToggle}
+            className={clsx(
+              "hidden md:flex items-center justify-center w-7 h-7 rounded-lg bg-white/[0.05] border border-white/10 text-white/60 hover:text-white hover:bg-white/[0.1] transition-colors shrink-0",
+              collapsed && "absolute right-2 top-4"
+            )}
+            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+            title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          >
+            {collapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
+          </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto p-4 space-y-1" aria-label="Primary">
+        {/* Nav */}
+        <nav className="flex-1 overflow-y-auto p-3 space-y-1" aria-label="Primary">
           {navItems.map((item) => {
             const active = pathname === item.href;
             const Icon = item.icon;
@@ -194,15 +215,30 @@ export function Sidebar() {
                   "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]/50",
                   active
                     ? "bg-[#007AFF]/15 text-white border border-[#007AFF]/20"
-                    : "text-white/60 hover:text-white hover:bg-white/[0.05]"
+                    : "text-white/60 hover:text-white hover:bg-white/[0.05]",
+                  collapsed && "md:justify-center md:px-2"
                 )}
                 aria-current={active ? "page" : undefined}
+                title={item.label}
               >
-                <Icon size={18} aria-hidden="true" />
-                <span>{item.label}</span>
+                <Icon size={18} aria-hidden="true" className="shrink-0" />
+                <span
+                  className={clsx(
+                    "overflow-hidden motion-safe:transition-all motion-safe:duration-300 whitespace-nowrap",
+                    collapsed && "md:w-0 md:opacity-0",
+                    !collapsed && "md:w-auto md:opacity-100"
+                  )}
+                >
+                  {item.label}
+                </span>
                 {item.href === "/structured-answers/" && (
-                  <span className="ml-auto bg-[#FF2D55]/15 text-[#FF2D55] text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    12
+                  <span
+                    className={clsx(
+                      "ml-auto bg-[#FF2D55]/15 text-[#FF2D55] text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0",
+                      collapsed && "md:hidden"
+                    )}
+                  >
+                    39
                   </span>
                 )}
               </Link>
@@ -210,7 +246,13 @@ export function Sidebar() {
           })}
         </nav>
 
-        <div className="p-4 border-t border-white/[0.08] space-y-1.5">
+        {/* Footer */}
+        <div
+          className={clsx(
+            "p-4 border-t border-white/[0.08] space-y-1.5 overflow-hidden motion-safe:transition-all motion-safe:duration-300",
+            collapsed && "md:h-0 md:p-0 md:opacity-0 md:border-none"
+          )}
+        >
           <div className="text-[11px] text-white/40 text-center leading-relaxed">
             <span className="text-white/50 font-medium">© Akash Stephen</span>
             <br />

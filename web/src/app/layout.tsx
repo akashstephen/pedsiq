@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/Sidebar";
+import { AppShell } from "@/components/AppShell";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,12 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased overflow-x-hidden`}>
-        <div className="flex min-h-screen bg-black">
-          <Sidebar />
-          <main className="flex-1 ml-0 md:ml-[280px] pt-16 px-4 pb-6 md:pt-8 md:px-8 w-full max-w-[1400px]">
-            {children}
-          </main>
-        </div>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
