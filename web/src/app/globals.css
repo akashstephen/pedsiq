@@ -110,33 +110,31 @@ body {
     color: #111 !important;
   }
 
-  /* Flowcharts - ensure they don't break */
-  .bg-white\\/\\[0\\.03\\] {
+  /* Cards and tips - ensure they don't break */
+  [class*="bg-white"] {
     page-break-inside: avoid;
     border: 1px solid #ddd !important;
     background: #fafafa !important;
   }
 
   /* Exam tips - convert to bordered boxes */
-  .bg-\\[\\#FF3B30\\]\\/8,
-  .bg-\\[\\#FF9500\\]\\/8,
-  .bg-\\[\\#007AFF\\]\\/8 {
+  [class*="bg-[#FF3B30"] {
     border: 1px solid #ccc !important;
     background: #f9f9f9 !important;
     page-break-inside: avoid;
   }
 
   /* Checklist checkboxes */
-  .border-\\[\\#007AFF\\]\\/40 {
+  [class*="border-[#007AFF"] {
     border-color: #999 !important;
   }
 
-  .bg-\\[\\#007AFF\\]\\/60 {
+  [class*="bg-[#007AFF"] {
     background: #666 !important;
   }
 
   /* Mnemonics */
-  .from-\[#34C759\]\/10 {
+  [class*="from-[#34C759"] {
     background: #f0f8f0 !important;
     border: 1px solid #ccc !important;
   }

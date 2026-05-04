@@ -30,20 +30,20 @@ function useFlash() {
 
 function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: number }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
+    <div className="flex flex-col items-center justify-center min-h-full w-full px-4 sm:px-6 py-8 sm:py-12 text-center"
          style={{ background: 'linear-gradient(180deg, #080C18 0%, #0F1628 100%)', fontFamily: "'DM Sans', sans-serif" }}>
       <div className="mb-2">
-        <Gamepad2 size={48} className="text-[#22D3EE] mx-auto mb-4" />
+        <Gamepad2 size={40} className="text-[#22D3EE] mx-auto mb-3 sm:mb-4" />
       </div>
-      <h1 className="text-5xl md:text-6xl font-bold mb-2 tracking-tight"
+      <h1 className="text-[clamp(36px,8vw,60px)] font-bold mb-2 tracking-tight leading-none"
           style={{ fontFamily: "'Space Mono', monospace", background: 'linear-gradient(135deg, #22D3EE, #818CF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
         DOSE DUEL
       </h1>
-      <p className="text-xs tracking-[0.25em] text-[#94A3B8] uppercase mb-6">Pediatric Dosing Arcade · PedsIQ</p>
-      <div className="w-12 h-0.5 bg-gradient-to-r from-[#22D3EE] to-[#818CF8] rounded-full mb-6 mx-auto" />
+      <p className="text-[10px] sm:text-xs tracking-[0.25em] text-[#94A3B8] uppercase mb-4 sm:mb-6">Pediatric Dosing Arcade · PedsIQ</p>
+      <div className="w-12 h-0.5 bg-gradient-to-r from-[#22D3EE] to-[#818CF8] rounded-full mb-4 sm:mb-6 mx-auto" />
 
-      <div className="bg-[#161E35] border border-[#2D4A6E] rounded-lg p-4 max-w-sm mx-auto mb-6 text-left">
-        <p className="text-xs text-[#94A3B8] leading-relaxed">
+      <div className="bg-[#161E35] border border-[#2D4A6E] rounded-lg p-3 sm:p-4 max-w-sm mx-auto mb-4 sm:mb-6 text-left w-full">
+        <p className="text-[11px] sm:text-xs text-[#94A3B8] leading-relaxed">
           <strong className="text-[#22D3EE] font-semibold">Why this works:</strong> Generation effect + norepinephrine arousal.
           Time pressure forces genuine <em>retrieval</em> (not recognition) and activates
           the LC-NE system, tagging these doses as important. Doses recalled under
@@ -51,14 +51,14 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
         </p>
       </div>
 
-      <div className="flex gap-8 mb-8 text-xs text-[#475569]">
-        <div><span className="text-[#22D3EE] text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>{allQuestions.length}</span>Questions</div>
-        <div><span className="text-[#22D3EE] text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>12s</span>Per dose</div>
-        <div><span className="text-[#22D3EE] text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>∞</span>Topics</div>
+      <div className="flex gap-6 sm:gap-8 mb-6 sm:mb-8 text-[10px] sm:text-xs text-[#475569]">
+        <div><span className="text-[#22D3EE] text-lg sm:text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>{allQuestions.length}</span>Questions</div>
+        <div><span className="text-[#22D3EE] text-lg sm:text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>12s</span>Per dose</div>
+        <div><span className="text-[#22D3EE] text-lg sm:text-xl font-bold block" style={{fontFamily:"'Space Mono',monospace"}}>∞</span>Topics</div>
       </div>
 
       {highScore > 0 && (
-        <div className="flex items-center gap-2 mb-4 text-sm text-[#F59E0B]">
+        <div className="flex items-center gap-2 mb-3 sm:mb-4 text-sm text-[#F59E0B]">
           <Trophy size={16} />
           <span>Best: {highScore} pts</span>
         </div>
@@ -66,14 +66,14 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
 
       <button
         onClick={onStart}
-        className="px-12 py-4 rounded-xl text-white font-semibold text-lg tracking-wide cursor-pointer transition-all hover:-translate-y-0.5 active:scale-[0.98]"
+        className="px-8 sm:px-12 py-3 sm:py-4 rounded-xl text-white font-semibold text-base sm:text-lg tracking-wide cursor-pointer transition-all hover:-translate-y-0.5 active:scale-[0.98]"
         style={{ background: 'linear-gradient(135deg, #0891B2, #6D28D9)', boxShadow: '0 0 32px rgba(34,211,238,.25)' }}
       >
         <Zap size={20} className="inline mr-2" />
         START DUEL
       </button>
 
-      <p className="mt-6 text-sm text-[#94A3B8] max-w-xs">
+      <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-[#94A3B8] max-w-xs px-2">
         APSGN · NS · Rickets · DKA · Diarrhea · HUS · Hypothyroidism & more
       </p>
     </div>
@@ -138,7 +138,7 @@ function GameScreen({
     : null;
 
   return (
-    <div className="flex flex-col h-full px-4 py-4 max-w-xl mx-auto overflow-y-auto"
+    <div className="flex flex-col h-full w-full max-w-[560px] mx-auto px-3 sm:px-4 py-3 sm:py-4 overflow-y-auto"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       {/* Flash overlay */}
       {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
@@ -190,7 +190,7 @@ function GameScreen({
       </div>
 
       {/* Options */}
-      <div className="grid grid-cols-2 gap-2 mb-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
         {q.options.map((opt) => {
           const isSelected = state.selectedOption === opt;
           const isCorrect = opt === q.correctAnswer;
@@ -291,49 +291,49 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
   else if (pct >= 60) { grade = 'SENIOR HOUSE OFFICER'; gradeColor = '#F59E0B'; title = 'DECENT ROUND'; }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
+    <div className="flex flex-col items-center justify-center min-h-full w-full px-4 sm:px-6 py-8 sm:py-12 text-center"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
-      <h2 className="text-2xl font-bold mb-2" style={{fontFamily:"'Space Mono',monospace"}}>{title}</h2>
-      <div className="text-7xl font-bold mb-1 leading-none"
+      <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{fontFamily:"'Space Mono',monospace"}}>{title}</h2>
+      <div className="text-[clamp(48px,14vw,72px)] font-bold mb-1 leading-none"
            style={{ fontFamily: "'Space Mono', monospace", background: 'linear-gradient(135deg, #22D3EE, #818CF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
         {state.score}
       </div>
-      <p className="text-sm text-[#475569] mb-4">out of ~{total * 16} max pts</p>
+      <p className="text-xs sm:text-sm text-[#475569] mb-3 sm:mb-4">out of ~{total * 16} max pts</p>
 
-      <div className="text-xs font-semibold px-5 py-1.5 rounded-full border mb-6"
+      <div className="text-[11px] sm:text-xs font-semibold px-4 sm:px-5 py-1.5 rounded-full border mb-4 sm:mb-6"
            style={{ color: gradeColor, borderColor: gradeColor }}>
         {grade} · {pct}%
       </div>
 
-      <div className="grid grid-cols-3 gap-2 w-full max-w-sm mb-6">
-        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-3">
-          <div className="text-2xl font-bold text-[#10B981]" style={{fontFamily:"'Space Mono',monospace"}}>{state.correctCount}</div>
-          <div className="text-[11px] text-[#475569]">Correct</div>
+      <div className="grid grid-cols-3 gap-2 w-full max-w-sm mb-4 sm:mb-6 px-2">
+        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
+          <div className="text-xl sm:text-2xl font-bold text-[#10B981]" style={{fontFamily:"'Space Mono',monospace"}}>{state.correctCount}</div>
+          <div className="text-[10px] sm:text-[11px] text-[#475569]">Correct</div>
         </div>
-        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-3">
-          <div className="text-2xl font-bold text-[#EF4444]" style={{fontFamily:"'Space Mono',monospace"}}>{state.wrongCount}</div>
-          <div className="text-[11px] text-[#475569]">Wrong</div>
+        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
+          <div className="text-xl sm:text-2xl font-bold text-[#EF4444]" style={{fontFamily:"'Space Mono',monospace"}}>{state.wrongCount}</div>
+          <div className="text-[10px] sm:text-[11px] text-[#475569]">Wrong</div>
         </div>
-        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-3">
-          <div className="text-2xl font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{state.timeoutCount}</div>
-          <div className="text-[11px] text-[#475569]">Timeout</div>
+        <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
+          <div className="text-xl sm:text-2xl font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{state.timeoutCount}</div>
+          <div className="text-[10px] sm:text-[11px] text-[#475569]">Timeout</div>
         </div>
       </div>
 
       {state.maxStreak > 0 && (
-        <div className="mb-4 text-sm text-[#F59E0B]">
+        <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-[#F59E0B]">
           Best streak: {state.maxStreak}🔥
         </div>
       )}
 
       {state.missedQuestions.length > 0 && (
-        <div className="w-full max-w-sm mb-6">
-          <p className="text-xs tracking-wider text-[#475569] uppercase text-left mb-2">
+        <div className="w-full max-w-sm mb-4 sm:mb-6 px-2">
+          <p className="text-[10px] sm:text-xs tracking-wider text-[#475569] uppercase text-left mb-2">
             Missed doses — study these ({state.missedQuestions.length}):
           </p>
-          <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1 arcade-scroll">
+          <div className="flex flex-col gap-2 max-h-40 sm:max-h-48 overflow-y-auto pr-1 arcade-scroll">
             {state.missedQuestions.map((q) => (
-              <div key={q.id} className="bg-[#161E35] border-l-[3px] border-[#EF4444] rounded-lg p-3 text-left text-xs leading-relaxed">
+              <div key={q.id} className="bg-[#161E35] border-l-[3px] border-[#EF4444] rounded-lg p-2 sm:p-3 text-left text-[11px] sm:text-xs leading-relaxed">
                 <strong className="text-[#E2E8F0] block mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</strong>
                 <span className="text-[#94A3B8]">{q.patient.diagnosis}</span>
                 <br />
@@ -345,12 +345,12 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
       )}
 
       {state.missedQuestions.length === 0 && (
-        <p className="text-sm text-[#10B981] mb-6">No missed doses — clean sweep!</p>
+        <p className="text-xs sm:text-sm text-[#10B981] mb-4 sm:mb-6">No missed doses — clean sweep!</p>
       )}
 
       <button
         onClick={onRestart}
-        className="px-10 py-3 rounded-xl text-white font-semibold transition-all hover:-translate-y-0.5"
+        className="px-8 sm:px-10 py-2.5 sm:py-3 rounded-xl text-white font-semibold transition-all hover:-translate-y-0.5"
         style={{ background: 'linear-gradient(135deg, #0891B2, #6D28D9)' }}
       >
         <Target size={18} className="inline mr-2" />
