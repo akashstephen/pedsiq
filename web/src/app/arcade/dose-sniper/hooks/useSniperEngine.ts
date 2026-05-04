@@ -8,7 +8,6 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import {
   type SniperQuestion,
-  type SniperState,
   type SniperPhase,
   type ArcadeSession,
   type StudyListItem,
@@ -68,6 +67,9 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
   const zoneRef = useRef<HTMLDivElement | null>(null);
   const missedRef = useRef<SniperQuestion[]>([]);
   const startTimeRef = useRef(0);
+  const countdownIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const countdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const loadRoundTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stopLoop = useCallback(() => {
     if (animIdRef.current) {
@@ -76,15 +78,76 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
     }
   }, []);
 
+  const clearCountdown = useCallback(() => {
+    if (countdownIntervalRef.current) {
+      clearInterval(countdownIntervalRef.current);
+      countdownIntervalRef.current = null;
+    }
+    if (countdownTimeoutRef.current) {
+      clearTimeout(countdownTimeoutRef.current);
+      countdownTimeoutRef.current = null;
+    }
+  }, []);
+
+  const purgeCards = useCallback(() => {
+    const zone = zoneRef.current;
+    if (zone) {
+      zone.querySelectorAll('.dose-card').forEach((c) => c.remove());
+    }
+    cardsRef.current = [];
+  }, []);
+
   const computeCardWidth = useCallback(() => {
     const zw = zoneRef.current?.offsetWidth ?? 360;
     return Math.min(Math.max(Math.floor(zw * 0.27), 120), 162);
   }, []);
 
+  const onHit = useCallback((card: CardRef) => {
+    if (answered || !card.alive) return;
+    setAnswered(true);
+    stopLoop();
+    const q = questions[currentRound];
+    if (!q) return;
+
+    if (card.isOk) {
+      if (card.el) {
+        card.el.style.transform = '';
+        card.el.classList.add('hit-ok');
+      }
+      const mult = CMULT[Math.min(combo, CMULT.length - 1)];
+      const pts = Math.round(100 * mult);
+      setScore((s) => s + pts);
+      setCombo((c) => {
+        const nc = c + 1;
+        setMaxCombo((m) => Math.max(m, nc));
+        return nc;
+      });
+      setHits((h) => h + 1);
+      setSpeed((s) => Math.min(MAX_SPEED, s + SPEED_INC));
+      setFeedback({ type: 'ok', q });
+    } else {
+      if (card.el) {
+        card.el.style.transform = '';
+        card.el.classList.add('hit-bad');
+      }
+      cardsRef.current.forEach((c) => {
+        if (c.isOk && c.el) {
+          c.el.style.transform = '';
+          c.el.classList.add('reveal');
+        }
+      });
+      setCombo(0);
+      setMisses((m) => m + 1);
+      missedRef.current.push(q);
+      setMissedQuestions((prev) => [...prev, q]);
+      setFeedback({ type: 'bad', q });
+    }
+  }, [answered, questions, currentRound, combo, stopLoop]);
+
   const makeCards = useCallback((q: SniperQuestion) => {
     const zone = zoneRef.current;
     if (!zone) return;
-    zone.querySelectorAll('.dose-card').forEach((c) => c.remove());
+    purgeCards();
 
     const zw = zone.offsetWidth;
     const cw = computeCardWidth();
@@ -112,51 +175,28 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
       };
 
       const el = document.createElement('div');
-      el.className = 'dose-card absolute';
-      el.style.cssText = `width:${cw}px;background:linear-gradient(145deg,#0A1428,#0D1835);border:1.5px solid #1A2E4A;border-radius:10px;padding:11px 13px;cursor:pointer;user-select:none;display:flex;flex-direction:column;gap:3px;`;
+      el.className = 'dose-card';
+      el.style.cssText = `width:${cw}px;left:${baseX}px;`;
+      el.setAttribute('role', 'button');
+      el.setAttribute('tabIndex', '0');
       el.innerHTML = `<div style="position:absolute;top:7px;right:9px;font-size:14px;opacity:0.3">${icons[i]}</div><div style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;color:#D8E8F8;line-height:1.2">${dose}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#1E3A5A;text-transform:uppercase;letter-spacing:0.06em">tap if correct</div>`;
-      el.addEventListener('click', () => onHit(card));
-      el.addEventListener('touchend', (e) => { e.preventDefault(); onHit(card); }, { passive: false });
+      const hitHandler = () => onHit(card);
+      const keyHandler = (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          hitHandler();
+        }
+      };
+      el.addEventListener('click', hitHandler);
+      el.addEventListener('touchend', (e) => { e.preventDefault(); hitHandler(); }, { passive: false });
+      el.addEventListener('keydown', keyHandler);
       zone.appendChild(el);
       card.el = el;
       newCards.push(card);
     });
 
     cardsRef.current = newCards;
-  }, [speed, computeCardWidth]);
-
-  const onHit = useCallback((card: CardRef) => {
-    if (answered || !card.alive) return;
-    setAnswered(true);
-    stopLoop();
-    const q = questions[currentRound];
-    if (!q) return;
-
-    if (card.isOk) {
-      card.el?.classList.add('hit-ok');
-      const mult = CMULT[Math.min(combo, CMULT.length - 1)];
-      const pts = Math.round(100 * mult);
-      setScore((s) => s + pts);
-      setCombo((c) => {
-        const nc = c + 1;
-        setMaxCombo((m) => Math.max(m, nc));
-        return nc;
-      });
-      setHits((h) => h + 1);
-      setSpeed((s) => Math.min(MAX_SPEED, s + SPEED_INC));
-      setFeedback({ type: 'ok', q });
-    } else {
-      card.el?.classList.add('hit-bad');
-      cardsRef.current.forEach((c) => {
-        if (c.isOk && c.el) c.el.classList.add('reveal');
-      });
-      setCombo(0);
-      setMisses((m) => m + 1);
-      missedRef.current.push(q);
-      setMissedQuestions((prev) => [...prev, q]);
-      setFeedback({ type: 'bad', q });
-    }
-  }, [answered, questions, currentRound, combo, stopLoop]);
+  }, [speed, computeCardWidth, onHit, purgeCards]);
 
   const loop = useCallback((ts: number) => {
     const dt = Math.min((ts - lastTimeRef.current) / 1000, 0.05);
@@ -176,7 +216,11 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
         c.el.style.left = c.x + 'px';
         c.el.style.transform = `translateY(${c.y}px) translateX(${drift}px) rotate(${rot}deg)`;
         const pct = c.y / zh;
-        if (pct > 0.68) c.el.style.borderColor = 'rgba(255,59,59,0.55)';
+        if (pct > 0.68) {
+          c.el.classList.add('danger');
+        } else {
+          c.el.classList.remove('danger');
+        }
       }
       if (c.y > zh + 5) { c.alive = false; if (c.el) c.el.style.opacity = '0'; }
       if (c.isOk && c.y > zh + 5) anyFloor = true;
@@ -201,6 +245,7 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
   }, [answered, questions, currentRound, stopLoop]);
 
   const startLoop = useCallback(() => {
+    if (animIdRef.current) return; // guard against concurrent loops
     lastTimeRef.current = performance.now();
     animIdRef.current = requestAnimationFrame(loop);
   }, [loop]);
@@ -210,7 +255,8 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
     setFeedback(null);
     const q = questions[currentRound];
     if (!q) return;
-    setTimeout(() => {
+    if (loadRoundTimeoutRef.current) clearTimeout(loadRoundTimeoutRef.current);
+    loadRoundTimeoutRef.current = setTimeout(() => {
       makeCards(q);
       startLoop();
     }, 50);
@@ -258,15 +304,17 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
   }, [currentRound, phase, loadRound, stopLoop]);
 
   const startCountdown = useCallback(() => {
+    clearCountdown();
     setPhase('countdown');
     setCountdown(3);
     let v = 3;
-    const t = setInterval(() => {
+    countdownIntervalRef.current = setInterval(() => {
       v--;
       if (v <= 0) {
-        clearInterval(t);
+        clearInterval(countdownIntervalRef.current!);
+        countdownIntervalRef.current = null;
         setCountdown(0);
-        setTimeout(() => {
+        countdownTimeoutRef.current = setTimeout(() => {
           setPhase('playing');
           startTimeRef.current = Date.now();
         }, 450);
@@ -274,9 +322,12 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
         setCountdown(v);
       }
     }, 800);
-  }, []);
+  }, [clearCountdown]);
 
   const startGame = useCallback(() => {
+    clearCountdown();
+    stopLoop();
+    purgeCards();
     const shuffled = shuffle(allQuestions);
     setQuestions(shuffled);
     setCurrentRound(0);
@@ -291,11 +342,16 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
     setMissedQuestions([]);
     missedRef.current = [];
     startCountdown();
-  }, [allQuestions, startCountdown]);
+  }, [allQuestions, startCountdown, clearCountdown, stopLoop, purgeCards]);
 
   useEffect(() => {
-    return () => stopLoop();
-  }, [stopLoop]);
+    return () => {
+      stopLoop();
+      clearCountdown();
+      purgeCards();
+      if (loadRoundTimeoutRef.current) clearTimeout(loadRoundTimeoutRef.current);
+    };
+  }, [stopLoop, clearCountdown, purgeCards]);
 
   return {
     phase,

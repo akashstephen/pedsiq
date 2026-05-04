@@ -4,7 +4,7 @@
 
 'use client';
 
-import { useMemo, useState, useCallback } from 'react';
+import { useMemo, useState, useCallback, useEffect, useRef } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
 import { useFeatureWarsEngine } from './hooks/useFeatureWarsEngine';
 import battlesData from './data/battles.json';
@@ -92,18 +92,51 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
 
   const remaining = b.features.filter((f) => !engine.isFeatureDone(f.id)).length;
   const { spawnPopup, PopupLayer } = useScorePopups();
+  const prevFeedbackRef = useRef<string | null>(null);
+  const [expVisible, setExpVisible] = useState(false);
+  const expTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Handle feedback visibility and auto-hide
+  useEffect(() => {
+    if (!engine.feedback) {
+      prevFeedbackRef.current = null;
+      setExpVisible(false);
+      if (expTimerRef.current) clearTimeout(expTimerRef.current);
+      return;
+    }
+    const key = engine.feedback.type + engine.feedback.feature.id;
+    if (prevFeedbackRef.current === key) return;
+    prevFeedbackRef.current = key;
+    setExpVisible(true);
+
+    // Flash background
+    if (engine.feedback.type === 'ok' || engine.feedback.type === 'partial') {
+      flash.trigger('green');
+    } else {
+      flash.trigger('red');
+    }
+
+    // Score popup on correct
+    if (engine.feedback.type === 'ok' || engine.feedback.type === 'partial') {
+      const centerX = window.innerWidth / 2 - 20;
+      const centerY = window.innerHeight / 2 - 10;
+      spawnPopup(centerX, centerY, '+10', '#34D399');
+    }
+
+    // Auto-hide explanation
+    if (expTimerRef.current) clearTimeout(expTimerRef.current);
+    const delay = engine.feedback.type === 'bad' ? 3000 : 2200;
+    expTimerRef.current = setTimeout(() => {
+      setExpVisible(false);
+    }, delay);
+
+    return () => {
+      if (expTimerRef.current) clearTimeout(expTimerRef.current);
+    };
+  }, [engine.feedback, flash, spawnPopup]);
 
   const handleColumnTap = (diseaseId: string) => {
     engine.onColumnTap(diseaseId);
-    // Flash effect based on correctness would need to be determined after the fact
-    // The engine handles the logic, we just trigger visual feedback
-    setTimeout(() => {
-      const lastFeedback = engine.feedback;
-      if (lastFeedback) {
-        if (lastFeedback.type === 'ok') flash.trigger('green');
-        else if (lastFeedback.type === 'bad') flash.trigger('red');
-      }
-    }, 50);
   };
 
   return (
@@ -167,6 +200,7 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
               selectedFeatureId={engine.selectedFeatureId}
               onColumnTap={() => handleColumnTap(d.id)}
               isFeatureDone={engine.isFeatureDone}
+              alreadyPlacedColumnId={engine.alreadyPlacedColumnId}
             />
           ))}
         </div>
@@ -178,14 +212,16 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
         </div>
 
         {/* Feature tray */}
-        <div className="flex-1 overflow-y-auto p-2 min-h-0">
+        <div className="flex-1 overflow-y-auto p-2 min-h-0 arcade-scroll-thin">
           <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2">
             {b.features.map((f: FeatureWarsFeature) => {
               const done = engine.isFeatureDone(f.id);
               const isMulti = f.correctDiseaseIds.length > 1;
-              const remainingCount = isMulti ? f.correctDiseaseIds.length - (engine.placements[f.id]?.size ?? 0) : 0;
+              const placedCount = engine.placements[f.id]?.size ?? 0;
+              const remainingCount = isMulti ? f.correctDiseaseIds.length - placedCount : 0;
               const isSelected = engine.selectedFeatureId === f.id;
-              const wasWrong = engine.missedFeatures.find((m) => m.id === f.id);
+              const isWrongNow = engine.lastWrongChipId === f.id;
+              const isPartiallyPlaced = placedCount > 0 && placedCount < f.correctDiseaseIds.length;
 
               return (
                 <button
@@ -194,21 +230,24 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
                   disabled={done}
                   className={`relative rounded-xl p-3 text-left transition-all cursor-pointer flex flex-col gap-1 min-h-[60px]
                     ${done ? 'opacity-0 pointer-events-none scale-90' : ''}
-                    ${isSelected ? 'border border-[#FBBF24] shadow-[0_0_14px_rgba(251,191,36,0.25)] bg-[rgba(251,191,36,0.07)] scale-[1.04]' : 'bg-[#0E1C35] border border-[#1E3550] hover:bg-[#162240] hover:border-[#1E3550]'}
-                    ${wasWrong && !isSelected ? 'animate-[fw-fShake_0.3s_ease]' : ''}
+                    ${isSelected && !done ? 'border border-[#FBBF24] shadow-[0_0_14px_rgba(251,191,36,0.25)] bg-[rgba(251,191,36,0.07)] scale-[1.04]' : ''}
+                    ${!isSelected && !done ? 'bg-[#0E1C35] border border-[#1E3550] hover:bg-[#162240] hover:border-[#1E3550]' : ''}
                   `}
-                  style={isSelected ? {
-                    transform: 'scale(1.04)',
-                  } : {}}
+                  style={isSelected ? { transform: 'scale(1.04)' } : {}}
                 >
-                  {isMulti && !done && (
+                  {isMulti && !done && remainingCount > 0 && (
                     <div className="absolute top-1.5 right-1.5 text-[9px] font-semibold bg-[#A78BFA] text-white rounded px-1 py-0.5"
                          style={{fontFamily:"'IBM Plex Mono',monospace"}}>
                       ×{remainingCount}
                     </div>
                   )}
-                  <div className="text-xs font-semibold text-[#CDD9E8] leading-tight">{f.text}</div>
+                  <div className={`text-xs font-semibold leading-tight ${isPartiallyPlaced && !done ? 'opacity-55 italic' : 'text-[#CDD9E8]'}`}>
+                    {f.text}
+                  </div>
                   <div className="text-[9.5px] text-[#2E4A65] leading-tight" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{f.sub}</div>
+                  {isWrongNow && (
+                    <div className="absolute inset-0 animate-[fw-fShake_0.3s_ease] pointer-events-none rounded-xl" />
+                  )}
                 </button>
               );
             })}
@@ -217,9 +256,9 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
       </div>
 
       {/* Explanation popup */}
-      {engine.feedback && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 p-3"
-             style={{ transform: 'translateY(0)', transition: 'transform 0.25s cubic-bezier(0.175,0.885,0.32,1.1)' }}>
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-3"
+           style={{ transform: expVisible ? 'translateY(0)' : 'translateY(110%)', transition: 'transform 0.25s cubic-bezier(0.175,0.885,0.32,1.1)' }}>
+        {engine.feedback && (
           <div className={`rounded-xl p-4 max-w-lg mx-auto border
             ${engine.feedback.type === 'ok' ? 'bg-[#012B18] border-[#34D399]' :
               engine.feedback.type === 'partial' ? 'bg-[#0A1528] border-[#A78BFA]' :
@@ -247,8 +286,8 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
               </div>
             )}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
@@ -262,6 +301,7 @@ function ColumnComponent({
   selectedFeatureId,
   onColumnTap,
   isFeatureDone,
+  alreadyPlacedColumnId,
 }: {
   disease: FeatureWarsDisease;
   features: FeatureWarsFeature[];
@@ -269,36 +309,45 @@ function ColumnComponent({
   selectedFeatureId: string | null;
   onColumnTap: () => void;
   isFeatureDone: (id: string) => boolean;
+  alreadyPlacedColumnId: string | null;
 }) {
   const [flash, setFlash] = useState<'ok'|'bad'|null>(null);
+  const flashTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearFlashTimeout = () => {
+    if (flashTimeoutRef.current) {
+      clearTimeout(flashTimeoutRef.current);
+      flashTimeoutRef.current = null;
+    }
+  };
 
   const handleTap = () => {
     onColumnTap();
-    // Determine if this was correct by checking if the selected feature's correctDiseaseIds includes this disease
     if (selectedFeatureId) {
       const f = features.find((x) => x.id === selectedFeatureId);
       if (f) {
         const isCorrect = f.correctDiseaseIds.includes(disease.id);
+        clearFlashTimeout();
         setFlash(isCorrect ? 'ok' : 'bad');
-        setTimeout(() => setFlash(null), 400);
+        flashTimeoutRef.current = setTimeout(() => setFlash(null), 400);
       }
     }
   };
 
   const placedFeatures = features.filter((f) => placements[f.id]?.has(disease.id));
+  const isAlreadyPlacedFlash = alreadyPlacedColumnId === disease.id;
 
   return (
     <div
       onClick={handleTap}
       className={`flex-1 min-w-0 rounded-xl border overflow-hidden transition-all cursor-pointer
-        ${selectedFeatureId ? 'hover:shadow-[0_0_16px_' + disease.glow + ']' : ''}
-        ${flash === 'ok' ? '' : ''}
-        ${flash === 'bad' ? '' : ''}
+        ${selectedFeatureId ? '' : ''}
       `}
       style={{
         background: '#0A1528',
         borderColor: selectedFeatureId ? disease.color + '55' : '#1E3550',
-        animation: flash === 'ok' ? 'fw-colOk 0.4s ease' : flash === 'bad' ? 'fw-colBad 0.3s ease' : undefined,
+        animation: isAlreadyPlacedFlash ? 'fw-colOk 0.4s ease' : flash === 'ok' ? 'fw-colOk 0.4s ease' : flash === 'bad' ? 'fw-colBad 0.3s ease' : undefined,
+        boxShadow: selectedFeatureId ? `0 0 16px ${disease.glow}` : undefined,
       }}
     >
       <div className="px-3 py-2 border-b border-[#182A42]" style={{ background: disease.bg }}>
@@ -307,13 +356,16 @@ function ColumnComponent({
           {placedFeatures.length} placed
         </div>
       </div>
-      <div className="p-1.5 flex flex-col gap-1 min-h-[60px] max-h-[120px] overflow-y-auto">
-        {placedFeatures.map((f) => (
-          <div key={f.id} className="rounded-md px-2 py-1 text-[10px] text-[#CDD9E8]"
-               style={{ background: disease.bg, border: `1px solid ${disease.color}40`, animation: 'fw-chipIn 0.25s cubic-bezier(0.175,0.885,0.32,1.3)' }}>
-            {f.text}
-          </div>
-        ))}
+      <div className="p-1.5 flex flex-col gap-1 min-h-[60px] max-h-[120px] overflow-y-auto arcade-scroll-thin">
+        {placedFeatures.map((f) => {
+          const isMultiPending = f.correctDiseaseIds.length > 1 && !isFeatureDone(f.id);
+          return (
+            <div key={f.id} className={`rounded-md px-2 py-1 text-[10px] ${isMultiPending ? 'opacity-55 italic' : 'text-[#CDD9E8]'}`}
+                 style={{ background: disease.bg, border: `1px solid ${disease.color}40`, animation: 'fw-chipIn 0.25s cubic-bezier(0.175,0.885,0.32,1.3)' }}>
+              {f.text}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -359,7 +411,7 @@ function BattleCompleteScreen({ engine }: { engine: ReturnType<typeof useFeature
           <p className="text-[10px] tracking-wider text-[#2E4A65] uppercase mb-2" style={{fontFamily:"'IBM Plex Mono',monospace"}}>
             Missed ({engine.missedFeatures.length}) — review:
           </p>
-          <div className="flex flex-col gap-2 max-h-32 overflow-y-auto">
+          <div className="flex flex-col gap-2 max-h-32 overflow-y-auto arcade-scroll-thin">
             {engine.missedFeatures.map((f) => (
               <div key={f.id} className="bg-[#0A1528] border-l-[3px] border-[#F87171] rounded-lg p-3 text-xs text-[#6E89A8] leading-relaxed">
                 <strong className="text-[#CDD9E8] block mb-1" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{f.text}</strong>
@@ -447,10 +499,20 @@ export default function FeatureWarsPage() {
   return (
     <ArcadeShell gameId="feature-wars" themeClass="theme-feature-wars">
       <GoogleFontsLoader families={['Syne:wght@700;800', 'IBM+Plex+Mono:wght@400;500;600', 'DM+Sans:wght@300;400;500;600']} />
-      {engine.phase === 'splash' && <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />}
-      {engine.phase === 'battle' && <BattleScreen engine={engine} flash={flash} />}
-      {engine.phase === 'battle-complete' && <BattleCompleteScreen engine={engine} />}
-      {engine.phase === 'final' && <FinalScreen engine={engine} />}
+      <div className="relative w-full h-screen overflow-hidden">
+        <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
+          <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'battle' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
+          <BattleScreen engine={engine} flash={flash} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'battle-complete' ? '' : 'hidden-down'}`}>
+          <BattleCompleteScreen engine={engine} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'final' ? '' : 'hidden-down'}`}>
+          <FinalScreen engine={engine} />
+        </div>
+      </div>
     </ArcadeShell>
   );
 }

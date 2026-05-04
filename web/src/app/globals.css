@@ -136,7 +136,7 @@ body {
   }
 
   /* Mnemonics */
-  .from-\[\#34C759\]\/10 {
+  .from-\[#34C759\]\/10 {
     background: #f0f8f0 !important;
     border: 1px solid #ccc !important;
   }
@@ -162,6 +162,7 @@ body[data-arcade-active] {
 
 /* ─── Arcade Animations ───────────────────────────────────────────────────── */
 
+/* Dose Duel */
 @keyframes dd-shake {
   0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-6px); }
@@ -183,6 +184,12 @@ body[data-arcade-active] {
   100% { background: rgba(239,68,68,0.12); opacity: 0; }
 }
 
+@keyframes dd-flashAmber {
+  0% { background: rgba(245,158,11,0.11); opacity: 1; }
+  100% { background: rgba(245,158,11,0.11); opacity: 0; }
+}
+
+/* Dose Sniper */
 @keyframes sniper-dpulse {
   from { box-shadow: 0 0 6px rgba(255,59,59,0.15); }
   to { box-shadow: 0 0 22px rgba(255,59,59,0.45); }
@@ -227,6 +234,7 @@ body[data-arcade-active] {
   100% { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(-20px); }
 }
 
+/* Feature Wars */
 @keyframes fw-colOk {
   0%, 100% { border-color: inherit; }
   50% { border-color: #34D399; box-shadow: 0 0 20px rgba(52,211,153,0.35); }
@@ -251,6 +259,110 @@ body[data-arcade-active] {
 @keyframes fw-spop {
   0% { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-60px); }
+}
+
+/* ─── Dose Sniper Card Styles (injected by engine) ────────────────────────── */
+
+.dose-card {
+  position: absolute;
+  background: linear-gradient(145deg, #0A1428, #0D1835);
+  border: 1.5px solid #1A2E4A;
+  border-radius: 10px;
+  padding: 11px 13px;
+  cursor: pointer;
+  user-select: none;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.1s, box-shadow 0.1s;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dose-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(34,204,255,0.04), transparent);
+  pointer-events: none;
+}
+
+.dose-card:hover {
+  border-color: #22CCFF;
+  box-shadow: 0 0 18px rgba(34,204,255,0.22), 0 4px 20px rgba(0,0,0,0.45);
+}
+
+.dose-card.danger {
+  border-color: rgba(255,59,59,0.55);
+  animation: sniper-dpulse 0.45s ease infinite alternate;
+}
+
+.dose-card.hit-ok {
+  background: linear-gradient(145deg, #002B15, #003D1F) !important;
+  border-color: #00FF94 !important;
+  box-shadow: 0 0 28px rgba(0,255,148,0.4) !important;
+  animation: sniper-expandOk 0.35s ease forwards !important;
+}
+
+.dose-card.hit-bad {
+  background: linear-gradient(145deg, #2A0000, #1A0000) !important;
+  border-color: #FF3B3B !important;
+  box-shadow: 0 0 28px rgba(255,59,59,0.4) !important;
+  animation: sniper-shakeEl 0.3s ease !important;
+}
+
+.dose-card.reveal {
+  background: linear-gradient(145deg, #002B15, #003D1F) !important;
+  border-color: #00FF94 !important;
+  box-shadow: 0 0 18px rgba(0,255,148,0.25) !important;
+}
+
+/* ─── Arcade Scrollbar Utilities ──────────────────────────────────────────── */
+
+.arcade-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.arcade-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.arcade-scroll::-webkit-scrollbar-thumb {
+  background: #2D4A6E;
+  border-radius: 2px;
+}
+
+.arcade-scroll-thin::-webkit-scrollbar {
+  width: 3px;
+}
+.arcade-scroll-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.arcade-scroll-thin::-webkit-scrollbar-thumb {
+  background: #243C5A;
+  border-radius: 2px;
+}
+
+/* ─── Screen Transitions ──────────────────────────────────────────────────── */
+
+.arcade-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arcade-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arcade-screen.hidden-down {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
 }
 
 /* Reduced motion support */

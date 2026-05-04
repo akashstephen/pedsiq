@@ -4,9 +4,9 @@
 
 'use client';
 
-import { useMemo, useState, useCallback, useEffect, useRef } from 'react';
+import React, { useMemo, useRef, useEffect } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
-import { useDoseDuelEngine } from './hooks/useDoseDuelEngine';
+import { useDoseDuelEngine, TIMER_SEC } from './hooks/useDoseDuelEngine';
 import questionsData from './data/questions.json';
 import { type DoseDuelQuestion } from '@/types/arcade';
 import { getGameStats } from '@/lib/arcade-storage';
@@ -19,8 +19,8 @@ const allQuestions = questionsData as DoseDuelQuestion[];
 // ─── Flash Overlay State ─────────────────────────────────────────────────────
 
 function useFlash() {
-  const [flash, setFlash] = useState<{color:'green'|'red'|'amber',key:number}|null>(null);
-  const trigger = useCallback((color:'green'|'red'|'amber') => {
+  const [flash, setFlash] = React.useState<{color:'green'|'red'|'amber',key:number}|null>(null);
+  const trigger = React.useCallback((color:'green'|'red'|'amber') => {
     setFlash({ color, key: Date.now() });
   }, []);
   return { flash, trigger };
@@ -30,7 +30,7 @@ function useFlash() {
 
 function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: number }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center animate-[dd-fadeUp_0.3s_ease]"
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
          style={{ background: 'linear-gradient(180deg, #080C18 0%, #0F1628 100%)', fontFamily: "'DM Sans', sans-serif" }}>
       <div className="mb-2">
         <Gamepad2 size={48} className="text-[#22D3EE] mx-auto mb-4" />
@@ -99,7 +99,7 @@ function GameScreen({
 }) {
   if (!currentQuestion) return null;
 
-  const timerPct = Math.max(0, (state.timeLeft / 12) * 100);
+  const timerPct = Math.max(0, (state.timeLeft / TIMER_SEC) * 100);
   const timerColor = timerPct < 30 ? 'linear-gradient(90deg, #EF4444, #F59E0B)' : 'linear-gradient(90deg, #22D3EE, #818CF8)';
   const q = currentQuestion;
 
@@ -107,7 +107,6 @@ function GameScreen({
 
   useEffect(() => {
     if (state.isRevealed && !prevRevealedRef.current) {
-      // Just revealed - check if timeout
       if (state.selectedOption === null) {
         flash.trigger('amber');
       }
@@ -129,8 +128,17 @@ function GameScreen({
     }
   };
 
+  // Determine feedback type
+  const feedbackType = state.isRevealed
+    ? state.selectedOption === q.correctAnswer
+      ? 'correct'
+      : state.selectedOption === null
+      ? 'timeout'
+      : 'wrong'
+    : null;
+
   return (
-    <div className="flex flex-col min-h-screen px-4 py-4 max-w-xl mx-auto animate-[dd-fadeUp_0.3s_ease]"
+    <div className="flex flex-col min-h-screen px-4 py-4 max-w-xl mx-auto"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       {/* Flash overlay */}
       {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
@@ -194,15 +202,25 @@ function GameScreen({
               key={opt}
               onClick={() => handleSelect(opt)}
               disabled={state.isRevealed}
-              className={`rounded-xl p-3 text-center text-xs font-bold transition-all cursor-pointer min-h-[56px] flex items-center justify-center leading-tight
+              className={`rounded-xl p-3 text-center text-xs font-bold cursor-pointer min-h-[56px] flex items-center justify-center leading-tight
                 ${showCorrect ? 'bg-[#052E16] border border-[#10B981] text-[#10B981] shadow-[0_0_16px_rgba(16,185,129,0.2)]' : ''}
                 ${showWrong ? 'bg-[#2A0A0A] border border-[#EF4444] text-[#EF4444]' : ''}
                 ${!state.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
                 ${!state.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F]' : ''}
+                ${state.isRevealed && !isSelected && !isCorrect ? 'bg-[#161E35] border border-[#2D4A6E] text-[#475569] opacity-60' : ''}
               `}
               style={{
                 fontFamily: "'Space Mono', monospace",
                 animation: showWrong ? 'dd-shake 0.3s ease' : undefined,
+                transition: 'all 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                if (!state.isRevealed && !isSelected) {
+                  (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.transform = '';
               }}
             >
               {opt}
@@ -212,17 +230,21 @@ function GameScreen({
       </div>
 
       {/* Feedback */}
-      {state.isRevealed && (
+      {feedbackType && (
         <div className={`rounded-xl p-4 mb-3
-          ${state.selectedOption === q.correctAnswer ? 'bg-[#052E16] border border-[#10B981]' : 'bg-[#1A0A0A] border border-[#EF4444]'}`}
+          ${feedbackType === 'correct' ? 'bg-[#052E16] border border-[#10B981]' :
+            feedbackType === 'timeout' ? 'bg-[#1A1000] border border-[#F59E0B]' :
+            'bg-[#1A0A0A] border border-[#EF4444]'}`}
              style={{ animation: 'dd-fadeUp 0.2s ease' }}>
           <div className={`text-xs font-bold tracking-wider uppercase mb-2
-            ${state.selectedOption === q.correctAnswer ? 'text-[#10B981]' : 'text-[#EF4444]'}`}>
-            {state.selectedOption === q.correctAnswer
+            ${feedbackType === 'correct' ? 'text-[#10B981]' :
+              feedbackType === 'timeout' ? 'text-[#F59E0B]' :
+              'text-[#EF4444]'}`}>
+            {feedbackType === 'correct'
               ? `✓ CORRECT +${10 + Math.ceil(state.timeLeft)} pts`
-              : state.selectedOption
-              ? `✗ WRONG · Correct: ${q.correctAnswer}`
-              : `⏱ TIME'S UP · Answer: ${q.correctAnswer}`}
+              : feedbackType === 'timeout'
+              ? `⏱ TIME'S UP · Answer: ${q.correctAnswer}`
+              : `✗ WRONG · Correct: ${q.correctAnswer}`}
           </div>
           <p className="text-xs text-[#94A3B8] leading-relaxed">{q.explanation}</p>
           {q.trap && (
@@ -269,7 +291,7 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
   else if (pct >= 60) { grade = 'SENIOR HOUSE OFFICER'; gradeColor = '#F59E0B'; title = 'DECENT ROUND'; }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center animate-[dd-fadeUp_0.3s_ease]"
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       <h2 className="text-2xl font-bold mb-2" style={{fontFamily:"'Space Mono',monospace"}}>{title}</h2>
       <div className="text-7xl font-bold mb-1 leading-none"
@@ -298,12 +320,18 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
         </div>
       </div>
 
+      {state.maxStreak > 0 && (
+        <div className="mb-4 text-sm text-[#F59E0B]">
+          Best streak: {state.maxStreak}🔥
+        </div>
+      )}
+
       {state.missedQuestions.length > 0 && (
         <div className="w-full max-w-sm mb-6">
           <p className="text-xs tracking-wider text-[#475569] uppercase text-left mb-2">
             Missed doses — study these ({state.missedQuestions.length}):
           </p>
-          <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1">
+          <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1 arcade-scroll">
             {state.missedQuestions.map((q) => (
               <div key={q.id} className="bg-[#161E35] border-l-[3px] border-[#EF4444] rounded-lg p-3 text-left text-xs leading-relaxed">
                 <strong className="text-[#E2E8F0] block mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</strong>
@@ -342,18 +370,24 @@ export default function DoseDuelPage() {
   return (
     <ArcadeShell gameId="dose-duel" themeClass="theme-dose-duel">
       <GoogleFontsLoader families={['Space+Mono:wght@400;700', 'DM+Sans:wght@300;400;500;600']} />
-      {state.phase === 'splash' && <SplashScreen onStart={startGame} highScore={stats.highScore} />}
-      {state.phase === 'playing' && (
-        <GameScreen
-          state={state}
-          currentQuestion={currentQuestion}
-          onSelect={selectOption}
-          onSubmit={submitAnswer}
-          onNext={nextQuestion}
-          flash={flash}
-        />
-      )}
-      {state.phase === 'results' && <ResultsScreen state={state} onRestart={startGame} />}
+      <div className="relative w-full h-screen overflow-hidden">
+        <div className={`arcade-screen ${state.phase === 'splash' ? '' : 'hidden-down'}`}>
+          <SplashScreen onStart={startGame} highScore={stats.highScore} />
+        </div>
+        <div className={`arcade-screen ${state.phase === 'playing' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
+          <GameScreen
+            state={state}
+            currentQuestion={currentQuestion}
+            onSelect={selectOption}
+            onSubmit={submitAnswer}
+            onNext={nextQuestion}
+            flash={flash}
+          />
+        </div>
+        <div className={`arcade-screen ${state.phase === 'results' ? '' : 'hidden-down'}`}>
+          <ResultsScreen state={state} onRestart={startGame} />
+        </div>
+      </div>
     </ArcadeShell>
   );
 }

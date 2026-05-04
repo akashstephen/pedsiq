@@ -29,6 +29,8 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
   const [multiFound, setMultiFound] = useState(0);
   const [missedFeatures, setMissedFeatures] = useState<FeatureWarsFeature[]>([]);
   const [feedback, setFeedback] = useState<{type:'ok'|'partial'|'bad', feature:FeatureWarsFeature, diseaseName?:string} | null>(null);
+  const [lastWrongChipId, setLastWrongChipId] = useState<string | null>(null);
+  const [alreadyPlacedColumnId, setAlreadyPlacedColumnId] = useState<string | null>(null);
 
   const battle = allBattles[currentBattleIndex];
 
@@ -43,6 +45,8 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
     setMultiFound(0);
     setMissedFeatures([]);
     setFeedback(null);
+    setLastWrongChipId(null);
+    setAlreadyPlacedColumnId(null);
   }, [allBattles]);
 
   const startGame = useCallback(() => {
@@ -54,6 +58,7 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
 
   const onChipTap = useCallback((featureId: string) => {
     if (isFeatureDone(featureId)) return;
+    setLastWrongChipId(null);
     if (selectedFeatureId === featureId) {
       setSelectedFeatureId(null);
     } else {
@@ -72,7 +77,11 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
     const feature = battle?.features.find((f) => f.id === selectedFeatureId);
     if (!feature) return;
 
-    if (placements[selectedFeatureId]?.has(diseaseId)) return;
+    if (placements[selectedFeatureId]?.has(diseaseId)) {
+      setAlreadyPlacedColumnId(diseaseId);
+      setTimeout(() => setAlreadyPlacedColumnId(null), 400);
+      return;
+    }
 
     const isCorrect = feature.correctDiseaseIds.includes(diseaseId);
 
@@ -82,6 +91,7 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
       setPlacements(newPlacements);
       setScore((s) => s + 10);
       setCorrectCount((c) => c + 1);
+      setLastWrongChipId(null);
 
       const allDone = feature.correctDiseaseIds.every((id) => newPlacements[selectedFeatureId].has(id));
       if (allDone) {
@@ -105,18 +115,19 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
       setScore((s) => Math.max(0, s - 5));
       setWrongCount((w) => w + 1);
       setSelectedFeatureId(null);
-      if (!missedFeatures.find((m) => m.id === feature.id)) {
-        setMissedFeatures((prev) => [...prev, feature]);
-      }
+      setLastWrongChipId(selectedFeatureId);
+      // Use functional updater to avoid stale closure
+      setMissedFeatures((prev) =>
+        prev.find((m) => m.id === feature.id) ? prev : [...prev, feature]
+      );
       setFeedback({ type: 'bad', feature });
     }
-  }, [selectedFeatureId, battle, placements, missedFeatures]);
+  }, [selectedFeatureId, battle, placements]);
 
   const nextBattle = useCallback(() => {
     const next = currentBattleIndex + 1;
     if (next >= allBattles.length) {
       // Final results
-      const totalHits = correctCount + (allBattles.reduce((acc, b) => acc + b.features.filter((f) => f.correctDiseaseIds.length > 1).length, 0) - multiFound > 0 ? correctCount : correctCount);
       const totalQ = allBattles.reduce((acc, b) => acc + b.features.length, 0);
       const session: ArcadeSession = {
         id: generateSessionId(),
@@ -164,6 +175,8 @@ export function useFeatureWarsEngine(allBattles: FeatureWarsBattle[]) {
     multiFound,
     missedFeatures,
     feedback,
+    lastWrongChipId,
+    alreadyPlacedColumnId,
     isFeatureDone,
     startGame,
     onChipTap,

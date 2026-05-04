@@ -11,14 +11,16 @@ import { useCallback, useState, useEffect, useRef } from 'react';
 
 export function FlashOverlay({ color, onDone }: { color: 'green' | 'red' | 'amber'; onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
 
   useEffect(() => {
     const t = setTimeout(() => {
       setVisible(false);
-      onDone?.();
+      onDoneRef.current?.();
     }, 300);
     return () => clearTimeout(t);
-  }, [onDone]);
+  }, []); // intentionally stable — onDone stored in ref
 
   const bg = color === 'green' ? 'rgba(16,185,129,0.12)' : color === 'red' ? 'rgba(239,68,68,0.12)' : 'rgba(245,158,11,0.11)';
 
@@ -48,13 +50,22 @@ let popupId = 0;
 
 export function useScorePopups() {
   const [popups, setPopups] = useState<ScorePopupItem[]>([]);
+  const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+      timeoutsRef.current = [];
+    };
+  }, []);
 
   const spawnPopup = useCallback((x: number, y: number, text: string, color: string) => {
     const id = ++popupId;
     setPopups((prev) => [...prev, { id, x, y, text, color }]);
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setPopups((prev) => prev.filter((p) => p.id !== id));
     }, 800);
+    timeoutsRef.current.push(t);
   }, []);
 
   const PopupLayer = useCallback(() => (
@@ -95,6 +106,14 @@ let particleId = 0;
 
 export function useParticles() {
   const [particles, setParticles] = useState<ParticleItem[]>([]);
+  const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+      timeoutsRef.current = [];
+    };
+  }, []);
 
   const spawnParticles = useCallback((x: number, y: number, color: string, count: number = 14) => {
     const newParticles: ParticleItem[] = [];
@@ -113,9 +132,10 @@ export function useParticles() {
       });
     }
     setParticles((prev) => [...prev, ...newParticles]);
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setParticles((prev) => prev.filter((p) => !newParticles.find((np) => np.id === p.id)));
     }, 900);
+    timeoutsRef.current.push(t);
   }, []);
 
   const ParticleLayer = useCallback(() => (
@@ -153,13 +173,22 @@ let surgeId = 0;
 
 export function useComboSurge() {
   const [surges, setSurges] = useState<SurgeItem[]>([]);
+  const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+      timeoutsRef.current = [];
+    };
+  }, []);
 
   const triggerSurge = useCallback((text: string, color: string) => {
     const id = ++surgeId;
     setSurges((prev) => [...prev, { id, text, color }]);
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setSurges((prev) => prev.filter((s) => s.id !== id));
     }, 1100);
+    timeoutsRef.current.push(t);
   }, []);
 
   const SurgeLayer = useCallback(() => (
@@ -188,14 +217,16 @@ export function useComboSurge() {
 
 export function LevelFlash({ onDone }: { onDone?: () => void }) {
   const [visible, setVisible] = useState(true);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
 
   useEffect(() => {
     const t = setTimeout(() => {
       setVisible(false);
-      onDone?.();
+      onDoneRef.current?.();
     }, 700);
     return () => clearTimeout(t);
-  }, [onDone]);
+  }, []); // intentionally stable — onDone stored in ref
 
   if (!visible) return null;
 
@@ -204,30 +235,5 @@ export function LevelFlash({ onDone }: { onDone?: () => void }) {
       className="fixed inset-0 pointer-events-none z-[45] border-[3px] border-[#22CCFF]"
       style={{ animation: 'sniper-lvlAnim 0.65s ease forwards' }}
     />
-  );
-}
-
-// ─── Screen Transitions ──────────────────────────────────────────────────────
-
-export function AnimatedScreen({
-  visible,
-  children,
-  className = '',
-}: {
-  visible: boolean;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-300 ${className}`}
-      style={{
-        opacity: visible ? 1 : 0,
-        pointerEvents: visible ? 'auto' : 'none',
-        transform: visible ? 'translateY(0)' : 'translateY(16px)',
-      }}
-    >
-      {children}
-    </div>
   );
 }

@@ -8,13 +8,12 @@ import { useState, useCallback, useRef, useEffect } from 'react';
 import {
   type DoseDuelQuestion,
   type DoseDuelState,
-  type DoseDuelPhase,
   type ArcadeSession,
   type StudyListItem,
 } from '@/types/arcade';
 import { updateGameStats } from '@/lib/arcade-storage';
 
-const TIMER_SEC = 12;
+export const TIMER_SEC = 12;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -47,13 +46,21 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
     isRevealed: false,
   });
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = useRef<number>(0);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
       clearInterval(timerRef.current);
       timerRef.current = null;
+    }
+  }, []);
+
+  const clearPendingTimeout = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
   }, []);
 
@@ -65,7 +72,6 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
         if (prev.phase !== 'playing' || prev.isRevealed) return prev;
         const newTime = prev.timeLeft - 0.1;
         if (newTime <= 0) {
-          // Timeout
           const q = prev.questions[prev.currentIndex];
           return {
             ...prev,
@@ -84,6 +90,8 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
   }, [clearTimer]);
 
   const startGame = useCallback(() => {
+    clearPendingTimeout();
+    clearTimer();
     const shuffled = shuffle(allQuestions);
     setState({
       phase: 'playing',
@@ -101,8 +109,8 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
       selectedOption: null,
       isRevealed: false,
     });
-    setTimeout(() => startTimer(), 100);
-  }, [allQuestions, startTimer]);
+    timeoutRef.current = setTimeout(() => startTimer(), 100);
+  }, [allQuestions, startTimer, clearTimer, clearPendingTimeout]);
 
   const selectOption = useCallback((option: string) => {
     setState((prev) => {
@@ -140,7 +148,6 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
     setState((prev) => {
       const nextIndex = prev.currentIndex + 1;
       if (nextIndex >= prev.questions.length) {
-        // Game over - save stats
         const session: ArcadeSession = {
           id: generateSessionId(),
           gameId: 'dose-duel',
@@ -181,12 +188,15 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
         isRevealed: false,
       };
     });
-    setTimeout(() => startTimer(), 100);
+    timeoutRef.current = setTimeout(() => startTimer(), 100);
   }, [startTimer]);
 
   useEffect(() => {
-    return () => clearTimer();
-  }, [clearTimer]);
+    return () => {
+      clearTimer();
+      clearPendingTimeout();
+    };
+  }, [clearTimer, clearPendingTimeout]);
 
   const currentQuestion = state.questions[state.currentIndex] ?? null;
 

@@ -1,10 +1,10 @@
 /**
- * Dose Sniper Page — Full animations version (simplified effects)
+ * Dose Sniper Page — Full animations version
  */
 
 'use client';
 
-import { useMemo, useEffect, useRef } from 'react';
+import { useMemo, useEffect, useRef, useState } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
 import { useSniperEngine, BASE_SPEED, MAX_SPEED } from './hooks/useSniperEngine';
 import questionsData from './data/questions.json';
@@ -94,17 +94,43 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
   const { spawnPopup, PopupLayer } = useScorePopups();
   const { spawnParticles, ParticleLayer } = useParticles();
   const { triggerSurge, SurgeLayer } = useComboSurge();
-  const prevComboRef = useRef(0);
   const prevFeedbackRef = useRef<string | null>(null);
+  const [showLevelFlash, setShowLevelFlash] = useState(false);
+  const [feedbackVisible, setFeedbackVisible] = useState(false);
+
+  // Add lane guides on mount
+  useEffect(() => {
+    const zone = engine.zoneRef.current;
+    if (!zone) return;
+    const addGuides = () => {
+      zone.querySelectorAll('.lane-guide').forEach((g) => g.remove());
+      const zw = zone.offsetWidth;
+      [0.17, 0.50, 0.83].forEach((l) => {
+        const g = document.createElement('div');
+        g.className = 'lane-guide';
+        g.style.cssText = `position:absolute;top:0;bottom:36px;width:1px;background:linear-gradient(180deg,rgba(34,204,255,0.12),rgba(34,204,255,0.04),transparent);pointer-events:none;z-index:2;left:${Math.round(l * zw)}px;`;
+        zone.appendChild(g);
+      });
+    };
+    addGuides();
+    const onResize = () => {
+      zone.querySelectorAll('.lane-guide').forEach((g) => g.remove());
+      addGuides();
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   // Trigger effects when feedback changes
   useEffect(() => {
     if (!engine.feedback) {
       prevFeedbackRef.current = null;
+      setFeedbackVisible(false);
       return;
     }
     if (prevFeedbackRef.current === engine.feedback.type) return;
     prevFeedbackRef.current = engine.feedback.type;
+    setFeedbackVisible(true);
 
     const zone = engine.zoneRef.current;
     const zh = zone ? zone.offsetHeight / 2 : window.innerHeight / 2;
@@ -120,6 +146,10 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
         const surge = CMULT_LABELS[engine.combo];
         triggerSurge(surge.text, surge.color);
       }
+      if (engine.combo === 7) {
+        setShowLevelFlash(true);
+        setTimeout(() => setShowLevelFlash(false), 700);
+      }
     } else {
       spawnParticles(zw, zh, '#FF3B3B', 10);
     }
@@ -133,6 +163,7 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
       <div className="pointer-events-none fixed inset-0 z-[99]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px)' }} />
 
+      {showLevelFlash && <LevelFlash onDone={() => setShowLevelFlash(false)} />}
       <PopupLayer />
       <ParticleLayer />
       <SurgeLayer />
@@ -184,9 +215,9 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
       </div>
 
       {/* Feedback Panel */}
-      {engine.feedback && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 p-3"
-             style={{ transform: 'translateY(0)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
+      <div className="fixed bottom-0 left-0 right-0 z-40 p-3"
+           style={{ transform: feedbackVisible ? 'translateY(0)' : 'translateY(105%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
+        {engine.feedback && (
           <div className={`rounded-xl p-4 max-w-lg mx-auto border
             ${engine.feedback.type === 'ok' ? 'bg-[#001B0D] border-[#00FF94]' : engine.feedback.type === 'bad' ? 'bg-[#180000] border-[#FF3B3B]' : 'bg-[#180E00] border-[#FFB800]'}`}
                style={{ boxShadow: engine.feedback.type === 'ok' ? '0 0 22px rgba(0,255,148,0.12)' : engine.feedback.type === 'bad' ? '0 0 22px rgba(255,59,59,0.12)' : '0 0 22px rgba(255,184,0,0.12)' }}>
@@ -207,13 +238,13 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
               </div>
             )}
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      {engine.feedback && (
+      {feedbackVisible && (
         <div className="fixed bottom-32 left-0 right-0 z-50 flex justify-center">
           <button onClick={engine.nextRound}
-                  className="px-8 py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-sm tracking-wider uppercase"
+                  className="px-8 py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5"
                   style={{fontFamily:"'Orbitron',monospace", boxShadow: '0 0 24px rgba(34,204,255,0.4)'}}>
             {engine.currentRound + 1 >= engine.questions.length ? 'SEE RESULTS →' : 'NEXT →'}
           </button>
@@ -261,7 +292,7 @@ function ResultsScreen({ score, hits, misses, maxCombo, onRestart, missedQuestio
       {missedQuestions.length > 0 && (
         <div className="w-full max-w-sm mb-6 relative z-10">
           <p className="text-[11px] tracking-wider text-[#1E3A5A] uppercase text-left mb-2" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Missed — study these:</p>
-          <div className="flex flex-col gap-2 max-h-40 overflow-y-auto pr-1">
+          <div className="flex flex-col gap-2 max-h-40 overflow-y-auto pr-1 arcade-scroll-thin">
             {missedQuestions.map((q) => (
               <div key={q.id} className="bg-[#0A1428] border-l-2 border-[#FF3B3B] rounded-lg p-3 text-left text-xs leading-relaxed">
                 <strong className="text-[#D8E8F8] block mb-1" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{q.drug}</strong>
@@ -289,13 +320,21 @@ export default function DoseSniperPage() {
   return (
     <ArcadeShell gameId="dose-sniper" themeClass="theme-dose-sniper">
       <GoogleFontsLoader families={['Orbitron:wght@700;900', 'IBM+Plex+Mono:wght@400;600;700', 'DM+Sans:wght@400;500;600']} />
-      {engine.phase === 'splash' && <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />}
-      {engine.phase === 'countdown' && <CountdownScreen value={engine.countdown} />}
-      {engine.phase === 'playing' && <GameScreen engine={engine} />}
-      {engine.phase === 'results' && (
-        <ResultsScreen score={engine.score} hits={engine.hits} misses={engine.misses} maxCombo={engine.maxCombo}
-                       onRestart={engine.startGame} missedQuestions={engine.missedQuestions} />
-      )}
+      <div className="relative w-full h-screen overflow-hidden">
+        <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
+          <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'countdown' ? '' : 'hidden-down'}`}>
+          <CountdownScreen value={engine.countdown} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'playing' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
+          <GameScreen engine={engine} />
+        </div>
+        <div className={`arcade-screen ${engine.phase === 'results' ? '' : 'hidden-down'}`}>
+          <ResultsScreen score={engine.score} hits={engine.hits} misses={engine.misses} maxCombo={engine.maxCombo}
+                         onRestart={engine.startGame} missedQuestions={engine.missedQuestions} />
+        </div>
+      </div>
     </ArcadeShell>
   );
 }
