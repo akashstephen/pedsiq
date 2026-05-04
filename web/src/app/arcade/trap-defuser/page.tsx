@@ -162,7 +162,6 @@ function GameScreen({ deck, onComplete }: { deck: TrapDefuserCard[]; onComplete:
     setTimeout(() => setFlashColor(''), 150);
     setCardAnim('exit-timeout');
     setFeedback({ correct: false, card, pts: 0, timeout: true });
-    scheduleNext(3000);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answered, card]);
 
@@ -193,7 +192,6 @@ function GameScreen({ deck, onComplete }: { deck: TrapDefuserCard[]; onComplete:
       setScorePops(sp => [...sp, { id, text: '+' + pts }]);
       setTimeout(() => setScorePops(sp => sp.filter(s => s.id !== id)), 800);
       setFeedback({ correct: true, card, pts });
-      scheduleNext(2000);
     } else {
       setStreak(0);
       setWrong(w => w + 1);
@@ -203,29 +201,22 @@ function GameScreen({ deck, onComplete }: { deck: TrapDefuserCard[]; onComplete:
       setCardAnim('shake');
       setTimeout(() => setCardAnim(''), 350);
       setFeedback({ correct: false, card, pts: 0 });
-      scheduleNext(3000);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answered, card, timeLeft]);
 
-  const scheduleNext = useCallback((delay: number) => {
-    setTimeout(() => {
-      setIdx(i => {
-        const ni = i + 1;
-        if (ni >= deck.length) {
-          setTimeout(() => {
-            onComplete(score, correct, wrong, maxStreak, missed, topicStats);
-          }, 100);
-          return i;
-        }
-        return ni;
-      });
-      setAnswered(false);
-      setFeedback(null);
-      setCardAnim('enter');
-    }, delay);
+  const nextCard = useCallback(() => {
+    const ni = idx + 1;
+    if (ni >= deck.length) {
+      onComplete(score, correct, wrong, maxStreak, missed, topicStats);
+      return;
+    }
+    setIdx(ni);
+    setAnswered(false);
+    setFeedback(null);
+    setCardAnim('enter');
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [deck.length, onComplete, score, correct, wrong, maxStreak, missed, topicStats]);
+  }, [idx, deck.length, onComplete, score, correct, wrong, maxStreak, missed, topicStats]);
 
   // Touch handlers for swipe
   const onTouchStart = useCallback((e: React.TouchEvent) => {
@@ -375,24 +366,33 @@ function GameScreen({ deck, onComplete }: { deck: TrapDefuserCard[]; onComplete:
 
       {/* Buttons */}
       <div className="w-full max-w-[440px] flex gap-2.5 px-3 pb-2 shrink-0 mx-auto">
-        <button onClick={() => judge(true)}
-                disabled={answered}
-                className={`flex-1 rounded-xl py-4 flex flex-col items-center gap-[3px] cursor-pointer transition-all active:scale-[0.96] ${answered ? 'opacity-40 cursor-default pointer-events-none' : ''}`}
-                style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: '0.1em', color: '#FF4D1A',
-                         background: 'linear-gradient(135deg, #1A0500, #2A0A00)', border: '1.5px solid rgba(255,77,26,.4)' }}>
-          ⚡ TRAP<small className="text-[8px] font-normal not-italic uppercase" style={{ fontFamily: "'JetBrains Mono', monospace", opacity: 0.5 }}>swipe left</small>
-        </button>
-        <button onClick={() => judge(false)}
-                disabled={answered}
-                className={`flex-1 rounded-xl py-4 flex flex-col items-center gap-[3px] cursor-pointer transition-all active:scale-[0.96] ${answered ? 'opacity-40 cursor-default pointer-events-none' : ''}`}
-                style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: '0.1em', color: '#00D97E',
-                         background: 'linear-gradient(135deg, #001A0A, #002A12)', border: '1.5px solid rgba(0,217,126,.4)' }}>
-          ✓ CORRECT<small className="text-[8px] font-normal not-italic uppercase" style={{ fontFamily: "'JetBrains Mono', monospace", opacity: 0.5 }}>swipe right</small>
-        </button>
+        {answered ? (
+          <button onClick={nextCard}
+                  className="flex-1 rounded-xl py-4 cursor-pointer transition-all active:scale-[0.96] hover:-translate-y-0.5"
+                  style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: '0.1em', color: '#050810',
+                           background: 'linear-gradient(135deg, #FF4D1A, #FFB020)', boxShadow: '0 0 24px rgba(255,77,26,.25)' }}>
+            NEXT →
+          </button>
+        ) : (
+          <>
+            <button onClick={() => judge(true)}
+                    className="flex-1 rounded-xl py-4 flex flex-col items-center gap-[3px] cursor-pointer transition-all active:scale-[0.96]"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: '0.1em', color: '#FF4D1A',
+                             background: 'linear-gradient(135deg, #1A0500, #2A0A00)', border: '1.5px solid rgba(255,77,26,.4)' }}>
+              ⚡ TRAP<small className="text-[8px] font-normal not-italic uppercase" style={{ fontFamily: "'JetBrains Mono', monospace", opacity: 0.5 }}>swipe left</small>
+            </button>
+            <button onClick={() => judge(false)}
+                    className="flex-1 rounded-xl py-4 flex flex-col items-center gap-[3px] cursor-pointer transition-all active:scale-[0.96]"
+                    style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: '0.1em', color: '#00D97E',
+                             background: 'linear-gradient(135deg, #001A0A, #002A12)', border: '1.5px solid rgba(0,217,126,.4)' }}>
+              ✓ CORRECT<small className="text-[8px] font-normal not-italic uppercase" style={{ fontFamily: "'JetBrains Mono', monospace", opacity: 0.5 }}>swipe right</small>
+            </button>
+          </>
+        )}
       </div>
 
       <div className="text-[9px] text-center pb-1.5 shrink-0" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#1E3450', letterSpacing: '0.12em' }}>
-        swipe or tap to judge each clinical decision
+        {answered ? 'tap NEXT when ready to continue' : 'swipe or tap to judge each clinical decision'}
       </div>
     </div>
   );
