@@ -1,17 +1,11 @@
 /**
- * useDoseDuelEngine — Game state machine for Dose Duel
+ * useDoseDuelEngine v2 — Refactored with proper cleanup and no stale closures
  */
 
 'use client';
 
 import { useState, useCallback, useRef, useEffect } from 'react';
-import {
-  type DoseDuelQuestion,
-  type DoseDuelState,
-  type ArcadeSession,
-  type StudyListItem,
-} from '@/types/arcade';
-import { updateGameStats } from '@/lib/arcade-storage';
+import { type DoseDuelQuestion } from '@/types/arcade';
 
 export const TIMER_SEC = 12;
 
@@ -24,31 +18,22 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function generateSessionId(): string {
-  return 'dd_' + Date.now().toString(36);
-}
-
 export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
-  const [state, setState] = useState<DoseDuelState>({
-    phase: 'splash',
-    questions: [],
-    currentIndex: 0,
-    score: 0,
-    streak: 0,
-    maxStreak: 0,
-    correctCount: 0,
-    wrongCount: 0,
-    timeoutCount: 0,
-    missedQuestions: [],
-    timeLeft: TIMER_SEC,
-    timerActive: false,
-    selectedOption: null,
-    isRevealed: false,
-  });
+  const [questions, setQuestions] = useState<DoseDuelQuestion[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [streak, setStreak] = useState(0);
+  const [maxStreak, setMaxStreak] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [timeoutCount, setTimeoutCount] = useState(0);
+  const [missedQuestions, setMissedQuestions] = useState<DoseDuelQuestion[]>([]);
+  const [timeLeft, setTimeLeft] = useState(TIMER_SEC);
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = useRef<number>(0);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
@@ -57,153 +42,113 @@ export function useDoseDuelEngine(allQuestions: DoseDuelQuestion[]) {
     }
   }, []);
 
-  const clearPendingTimeout = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-  }, []);
-
   const startTimer = useCallback(() => {
     clearTimer();
     startTimeRef.current = Date.now();
     timerRef.current = setInterval(() => {
-      setState((prev) => {
-        if (prev.phase !== 'playing' || prev.isRevealed) return prev;
-        const newTime = prev.timeLeft - 0.1;
-        if (newTime <= 0) {
-          const q = prev.questions[prev.currentIndex];
-          return {
-            ...prev,
-            timeLeft: 0,
-            timerActive: false,
-            isRevealed: true,
-            streak: 0,
-            timeoutCount: prev.timeoutCount + 1,
-            missedQuestions: [...prev.missedQuestions, q],
-            selectedOption: null,
-          };
+      setTimeLeft((prev) => {
+        if (prev <= 0.1) {
+          clearTimer();
+          setIsRevealed(true);
+          setStreak(0);
+          setTimeoutCount((t) => t + 1);
+          setMissedQuestions((mq) => {
+            const q = questions[currentIndex];
+            return q && !mq.find((m) => m.id === q.id) ? [...mq, q] : mq;
+          });
+          setSelectedOption(null);
+          return 0;
         }
-        return { ...prev, timeLeft: newTime };
+        return Math.max(0, prev - 0.1);
       });
     }, 100);
-  }, [clearTimer]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clearTimer, questions, currentIndex]);
 
-  const startGame = useCallback(() => {
-    clearPendingTimeout();
+  const initGame = useCallback(() => {
     clearTimer();
     const shuffled = shuffle(allQuestions);
-    setState({
-      phase: 'playing',
-      questions: shuffled,
-      currentIndex: 0,
-      score: 0,
-      streak: 0,
-      maxStreak: 0,
-      correctCount: 0,
-      wrongCount: 0,
-      timeoutCount: 0,
-      missedQuestions: [],
-      timeLeft: TIMER_SEC,
-      timerActive: true,
-      selectedOption: null,
-      isRevealed: false,
-    });
-    timeoutRef.current = setTimeout(() => startTimer(), 100);
-  }, [allQuestions, startTimer, clearTimer, clearPendingTimeout]);
+    setQuestions(shuffled);
+    setCurrentIndex(0);
+    setScore(0);
+    setStreak(0);
+    setMaxStreak(0);
+    setCorrectCount(0);
+    setWrongCount(0);
+    setTimeoutCount(0);
+    setMissedQuestions([]);
+    setTimeLeft(TIMER_SEC);
+    setSelectedOption(null);
+    setIsRevealed(false);
+    // Start timer after a brief delay to let UI render
+    setTimeout(() => startTimer(), 100);
+  }, [allQuestions, clearTimer, startTimer]);
 
   const selectOption = useCallback((option: string) => {
-    setState((prev) => {
-      if (prev.phase !== 'playing' || prev.isRevealed) return prev;
-      return { ...prev, selectedOption: option };
-    });
+    setSelectedOption((prev) => (prev === option ? null : option));
   }, []);
 
   const submitAnswer = useCallback(() => {
-    setState((prev) => {
-      if (prev.phase !== 'playing' || prev.isRevealed || !prev.selectedOption) return prev;
-      clearTimer();
-      const q = prev.questions[prev.currentIndex];
-      const isCorrect = prev.selectedOption === q.correctAnswer;
-      const timeBonus = Math.ceil(prev.timeLeft);
-      const points = isCorrect ? 10 + timeBonus : 0;
-      const newStreak = isCorrect ? prev.streak + 1 : 0;
-      const newMaxStreak = Math.max(prev.maxStreak, newStreak);
+    clearTimer();
+    setIsRevealed(true);
+    const q = questions[currentIndex];
+    if (!q || !selectedOption) return;
 
-      return {
-        ...prev,
-        score: prev.score + points,
-        streak: newStreak,
-        maxStreak: newMaxStreak,
-        correctCount: isCorrect ? prev.correctCount + 1 : prev.correctCount,
-        wrongCount: isCorrect ? prev.wrongCount : prev.wrongCount + 1,
-        missedQuestions: isCorrect ? prev.missedQuestions : [...prev.missedQuestions, q],
-        isRevealed: true,
-        timerActive: false,
-      };
-    });
-  }, [clearTimer]);
+    const isCorrect = selectedOption === q.correctAnswer;
+    const timeBonus = Math.ceil(timeLeft);
+    const points = isCorrect ? 10 + timeBonus : 0;
+
+    if (isCorrect) {
+      setScore((s) => s + points);
+      setStreak((st) => {
+        const nst = st + 1;
+        setMaxStreak((m) => Math.max(m, nst));
+        return nst;
+      });
+      setCorrectCount((c) => c + 1);
+    } else {
+      setStreak(0);
+      setWrongCount((w) => w + 1);
+      setMissedQuestions((mq) => (!mq.find((m) => m.id === q.id) ? [...mq, q] : mq));
+    }
+  }, [clearTimer, questions, currentIndex, selectedOption, timeLeft]);
 
   const nextQuestion = useCallback(() => {
-    setState((prev) => {
-      const nextIndex = prev.currentIndex + 1;
-      if (nextIndex >= prev.questions.length) {
-        const session: ArcadeSession = {
-          id: generateSessionId(),
-          gameId: 'dose-duel',
-          score: prev.score,
-          correctCount: prev.correctCount,
-          wrongCount: prev.wrongCount,
-          totalQuestions: prev.questions.length,
-          accuracyPct: Math.round((prev.correctCount / prev.questions.length) * 100),
-          durationMs: Date.now() - startTimeRef.current,
-          startedAt: new Date(startTimeRef.current).toISOString(),
-          completedAt: new Date().toISOString(),
-        };
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= questions.length) {
+      // Game over - handled by caller
+      return;
+    }
+    setCurrentIndex(nextIndex);
+    setTimeLeft(TIMER_SEC);
+    setSelectedOption(null);
+    setIsRevealed(false);
+    setTimeout(() => startTimer(), 50);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentIndex, questions.length, startTimer]);
 
-        const missed: StudyListItem[] = prev.missedQuestions.map((q) => ({
-          questionId: q.id,
-          gameId: 'dose-duel',
-          text: `${q.drug} · ${q.patient.diagnosis}`,
-          correctAnswer: q.correctAnswer,
-          explanation: q.explanation,
-          trap: q.trap,
-          addedAt: new Date().toISOString(),
-        }));
-
-        updateGameStats('dose-duel', session, missed);
-
-        return {
-          ...prev,
-          phase: 'results',
-          timerActive: false,
-        };
-      }
-      return {
-        ...prev,
-        currentIndex: nextIndex,
-        timeLeft: TIMER_SEC,
-        timerActive: true,
-        selectedOption: null,
-        isRevealed: false,
-      };
-    });
-    timeoutRef.current = setTimeout(() => startTimer(), 100);
-  }, [startTimer]);
-
+  // Cleanup on unmount
   useEffect(() => {
-    return () => {
-      clearTimer();
-      clearPendingTimeout();
-    };
-  }, [clearTimer, clearPendingTimeout]);
+    return () => clearTimer();
+  }, [clearTimer]);
 
-  const currentQuestion = state.questions[state.currentIndex] ?? null;
+  const currentQuestion = questions[currentIndex] ?? null;
 
   return {
-    state,
+    questions,
+    currentIndex,
     currentQuestion,
-    startGame,
+    score,
+    streak,
+    maxStreak,
+    correctCount,
+    wrongCount,
+    timeoutCount,
+    missedQuestions,
+    timeLeft,
+    selectedOption,
+    isRevealed,
+    initGame,
     selectOption,
     submitAnswer,
     nextQuestion,

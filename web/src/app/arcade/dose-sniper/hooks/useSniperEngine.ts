@@ -1,18 +1,13 @@
 /**
- * useSniperEngine — Falling-card game engine for Dose Sniper
- * Uses requestAnimationFrame with ref-based DOM updates for 60fps.
+ * useSniperEngine v2 — Refactored falling-card game engine
+ * Uses refs + direct DOM for 60fps. No React state for card positions.
+ * Session management (phases, score, stats) handled by useArcadeSession.
  */
 
 'use client';
 
 import { useState, useCallback, useRef, useEffect } from 'react';
-import {
-  type SniperQuestion,
-  type SniperPhase,
-  type ArcadeSession,
-  type StudyListItem,
-} from '@/types/arcade';
-import { updateGameStats } from '@/lib/arcade-storage';
+import { type SniperQuestion } from '@/types/arcade';
 
 export const BASE_SPEED = 72;
 export const MAX_SPEED = 280;
@@ -29,10 +24,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function generateSessionId(): string {
-  return 'sn_' + Date.now().toString(36);
-}
-
 interface CardRef {
   id: string;
   text: string;
@@ -44,48 +35,31 @@ interface CardRef {
   rotBase: number;
   alive: boolean;
   el: HTMLDivElement | null;
+  laneIndex: number;
 }
 
 export function useSniperEngine(allQuestions: SniperQuestion[]) {
-  const [phase, setPhase] = useState<SniperPhase>('splash');
   const [questions, setQuestions] = useState<SniperQuestion[]>([]);
   const [currentRound, setCurrentRound] = useState(0);
-  const [score, setScore] = useState(0);
   const [combo, setCombo] = useState(0);
   const [maxCombo, setMaxCombo] = useState(0);
-  const [hits, setHits] = useState(0);
-  const [misses, setMisses] = useState(0);
   const [speed, setSpeed] = useState(BASE_SPEED);
-  const [answered, setAnswered] = useState(false);
-  const [feedback, setFeedback] = useState<{type:'ok'|'bad'|'tmout', q:SniperQuestion} | null>(null);
-  const [missedQuestions, setMissedQuestions] = useState<SniperQuestion[]>([]);
-  const [countdown, setCountdown] = useState(3);
+  const [feedback, setFeedback] = useState<{ type: 'ok' | 'bad' | 'tmout'; q: SniperQuestion } | null>(null);
 
   const cardsRef = useRef<CardRef[]>([]);
   const animIdRef = useRef<number | null>(null);
   const lastTimeRef = useRef(0);
   const zoneRef = useRef<HTMLDivElement | null>(null);
-  const missedRef = useRef<SniperQuestion[]>([]);
-  const startTimeRef = useRef(0);
-  const countdownIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const countdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const answeredRef = useRef(false);
+  const speedRef = useRef(BASE_SPEED);
+  const comboRef = useRef(0);
   const loadRoundTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const resizeHandlerRef = useRef<(() => void) | null>(null);
 
   const stopLoop = useCallback(() => {
     if (animIdRef.current) {
       cancelAnimationFrame(animIdRef.current);
       animIdRef.current = null;
-    }
-  }, []);
-
-  const clearCountdown = useCallback(() => {
-    if (countdownIntervalRef.current) {
-      clearInterval(countdownIntervalRef.current);
-      countdownIntervalRef.current = null;
-    }
-    if (countdownTimeoutRef.current) {
-      clearTimeout(countdownTimeoutRef.current);
-      countdownTimeoutRef.current = null;
     }
   }, []);
 
@@ -99,159 +73,192 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
 
   const computeCardWidth = useCallback(() => {
     const zw = zoneRef.current?.offsetWidth ?? 360;
-    return Math.min(Math.max(Math.floor(zw * 0.27), 120), 162);
+    return Math.min(Math.max(Math.floor(zw * 0.27), 90), 150);
   }, []);
 
-  const onHit = useCallback((card: CardRef) => {
-    if (answered || !card.alive) return;
-    setAnswered(true);
-    stopLoop();
-    const q = questions[currentRound];
-    if (!q) return;
+  const onHit = useCallback(
+    (card: CardRef) => {
+      if (answeredRef.current || !card.alive) return;
+      answeredRef.current = true;
+      stopLoop();
+      const q = questions[currentRound];
+      if (!q) return;
 
-    if (card.isOk) {
-      if (card.el) {
-        card.el.style.transform = '';
-        card.el.classList.add('hit-ok');
-      }
-      const mult = CMULT[Math.min(combo, CMULT.length - 1)];
-      const pts = Math.round(100 * mult);
-      setScore((s) => s + pts);
-      setCombo((c) => {
-        const nc = c + 1;
-        setMaxCombo((m) => Math.max(m, nc));
-        return nc;
-      });
-      setHits((h) => h + 1);
-      setSpeed((s) => Math.min(MAX_SPEED, s + SPEED_INC));
-      setFeedback({ type: 'ok', q });
-    } else {
-      if (card.el) {
-        card.el.style.transform = '';
-        card.el.classList.add('hit-bad');
-      }
-      cardsRef.current.forEach((c) => {
-        if (c.isOk && c.el) {
-          c.el.style.transform = '';
-          c.el.classList.add('reveal');
+      if (card.isOk) {
+        if (card.el) {
+          card.el.style.transform = '';
+          card.el.classList.add('hit-ok');
         }
-      });
-      setCombo(0);
-      setMisses((m) => m + 1);
-      missedRef.current.push(q);
-      setMissedQuestions((prev) => [...prev, q]);
-      setFeedback({ type: 'bad', q });
-    }
-  }, [answered, questions, currentRound, combo, stopLoop]);
+        const mult = CMULT[Math.min(comboRef.current, CMULT.length - 1)];
+        const pts = Math.round(100 * mult);
+        setCombo((c) => {
+          const nc = c + 1;
+          comboRef.current = nc;
+          setMaxCombo((m) => Math.max(m, nc));
+          return nc;
+        });
+        setSpeed((s) => {
+          const ns = Math.min(MAX_SPEED, s + SPEED_INC);
+          speedRef.current = ns;
+          return ns;
+        });
+        setFeedback({ type: 'ok', q });
+      } else {
+        if (card.el) {
+          card.el.style.transform = '';
+          card.el.classList.add('hit-bad');
+        }
+        cardsRef.current.forEach((c) => {
+          if (c.isOk && c.el) {
+            c.el.style.transform = '';
+            c.el.classList.add('reveal');
+          }
+        });
+        setCombo(0);
+        comboRef.current = 0;
+        setFeedback({ type: 'bad', q });
+      }
+    },
+    [questions, currentRound, stopLoop]
+  );
 
-  const makeCards = useCallback((q: SniperQuestion) => {
-    const zone = zoneRef.current;
-    if (!zone) return;
-    purgeCards();
+  const makeCards = useCallback(
+    (q: SniperQuestion) => {
+      const zone = zoneRef.current;
+      if (!zone) return;
+      purgeCards();
 
-    const zw = zone.offsetWidth;
-    const cw = computeCardWidth();
-    const opts = shuffle([q.correctAnswer, ...q.wrongAnswers]);
-    const laneOrder = shuffle([0, 1, 2]);
-    const icons = ['💊', '🔬', '⚗️'];
+      const zw = zone.offsetWidth;
+      const cw = computeCardWidth();
+      const opts = shuffle([q.correctAnswer, ...q.wrongAnswers]);
+      const laneOrder = shuffle([0, 1, 2]);
+      const icons = ['💊', '🔬', '⚗️'];
 
-    const newCards: CardRef[] = [];
-    opts.forEach((dose, i) => {
-      const ln = laneOrder[i];
-      const isOk = dose === q.correctAnswer;
-      const baseX = Math.round(LANES[ln] * zw - cw / 2);
-      const spVar = 0.80 + ln * 0.13 + (Math.random() - 0.5) * 0.06;
-      const card: CardRef = {
-        id: `card_${i}`,
-        text: dose,
-        isOk,
-        x: baseX,
-        y: -(60 + ln * 22),
-        speed: speed * spVar,
-        phase: Math.random() * Math.PI * 2,
-        rotBase: (Math.random() - 0.5) * 3.5,
-        alive: true,
-        el: null,
-      };
+      const newCards: CardRef[] = [];
+      opts.forEach((dose, i) => {
+        const ln = laneOrder[i];
+        const isOk = dose === q.correctAnswer;
+        const baseX = Math.round(LANES[ln] * zw - cw / 2);
+        const spVar = 0.8 + ln * 0.13 + (Math.random() - 0.5) * 0.06;
+        const card: CardRef = {
+          id: `card_${i}`,
+          text: dose,
+          isOk,
+          x: baseX,
+          y: -(60 + ln * 22),
+          speed: speedRef.current * spVar,
+          phase: Math.random() * Math.PI * 2,
+          rotBase: (Math.random() - 0.5) * 3.5,
+          alive: true,
+          el: null,
+          laneIndex: ln,
+        };
 
-      const el = document.createElement('div');
-      el.className = 'dose-card';
-      el.style.cssText = `width:${cw}px;left:${baseX}px;`;
-      el.setAttribute('role', 'button');
-      el.setAttribute('tabIndex', '0');
-      el.innerHTML = `<div style="position:absolute;top:7px;right:9px;font-size:14px;opacity:0.3">${icons[i]}</div><div style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;color:#D8E8F8;line-height:1.2">${dose}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#1E3A5A;text-transform:uppercase;letter-spacing:0.06em">tap if correct</div>`;
-      const hitHandler = () => onHit(card);
-      const keyHandler = (e: KeyboardEvent) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        const el = document.createElement('div');
+        el.className = 'dose-card';
+        el.style.cssText = `width:${cw}px;left:${baseX}px;`;
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabIndex', '0');
+        el.setAttribute('aria-label', `Dose option: ${dose}`);
+        el.innerHTML = `<div style="position:absolute;top:7px;right:9px;font-size:14px;opacity:0.3">${icons[i]}</div><div style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:clamp(11px,3.2vw,14px);color:#D8E8F8;line-height:1.2">${dose}</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:#1E3A5A;text-transform:uppercase;letter-spacing:0.06em">tap if correct</div>`;
+
+        const hitHandler = () => onHit(card);
+        const keyHandler = (e: KeyboardEvent) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            hitHandler();
+          }
+        };
+        el.addEventListener('click', hitHandler);
+        el.addEventListener('touchend', (e) => {
           e.preventDefault();
           hitHandler();
-        }
+        }, { passive: false });
+        el.addEventListener('keydown', keyHandler);
+        zone.appendChild(el);
+        card.el = el;
+        newCards.push(card);
+      });
+
+      cardsRef.current = newCards;
+
+      // Setup resize handler for this round
+      if (resizeHandlerRef.current) {
+        window.removeEventListener('resize', resizeHandlerRef.current);
+      }
+      resizeHandlerRef.current = () => {
+        const newZw = zone.offsetWidth;
+        const newCw = computeCardWidth();
+        cardsRef.current.forEach((c) => {
+          if (!c.alive || !c.el) return;
+          c.x = Math.round(LANES[c.laneIndex] * newZw - newCw / 2);
+          c.el.style.left = c.x + 'px';
+          c.el.style.width = newCw + 'px';
+        });
       };
-      el.addEventListener('click', hitHandler);
-      el.addEventListener('touchend', (e) => { e.preventDefault(); hitHandler(); }, { passive: false });
-      el.addEventListener('keydown', keyHandler);
-      zone.appendChild(el);
-      card.el = el;
-      newCards.push(card);
-    });
+      window.addEventListener('resize', resizeHandlerRef.current);
+    },
+    [computeCardWidth, onHit, purgeCards]
+  );
 
-    cardsRef.current = newCards;
-  }, [speed, computeCardWidth, onHit, purgeCards]);
+  const loop = useCallback(
+    (ts: number) => {
+      const dt = Math.min((ts - lastTimeRef.current) / 1000, 0.05);
+      lastTimeRef.current = ts;
+      const zone = zoneRef.current;
+      if (!zone) return;
+      const zh = zone.offsetHeight;
+      const t = ts / 1000;
+      let anyFloor = false;
 
-  const loop = useCallback((ts: number) => {
-    const dt = Math.min((ts - lastTimeRef.current) / 1000, 0.05);
-    lastTimeRef.current = ts;
-    const zone = zoneRef.current;
-    if (!zone) return;
-    const zh = zone.offsetHeight;
-    const t = ts / 1000;
-    let anyFloor = false;
-
-    cardsRef.current.forEach((c) => {
-      if (!c.alive) return;
-      c.y += c.speed * dt;
-      const drift = Math.sin(t * 0.75 + c.phase) * 4.5;
-      const rot = c.rotBase + Math.sin(t * 0.4 + c.phase) * 1.1;
-      if (c.el) {
-        c.el.style.left = c.x + 'px';
-        c.el.style.transform = `translateY(${c.y}px) translateX(${drift}px) rotate(${rot}deg)`;
-        const pct = c.y / zh;
-        if (pct > 0.68) {
-          c.el.classList.add('danger');
-        } else {
-          c.el.classList.remove('danger');
+      cardsRef.current.forEach((c) => {
+        if (!c.alive) return;
+        c.y += c.speed * dt;
+        const drift = Math.sin(t * 0.75 + c.phase) * 4.5;
+        const rot = c.rotBase + Math.sin(t * 0.4 + c.phase) * 1.1;
+        if (c.el) {
+          c.el.style.left = c.x + 'px';
+          c.el.style.transform = `translateY(${c.y}px) translateX(${drift}px) rotate(${rot}deg)`;
+          const pct = c.y / zh;
+          if (pct > 0.68) {
+            c.el.classList.add('danger');
+          } else {
+            c.el.classList.remove('danger');
+          }
         }
-      }
-      if (c.y > zh + 5) { c.alive = false; if (c.el) c.el.style.opacity = '0'; }
-      if (c.isOk && c.y > zh + 5) anyFloor = true;
-    });
+        if (c.y > zh + 5) {
+          c.alive = false;
+          if (c.el) c.el.style.opacity = '0';
+        }
+        if (c.isOk && c.y > zh + 5) anyFloor = true;
+      });
 
-    if (!answered && anyFloor) {
-      setAnswered(true);
-      setCombo(0);
-      setMisses((m) => m + 1);
-      const q = questions[currentRound];
-      if (q) {
-        missedRef.current.push(q);
-        setMissedQuestions((prev) => [...prev, q]);
-        setFeedback({ type: 'tmout', q });
+      if (!answeredRef.current && anyFloor) {
+        answeredRef.current = true;
+        setCombo(0);
+        comboRef.current = 0;
+        const q = questions[currentRound];
+        if (q) {
+          setFeedback({ type: 'tmout', q });
+        }
+        stopLoop();
+        return;
       }
-      stopLoop();
-      return;
-    }
-    if (!answered) {
-      animIdRef.current = requestAnimationFrame(loop);
-    }
-  }, [answered, questions, currentRound, stopLoop]);
+      if (!answeredRef.current) {
+        animIdRef.current = requestAnimationFrame(loop);
+      }
+    },
+    [questions, currentRound, stopLoop]
+  );
 
   const startLoop = useCallback(() => {
-    if (animIdRef.current) return; // guard against concurrent loops
+    if (animIdRef.current) return;
     lastTimeRef.current = performance.now();
     animIdRef.current = requestAnimationFrame(loop);
   }, [loop]);
 
   const loadRound = useCallback(() => {
-    setAnswered(false);
+    answeredRef.current = false;
     setFeedback(null);
     const q = questions[currentRound];
     if (!q) return;
@@ -264,113 +271,56 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
 
   const nextRound = useCallback(() => {
     setFeedback(null);
-    const next = currentRound + 1;
-    if (next >= questions.length) {
-      // Game over
-      const session: ArcadeSession = {
-        id: generateSessionId(),
-        gameId: 'dose-sniper',
-        score,
-        correctCount: hits,
-        wrongCount: misses,
-        totalQuestions: questions.length,
-        accuracyPct: Math.round((hits / questions.length) * 100),
-        durationMs: Date.now() - startTimeRef.current,
-        startedAt: new Date(startTimeRef.current).toISOString(),
-        completedAt: new Date().toISOString(),
-      };
-      const missed: StudyListItem[] = missedRef.current.map((q) => ({
-        questionId: q.id,
-        gameId: 'dose-sniper',
-        text: `${q.drug} · ${q.context}`,
-        correctAnswer: q.correctAnswer,
-        explanation: q.explanation,
-        trap: q.trap,
-        addedAt: new Date().toISOString(),
-      }));
-      updateGameStats('dose-sniper', session, missed);
-      setPhase('results');
-      return;
-    }
-    setCurrentRound(next);
-  }, [currentRound, questions.length, score, hits, misses]);
+    setCurrentRound((prev) => prev + 1);
+  }, []);
 
-  // Load round when currentRound changes
-  useEffect(() => {
-    if (phase === 'playing') {
-      loadRound();
-    }
-    return () => stopLoop();
-  }, [currentRound, phase, loadRound, stopLoop]);
-
-  const startCountdown = useCallback(() => {
-    clearCountdown();
-    setPhase('countdown');
-    setCountdown(3);
-    let v = 3;
-    countdownIntervalRef.current = setInterval(() => {
-      v--;
-      if (v <= 0) {
-        clearInterval(countdownIntervalRef.current!);
-        countdownIntervalRef.current = null;
-        setCountdown(0);
-        countdownTimeoutRef.current = setTimeout(() => {
-          setPhase('playing');
-          startTimeRef.current = Date.now();
-        }, 450);
-      } else {
-        setCountdown(v);
-      }
-    }, 800);
-  }, [clearCountdown]);
-
-  const startGame = useCallback(() => {
-    clearCountdown();
-    stopLoop();
-    purgeCards();
+  const initGame = useCallback(() => {
     const shuffled = shuffle(allQuestions);
     setQuestions(shuffled);
     setCurrentRound(0);
-    setScore(0);
     setCombo(0);
     setMaxCombo(0);
-    setHits(0);
-    setMisses(0);
     setSpeed(BASE_SPEED);
-    setAnswered(false);
+    speedRef.current = BASE_SPEED;
+    comboRef.current = 0;
+    answeredRef.current = false;
     setFeedback(null);
-    setMissedQuestions([]);
-    missedRef.current = [];
-    startCountdown();
-  }, [allQuestions, startCountdown, clearCountdown, stopLoop, purgeCards]);
+  }, [allQuestions]);
 
+  // Load round when currentRound changes
+  useEffect(() => {
+    if (questions.length > 0) {
+      loadRound();
+    }
+    return () => stopLoop();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentRound, questions.length]);
+
+  // Cleanup
   useEffect(() => {
     return () => {
       stopLoop();
-      clearCountdown();
       purgeCards();
       if (loadRoundTimeoutRef.current) clearTimeout(loadRoundTimeoutRef.current);
+      if (resizeHandlerRef.current) {
+        window.removeEventListener('resize', resizeHandlerRef.current);
+      }
     };
-  }, [stopLoop, clearCountdown, purgeCards]);
+  }, [stopLoop, purgeCards]);
+
+  const q = questions[currentRound] ?? null;
 
   return {
-    phase,
     questions,
     currentRound,
-    score,
+    q,
     combo,
     maxCombo,
-    hits,
-    misses,
     speed,
-    answered,
     feedback,
-    countdown,
-    missedQuestions,
     zoneRef,
-    cardsRef,
-    onHit,
-    startGame,
+    initGame,
     nextRound,
+    loadRound,
   };
 }

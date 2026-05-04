@@ -340,6 +340,19 @@ body[data-arcade-active] {
   border-radius: 2px;
 }
 
+/* ─── Touch Action ────────────────────────────────────────────────────────── */
+
+body[data-arcade-active] {
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+body[data-arcade-active] button,
+body[data-arcade-active] [role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ─── Screen Transitions ──────────────────────────────────────────────────── */
 
 .arcade-screen {
@@ -351,6 +364,7 @@ body[data-arcade-active] {
   justify-content: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .arcade-screen.hidden {
@@ -364,6 +378,11 @@ body[data-arcade-active] {
   pointer-events: none;
   transform: translateY(16px);
   overflow: hidden;
+}
+
+/* Game screens that need flex-start (like gameplay with HUD) */
+.arcade-screen.game-layout {
+  justify-content: flex-start;
 }
 
 /* Reduced motion support */

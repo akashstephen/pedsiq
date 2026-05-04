@@ -1,30 +1,23 @@
 /**
- * Dose Duel Page — Full animations version
+ * Dose Duel Page v2 — Refactored with CSS screen transitions + imperative effects
  */
 
 'use client';
 
-import React, { useMemo, useRef, useEffect } from 'react';
+import React, { useMemo, useEffect, useCallback } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
+import { ArcadeScreen } from '@/components/ArcadeScreen';
+import { useArcadeSession } from '@/hooks/useArcadeSession';
 import { useDoseDuelEngine, TIMER_SEC } from './hooks/useDoseDuelEngine';
 import questionsData from './data/questions.json';
 import { type DoseDuelQuestion } from '@/types/arcade';
 import { getGameStats } from '@/lib/arcade-storage';
+import { updateGameStats } from '@/lib/arcade-storage';
 import { GoogleFontsLoader } from '@/components/GoogleFontsLoader';
-import { FlashOverlay } from '@/components/ArcadeEffects';
+import { useArcadeEffects } from '@/lib/arcade-effects';
 import { Gamepad2, Zap, Target, Trophy } from 'lucide-react';
 
 const allQuestions = questionsData as DoseDuelQuestion[];
-
-// ─── Flash Overlay State ─────────────────────────────────────────────────────
-
-function useFlash() {
-  const [flash, setFlash] = React.useState<{color:'green'|'red'|'amber',key:number}|null>(null);
-  const trigger = React.useCallback((color:'green'|'red'|'amber') => {
-    setFlash({ color, key: Date.now() });
-  }, []);
-  return { flash, trigger };
-}
 
 // ─── Splash ──────────────────────────────────────────────────────────────────
 
@@ -82,57 +75,49 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
 
 // ─── Game ────────────────────────────────────────────────────────────────────
 
-function GameScreen({
-  state,
-  currentQuestion,
-  onSelect,
-  onSubmit,
-  onNext,
-  flash,
-}: {
-  state: ReturnType<typeof useDoseDuelEngine>['state'];
-  currentQuestion: DoseDuelQuestion | null;
-  onSelect: (opt: string) => void;
-  onSubmit: () => void;
-  onNext: () => void;
-  flash: ReturnType<typeof useFlash>;
-}) {
-  if (!currentQuestion) return null;
-
-  const timerPct = Math.max(0, (state.timeLeft / TIMER_SEC) * 100);
+function GameScreen({ engine, session }: { engine: ReturnType<typeof useDoseDuelEngine>; session: ReturnType<typeof useArcadeSession> }) {
+  const q = engine.currentQuestion;
+  const timerPct = Math.max(0, (engine.timeLeft / TIMER_SEC) * 100);
   const timerColor = timerPct < 30 ? 'linear-gradient(90deg, #EF4444, #F59E0B)' : 'linear-gradient(90deg, #22D3EE, #818CF8)';
-  const q = currentQuestion;
-
-  const prevRevealedRef = useRef(false);
+  const effects = useArcadeEffects();
 
   useEffect(() => {
-    if (state.isRevealed && !prevRevealedRef.current) {
-      if (state.selectedOption === null) {
-        flash.trigger('amber');
+    if (engine.isRevealed) {
+      if (engine.selectedOption === null) {
+        effects.flash('amber');
+      } else if (engine.selectedOption === q?.correctAnswer) {
+        effects.flash('green');
+      } else {
+        effects.flash('red');
       }
     }
-    prevRevealedRef.current = state.isRevealed;
-  }, [state.isRevealed, state.selectedOption, flash]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.isRevealed]);
 
-  const handleSelect = (opt: string) => {
-    if (state.isRevealed) return;
-    onSelect(opt);
-  };
-
-  const handleSubmit = () => {
-    onSubmit();
-    if (state.selectedOption === q.correctAnswer) {
-      flash.trigger('green');
-    } else {
-      flash.trigger('red');
+  // Update session stats when revealed
+  useEffect(() => {
+    if (engine.isRevealed) {
+      if (engine.selectedOption === q?.correctAnswer) {
+        const timeBonus = Math.ceil(engine.timeLeft);
+        const points = 10 + timeBonus;
+        session.setScore(engine.score + points);
+        session.setCorrectCount(engine.correctCount);
+        session.setWrongCount(engine.wrongCount);
+      } else {
+        session.setScore(engine.score);
+        session.setCorrectCount(engine.correctCount);
+        session.setWrongCount(engine.wrongCount);
+      }
     }
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.isRevealed]);
 
-  // Determine feedback type
-  const feedbackType = state.isRevealed
-    ? state.selectedOption === q.correctAnswer
+  if (!q) return null;
+
+  const feedbackType = engine.isRevealed
+    ? engine.selectedOption === q.correctAnswer
       ? 'correct'
-      : state.selectedOption === null
+      : engine.selectedOption === null
       ? 'timeout'
       : 'wrong'
     : null;
@@ -140,20 +125,17 @@ function GameScreen({
   return (
     <div className="flex flex-col h-full w-full max-w-[560px] mx-auto px-3 sm:px-4 py-3 sm:py-4 overflow-y-auto"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
-      {/* Flash overlay */}
-      {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
-
       {/* HUD */}
       <div className="flex items-center justify-between mb-3">
         <div>
-          <div className="text-xl font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>{state.score}</div>
+          <div className="text-xl font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.score}</div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Score</div>
         </div>
         <div className="text-center text-xs text-[#475569]" style={{fontFamily:"'Space Mono',monospace"}}>
-          Q {state.currentIndex + 1} / {state.questions.length}
+          Q {engine.currentIndex + 1} / {engine.questions.length}
         </div>
         <div className="text-right">
-          <div className="text-lg font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{state.streak}🔥</div>
+          <div className="text-lg font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.streak}🔥</div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Streak</div>
         </div>
       </div>
@@ -165,18 +147,18 @@ function GameScreen({
       </div>
 
       {/* Patient Card */}
-      <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-4 mb-3 grid grid-cols-2 gap-2">
+      <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-4 mb-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
         <div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Age</div>
           <div className="text-sm font-medium">{q.patient.age}</div>
         </div>
-        <div className="text-right">
+        <div className="text-left sm:text-right">
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Weight</div>
           <div className="text-lg font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>
             {q.patient.weightKg} <span className="text-xs text-[#475569] font-normal" style={{fontFamily:"'DM Sans',sans-serif"}}>kg</span>
           </div>
         </div>
-        <div className="col-span-2 bg-[#1D2847] rounded-lg p-3 mt-1">
+        <div className="col-span-1 sm:col-span-2 bg-[#1D2847] rounded-lg p-3 mt-1">
           <div className="text-[10px] tracking-wider text-[#475569] uppercase mb-1">Clinical Context</div>
           <div className="text-sm leading-relaxed">{q.patient.diagnosis}</div>
         </div>
@@ -192,35 +174,26 @@ function GameScreen({
       {/* Options */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
         {q.options.map((opt) => {
-          const isSelected = state.selectedOption === opt;
+          const isSelected = engine.selectedOption === opt;
           const isCorrect = opt === q.correctAnswer;
-          const showCorrect = state.isRevealed && isCorrect;
-          const showWrong = state.isRevealed && isSelected && !isCorrect;
+          const showCorrect = engine.isRevealed && isCorrect;
+          const showWrong = engine.isRevealed && isSelected && !isCorrect;
 
           return (
             <button
               key={opt}
-              onClick={() => handleSelect(opt)}
-              disabled={state.isRevealed}
-              className={`rounded-xl p-3 text-center text-xs font-bold cursor-pointer min-h-[56px] flex items-center justify-center leading-tight
+              onClick={() => { if (!engine.isRevealed) engine.selectOption(opt); }}
+              disabled={engine.isRevealed}
+              className={`rounded-xl p-3 text-center text-xs font-bold cursor-pointer min-h-[56px] flex items-center justify-center leading-tight transition-all
                 ${showCorrect ? 'bg-[#052E16] border border-[#10B981] text-[#10B981] shadow-[0_0_16px_rgba(16,185,129,0.2)]' : ''}
                 ${showWrong ? 'bg-[#2A0A0A] border border-[#EF4444] text-[#EF4444]' : ''}
-                ${!state.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
-                ${!state.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F]' : ''}
-                ${state.isRevealed && !isSelected && !isCorrect ? 'bg-[#161E35] border border-[#2D4A6E] text-[#475569] opacity-60' : ''}
+                ${!engine.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
+                ${!engine.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F] hover:-translate-y-px' : ''}
+                ${engine.isRevealed && !isSelected && !isCorrect ? 'bg-[#161E35] border border-[#2D4A6E] text-[#475569] opacity-60' : ''}
               `}
               style={{
                 fontFamily: "'Space Mono', monospace",
                 animation: showWrong ? 'dd-shake 0.3s ease' : undefined,
-                transition: 'all 0.15s',
-              }}
-              onMouseEnter={(e) => {
-                if (!state.isRevealed && !isSelected) {
-                  (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.transform = '';
               }}
             >
               {opt}
@@ -241,7 +214,7 @@ function GameScreen({
               feedbackType === 'timeout' ? 'text-[#F59E0B]' :
               'text-[#EF4444]'}`}>
             {feedbackType === 'correct'
-              ? `✓ CORRECT +${10 + Math.ceil(state.timeLeft)} pts`
+              ? `✓ CORRECT +${10 + Math.ceil(engine.timeLeft)} pts`
               : feedbackType === 'timeout'
               ? `⏱ TIME'S UP · Answer: ${q.correctAnswer}`
               : `✗ WRONG · Correct: ${q.correctAnswer}`}
@@ -256,21 +229,21 @@ function GameScreen({
       )}
 
       {/* Action Button */}
-      {!state.isRevealed ? (
+      {!engine.isRevealed ? (
         <button
-          onClick={handleSubmit}
-          disabled={!state.selectedOption}
+          onClick={engine.submitAnswer}
+          disabled={!engine.selectedOption}
           className={`w-full py-3 rounded-xl font-semibold transition-all
-            ${state.selectedOption ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90' : 'bg-white/[0.06] text-white/30 cursor-not-allowed'}`}
+            ${engine.selectedOption ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90' : 'bg-white/[0.06] text-white/30 cursor-not-allowed'}`}
         >
           Submit Answer
         </button>
       ) : (
         <button
-          onClick={onNext}
+          onClick={engine.nextQuestion}
           className="w-full py-3 rounded-xl font-semibold bg-[#007AFF] text-white hover:bg-[#007AFF]/90 transition-all"
         >
-          {state.currentIndex + 1 >= state.questions.length ? 'See Results' : 'Next Question'}
+          {engine.currentIndex + 1 >= engine.questions.length ? 'See Results' : 'Next Question'}
         </button>
       )}
     </div>
@@ -279,9 +252,9 @@ function GameScreen({
 
 // ─── Results ─────────────────────────────────────────────────────────────────
 
-function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseDuelEngine>['state']; onRestart: () => void }) {
-  const total = state.questions.length;
-  const pct = Math.round((state.correctCount / total) * 100);
+function ResultsScreen({ engine, onRestart }: { engine: ReturnType<typeof useDoseDuelEngine>; onRestart: () => void }) {
+  const total = engine.questions.length;
+  const pct = Math.round((engine.correctCount / total) * 100);
   let grade = 'INTERN';
   let gradeColor = '#EF4444';
   let title = 'REVISE & RETRY';
@@ -296,7 +269,7 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
       <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{fontFamily:"'Space Mono',monospace"}}>{title}</h2>
       <div className="text-[clamp(48px,14vw,72px)] font-bold mb-1 leading-none"
            style={{ fontFamily: "'Space Mono', monospace", background: 'linear-gradient(135deg, #22D3EE, #818CF8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-        {state.score}
+        {engine.score}
       </div>
       <p className="text-xs sm:text-sm text-[#475569] mb-3 sm:mb-4">out of ~{total * 16} max pts</p>
 
@@ -307,32 +280,32 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
 
       <div className="grid grid-cols-3 gap-2 w-full max-w-sm mb-4 sm:mb-6 px-2">
         <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
-          <div className="text-xl sm:text-2xl font-bold text-[#10B981]" style={{fontFamily:"'Space Mono',monospace"}}>{state.correctCount}</div>
+          <div className="text-xl sm:text-2xl font-bold text-[#10B981]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.correctCount}</div>
           <div className="text-[10px] sm:text-[11px] text-[#475569]">Correct</div>
         </div>
         <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
-          <div className="text-xl sm:text-2xl font-bold text-[#EF4444]" style={{fontFamily:"'Space Mono',monospace"}}>{state.wrongCount}</div>
+          <div className="text-xl sm:text-2xl font-bold text-[#EF4444]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.wrongCount}</div>
           <div className="text-[10px] sm:text-[11px] text-[#475569]">Wrong</div>
         </div>
         <div className="bg-[#161E35] border border-[#1E3A5F] rounded-lg p-2 sm:p-3">
-          <div className="text-xl sm:text-2xl font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{state.timeoutCount}</div>
+          <div className="text-xl sm:text-2xl font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.timeoutCount}</div>
           <div className="text-[10px] sm:text-[11px] text-[#475569]">Timeout</div>
         </div>
       </div>
 
-      {state.maxStreak > 0 && (
+      {engine.maxStreak > 0 && (
         <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-[#F59E0B]">
-          Best streak: {state.maxStreak}🔥
+          Best streak: {engine.maxStreak}🔥
         </div>
       )}
 
-      {state.missedQuestions.length > 0 && (
+      {engine.missedQuestions.length > 0 && (
         <div className="w-full max-w-sm mb-4 sm:mb-6 px-2">
           <p className="text-[10px] sm:text-xs tracking-wider text-[#475569] uppercase text-left mb-2">
-            Missed doses — study these ({state.missedQuestions.length}):
+            Missed doses — study these ({engine.missedQuestions.length}):
           </p>
           <div className="flex flex-col gap-2 max-h-40 sm:max-h-48 overflow-y-auto pr-1 arcade-scroll">
-            {state.missedQuestions.map((q) => (
+            {engine.missedQuestions.map((q) => (
               <div key={q.id} className="bg-[#161E35] border-l-[3px] border-[#EF4444] rounded-lg p-2 sm:p-3 text-left text-[11px] sm:text-xs leading-relaxed">
                 <strong className="text-[#E2E8F0] block mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</strong>
                 <span className="text-[#94A3B8]">{q.patient.diagnosis}</span>
@@ -344,7 +317,7 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
         </div>
       )}
 
-      {state.missedQuestions.length === 0 && (
+      {engine.missedQuestions.length === 0 && (
         <p className="text-xs sm:text-sm text-[#10B981] mb-4 sm:mb-6">No missed doses — clean sweep!</p>
       )}
 
@@ -363,30 +336,60 @@ function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseD
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function DoseDuelPage() {
-  const { state, currentQuestion, startGame, selectOption, submitAnswer, nextQuestion } = useDoseDuelEngine(allQuestions);
   const stats = useMemo(() => getGameStats('dose-duel'), []);
-  const flash = useFlash();
+  const session = useArcadeSession({ gameId: 'dose-duel', totalQuestions: allQuestions.length });
+  const engine = useDoseDuelEngine(allQuestions);
+
+  // Initialize game when entering playing phase
+  useEffect(() => {
+    if (session.phase === 'playing') {
+      engine.initGame();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session.phase]);
+
+  // Save results when game ends
+  useEffect(() => {
+    if (engine.isRevealed && engine.currentIndex + 1 >= engine.questions.length && engine.questions.length > 0) {
+      // Delay to let user see final feedback
+      const t = setTimeout(() => {
+        const arcadeSession = session.endGame();
+        const missed = engine.missedQuestions.map((q) => ({
+          questionId: q.id,
+          gameId: 'dose-duel' as const,
+          text: `${q.drug} · ${q.patient.diagnosis}`,
+          correctAnswer: q.correctAnswer,
+          explanation: q.explanation,
+          trap: q.trap,
+          addedAt: new Date().toISOString(),
+        }));
+        updateGameStats('dose-duel', arcadeSession, missed);
+      }, 500);
+      return () => clearTimeout(t);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.isRevealed, engine.currentIndex, engine.questions.length]);
+
+  const handleRestart = useCallback(() => {
+    session.startGame();
+    engine.initGame();
+  }, [session, engine]);
 
   return (
     <ArcadeShell gameId="dose-duel" themeClass="theme-dose-duel">
       <GoogleFontsLoader families={['Space+Mono:wght@400;700', 'DM+Sans:wght@300;400;500;600']} />
       <div className="relative w-full h-[100dvh]">
-        <div className={`arcade-screen ${state.phase === 'splash' ? '' : 'hidden-down'}`}>
-          <SplashScreen onStart={startGame} highScore={stats.highScore} />
-        </div>
-        <div className={`arcade-screen ${state.phase === 'playing' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
-          <GameScreen
-            state={state}
-            currentQuestion={currentQuestion}
-            onSelect={selectOption}
-            onSubmit={submitAnswer}
-            onNext={nextQuestion}
-            flash={flash}
-          />
-        </div>
-        <div className={`arcade-screen ${state.phase === 'results' ? '' : 'hidden-down'}`}>
-          <ResultsScreen state={state} onRestart={startGame} />
-        </div>
+        <ArcadeScreen phase="splash" activePhase={session.phase}>
+          <SplashScreen onStart={session.startGame} highScore={stats.highScore} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="playing" activePhase={session.phase} className="game-layout">
+          <GameScreen engine={engine} session={session} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="results" activePhase={session.phase}>
+          <ResultsScreen engine={engine} onRestart={handleRestart} />
+        </ArcadeScreen>
       </div>
     </ArcadeShell>
   );

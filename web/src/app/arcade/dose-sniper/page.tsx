@@ -1,17 +1,20 @@
 /**
- * Dose Sniper Page — Full animations version
+ * Dose Sniper Page v2 — Refactored with CSS screen transitions + imperative effects
  */
 
 'use client';
 
-import { useMemo, useEffect, useRef, useState } from 'react';
+import { useMemo, useEffect, useCallback, useRef, useState } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
+import { ArcadeScreen } from '@/components/ArcadeScreen';
+import { useArcadeSession } from '@/hooks/useArcadeSession';
 import { useSniperEngine, BASE_SPEED, MAX_SPEED } from './hooks/useSniperEngine';
 import questionsData from './data/questions.json';
 import { type SniperQuestion } from '@/types/arcade';
 import { getGameStats } from '@/lib/arcade-storage';
 import { GoogleFontsLoader } from '@/components/GoogleFontsLoader';
-import { FlashOverlay, useScorePopups, useParticles, useComboSurge, LevelFlash } from '@/components/ArcadeEffects';
+import { useArcadeEffects } from '@/lib/arcade-effects';
+import { updateGameStats } from '@/lib/arcade-storage';
 import { Crosshair, Trophy } from 'lucide-react';
 
 const allQuestions = questionsData as SniperQuestion[];
@@ -20,6 +23,8 @@ const CMULT_LABELS: Record<number, { text: string; color: string }> = {
   5: { text: '× 3 COMBO!', color: '#FFB800' },
   7: { text: '× 4 GODMODE', color: '#22CCFF' },
 };
+
+// ─── Splash ──────────────────────────────────────────────────────────────────
 
 function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: number }) {
   return (
@@ -77,9 +82,11 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
   );
 }
 
+// ─── Countdown ───────────────────────────────────────────────────────────────
+
 function CountdownScreen({ value }: { value: number }) {
   return (
-    <div className="flex items-center justify-center min-h-screen" style={{ background: 'rgba(3,5,14,0.82)', fontFamily: "'Orbitron', monospace" }}>
+    <div className="flex items-center justify-center h-full" style={{ background: 'rgba(3,5,14,0.82)', fontFamily: "'Orbitron', monospace" }}>
       <div className="text-[clamp(80px,22vw,130px)] font-black text-[#22CCFF]"
            style={{ textShadow: '0 0 40px rgba(34,204,255,0.6)', animation: 'sniper-cdpop 0.8s ease' }}>
         {value === 0 ? 'GO!' : value}
@@ -88,49 +95,21 @@ function CountdownScreen({ value }: { value: number }) {
   );
 }
 
-function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) {
-  const q = engine.questions[engine.currentRound];
-  const speedPct = Math.min(100, Math.max(4, ((engine.speed - BASE_SPEED) / (MAX_SPEED - BASE_SPEED)) * 100 + 4));
-  const { spawnPopup, PopupLayer } = useScorePopups();
-  const { spawnParticles, ParticleLayer } = useParticles();
-  const { triggerSurge, SurgeLayer } = useComboSurge();
-  const prevFeedbackRef = useRef<string | null>(null);
-  const [showLevelFlash, setShowLevelFlash] = useState(false);
-  const [feedbackVisible, setFeedbackVisible] = useState(false);
+// ─── Game ────────────────────────────────────────────────────────────────────
 
-  // Add lane guides on mount
-  useEffect(() => {
-    const zone = engine.zoneRef.current;
-    if (!zone) return;
-    const addGuides = () => {
-      zone.querySelectorAll('.lane-guide').forEach((g) => g.remove());
-      const zw = zone.offsetWidth;
-      [0.17, 0.50, 0.83].forEach((l) => {
-        const g = document.createElement('div');
-        g.className = 'lane-guide';
-        g.style.cssText = `position:absolute;top:0;bottom:36px;width:1px;background:linear-gradient(180deg,rgba(34,204,255,0.12),rgba(34,204,255,0.04),transparent);pointer-events:none;z-index:2;left:${Math.round(l * zw)}px;`;
-        zone.appendChild(g);
-      });
-    };
-    addGuides();
-    const onResize = () => {
-      zone.querySelectorAll('.lane-guide').forEach((g) => g.remove());
-      addGuides();
-    };
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
+function GameScreen({ engine, session }: { engine: ReturnType<typeof useSniperEngine>; session: ReturnType<typeof useArcadeSession> }) {
+  const q = engine.q;
+  const speedPct = Math.min(100, Math.max(4, ((engine.speed - BASE_SPEED) / (MAX_SPEED - BASE_SPEED)) * 100 + 4));
+  const effects = useArcadeEffects();
+  const prevComboRef = useRef(0);
+  const missedRef = useRef<SniperQuestion[]>([]);
 
   // Trigger effects when feedback changes
   useEffect(() => {
     if (!engine.feedback) {
-      prevFeedbackRef.current = null;
-      setFeedbackVisible(false);
+      prevComboRef.current = engine.combo;
       return;
     }
-    if (prevFeedbackRef.current === engine.feedback.type) return;
-    prevFeedbackRef.current = engine.feedback.type;
-    setFeedbackVisible(true);
 
     const zone = engine.zoneRef.current;
     const zh = zone ? zone.offsetHeight / 2 : window.innerHeight / 2;
@@ -139,21 +118,45 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
     if (engine.feedback.type === 'ok') {
       const mult = [1, 1, 1.5, 2, 2.5, 3, 4][Math.min(engine.combo, 6)];
       const pts = Math.round(100 * mult);
-      spawnPopup(zw - 20, zh - 30, '+' + pts, '#FFB800');
-      spawnParticles(zw, zh, '#00FF94', 18);
+      effects.popup(zw - 20, zh - 30, '+' + pts, '#FFB800');
+      effects.particles(zw, zh, '#00FF94', 18);
+      effects.flash('green');
 
       if (CMULT_LABELS[engine.combo]) {
         const surge = CMULT_LABELS[engine.combo];
-        triggerSurge(surge.text, surge.color);
+        effects.surge(surge.text, surge.color);
       }
       if (engine.combo === 7) {
-        setShowLevelFlash(true);
-        setTimeout(() => setShowLevelFlash(false), 700);
+        effects.flashLevel();
       }
     } else {
-      spawnParticles(zw, zh, '#FF3B3B', 10);
+      effects.particles(zw, zh, '#FF3B3B', 10);
+      effects.flash('red');
     }
-  }, [engine.feedback, engine.combo, spawnPopup, spawnParticles, triggerSurge]);
+
+    // Track misses for results
+    if (engine.feedback.type === 'bad' || engine.feedback.type === 'tmout') {
+      missedRef.current.push(engine.feedback.q);
+    }
+
+    prevComboRef.current = engine.combo;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.feedback]);
+
+  // Update session score/combo
+  useEffect(() => {
+    if (engine.feedback?.type === 'ok') {
+      const mult = [1, 1, 1.5, 2, 2.5, 3, 4][Math.min(prevComboRef.current, 6)];
+      const pts = Math.round(100 * mult);
+      session.setScore((s) => s + pts);
+      session.setCorrectCount((c) => c + 1);
+    } else if (engine.feedback?.type === 'bad' || engine.feedback?.type === 'tmout') {
+      session.setWrongCount((w) => w + 1);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.feedback]);
+
+  if (!q) return null;
 
   return (
     <div className="flex flex-col h-full relative" style={{ background: '#03050E', fontFamily: "'DM Sans', sans-serif", color: '#D8E8F8' }}>
@@ -163,16 +166,11 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
       <div className="pointer-events-none fixed inset-0 z-[99]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px)' }} />
 
-      {showLevelFlash && <LevelFlash onDone={() => setShowLevelFlash(false)} />}
-      <PopupLayer />
-      <ParticleLayer />
-      <SurgeLayer />
-
       {/* HUD */}
       <div className="relative z-20 flex items-center justify-between px-3 sm:px-4 py-2 border-b border-[#1A2E4A]"
            style={{ background: 'rgba(7,14,31,0.7)', backdropFilter: 'blur(6px)' }}>
         <div>
-          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#FFB800]" style={{fontFamily:"'Orbitron',monospace"}}>{engine.score.toLocaleString()}</div>
+          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#FFB800]" style={{fontFamily:"'Orbitron',monospace"}}>{session.score.toLocaleString()}</div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.14em] text-[#1E3A5A] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Score</div>
         </div>
         <div className="text-center flex-1 px-2">
@@ -199,10 +197,10 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
       <div className="relative z-20 px-3 sm:px-4 py-2 border-b border-[#1A2E4A]"
            style={{ background: 'rgba(7,14,31,0.6)', backdropFilter: 'blur(8px)' }}>
         <div className="flex items-center gap-2 sm:gap-3 mb-1">
-          <div className="text-[11px] sm:text-[13px] font-bold text-[#22CCFF]" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{q?.context}</div>
-          <div className="text-[10px] sm:text-xs text-[#6B8BAA]">{q?.label}</div>
+          <div className="text-[11px] sm:text-[13px] font-bold text-[#22CCFF]" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{q.context}</div>
+          <div className="text-[10px] sm:text-xs text-[#6B8BAA]">{q.label}</div>
         </div>
-        <div className="text-[clamp(11px,3.2vw,15px)] font-bold text-[#D8E8F8] mb-1 leading-tight" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{q?.drug}</div>
+        <div className="text-[clamp(11px,3.2vw,15px)] font-bold text-[#D8E8F8] mb-1 leading-tight" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{q.drug}</div>
         <div className="text-[8px] sm:text-[9px] tracking-[0.15em] text-[#1E3A5A] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>▼ tap the correct dose before it hits the floor ▼</div>
       </div>
 
@@ -215,44 +213,79 @@ function GameScreen({ engine }: { engine: ReturnType<typeof useSniperEngine> }) 
       </div>
 
       {/* Feedback Panel */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 p-2 sm:p-3"
-           style={{ transform: feedbackVisible ? 'translateY(0)' : 'translateY(105%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
-        {engine.feedback && (
-          <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border
-            ${engine.feedback.type === 'ok' ? 'bg-[#001B0D] border-[#00FF94]' : engine.feedback.type === 'bad' ? 'bg-[#180000] border-[#FF3B3B]' : 'bg-[#180E00] border-[#FFB800]'}`}
-               style={{ boxShadow: engine.feedback.type === 'ok' ? '0 0 22px rgba(0,255,148,0.12)' : engine.feedback.type === 'bad' ? '0 0 22px rgba(255,59,59,0.12)' : '0 0 22px rgba(255,184,0,0.12)' }}>
-            <div className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase mb-2
-              ${engine.feedback.type === 'ok' ? 'text-[#00FF94]' : engine.feedback.type === 'bad' ? 'text-[#FF3B3B]' : 'text-[#FFB800]'}`}
-                 style={{fontFamily:"'Orbitron',monospace"}}>
-              {engine.feedback.type === 'ok' ? '✓ INTERCEPTED' : engine.feedback.type === 'bad' ? '✗ WRONG DRUG' : '⏱ FLOOR HIT'}
-            </div>
-            <div className={`text-[13px] sm:text-[15px] font-bold mb-2 ${engine.feedback.type === 'ok' ? 'text-[#00FF94]' : 'text-[#00FF94]'}`}
-                 style={{fontFamily:"'IBM Plex Mono',monospace"}}>
-              {engine.feedback.type === 'ok' ? engine.feedback.q.correctAnswer : `Correct: ${engine.feedback.q.correctAnswer}`}
-            </div>
-            <p className="text-[11px] sm:text-xs text-[#6B8BAA] leading-relaxed">{engine.feedback.q.explanation}</p>
-            {engine.feedback.q.trap && (
-              <div className="mt-2 p-2 bg-[rgba(255,184,0,0.07)] border-l-2 border-[#FFB800] rounded text-[11px] sm:text-xs text-[#FFB800] leading-relaxed"
-                   style={{fontFamily:"'IBM Plex Mono',monospace"}}>
-                <strong>⚡ TRAP:</strong> {engine.feedback.q.trap}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-
-      {feedbackVisible && (
-        <div className="fixed bottom-24 sm:bottom-32 left-0 right-0 z-50 flex justify-center">
-          <button onClick={engine.nextRound}
-                  className="px-6 sm:px-8 py-2.5 sm:py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5"
-                  style={{fontFamily:"'Orbitron',monospace", boxShadow: '0 0 24px rgba(34,204,255,0.4)'}}>
-            {engine.currentRound + 1 >= engine.questions.length ? 'SEE RESULTS →' : 'NEXT →'}
-          </button>
-        </div>
-      )}
+      <FeedbackPanel feedback={engine.feedback} onNext={engine.nextRound} currentRound={engine.currentRound} totalRounds={allQuestions.length} />
     </div>
   );
 }
+
+// ─── Feedback Panel ──────────────────────────────────────────────────────────
+
+function FeedbackPanel({ feedback, onNext, currentRound, totalRounds }: {
+  feedback: { type: 'ok' | 'bad' | 'tmout'; q: SniperQuestion } | null;
+  onNext: () => void;
+  currentRound: number;
+  totalRounds: number;
+}) {
+  const [visible, setVisible] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (feedback) {
+      setVisible(true);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => setVisible(true), 10); // ensure DOM update
+    } else {
+      setVisible(false);
+    }
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [feedback]);
+
+  if (!feedback) return null;
+
+  const isLast = currentRound + 1 >= totalRounds;
+
+  return (
+    <>
+      <div className="fixed bottom-0 left-0 right-0 z-40 p-2 sm:p-3"
+           style={{ transform: visible ? 'translateY(0)' : 'translateY(105%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
+        <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border
+          ${feedback.type === 'ok' ? 'bg-[#001B0D] border-[#00FF94]' : feedback.type === 'bad' ? 'bg-[#180000] border-[#FF3B3B]' : 'bg-[#180E00] border-[#FFB800]'}`}
+             style={{ boxShadow: feedback.type === 'ok' ? '0 0 22px rgba(0,255,148,0.12)' : feedback.type === 'bad' ? '0 0 22px rgba(255,59,59,0.12)' : '0 0 22px rgba(255,184,0,0.12)' }}>
+          <div className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase mb-2
+            ${feedback.type === 'ok' ? 'text-[#00FF94]' : feedback.type === 'bad' ? 'text-[#FF3B3B]' : 'text-[#FFB800]'}`}
+               style={{fontFamily:"'Orbitron',monospace"}}>
+            {feedback.type === 'ok' ? '✓ INTERCEPTED' : feedback.type === 'bad' ? '✗ WRONG DRUG' : '⏱ FLOOR HIT'}
+          </div>
+          <div className={`text-[13px] sm:text-[15px] font-bold mb-2 ${feedback.type === 'ok' ? 'text-[#00FF94]' : 'text-[#00FF94]'}`}
+               style={{fontFamily:"'IBM Plex Mono',monospace"}}>
+            {feedback.type === 'ok' ? feedback.q.correctAnswer : `Correct: ${feedback.q.correctAnswer}`}
+          </div>
+          <p className="text-[11px] sm:text-xs text-[#6B8BAA] leading-relaxed">{feedback.q.explanation}</p>
+          {feedback.q.trap && (
+            <div className="mt-2 p-2 bg-[rgba(255,184,0,0.07)] border-l-2 border-[#FFB800] rounded text-[11px] sm:text-xs text-[#FFB800] leading-relaxed"
+                 style={{fontFamily:"'IBM Plex Mono',monospace"}}>
+              <strong>⚡ TRAP:</strong> {feedback.q.trap}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {visible && (
+        <div className="fixed bottom-24 sm:bottom-32 left-0 right-0 z-50 flex justify-center">
+          <button onClick={onNext}
+                  className="px-6 sm:px-8 py-2.5 sm:py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5"
+                  style={{fontFamily:"'Orbitron',monospace", boxShadow: '0 0 24px rgba(34,204,255,0.4)'}}>
+            {isLast ? 'SEE RESULTS →' : 'NEXT →'}
+          </button>
+        </div>
+      )}
+    </>
+  );
+}
+
+// ─── Results ─────────────────────────────────────────────────────────────────
 
 function ResultsScreen({ score, hits, misses, maxCombo, onRestart, missedQuestions }: {
   score: number; hits: number; misses: number; maxCombo: number;
@@ -313,27 +346,93 @@ function ResultsScreen({ score, hits, misses, maxCombo, onRestart, missedQuestio
   );
 }
 
+// ─── Page ────────────────────────────────────────────────────────────────────
+
 export default function DoseSniperPage() {
-  const engine = useSniperEngine(allQuestions);
   const stats = useMemo(() => getGameStats('dose-sniper'), []);
+  const effects = useArcadeEffects();
+  const missedRef = useRef<SniperQuestion[]>([]);
+
+  const handleGameStart = useCallback(() => {
+    missedRef.current = [];
+  }, []);
+
+  const session = useArcadeSession({
+    gameId: 'dose-sniper',
+    totalQuestions: allQuestions.length,
+    onStart: handleGameStart,
+  });
+
+  const engine = useSniperEngine(allQuestions);
+
+  // Initialize game when entering playing phase
+  useEffect(() => {
+    if (session.phase === 'playing') {
+      engine.initGame();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session.phase]);
+
+  // Handle game end
+  useEffect(() => {
+    if (engine.feedback && engine.currentRound + 1 >= allQuestions.length) {
+      // Last round completed - save stats when results shown
+    }
+  }, [engine.feedback, engine.currentRound]);
+
+  const handleRestart = useCallback(() => {
+    missedRef.current = [];
+    session.startGame();
+    engine.initGame();
+  }, [session, engine]);
+
+  const handleSaveResults = useCallback(() => {
+    const arcadeSession = session.endGame();
+    const missed = missedRef.current.map((q) => ({
+      questionId: q.id,
+      gameId: 'dose-sniper' as const,
+      text: `${q.drug} · ${q.context}`,
+      correctAnswer: q.correctAnswer,
+      explanation: q.explanation,
+      trap: q.trap,
+      addedAt: new Date().toISOString(),
+    }));
+    updateGameStats('dose-sniper', arcadeSession, missed);
+  }, [session]);
+
+  // Save when entering results
+  useEffect(() => {
+    if (session.phase === 'results') {
+      handleSaveResults();
+    }
+  }, [session.phase, handleSaveResults]);
 
   return (
     <ArcadeShell gameId="dose-sniper" themeClass="theme-dose-sniper">
       <GoogleFontsLoader families={['Orbitron:wght@700;900', 'IBM+Plex+Mono:wght@400;600;700', 'DM+Sans:wght@400;500;600']} />
       <div className="relative w-full h-[100dvh]">
-        <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
-          <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'countdown' ? '' : 'hidden-down'}`}>
-          <CountdownScreen value={engine.countdown} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'playing' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
-          <GameScreen engine={engine} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'results' ? '' : 'hidden-down'}`}>
-          <ResultsScreen score={engine.score} hits={engine.hits} misses={engine.misses} maxCombo={engine.maxCombo}
-                         onRestart={engine.startGame} missedQuestions={engine.missedQuestions} />
-        </div>
+        <ArcadeScreen phase="splash" activePhase={session.phase}>
+          <SplashScreen onStart={session.startGame} highScore={stats.highScore} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="countdown" activePhase={session.phase}>
+          <CountdownScreen value={session.countdownValue} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="playing" activePhase={session.phase} className="game-layout">
+          <GameScreen engine={engine} session={session} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="results" activePhase={session.phase}>
+          <ResultsScreen
+            score={session.score}
+            hits={session.correctCount}
+            misses={session.wrongCount}
+            maxCombo={engine.maxCombo}
+            onRestart={handleRestart}
+            missedQuestions={missedRef.current}
+          />
+        </ArcadeScreen>
       </div>
     </ArcadeShell>
   );

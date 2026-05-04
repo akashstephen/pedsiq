@@ -1,28 +1,23 @@
 /**
- * Feature Wars Page — Full animations version
+ * Feature Wars Page v2 — Refactored with CSS screen transitions + imperative effects
  */
 
 'use client';
 
-import { useMemo, useState, useCallback, useEffect, useRef } from 'react';
+import { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
+import { ArcadeScreen } from '@/components/ArcadeScreen';
+import { useArcadeSession } from '@/hooks/useArcadeSession';
 import { useFeatureWarsEngine } from './hooks/useFeatureWarsEngine';
 import battlesData from './data/battles.json';
 import { type FeatureWarsBattle, type FeatureWarsFeature, type FeatureWarsDisease } from '@/types/arcade';
 import { getGameStats } from '@/lib/arcade-storage';
+import { updateGameStats } from '@/lib/arcade-storage';
 import { GoogleFontsLoader } from '@/components/GoogleFontsLoader';
-import { FlashOverlay, useScorePopups } from '@/components/ArcadeEffects';
+import { useArcadeEffects } from '@/lib/arcade-effects';
 import { Swords, Trophy, Brain } from 'lucide-react';
 
 const allBattles = battlesData as FeatureWarsBattle[];
-
-function useFlash() {
-  const [flash, setFlash] = useState<{color:'green'|'red'|'amber',key:number}|null>(null);
-  const trigger = useCallback((color:'green'|'red'|'amber') => {
-    setFlash({ color, key: Date.now() });
-  }, []);
-  return { flash, trigger };
-}
 
 // ─── Splash ──────────────────────────────────────────────────────────────────
 
@@ -30,7 +25,6 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
   return (
     <div className="flex flex-col items-center justify-center min-h-full w-full px-4 sm:px-6 py-8 sm:py-12 text-center"
          style={{ background: '#040812', fontFamily: "'DM Sans', sans-serif", color: '#CDD9E8' }}>
-      {/* Scanline texture */}
       <div className="pointer-events-none fixed inset-0 z-[100]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 4px)' }} />
 
@@ -86,17 +80,15 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
 
 // ─── Battle ──────────────────────────────────────────────────────────────────
 
-function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureWarsEngine>; flash: ReturnType<typeof useFlash> }) {
+function BattleScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngine> }) {
   const b = engine.battle;
   if (!b) return null;
 
   const remaining = b.features.filter((f) => !engine.isFeatureDone(f.id)).length;
-  const { spawnPopup, PopupLayer } = useScorePopups();
+  const effects = useArcadeEffects();
   const prevFeedbackRef = useRef<string | null>(null);
   const [expVisible, setExpVisible] = useState(false);
   const expTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const flashTriggerRef = useRef(flash.trigger);
-  flashTriggerRef.current = flash.trigger;
 
   // Handle feedback visibility and auto-hide
   useEffect(() => {
@@ -111,18 +103,18 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
     prevFeedbackRef.current = key;
     setExpVisible(true);
 
-    // Flash background (via ref to avoid effect re-runs)
+    // Flash background
     if (engine.feedback.type === 'ok' || engine.feedback.type === 'partial') {
-      flashTriggerRef.current('green');
+      effects.flash('green');
     } else {
-      flashTriggerRef.current('red');
+      effects.flash('red');
     }
 
     // Score popup on correct
     if (engine.feedback.type === 'ok' || engine.feedback.type === 'partial') {
       const centerX = window.innerWidth / 2 - 20;
       const centerY = window.innerHeight / 2 - 10;
-      spawnPopup(centerX, centerY, '+10', '#34D399');
+      effects.popup(centerX, centerY, '+10', '#34D399');
     }
 
     // Auto-hide explanation
@@ -135,11 +127,8 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
     return () => {
       if (expTimerRef.current) clearTimeout(expTimerRef.current);
     };
-  }, [engine.feedback, spawnPopup]);
-
-  const handleColumnTap = (diseaseId: string) => {
-    engine.onColumnTap(diseaseId);
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.feedback]);
 
   return (
     <div className="flex flex-col h-full relative overflow-hidden"
@@ -147,10 +136,6 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
       {/* Scanline texture */}
       <div className="pointer-events-none fixed inset-0 z-[100]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 4px)' }} />
-
-      {/* Effects */}
-      <PopupLayer />
-      {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
 
       {/* HUD */}
       <div className="relative z-20 flex items-center justify-between px-3 sm:px-4 py-2 border-b border-[#182A42]"
@@ -200,7 +185,7 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
               features={b.features}
               placements={engine.placements}
               selectedFeatureId={engine.selectedFeatureId}
-              onColumnTap={() => handleColumnTap(d.id)}
+              onColumnTap={() => engine.onColumnTap(d.id)}
               isFeatureDone={engine.isFeatureDone}
               alreadyPlacedColumnId={engine.alreadyPlacedColumnId}
             />
@@ -259,7 +244,7 @@ function BattleScreen({ engine, flash }: { engine: ReturnType<typeof useFeatureW
 
       {/* Explanation popup */}
       <div className="fixed bottom-0 left-0 right-0 z-50 p-2 sm:p-3"
-           style={{ transform: (expVisible && engine.phase === 'battle') ? 'translateY(0)' : 'translateY(110%)', transition: 'transform 0.25s cubic-bezier(0.175,0.885,0.32,1.1)' }}>
+           style={{ transform: expVisible ? 'translateY(0)' : 'translateY(110%)', transition: 'transform 0.25s cubic-bezier(0.175,0.885,0.32,1.1)' }}>
         {engine.feedback && (
           <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border
             ${engine.feedback.type === 'ok' ? 'bg-[#012B18] border-[#34D399]' :
@@ -318,18 +303,9 @@ function ColumnComponent({
 
   useEffect(() => {
     return () => {
-      if (flashTimeoutRef.current) {
-        clearTimeout(flashTimeoutRef.current);
-      }
+      if (flashTimeoutRef.current) clearTimeout(flashTimeoutRef.current);
     };
   }, []);
-
-  const clearFlashTimeout = () => {
-    if (flashTimeoutRef.current) {
-      clearTimeout(flashTimeoutRef.current);
-      flashTimeoutRef.current = null;
-    }
-  };
 
   const handleTap = () => {
     onColumnTap();
@@ -337,7 +313,7 @@ function ColumnComponent({
       const f = features.find((x) => x.id === selectedFeatureId);
       if (f) {
         const isCorrect = f.correctDiseaseIds.includes(disease.id);
-        clearFlashTimeout();
+        if (flashTimeoutRef.current) clearTimeout(flashTimeoutRef.current);
         setFlash(isCorrect ? 'ok' : 'bad');
         flashTimeoutRef.current = setTimeout(() => setFlash(null), 400);
       }
@@ -360,9 +336,7 @@ function ColumnComponent({
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
-      className={`flex-1 min-w-0 rounded-xl border overflow-hidden transition-all cursor-pointer
-        ${selectedFeatureId ? '' : ''}
-      `}
+      className="flex-1 min-w-0 rounded-xl border overflow-hidden transition-all cursor-pointer"
       style={{
         background: '#0A1528',
         borderColor: selectedFeatureId ? disease.color + '55' : '#1E3550',
@@ -393,7 +367,7 @@ function ColumnComponent({
 
 // ─── Battle Complete ─────────────────────────────────────────────────────────
 
-function BattleCompleteScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngine> }) {
+function BattleCompleteScreen({ engine, onNext }: { engine: ReturnType<typeof useFeatureWarsEngine>; onNext: () => void }) {
   const b = engine.battle;
   if (!b) return null;
   const isLast = engine.currentBattleIndex >= allBattles.length - 1;
@@ -401,38 +375,38 @@ function BattleCompleteScreen({ engine }: { engine: ReturnType<typeof useFeature
   return (
     <div className="flex flex-col items-center justify-center min-h-full w-full px-4 sm:px-6 py-8 sm:py-12 text-center"
          style={{ background: 'rgba(4,8,18,0.94)', backdropFilter: 'blur(12px)', fontFamily: "'DM Sans', sans-serif", color: '#CDD9E8' }}>
-      <h2 className="text-[clamp(20px,6vw,36px)] font-extrabold mb-2" style={{fontFamily:"'Syne',sans-serif", color: engine.wrongCount === 0 ? '#34D399' : '#FBBF24'}}>
-        {engine.wrongCount === 0 ? '⚡ CLEAN SWEEP!' : `${b.name} — Round Over`}
+      <h2 className="text-[clamp(20px,6vw,36px)] font-extrabold mb-2" style={{fontFamily:"'Syne',sans-serif", color: engine.battleWrongCount === 0 ? '#34D399' : '#FBBF24'}}>
+        {engine.battleWrongCount === 0 ? '⚡ CLEAN SWEEP!' : `${b.name} — Round Over`}
       </h2>
       <div className="text-[clamp(40px,12vw,64px)] font-extrabold text-[#FBBF24] mb-2 leading-none" style={{fontFamily:"'Syne',sans-serif", textShadow: '0 0 30px rgba(251,191,36,0.4)'}}>
         {engine.score.toLocaleString()}
       </div>
       <p className="text-[11px] sm:text-xs text-[#6E89A8] mb-4 sm:mb-6">
-        {engine.correctCount} correct · {engine.wrongCount} wrong · {engine.multiFound} &quot;both&quot; found
+        {engine.battleCorrectCount} correct · {engine.battleWrongCount} wrong · {engine.battleMultiFound} &quot;both&quot; found
       </p>
 
       <div className="flex gap-3 sm:gap-4 justify-center mb-4 sm:mb-6">
         <div className="bg-[#0E1C35] border border-[#1E3550] rounded-lg px-4 sm:px-5 py-2.5 sm:py-3 text-center min-w-[60px] sm:min-w-[70px]">
-          <div className="text-xl sm:text-2xl font-extrabold text-[#34D399]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.correctCount}</div>
+          <div className="text-xl sm:text-2xl font-extrabold text-[#34D399]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.battleCorrectCount}</div>
           <div className="text-[9px] sm:text-[10px] text-[#2E4A65]" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Correct</div>
         </div>
         <div className="bg-[#0E1C35] border border-[#1E3550] rounded-lg px-4 sm:px-5 py-2.5 sm:py-3 text-center min-w-[60px] sm:min-w-[70px]">
-          <div className="text-xl sm:text-2xl font-extrabold text-[#F87171]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.wrongCount}</div>
+          <div className="text-xl sm:text-2xl font-extrabold text-[#F87171]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.battleWrongCount}</div>
           <div className="text-[9px] sm:text-[10px] text-[#2E4A65]" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Wrong</div>
         </div>
         <div className="bg-[#0E1C35] border border-[#1E3550] rounded-lg px-4 sm:px-5 py-2.5 sm:py-3 text-center min-w-[60px] sm:min-w-[70px]">
-          <div className="text-xl sm:text-2xl font-extrabold text-[#A78BFA]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.multiFound}</div>
+          <div className="text-xl sm:text-2xl font-extrabold text-[#A78BFA]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.battleMultiFound}</div>
           <div className="text-[9px] sm:text-[10px] text-[#2E4A65]" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Both found</div>
         </div>
       </div>
 
-      {engine.missedFeatures.length > 0 && (
+      {engine.battleMissedFeatures.length > 0 && (
         <div className="w-full max-w-sm mb-4 sm:mb-6 text-left px-2">
           <p className="text-[9px] sm:text-[10px] tracking-wider text-[#2E4A65] uppercase mb-2" style={{fontFamily:"'IBM Plex Mono',monospace"}}>
-            Missed ({engine.missedFeatures.length}) — review:
+            Missed ({engine.battleMissedFeatures.length}) — review:
           </p>
           <div className="flex flex-col gap-2 max-h-28 sm:max-h-32 overflow-y-auto arcade-scroll-thin">
-            {engine.missedFeatures.map((f) => (
+            {engine.battleMissedFeatures.map((f) => (
               <div key={f.id} className="bg-[#0A1528] border-l-[3px] border-[#F87171] rounded-lg p-2 sm:p-3 text-[11px] sm:text-xs text-[#6E89A8] leading-relaxed">
                 <strong className="text-[#CDD9E8] block mb-1" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{f.text}</strong>
                 Belongs to: <span className="text-[#34D399]">{f.correctDiseaseIds.join(' + ')}</span>
@@ -443,7 +417,7 @@ function BattleCompleteScreen({ engine }: { engine: ReturnType<typeof useFeature
       )}
 
       <button
-        onClick={engine.nextBattle}
+        onClick={onNext}
         className="px-8 sm:px-10 py-2.5 sm:py-3 rounded-lg text-[#030812] font-extrabold text-xs sm:text-sm tracking-wide cursor-pointer transition-all hover:-translate-y-0.5"
         style={{ fontFamily: "'Syne', sans-serif", background: 'linear-gradient(135deg, #22D3EE, #A78BFA)' }}
       >
@@ -455,7 +429,7 @@ function BattleCompleteScreen({ engine }: { engine: ReturnType<typeof useFeature
 
 // ─── Final ───────────────────────────────────────────────────────────────────
 
-function FinalScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngine> }) {
+function FinalScreen({ engine, onRestart }: { engine: ReturnType<typeof useFeatureWarsEngine>; onRestart: () => void }) {
   const totalHits = engine.totalCorrectCount;
   const totalWrong = engine.totalWrongCount;
   const pct = totalHits + totalWrong > 0 ? Math.round((totalHits / (totalHits + totalWrong)) * 100) : 0;
@@ -468,7 +442,6 @@ function FinalScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngin
   return (
     <div className="flex flex-col items-center justify-center min-h-full w-full px-4 sm:px-6 py-8 sm:py-12 text-center"
          style={{ background: '#040812', fontFamily: "'DM Sans', sans-serif", color: '#CDD9E8' }}>
-      {/* Scanlines */}
       <div className="pointer-events-none fixed inset-0 z-[100]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 4px)' }} />
 
@@ -498,7 +471,7 @@ function FinalScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngin
       </div>
 
       <button
-        onClick={engine.restartGame}
+        onClick={onRestart}
         className="px-8 sm:px-10 py-2.5 sm:py-3 rounded-lg text-[#030812] font-extrabold text-xs sm:text-sm tracking-wide cursor-pointer transition-all hover:-translate-y-0.5 relative z-10"
         style={{ fontFamily: "'Syne', sans-serif", background: 'linear-gradient(135deg, #FBBF24, #F472B6)' }}
       >
@@ -512,27 +485,89 @@ function FinalScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngin
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function FeatureWarsPage() {
-  const engine = useFeatureWarsEngine(allBattles);
   const stats = useMemo(() => getGameStats('feature-wars'), []);
-  const flash = useFlash();
+  const session = useArcadeSession({ gameId: 'feature-wars', totalQuestions: allBattles.reduce((a, b) => a + b.features.length, 0) });
+  const engine = useFeatureWarsEngine(allBattles);
+  const [showBattleComplete, setShowBattleComplete] = useState(false);
+
+  // Initialize game when entering playing phase
+  useEffect(() => {
+    if (session.phase === 'playing') {
+      engine.initGame();
+      setShowBattleComplete(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session.phase]);
+
+  // Check for battle completion
+  useEffect(() => {
+    if (session.phase === 'playing' && engine.feedback?.type === 'ok') {
+      const b = engine.battle;
+      if (b) {
+        const allDone = b.features.every((f) => engine.isFeatureDone(f.id));
+        if (allDone) {
+          const t = setTimeout(() => setShowBattleComplete(true), 800);
+          return () => clearTimeout(t);
+        }
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.feedback, engine.placements]);
+
+  // Update session score from engine
+  useEffect(() => {
+    session.setScore(engine.score);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [engine.score]);
+
+  const handleNextBattle = useCallback(() => {
+    const isComplete = engine.nextBattle();
+    setShowBattleComplete(false);
+    if (isComplete) {
+      // Save stats
+      const arcadeSession = session.endGame();
+      const missed = engine.allMissedFeatures.map((f) => ({
+        questionId: f.id,
+        gameId: 'feature-wars' as const,
+        text: f.text,
+        correctAnswer: f.correctDiseaseIds.join(' + '),
+        explanation: f.explanation,
+        trap: f.trap,
+        addedAt: new Date().toISOString(),
+      }));
+      updateGameStats('feature-wars', arcadeSession, missed);
+    }
+  }, [engine, session]);
+
+  const handleRestart = useCallback(() => {
+    setShowBattleComplete(false);
+    session.startGame();
+    engine.initGame();
+  }, [session, engine]);
 
   return (
     <ArcadeShell gameId="feature-wars" themeClass="theme-feature-wars">
       <GoogleFontsLoader families={['Syne:wght@700;800', 'IBM+Plex+Mono:wght@400;500;600', 'DM+Sans:wght@300;400;500;600']} />
       <div className="relative w-full h-[100dvh]">
-        <div className={`arcade-screen ${engine.phase === 'splash' ? '' : 'hidden-down'}`}>
-          <SplashScreen onStart={engine.startGame} highScore={stats.highScore} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'battle' ? '' : 'hidden-down'}`} style={{justifyContent:'flex-start'}}>
-          <BattleScreen engine={engine} flash={flash} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'battle-complete' ? '' : 'hidden-down'}`}>
-          <BattleCompleteScreen engine={engine} />
-        </div>
-        <div className={`arcade-screen ${engine.phase === 'final' ? '' : 'hidden-down'}`}>
-          <FinalScreen engine={engine} />
-        </div>
+        <ArcadeScreen phase="splash" activePhase={session.phase}>
+          <SplashScreen onStart={session.startGame} highScore={stats.highScore} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="playing" activePhase={session.phase} className="game-layout">
+          <BattleScreen engine={engine} />
+        </ArcadeScreen>
+
+        <ArcadeScreen phase="results" activePhase={session.phase}>
+          <FinalScreen engine={engine} onRestart={handleRestart} />
+        </ArcadeScreen>
       </div>
+
+      {/* Battle Complete Overlay */}
+      {session.phase === 'playing' && showBattleComplete && (
+        <div className="fixed inset-0 z-[200]">
+          <BattleCompleteScreen engine={engine} onNext={handleNextBattle} />
+        </div>
+      )}
     </ArcadeShell>
   );
 }
