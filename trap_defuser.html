@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Trap Defuser — PedsIQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#050810;--s0:#08101C;--s1:#0B1525;--s2:#0F1C30;--s3:#13243C;
+  --text:#D6E6F5;--text2:#5A7A9A;--text3:#1E3450;
+  --trap:#FF4D1A;--trap2:#FF6B40;--trapbg:rgba(255,77,26,.1);
+  --ok:#00D97E;--ok2:#4DFFAB;--okbg:rgba(0,217,126,.1);
+  --amber:#FFB020;--violet:#9B72F8;
+  --border:#142236;--border2:#1A2E48;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);
+  font-family:'Space Grotesk',sans-serif;color:var(--text);
+  touch-action:pan-y;user-select:none}
+
+/* CRT noise grain */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.018;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:128px}
+
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;
+  align-items:center;z-index:10;transition:opacity .25s,transform .25s;overflow:hidden}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+
+/* ═══ SPLASH ═══ */
+#splash{justify-content:center;gap:18px;padding:24px;text-align:center}
+.sp-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,16vw,100px);
+  letter-spacing:.04em;line-height:.9;
+  background:linear-gradient(180deg,var(--trap) 0%,var(--amber) 50%,var(--ok) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sp-sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;
+  color:var(--text3);text-transform:uppercase}
+.sp-divider{width:48px;height:2px;background:linear-gradient(90deg,var(--trap),var(--ok));border-radius:2px}
+.sp-desc{font-size:14px;color:var(--text2);max-width:320px;line-height:1.65}
+.sp-mechanic{background:var(--s1);border:1px solid var(--border2);border-radius:10px;
+  padding:12px 16px;max-width:330px;font-size:12.5px;color:var(--text2);line-height:1.7;text-align:left}
+.sp-mechanic strong{color:var(--amber)}
+.sp-legend{display:flex;gap:12px;max-width:330px;width:100%}
+.sp-leg{flex:1;border-radius:8px;padding:11px 10px;text-align:center;font-size:13px;font-weight:600}
+.sp-leg.trap{background:var(--trapbg);border:1.5px solid rgba(255,77,26,.3);color:var(--trap)}
+.sp-leg.ok{background:var(--okbg);border:1.5px solid rgba(0,217,126,.3);color:var(--ok)}
+.sp-leg small{display:block;font-size:10px;font-weight:400;opacity:.7;margin-top:2px}
+.sp-stats{display:flex;gap:24px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3)}
+.sp-stats span{display:block;font-family:'Bebas Neue',sans-serif;font-size:26px;
+  letter-spacing:.05em;color:var(--amber)}
+.btn-defuse{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.1em;
+  color:#050810;background:linear-gradient(135deg,var(--trap),var(--amber));
+  border:none;padding:14px 56px;border-radius:6px;cursor:pointer;
+  box-shadow:0 0 32px rgba(255,77,26,.3);transition:transform .15s,box-shadow .15s}
+.btn-defuse:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(255,77,26,.5)}
+
+/* ═══ GAME ═══ */
+#game-screen{justify-content:flex-start;padding:0}
+
+/* HUD */
+#hud{width:100%;flex-shrink:0;display:flex;align-items:center;
+  justify-content:space-between;padding:8px 14px 6px;
+  background:rgba(5,8,16,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border)}
+.hud-score{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.05em;color:var(--amber)}
+.hud-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;
+  color:var(--text3);text-transform:uppercase;margin-top:-2px}
+.hud-center{text-align:center}
+.hud-qnum{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:var(--text)}
+.hud-progress{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);margin-top:1px}
+.hud-streak{text-align:right}
+.hud-streak-val{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.05em;color:var(--violet)}
+
+/* timer bar */
+#timer-wrap{width:100%;height:4px;background:var(--s3);flex-shrink:0;overflow:hidden}
+#timer-fill{height:100%;transition:width .1s linear,background-color .5s;
+  background:linear-gradient(90deg,var(--ok),var(--amber))}
+
+/* card area */
+#card-area{flex:1;width:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:10px 12px 6px;
+  position:relative;overflow:hidden}
+
+/* THE CARD */
+#card{width:100%;max-width:440px;position:relative;
+  transition:transform .3s cubic-bezier(.175,.885,.32,1.1),opacity .3s;
+  transform-origin:50% 50%}
+.card-inner{background:linear-gradient(145deg,var(--s1),var(--s2));
+  border:1.5px solid var(--border2);border-radius:16px;
+  padding:18px 18px 16px;position:relative;overflow:hidden}
+.card-inner::before{content:'';position:absolute;inset:0;border-radius:15px;
+  background:linear-gradient(135deg,rgba(255,255,255,.025),transparent);pointer-events:none}
+
+/* Swipe ghost indicators */
+#card.dragging-trap .card-inner{border-color:var(--trap);
+  box-shadow:0 0 30px rgba(255,77,26,.25)}
+#card.dragging-ok .card-inner{border-color:var(--ok);
+  box-shadow:0 0 30px rgba(0,217,126,.25)}
+
+.card-topic{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px}
+.topic-badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;padding:3px 10px;
+  border-radius:20px;border:1px solid}
+.card-question{font-size:clamp(14px,3.8vw,17px);font-weight:500;
+  line-height:1.55;color:var(--text);margin-bottom:0}
+.card-question strong{color:var(--amber);font-weight:700}
+
+/* swipe hint overlay */
+.swipe-hint{position:absolute;top:12px;right:14px;
+  font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.08em;
+  opacity:0;transition:opacity .15s;pointer-events:none}
+.swipe-hint.trap{color:var(--trap)}
+.swipe-hint.ok{color:var(--ok)}
+#card.dragging-trap .swipe-hint.trap{opacity:1}
+#card.dragging-ok .swipe-hint.ok{opacity:1}
+
+/* Feedback panel (below card) */
+#feedback{width:100%;max-width:440px;margin-top:10px;flex-shrink:0;
+  transform:translateY(12px);opacity:0;transition:all .25s;pointer-events:none}
+#feedback.show{transform:translateY(0);opacity:1}
+.fb-box{border-radius:12px;padding:12px 16px}
+.fb-box.correct{background:#001A0E;border:1.5px solid var(--ok)}
+.fb-box.wrong{background:#1A0800;border:1.5px solid var(--trap)}
+.fb-verdict{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.fb-box.correct .fb-verdict{color:var(--ok)}
+.fb-box.wrong .fb-verdict{color:var(--trap)}
+.fb-truth{font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px}
+.fb-explain{font-size:12px;color:var(--text2);line-height:1.6}
+.fb-marks{display:inline-block;margin-top:6px;font-family:'JetBrains Mono',monospace;
+  font-size:10px;padding:3px 10px;border-radius:20px;font-weight:600}
+.fb-box.correct .fb-marks{background:rgba(0,217,126,.12);color:var(--ok)}
+.fb-box.wrong .fb-marks{background:rgba(255,77,26,.12);color:var(--trap)}
+
+/* buttons */
+#btn-row{width:100%;max-width:440px;display:flex;gap:10px;
+  padding:8px 0 12px;flex-shrink:0}
+.judge-btn{flex:1;border:none;border-radius:10px;padding:16px 10px;
+  font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.1em;
+  cursor:pointer;transition:transform .1s,box-shadow .1s,opacity .15s;
+  display:flex;flex-direction:column;align-items:center;gap:3px}
+.judge-btn:active{transform:scale(.96)}
+.judge-btn.trap-btn{background:linear-gradient(135deg,#1A0500,#2A0A00);
+  border:1.5px solid rgba(255,77,26,.4);color:var(--trap)}
+.judge-btn.trap-btn:hover{background:var(--trapbg);box-shadow:0 0 20px rgba(255,77,26,.2)}
+.judge-btn.ok-btn{background:linear-gradient(135deg,#001A0A,#002A12);
+  border:1.5px solid rgba(0,217,126,.4);color:var(--ok)}
+.judge-btn.ok-btn:hover{background:var(--okbg);box-shadow:0 0 20px rgba(0,217,126,.2)}
+.judge-btn small{font-family:'JetBrains Mono',monospace;font-size:8px;
+  letter-spacing:.1em;opacity:.5;font-style:normal;text-transform:uppercase}
+.judge-btn.locked{opacity:.4;cursor:default;pointer-events:none}
+
+/* swipe hint text at very bottom */
+#swipe-hint-txt{font-family:'JetBrains Mono',monospace;font-size:9px;
+  color:var(--text3);letter-spacing:.12em;text-align:center;
+  padding-bottom:6px;flex-shrink:0}
+
+/* flash overlay */
+#fov{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:0;transition:opacity .08s}
+
+/* score pop */
+.spop{position:fixed;font-family:'Bebas Neue',sans-serif;font-size:22px;
+  letter-spacing:.08em;pointer-events:none;z-index:60;
+  animation:spopA .75s ease forwards}
+@keyframes spopA{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-65px)}}
+
+/* card animations */
+@keyframes cardShakeAnim{0%,100%{transform:translateX(0)}
+  20%{transform:translateX(-10px) rotate(-2deg)}
+  40%{transform:translateX(10px) rotate(2deg)}
+  60%{transform:translateX(-7px) rotate(-1deg)}
+  80%{transform:translateX(7px) rotate(1deg)}}
+@keyframes cardInAnim{from{transform:translateY(-30px) scale(.95);opacity:0}
+  to{transform:translateY(0) scale(1);opacity:1}}
+@keyframes cardOutTrap{to{transform:translateX(-120%) rotate(-18deg);opacity:0}}
+@keyframes cardOutOk{to{transform:translateX(120%) rotate(18deg);opacity:0}}
+@keyframes cardOutTimeout{to{transform:translateY(60px) scale(.85);opacity:0}}
+
+.card-enter{animation:cardInAnim .35s cubic-bezier(.175,.885,.32,1.1) forwards}
+.card-exit-trap{animation:cardOutTrap .35s ease forwards}
+.card-exit-ok{animation:cardOutOk .35s ease forwards}
+.card-exit-timeout{animation:cardOutTimeout .3s ease forwards}
+.card-shake{animation:cardShakeAnim .35s ease}
+
+/* ═══ RESULTS ═══ */
+#results-screen{justify-content:flex-start;overflow-y:auto;padding:0}
+#results-screen::-webkit-scrollbar{width:3px}
+#results-screen::-webkit-scrollbar-thumb{background:var(--border2)}
+
+.res-header{width:100%;background:var(--s0);border-bottom:1px solid var(--border);
+  padding:14px 16px;flex-shrink:0}
+.res-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,7vw,42px);
+  letter-spacing:.06em;line-height:1}
+.res-grade{font-family:'JetBrains Mono',monospace;font-size:11px;
+  font-weight:600;padding:4px 14px;border-radius:20px;border:1.5px solid;
+  display:inline-block;margin-top:5px}
+
+.res-body{width:100%;padding:14px 16px;display:flex;flex-direction:column;gap:14px}
+.res-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rs{background:var(--s1);border:1px solid var(--border);border-radius:8px;
+  padding:10px 6px;text-align:center}
+.rs-val{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:.05em;line-height:1}
+.rs-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);
+  letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+
+/* trap profile */
+.profile-title{font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.15em;color:var(--text3);text-transform:uppercase;margin-bottom:8px}
+.profile-grid{display:flex;flex-direction:column;gap:6px}
+.profile-row{display:flex;align-items:center;gap:10px}
+.pr-topic{font-size:12px;font-weight:600;color:var(--text);min-width:130px}
+.pr-bar-wrap{flex:1;height:6px;background:var(--s3);border-radius:3px;overflow:hidden}
+.pr-bar{height:100%;border-radius:3px;transition:width .8s ease}
+.pr-pct{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text2);
+  min-width:32px;text-align:right}
+
+/* missed list */
+.missed-title{font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.15em;color:var(--text3);text-transform:uppercase;margin-bottom:8px}
+.missed-cards{display:flex;flex-direction:column;gap:6px}
+.mc{background:var(--s1);border-left:3px solid var(--trap);
+  border-radius:5px;padding:8px 12px;font-size:12px;line-height:1.5}
+.mc strong{display:block;color:var(--text);font-family:'JetBrains Mono',monospace;font-size:10px;
+  margin-bottom:3px;letter-spacing:.06em}
+.mc span{color:var(--ok);font-weight:600}
+
+.btn-again{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.1em;
+  color:#050810;background:linear-gradient(135deg,var(--trap),var(--amber));
+  border:none;padding:14px;border-radius:8px;cursor:pointer;width:100%;
+  box-shadow:0 0 24px rgba(255,77,26,.25);transition:transform .15s}
+.btn-again:hover{transform:translateY(-2px)}
+
+@media(max-width:380px){
+  .judge-btn{font-size:18px;padding:13px 8px}
+  .card-question{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<div id="fov"></div>
+
+<!-- ═══════════════ SPLASH ═══════════════ -->
+<div class="screen" id="splash">
+  <div class="sp-logo">TRAP<br>DEFUSER</div>
+  <div class="sp-sub">PedsIQ · Examiner Trap Intelligence · 48 cards</div>
+  <div class="sp-divider"></div>
+  <div class="sp-mechanic">
+    <strong>Hypercorrection effect:</strong> You are statistically more likely 
+    to remember a fact you confidently got wrong than one you passively read. 
+    Confident mistakes are the engine of durable memory.
+  </div>
+  <div class="sp-legend">
+    <div class="sp-leg trap">⚡ TRAP<small>swipe left or tap</small></div>
+    <div class="sp-leg ok">✓ CORRECT<small>swipe right or tap</small></div>
+  </div>
+  <div class="sp-stats">
+    <div><span>48</span>Cards</div>
+    <div><span>8s</span>Per card</div>
+    <div><span>9</span>Topics</div>
+  </div>
+  <button class="btn-defuse" id="startBtn">DEFUSE NOW</button>
+</div>
+
+<!-- ═══════════════ GAME ═══════════════ -->
+<div class="screen hidden" id="game-screen">
+  <div id="hud">
+    <div>
+      <div class="hud-score" id="hudScore">0</div>
+      <div class="hud-lbl">Score</div>
+    </div>
+    <div class="hud-center">
+      <div class="hud-qnum" id="hudQ">1 / 48</div>
+      <div class="hud-progress" id="hudProgress">0 correct</div>
+    </div>
+    <div class="hud-streak">
+      <div class="hud-streak-val" id="hudStreak">0🔥</div>
+      <div class="hud-lbl" style="text-align:right">Streak</div>
+    </div>
+  </div>
+  <div id="timer-wrap"><div id="timer-fill"></div></div>
+
+  <div id="card-area">
+    <div id="card">
+      <div class="card-inner">
+        <div class="card-topic">
+          <div class="topic-badge" id="cardTopic" style="color:#FFB020;border-color:rgba(255,176,32,.3)">—</div>
+        </div>
+        <div class="card-question" id="cardQ">—</div>
+        <div class="swipe-hint trap">⚡ TRAP</div>
+        <div class="swipe-hint ok">✓ CORRECT</div>
+      </div>
+    </div>
+    <div id="feedback">
+      <div class="fb-box" id="fbBox">
+        <div class="fb-verdict" id="fbVerdict">—</div>
+        <div class="fb-truth" id="fbTruth">—</div>
+        <div class="fb-explain" id="fbExplain">—</div>
+        <div class="fb-marks" id="fbMarks">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="btn-row">
+    <button class="judge-btn trap-btn" id="trapBtn">⚡ TRAP<small>swipe left</small></button>
+    <button class="judge-btn ok-btn" id="okBtn">✓ CORRECT<small>swipe right</small></button>
+  </div>
+  <div id="swipe-hint-txt">swipe or tap to judge each clinical decision</div>
+</div>
+
+<!-- ═══════════════ RESULTS ═══════════════ -->
+<div class="screen hidden" id="results-screen">
+  <div class="res-header">
+    <div class="res-title" id="resTitle">—</div>
+    <div class="res-grade" id="resGrade">—</div>
+  </div>
+  <div class="res-body">
+    <div class="res-stats">
+      <div class="rs"><div class="rs-val" id="rsCorrect" style="color:var(--ok)">—</div><div class="rs-lbl">Correct</div></div>
+      <div class="rs"><div class="rs-val" id="rsWrong" style="color:var(--trap)">—</div><div class="rs-lbl">Wrong</div></div>
+      <div class="rs"><div class="rs-val" id="rsStreak" style="color:var(--violet)">—</div><div class="rs-lbl">Best streak</div></div>
+    </div>
+
+    <div>
+      <div class="profile-title">Your Trap Profile — accuracy by topic</div>
+      <div class="profile-grid" id="profileGrid"></div>
+    </div>
+
+    <div id="missedSection">
+      <div class="missed-title" id="missedLabel">Traps that caught you:</div>
+      <div class="missed-cards" id="missedList"></div>
+    </div>
+
+    <button class="btn-again" id="restartBtn">DEFUSE AGAIN</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+// DATA — 48 cards, 9 topics
+// ══════════════════════════════════════════════════
+const CARDS = [
+  // ── AGN / PSGN ──
+  {topic:'AGN / PSGN',isTrap:true,
+   q:'Give <strong>prednisolone 2 mg/kg/day</strong> for acute PSGN to suppress the immune-mediated glomerular inflammation.',
+   truth:'❌ TRAP — NO steroids in APSGN',
+   exp:'APSGN is self-limiting. Steroids are not only ineffective but potentially harmful. Prescribing them in the exam = instant −2 marks.',
+   marks:'−2 marks in KUHS exam'},
+  {topic:'AGN / PSGN',isTrap:true,
+   q:'First-line antihypertensive for acute hypertension in AGN is <strong>Enalapril (ACE inhibitor)</strong>.',
+   truth:'❌ TRAP — First-line is Nifedipine (CCB)',
+   exp:'ACE inhibitors worsen hyperkalaemia and can precipitate AKI in the setting of low GFR in AGN. First-line = Nifedipine.',
+   marks:'−1 mark if you write ACEi'},
+  {topic:'AGN / PSGN',isTrap:true,
+   q:'Use <strong>Furosemide</strong> as first-line therapy for hypertension in PSGN.',
+   truth:'❌ TRAP — Furosemide = fluid overload only',
+   exp:'Furosemide is for fluid overload management, not blood pressure control. HTN → Nifedipine. Fluid overload → Furosemide. Mixing these is a classic -1.',
+   marks:'Common -1 mark error'},
+  {topic:'AGN / PSGN',isTrap:false,
+   q:'A 22 kg child with PSGN needs Strep eradication. Give <strong>Benzathine Penicillin G 600,000 U IM</strong> as a single dose.',
+   truth:'✓ CORRECT — Weight <27 kg → 600,000 U',
+   exp:'The exact threshold is 27 kg. Below = 600K U. At or above = 1.2 million U. Always state the weight threshold explicitly in the exam.',
+   marks:'+0.5M for correct dose + threshold'},
+  {topic:'AGN / PSGN',isTrap:true,
+   q:'C3 complement is still low at <strong>8 weeks</strong> post-PSGN. Reassure the family — this is within the expected recovery range.',
+   truth:'❌ TRAP — Investigate for MPGN',
+   exp:'C3 should normalise by 6–8 weeks post-PSGN. Persistent low C3 beyond 8–12 weeks = MPGN until proven otherwise. Reassurance here is dangerous.',
+   marks:'High-yield distinction vs MPGN'},
+  {topic:'AGN / PSGN',isTrap:false,
+   q:'A child has haematuria with <strong>normal C3, normal C4</strong>, and onset 2 days after a throat infection. Diagnose <strong>IgA nephropathy</strong>.',
+   truth:'✓ CORRECT — Short latent + normal C3 = IgA',
+   exp:'IgA nephropathy: synpharyngitic (1–3 days), normal complement. PSGN: latent 10–21 days, low C3. Timing + C3 distinguish them.',
+   marks:'Normal C3 + haematuria = IgA, not PSGN'},
+
+  // ── Nephrotic Syndrome ──
+  {topic:'Nephrotic Syndrome',isTrap:true,
+   q:'<strong>Restrict protein intake</strong> in nephrotic syndrome to reduce urinary protein loss.',
+   truth:'❌ TRAP — Normal protein intake is essential',
+   exp:'NS patients are protein-depleted from urinary losses. Restriction worsens malnutrition. Only salt restriction during oedema phase. Protein restriction = −1 mark.',
+   marks:'Protein restriction = wrong, always'},
+  {topic:'Nephrotic Syndrome',isTrap:false,
+   q:'First episode NS in a 4-year-old: start <strong>Prednisolone 2 mg/kg/day (max 60 mg/day)</strong> for 6 weeks.',
+   truth:'✓ CORRECT — Phase 1 ISKD protocol',
+   exp:'2 mg/kg/day × 6 weeks is Phase 1. Max cap 60 mg regardless of weight. Then 1.5 mg/kg alternate days × 6 weeks = total 12 weeks.',
+   marks:'+1M for correct dose, max, and duration'},
+  {topic:'Nephrotic Syndrome',isTrap:true,
+   q:'A 42 kg child with NS should receive <strong>84 mg/day prednisolone</strong> (calculated as 2 mg/kg × 42 kg).',
+   truth:'❌ TRAP — Maximum cap is 60 mg/day',
+   exp:'2 × 42 = 84 mg calculates correctly but the maximum is capped at 60 mg/day regardless of weight. Never ignore the cap.',
+   marks:'Forgetting the cap = −1 mark'},
+  {topic:'Nephrotic Syndrome',isTrap:false,
+   q:'Serum <strong>C3 is low</strong> in a child presenting with first-episode NS. Perform a <strong>renal biopsy before starting steroids</strong>.',
+   truth:'✓ CORRECT — Low C3 = biopsy first',
+   exp:'Low C3 suggests MPGN or membranous GN, not MCD. Starting steroids on MPGN without biopsy gives false response data. Biopsy before steroids if C3 is low.',
+   marks:'Low C3 + NS = biopsy, not empirical steroids'},
+  {topic:'Nephrotic Syndrome',isTrap:true,
+   q:'Use <strong>ACE inhibitor (Enalapril)</strong> as first-line treatment for acute hypertension in nephrotic syndrome.',
+   truth:'❌ TRAP — First-line acute HTN = CCB (Amlodipine)',
+   exp:'ACEi are appropriate for persistent HTN/proteinuria (chronic), NOT acute HTN. Acute HTN in NS → CCB (Amlodipine). ACEi for chronic persistent HTN/proteinuria.',
+   marks:'Acute vs chronic HTN — the indication matters'},
+  {topic:'Nephrotic Syndrome',isTrap:false,
+   q:'NS child with <strong>cold peripheries, tachycardia, and hypotension</strong> (hypovolaemia): give <strong>25% albumin 0.5–1.0 g/kg IV</strong>.',
+   truth:'✓ CORRECT — Albumin for hypovolaemia',
+   exp:'Hypovolaemia despite oedema is the paradox of NS. Signs: cold peripheries, tachycardia, low BP. Treatment: 25% albumin 0.5–1.0 g/kg IV over 1–2 h + loop diuretic after.',
+   marks:'+0.5M for correct indication and dose'},
+  {topic:'Nephrotic Syndrome',isTrap:true,
+   q:'Give <strong>25% albumin infusion</strong> to a stable NS child to help mobilise and treat generalised oedema.',
+   truth:'❌ TRAP — Albumin is for hypovolaemia only',
+   exp:'Albumin given for routine oedema (without hypovolaemia) expands plasma volume abruptly → pulmonary oedema. Only use for documented hypovolaemia.',
+   marks:'Wrong indication = can be fatal'},
+  {topic:'Nephrotic Syndrome',isTrap:true,
+   q:'Phase 2 of NS steroid protocol is <strong>1 mg/kg alternate days</strong> for 6 weeks.',
+   truth:'❌ TRAP — Phase 2 = 1.5 mg/kg alternate days',
+   exp:'Phase 1: 2 mg/kg/day × 6 weeks. Phase 2: 1.5 mg/kg alternate days × 6 weeks. Total 12 weeks. 1 mg/kg alternate days is a common confusion — wrong dose.',
+   marks:'1.5 not 1.0 — very commonly confused'},
+
+  // ── DKA ──
+  {topic:'DKA',isTrap:false,
+   q:'Serum K⁺ = <strong>3.0 mEq/L</strong> in a child with DKA before insulin is started. <strong>Hold insulin and correct potassium first.</strong>',
+   truth:'✓ CORRECT — K⁺ <3.3 = hold insulin',
+   exp:'Insulin drives K⁺ intracellularly. If already hypokalaemic (K⁺ <3.3), starting insulin causes fatal arrhythmia. Must correct K⁺ first, then start insulin when ≥3.3.',
+   marks:'Single most dangerous DKA decision'},
+  {topic:'DKA',isTrap:true,
+   q:'Give <strong>insulin 0.1 U/kg IV bolus</strong> at the start of DKA management to rapidly bring down blood glucose.',
+   truth:'❌ TRAP — NEVER bolus insulin in paediatric DKA',
+   exp:'IV bolus → rapid osmotic shift → cerebral oedema. Only give insulin as a continuous infusion (0.05–0.1 U/kg/hr), started after 1–2 h of fluid resuscitation.',
+   marks:'IV bolus = cerebral oedema risk'},
+  {topic:'DKA',isTrap:true,
+   q:'Replace the DKA fluid deficit over <strong>24 hours</strong> using 0.45% NaCl + KCl.',
+   truth:'❌ TRAP — Deficit replaced over 48 hours',
+   exp:'Rapid replacement (24 h) increases the osmotic gradient that drives cerebral oedema. Standard protocol: replace deficit over 48 hours. 24 hours = wrong.',
+   marks:'48 h, NOT 24 h — tested directly in MCQs'},
+  {topic:'DKA',isTrap:false,
+   q:'Blood glucose in DKA falls to <strong>210 mg/dL</strong>. <strong>Add dextrose to IV fluids and continue the insulin infusion.</strong>',
+   truth:'✓ CORRECT — Add dextrose, keep insulin running',
+   exp:'Insulin must continue until acidosis resolves (pH >7.30, HCO₃ >18), not just until glucose normalises. Add dextrose to prevent hypoglycaemia while ketosis clears.',
+   marks:'Stop insulin early = ketosis persists'},
+  {topic:'DKA',isTrap:true,
+   q:'Blood glucose has normalised in DKA. <strong>Stop the insulin infusion</strong> now.',
+   truth:'❌ TRAP — Continue insulin until acidosis resolves',
+   exp:'Insulin resolves ketoacidosis, not hyperglycaemia. Continue infusion until pH >7.30 AND HCO₃ >18 mEq/L. Stopping at glucose normalisation leaves the child acidotic.',
+   marks:'Stop insulin = DKA recurrence'},
+  {topic:'DKA',isTrap:false,
+   q:'DKA child develops headache, bradycardia, and altered consciousness. Give <strong>Mannitol 0.5–1 g/kg IV</strong> immediately.',
+   truth:'✓ CORRECT — Cerebral oedema protocol',
+   exp:'Classic cerebral oedema triad. Treatment: Mannitol 0.5–1 g/kg IV OR 3% NaCl 5–10 mL/kg, reduce fluid rate, elevate head 30°. Both mannitol and 3% NaCl are valid.',
+   marks:'Know BOTH mannitol and 3% NaCl'},
+  {topic:'DKA',isTrap:true,
+   q:'Start the <strong>insulin infusion simultaneously with IV fluids</strong> from the beginning of DKA management.',
+   truth:'❌ TRAP — Fluids first for 1–2 hours before insulin',
+   exp:'Start 0.9% NS resuscitation first for 1–2 h. Then check K⁺. Then start insulin at 0.05–0.1 U/kg/hr. Starting insulin simultaneously causes rapid osmotic shift.',
+   marks:'Sequence matters: fluids → K⁺ check → insulin'},
+
+  // ── Dehydration / Diarrhoea ──
+  {topic:'Dehydration',isTrap:false,
+   q:'Some dehydration (Plan B): give <strong>ORS 75 mL/kg over 4 hours</strong> orally in clinic.',
+   truth:'✓ CORRECT — Plan B = 75 mL/kg / 4 h ORS',
+   exp:'Plan A: ORS freely at home. Plan B: 75 mL/kg × 4 h in clinic. Plan C: IV RL for severe dehydration. This exact volume and duration are frequently swapped in MCQs.',
+   marks:'75 mL/kg / 4 h — not 50, not 100'},
+  {topic:'Dehydration',isTrap:true,
+   q:'Severe dehydration, child aged 3 years (Plan C): give <strong>Ringer\'s Lactate 30 mL/kg over 1 hour</strong>.',
+   truth:'❌ TRAP — Child 1–5 yr = 30 mL/kg over 30 MIN',
+   exp:'1 hour is for INFANTS (<12 months). Child (1–5 years) = 30 mL/kg over 30 MINUTES. The same volume, different time — age determines the rate.',
+   marks:'Most common Plan C error — age-rate trap'},
+  {topic:'Dehydration',isTrap:false,
+   q:'Severe dehydration, infant aged 8 months (Plan C): give <strong>Ringer\'s Lactate 30 mL/kg over 1 hour</strong>.',
+   truth:'✓ CORRECT — Infant <12 months = 1 hour',
+   exp:'<12 months = 30 mL/kg over 1 HOUR. Child 1–5 years = 30 mL/kg over 30 MIN. The age cutoff at 12 months determines the infusion rate.',
+   marks:'Age determines infusion duration'},
+  {topic:'Dehydration',isTrap:true,
+   q:'A 4-month-old with acute diarrhoea needs zinc supplementation. Give <strong>zinc 20 mg/day</strong>.',
+   truth:'❌ TRAP — Infant <6 months = 10 mg/day',
+   exp:'Zinc dosing has an age cutoff at 6 months. <6 months = 10 mg/day. ≥6 months = 20 mg/day. A 4-month-old gets 10 mg/day. 20 mg/day is wrong.',
+   marks:'Age cutoff at 6 months — very frequently tested'},
+  {topic:'Dehydration',isTrap:false,
+   q:'A 10-month-old with acute diarrhoea: give <strong>zinc 20 mg/day for 10–14 days</strong>.',
+   truth:'✓ CORRECT — ≥6 months = 20 mg/day',
+   exp:'≥6 months = 20 mg/day × 10–14 days. Zinc reduces duration and severity. <6 months = 10 mg/day. This is one of the most tested dose thresholds in KUHS peds.',
+   marks:'Correct dose for age ≥6 months'},
+  {topic:'Dehydration',isTrap:true,
+   q:'Severe dehydration Plan C: after giving 30 mL/kg bolus, the child is improving. Give the remaining <strong>70 mL/kg over 2.5 hours</strong>.',
+   truth:'❌ TRAP — Phase 2 = 70 mL/kg over 5 hours',
+   exp:'Phase 2 in Plan C = 70 mL/kg over 5 hours, not 2.5. Halving the time doubles the rate — this is too fast and risks fluid overload.',
+   marks:'70 mL/kg / 5 h — the full Plan C sequence'},
+
+  // ── Rickets ──
+  {topic:'Rickets',isTrap:true,
+   q:'Nutritional rickets treatment: <strong>Vitamin D3 2000–4000 IU/day alone</strong> is sufficient for full mineralisation.',
+   truth:'❌ TRAP — Elemental calcium is mandatory alongside',
+   exp:'Vitamin D increases Ca/PO4 absorption, but you must also supplement elemental calcium 50–100 mg/kg/day. Without calcium, the osteoid cannot mineralise. Vit D alone is insufficient.',
+   marks:'Forgetting calcium = incomplete answer'},
+  {topic:'Rickets',isTrap:false,
+   q:'Stoss therapy for non-compliant family: give <strong>Vitamin D3 150,000–300,000 IU orally as a single dose</strong>.',
+   truth:'✓ CORRECT — Stoss dose range',
+   exp:'Stoss = single oral mega-dose for compliance issues. Range: 150,000–300,000 IU. Repeat at 3 months if needed. 50K IU is too low; 600K IU is excessive and risky.',
+   marks:'150K–300K IU single dose — know the range'},
+  {topic:'Rickets',isTrap:true,
+   q:'XLH (familial hypophosphataemia): treat with <strong>high-dose cholecalciferol (Vitamin D3)</strong> to correct the deficiency.',
+   truth:'❌ TRAP — XLH needs phosphate + calcitriol, not Vit D3',
+   exp:'XLH is a phosphate-wasting disorder (PHEX/FGF23), not vitamin D deficiency. Treatment: oral phosphate supplements + calcitriol. Cholecalciferol alone = wrong drug target.',
+   marks:'XLH ≠ Vit D deficiency — completely different treatment'},
+  {topic:'Rickets',isTrap:false,
+   q:'Early nutritional rickets: serum calcium is <strong>normal</strong>. This is expected and consistent with the diagnosis.',
+   truth:'✓ CORRECT — PTH rises first, maintains Ca',
+   exp:'PTH rises first (before calcium falls) to compensate for reduced absorption. Early rickets = normal calcium. Low calcium is a LATE finding. Examiners test this frequently.',
+   marks:'PTH rises first — normal Ca is expected early'},
+  {topic:'Rickets',isTrap:true,
+   q:'Treatment dose for nutritional rickets: <strong>400 IU/day of Vitamin D3</strong> for 6–12 weeks.',
+   truth:'❌ TRAP — 400 IU/day is prevention, not treatment',
+   exp:'400 IU/day is the prevention/maintenance dose. Treatment requires 2000–4000 IU/day × 6–12 weeks. The doses are 5–10× different. Writing 400 IU for treatment = wrong.',
+   marks:'Prevention ≠ treatment dose — classic confusion'},
+  {topic:'Rickets',isTrap:true,
+   q:'X-ray shows <strong>white line of Fraenkel</strong> at the zone of provisional calcification. Diagnose rickets.',
+   truth:'❌ TRAP — White line of Fraenkel = Scurvy',
+   exp:'White line of Fraenkel = Scurvy (vitamin C deficiency). Rickets shows cupping, fraying, and splaying of the metaphysis. These X-ray signs are directly swapped in MCQs.',
+   marks:'Fraenkel line = Scurvy. Cupping/fraying = Rickets'},
+
+  // ── HUS ──
+  {topic:'HUS',isTrap:true,
+   q:'STEC E. coli O157:H7 confirmed in a child with HUS. Start <strong>ceftriaxone IV</strong> to clear the infection.',
+   truth:'❌ TRAP — Antibiotics are contraindicated in STEC-HUS',
+   exp:'Antibiotics (especially fluoroquinolones and beta-lactams) trigger increased Shiga toxin release from dying bacteria → worsens endothelial damage and HUS severity. No antibiotics.',
+   marks:'No antibiotics in STEC-HUS — major trap'},
+  {topic:'HUS',isTrap:false,
+   q:'STEC-confirmed HUS: <strong>withhold all antibiotics</strong> and manage supportively.',
+   truth:'✓ CORRECT — Antibiotics contraindicated in STEC-HUS',
+   exp:'Supportive care only: fluids, dialysis if needed, BP management, transfuse if Hb <7. Exception: pneumococcal HUS (non-STEC) — antibiotics ARE indicated in that variant.',
+   marks:'Know the exception: pneumococcal HUS'},
+  {topic:'HUS',isTrap:false,
+   q:'Starting eculizumab for aHUS: <strong>vaccinate against Neisseria meningitidis before the first dose</strong>.',
+   truth:'✓ CORRECT — Meningococcal vaccine mandatory',
+   exp:'Eculizumab blocks terminal complement (C5). This removes the primary defence against N. meningitidis. Vaccination is mandatory before starting. No exceptions.',
+   marks:'C5 block = meningococcal vulnerability — always vaccinate first'},
+
+  // ── Congenital Hypothyroidism ──
+  {topic:'Congenital Hypothyroidism',isTrap:true,
+   q:'Newborn screening for congenital hypothyroidism should be performed on <strong>day 1 of life</strong>.',
+   truth:'❌ TRAP — Screening is at day 3–5',
+   exp:'Physiological TSH surge occurs at birth. Testing on day 1 gives false-positive results. Optimal screening window: day 3–5 of life (after the surge settles).',
+   marks:'Day 3–5, not day 1 — physiological surge'},
+  {topic:'Congenital Hypothyroidism',isTrap:false,
+   q:'Newborn CH screening at day 3–5 shows TSH 45 mIU/L. Confirm with <strong>serum TSH + free T4</strong> and start levothyroxine within 2 weeks of life.',
+   truth:'✓ CORRECT — Confirm + treat within 2 weeks',
+   exp:'Screening TSH >20–40 mIU/L = abnormal. Confirm with serum TSH + free T4. Start L-thyroxine 10–15 mcg/kg/day within 2 weeks of life for normal neurodevelopment.',
+   marks:'2 weeks = critical window for brain development'},
+  {topic:'Congenital Hypothyroidism',isTrap:true,
+   q:'Crush the levothyroxine tablet and administer it <strong>with calcium supplement</strong> for better bioavailability.',
+   truth:'❌ TRAP — Calcium reduces levothyroxine absorption',
+   exp:'Calcium, soy formula, and iron all significantly reduce levothyroxine absorption. Give separately, at least 4 hours apart. Giving together = subtherapeutic levels.',
+   marks:'Soy + iron + calcium all reduce T4 absorption'},
+  {topic:'Congenital Hypothyroidism',isTrap:true,
+   q:'A 3-week-old has congenital hypothyroidism. Expected neonatal features include <strong>short stature</strong> and <strong>intellectual disability</strong>.',
+   truth:'❌ TRAP — These are CHILDHOOD features if untreated',
+   exp:'In the neonatal period: prolonged jaundice, hypotonia, constipation, large fontanelle, hoarse cry, macroglossia, umbilical hernia. Short stature and ID develop later if untreated.',
+   marks:'Examiner explicitly tests neonatal vs childhood features'},
+
+  // ── Testicular Torsion ──
+  {topic:'Testicular Torsion',isTrap:true,
+   q:'A 14-year-old has sudden severe scrotal pain with absent cremasteric reflex. <strong>Wait for Doppler ultrasound result</strong> before proceeding to theatre.',
+   truth:'❌ TRAP — Do NOT wait for imaging if suspicion is high',
+   exp:'<6 hours = >90% testicular salvage. >24 hours = <10%. Doppler takes time. If clinical suspicion is high (sudden pain + absent cremasteric + normal urine) → go to theatre immediately.',
+   marks:'Time is testicle — do not delay for imaging'},
+  {topic:'Testicular Torsion',isTrap:false,
+   q:'During surgery for right testicular torsion: after detorsion and confirming viability, perform <strong>bilateral orchidopexy</strong>.',
+   truth:'✓ CORRECT — Fix both testes, not just the affected side',
+   exp:'The anatomical predisposition (bell-clapper deformity) is bilateral in ~50% of cases. Fixing only the affected side leaves the contralateral testis at risk of torsion. Always fix both.',
+   marks:'Bilateral fixation — always, always'},
+  {topic:'Testicular Torsion',isTrap:true,
+   q:'A <strong>blue dot sign</strong> at the upper pole of the testis is pathognomonic for testicular torsion — emergency surgery is required.',
+   truth:'❌ TRAP — Blue dot sign = torsion of testicular appendage',
+   exp:'Blue dot = torsion of the appendix testis (hydatid of Morgagni), NOT testicular torsion. Management is conservative (analgesia, NSAIDs). Testicular torsion has absent cremasteric + no blue dot.',
+   marks:'Blue dot ≠ testicular torsion — very different management'},
+
+  // ── Complement / Labs ──
+  {topic:'Haematuria / Labs',isTrap:false,
+   q:'Urine microscopy shows <strong>RBC casts</strong>. This is pathognomonic for glomerular haematuria.',
+   truth:'✓ CORRECT — RBC casts = glomerular, always',
+   exp:'RBC casts form when RBCs trapped in Tamm-Horsfall protein in the tubules — only possible if RBCs enter at the glomerular level. Pathognomonic = glomerular until proven otherwise.',
+   marks:'RBC casts = glomerular — no exceptions'},
+  {topic:'Haematuria / Labs',isTrap:false,
+   q:'Haematuria with <strong>clots in urine</strong>: this indicates non-glomerular bleeding.',
+   truth:'✓ CORRECT — Clots = non-glomerular',
+   exp:'Glomerular haematuria does not form clots — RBCs are fragmented and diluted too much. Clots indicate brisk non-glomerular bleeding: stones, tumour, trauma, coagulopathy.',
+   marks:'Clots = non-glomerular — always'},
+  {topic:'Haematuria / Labs',isTrap:true,
+   q:'Child with haematuria 2 days after a throat infection, <strong>C3 is normal, C4 is normal</strong>. Diagnose PSGN.',
+   truth:'❌ TRAP — Normal C3 + short latent = IgA nephropathy',
+   exp:'PSGN: 10–21 day latent period + LOW C3. IgA nephropathy: 1–3 day synpharyngitic onset + NORMAL complement. Normal C3/C4 with haematuria = IgA, not PSGN.',
+   marks:'Normal C3 + haematuria ≠ PSGN'},
+
+  // ── Portal HTN ──
+  {topic:'Portal Hypertension',isTrap:false,
+   q:'Acute variceal bleeding: target haemoglobin of <strong>7–8 g/dL</strong> with transfusion — do not exceed this.',
+   truth:'✓ CORRECT — Restrictive transfusion strategy',
+   exp:'Over-transfusion raises portal venous pressure → increases rebleeding risk significantly. Target Hb 7–8 g/dL only. This is counter-intuitive but well-established.',
+   marks:'Restrictive strategy — counter-intuitive high-yield'},
+  {topic:'Portal Hypertension',isTrap:true,
+   q:'Acute variceal bleeding: transfuse to <strong>Hb 10–12 g/dL</strong> to maintain haemodynamic stability.',
+   truth:'❌ TRAP — Over-transfusion raises portal pressure',
+   exp:'Transfusing to Hb 10–12 in variceal bleeding expands blood volume → raises portal venous pressure → dramatically increases rebleeding risk. Target 7–8 g/dL only.',
+   marks:'Over-transfusion = rebleed — a genuinely dangerous error'},
+
+  // ── Biliary Atresia ──
+  {topic:'Biliary Atresia',isTrap:false,
+   q:'Kasai portoenterostomy should be performed <strong>before 60 days of age</strong> for optimal outcome.',
+   truth:'✓ CORRECT — <60 days = 50–60% success rate',
+   exp:'Before 60 days: 50–60% achieve bile drainage. 60–90 days: success drops sharply. >90 days: <20% success. The 60-day target is the single most important prognostic factor in biliary atresia.',
+   marks:'60 days = the critical target, not 90'},
+  {topic:'Biliary Atresia',isTrap:true,
+   q:'Kasai portoenterostomy at <strong>90 days of age</strong> gives outcomes equivalent to surgery performed at 60 days.',
+   truth:'❌ TRAP — 90 days has dramatically worse outcomes',
+   exp:'60 days = 50–60% success. 90 days = <20–30% success. The window narrows rapidly after 60 days due to progressive hepatic fibrosis. 90 days is the outer limit, not the equivalent.',
+   marks:'60 ≠ 90 days — major prognostic difference'},
+];
+
+// ══════════════════════════════════════════════════
+// TOPIC COLOURS
+// ══════════════════════════════════════════════════
+const TOPIC_COLORS = {
+  'AGN / PSGN':         {c:'#FFB020',b:'rgba(255,176,32,.2)'},
+  'Nephrotic Syndrome': {c:'#22D3EE',b:'rgba(34,211,238,.2)'},
+  'DKA':                {c:'#F87171',b:'rgba(248,113,113,.2)'},
+  'Dehydration':        {c:'#34D399',b:'rgba(52,211,153,.2)'},
+  'Rickets':            {c:'#A78BFA',b:'rgba(167,139,250,.2)'},
+  'HUS':                {c:'#FB923C',b:'rgba(251,146,60,.2)'},
+  'Congenital Hypothyroidism':{c:'#F472B6',b:'rgba(244,114,182,.2)'},
+  'Testicular Torsion': {c:'#60A5FA',b:'rgba(96,165,250,.2)'},
+  'Haematuria / Labs':  {c:'#E879F9',b:'rgba(232,121,249,.2)'},
+  'Portal Hypertension':{c:'#FBBF24',b:'rgba(251,191,36,.2)'},
+  'Biliary Atresia':    {c:'#6EE7B7',b:'rgba(110,231,183,.2)'},
+};
+
+// ══════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════
+const G = {
+  deck: [], idx: 0,
+  score: 0, streak: 0, maxStreak: 0,
+  correct: 0, wrong: 0,
+  answered: false,
+  timerInterval: null, timeLeft: 8,
+  missed: [],
+  topicStats: {}, // topic → {c, w}
+  // touch swipe
+  touchStartX: 0, touchStartY: 0, isDragging: false,
+};
+const TIMER_S = 8;
+
+const $ = id => document.getElementById(id);
+function shuf(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=0|Math.random()*(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
+function flashBg(col){const f=$('fov');f.style.background=col;f.style.opacity='1';setTimeout(()=>f.style.opacity='0',150);}
+function spop(x,y,txt,col){
+  const e=document.createElement('div');e.className='spop';
+  e.textContent=txt;e.style.cssText=`color:${col};left:${x}px;top:${y}px;font-size:22px`;
+  document.body.appendChild(e);setTimeout(()=>e.remove(),800);
+}
+function showScreen(...ids){
+  ['splash','game-screen','results-screen'].forEach(id=>$(id).classList.toggle('hidden',!ids.includes(id)));
+}
+
+// ══════════════════════════════════════════════════
+// TIMER
+// ══════════════════════════════════════════════════
+function startTimer(){
+  clearInterval(G.timerInterval);
+  G.timeLeft = TIMER_S;
+  const bar = $('timer-fill');
+  bar.style.width = '100%';
+  bar.style.backgroundColor = '';
+  G.timerInterval = setInterval(()=>{
+    G.timeLeft -= 0.1;
+    const pct = Math.max(0, G.timeLeft / TIMER_S * 100);
+    bar.style.width = pct + '%';
+    if(pct < 30) bar.style.background = 'linear-gradient(90deg,var(--trap),var(--amber))';
+    if(G.timeLeft <= 0){ clearInterval(G.timerInterval); handleTimeout(); }
+  }, 100);
+}
+function stopTimer(){ clearInterval(G.timerInterval); }
+
+// ══════════════════════════════════════════════════
+// CARD RENDER
+// ══════════════════════════════════════════════════
+function loadCard(){
+  G.answered = false;
+  hideFeedback();
+  lockBtns(false);
+
+  const card = G.deck[G.idx];
+  const tc = TOPIC_COLORS[card.topic] || {c:'#FFB020',b:'rgba(255,176,32,.2)'};
+
+  const badge = $('cardTopic');
+  badge.textContent = card.topic;
+  badge.style.color = tc.c;
+  badge.style.borderColor = tc.b;
+  badge.style.background = tc.b;
+
+  $('cardQ').innerHTML = card.q;
+
+  const el = $('card');
+  el.className = 'card-enter';
+  el.style.transform = '';
+  el.style.opacity = '';
+
+  $('hudQ').textContent = (G.idx+1) + ' / ' + G.deck.length;
+  $('hudProgress').textContent = G.correct + ' correct · ' + G.wrong + ' wrong';
+  $('hudScore').textContent = G.score.toLocaleString();
+  $('hudStreak').textContent = G.streak + '🔥';
+
+  startTimer();
+}
+
+// ══════════════════════════════════════════════════
+// ANSWER
+// ══════════════════════════════════════════════════
+function judge(calledTrap){
+  if(G.answered) return;
+  G.answered = true;
+  stopTimer();
+  lockBtns(true);
+
+  const card = G.deck[G.idx];
+  const isCorrect = (calledTrap === card.isTrap);
+
+  // track topic stats
+  if(!G.topicStats[card.topic]) G.topicStats[card.topic] = {c:0,w:0};
+  if(isCorrect){ G.topicStats[card.topic].c++; } else { G.topicStats[card.topic].w++; }
+
+  if(isCorrect){
+    const pts = 10 + Math.ceil(G.timeLeft * 1.5);
+    G.score += pts;
+    G.streak++;
+    if(G.streak > G.maxStreak) G.maxStreak = G.streak;
+    G.correct++;
+    flashBg(card.isTrap ? 'rgba(255,77,26,.08)' : 'rgba(0,217,126,.08)');
+    const cardEl = $('card');
+    cardEl.classList.remove('card-enter');
+    cardEl.classList.add(calledTrap ? 'card-exit-trap' : 'card-exit-ok');
+    showFeedback(true, card, pts);
+    spop(window.innerWidth/2, window.innerHeight/2 - 60, '+'+pts, '#FFB020');
+  } else {
+    G.streak = 0;
+    G.wrong++;
+    G.missed.push(card);
+    flashBg('rgba(255,77,26,.12)');
+    const cardEl = $('card');
+    cardEl.classList.remove('card-enter');
+    void cardEl.offsetWidth;
+    cardEl.classList.add('card-shake');
+    showFeedback(false, card, 0);
+  }
+  $('hudScore').textContent = G.score.toLocaleString();
+  $('hudStreak').textContent = G.streak + '🔥';
+  scheduleNext(isCorrect ? 2000 : 3000);
+}
+
+function handleTimeout(){
+  if(G.answered) return;
+  G.answered = true;
+  lockBtns(true);
+  G.streak = 0;
+  G.wrong++;
+  const card = G.deck[G.idx];
+  G.missed.push(card);
+  if(!G.topicStats[card.topic]) G.topicStats[card.topic] = {c:0,w:0};
+  G.topicStats[card.topic].w++;
+  flashBg('rgba(255,176,32,.1)');
+  const cardEl = $('card');
+  cardEl.classList.remove('card-enter');
+  cardEl.classList.add('card-exit-timeout');
+  showFeedback(false, card, 0, true);
+  $('hudStreak').textContent = '0🔥';
+  scheduleNext(3000);
+}
+
+function scheduleNext(delay){
+  setTimeout(()=>{
+    G.idx++;
+    if(G.idx >= G.deck.length){ showResults(); }
+    else{ loadCard(); }
+  }, delay);
+}
+
+// ══════════════════════════════════════════════════
+// FEEDBACK
+// ══════════════════════════════════════════════════
+function showFeedback(correct, card, pts, timeout=false){
+  const box = $('fbBox');
+  box.className = 'fb-box ' + (correct ? 'correct' : 'wrong');
+  $('fbVerdict').textContent = timeout ? '⏱ TIME\'S UP' : correct ? '✓ DEFUSED' : (card.isTrap ? '⚡ THAT WAS A TRAP' : '✗ THAT WAS CORRECT');
+  $('fbTruth').textContent = card.truth;
+  $('fbExplain').textContent = card.exp;
+  $('fbMarks').textContent = card.marks;
+  $('feedback').classList.add('show');
+}
+function hideFeedback(){ $('feedback').classList.remove('show'); }
+
+function lockBtns(lock){
+  $('trapBtn').classList.toggle('locked', lock);
+  $('okBtn').classList.toggle('locked', lock);
+}
+
+// ══════════════════════════════════════════════════
+// SWIPE
+// ══════════════════════════════════════════════════
+const cardEl = () => $('card');
+
+document.addEventListener('touchstart', e=>{
+  if(G.answered) return;
+  const t = e.touches[0];
+  G.touchStartX = t.clientX;
+  G.touchStartY = t.clientY;
+  G.isDragging = true;
+},{passive:true});
+
+document.addEventListener('touchmove', e=>{
+  if(!G.isDragging || G.answered) return;
+  const dx = e.touches[0].clientX - G.touchStartX;
+  const dy = e.touches[0].clientY - G.touchStartY;
+  if(Math.abs(dy) > Math.abs(dx) + 20) return; // scrolling, not swiping
+  const card = cardEl();
+  const rot = dx * 0.08;
+  card.style.transform = `translateX(${dx}px) rotate(${rot}deg)`;
+  card.style.transition = 'none';
+  card.classList.remove('dragging-trap','dragging-ok');
+  if(dx < -30) card.classList.add('dragging-trap');
+  if(dx > 30) card.classList.add('dragging-ok');
+},{passive:true});
+
+document.addEventListener('touchend', e=>{
+  if(!G.isDragging || G.answered) return;
+  G.isDragging = false;
+  const dx = e.changedTouches[0].clientX - G.touchStartX;
+  const card = cardEl();
+  card.style.transition = '';
+  card.classList.remove('dragging-trap','dragging-ok');
+  if(Math.abs(dx) > 90){
+    const isTrapSwipe = dx < 0;
+    judge(isTrapSwipe);
+  } else {
+    card.style.transform = '';
+  }
+},{passive:true});
+
+// ══════════════════════════════════════════════════
+// RESULTS
+// ══════════════════════════════════════════════════
+function showResults(){
+  showScreen('results-screen');
+  const total = G.deck.length;
+  const pct = Math.round(G.correct / total * 100);
+
+  let title, gradeTxt, gradeCol;
+  if(pct >= 90){ title = 'TRAP IMMUNE'; gradeTxt='Examiner cannot catch you · '+pct+'%'; gradeCol='var(--ok)'; }
+  else if(pct >= 75){ title = 'SHARP EYE'; gradeTxt='Solid performance · '+pct+'%'; gradeCol='#22D3EE'; }
+  else if(pct >= 55){ title = 'GETTING THERE'; gradeTxt='Review your weak topics · '+pct+'%'; gradeCol='var(--amber)'; }
+  else{ title = 'TRAPPED'; gradeTxt='Significant revision needed · '+pct+'%'; gradeCol='var(--trap)'; }
+
+  $('resTitle').textContent = title;
+  $('resGrade').textContent = gradeTxt;
+  $('resGrade').style.color = gradeCol;
+  $('resGrade').style.borderColor = gradeCol;
+  $('rsCorrect').textContent = G.correct;
+  $('rsWrong').textContent = G.wrong;
+  $('rsStreak').textContent = G.maxStreak;
+
+  // Trap profile
+  const grid = $('profileGrid');
+  grid.innerHTML = '';
+  // Only show topics that appeared
+  const topics = Object.keys(G.topicStats).sort((a,b)=>{
+    const pa = G.topicStats[a].c/(G.topicStats[a].c+G.topicStats[a].w);
+    const pb = G.topicStats[b].c/(G.topicStats[b].c+G.topicStats[b].w);
+    return pa - pb; // worst first
+  });
+  topics.forEach(t=>{
+    const s = G.topicStats[t];
+    const p = Math.round(s.c/(s.c+s.w)*100);
+    const tc = TOPIC_COLORS[t] || {c:'#FFB020'};
+    const row = document.createElement('div');
+    row.className = 'profile-row';
+    row.innerHTML = `
+      <div class="pr-topic">${t}</div>
+      <div class="pr-bar-wrap"><div class="pr-bar" style="width:0%;background:${tc.c}" data-w="${p}"></div></div>
+      <div class="pr-pct">${p}%</div>`;
+    grid.appendChild(row);
+  });
+  // Animate bars
+  setTimeout(()=>{
+    grid.querySelectorAll('.pr-bar').forEach(b=>{ b.style.width = b.dataset.w + '%'; });
+  }, 100);
+
+  // Missed
+  const ml = $('missedList');
+  ml.innerHTML = '';
+  const mLabel = $('missedLabel');
+  if(!G.missed.length){
+    mLabel.textContent = 'No traps caught you — perfect!';
+  } else {
+    mLabel.textContent = `Caught you ${G.missed.length} times — review:`;
+    // dedupe
+    const seen = new Set();
+    G.missed.forEach(card=>{
+      if(seen.has(card.q)) return; seen.add(card.q);
+      const d = document.createElement('div');
+      d.className = 'mc';
+      d.innerHTML = `<strong>${card.topic} — ${card.isTrap ? '⚡ TRAP' : '✓ CORRECT'}</strong>
+        ${card.truth}<br><span style="color:var(--text2);font-weight:400">${card.exp}</span>`;
+      ml.appendChild(d);
+    });
+  }
+}
+
+// ══════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════
+function startGame(){
+  G.deck = shuf([...CARDS]);
+  G.idx = 0; G.score = 0; G.streak = 0; G.maxStreak = 0;
+  G.correct = 0; G.wrong = 0; G.missed = []; G.topicStats = {};
+  G.answered = false;
+  showScreen('game-screen');
+  loadCard();
+}
+
+$('startBtn').addEventListener('click', startGame);
+$('restartBtn').addEventListener('click', startGame);
+$('trapBtn').addEventListener('click', ()=>judge(true));
+$('okBtn').addEventListener('click', ()=>judge(false));
+showScreen('splash');
+</script>
+</body>
+</html>

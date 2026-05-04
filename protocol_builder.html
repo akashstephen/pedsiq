@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Protocol Builder — PedsIQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;1,300&family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#06080F;--s0:#090D1A;--s1:#0C1222;--s2:#101830;--s3:#14203C;
+  --text:#C8D8EC;--text2:#5A7899;--text3:#243650;
+  --gold:#C9A84C;--gold2:#E8C96A;--teal:#1FB8C0;--red:#E05252;
+  --green:#3DBF8A;--violet:#8B6FE8;--border:#182640;--border2:#1F3254;
+  --slot-empty:#0D1628;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);
+  font-family:'DM Sans',sans-serif;color:var(--text);touch-action:manipulation}
+
+/* subtle grid */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 80% 40% at 50% 0%,rgba(31,184,192,.04) 0%,transparent 60%),
+    repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(31,184,192,.012) 60px),
+    repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(31,184,192,.012) 60px)}
+
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;z-index:10;
+  transition:opacity .3s,transform .3s;overflow:hidden}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(16px)}
+
+/* ═══════════════ SPLASH ═══════════════ */
+#splash{gap:20px;padding:24px;text-align:center}
+.sp-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.25em;color:var(--text3);text-transform:uppercase;
+  border:1px solid var(--border2);padding:4px 14px;border-radius:20px;display:inline-block}
+.sp-title{font-family:'Fraunces',serif;font-weight:700;
+  font-size:clamp(46px,12vw,76px);line-height:.9;letter-spacing:-.02em;color:var(--text)}
+.sp-title em{font-style:italic;color:var(--gold)}
+.sp-rule{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sp-desc{font-size:14px;color:var(--text2);max-width:330px;line-height:1.65}
+.neuro-pill{background:var(--s1);border:1px solid var(--border2);border-radius:9px;
+  padding:11px 16px;max-width:340px;font-size:12.5px;color:var(--text2);line-height:1.7;text-align:left}
+.neuro-pill strong{color:var(--teal)}
+.protocol-list{width:100%;max-width:340px;display:flex;flex-direction:column;gap:7px}
+.pl-item{background:var(--s1);border:1px solid var(--border2);border-radius:8px;
+  padding:10px 14px;display:flex;align-items:center;gap:12px;text-align:left}
+.pl-num{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;
+  width:22px;flex-shrink:0}
+.pl-name{font-size:13px;font-weight:600;color:var(--text)}
+.pl-steps{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text3);margin-top:2px}
+.btn-start{font-family:'Fraunces',serif;font-size:17px;font-weight:700;
+  letter-spacing:.02em;color:var(--bg);background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border:none;padding:14px 56px;border-radius:6px;cursor:pointer;
+  box-shadow:0 0 32px rgba(201,168,76,.3);transition:transform .15s,box-shadow .15s}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(201,168,76,.45)}
+
+/* ═══════════════ GAME ═══════════════ */
+#game-screen{justify-content:flex-start}
+
+/* Top bar */
+#topbar{width:100%;flex-shrink:0;display:flex;align-items:center;
+  justify-content:space-between;padding:9px 14px 7px;
+  background:rgba(6,8,15,.9);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);z-index:20}
+.tb-name{font-family:'Fraunces',serif;font-size:clamp(13px,3.5vw,16px);
+  font-weight:600;color:var(--text);max-width:200px;line-height:1.2}
+.tb-sub{font-family:'JetBrains Mono',monospace;font-size:9px;
+  color:var(--text3);letter-spacing:.1em;margin-top:2px}
+.tb-right{text-align:right}
+.tb-score{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--gold)}
+.tb-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);
+  letter-spacing:.1em;text-transform:uppercase;margin-top:1px}
+
+/* protocol progress bar */
+#progress-bar{width:100%;height:3px;background:var(--s3);flex-shrink:0;overflow:hidden}
+#progress-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));
+  transition:width .4s ease;box-shadow:0 0 8px var(--teal)}
+
+/* instruction bar */
+#instr-bar{width:100%;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;padding:5px 12px;background:var(--s0);
+  border-bottom:1px solid var(--border)}
+#instr-text{font-family:'JetBrains Mono',monospace;font-size:10px;
+  color:var(--text3);letter-spacing:.08em;text-align:center;line-height:1.4}
+#instr-text.active{color:var(--gold)}
+
+/* Main split layout */
+#main-layout{display:flex;flex:1;overflow:hidden;width:100%;min-height:0}
+
+/* LEFT: Algorithm slots */
+#slots-pane{width:55%;flex-shrink:0;overflow-y:auto;
+  padding:10px 8px 10px 10px;display:flex;flex-direction:column;gap:6px}
+#slots-pane::-webkit-scrollbar{width:3px}
+#slots-pane::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.divider-line{width:1px;background:var(--border);flex-shrink:0;margin:6px 0}
+
+/* RIGHT: Step bank */
+#bank-pane{flex:1;overflow-y:auto;padding:10px 10px 10px 8px;
+  display:flex;flex-direction:column;gap:5px}
+#bank-pane::-webkit-scrollbar{width:3px}
+#bank-pane::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.bank-header{font-family:'JetBrains Mono',monospace;font-size:9px;
+  letter-spacing:.15em;color:var(--text3);text-transform:uppercase;
+  padding-bottom:5px;border-bottom:1px solid var(--border);flex-shrink:0}
+
+/* Slot */
+.slot{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;
+  background:var(--slot-empty);border:1.5px dashed var(--border2);
+  border-radius:9px;cursor:pointer;transition:all .2s;min-height:52px;
+  position:relative;flex-shrink:0}
+.slot.target-mode:hover{border-color:var(--gold);background:rgba(201,168,76,.06);
+  box-shadow:0 0 12px rgba(201,168,76,.15)}
+.slot.filled{border-style:solid;border-color:var(--green);background:rgba(61,191,138,.05);cursor:default}
+.slot.filled:hover{border-color:var(--green);box-shadow:none}
+.slot.wrong-flash{animation:slotWrong .35s ease}
+.slot.correct-flash{animation:slotOk .45s ease}
+@keyframes slotWrong{0%,100%{}40%{background:rgba(224,82,82,.18);border-color:var(--red)}}
+@keyframes slotOk{0%{transform:scale(1)}40%{transform:scale(1.02)}100%{transform:scale(1)}}
+
+.slot-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;
+  color:var(--text3);width:18px;flex-shrink:0;padding-top:2px;line-height:1}
+.slot.filled .slot-num{color:var(--green)}
+.slot-content{flex:1;font-size:11.5px;color:var(--text2);line-height:1.45}
+.slot.filled .slot-content{color:var(--text)}
+.slot-empty-hint{font-family:'JetBrains Mono',monospace;font-size:9px;
+  color:var(--text3);font-style:italic}
+.slot-check{position:absolute;right:8px;top:8px;font-size:13px;
+  color:var(--green);opacity:0;transition:opacity .2s}
+.slot.filled .slot-check{opacity:1}
+
+/* flow connector */
+.slot-connector{display:flex;align-items:center;justify-content:flex-start;
+  padding:0 0 0 18px;height:14px;flex-shrink:0}
+.conn-line{width:1px;height:100%;background:var(--border2)}
+.conn-line.lit{background:var(--teal);box-shadow:0 0 4px var(--teal)}
+
+/* trap badge */
+.slot-trap{display:none;margin-top:5px;padding:5px 8px;
+  background:rgba(201,168,76,.08);border-left:2px solid var(--gold);
+  border-radius:3px;font-size:10px;color:var(--gold);line-height:1.45}
+.slot-trap::before{content:'⚠ '}
+.slot.filled .slot-trap{display:block}
+
+/* Step card */
+.step-card{background:var(--s2);border:1.5px solid var(--border2);
+  border-radius:9px;padding:9px 11px;cursor:pointer;
+  transition:all .15s;user-select:none;flex-shrink:0}
+.step-card:hover:not(.used):not(.selected){background:var(--s3);border-color:var(--border)}
+.step-card.selected{border-color:var(--gold);background:rgba(201,168,76,.08);
+  box-shadow:0 0 14px rgba(201,168,76,.2);transform:scale(1.02)}
+.step-card.used{opacity:0;pointer-events:none;transition:opacity .3s}
+.step-card.wrong-shake{animation:cardShake .3s ease}
+@keyframes cardShake{0%,100%{transform:translateX(0)}30%{transform:translateX(-7px)}70%{transform:translateX(7px)}}
+.step-card-text{font-size:11.5px;color:var(--text);line-height:1.45}
+.step-card-tag{font-family:'JetBrains Mono',monospace;font-size:8px;
+  letter-spacing:.1em;color:var(--text3);margin-top:3px;text-transform:uppercase}
+
+/* ═══════════════ COMPLETION ═══════════════ */
+#completion-overlay{position:fixed;inset:0;background:rgba(6,8,15,.88);
+  backdrop-filter:blur(10px);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;z-index:30;gap:16px;padding:24px;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .4s}
+#completion-overlay.show{opacity:1;pointer-events:all}
+.co-protocol{font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.2em;color:var(--teal);text-transform:uppercase}
+.co-title{font-family:'Fraunces',serif;font-size:clamp(28px,7vw,42px);
+  font-weight:700;color:var(--text)}
+.co-score{font-family:'JetBrains Mono',monospace;font-size:52px;
+  font-weight:700;color:var(--gold);text-shadow:0 0 24px rgba(201,168,76,.35);line-height:1}
+.co-sub{font-size:13px;color:var(--text2)}
+.co-stats{display:flex;gap:14px;justify-content:center}
+.cos{background:var(--s1);border:1px solid var(--border2);border-radius:8px;
+  padding:10px 16px;text-align:center}
+.cos-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700}
+.cos-lbl{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;
+  letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
+.co-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.co-btn{font-family:'Fraunces',serif;font-size:14px;font-weight:600;
+  border:none;padding:12px 28px;border-radius:6px;cursor:pointer;transition:transform .15s}
+.co-btn:hover{transform:translateY(-2px)}
+.co-btn-next{background:linear-gradient(135deg,var(--teal),var(--violet));color:#fff}
+.co-btn-review{background:var(--s2);border:1px solid var(--border2);color:var(--text)}
+
+/* ═══════════════ FINAL RESULTS ═══════════════ */
+#final-screen{gap:18px;padding:24px;text-align:center}
+.fin-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.2em;color:var(--text3);text-transform:uppercase}
+.fin-title{font-family:'Fraunces',serif;font-size:clamp(30px,8vw,50px);
+  font-weight:700;line-height:1}
+.fin-title em{font-style:italic;color:var(--gold)}
+.fin-score{font-family:'JetBrains Mono',monospace;font-size:72px;
+  font-weight:700;color:var(--gold);line-height:1;
+  text-shadow:0 0 30px rgba(201,168,76,.4)}
+.fin-sub{font-size:13px;color:var(--text2)}
+.fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:360px}
+.fg{background:var(--s1);border:1px solid var(--border);border-radius:8px;padding:10px 6px;text-align:center}
+.fg-val{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700}
+.fg-lbl{font-size:10px;color:var(--text3);font-family:'JetBrains Mono',monospace;letter-spacing:.08em;margin-top:2px}
+
+/* Score pop */
+.spop{position:fixed;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:18px;
+  pointer-events:none;z-index:50;animation:spopA .75s ease forwards}
+@keyframes spopA{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-60px)}}
+
+/* Flash overlay */
+#fov{position:fixed;inset:0;pointer-events:none;z-index:40;opacity:0;transition:opacity .08s}
+
+/* flow anim ripple */
+@keyframes ripple{0%{transform:scale(0.9);opacity:1}100%{transform:scale(2.5);opacity:0}}
+
+@media(max-width:420px){
+  #slots-pane{width:52%}
+  .slot-content{font-size:10.5px}
+  .step-card-text{font-size:10.5px}
+}
+</style>
+</head>
+<body>
+<div id="fov"></div>
+
+<!-- ═══════════════ SPLASH ═══════════════ -->
+<div class="screen" id="splash">
+  <div class="sp-eyebrow">PedsIQ · Protocol Reconstruction</div>
+  <div class="sp-title">Protocol<br><em>Builder</em></div>
+  <div class="sp-rule"></div>
+  <div class="sp-desc">Reconstruct each management algorithm from scratch. Empty slots on the left — scrambled steps on the right.</div>
+  <div class="neuro-pill">
+    <strong>Generation effect + spatial encoding.</strong> Constructing a structure 
+    encodes it spatially, not just verbally. Patients who build recall maps score 
+    ~35% higher than those who highlight. The act of placing each step creates 
+    a causal trace you simply cannot get from reading.
+  </div>
+  <div class="protocol-list">
+    <div class="pl-item">
+      <div class="pl-num" style="color:var(--red)">①</div>
+      <div><div class="pl-name">DKA Management</div><div class="pl-steps">10 steps · highest yield</div></div>
+    </div>
+    <div class="pl-item">
+      <div class="pl-num" style="color:var(--teal)">②</div>
+      <div><div class="pl-name">Nephrotic Syndrome — First Episode</div><div class="pl-steps">8 steps · steroid protocol + traps</div></div>
+    </div>
+    <div class="pl-item">
+      <div class="pl-num" style="color:var(--green)">③</div>
+      <div><div class="pl-name">Severe Dehydration — Plan C</div><div class="pl-steps">7 steps · IV fluid sequence</div></div>
+    </div>
+    <div class="pl-item">
+      <div class="pl-num" style="color:var(--gold)">④</div>
+      <div><div class="pl-name">AGN / PSGN Management</div><div class="pl-steps">7 steps · drug traps included</div></div>
+    </div>
+  </div>
+  <button class="btn-start" id="startBtn">BUILD PROTOCOLS →</button>
+</div>
+
+<!-- ═══════════════ GAME ═══════════════ -->
+<div class="screen hidden" id="game-screen">
+  <div id="topbar">
+    <div>
+      <div class="tb-name" id="tbName">—</div>
+      <div class="tb-sub" id="tbSub">—</div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-score" id="tbScore">0</div>
+      <div class="tb-label">Score</div>
+    </div>
+  </div>
+  <div id="progress-bar"><div id="progress-fill" style="width:0%"></div></div>
+  <div id="instr-bar"><div id="instr-text">Tap a step from the right bank, then tap the correct numbered slot</div></div>
+  <div id="main-layout">
+    <div id="slots-pane"></div>
+    <div class="divider-line"></div>
+    <div id="bank-pane">
+      <div class="bank-header">Step Bank — scrambled</div>
+      <div id="bank-cards"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Completion overlay -->
+<div id="completion-overlay">
+  <div class="co-protocol" id="coProtocol">—</div>
+  <div class="co-title" id="coTitle">—</div>
+  <div class="co-score" id="coScore">—</div>
+  <div class="co-sub" id="coSub">—</div>
+  <div class="co-stats">
+    <div class="cos"><div class="cos-val" id="cosCorrect" style="color:var(--green)">—</div><div class="cos-lbl">Correct</div></div>
+    <div class="cos"><div class="cos-val" id="cosWrong" style="color:var(--red)">—</div><div class="cos-lbl">Wrong tries</div></div>
+    <div class="cos"><div class="cos-val" id="cosPerfect" style="color:var(--gold)">—</div><div class="cos-lbl">Perfect</div></div>
+  </div>
+  <div class="co-buttons">
+    <button class="co-btn co-btn-next" id="coNextBtn">NEXT PROTOCOL →</button>
+    <button class="co-btn co-btn-review" id="coReviewBtn">REVIEW STEPS</button>
+  </div>
+</div>
+
+<!-- ═══════════════ FINAL ═══════════════ -->
+<div class="screen hidden" id="final-screen">
+  <div class="fin-eyebrow">All Protocols Complete</div>
+  <div class="fin-title">Well<br><em>done, Doctor.</em></div>
+  <div class="fin-score" id="finScore">—</div>
+  <div class="fin-sub" id="finSub">—</div>
+  <div class="fin-grid">
+    <div class="fg"><div class="fg-val" id="fgTotal" style="color:var(--green)">—</div><div class="fg-lbl">Correct</div></div>
+    <div class="fg"><div class="fg-val" id="fgWrong" style="color:var(--red)">—</div><div class="fg-lbl">Wrong</div></div>
+    <div class="fg"><div class="fg-val" id="fgPerfect" style="color:var(--gold)">—</div><div class="fg-lbl">Perfect steps</div></div>
+  </div>
+  <button class="btn-start" id="restartBtn" style="font-size:15px;padding:12px 44px">REBUILD ALL →</button>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+// DATA — 4 protocols from PedsIQ
+// ══════════════════════════════════════════
+const PROTOCOLS = [
+  {
+    id:'dka',
+    name:'DKA Management',
+    color:'#E05252',
+    sub:'10 steps · pH <7.3, glucose >200, HCO₃ <15',
+    steps:[
+      {
+        id:'d1',
+        text:'Confirm DKA: glucose >200 mg/dL + pH <7.3 + HCO₃ <15 mEq/L. Weigh child. Assess degree of dehydration (mild 5% / moderate 7% / severe 10%).',
+        tag:'Diagnosis + assessment',
+        trap:null
+      },
+      {
+        id:'d2',
+        text:'IV access × 2. Send labs: blood glucose, electrolytes (Na⁺, K⁺, Cl⁻), BGA, urine ketones, HbA1c, blood culture.',
+        tag:'Access + investigations',
+        trap:null
+      },
+      {
+        id:'d3',
+        text:'Fluid resuscitation: 0.9% Normal Saline 10–20 mL/kg IV over 1–2 hours. Do NOT start insulin yet.',
+        tag:'Fluid phase 1',
+        trap:'Start fluids BEFORE insulin. Do NOT give insulin in the first hour.'
+      },
+      {
+        id:'d4',
+        text:'Check serum potassium: if K⁺ <3.3 mEq/L → ADD potassium to fluids and HOLD insulin until K⁺ ≥3.3. If K⁺ >5.5 → hold potassium supplementation.',
+        tag:'Potassium check — critical',
+        trap:'K⁺ <3.3 = HOLD INSULIN. This is the most dangerous DKA error — insulin + hypokalaemia = fatal arrhythmia.'
+      },
+      {
+        id:'d5',
+        text:'Start insulin: Regular insulin 0.05–0.1 U/kg/hr IV continuous infusion. NEVER give insulin as a bolus in paediatric DKA.',
+        tag:'Insulin infusion',
+        trap:'NEVER bolus insulin. Continuous infusion only. Bolus → rapid osmotic shift → cerebral oedema.'
+      },
+      {
+        id:'d6',
+        text:'Replace total fluid deficit over 48 hours (NOT 24 hours) using 0.45% NaCl + KCl 20–40 mEq/L. Rapid replacement causes cerebral oedema.',
+        tag:'Fluid deficit replacement',
+        trap:'48 hours — NOT 24 hours. Students frequently write 24-hour replacement. That is wrong.'
+      },
+      {
+        id:'d7',
+        text:'When blood glucose falls to 200–250 mg/dL: ADD dextrose (D5 or D10) to IV fluids. Continue insulin infusion — do NOT stop it.',
+        tag:'Glucose at 200–250 mg/dL',
+        trap:'Do NOT stop insulin when glucose normalises. Insulin must continue until ACIDOSIS resolves (pH >7.30, HCO₃ >18). Add dextrose to prevent hypoglycaemia.'
+      },
+      {
+        id:'d8',
+        text:'Monitor closely every 1–2 hours: glucose, electrolytes, BGA. Watch for headache, bradycardia, altered consciousness (cerebral oedema warning signs).',
+        tag:'Monitoring',
+        trap:null
+      },
+      {
+        id:'d9',
+        text:'Cerebral oedema: Mannitol 0.5–1 g/kg IV OR 3% NaCl 5–10 mL/kg IV immediately. Reduce fluid rate. Elevate head of bed 30°.',
+        tag:'Cerebral oedema emergency',
+        trap:'Both mannitol AND 3% saline are valid — know both. Must also reduce fluid rate simultaneously.'
+      },
+      {
+        id:'d10',
+        text:'Transition to subcutaneous insulin when: acidosis fully resolved (pH >7.30, HCO₃ >18), tolerating oral feeds, glucose stable. Overlap SC and IV insulin by 30 min before stopping infusion.',
+        tag:'Transition to SC insulin',
+        trap:null
+      },
+    ]
+  },
+  {
+    id:'ns',
+    name:'Nephrotic Syndrome — First Episode',
+    color:'#1FB8C0',
+    sub:'8 steps · ISKD steroid protocol',
+    steps:[
+      {
+        id:'n1',
+        text:'Confirm nephrotic syndrome: urine P/C ratio >2.0 mg/mg (or >50 mg/kg/day protein) + serum albumin <2.5 g/dL + oedema.',
+        tag:'Confirmation criteria',
+        trap:null
+      },
+      {
+        id:'n2',
+        text:'Check complement C3 and C4. If C3 is LOW → do NOT start steroids yet. Renal biopsy is needed first. Also biopsy if age >8 years or <1 year.',
+        tag:'Pre-steroid screen',
+        trap:'Low C3 + NS = biopsy BEFORE steroids. Starting steroids with low C3 (MPGN/other) is a major error.'
+      },
+      {
+        id:'n3',
+        text:'General measures: bed rest during oedema phase. Salt restriction (NOT protein restriction — maintain normal intake). Daily weight, BP, urine dipstick, I/O chart.',
+        tag:'General + monitoring',
+        trap:'Protein restriction is WRONG in NS. Normal protein intake is essential. Students commonly write protein restriction.'
+      },
+      {
+        id:'n4',
+        text:'Prednisolone 2 mg/kg/day PO (maximum 60 mg/day regardless of weight) × 6 weeks. This is Phase 1 of the ISKD protocol.',
+        tag:'Phase 1 — daily steroids',
+        trap:'Max cap = 60 mg/day. A 42 kg child would calculate 84 mg (2×42) but receives 60 mg. Always apply the cap.'
+      },
+      {
+        id:'n5',
+        text:'Assess response at week 4: remission = trace or nil proteinuria on dipstick. If no response by week 4–6 → steroid resistant NS → plan renal biopsy.',
+        tag:'Response assessment',
+        trap:null
+      },
+      {
+        id:'n6',
+        text:'If responded: taper to Prednisolone 1.5 mg/kg on alternate days × 6 weeks (Phase 2). Total course: 12 weeks for full responders.',
+        tag:'Phase 2 — alternate-day taper',
+        trap:'Phase 2 = 1.5 mg/kg alternate days. NOT 1 mg/kg. Total 12 weeks total — not 6 weeks only.'
+      },
+      {
+        id:'n7',
+        text:'Manage oedema: Furosemide for severe oedema. For hypovolaemia (cold peripheries, tachycardia): 25% albumin 0.5–1.0 g/kg IV over 1–2 h + loop diuretic after.',
+        tag:'Oedema + hypovolaemia',
+        trap:'Albumin is for HYPOVOLAEMIA — not routine oedema. Giving albumin for routine oedema causes pulmonary oedema.'
+      },
+      {
+        id:'n8',
+        text:'Vaccinate before steroids: Pneumococcal vaccine + Varicella vaccine. For SBP/infection: Ceftriaxone. For thrombosis: LMWH then Warfarin. ACE inhibitors for persistent HTN/proteinuria.',
+        tag:'Complications + prophylaxis',
+        trap:'S. pneumoniae is the #1 SBP organism in NS. Must vaccinate BEFORE starting steroids.'
+      },
+    ]
+  },
+  {
+    id:'planc',
+    name:'Severe Dehydration — Plan C',
+    color:'#3DBF8A',
+    sub:'7 steps · child 1–5 years · WHO IMNCI',
+    steps:[
+      {
+        id:'c1',
+        text:'Confirm severe dehydration: lethargic or unconscious, unable to drink, sunken eyes, skin pinch goes back very slowly (>2 sec). Admit immediately.',
+        tag:'Confirm severe dehydration',
+        trap:null
+      },
+      {
+        id:'c2',
+        text:'IV access immediately. If unable to establish IV → intraosseous access. Send electrolytes and BGA to rule out hypernatraemic dehydration.',
+        tag:'Access + investigations',
+        trap:null
+      },
+      {
+        id:'c3',
+        text:'PHASE 1 — Child 1–5 years: Ringer\'s Lactate 30 mL/kg IV over 30 minutes. Reassess after each phase.',
+        tag:'Phase 1 IV fluid',
+        trap:'Child (1–5 yr) = 30 mL/kg over 30 MIN. Infant (<12 months) = 30 mL/kg over 1 HOUR. AGE MATTERS — the most common swap error.'
+      },
+      {
+        id:'c4',
+        text:'Reassess after Phase 1: if improving → continue Phase 2. If not improving → repeat Phase 1 bolus. If in shock → give 10–20 mL/kg NS bolus first.',
+        tag:'Reassessment decision point',
+        trap:null
+      },
+      {
+        id:'c5',
+        text:'PHASE 2: Ringer\'s Lactate 70 mL/kg IV over 5 hours. Continue monitoring every 1–2 hours.',
+        tag:'Phase 2 IV fluid',
+        trap:'Total Plan C = 30 mL/kg (30 min) + 70 mL/kg (5 hours) = 100 mL/kg total. Know both phases and their durations.'
+      },
+      {
+        id:'c6',
+        text:'When child can drink: Start ORS 5 mL/kg/hour orally alongside remaining IV fluids. Transition to Plan B/A as condition improves.',
+        tag:'Transition to oral',
+        trap:null
+      },
+      {
+        id:'c7',
+        text:'Nutritional support + adjuncts: continue breastfeeding throughout. Zinc 20 mg/day (≥6 months) or 10 mg/day (<6 months) × 10–14 days. Reassess every 1–2 hours throughout.',
+        tag:'Zinc + nutrition',
+        trap:'Zinc dose is AGE-DEPENDENT: ≥6 months = 20 mg/day. <6 months = 10 mg/day. High-yield MCQ trap.'
+      },
+    ]
+  },
+  {
+    id:'agn',
+    name:'AGN / PSGN Management',
+    color:'#C9A84C',
+    sub:'7 steps · drug traps · no steroids',
+    steps:[
+      {
+        id:'a1',
+        text:'General: bed rest during acute phase. Salt and fluid restriction to insensible losses + urine output. Strict daily I/O chart, weight, and BP monitoring. Hospital admission for severe cases.',
+        tag:'General measures',
+        trap:null
+      },
+      {
+        id:'a2',
+        text:'Streptococcal eradication: Benzathine Penicillin G — 600,000 U IM if weight <27 kg; 1.2 million U IM if weight ≥27 kg. Single dose. Alternative: Penicillin V 250 mg PO BD × 10 days.',
+        tag:'Strep eradication',
+        trap:'Penicillin is for STREP ERADICATION — NOT treatment of GN itself. The GN is immune-mediated, not from active infection.'
+      },
+      {
+        id:'a3',
+        text:'Hypertension: First-line = Nifedipine (calcium channel blocker) oral. Emergency/severe HTN = IV Labetalol or IV Sodium Nitroprusside. Do NOT give ACE inhibitors.',
+        tag:'Hypertension management',
+        trap:'ACE inhibitors are CONTRAINDICATED in acute AGN HTN — they worsen hyperkalaemia and AKI. First-line = Nifedipine CCB. This is the single most tested trap.'
+      },
+      {
+        id:'a4',
+        text:'Fluid overload: Furosemide 1–2 mg/kg IV. Do NOT use furosemide for hypertension — it is only for fluid overload. These are different indications.',
+        tag:'Fluid overload',
+        trap:'Furosemide = FLUID OVERLOAD only. Nifedipine = HYPERTENSION only. Students swap these — instant -1 mark.'
+      },
+      {
+        id:'a5',
+        text:'Hyperkalaemia management (stepped approach): Step 1 → Calcium gluconate 10% (cardioprotection). Step 2 → Insulin + Glucose (shift K⁺ intracellularly). Step 3 → Sodium bicarbonate. Step 4 → Dialysis if refractory.',
+        tag:'Hyperkalaemia',
+        trap:null
+      },
+      {
+        id:'a6',
+        text:'AKI / severe azotaemia: Dialysis if refractory fluid overload + no response to furosemide, severe K⁺ >6.5, or uraemic symptoms (encephalopathy, pericarditis).',
+        tag:'AKI — dialysis',
+        trap:null
+      },
+      {
+        id:'a7',
+        text:'Monitoring + prognosis: C3 complement should normalise by 6–8 weeks. If C3 remains low beyond 8–12 weeks → suspect MPGN, arrange biopsy. NO steroids or immunosuppressants in APSGN.',
+        tag:'Follow-up + prognosis',
+        trap:'Steroids in APSGN = instant -2 marks. C3 persistent >12 weeks = NOT PSGN, reassess diagnosis.'
+      },
+    ]
+  }
+];
+
+// ══════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════
+const G = {
+  pIdx: 0,
+  score: 0,
+  totalCorrect: 0,
+  totalWrong: 0,
+  totalPerfect: 0,
+  selectedCard: null,
+  slotFilled: [],    // array of step ids placed correctly
+  wrongCount: 0,
+  perfectCount: 0,
+  correctCount: 0,
+};
+
+const $ = id => document.getElementById(id);
+function shuf(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=0|Math.random()*(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
+function flashBg(col){const f=$('fov');f.style.background=col;f.style.opacity='1';setTimeout(()=>f.style.opacity='0',150);}
+function scorePop(x,y,txt,col){
+  const e=document.createElement('div');e.className='spop';
+  e.textContent=txt;e.style.cssText=`color:${col};left:${x-20}px;top:${y}px;`;
+  document.body.appendChild(e);setTimeout(()=>e.remove(),780);
+}
+function showScreen(...ids){
+  ['splash','game-screen','final-screen'].forEach(id=>{
+    $(id).classList.toggle('hidden',!ids.includes(id));
+  });
+}
+
+// ══════════════════════════════════════════
+// BUILD PROTOCOL UI
+// ══════════════════════════════════════════
+function protocol(){ return PROTOCOLS[G.pIdx]; }
+
+function loadProtocol(){
+  G.selectedCard = null;
+  G.slotFilled = [];
+  G.wrongCount = 0;
+  G.perfectCount = 0;
+  G.correctCount = 0;
+
+  const p = protocol();
+  $('tbName').textContent = p.name;
+  $('tbSub').textContent = p.sub;
+  $('tbScore').textContent = G.score.toLocaleString();
+  updateProgress(0);
+  setInstr(null);
+
+  buildSlots();
+  buildBank();
+}
+
+function buildSlots(){
+  const pane = $('slots-pane');
+  pane.innerHTML = '';
+  const p = protocol();
+  p.steps.forEach((step, i) => {
+    // connector line above (except first)
+    if(i > 0){
+      const conn = document.createElement('div');
+      conn.className = 'slot-connector';
+      conn.innerHTML = `<div class="conn-line" id="conn${i}"></div>`;
+      pane.appendChild(conn);
+    }
+    const slot = document.createElement('div');
+    slot.className = 'slot';
+    slot.id = 'slot'+i;
+    slot.innerHTML = `
+      <div class="slot-num">${String(i+1).padStart(2,'0')}</div>
+      <div class="slot-content">
+        <div class="slot-empty-hint" id="hint${i}">empty — place step ${i+1} here</div>
+        <div class="slot-trap" id="trap${i}"></div>
+      </div>
+      <div class="slot-check">✓</div>`;
+    slot.addEventListener('click', ()=>onSlotClick(i));
+    pane.appendChild(slot);
+  });
+}
+
+function buildBank(){
+  const p = protocol();
+  const shuffled = shuf(p.steps.map((s,i)=>({...s, realIdx:i})));
+  const container = $('bank-cards');
+  container.innerHTML = '';
+  shuffled.forEach(step => {
+    const card = document.createElement('div');
+    card.className = 'step-card';
+    card.id = 'card-'+step.id;
+    card.innerHTML = `
+      <div class="step-card-text">${step.text}</div>
+      <div class="step-card-tag">${step.tag}</div>`;
+    card.addEventListener('click', ()=>onCardClick(step.id, step.realIdx));
+    container.appendChild(card);
+  });
+}
+
+// ══════════════════════════════════════════
+// INTERACTION
+// ══════════════════════════════════════════
+function onCardClick(stepId, realIdx){
+  const card = $('card-'+stepId);
+  if(!card || card.classList.contains('used')) return;
+
+  if(G.selectedCard && G.selectedCard.id === stepId){
+    deselectCard();
+    return;
+  }
+  deselectCard();
+  G.selectedCard = {id: stepId, realIdx};
+  card.classList.add('selected');
+  setInstr(stepId);
+  highlightEmptySlots(true);
+}
+
+function deselectCard(){
+  if(G.selectedCard){
+    const card = $('card-'+G.selectedCard.id);
+    if(card) card.classList.remove('selected');
+  }
+  G.selectedCard = null;
+  highlightEmptySlots(false);
+}
+
+function highlightEmptySlots(on){
+  protocol().steps.forEach((s,i)=>{
+    const slot = $('slot'+i);
+    if(!slot) return;
+    if(slot.classList.contains('filled')){ slot.classList.remove('target-mode'); return; }
+    slot.classList.toggle('target-mode', on);
+  });
+}
+
+function onSlotClick(slotIdx){
+  if(!G.selectedCard) return;
+  const slot = $('slot'+slotIdx);
+  if(slot.classList.contains('filled')) return;
+
+  const p = protocol();
+  const isCorrect = G.selectedCard.realIdx === slotIdx;
+
+  if(isCorrect){
+    handleCorrectPlacement(slotIdx);
+  } else {
+    handleWrongPlacement(slotIdx);
+  }
+}
+
+function handleCorrectPlacement(slotIdx){
+  const p = protocol();
+  const step = p.steps[slotIdx];
+  const card = $('card-'+G.selectedCard.id);
+  const slot = $('slot'+slotIdx);
+
+  // Fill the slot
+  const hint = $('hint'+slotIdx);
+  const trap = $('trap'+slotIdx);
+  if(hint) hint.textContent = step.text;
+  if(trap){
+    if(step.trap){ trap.textContent = step.trap; }
+    else trap.style.display = 'none';
+  }
+  slot.classList.add('filled','correct-flash');
+  slot.classList.remove('target-mode');
+  setTimeout(()=>slot.classList.remove('correct-flash'), 500);
+
+  // Light up connector
+  if(slotIdx > 0){
+    const conn = $('conn'+slotIdx);
+    if(conn) conn.classList.add('lit');
+  }
+
+  // Score: more points if first try
+  const wasFirstTry = !G.slotFilled.includes('tried-'+slotIdx);
+  const pts = wasFirstTry ? 15 : 5;
+  if(wasFirstTry) G.perfectCount++;
+  G.score += pts;
+  G.correctCount++;
+  G.totalCorrect++;
+
+  // Use up card
+  if(card){ card.classList.add('used'); }
+  G.slotFilled.push(slotIdx);
+
+  deselectCard();
+  flashBg('rgba(61,191,138,.09)');
+  const r = slot.getBoundingClientRect();
+  scorePop(r.left + 40, r.top - 10, '+'+pts, wasFirstTry ? '#C9A84C' : '#3DBF8A');
+
+  $('tbScore').textContent = G.score.toLocaleString();
+  updateProgress(G.correctCount / p.steps.length);
+
+  // Check if protocol complete
+  if(G.correctCount === p.steps.length){
+    setTimeout(showCompletion, 800);
+  }
+}
+
+function handleWrongPlacement(slotIdx){
+  const slot = $('slot'+slotIdx);
+  const card = $('card-'+G.selectedCard.id);
+  slot.classList.add('wrong-flash');
+  setTimeout(()=>slot.classList.remove('wrong-flash'),380);
+  if(card){ card.classList.add('wrong-shake'); setTimeout(()=>card.classList.remove('wrong-shake'),320); }
+  G.score = Math.max(0, G.score - 3);
+  G.wrongCount++;
+  G.totalWrong++;
+  // Mark as "tried" so it's no longer first-try
+  if(!G.slotFilled.includes('tried-'+slotIdx)) G.slotFilled.push('tried-'+slotIdx);
+  flashBg('rgba(224,82,82,.1)');
+  $('tbScore').textContent = G.score.toLocaleString();
+  deselectCard();
+}
+
+// ══════════════════════════════════════════
+// INSTRUCTION + PROGRESS
+// ══════════════════════════════════════════
+function setInstr(selectedCardId){
+  const el = $('instr-text');
+  if(selectedCardId){
+    const step = protocol().steps.find((_,i)=>i===G.selectedCard.realIdx);
+    el.textContent = 'Step selected — now tap the correct numbered slot ↑';
+    el.className = 'active';
+  } else {
+    el.textContent = 'Tap a step from the right bank, then tap the correct numbered slot';
+    el.className = '';
+  }
+}
+function updateProgress(frac){
+  $('progress-fill').style.width = (frac * 100) + '%';
+}
+
+// ══════════════════════════════════════════
+// COMPLETION
+// ══════════════════════════════════════════
+function showCompletion(){
+  const p = protocol();
+  const pct = Math.round((G.perfectCount / p.steps.length) * 100);
+  let grade;
+  if(G.wrongCount === 0) grade = '⚡ PERFECT PROTOCOL';
+  else if(pct >= 70) grade = 'Strong Build';
+  else grade = 'Review Needed';
+
+  $('coProtocol').textContent = `Protocol ${G.pIdx + 1} of ${PROTOCOLS.length}`;
+  $('coTitle').textContent = grade;
+  $('coScore').textContent = G.score.toLocaleString();
+  $('coSub').textContent = `${G.perfectCount}/${p.steps.length} first-try correct · ${G.wrongCount} wrong attempts`;
+  $('cosCorrect').textContent = G.correctCount;
+  $('cosWrong').textContent = G.wrongCount;
+  $('cosPerfect').textContent = G.perfectCount;
+
+  G.totalPerfect += G.perfectCount;
+
+  const isLast = G.pIdx >= PROTOCOLS.length - 1;
+  $('coNextBtn').textContent = isLast ? 'SEE FINAL SCORE →' : 'NEXT PROTOCOL →';
+  $('completion-overlay').classList.add('show');
+}
+
+// ══════════════════════════════════════════
+// FLOW
+// ══════════════════════════════════════════
+function startGame(){
+  G.pIdx = 0;
+  G.score = 0;
+  G.totalCorrect = 0;
+  G.totalWrong = 0;
+  G.totalPerfect = 0;
+  showScreen('game-screen');
+  loadProtocol();
+}
+
+function nextProtocol(){
+  $('completion-overlay').classList.remove('show');
+  G.pIdx++;
+  if(G.pIdx >= PROTOCOLS.length){
+    showFinalResults();
+  } else {
+    loadProtocol();
+  }
+}
+
+function showFinalResults(){
+  showScreen('final-screen');
+  const total = PROTOCOLS.reduce((s,p)=>s+p.steps.length, 0);
+  const pct = Math.round(G.totalCorrect / total * 100);
+  let title, col;
+  if(pct >= 90){ title = 'Attending Physician'; col = 'var(--green)'; }
+  else if(pct >= 75){ title = 'Senior Registrar'; col = 'var(--teal)'; }
+  else if(pct >= 55){ title = 'House Officer'; col = 'var(--gold)'; }
+  else { title = 'Intern — keep building'; col = 'var(--red)'; }
+  const fin = $('final-screen');
+  fin.querySelector('.fin-title').innerHTML = `Well<br><em>done, Doctor.</em>`;
+  $('finScore').textContent = G.score.toLocaleString();
+  $('finSub').textContent = `${title} · ${pct}% accuracy across all protocols`;
+  $('fgTotal').textContent = G.totalCorrect;
+  $('fgWrong').textContent = G.totalWrong;
+  $('fgPerfect').textContent = G.totalPerfect;
+}
+
+// ══════════════════════════════════════════
+// REVIEW (re-enable bank interaction disabled, just show all steps filled)
+// ══════════════════════════════════════════
+function reviewProtocol(){
+  $('completion-overlay').classList.remove('show');
+  // All slots already filled — just close overlay so user can scroll and read
+}
+
+// ══════════════════════════════════════════
+// EVENTS
+// ══════════════════════════════════════════
+$('startBtn').addEventListener('click', startGame);
+$('restartBtn').addEventListener('click', startGame);
+$('coNextBtn').addEventListener('click', nextProtocol);
+$('coReviewBtn').addEventListener('click', reviewProtocol);
+showScreen('splash');
+</script>
+</body>
+</html>

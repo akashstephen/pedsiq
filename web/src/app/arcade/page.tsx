@@ -7,7 +7,7 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { getGameStats } from '@/lib/arcade-storage';
-import { Gamepad2, Zap, Crosshair, Swords, Trophy, Clock, Target } from 'lucide-react';
+import { Gamepad2, Zap, Crosshair, Swords, Trophy, Clock, Target, FlaskConical, Bomb } from 'lucide-react';
 
 const GAMES = [
   {
@@ -42,6 +42,28 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #d97706, #db2777)',
     route: '/arcade/feature-wars/',
     questionCount: 30,
+  },
+  {
+    id: 'protocol-builder' as const,
+    title: 'Protocol Builder',
+    subtitle: 'Algorithm reconstruction',
+    description: 'Reconstruct pediatric management protocols from scrambled steps. Spatial encoding builds durable memory.',
+    icon: FlaskConical,
+    color: '#C9A84C',
+    bgGradient: 'linear-gradient(135deg, #B45309, #0891B2)',
+    route: '/arcade/protocol-builder/',
+    questionCount: 32,
+  },
+  {
+    id: 'trap-defuser' as const,
+    title: 'Trap Defuser',
+    subtitle: 'Examiner trap detection',
+    description: 'Judge whether each clinical statement is a trap or correct. Hypercorrection effect turns mistakes into durable memory.',
+    icon: Bomb,
+    color: '#FF4D1A',
+    bgGradient: 'linear-gradient(135deg, #DC2626, #F59E0B)',
+    route: '/arcade/trap-defuser/',
+    questionCount: 48,
   },
 ];
 

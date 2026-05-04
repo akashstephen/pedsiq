@@ -51,6 +51,8 @@ function createDefaultProfile(): ArcadeProfile {
       'dose-duel': createDefaultGameStats(),
       'dose-sniper': createDefaultGameStats(),
       'feature-wars': createDefaultGameStats(),
+      'protocol-builder': createDefaultGameStats(),
+      'trap-defuser': createDefaultGameStats(),
     },
     createdAt: now,
     lastPlayedAt: now,

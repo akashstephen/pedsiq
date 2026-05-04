@@ -31,6 +31,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pedsiq.pages.dev/arcade/protocol-builder/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pedsiq.pages.dev/arcade/trap-defuser/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pedsiq.pages.dev/mcq-review/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

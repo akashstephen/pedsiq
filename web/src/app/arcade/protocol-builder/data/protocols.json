@@ -1,0 +1,213 @@
+[
+  {
+    "id": "dka",
+    "name": "DKA Management",
+    "color": "#E05252",
+    "sub": "10 steps · pH <7.3, glucose >200, HCO₃ <15",
+    "steps": [
+      {
+        "id": "d1",
+        "text": "Confirm DKA: glucose >200 mg/dL + pH <7.3 + HCO₃ <15 mEq/L. Weigh child. Assess degree of dehydration (mild 5% / moderate 7% / severe 10%).",
+        "tag": "Diagnosis + assessment"
+      },
+      {
+        "id": "d2",
+        "text": "IV access × 2. Send labs: blood glucose, electrolytes (Na⁺, K⁺, Cl⁻), BGA, urine ketones, HbA1c, blood culture.",
+        "tag": "Access + investigations"
+      },
+      {
+        "id": "d3",
+        "text": "Fluid resuscitation: 0.9% Normal Saline 10–20 mL/kg IV over 1–2 hours. Do NOT start insulin yet.",
+        "tag": "Fluid phase 1",
+        "trap": "Start fluids BEFORE insulin. Do NOT give insulin in the first hour."
+      },
+      {
+        "id": "d4",
+        "text": "Check serum potassium: if K⁺ <3.3 mEq/L → ADD potassium to fluids and HOLD insulin until K⁺ ≥3.3. If K⁺ >5.5 → hold potassium supplementation.",
+        "tag": "Potassium check — critical",
+        "trap": "K⁺ <3.3 = HOLD INSULIN. This is the most dangerous DKA error — insulin + hypokalaemia = fatal arrhythmia."
+      },
+      {
+        "id": "d5",
+        "text": "Start insulin: Regular insulin 0.05–0.1 U/kg/hr IV continuous infusion. NEVER give insulin as a bolus in paediatric DKA.",
+        "tag": "Insulin infusion",
+        "trap": "NEVER bolus insulin. Continuous infusion only. Bolus → rapid osmotic shift → cerebral oedema."
+      },
+      {
+        "id": "d6",
+        "text": "Replace total fluid deficit over 48 hours (NOT 24 hours) using 0.45% NaCl + KCl 20–40 mEq/L. Rapid replacement causes cerebral oedema.",
+        "tag": "Fluid deficit replacement",
+        "trap": "48 hours — NOT 24 hours. Students frequently write 24-hour replacement. That is wrong."
+      },
+      {
+        "id": "d7",
+        "text": "When blood glucose falls to 200–250 mg/dL: ADD dextrose (D5 or D10) to IV fluids. Continue insulin infusion — do NOT stop it.",
+        "tag": "Glucose at 200–250 mg/dL",
+        "trap": "Do NOT stop insulin when glucose normalises. Insulin must continue until ACIDOSIS resolves (pH >7.30, HCO₃ >18). Add dextrose to prevent hypoglycaemia."
+      },
+      {
+        "id": "d8",
+        "text": "Monitor closely every 1–2 hours: glucose, electrolytes, BGA. Watch for headache, bradycardia, altered consciousness (cerebral oedema warning signs).",
+        "tag": "Monitoring"
+      },
+      {
+        "id": "d9",
+        "text": "Cerebral oedema: Mannitol 0.5–1 g/kg IV OR 3% NaCl 5–10 mL/kg IV immediately. Reduce fluid rate. Elevate head of bed 30°.",
+        "tag": "Cerebral oedema emergency",
+        "trap": "Both mannitol AND 3% saline are valid — know both. Must also reduce fluid rate simultaneously."
+      },
+      {
+        "id": "d10",
+        "text": "Transition to subcutaneous insulin when: acidosis fully resolved (pH >7.30, HCO₃ >18), tolerating oral feeds, glucose stable. Overlap SC and IV insulin by 30 min before stopping infusion.",
+        "tag": "Transition to SC insulin"
+      }
+    ]
+  },
+  {
+    "id": "ns",
+    "name": "Nephrotic Syndrome — First Episode",
+    "color": "#1FB8C0",
+    "sub": "8 steps · ISKD steroid protocol",
+    "steps": [
+      {
+        "id": "n1",
+        "text": "Confirm nephrotic syndrome: urine P/C ratio >2.0 mg/mg (or >50 mg/kg/day protein) + serum albumin <2.5 g/dL + oedema.",
+        "tag": "Confirmation criteria"
+      },
+      {
+        "id": "n2",
+        "text": "Check complement C3 and C4. If C3 is LOW → do NOT start steroids yet. Renal biopsy is needed first. Also biopsy if age >8 years or <1 year.",
+        "tag": "Pre-steroid screen",
+        "trap": "Low C3 + NS = biopsy BEFORE steroids. Starting steroids with low C3 (MPGN/other) is a major error."
+      },
+      {
+        "id": "n3",
+        "text": "General measures: bed rest during oedema phase. Salt restriction (NOT protein restriction — maintain normal intake). Daily weight, BP, urine dipstick, I/O chart.",
+        "tag": "General + monitoring",
+        "trap": "Protein restriction is WRONG in NS. Normal protein intake is essential. Students commonly write protein restriction."
+      },
+      {
+        "id": "n4",
+        "text": "Prednisolone 2 mg/kg/day PO (maximum 60 mg/day regardless of weight) × 6 weeks. This is Phase 1 of the ISKD protocol.",
+        "tag": "Phase 1 — daily steroids",
+        "trap": "Max cap = 60 mg/day. A 42 kg child would calculate 84 mg (2×42) but receives 60 mg. Always apply the cap."
+      },
+      {
+        "id": "n5",
+        "text": "Assess response at week 4: remission = trace or nil proteinuria on dipstick. If no response by week 4–6 → steroid resistant NS → plan renal biopsy.",
+        "tag": "Response assessment"
+      },
+      {
+        "id": "n6",
+        "text": "If responded: taper to Prednisolone 1.5 mg/kg on alternate days × 6 weeks (Phase 2). Total course: 12 weeks for full responders.",
+        "tag": "Phase 2 — alternate-day taper",
+        "trap": "Phase 2 = 1.5 mg/kg alternate days. NOT 1 mg/kg. Total 12 weeks total — not 6 weeks only."
+      },
+      {
+        "id": "n7",
+        "text": "Manage oedema: Furosemide for severe oedema. For hypovolaemia (cold peripheries, tachycardia): 25% albumin 0.5–1.0 g/kg IV over 1–2 h + loop diuretic after.",
+        "tag": "Oedema + hypovolaemia",
+        "trap": "Albumin is for HYPOVOLAEMIA — not routine oedema. Giving albumin for routine oedema causes pulmonary oedema."
+      },
+      {
+        "id": "n8",
+        "text": "Vaccinate before steroids: Pneumococcal vaccine + Varicella vaccine. For SBP/infection: Ceftriaxone. For thrombosis: LMWH then Warfarin. ACE inhibitors for persistent HTN/proteinuria.",
+        "tag": "Complications + prophylaxis",
+        "trap": "S. pneumoniae is the #1 SBP organism in NS. Must vaccinate BEFORE starting steroids."
+      }
+    ]
+  },
+  {
+    "id": "planc",
+    "name": "Severe Dehydration — Plan C",
+    "color": "#3DBF8A",
+    "sub": "7 steps · child 1–5 years · WHO IMNCI",
+    "steps": [
+      {
+        "id": "c1",
+        "text": "Confirm severe dehydration: lethargic or unconscious, unable to drink, sunken eyes, skin pinch goes back very slowly (>2 sec). Admit immediately.",
+        "tag": "Confirm severe dehydration"
+      },
+      {
+        "id": "c2",
+        "text": "IV access immediately. If unable to establish IV → intraosseous access. Send electrolytes and BGA to rule out hypernatraemic dehydration.",
+        "tag": "Access + investigations"
+      },
+      {
+        "id": "c3",
+        "text": "PHASE 1 — Child 1–5 years: Ringer's Lactate 30 mL/kg IV over 30 minutes. Reassess after each phase.",
+        "tag": "Phase 1 IV fluid",
+        "trap": "Child (1–5 yr) = 30 mL/kg over 30 MIN. Infant (<12 months) = 30 mL/kg over 1 HOUR. AGE MATTERS — the most common swap error."
+      },
+      {
+        "id": "c4",
+        "text": "Reassess after Phase 1: if improving → continue Phase 2. If not improving → repeat Phase 1 bolus. If in shock → give 10–20 mL/kg NS bolus first.",
+        "tag": "Reassessment decision point"
+      },
+      {
+        "id": "c5",
+        "text": "PHASE 2: Ringer's Lactate 70 mL/kg IV over 5 hours. Continue monitoring every 1–2 hours.",
+        "tag": "Phase 2 IV fluid",
+        "trap": "Total Plan C = 30 mL/kg (30 min) + 70 mL/kg (5 hours) = 100 mL/kg total. Know both phases and their durations."
+      },
+      {
+        "id": "c6",
+        "text": "When child can drink: Start ORS 5 mL/kg/hour orally alongside remaining IV fluids. Transition to Plan B/A as condition improves.",
+        "tag": "Transition to oral"
+      },
+      {
+        "id": "c7",
+        "text": "Nutritional support + adjuncts: continue breastfeeding throughout. Zinc 20 mg/day (≥6 months) or 10 mg/day (<6 months) × 10–14 days. Reassess every 1–2 hours throughout.",
+        "tag": "Zinc + nutrition",
+        "trap": "Zinc dose is AGE-DEPENDENT: ≥6 months = 20 mg/day. <6 months = 10 mg/day. High-yield MCQ trap."
+      }
+    ]
+  },
+  {
+    "id": "agn",
+    "name": "AGN / PSGN Management",
+    "color": "#C9A84C",
+    "sub": "7 steps · drug traps · no steroids",
+    "steps": [
+      {
+        "id": "a1",
+        "text": "General: bed rest during acute phase. Salt and fluid restriction to insensible losses + urine output. Strict daily I/O chart, weight, and BP monitoring. Hospital admission for severe cases.",
+        "tag": "General measures"
+      },
+      {
+        "id": "a2",
+        "text": "Streptococcal eradication: Benzathine Penicillin G — 600,000 U IM if weight <27 kg; 1.2 million U IM if weight ≥27 kg. Single dose. Alternative: Penicillin V 250 mg PO BD × 10 days.",
+        "tag": "Strep eradication",
+        "trap": "Penicillin is for STREP ERADICATION — NOT treatment of GN itself. The GN is immune-mediated, not from active infection."
+      },
+      {
+        "id": "a3",
+        "text": "Hypertension: First-line = Nifedipine (calcium channel blocker) oral. Emergency/severe HTN = IV Labetalol or IV Sodium Nitroprusside. Do NOT give ACE inhibitors.",
+        "tag": "Hypertension management",
+        "trap": "ACE inhibitors are CONTRAINDICATED in acute AGN HTN — they worsen hyperkalaemia and AKI. First-line = Nifedipine CCB. This is the single most tested trap."
+      },
+      {
+        "id": "a4",
+        "text": "Fluid overload: Furosemide 1–2 mg/kg IV. Do NOT use furosemide for hypertension — it is only for fluid overload. These are different indications.",
+        "tag": "Fluid overload",
+        "trap": "Furosemide = FLUID OVERLOAD only. Nifedipine = HYPERTENSION only. Students swap these — instant -1 mark."
+      },
+      {
+        "id": "a5",
+        "text": "Hyperkalaemia management (stepped approach): Step 1 → Calcium gluconate 10% (cardioprotection). Step 2 → Insulin + Glucose (shift K⁺ intracellularly). Step 3 → Sodium bicarbonate. Step 4 → Dialysis if refractory.",
+        "tag": "Hyperkalaemia"
+      },
+      {
+        "id": "a6",
+        "text": "AKI / severe azotaemia: Dialysis if refractory fluid overload + no response to furosemide, severe K⁺ >6.5, or uraemic symptoms (encephalopathy, pericarditis).",
+        "tag": "AKI — dialysis"
+      },
+      {
+        "id": "a7",
+        "text": "Monitoring + prognosis: C3 complement should normalise by 6–8 weeks. If C3 remains low beyond 8–12 weeks → suspect MPGN, arrange biopsy. NO steroids or immunosuppressants in APSGN.",
+        "tag": "Follow-up + prognosis",
+        "trap": "Steroids in APSGN = instant -2 marks. C3 persistent >12 weeks = NOT PSGN, reassess diagnosis."
+      }
+    ]
+  }
+]

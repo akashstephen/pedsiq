@@ -394,6 +394,55 @@ body[data-arcade-active] [role="button"] {
   align-items: stretch; /* override align-items:center so children fill full width */
 }
 
+/* ─── Arcade Game Animations ─────────────────────────────────────────────── */
+
+@keyframes spopA {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-60px); }
+}
+
+@keyframes slotWrong {
+  0%, 100% { background: transparent; border-color: inherit; }
+  40% { background: rgba(224, 82, 82, 0.18); border-color: #E05252; }
+}
+
+@keyframes slotOk {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes cardShake {
+  0%, 100% { transform: translateX(0); }
+  30% { transform: translateX(-7px); }
+  70% { transform: translateX(7px); }
+}
+
+@keyframes cardInAnim {
+  from { transform: translateY(-30px) scale(0.95); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes cardOutTrap {
+  to { transform: translateX(-120%) rotate(-18deg); opacity: 0; }
+}
+
+@keyframes cardOutOk {
+  to { transform: translateX(120%) rotate(18deg); opacity: 0; }
+}
+
+@keyframes cardOutTimeout {
+  to { transform: translateY(60px) scale(0.85); opacity: 0; }
+}
+
+@keyframes cardShakeAnim {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px) rotate(-2deg); }
+  40% { transform: translateX(10px) rotate(2deg); }
+  60% { transform: translateX(-7px) rotate(-1deg); }
+  80% { transform: translateX(7px) rotate(1deg); }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   body[data-arcade-active] * {

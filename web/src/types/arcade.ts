@@ -5,7 +5,7 @@
 
 // ─── Shared ─────────────────────────────────────────────────────────────────
 
-export type ArcadeGameId = 'dose-duel' | 'dose-sniper' | 'feature-wars';
+export type ArcadeGameId = 'dose-duel' | 'dose-sniper' | 'feature-wars' | 'protocol-builder' | 'trap-defuser';
 
 export interface ArcadeProfile {
   version: 1;
@@ -123,6 +123,38 @@ export interface SniperState {
   cards: FallingCard[];
   answered: boolean;
 }
+
+// ─── Protocol Builder ───────────────────────────────────────────────────────
+
+export interface ProtocolBuilderStep {
+  id: string;
+  text: string;
+  tag: string;
+  trap?: string;
+}
+
+export interface ProtocolBuilderProtocol {
+  id: string;
+  name: string;
+  color: string;
+  sub: string;
+  steps: ProtocolBuilderStep[];
+}
+
+export type ProtocolBuilderPhase = 'splash' | 'playing' | 'completion' | 'results';
+
+// ─── Trap Defuser ───────────────────────────────────────────────────────────
+
+export interface TrapDefuserCard {
+  topic: string;
+  isTrap: boolean;
+  q: string;
+  truth: string;
+  exp: string;
+  marks: string;
+}
+
+export type TrapDefuserPhase = 'splash' | 'playing' | 'results';
 
 // ─── Feature Wars ───────────────────────────────────────────────────────────
 
