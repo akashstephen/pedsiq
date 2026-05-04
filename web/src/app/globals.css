@@ -391,6 +391,7 @@ body[data-arcade-active] [role="button"] {
 /* Game screens that need flex-start (like gameplay with HUD) */
 .arcade-screen.game-layout {
   justify-content: flex-start;
+  align-items: stretch; /* override align-items:center so children fill full width */
 }
 
 /* Reduced motion support */
