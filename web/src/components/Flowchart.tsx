@@ -29,8 +29,18 @@ const CHAR_W = 7.0;
 const MIN_W = 100;
 const MIN_H = 42;
 
+function decodeHtmlEntities(input: string): string {
+  return input
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
 function measureText(text: string) {
-  const lines = text.split('\n');
+  const decoded = decodeHtmlEntities(text);
+  const lines = decoded.split('\n');
   const maxChars = Math.max(...lines.map((l) => l.length));
   const w = Math.max(MIN_W, maxChars * CHAR_W + NODE_PAD_X * 2);
   const h = Math.max(MIN_H, lines.length * LINE_H + NODE_PAD_Y * 2);
@@ -138,13 +148,13 @@ export function Flowchart({ nodes, edges, title }: FlowchartProps) {
     const nodeMap = new Map<string, { x: number; y: number; w: number; h: number; type?: string; label: string; lines: string[] }>();
     g.nodes().forEach((id) => {
       const n = g.node(id);
-      nodeMap.set(id, { x: n.x, y: n.y, w: n.width, h: n.height, type: n.type, label: n.label, lines: measureText(n.label).lines });
+      nodeMap.set(id, { x: n.x, y: n.y, w: n.width, h: n.height, type: n.type, label: decodeHtmlEntities(n.label), lines: measureText(n.label).lines });
     });
 
     const edgeList: { points: { x: number; y: number }[]; label?: string }[] = [];
     g.edges().forEach((e) => {
       const edgeObj = g.edge(e);
-      edgeList.push({ points: edgeObj.points, label: edgeObj.label });
+      edgeList.push({ points: edgeObj.points, label: edgeObj.label ? decodeHtmlEntities(edgeObj.label) : undefined });
     });
 
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
