@@ -26,11 +26,28 @@ function parseBoldSegments(text: string): React.ReactNode[] {
   });
 }
 
+function parseHtml(text: string): React.ReactNode[] {
+  const decoded = decodeHtmlEntities(text);
+  // Split on <br>, <br/>, <br />
+  const segments = decoded.split(/<br\s*\/?>/gi);
+
+  const result: React.ReactNode[] = [];
+  segments.forEach((segment, i) => {
+    const nodes = parseBoldSegments(segment);
+    result.push(...nodes);
+    if (i < segments.length - 1) {
+      result.push(<br key={`br-${i}`} />);
+    }
+  });
+
+  return result;
+}
+
 interface SafeHtmlProps {
   text: string;
   className?: string;
 }
 
 export function SafeHtml({ text, className = "" }: SafeHtmlProps) {
-  return <span className={className}>{parseBoldSegments(text)}</span>;
+  return <span className={className}>{parseHtml(text)}</span>;
 }

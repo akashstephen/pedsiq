@@ -95,7 +95,7 @@ export default function StructuredAnswersPage() {
                   {topic.examType}
                 </span>
               </div>
-              <h2 className="text-base md:text-xl font-bold text-white mb-2">{topic.question}</h2>
+              <h2 className="text-base md:text-xl font-bold text-white mb-2"><SafeHtml text={topic.question} /></h2>
               <p className="text-white/60 text-xs md:text-sm mb-2">{topic.marksBreakdown}</p>
               <p className="text-white/40 text-xs italic flex items-start gap-1.5">
                 <span className="shrink-0">ℹ️</span>
@@ -136,7 +136,7 @@ export default function StructuredAnswersPage() {
                           <tr className="bg-white/[0.08]">
                             {section.table.headers.map((h, hi) => (
                               <th key={hi} className="text-left py-2.5 px-3 md:py-3 md:px-4 text-white/70 font-bold text-[10px] md:text-xs uppercase tracking-wider border-b border-white/[0.08]">
-                                {h}
+                                <SafeHtml text={h} />
                               </th>
                             ))}
                           </tr>
@@ -173,13 +173,13 @@ export default function StructuredAnswersPage() {
                         </div>
                       </div>
                       <div className="text-white font-bold text-xl mb-2 tracking-tight">{section.mnemonic.title}</div>
-                      <div className="text-white/70 text-sm leading-relaxed">{section.mnemonic.text}</div>
+                      <div className="text-white/70 text-sm leading-relaxed"><SafeHtml text={section.mnemonic.text} /></div>
                     </div>
                   )}
 
                   {section.examTip && (
                     <ExamTip type={section.examTip.type}>
-                      {section.examTip.text}
+                      <SafeHtml text={section.examTip.text} />
                     </ExamTip>
                   )}
                 </div>
