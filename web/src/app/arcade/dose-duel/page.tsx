@@ -123,7 +123,7 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useDoseDuel
     : null;
 
   return (
-    <div className="flex flex-col h-full w-full max-w-[640px] mx-auto px-3 sm:px-4 py-3 sm:py-4 overflow-hidden"
+    <div className="flex flex-col h-full w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 overflow-hidden"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       {/* HUD — 3-col grid prevents layout shift when score grows */}
       <div className="grid grid-cols-3 gap-2 mb-3 shrink-0">
@@ -148,8 +148,8 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useDoseDuel
              style={{ width: `${timerPct}%`, background: timerColor }} />
       </div>
 
-      {/* Scrollable content area */}
-      <div className="flex-1 overflow-y-auto min-h-0 pr-1">
+      {/* Scrollable content area — stable scrollbar gutter prevents layout shift when feedback appears */}
+      <div className="flex-1 overflow-y-auto min-h-0 pr-1" style={{ scrollbarGutter: 'stable' }}>
         {/* Patient Card */}
         <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-3 sm:p-4 mb-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
           <div>
@@ -176,7 +176,7 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useDoseDuel
         </div>
 
         {/* Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mb-3">
           {q.options.map((opt) => {
             const isSelected = engine.selectedOption === opt;
             const isCorrect = opt === q.correctAnswer;

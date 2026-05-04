@@ -86,7 +86,7 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
 
 function CountdownScreen({ value }: { value: number }) {
   return (
-    <div className="flex items-center justify-center h-full" style={{ background: 'rgba(3,5,14,0.82)', fontFamily: "'Orbitron', monospace" }}>
+    <div className="flex items-center justify-center h-full w-full" style={{ background: 'rgba(3,5,14,0.82)', fontFamily: "'Orbitron', monospace" }}>
       <div className="text-[clamp(80px,22vw,130px)] font-black text-[#22CCFF]"
            style={{ textShadow: '0 0 40px rgba(34,204,255,0.6)', animation: 'sniper-cdpop 0.8s ease' }}>
         {value === 0 ? 'GO!' : value}
@@ -159,7 +159,7 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useSniperEn
   if (!q) return null;
 
   return (
-    <div className="flex flex-col h-full relative" style={{ background: '#03050E', fontFamily: "'DM Sans', sans-serif", color: '#D8E8F8' }}>
+    <div className="flex flex-col h-full w-full relative" style={{ background: '#03050E', fontFamily: "'DM Sans', sans-serif", color: '#D8E8F8' }}>
       {/* Grid + scanlines */}
       <div className="pointer-events-none fixed inset-0 z-0"
            style={{ background: 'radial-gradient(ellipse at 50% 0%,rgba(34,204,255,0.06) 0%,transparent 55%), repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px), repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px)' }} />
