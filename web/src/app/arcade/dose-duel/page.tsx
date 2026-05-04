@@ -1,23 +1,36 @@
 /**
- * Dose Duel Page — Pediatric Dosing Arcade Game
+ * Dose Duel Page — Full animations version
  */
 
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState, useCallback, useEffect, useRef } from 'react';
 import { ArcadeShell } from '@/components/ArcadeShell';
 import { useDoseDuelEngine } from './hooks/useDoseDuelEngine';
 import questionsData from './data/questions.json';
 import { type DoseDuelQuestion } from '@/types/arcade';
 import { getGameStats } from '@/lib/arcade-storage';
 import { GoogleFontsLoader } from '@/components/GoogleFontsLoader';
+import { FlashOverlay } from '@/components/ArcadeEffects';
 import { Gamepad2, Zap, Target, Trophy } from 'lucide-react';
 
 const allQuestions = questionsData as DoseDuelQuestion[];
 
+// ─── Flash Overlay State ─────────────────────────────────────────────────────
+
+function useFlash() {
+  const [flash, setFlash] = useState<{color:'green'|'red'|'amber',key:number}|null>(null);
+  const trigger = useCallback((color:'green'|'red'|'amber') => {
+    setFlash({ color, key: Date.now() });
+  }, []);
+  return { flash, trigger };
+}
+
+// ─── Splash ──────────────────────────────────────────────────────────────────
+
 function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: number }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center animate-[dd-fadeUp_0.3s_ease]"
          style={{ background: 'linear-gradient(180deg, #080C18 0%, #0F1628 100%)', fontFamily: "'DM Sans', sans-serif" }}>
       <div className="mb-2">
         <Gamepad2 size={48} className="text-[#22D3EE] mx-auto mb-4" />
@@ -67,27 +80,61 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
   );
 }
 
+// ─── Game ────────────────────────────────────────────────────────────────────
+
 function GameScreen({
   state,
   currentQuestion,
   onSelect,
   onSubmit,
   onNext,
+  flash,
 }: {
   state: ReturnType<typeof useDoseDuelEngine>['state'];
   currentQuestion: DoseDuelQuestion | null;
   onSelect: (opt: string) => void;
   onSubmit: () => void;
   onNext: () => void;
+  flash: ReturnType<typeof useFlash>;
 }) {
   if (!currentQuestion) return null;
 
   const timerPct = Math.max(0, (state.timeLeft / 12) * 100);
   const timerColor = timerPct < 30 ? 'linear-gradient(90deg, #EF4444, #F59E0B)' : 'linear-gradient(90deg, #22D3EE, #818CF8)';
+  const q = currentQuestion;
+
+  const prevRevealedRef = useRef(false);
+
+  useEffect(() => {
+    if (state.isRevealed && !prevRevealedRef.current) {
+      // Just revealed - check if timeout
+      if (state.selectedOption === null) {
+        flash.trigger('amber');
+      }
+    }
+    prevRevealedRef.current = state.isRevealed;
+  }, [state.isRevealed, state.selectedOption, flash]);
+
+  const handleSelect = (opt: string) => {
+    if (state.isRevealed) return;
+    onSelect(opt);
+  };
+
+  const handleSubmit = () => {
+    onSubmit();
+    if (state.selectedOption === q.correctAnswer) {
+      flash.trigger('green');
+    } else {
+      flash.trigger('red');
+    }
+  };
 
   return (
-    <div className="flex flex-col min-h-screen px-4 py-4 max-w-xl mx-auto"
+    <div className="flex flex-col min-h-screen px-4 py-4 max-w-xl mx-auto animate-[dd-fadeUp_0.3s_ease]"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
+      {/* Flash overlay */}
+      {flash.flash && <FlashOverlay key={flash.flash.key} color={flash.flash.color} />}
+
       {/* HUD */}
       <div className="flex items-center justify-between mb-3">
         <div>
@@ -104,47 +151,48 @@ function GameScreen({
       </div>
 
       {/* Timer */}
-      <div className="w-full h-1 bg-[#1D2847] rounded-full overflow-hidden mb-4">
-        <div className="h-full rounded-full transition-all duration-100" style={{ width: `${timerPct}%`, background: timerColor }} />
+      <div className="w-full h-[5px] bg-[#1D2847] rounded-[3px] overflow-hidden mb-4">
+        <div className="h-full rounded-[3px] transition-[width] duration-100"
+             style={{ width: `${timerPct}%`, background: timerColor }} />
       </div>
 
       {/* Patient Card */}
       <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-4 mb-3 grid grid-cols-2 gap-2">
         <div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Age</div>
-          <div className="text-sm font-medium">{currentQuestion.patient.age}</div>
+          <div className="text-sm font-medium">{q.patient.age}</div>
         </div>
         <div className="text-right">
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Weight</div>
           <div className="text-lg font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>
-            {currentQuestion.patient.weightKg} <span className="text-xs text-[#475569] font-normal" style={{fontFamily:"'DM Sans',sans-serif"}}>kg</span>
+            {q.patient.weightKg} <span className="text-xs text-[#475569] font-normal" style={{fontFamily:"'DM Sans',sans-serif"}}>kg</span>
           </div>
         </div>
         <div className="col-span-2 bg-[#1D2847] rounded-lg p-3 mt-1">
           <div className="text-[10px] tracking-wider text-[#475569] uppercase mb-1">Clinical Context</div>
-          <div className="text-sm leading-relaxed">{currentQuestion.patient.diagnosis}</div>
+          <div className="text-sm leading-relaxed">{q.patient.diagnosis}</div>
         </div>
       </div>
 
       {/* Drug Box */}
       <div className="bg-[#0F1628] border border-[#1E3A5F] rounded-xl p-4 mb-3 text-center">
-        <div className="text-sm font-bold text-[#818CF8] mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{currentQuestion.drug}</div>
-        <div className="text-xs text-[#475569]">{currentQuestion.route}</div>
+        <div className="text-sm font-bold text-[#818CF8] mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</div>
+        <div className="text-xs text-[#475569]">{q.route}</div>
         <div className="text-sm text-[#94A3B8] mt-2">Select the correct dose / answer:</div>
       </div>
 
       {/* Options */}
       <div className="grid grid-cols-2 gap-2 mb-3">
-        {currentQuestion.options.map((opt) => {
+        {q.options.map((opt) => {
           const isSelected = state.selectedOption === opt;
-          const isCorrect = opt === currentQuestion.correctAnswer;
+          const isCorrect = opt === q.correctAnswer;
           const showCorrect = state.isRevealed && isCorrect;
           const showWrong = state.isRevealed && isSelected && !isCorrect;
 
           return (
             <button
               key={opt}
-              onClick={() => onSelect(opt)}
+              onClick={() => handleSelect(opt)}
               disabled={state.isRevealed}
               className={`rounded-xl p-3 text-center text-xs font-bold transition-all cursor-pointer min-h-[56px] flex items-center justify-center leading-tight
                 ${showCorrect ? 'bg-[#052E16] border border-[#10B981] text-[#10B981] shadow-[0_0_16px_rgba(16,185,129,0.2)]' : ''}
@@ -152,7 +200,10 @@ function GameScreen({
                 ${!state.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
                 ${!state.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F]' : ''}
               `}
-              style={{ fontFamily: "'Space Mono', monospace" }}
+              style={{
+                fontFamily: "'Space Mono', monospace",
+                animation: showWrong ? 'dd-shake 0.3s ease' : undefined,
+              }}
             >
               {opt}
             </button>
@@ -162,20 +213,21 @@ function GameScreen({
 
       {/* Feedback */}
       {state.isRevealed && (
-        <div className={`rounded-xl p-4 mb-3 animate-[fadeUp_0.2s_ease]
-          ${state.selectedOption === currentQuestion.correctAnswer ? 'bg-[#052E16] border border-[#10B981]' : 'bg-[#1A0A0A] border border-[#EF4444]'}`}>
+        <div className={`rounded-xl p-4 mb-3
+          ${state.selectedOption === q.correctAnswer ? 'bg-[#052E16] border border-[#10B981]' : 'bg-[#1A0A0A] border border-[#EF4444]'}`}
+             style={{ animation: 'dd-fadeUp 0.2s ease' }}>
           <div className={`text-xs font-bold tracking-wider uppercase mb-2
-            ${state.selectedOption === currentQuestion.correctAnswer ? 'text-[#10B981]' : 'text-[#EF4444]'}`}>
-            {state.selectedOption === currentQuestion.correctAnswer
+            ${state.selectedOption === q.correctAnswer ? 'text-[#10B981]' : 'text-[#EF4444]'}`}>
+            {state.selectedOption === q.correctAnswer
               ? `✓ CORRECT +${10 + Math.ceil(state.timeLeft)} pts`
               : state.selectedOption
-              ? `✗ WRONG · Correct: ${currentQuestion.correctAnswer}`
-              : `⏱ TIME'S UP · Answer: ${currentQuestion.correctAnswer}`}
+              ? `✗ WRONG · Correct: ${q.correctAnswer}`
+              : `⏱ TIME'S UP · Answer: ${q.correctAnswer}`}
           </div>
-          <p className="text-xs text-[#94A3B8] leading-relaxed">{currentQuestion.explanation}</p>
-          {currentQuestion.trap && (
-            <div className="mt-2 p-2 bg-[rgba(245,158,11,0.08)] border-l-2 border-[#F59E0B] rounded text-xs text-[#F59E0B] leading-relaxed">
-              <strong>⚠ TRAP:</strong> {currentQuestion.trap}
+          <p className="text-xs text-[#94A3B8] leading-relaxed">{q.explanation}</p>
+          {q.trap && (
+            <div className="mt-2 p-2 bg-[rgba(245,158,11,0.08)] border-l-[3px] border-[#F59E0B] rounded text-xs text-[#F59E0B] leading-relaxed">
+              <strong>⚠ TRAP:</strong> {q.trap}
             </div>
           )}
         </div>
@@ -184,7 +236,7 @@ function GameScreen({
       {/* Action Button */}
       {!state.isRevealed ? (
         <button
-          onClick={onSubmit}
+          onClick={handleSubmit}
           disabled={!state.selectedOption}
           className={`w-full py-3 rounded-xl font-semibold transition-all
             ${state.selectedOption ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90' : 'bg-white/[0.06] text-white/30 cursor-not-allowed'}`}
@@ -203,13 +255,9 @@ function GameScreen({
   );
 }
 
-function ResultsScreen({
-  state,
-  onRestart,
-}: {
-  state: ReturnType<typeof useDoseDuelEngine>['state'];
-  onRestart: () => void;
-}) {
+// ─── Results ─────────────────────────────────────────────────────────────────
+
+function ResultsScreen({ state, onRestart }: { state: ReturnType<typeof useDoseDuelEngine>['state']; onRestart: () => void }) {
   const total = state.questions.length;
   const pct = Math.round((state.correctCount / total) * 100);
   let grade = 'INTERN';
@@ -221,7 +269,7 @@ function ResultsScreen({
   else if (pct >= 60) { grade = 'SENIOR HOUSE OFFICER'; gradeColor = '#F59E0B'; title = 'DECENT ROUND'; }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center"
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 text-center animate-[dd-fadeUp_0.3s_ease]"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
       <h2 className="text-2xl font-bold mb-2" style={{fontFamily:"'Space Mono',monospace"}}>{title}</h2>
       <div className="text-7xl font-bold mb-1 leading-none"
@@ -257,7 +305,7 @@ function ResultsScreen({
           </p>
           <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1">
             {state.missedQuestions.map((q) => (
-              <div key={q.id} className="bg-[#161E35] border-l-2 border-[#EF4444] rounded-lg p-3 text-left text-xs leading-relaxed">
+              <div key={q.id} className="bg-[#161E35] border-l-[3px] border-[#EF4444] rounded-lg p-3 text-left text-xs leading-relaxed">
                 <strong className="text-[#E2E8F0] block mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</strong>
                 <span className="text-[#94A3B8]">{q.patient.diagnosis}</span>
                 <br />
@@ -284,9 +332,12 @@ function ResultsScreen({
   );
 }
 
+// ─── Page ────────────────────────────────────────────────────────────────────
+
 export default function DoseDuelPage() {
   const { state, currentQuestion, startGame, selectOption, submitAnswer, nextQuestion } = useDoseDuelEngine(allQuestions);
   const stats = useMemo(() => getGameStats('dose-duel'), []);
+  const flash = useFlash();
 
   return (
     <ArcadeShell gameId="dose-duel" themeClass="theme-dose-duel">
@@ -299,6 +350,7 @@ export default function DoseDuelPage() {
           onSelect={selectOption}
           onSubmit={submitAnswer}
           onNext={nextQuestion}
+          flash={flash}
         />
       )}
       {state.phase === 'results' && <ResultsScreen state={state} onRestart={startGame} />}

@@ -312,6 +312,8 @@ export function useSniperEngine(allQuestions: SniperQuestion[]) {
     countdown,
     missedQuestions,
     zoneRef,
+    cardsRef,
+    onHit,
     startGame,
     nextRound,
   };
