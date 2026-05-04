@@ -1,0 +1,67 @@
+[
+  {
+    "id": "b1",
+    "name": "Glomerular Wars",
+    "subtitle": "12 features · some belong to BOTH",
+    "diseases": [
+      {"id":"agn","name":"AGN / PSGN","color":"#FBBF24","glow":"rgba(251,191,36,.25)","bg":"rgba(251,191,36,.06)"},
+      {"id":"ns","name":"Nephrotic Syndrome","color":"#22D3EE","glow":"rgba(34,211,238,.25)","bg":"rgba(34,211,238,.06)"}
+    ],
+    "features": [
+      {"id":"f01","text":"Gross haematuria","sub":"smoky / tea-coloured urine","correctDiseaseIds":["agn"],"explanation":"Haematuria is cardinal in nephritic syndrome (AGN). NS (MCD) has absent or only microscopic haematuria — a defining differentiator."},
+      {"id":"f02","text":"RBC casts in urine","sub":"pathognomonic finding","correctDiseaseIds":["agn"],"explanation":"RBC casts = glomerular bleeding → nephritic pattern. Pathognomonic for AGN. Completely absent in NS."},
+      {"id":"f03","text":"Hypertension","sub":"Na/H₂O retention","correctDiseaseIds":["agn"],"explanation":"HTN is cardinal in nephritic syndrome. Absent in typical MCD/NS — oedema in NS is from oncotic pressure fall, not fluid overload or hypertension."},
+      {"id":"f04","text":"Low serum C3, normal C4","sub":"alternate pathway consumed","correctDiseaseIds":["agn"],"explanation":"PSGN: immune complex → alternate pathway activation → C3 consumed, C4 spared. NS (MCD) has completely normal complement.","trap":"Normal C3 + haematuria → IgA nephropathy, NOT PSGN. Always check both C3 and C4."},
+      {"id":"f05","text":"Massive proteinuria","sub":">50 mg/kg/day","correctDiseaseIds":["ns"],"explanation":"NS is defined by nephrotic-range proteinuria. AGN has only mild proteinuria (<1 g/day) — not enough to cause hypoalbuminaemia."},
+      {"id":"f06","text":"Serum albumin <2.5 g/dL","sub":"hypoalbuminaemia","correctDiseaseIds":["ns"],"explanation":"Hypoalbuminaemia results from massive urinary protein loss in NS. In AGN, albumin is normal — this distinction is core to the clinical picture."},
+      {"id":"f07","text":"Ascites + pleural effusion","sub":"severe generalised oedema","correctDiseaseIds":["ns"],"explanation":"Severe generalised oedema (including ascites) is driven by the oncotic pressure fall in NS. AGN oedema is milder and mainly periorbital due to fluid retention."},
+      {"id":"f08","text":"Antithrombin III lost in urine","sub":"→ renal vein thrombosis","correctDiseaseIds":["ns"],"explanation":"NS causes urinary loss of multiple proteins including antithrombin III, proteins C and S → hypercoagulable state. Renal vein thrombosis is the most common thrombotic complication."},
+      {"id":"f09","text":"S. pneumoniae infection risk","sub":"SBP, cellulitis, sepsis","correctDiseaseIds":["ns"],"explanation":"NS causes urinary loss of IgG and complement Factor B → susceptibility to encapsulated organisms (S. pneumoniae, E. coli, Klebsiella). Vaccinate before starting steroids."},
+      {"id":"f10","text":"Follows streptococcal infection","sub":"pharyngitis 10d · impetigo 3–6w","correctDiseaseIds":["agn"],"explanation":"PSGN follows nephritogenic Group A strep infection with a clear latent period. NS is idiopathic in most children — no infectious trigger in MCD."},
+      {"id":"f11","text":"Age peak 5–12 years","sub":"rare under 2 years","correctDiseaseIds":["agn"],"explanation":"PSGN peaks at 5–12 years. MCD/NS peaks at 2–6 years. Both facts are individually tested in MCQs."},
+      {"id":"f12","text":"Periorbital puffiness on waking","sub":"classic presenting complaint","correctDiseaseIds":["agn","ns"],"explanation":"BOTH diseases cause periorbital oedema. In AGN it is from fluid retention / HTN. In NS it is from hypoalbuminaemia. Clinically, NS causes more striking morning facial oedema."}
+    ]
+  },
+  {
+    "id": "b2",
+    "name": "Rickets Rumble",
+    "subtitle": "10 features · separate the two types",
+    "diseases": [
+      {"id":"nutr","name":"Nutritional Rickets","color":"#34D399","glow":"rgba(52,211,153,.25)","bg":"rgba(52,211,153,.06)"},
+      {"id":"xlh","name":"XLH (Familial Hypophosphataemia)","color":"#A78BFA","glow":"rgba(167,139,250,.25)","bg":"rgba(167,139,250,.06)"}
+    ],
+    "features": [
+      {"id":"r01","text":"Low 25(OH)D < 8 ng/mL","sub":"vitamin D deficiency","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets is defined by low vitamin D stores. In XLH, 25(OH)D is NORMAL — the defect is in renal phosphate reabsorption (PHEX gene mutation), not vitamin D status."},
+      {"id":"r02","text":"Normal 25(OH)D · Normal Ca","sub":"phosphate-only abnormality","correctDiseaseIds":["xlh"],"explanation":"XLH has normal vitamin D and normal calcium. Only phosphate is low, due to constitutive FGF23-driven renal phosphate wasting. Simple Vit D replacement is therefore inadequate."},
+      {"id":"r03","text":"Elevated PTH (secondary)","sub":"compensatory hyperparathyroidism","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets: low Ca → PTH rises to compensate → renal phosphate wasting. In XLH, calcium is normal so this secondary PTH rise does NOT occur."},
+      {"id":"r04","text":"Low serum phosphate","sub":"but mechanism differs","correctDiseaseIds":["nutr","xlh"],"explanation":"BOTH have hypophosphataemia — but mechanisms differ. Nutritional: secondary to PTH. XLH: PHEX mutation → FGF23 excess → constitutive renal phosphate wasting independent of PTH and calcium.","trap":"Low phosphate alone cannot distinguish nutritional from XLH. You MUST check 25(OH)D and calcium."},
+      {"id":"r05","text":"Elevated serum ALP","sub":"osteoblast hyperactivity","correctDiseaseIds":["nutr","xlh"],"explanation":"Both diseases cause elevated ALP — bone mineralisation is defective regardless of mechanism. ALP reflects osteoblast activity trying to mineralise accumulating osteoid."},
+      {"id":"r06","text":"X-linked dominant inheritance","sub":"PHEX gene · FGF23 excess","correctDiseaseIds":["xlh"],"explanation":"XLH is X-linked dominant caused by loss-of-function PHEX mutations → FGF23 excess → renal phosphate wasting. Nutritional rickets has no genetic basis — it is purely environmental/dietary."},
+      {"id":"r07","text":"Treat with Vitamin D + Calcium","sub":"2000–4000 IU/day + 50–100 mg/kg/day","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets: replace what is missing — Vit D3 2000–4000 IU/day × 6–12 weeks + elemental calcium 50–100 mg/kg/day. XLH is not Vit D deficient, so this approach is insufficient."},
+      {"id":"r08","text":"Treat with Phosphate + Calcitriol","sub":"burosumab for refractory","correctDiseaseIds":["xlh"],"explanation":"XLH treatment: oral phosphate supplements + calcitriol (active 1,25-OH Vit D to suppress FGF23 effects). New: Burosumab (anti-FGF23 monoclonal antibody). Vitamin D alone is ineffective.","trap":"XLH requires PHOSPHATE + CALCITRIOL, not simple Vit D. This distinction is high-yield."},
+      {"id":"r09","text":"Hypocalcaemic tetany / seizures","sub":"emergency presentation","correctDiseaseIds":["nutr"],"explanation":"Hypocalcaemic seizures occur in nutritional rickets — severe Vit D deficiency → low calcium. In XLH, calcium is normal throughout, so tetany does NOT occur."},
+      {"id":"r10","text":"Bowing of legs (genu varum)","sub":"weight-bearing deformity","correctDiseaseIds":["nutr","xlh"],"explanation":"BOTH diseases cause bow legs — the common endpoint of defective bone mineralisation. X-ray changes look identical in both. Only the biochemistry (Ca, PO4, 25-OH-D) distinguishes them."}
+    ]
+  },
+  {
+    "id": "b3",
+    "name": "Complement Clash",
+    "subtitle": "8 features · 4 diseases",
+    "diseases": [
+      {"id":"psgn","name":"PSGN","color":"#FBBF24","glow":"rgba(251,191,36,.25)","bg":"rgba(251,191,36,.06)"},
+      {"id":"mpgn","name":"MPGN","color":"#F87171","glow":"rgba(248,113,113,.25)","bg":"rgba(248,113,113,.06)"},
+      {"id":"iga","name":"IgA Nephropathy","color":"#F472B6","glow":"rgba(244,114,182,.25)","bg":"rgba(244,114,182,.06)"},
+      {"id":"mcd","name":"MCD (Nephrotic)","color":"#22D3EE","glow":"rgba(34,211,238,.25)","bg":"rgba(34,211,238,.06)"}
+    ],
+    "features": [
+      {"id":"c01","text":"Low C3 · normal C4","sub":"alternate pathway activation","correctDiseaseIds":["psgn"],"explanation":"PSGN: immune complexes predominantly activate the alternate pathway → C3 consumed, C4 spared. C3 returns to normal in 6–8 weeks. Persistent low C3 beyond 12 weeks → suspect MPGN.","trap":"C3 persists low >8–12 weeks = NOT PSGN. Think MPGN or another chronic disease."},
+      {"id":"c02","text":"Low C3 · low C4","sub":"both pathways consumed","correctDiseaseIds":["mpgn"],"explanation":"MPGN activates BOTH classical (antibody-driven → low C4) and alternate pathways (→ low C3). Persistently low C3 + low C4 beyond 8 weeks is the hallmark distinguishing MPGN from PSGN.","trap":"PSGN = low C3, NORMAL C4. MPGN = low C3, LOW C4. C4 is the discriminator."},
+      {"id":"c03","text":"Normal C3 · normal C4 + haematuria","sub":"mesangial IgA deposits","correctDiseaseIds":["iga"],"explanation":"IgA nephropathy has completely normal complement — disease is driven by mesangial IgA deposition with local complement activation, no systemic consumption. This is the key differentiator from PSGN.","trap":"Normal C3 + haematuria = IgA nephropathy, NOT PSGN. Examiners test this frequently."},
+      {"id":"c04","text":"Normal C3 · normal C4 + massive proteinuria","sub":"no complement disease","correctDiseaseIds":["mcd"],"explanation":"MCD (Minimal Change Disease) has entirely normal complement. Proteinuria is from podocyte foot process effacement — not immune complex or complement-mediated disease."},
+      {"id":"c05","text":"\"Humps\" on electron microscopy","sub":"subepithelial immune deposits","correctDiseaseIds":["psgn"],"explanation":"\"Humps\" = electron-dense subepithelial immune complex deposits. This is the pathognomonic EM finding in PSGN. Light microscopy shows \"lumpy-bumpy\" pattern on immunofluorescence."},
+      {"id":"c06","text":"\"Tram-track\" GBM on light microscopy","sub":"GBM reduplication","correctDiseaseIds":["mpgn"],"explanation":"\"Tram-track\" = double-contoured GBM on PAS/silver stain. Pathognomonic for MPGN. Caused by mesangial cell interposition into the GBM creating a second layer."},
+      {"id":"c07","text":"Foot process effacement on EM","sub":"podocyte injury · normal LM","correctDiseaseIds":["mcd"],"explanation":"Foot process effacement on EM is the hallmark of MCD. Light microscopy is NORMAL (hence \"minimal change\") — the lesion is only visible on EM. This is why MCD was historically missed on biopsy."},
+      {"id":"c08","text":"Haematuria 1–3 days after URTI","sub":"\"synpharyngitic\" onset","correctDiseaseIds":["iga"],"explanation":"IgA nephropathy has a very short latent period (1–3 days, concurrently with URTI). PSGN has a LONG latent period (5–21 days after pharyngitis). Timing is the classic MCQ discriminator.","trap":"Short latent period (days) = IgA. Long latent period (1–3 weeks) = PSGN."}
+    ]
+  }
+]

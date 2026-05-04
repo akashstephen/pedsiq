@@ -1,0 +1,245 @@
+[
+  {
+    "id": "dd_001",
+    "patient": { "age": "5 years", "weightKg": 22, "diagnosis": "APSGN — Strep eradication required" },
+    "drug": "Benzathine Penicillin G", "route": "IM · Single dose",
+    "correctAnswer": "600,000 U",
+    "options": ["600,000 U", "1.2 million U", "300,000 U", "1.0 million U"],
+    "explanation": "Weight 22 kg < 27 kg → 600,000 U IM. The boundary is exactly 27 kg. Heavier children get 1.2 million U.",
+    "trap": "Weight threshold: <27 kg = 600K · ≥27 kg = 1.2M. One of the most tested dose thresholds in KUHS peds."
+  },
+  {
+    "id": "dd_002",
+    "patient": { "age": "8 years", "weightKg": 31, "diagnosis": "APSGN — Strep eradication required" },
+    "drug": "Benzathine Penicillin G", "route": "IM · Single dose",
+    "correctAnswer": "1.2 million U",
+    "options": ["600,000 U", "1.2 million U", "2.4 million U", "800,000 U"],
+    "explanation": "Weight 31 kg > 27 kg → 1.2 million U IM. Common trap: students remember only one dose value.",
+    "trap": "Weight threshold: <27 kg = 600K · ≥27 kg = 1.2M. This question uses the OVER boundary."
+  },
+  {
+    "id": "dd_003",
+    "patient": { "age": "4 years", "weightKg": 16, "diagnosis": "Nephrotic Syndrome — First episode" },
+    "drug": "Prednisolone", "route": "PO · Daily",
+    "correctAnswer": "2 mg/kg/day",
+    "options": ["1 mg/kg/day", "2 mg/kg/day", "3 mg/kg/day", "1.5 mg/kg/day"],
+    "explanation": "First episode NS: Prednisolone 2 mg/kg/day (max 60 mg/day) × 6 weeks. 1 mg/kg is the alternate-day dose used in weeks 7–12.",
+    "trap": "2 mg/kg/day for first 6 weeks, NOT 1 mg/kg. Confusing these two phases is a classic -1 mark."
+  },
+  {
+    "id": "dd_004",
+    "patient": { "age": "13 years", "weightKg": 38, "diagnosis": "Nephrotic Syndrome — First episode (large child)" },
+    "drug": "Prednisolone — What is the correct DAILY dose?", "route": "PO",
+    "correctAnswer": "60 mg/day (max cap)",
+    "options": ["76 mg/day (2 mg/kg × 38 kg)", "60 mg/day (max cap)", "40 mg/day", "80 mg/day"],
+    "explanation": "At 38 kg, 2 mg/kg = 76 mg — but the daily maximum is capped at 60 mg regardless of weight. Always apply the cap.",
+    "trap": "Max dose cap = 60 mg/day. Do NOT calculate 2 mg/kg × weight and ignore the ceiling."
+  },
+  {
+    "id": "dd_005",
+    "patient": { "age": "6 years", "weightKg": 20, "diagnosis": "AGN — Significant fluid overload, pitting edema" },
+    "drug": "Furosemide", "route": "IV",
+    "correctAnswer": "1–2 mg/kg",
+    "options": ["0.5–1 mg/kg", "1–2 mg/kg", "3–5 mg/kg", "2–4 mg/kg"],
+    "explanation": "Furosemide for fluid overload in AGN: 1–2 mg/kg IV. Remember: furosemide is NOT for hypertension in AGN — it is for fluid overload only.",
+    "trap": "Furosemide = fluid overload. Nifedipine = hypertension. Giving furosemide for HTN in AGN = -1 mark."
+  },
+  {
+    "id": "dd_006",
+    "patient": { "age": "9 months", "weightKg": 9, "diagnosis": "Nutritional Rickets — Hypocalcemic seizures" },
+    "drug": "Calcium Gluconate 10%", "route": "IV · Slowly over 10 min · ECG monitoring",
+    "correctAnswer": "1–2 mL/kg",
+    "options": ["0.5 mL/kg", "1–2 mL/kg", "5 mL/kg", "2–4 mL/kg"],
+    "explanation": "Hypocalcemic tetany/seizures in rickets: IV Ca gluconate 10% at 1–2 mL/kg over 10 minutes. Must have cardiac monitoring — rapid infusion causes bradycardia.",
+    "trap": "SLOW infusion with ECG monitoring. Rapid bolus → bradycardia / cardiac arrest."
+  },
+  {
+    "id": "dd_007",
+    "patient": { "age": "5 years", "weightKg": 17, "diagnosis": "Nephrotic Syndrome — Hypovolemia (cold peripheries, tachycardia)" },
+    "drug": "25% Albumin", "route": "IV · Over 1–2 hours → then furosemide",
+    "correctAnswer": "0.5–1.0 g/kg",
+    "options": ["0.25 g/kg", "0.5–1.0 g/kg", "1.5–2.0 g/kg", "2.0 g/kg"],
+    "explanation": "NS hypovolemia/shock: 25% albumin 0.5–1.0 g/kg IV over 1–2 hours, followed by a loop diuretic. Only for HYPOVOLEMIA — not for routine edema.",
+    "trap": "25% albumin is for HYPOVOLEMIC NS — NOT for edema management. Don't confuse indications."
+  },
+  {
+    "id": "dd_008",
+    "patient": { "age": "6 weeks", "weightKg": 4.5, "diagnosis": "Congenital Hypothyroidism — confirmed on TSH/T4" },
+    "drug": "Levothyroxine", "route": "PO · Daily",
+    "correctAnswer": "10–15 mcg/kg/day",
+    "options": ["5–10 mcg/kg/day", "10–15 mcg/kg/day", "20–25 mcg/kg/day", "1–2 mcg/kg/day"],
+    "explanation": "L-thyroxine for congenital hypothyroidism: 10–15 mcg/kg/day. Must start within 2 weeks of life for normal neurodevelopmental outcome.",
+    "trap": "Start WITHIN 2 WEEKS of life. Delay causes irreversible intellectual disability."
+  },
+  {
+    "id": "dd_009",
+    "patient": { "age": "2 days", "weightKg": 2.8, "diagnosis": "Neonatal Hypoglycemia — symptomatic · glucose 22 mg/dL" },
+    "drug": "Dextrose 10%", "route": "IV · Bolus",
+    "correctAnswer": "2 mL/kg",
+    "options": ["1 mL/kg", "2 mL/kg", "5 mL/kg", "10 mL/kg"],
+    "explanation": "Symptomatic neonatal hypoglycemia (or glucose <25 mg/dL): IV D10 bolus 2 mL/kg. Then D10 maintenance 80–100 mL/kg/day. Asymptomatic hypoglycemia → feed first, IV only if no response.",
+    "trap": "Feed FIRST for asymptomatic. IV D10 for SYMPTOMATIC or <25 mg/dL. Don't over-treat."
+  },
+  {
+    "id": "dd_010",
+    "patient": { "age": "18 months", "weightKg": 11, "diagnosis": "Nutritional Rickets — starting treatment" },
+    "drug": "Vitamin D3 — Daily therapy", "route": "PO · 6–12 weeks",
+    "correctAnswer": "2000–4000 IU/day",
+    "options": ["400 IU/day", "800–1000 IU/day", "2000–4000 IU/day", "10,000 IU/day"],
+    "explanation": "Rickets treatment: Vit D3 2000–4000 IU/day × 6–12 weeks (or 3 months), then 400 IU/day maintenance. 400 IU is prevention only.",
+    "trap": "Treatment ≠ Prevention. 400 IU = prevention. 2000–4000 IU = treatment. Confusing these = wrong dose."
+  },
+  {
+    "id": "dd_011",
+    "patient": { "age": "3 years", "weightKg": 14, "diagnosis": "Nutritional Rickets — non-compliant family · stoss therapy preferred" },
+    "drug": "Vitamin D3 — Stoss therapy", "route": "PO · Single dose",
+    "correctAnswer": "150,000–300,000 IU",
+    "options": ["50,000 IU", "150,000–300,000 IU", "500,000 IU", "1,000,000 IU"],
+    "explanation": "Stoss therapy: 150,000–300,000 IU Vit D3 orally as a single dose. Repeat at 3 months if needed. Used when compliance is a problem.",
+    "trap": "Stoss = 150K–300K IU PO single dose. 500K IU is excessive. 50K IU is inadequate."
+  },
+  {
+    "id": "dd_012",
+    "patient": { "age": "3 years", "weightKg": 14, "diagnosis": "Rickets — on Vitamin D therapy · what else is essential?" },
+    "drug": "Elemental Calcium", "route": "PO · Daily alongside Vit D",
+    "correctAnswer": "50–100 mg/kg/day",
+    "options": ["10–20 mg/kg/day", "50–100 mg/kg/day", "200–400 mg/kg/day", "1000 mg fixed dose"],
+    "explanation": "Elemental calcium 50–100 mg/kg/day must accompany vitamin D in rickets. Vitamin D alone is not sufficient — calcium supplementation is required to mineralise the osteoid.",
+    "trap": "Vitamin D alone is NOT enough. Elemental calcium 50–100 mg/kg/day is MANDATORY alongside it."
+  },
+  {
+    "id": "dd_013",
+    "patient": { "age": "8 years", "weightKg": 28, "diagnosis": "DKA — after 1 hour of IV fluid resuscitation" },
+    "drug": "Regular Insulin", "route": "IV · Continuous infusion (NEVER bolus)",
+    "correctAnswer": "0.05–0.1 U/kg/hr",
+    "options": ["0.1–0.2 U/kg/hr", "0.05–0.1 U/kg/hr", "0.3–0.5 U/kg/hr", "1 U/kg bolus IV"],
+    "explanation": "DKA insulin: 0.05–0.1 U/kg/hr IV continuous infusion, started AFTER 1–2 hours of fluid resuscitation. NEVER bolus — rapid osmotic shift → cerebral edema.",
+    "trap": "NEVER bolus insulin in paediatric DKA. Give fluids for 1–2 hours FIRST, then start insulin."
+  },
+  {
+    "id": "dd_014",
+    "patient": { "age": "10 years", "weightKg": 32, "diagnosis": "DKA — potassium measured at 3.0 mEq/L" },
+    "drug": "Insulin decision", "route": "IV",
+    "correctAnswer": "HOLD insulin · correct K+ first",
+    "options": ["Start 0.1 U/kg/hr immediately", "HOLD insulin · correct K+ first", "Give insulin + double K+ infusion", "Give IV bicarbonate then insulin"],
+    "explanation": "If K+ <3.3 mEq/L: HOLD insulin and correct potassium first. Insulin drives K+ intracellularly — in already hypokalaemic patients this can cause fatal arrhythmia.",
+    "trap": "K+ <3.3 → Hold insulin! Resume only when K+ ≥3.3 mEq/L. This is the single most dangerous DKA management error."
+  },
+  {
+    "id": "dd_015",
+    "patient": { "age": "7 years", "weightKg": 24, "diagnosis": "DKA — initial resuscitation phase" },
+    "drug": "0.9% Normal Saline", "route": "IV · Initial bolus",
+    "correctAnswer": "10–20 mL/kg over 1–2 hours",
+    "options": ["5 mL/kg over 30 min", "10–20 mL/kg over 1–2 hours", "30 mL/kg over 30 min", "40 mL/kg over 4 hours"],
+    "explanation": "DKA initial fluid: 0.9% NS 10–20 mL/kg over 1–2 hours. Replace the total deficit over 48 hours (NOT 24). Rapid replacement → cerebral edema.",
+    "trap": "DKA deficit over 48 hours, NOT 24 hours. Rapid correction = cerebral edema risk."
+  },
+  {
+    "id": "dd_016",
+    "patient": { "age": "9 years", "weightKg": 30, "diagnosis": "DKA — cerebral edema developing (headache, bradycardia, altered consciousness)" },
+    "drug": "Mannitol", "route": "IV · Immediate",
+    "correctAnswer": "0.5–1 g/kg",
+    "options": ["0.1–0.25 g/kg", "0.5–1 g/kg", "2–4 g/kg", "5 mL/kg of 3% NaCl only"],
+    "explanation": "Cerebral edema in DKA: Mannitol 0.5–1 g/kg IV OR 3% hypertonic saline 5–10 mL/kg. Also reduce fluid rate and elevate head to 30°.",
+    "trap": "Both mannitol AND 3% saline are valid. Must also REDUCE fluid rate — continuing fast fluids worsens edema."
+  },
+  {
+    "id": "dd_017",
+    "patient": { "age": "2 years", "weightKg": 12, "diagnosis": "Acute Diarrhea — sunken eyes, skin pinch slow, restless · Plan B" },
+    "drug": "ORS", "route": "PO · In clinic",
+    "correctAnswer": "75 mL/kg over 4 hours",
+    "options": ["50 mL/kg over 2 hours", "75 mL/kg over 4 hours", "100 mL/kg over 4 hours", "30 mL/kg over 1 hour"],
+    "explanation": "Plan B (some dehydration, 3–9%): ORS 75 mL/kg over 4 hours in clinic. Reassess every 1–2 hours. If vomiting: give 5 mL every 1–2 min by spoon.",
+    "trap": "Plan B = 75 mL/kg ORS / 4h. Plan C = IV RL 30 mL/kg bolus. Do NOT swap these."
+  },
+  {
+    "id": "dd_018",
+    "patient": { "age": "18 months", "weightKg": 9, "diagnosis": "Severe Dehydration — lethargic, unable to drink · Plan C" },
+    "drug": "Ringer's Lactate", "route": "IV · Phase 1 · child 1–5 years",
+    "correctAnswer": "30 mL/kg over 30 min",
+    "options": ["30 mL/kg over 1 hour", "30 mL/kg over 30 min", "70 mL/kg over 5 hours", "10 mL/kg over 15 min"],
+    "explanation": "Plan C, child 1–5 years: RL 30 mL/kg over 30 MIN. Infants <12 months: 30 mL/kg over 1 HOUR. Then 70 mL/kg over the next 5 hours.",
+    "trap": "AGE MATTERS: <12 months = 30 mL/kg over 1 HOUR. 1–5 years = 30 mL/kg over 30 MIN."
+  },
+  {
+    "id": "dd_019",
+    "patient": { "age": "8 months", "weightKg": 8, "diagnosis": "Acute Diarrhea — zinc supplementation required" },
+    "drug": "Zinc", "route": "PO · 10–14 days",
+    "correctAnswer": "20 mg/day (age ≥6 months)",
+    "options": ["5 mg/day", "10 mg/day (for <6 months)", "20 mg/day (age ≥6 months)", "40 mg/day"],
+    "explanation": "Zinc: <6 months = 10 mg/day. ≥6 months (as here, 8 months) = 20 mg/day. Duration: 10–14 days. Reduces duration and severity of acute diarrhea.",
+    "trap": "Age matters! <6 months = 10 mg. ≥6 months = 20 mg. Often MCQ trap in KUHS."
+  },
+  {
+    "id": "dd_020",
+    "patient": { "age": "7 years", "weightKg": 22, "diagnosis": "APSGN — blood pressure 148/96 mmHg" },
+    "drug": "Antihypertensive — first line for ACUTE HTN in AGN", "route": "PO",
+    "correctAnswer": "Nifedipine (CCB)",
+    "options": ["Enalapril (ACE inhibitor)", "Nifedipine (CCB)", "Furosemide (diuretic)", "Amlodipine"],
+    "explanation": "First-line for ACUTE HTN in AGN: Nifedipine (CCB). ACE inhibitors are CONTRAINDICATED acutely — worsen hyperkalaemia and AKI. Furosemide is for fluid overload only.",
+    "trap": "ACEi in acute AGN HTN = instant marks off. First-line = Nifedipine. Furosemide = fluid overload only."
+  },
+  {
+    "id": "dd_021",
+    "patient": { "age": "3 years", "weightKg": 14, "diagnosis": "HUS — STEC E. coli O157:H7 confirmed on stool PCR" },
+    "drug": "Antibiotics", "route": "Decision required",
+    "correctAnswer": "AVOID antibiotics",
+    "options": ["Ceftriaxone 50 mg/kg/day IV", "Azithromycin single dose", "AVOID antibiotics", "Cotrimoxazole 5 days"],
+    "explanation": "Antibiotics are CONTRAINDICATED in typical STEC-HUS. They trigger increased Shiga toxin release from bacteria, worsening endothelial damage and HUS severity.",
+    "trap": "No antibiotics in STEC-HUS! Exception: pneumococcal HUS — antibiotics ARE indicated in that variant."
+  },
+  {
+    "id": "dd_022",
+    "patient": { "age": "4 years", "weightKg": 17, "diagnosis": "Atypical HUS — eculizumab indicated · about to start" },
+    "drug": "Before starting eculizumab", "route": "Mandatory pre-treatment step",
+    "correctAnswer": "Vaccinate against Meningococcus",
+    "options": ["Start eculizumab immediately", "Vaccinate against Meningococcus", "Give prophylactic ceftriaxone instead", "Check ADAMTS13 activity first"],
+    "explanation": "Eculizumab (anti-C5) blocks terminal complement. This creates specific susceptibility to Neisseria meningitidis. Meningococcal vaccine is MANDATORY before starting.",
+    "trap": "C5 inhibition = meningococcal risk. Vaccine before eculizumab every time, no exceptions."
+  },
+  {
+    "id": "dd_023",
+    "patient": { "age": "6 weeks", "weightKg": 4.2, "diagnosis": "Biliary Atresia — confirmed on HIDA scan + liver biopsy" },
+    "drug": "Kasai Portoenterostomy", "route": "Surgical — timing is critical",
+    "correctAnswer": "Before 60 days of age",
+    "options": ["Before 30 days of age", "Before 60 days of age", "Before 90 days of age", "After 6 months with transplant readiness"],
+    "explanation": "Kasai must be performed <60 days of age for best outcomes (50–60% success rate). After 90 days, success drops dramatically. Timing is the single most important prognostic factor.",
+    "trap": "60 days = the critical target. NOT 90 days (that's the outer limit, not the goal)."
+  },
+  {
+    "id": "dd_024",
+    "patient": { "age": "6 weeks", "weightKg": 4.8, "diagnosis": "Congenital Hypothyroidism — on L-thyroxine · daily administration" },
+    "drug": "Levothyroxine — give separately from...", "route": "PO",
+    "correctAnswer": "Separate from soy / iron / calcium",
+    "options": ["Always give with formula", "Separate from soy / iron / calcium", "Give with calcium for bone health", "Crush and give with iron drops"],
+    "explanation": "Levothyroxine absorption is significantly reduced by soy formula, iron supplements, and calcium. Give separately, at least 4 hours apart from these substances.",
+    "trap": "Soy + iron + calcium all REDUCE levothyroxine absorption. A real exam trap for CH management."
+  },
+  {
+    "id": "dd_025",
+    "patient": { "age": "6 years", "weightKg": 22, "diagnosis": "Nephrotic Syndrome — steroid resistant after 6 weeks" },
+    "drug": "Cyclophosphamide", "route": "PO",
+    "correctAnswer": "2 mg/kg/day × 8–12 weeks",
+    "options": ["5 mg/kg/day × 4 weeks", "2 mg/kg/day × 8–12 weeks", "1 mg/kg/day × 6 months", "10 mg/kg/day × 1 week"],
+    "explanation": "Cyclophosphamide for SRNS: 2 mg/kg/day PO × 8–12 weeks. Cumulative dose limit: 168 mg/kg (to limit gonadotoxicity). Monitor CBC regularly.",
+    "trap": "Cumulative limit = 168 mg/kg total. Exceeding this increases gonadotoxicity risk."
+  },
+  {
+    "id": "dd_026",
+    "patient": { "age": "10 years", "weightKg": 35, "diagnosis": "Portal Hypertension — acute variceal bleed · haematemesis" },
+    "drug": "Blood transfusion — target haemoglobin", "route": "IV",
+    "correctAnswer": "Hb 7–8 g/dL",
+    "options": ["Hb 10–12 g/dL (normal range)", "Hb 9–10 g/dL", "Hb 7–8 g/dL", "Hb 6 g/dL minimum"],
+    "explanation": "In acute variceal bleeding: transfuse to Hb 7–8 g/dL ONLY. Over-transfusion increases portal venous pressure and dramatically increases rebleeding risk.",
+    "trap": "Over-transfusion in variceal bleed INCREASES portal pressure → rebleeding. Target 7–8, NOT 10–12."
+  },
+  {
+    "id": "dd_027",
+    "patient": { "age": "3 years", "weightKg": 15, "diagnosis": "DKA — glucose has dropped to 210 mg/dL · insulin still infusing" },
+    "drug": "Management of blood glucose 210 mg/dL in DKA", "route": "IV",
+    "correctAnswer": "Add dextrose · continue insulin",
+    "options": ["Stop insulin infusion", "Reduce insulin to 0.02 U/kg/hr", "Add dextrose · continue insulin", "Stop fluids until glucose normalises"],
+    "explanation": "When BG drops to 200–250 mg/dL in DKA: ADD dextrose (D5 or D10) to IV fluids — do NOT stop insulin. Insulin must continue until acidosis resolves (pH >7.30, HCO₃ >18).",
+    "trap": "Stopping insulin when glucose normalises is WRONG. Continue insulin until ACIDOSIS resolves, not just hyperglycaemia."
+  }
+]

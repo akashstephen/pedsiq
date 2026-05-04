@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dose Duel — Peds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#080C18;--surface:#0F1628;--surface2:#161E35;--surface3:#1D2847;
+  --cyan:#22D3EE;--green:#10B981;--red:#EF4444;--amber:#F59E0B;--violet:#818CF8;
+  --text:#E2E8F0;--text2:#94A3B8;--text3:#475569;
+  --border:#1E3A5F;--border2:#2D4A6E;
+}
+html,body{height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
+.screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .3s,transform .3s}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(16px)}
+
+/* ── SPLASH ── */
+#splash{gap:20px;text-align:center;padding:24px}
+.logo{font-family:'Space Mono',monospace;font-size:clamp(36px,8vw,60px);font-weight:700;
+  background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:-1px;line-height:1}
+.logo-sub{font-size:13px;letter-spacing:.25em;color:var(--text2);text-transform:uppercase;margin-top:4px}
+.divider{width:48px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));border-radius:2px}
+.tagline{font-size:15px;color:var(--text2);max-width:320px;line-height:1.6;text-align:center}
+.neuro-badge{background:var(--surface2);border:1px solid var(--border2);border-radius:8px;
+  padding:10px 16px;font-size:12px;color:var(--text2);max-width:320px;line-height:1.7;text-align:left}
+.neuro-badge strong{color:var(--cyan);font-weight:600}
+.btn-start{background:linear-gradient(135deg,#0891B2,#6D28D9);border:none;color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;padding:14px 48px;
+  border-radius:12px;cursor:pointer;letter-spacing:.03em;
+  box-shadow:0 0 32px rgba(34,211,238,.25);transition:transform .15s,box-shadow .15s}
+.btn-start:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(34,211,238,.4)}
+.splash-stats{display:flex;gap:24px;font-size:12px;color:var(--text3)}
+.splash-stats span{color:var(--cyan);font-family:'Space Mono',monospace;font-size:18px;display:block}
+
+/* ── GAME ── */
+#game{padding:16px;gap:0;justify-content:flex-start;width:100%;max-width:560px;margin:0 auto}
+.hud{width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 2px 14px;flex-shrink:0}
+.hud-score{font-family:'Space Mono',monospace;font-size:22px;font-weight:700;color:var(--cyan)}
+.hud-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-top:1px}
+.hud-streak{text-align:right}
+.hud-streak-val{font-family:'Space Mono',monospace;font-size:18px;font-weight:700;color:var(--amber)}
+.hud-qcount{text-align:center;font-family:'Space Mono',monospace;font-size:13px;color:var(--text3)}
+
+/* Timer bar */
+.timer-wrap{width:100%;height:5px;background:var(--surface3);border-radius:3px;overflow:hidden;flex-shrink:0;margin-bottom:16px}
+.timer-bar{height:100%;border-radius:3px;transition:width .1s linear,background-color .3s;
+  background:linear-gradient(90deg,var(--cyan),var(--violet))}
+
+/* Patient card */
+.patient-card{width:100%;background:var(--surface2);border:1px solid var(--border2);
+  border-radius:14px;padding:14px 18px;margin-bottom:14px;flex-shrink:0;
+  display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+.pc-row{display:flex;flex-direction:column;gap:2px}
+.pc-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)}
+.pc-val{font-size:14px;color:var(--text);font-weight:500}
+.pc-val.weight{font-family:'Space Mono',monospace;font-size:18px;color:var(--cyan);font-weight:700}
+.pc-val.weight span{font-size:12px;color:var(--text3);font-family:'DM Sans',sans-serif;font-weight:400}
+.pc-diagnosis{grid-column:1/-1;background:var(--surface3);border-radius:8px;padding:8px 12px}
+.pc-diagnosis .pc-label{margin-bottom:3px}
+.pc-diagnosis .pc-val{font-size:13px;line-height:1.4}
+
+/* Drug question */
+.drug-box{width:100%;background:var(--surface);border:1px solid var(--border);
+  border-radius:14px;padding:16px 18px;margin-bottom:14px;flex-shrink:0;text-align:center}
+.drug-name{font-family:'Space Mono',monospace;font-size:clamp(14px,3.5vw,17px);
+  font-weight:700;color:var(--violet);margin-bottom:4px}
+.drug-route{font-size:12px;color:var(--text3)}
+.drug-q{font-size:15px;color:var(--text2);margin-top:8px;line-height:1.4}
+
+/* Options */
+.options{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px;flex-shrink:0}
+.opt{background:var(--surface2);border:1.5px solid var(--border2);border-radius:12px;
+  padding:12px 14px;cursor:pointer;font-family:'Space Mono',monospace;
+  font-size:clamp(11px,2.8vw,13px);font-weight:700;color:var(--text);text-align:center;
+  line-height:1.3;transition:all .15s;user-select:none}
+.opt:hover:not(.locked){background:var(--surface3);border-color:var(--border);transform:translateY(-1px)}
+.opt.correct{background:#052E16;border-color:var(--green);color:var(--green);box-shadow:0 0 16px rgba(16,185,129,.2)}
+.opt.wrong{background:#2A0A0A;border-color:var(--red);color:var(--red);animation:shake .3s}
+.opt.reveal{background:#052E16;border-color:var(--green);color:var(--green)}
+.opt.locked{cursor:default}
+
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* Feedback panel */
+.feedback{width:100%;border-radius:14px;padding:14px 16px;margin-top:12px;
+  flex-shrink:0;display:none;animation:fadeUp .2s}
+.feedback.show{display:block}
+.feedback.correct-fb{background:#052E16;border:1px solid var(--green)}
+.feedback.wrong-fb{background:#1A0A0A;border:1px solid var(--red)}
+.feedback.timeout-fb{background:#1A1000;border:1px solid var(--amber)}
+.fb-verdict{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.correct-fb .fb-verdict{color:var(--green)}
+.wrong-fb .fb-verdict{color:var(--red)}
+.timeout-fb .fb-verdict{color:var(--amber)}
+.fb-text{font-size:12.5px;color:var(--text2);line-height:1.6}
+.fb-trap{margin-top:8px;padding:8px 10px;background:rgba(245,158,11,.08);
+  border-left:3px solid var(--amber);border-radius:4px;
+  font-size:12px;color:var(--amber);line-height:1.5}
+.fb-trap::before{content:"⚠ TRAP: ";font-weight:700}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* Score flash overlay */
+.flash{position:fixed;inset:0;pointer-events:none;opacity:0;transition:opacity .1s}
+.flash.go-green{background:rgba(16,185,129,.12);opacity:1}
+.flash.go-red{background:rgba(239,68,68,.12);opacity:1}
+
+/* ── RESULTS ── */
+#results{padding:24px;gap:16px;text-align:center;max-width:500px;width:100%}
+.result-title{font-family:'Space Mono',monospace;font-size:28px;font-weight:700;color:var(--text)}
+.score-big{font-family:'Space Mono',monospace;font-size:72px;font-weight:700;line-height:1;
+  background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.score-denom{font-size:14px;color:var(--text3)}
+.grade-badge{font-size:13px;font-weight:600;padding:6px 20px;border-radius:20px;border:1.5px solid}
+.stats-grid{width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.stat-box{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px 8px}
+.stat-num{font-family:'Space Mono',monospace;font-size:24px;font-weight:700}
+.stat-lbl{font-size:11px;color:var(--text3);margin-top:2px}
+.missed-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);align-self:flex-start;width:100%}
+.missed-list{width:100%;display:flex;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto}
+.missed-item{background:var(--surface2);border-left:3px solid var(--red);border-radius:6px;
+  padding:8px 12px;text-align:left;font-size:12px;line-height:1.5}
+.missed-item strong{color:var(--text);font-family:'Space Mono',monospace;font-size:11px}
+.missed-item span{color:var(--green);font-family:'Space Mono',monospace}
+.btn-restart{background:linear-gradient(135deg,#0891B2,#6D28D9);border:none;color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:12px 40px;
+  border-radius:10px;cursor:pointer;transition:transform .15s}
+.btn-restart:hover{transform:translateY(-2px)}
+
+/* scrollbar */
+.missed-list::-webkit-scrollbar{width:4px}
+.missed-list::-webkit-scrollbar-track{background:transparent}
+.missed-list::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+/* Responsive */
+@media(max-width:400px){
+  .options{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="flash" id="flash"></div>
+
+<!-- SPLASH -->
+<div class="screen" id="splash">
+  <div class="logo">DOSE DUEL</div>
+  <div class="logo-sub">Pediatric Dosing Arcade · PedsIQ</div>
+  <div class="divider"></div>
+  <div class="neuro-badge">
+    <strong>Why this works:</strong> Generation effect + norepinephrine arousal.
+    Time pressure forces genuine <em>retrieval</em> (not recognition) and activates
+    the LC-NE system, tagging these doses as important. Doses recalled under
+    mild stress are retained ~40% longer.
+  </div>
+  <div class="splash-stats">
+    <div><span id="q-count-badge">26</span>Questions</div>
+    <div><span>12s</span>Per dose</div>
+    <div><span>∞</span>Topics</div>
+  </div>
+  <button class="btn-start" id="startBtn">START DUEL</button>
+  <div class="tagline">APSGN · NS · Rickets · DKA · Diarrhea · HUS · Hypothyroidism & more</div>
+</div>
+
+<!-- GAME -->
+<div class="screen hidden" id="game">
+  <div class="hud">
+    <div>
+      <div class="hud-score" id="scoreDisplay">0</div>
+      <div class="hud-label">Score</div>
+    </div>
+    <div class="hud-qcount" id="qcountDisplay">Q 1 / 26</div>
+    <div class="hud-streak">
+      <div class="hud-streak-val" id="streakDisplay">0🔥</div>
+      <div class="hud-label" style="text-align:right">Streak</div>
+    </div>
+  </div>
+  <div class="timer-wrap"><div class="timer-bar" id="timerBar"></div></div>
+
+  <div class="patient-card" id="patientCard">
+    <div class="pc-row">
+      <div class="pc-label">Age</div>
+      <div class="pc-val" id="pcAge">—</div>
+    </div>
+    <div class="pc-row" style="text-align:right">
+      <div class="pc-label">Weight</div>
+      <div class="pc-val weight" id="pcWeight">— <span>kg</span></div>
+    </div>
+    <div class="pc-row pc-diagnosis">
+      <div class="pc-label">Clinical Context</div>
+      <div class="pc-val" id="pcDiagnosis">—</div>
+    </div>
+  </div>
+
+  <div class="drug-box">
+    <div class="drug-name" id="drugName">—</div>
+    <div class="drug-route" id="drugRoute">—</div>
+    <div class="drug-q">Select the correct dose / answer:</div>
+  </div>
+
+  <div class="options" id="optionsGrid"></div>
+
+  <div class="feedback" id="feedbackPanel">
+    <div class="fb-verdict" id="fbVerdict">—</div>
+    <div class="fb-text" id="fbText">—</div>
+    <div class="fb-trap" id="fbTrap" style="display:none">—</div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="screen hidden" id="results">
+  <div class="result-title" id="resultTitle">ROUND OVER</div>
+  <div class="score-big" id="scoreBig">—</div>
+  <div class="score-denom" id="scoreDenom">out of 26</div>
+  <div class="grade-badge" id="gradeBadge">—</div>
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-num" id="statCorrect" style="color:var(--green)">—</div>
+      <div class="stat-lbl">Correct</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="statWrong" style="color:var(--red)">—</div>
+      <div class="stat-lbl">Wrong</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="statTimeout" style="color:var(--amber)">—</div>
+      <div class="stat-lbl">Timeout</div>
+    </div>
+  </div>
+  <div class="missed-title" id="missedTitle">Missed doses — study these:</div>
+  <div class="missed-list" id="missedList"></div>
+  <button class="btn-restart" id="restartBtn">PLAY AGAIN</button>
+</div>
+
+<script>
+const QUESTIONS = [
+  {
+    patient:{age:"5 years",weight:22,dx:"APSGN — Strep eradication required"},
+    drug:"Benzathine Penicillin G",route:"IM · Single dose",
+    correct:"600,000 U",
+    opts:["600,000 U","1.2 million U","300,000 U","1.0 million U"],
+    explain:"Weight 22 kg < 27 kg → 600,000 U IM. The boundary is exactly 27 kg. Heavier children get 1.2 million U.",
+    trap:"Weight threshold: <27 kg = 600K · ≥27 kg = 1.2M. One of the most tested dose thresholds in KUHS peds."
+  },
+  {
+    patient:{age:"8 years",weight:31,dx:"APSGN — Strep eradication required"},
+    drug:"Benzathine Penicillin G",route:"IM · Single dose",
+    correct:"1.2 million U",
+    opts:["600,000 U","1.2 million U","2.4 million U","800,000 U"],
+    explain:"Weight 31 kg > 27 kg → 1.2 million U IM. Common trap: students remember only one dose value.",
+    trap:"Weight threshold: <27 kg = 600K · ≥27 kg = 1.2M. This question uses the OVER boundary."
+  },
+  {
+    patient:{age:"4 years",weight:16,dx:"Nephrotic Syndrome — First episode"},
+    drug:"Prednisolone",route:"PO · Daily",
+    correct:"2 mg/kg/day",
+    opts:["1 mg/kg/day","2 mg/kg/day","3 mg/kg/day","1.5 mg/kg/day"],
+    explain:"First episode NS: Prednisolone 2 mg/kg/day (max 60 mg/day) × 6 weeks. 1 mg/kg is the alternate-day dose used in weeks 7–12.",
+    trap:"2 mg/kg/day for first 6 weeks, NOT 1 mg/kg. Confusing these two phases is a classic -1 mark."
+  },
+  {
+    patient:{age:"13 years",weight:38,dx:"Nephrotic Syndrome — First episode (large child)"},
+    drug:"Prednisolone — What is the correct DAILY dose?",route:"PO",
+    correct:"60 mg/day (max cap)",
+    opts:["76 mg/day (2 mg/kg × 38 kg)","60 mg/day (max cap)","40 mg/day","80 mg/day"],
+    explain:"At 38 kg, 2 mg/kg = 76 mg — but the daily maximum is capped at 60 mg regardless of weight. Always apply the cap.",
+    trap:"Max dose cap = 60 mg/day. Do NOT calculate 2 mg/kg × weight and ignore the ceiling."
+  },
+  {
+    patient:{age:"6 years",weight:20,dx:"AGN — Significant fluid overload, pitting edema"},
+    drug:"Furosemide",route:"IV",
+    correct:"1–2 mg/kg",
+    opts:["0.5–1 mg/kg","1–2 mg/kg","3–5 mg/kg","2–4 mg/kg"],
+    explain:"Furosemide for fluid overload in AGN: 1–2 mg/kg IV. Remember: furosemide is NOT for hypertension in AGN — it is for fluid overload only.",
+    trap:"Furosemide = fluid overload. Nifedipine = hypertension. Giving furosemide for HTN in AGN = -1 mark."
+  },
+  {
+    patient:{age:"9 months",weight:9,dx:"Nutritional Rickets — Hypocalcemic seizures"},
+    drug:"Calcium Gluconate 10%",route:"IV · Slowly over 10 min · ECG monitoring",
+    correct:"1–2 mL/kg",
+    opts:["0.5 mL/kg","1–2 mL/kg","5 mL/kg","2–4 mL/kg"],
+    explain:"Hypocalcemic tetany/seizures in rickets: IV Ca gluconate 10% at 1–2 mL/kg over 10 minutes. Must have cardiac monitoring — rapid infusion causes bradycardia.",
+    trap:"SLOW infusion with ECG monitoring. Rapid bolus → bradycardia / cardiac arrest."
+  },
+  {
+    patient:{age:"5 years",weight:17,dx:"Nephrotic Syndrome — Hypovolemia (cold peripheries, tachycardia)"},
+    drug:"25% Albumin",route:"IV · Over 1–2 hours → then furosemide",
+    correct:"0.5–1.0 g/kg",
+    opts:["0.25 g/kg","0.5–1.0 g/kg","1.5–2.0 g/kg","2.0 g/kg"],
+    explain:"NS hypovolemia/shock: 25% albumin 0.5–1.0 g/kg IV over 1–2 hours, followed by a loop diuretic. Only for HYPOVOLEMIA — not for routine edema.",
+    trap:"25% albumin is for HYPOVOLEMIC NS — NOT for edema management. Don't confuse indications."
+  },
+  {
+    patient:{age:"6 weeks",weight:4.5,dx:"Congenital Hypothyroidism — confirmed on TSH/T4"},
+    drug:"Levothyroxine",route:"PO · Daily",
+    correct:"10–15 mcg/kg/day",
+    opts:["5–10 mcg/kg/day","10–15 mcg/kg/day","20–25 mcg/kg/day","1–2 mcg/kg/day"],
+    explain:"L-thyroxine for congenital hypothyroidism: 10–15 mcg/kg/day. Must start within 2 weeks of life for normal neurodevelopmental outcome.",
+    trap:"Start WITHIN 2 WEEKS of life. Delay causes irreversible intellectual disability."
+  },
+  {
+    patient:{age:"2 days",weight:2.8,dx:"Neonatal Hypoglycemia — symptomatic · glucose 22 mg/dL"},
+    drug:"Dextrose 10%",route:"IV · Bolus",
+    correct:"2 mL/kg",
+    opts:["1 mL/kg","2 mL/kg","5 mL/kg","10 mL/kg"],
+    explain:"Symptomatic neonatal hypoglycemia (or glucose <25 mg/dL): IV D10 bolus 2 mL/kg. Then D10 maintenance 80–100 mL/kg/day. Asymptomatic hypoglycemia → feed first, IV only if no response.",
+    trap:"Feed FIRST for asymptomatic. IV D10 for SYMPTOMATIC or <25 mg/dL. Don't over-treat."
+  },
+  {
+    patient:{age:"18 months",weight:11,dx:"Nutritional Rickets — starting treatment"},
+    drug:"Vitamin D3 — Daily therapy",route:"PO · 6–12 weeks",
+    correct:"2000–4000 IU/day",
+    opts:["400 IU/day","800–1000 IU/day","2000–4000 IU/day","10,000 IU/day"],
+    explain:"Rickets treatment: Vit D3 2000–4000 IU/day × 6–12 weeks (or 3 months), then 400 IU/day maintenance. 400 IU is prevention only.",
+    trap:"Treatment ≠ Prevention. 400 IU = prevention. 2000–4000 IU = treatment. Confusing these = wrong dose."
+  },
+  {
+    patient:{age:"3 years",weight:14,dx:"Nutritional Rickets — non-compliant family · stoss therapy preferred"},
+    drug:"Vitamin D3 — Stoss therapy",route:"PO · Single dose",
+    correct:"150,000–300,000 IU",
+    opts:["50,000 IU","150,000–300,000 IU","500,000 IU","1,000,000 IU"],
+    explain:"Stoss therapy: 150,000–300,000 IU Vit D3 orally as a single dose. Repeat at 3 months if needed. Used when compliance is a problem.",
+    trap:"Stoss = 150K–300K IU PO single dose. 500K IU is excessive. 50K IU is inadequate."
+  },
+  {
+    patient:{age:"3 years",weight:14,dx:"Rickets — on Vitamin D therapy · what else is essential?"},
+    drug:"Elemental Calcium",route:"PO · Daily alongside Vit D",
+    correct:"50–100 mg/kg/day",
+    opts:["10–20 mg/kg/day","50–100 mg/kg/day","200–400 mg/kg/day","1000 mg fixed dose"],
+    explain:"Elemental calcium 50–100 mg/kg/day must accompany vitamin D in rickets. Vitamin D alone is not sufficient — calcium supplementation is required to mineralise the osteoid.",
+    trap:"Vitamin D alone is NOT enough. Elemental calcium 50–100 mg/kg/day is MANDATORY alongside it."
+  },
+  {
+    patient:{age:"8 years",weight:28,dx:"DKA — after 1 hour of IV fluid resuscitation"},
+    drug:"Regular Insulin",route:"IV · Continuous infusion (NEVER bolus)",
+    correct:"0.05–0.1 U/kg/hr",
+    opts:["0.1–0.2 U/kg/hr","0.05–0.1 U/kg/hr","0.3–0.5 U/kg/hr","1 U/kg bolus IV"],
+    explain:"DKA insulin: 0.05–0.1 U/kg/hr IV continuous infusion, started AFTER 1–2 hours of fluid resuscitation. NEVER bolus — rapid osmotic shift → cerebral edema.",
+    trap:"NEVER bolus insulin in paediatric DKA. Give fluids for 1–2 hours FIRST, then start insulin."
+  },
+  {
+    patient:{age:"10 years",weight:32,dx:"DKA — potassium measured at 3.0 mEq/L"},
+    drug:"Insulin decision",route:"IV",
+    correct:"HOLD insulin · correct K+ first",
+    opts:["Start 0.1 U/kg/hr immediately","HOLD insulin · correct K+ first","Give insulin + double K+ infusion","Give IV bicarbonate then insulin"],
+    explain:"If K+ <3.3 mEq/L: HOLD insulin and correct potassium first. Insulin drives K+ intracellularly — in already hypokalaemic patients this can cause fatal arrhythmia.",
+    trap:"K+ <3.3 → Hold insulin! Resume only when K+ ≥3.3 mEq/L. This is the single most dangerous DKA management error."
+  },
+  {
+    patient:{age:"7 years",weight:24,dx:"DKA — initial resuscitation phase"},
+    drug:"0.9% Normal Saline",route:"IV · Initial bolus",
+    correct:"10–20 mL/kg over 1–2 hours",
+    opts:["5 mL/kg over 30 min","10–20 mL/kg over 1–2 hours","30 mL/kg over 30 min","40 mL/kg over 4 hours"],
+    explain:"DKA initial fluid: 0.9% NS 10–20 mL/kg over 1–2 hours. Replace the total deficit over 48 hours (NOT 24). Rapid replacement → cerebral edema.",
+    trap:"DKA deficit over 48 hours, NOT 24 hours. Rapid correction = cerebral edema risk."
+  },
+  {
+    patient:{age:"9 years",weight:30,dx:"DKA — cerebral edema developing (headache, bradycardia, altered consciousness)"},
+    drug:"Mannitol",route:"IV · Immediate",
+    correct:"0.5–1 g/kg",
+    opts:["0.1–0.25 g/kg","0.5–1 g/kg","2–4 g/kg","5 mL/kg of 3% NaCl only"],
+    explain:"Cerebral edema in DKA: Mannitol 0.5–1 g/kg IV OR 3% hypertonic saline 5–10 mL/kg. Also reduce fluid rate and elevate head to 30°.",
+    trap:"Both mannitol AND 3% saline are valid. Must also REDUCE fluid rate — continuing fast fluids worsens edema."
+  },
+  {
+    patient:{age:"2 years",weight:12,dx:"Acute Diarrhea — sunken eyes, skin pinch slow, restless · Plan B"},
+    drug:"ORS",route:"PO · In clinic",
+    correct:"75 mL/kg over 4 hours",
+    opts:["50 mL/kg over 2 hours","75 mL/kg over 4 hours","100 mL/kg over 4 hours","30 mL/kg over 1 hour"],
+    explain:"Plan B (some dehydration, 3–9%): ORS 75 mL/kg over 4 hours in clinic. Reassess every 1–2 hours. If vomiting: give 5 mL every 1–2 min by spoon.",
+    trap:"Plan B = 75 mL/kg ORS / 4h. Plan C = IV RL 30 mL/kg bolus. Do NOT swap these."
+  },
+  {
+    patient:{age:"18 months",weight:9,dx:"Severe Dehydration — lethargic, unable to drink · Plan C"},
+    drug:"Ringer's Lactate",route:"IV · Phase 1 · child 1–5 years",
+    correct:"30 mL/kg over 30 min",
+    opts:["30 mL/kg over 1 hour","30 mL/kg over 30 min","70 mL/kg over 5 hours","10 mL/kg over 15 min"],
+    explain:"Plan C, child 1–5 years: RL 30 mL/kg over 30 MIN. Infants <12 months: 30 mL/kg over 1 HOUR. Then 70 mL/kg over the next 5 hours.",
+    trap:"AGE MATTERS: <12 months = 30 mL/kg over 1 HOUR. 1–5 years = 30 mL/kg over 30 MIN."
+  },
+  {
+    patient:{age:"8 months",weight:8,dx:"Acute Diarrhea — zinc supplementation required"},
+    drug:"Zinc",route:"PO · 10–14 days",
+    correct:"20 mg/day (age ≥6 months)",
+    opts:["5 mg/day","10 mg/day (for <6 months)","20 mg/day (age ≥6 months)","40 mg/day"],
+    explain:"Zinc: <6 months = 10 mg/day. ≥6 months (as here, 8 months) = 20 mg/day. Duration: 10–14 days. Reduces duration and severity of acute diarrhea.",
+    trap:"Age matters! <6 months = 10 mg. ≥6 months = 20 mg. Often MCQ trap in KUHS."
+  },
+  {
+    patient:{age:"7 years",weight:22,dx:"APSGN — blood pressure 148/96 mmHg"},
+    drug:"Antihypertensive — first line for ACUTE HTN in AGN",route:"PO",
+    correct:"Nifedipine (CCB)",
+    opts:["Enalapril (ACE inhibitor)","Nifedipine (CCB)","Furosemide (diuretic)","Amlodipine"],
+    explain:"First-line for ACUTE HTN in AGN: Nifedipine (CCB). ACE inhibitors are CONTRAINDICATED acutely — worsen hyperkalaemia and AKI. Furosemide is for fluid overload only.",
+    trap:"ACEi in acute AGN HTN = instant marks off. First-line = Nifedipine. Furosemide = fluid overload only."
+  },
+  {
+    patient:{age:"3 years",weight:14,dx:"HUS — STEC E. coli O157:H7 confirmed on stool PCR"},
+    drug:"Antibiotics",route:"Decision required",
+    correct:"AVOID antibiotics",
+    opts:["Ceftriaxone 50 mg/kg/day IV","Azithromycin single dose","AVOID antibiotics","Cotrimoxazole 5 days"],
+    explain:"Antibiotics are CONTRAINDICATED in typical STEC-HUS. They trigger increased Shiga toxin release from bacteria, worsening endothelial damage and HUS severity.",
+    trap:"No antibiotics in STEC-HUS! Exception: pneumococcal HUS — antibiotics ARE indicated in that variant."
+  },
+  {
+    patient:{age:"4 years",weight:17,dx:"Atypical HUS — eculizumab indicated · about to start"},
+    drug:"Before starting eculizumab",route:"Mandatory pre-treatment step",
+    correct:"Vaccinate against Meningococcus",
+    opts:["Start eculizumab immediately","Vaccinate against Meningococcus","Give prophylactic ceftriaxone instead","Check ADAMTS13 activity first"],
+    explain:"Eculizumab (anti-C5) blocks terminal complement. This creates specific susceptibility to Neisseria meningitidis. Meningococcal vaccine is MANDATORY before starting.",
+    trap:"C5 inhibition = meningococcal risk. Vaccine before eculizumab every time, no exceptions."
+  },
+  {
+    patient:{age:"6 weeks",weight:4.2,dx:"Biliary Atresia — confirmed on HIDA scan + liver biopsy"},
+    drug:"Kasai Portoenterostomy",route:"Surgical — timing is critical",
+    correct:"Before 60 days of age",
+    opts:["Before 30 days of age","Before 60 days of age","Before 90 days of age","After 6 months with transplant readiness"],
+    explain:"Kasai must be performed <60 days of age for best outcomes (50–60% success rate). After 90 days, success drops dramatically. Timing is the single most important prognostic factor.",
+    trap:"60 days = the critical target. NOT 90 days (that's the outer limit, not the goal)."
+  },
+  {
+    patient:{age:"6 weeks",weight:4.8,dx:"Congenital Hypothyroidism — on L-thyroxine · daily administration"},
+    drug:"Levothyroxine — give separately from...",route:"PO",
+    correct:"Separate from soy / iron / calcium",
+    opts:["Always give with formula","Separate from soy / iron / calcium","Give with calcium for bone health","Crush and give with iron drops"],
+    explain:"Levothyroxine absorption is significantly reduced by soy formula, iron supplements, and calcium. Give separately, at least 4 hours apart from these substances.",
+    trap:"Soy + iron + calcium all REDUCE levothyroxine absorption. A real exam trap for CH management."
+  },
+  {
+    patient:{age:"6 years",weight:22,dx:"Nephrotic Syndrome — steroid resistant after 6 weeks"},
+    drug:"Cyclophosphamide",route:"PO",
+    correct:"2 mg/kg/day × 8–12 weeks",
+    opts:["5 mg/kg/day × 4 weeks","2 mg/kg/day × 8–12 weeks","1 mg/kg/day × 6 months","10 mg/kg/day × 1 week"],
+    explain:"Cyclophosphamide for SRNS: 2 mg/kg/day PO × 8–12 weeks. Cumulative dose limit: 168 mg/kg (to limit gonadotoxicity). Monitor CBC regularly.",
+    trap:"Cumulative limit = 168 mg/kg total. Exceeding this increases gonadotoxicity risk."
+  },
+  {
+    patient:{age:"10 years",weight:35,dx:"Portal Hypertension — acute variceal bleed · haematemesis"},
+    drug:"Blood transfusion — target haemoglobin",route:"IV",
+    correct:"Hb 7–8 g/dL",
+    opts:["Hb 10–12 g/dL (normal range)","Hb 9–10 g/dL","Hb 7–8 g/dL","Hb 6 g/dL minimum"],
+    explain:"In acute variceal bleeding: transfuse to Hb 7–8 g/dL ONLY. Over-transfusion increases portal venous pressure and dramatically increases rebleeding risk.",
+    trap:"Over-transfusion in variceal bleed INCREASES portal pressure → rebleeding. Target 7–8, NOT 10–12."
+  },
+  {
+    patient:{age:"3 years",weight:15,dx:"DKA — glucose has dropped to 210 mg/dL · insulin still infusing"},
+    drug:"Management of blood glucose 210 mg/dL in DKA",route:"IV",
+    correct:"Add dextrose · continue insulin",
+    opts:["Stop insulin infusion","Reduce insulin to 0.02 U/kg/hr","Add dextrose · continue insulin","Stop fluids until glucose normalises"],
+    explain:"When BG drops to 200–250 mg/dL in DKA: ADD dextrose (D5 or D10) to IV fluids — do NOT stop insulin. Insulin must continue until acidosis resolves (pH >7.30, HCO₃ >18).",
+    trap:"Stopping insulin when glucose normalises is WRONG. Continue insulin until ACIDOSIS resolves, not just hyperglycaemia."
+  },
+];
+
+let qIndex=0,score=0,streak=0,maxStreak=0,correct=0,wrong=0,timeouts=0;
+let timerInterval=null,missedQuestions=[];
+const TIMER_SEC=12;
+
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+  return arr;
+}
+
+let gameQuestions=[];
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>{
+    if(s.id===id){s.classList.remove('hidden')}else{s.classList.add('hidden')}
+  });
+}
+
+function startGame(){
+  gameQuestions=shuffle([...QUESTIONS]);
+  qIndex=0;score=0;streak=0;maxStreak=0;correct=0;wrong=0;timeouts=0;missedQuestions=[];
+  document.getElementById('q-count-badge').textContent=gameQuestions.length;
+  showScreen('game');
+  loadQuestion();
+}
+
+function loadQuestion(){
+  const q=gameQuestions[qIndex];
+  document.getElementById('scoreDisplay').textContent=score;
+  document.getElementById('streakDisplay').textContent=streak+'🔥';
+  document.getElementById('qcountDisplay').textContent='Q '+(qIndex+1)+' / '+gameQuestions.length;
+
+  // patient
+  document.getElementById('pcAge').textContent=q.patient.age;
+  document.getElementById('pcWeight').innerHTML=q.patient.weight+'<span> kg</span>';
+  document.getElementById('pcDiagnosis').textContent=q.patient.dx;
+
+  // drug
+  document.getElementById('drugName').textContent=q.drug;
+  document.getElementById('drugRoute').textContent=q.route;
+
+  // options
+  const grid=document.getElementById('optionsGrid');
+  grid.innerHTML='';
+  const shuffledOpts=shuffle([...q.opts]);
+  shuffledOpts.forEach(opt=>{
+    const btn=document.createElement('div');
+    btn.className='opt';
+    btn.textContent=opt;
+    btn.addEventListener('click',()=>selectAnswer(opt,btn));
+    grid.appendChild(btn);
+  });
+
+  // feedback
+  const fb=document.getElementById('feedbackPanel');
+  fb.className='feedback';
+
+  startTimer();
+}
+
+let timeLeft=TIMER_SEC;
+function startTimer(){
+  clearInterval(timerInterval);
+  timeLeft=TIMER_SEC;
+  const bar=document.getElementById('timerBar');
+  bar.style.width='100%';
+  bar.style.backgroundColor='';
+  timerInterval=setInterval(()=>{
+    timeLeft-=0.1;
+    const pct=Math.max(0,(timeLeft/TIMER_SEC)*100);
+    bar.style.width=pct+'%';
+    if(pct<30)bar.style.background='linear-gradient(90deg,#EF4444,#F59E0B)';
+    if(timeLeft<=0){
+      clearInterval(timerInterval);
+      handleTimeout();
+    }
+  },100);
+}
+
+function stopTimer(){clearInterval(timerInterval)}
+
+function lockOptions(){
+  document.querySelectorAll('.opt').forEach(o=>o.classList.add('locked'));
+}
+
+function selectAnswer(chosen,btn){
+  if(btn.classList.contains('locked'))return;
+  stopTimer();
+  lockOptions();
+  const q=gameQuestions[qIndex];
+  const isCorrect=chosen===q.correct;
+
+  // reveal correct
+  document.querySelectorAll('.opt').forEach(o=>{
+    if(o.textContent===q.correct)o.classList.add('reveal');
+  });
+
+  if(isCorrect){
+    btn.classList.add('correct');
+    score+=10+Math.ceil(timeLeft);
+    streak++;
+    if(streak>maxStreak)maxStreak=streak;
+    correct++;
+    flashScreen('green');
+    showFeedback('correct',q);
+  }else{
+    btn.classList.add('wrong');
+    streak=0;
+    wrong++;
+    flashScreen('red');
+    missedQuestions.push(q);
+    showFeedback('wrong',q);
+  }
+  document.getElementById('scoreDisplay').textContent=score;
+  document.getElementById('streakDisplay').textContent=streak+'🔥';
+  scheduleNext(2200);
+}
+
+function handleTimeout(){
+  lockOptions();
+  const q=gameQuestions[qIndex];
+  streak=0;
+  timeouts++;
+  missedQuestions.push(q);
+  document.querySelectorAll('.opt').forEach(o=>{
+    if(o.textContent===q.correct)o.classList.add('reveal');
+  });
+  showFeedback('timeout',q);
+  document.getElementById('streakDisplay').textContent='0🔥';
+  scheduleNext(2800);
+}
+
+function showFeedback(type,q){
+  const fb=document.getElementById('feedbackPanel');
+  const verdict=document.getElementById('fbVerdict');
+  const text=document.getElementById('fbText');
+  const trap=document.getElementById('fbTrap');
+
+  fb.className='feedback show';
+  if(type==='correct'){
+    fb.classList.add('correct-fb');
+    verdict.textContent='✓ CORRECT +'+( 10+Math.ceil(timeLeft))+' pts';
+  }else if(type==='wrong'){
+    fb.classList.add('wrong-fb');
+    verdict.textContent='✗ WRONG  ·  Correct: '+q.correct;
+  }else{
+    fb.classList.add('timeout-fb');
+    verdict.textContent='⏱ TIME\'S UP  ·  Answer: '+q.correct;
+  }
+  text.textContent=q.explain;
+  if(q.trap){
+    trap.textContent=q.trap;
+    trap.style.display='block';
+  }else{
+    trap.style.display='none';
+  }
+}
+
+function flashScreen(color){
+  const f=document.getElementById('flash');
+  f.className='flash go-'+color;
+  setTimeout(()=>f.className='flash',300);
+}
+
+function scheduleNext(delay){
+  setTimeout(()=>{
+    qIndex++;
+    if(qIndex>=gameQuestions.length){showResults();}
+    else{loadQuestion();}
+  },delay);
+}
+
+function showResults(){
+  showScreen('results');
+  const total=gameQuestions.length;
+  const pct=Math.round((correct/total)*100);
+  document.getElementById('scoreBig').textContent=score;
+  document.getElementById('scoreDenom').textContent='out of ~'+( total*(10+6))+' max pts';
+  document.getElementById('statCorrect').textContent=correct;
+  document.getElementById('statWrong').textContent=wrong;
+  document.getElementById('statTimeout').textContent=timeouts;
+
+  let grade,color,title;
+  if(pct>=90){grade='CONSULTANT';color='var(--green)';title='PERFECT RUN'}
+  else if(pct>=75){grade='REGISTRAR';color='var(--cyan)';title='STRONG DUEL'}
+  else if(pct>=60){grade='SENIOR HOUSE OFFICER';color='var(--amber)';title='DECENT ROUND'}
+  else{grade='INTERN';color='var(--red)';title='REVISE & RETRY'}
+
+  document.getElementById('resultTitle').textContent=title;
+  const gb=document.getElementById('gradeBadge');
+  gb.textContent=grade+' · '+pct+'%';
+  gb.style.color=color;
+  gb.style.borderColor=color;
+
+  const ml=document.getElementById('missedList');
+  ml.innerHTML='';
+  const mt=document.getElementById('missedTitle');
+  if(missedQuestions.length===0){
+    mt.textContent='No missed doses — clean sweep!';
+  }else{
+    mt.textContent='Missed doses — study these ('+missedQuestions.length+'):';
+    missedQuestions.forEach(q=>{
+      const div=document.createElement('div');
+      div.className='missed-item';
+      div.innerHTML=`<strong>${q.drug}</strong> · ${q.patient.dx}<br>Answer: <span>${q.correct}</span>`;
+      ml.appendChild(div);
+    });
+  }
+}
+
+document.getElementById('startBtn').addEventListener('click',startGame);
+document.getElementById('restartBtn').addEventListener('click',startGame);
+</script>
+</body>
+</html>

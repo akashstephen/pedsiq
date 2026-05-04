@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Dose Sniper — Peds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#03050E;--s1:#070E1F;--s2:#0A1428;--s3:#0D1835;
+  --cyan:#22CCFF;--green:#00FF94;--red:#FF3B3B;
+  --amber:#FFB800;--pink:#FF6BF5;
+  --text:#D8E8F8;--text2:#6B8BAA;--text3:#1E3A5A;
+  --border:#1A2E4A;--border2:#243C5A;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
+  font-family:'DM Sans',sans-serif;touch-action:manipulation}
+
+/* Grid + scanlines */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(34,204,255,0.06) 0%,transparent 55%),
+    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px),
+    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(34,204,255,0.018) 40px)}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:99;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px)}
+
+.screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;z-index:10;transition:opacity .25s,transform .25s}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(10px)}
+
+/* ── SPLASH ── */
+#splash{gap:18px;padding:24px;text-align:center}
+.title{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(42px,11vw,74px);
+  letter-spacing:.04em;line-height:1;color:var(--cyan);
+  text-shadow:0 0 30px rgba(34,204,255,.55),0 0 80px rgba(34,204,255,.2)}
+.title-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.22em;
+  color:var(--text2);text-transform:uppercase;margin-top:5px}
+.splash-line{width:100%;max-width:320px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.35}
+.mechanic-card{background:var(--s2);border:1px solid var(--border2);border-radius:10px;
+  padding:14px 18px;max-width:340px;font-size:13px;color:var(--text2);line-height:1.7;text-align:left}
+.mechanic-card strong{color:var(--cyan);font-weight:600}
+.how-to{max-width:340px;width:100%;display:flex;flex-direction:column;gap:9px}
+.step{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--text2)}
+.sn{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--cyan);
+  width:20px;flex-shrink:0;padding-top:1px}
+.btn-launch{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;
+  letter-spacing:.12em;color:var(--bg);background:var(--cyan);border:none;
+  padding:14px 52px;border-radius:3px;cursor:pointer;text-transform:uppercase;
+  box-shadow:0 0 28px rgba(34,204,255,.45);transition:transform .15s,box-shadow .15s}
+.btn-launch:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(34,204,255,.65)}
+.splash-stats{display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text3)}
+.splash-stats span{display:block;font-size:20px;font-weight:700;color:var(--cyan);font-family:'Orbitron',monospace}
+
+/* ── GAME ── */
+#game-screen{justify-content:flex-start;padding:0}
+
+/* HUD */
+#hud{width:100%;display:flex;justify-content:space-between;align-items:center;
+  padding:9px 16px 7px;border-bottom:1px solid var(--border);flex-shrink:0;z-index:20;
+  background:rgba(7,14,31,.7);backdrop-filter:blur(6px)}
+.hv{font-family:'Orbitron',monospace;font-size:clamp(17px,4.5vw,22px);font-weight:700;line-height:1}
+.hl{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;
+  color:var(--text3);text-transform:uppercase;margin-top:2px}
+.hud-center{text-align:center;flex:1}
+.hud-right{text-align:right}
+
+/* velocity bar */
+.vbar-wrap{width:100%;height:3px;background:var(--s3);flex-shrink:0;overflow:hidden}
+.vbar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--pink));
+  transition:width .5s ease;box-shadow:0 0 6px var(--cyan)}
+
+/* Q panel */
+#qpanel{width:100%;padding:9px 16px 9px;border-bottom:1px solid var(--border);
+  flex-shrink:0;background:rgba(7,14,31,.6);backdrop-filter:blur(8px);z-index:20}
+.qp-row1{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.qp-ctx{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:700;color:var(--cyan)}
+.qp-label{font-size:12px;color:var(--text2)}
+.qp-drug{font-family:'IBM Plex Mono',monospace;font-size:clamp(12px,3.2vw,15px);
+  font-weight:700;color:var(--text);margin-bottom:3px;line-height:1.3}
+.qp-hint{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;
+  color:var(--text3);text-transform:uppercase}
+
+/* Fall zone */
+#fall-zone{position:relative;width:100%;flex:1;overflow:hidden}
+.floor-line{position:absolute;bottom:0;left:0;right:0;height:36px;
+  background:linear-gradient(0deg,rgba(255,59,59,.07),transparent);
+  border-top:1px solid rgba(255,59,59,.18);
+  display:flex;align-items:center;justify-content:center;pointer-events:none;z-index:5}
+.floor-text{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;
+  color:rgba(255,59,59,.25);text-transform:uppercase}
+
+/* Lane guides */
+.lane-guide{position:absolute;top:0;bottom:36px;width:1px;
+  background:linear-gradient(180deg,rgba(34,204,255,.12),rgba(34,204,255,.04),transparent);
+  pointer-events:none;z-index:2}
+
+/* Cards */
+.dose-card{position:absolute;background:linear-gradient(145deg,var(--s2),var(--s3));
+  border:1.5px solid var(--border2);border-radius:10px;
+  padding:11px 13px;cursor:pointer;user-select:none;will-change:transform;
+  -webkit-tap-highlight-color:transparent;
+  transition:border-color .1s,box-shadow .1s;
+  display:flex;flex-direction:column;gap:3px}
+.dose-card::before{content:'';position:absolute;inset:0;border-radius:8px;
+  background:linear-gradient(135deg,rgba(34,204,255,.04),transparent);pointer-events:none}
+.dose-card:hover{border-color:var(--cyan);
+  box-shadow:0 0 18px rgba(34,204,255,.22),0 4px 20px rgba(0,0,0,.45)}
+.dose-card.danger{border-color:rgba(255,59,59,.55);animation:dpulse .45s ease infinite alternate}
+@keyframes dpulse{from{box-shadow:0 0 6px rgba(255,59,59,.15)}
+  to{box-shadow:0 0 22px rgba(255,59,59,.45)}}
+.dose-card.hit-ok{border-color:var(--green)!important;
+  background:linear-gradient(145deg,#002B15,#003D1F)!important;
+  box-shadow:0 0 28px rgba(0,255,148,.4)!important;animation:expandOk .35s ease!important}
+.dose-card.hit-bad{border-color:var(--red)!important;
+  background:linear-gradient(145deg,#2A0000,#1A0000)!important;
+  box-shadow:0 0 28px rgba(255,59,59,.4)!important;animation:shakeEl .3s ease!important}
+.dose-card.reveal{border-color:var(--green)!important;
+  background:linear-gradient(145deg,#002B15,#003D1F)!important;
+  box-shadow:0 0 18px rgba(0,255,148,.25)!important}
+@keyframes expandOk{0%{transform:scale(1) var(--rt)}50%{transform:scale(1.12) var(--rt)}
+  100%{transform:scale(0.85) var(--rt);opacity:0}}
+@keyframes shakeEl{0%,100%{transform:translateX(var(--bx)) var(--rt)}
+  25%{transform:translateX(calc(var(--bx) - 8px)) rotate(-2deg)}
+  75%{transform:translateX(calc(var(--bx) + 8px)) rotate(2deg)}}
+
+.card-dose{font-family:'IBM Plex Mono',monospace;font-weight:700;
+  font-size:clamp(13px,3.2vw,16px);color:var(--text);line-height:1.2}
+.card-sub{font-family:'IBM Plex Mono',monospace;font-size:9px;
+  color:var(--text3);text-transform:uppercase;letter-spacing:.06em}
+.card-corner{position:absolute;top:7px;right:9px;font-size:14px;opacity:.3}
+
+/* Countdown */
+#countdown{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+  z-index:50;background:rgba(3,5,14,.82);transition:opacity .3s}
+#countdown.hidden{opacity:0;pointer-events:none}
+.cd-num{font-family:'Orbitron',monospace;font-weight:900;font-size:clamp(80px,22vw,130px);
+  color:var(--cyan);text-shadow:0 0 40px rgba(34,204,255,.6);
+  animation:cdpop .8s ease}
+@keyframes cdpop{from{transform:scale(1.6);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Feedback */
+#feedback{position:fixed;bottom:0;left:0;right:0;z-index:40;padding:12px;
+  transform:translateY(105%);transition:transform .28s cubic-bezier(.175,.885,.32,1.275)}
+#feedback.show{transform:translateY(0)}
+.fb-inner{border-radius:12px;padding:13px 17px;max-width:500px;margin:0 auto}
+.fb-inner.ok{background:#001B0D;border:1.5px solid var(--green);
+  box-shadow:0 0 22px rgba(0,255,148,.12)}
+.fb-inner.bad{background:#180000;border:1.5px solid var(--red);
+  box-shadow:0 0 22px rgba(255,59,59,.12)}
+.fb-inner.tmout{background:#180E00;border:1.5px solid var(--amber)}
+.fb-verdict{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;
+  letter-spacing:.1em;margin-bottom:5px}
+.fb-answer{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;
+  margin-bottom:5px}
+.fb-explain{font-size:12.5px;color:var(--text2);line-height:1.65}
+.fb-trap{margin-top:8px;padding:7px 10px;background:rgba(255,184,0,.07);
+  border-left:3px solid var(--amber);border-radius:4px;
+  font-size:12px;color:var(--amber);font-family:'IBM Plex Mono',monospace;line-height:1.5}
+.fb-trap::before{content:'⚡ ';font-weight:700}
+
+/* Score pop */
+.spop{position:fixed;font-family:'Orbitron',monospace;font-weight:900;font-size:20px;
+  pointer-events:none;z-index:60;animation:spopAnim .8s ease forwards}
+@keyframes spopAnim{0%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-70px) scale(1.4)}}
+
+/* Particles */
+.ptcl{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:55;
+  animation:ptclFly var(--d) ease forwards}
+@keyframes ptclFly{0%{opacity:1;transform:translate(0,0) scale(1)}
+  100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
+
+/* Level flash border */
+.lvl-flash{position:fixed;inset:0;pointer-events:none;z-index:45;
+  border:3px solid var(--cyan);animation:lvlAnim .65s ease forwards}
+@keyframes lvlAnim{0%{opacity:1;box-shadow:inset 0 0 60px rgba(34,204,255,.3)}
+  100%{opacity:0}}
+
+/* Global flash overlay */
+#flash-ov{position:fixed;inset:0;pointer-events:none;z-index:35;opacity:0;
+  transition:opacity .08s}
+
+/* Combo surge text */
+.combo-surge{position:fixed;font-family:'Orbitron',monospace;font-weight:900;
+  font-size:clamp(22px,6vw,36px);left:50%;transform:translateX(-50%);
+  top:35%;pointer-events:none;z-index:60;text-align:center;
+  animation:surgePop 1s ease forwards}
+@keyframes surgePop{0%{opacity:0;transform:translateX(-50%) scale(.6)}
+  30%{opacity:1;transform:translateX(-50%) scale(1.1)}
+  70%{opacity:1;transform:translateX(-50%) scale(1)}
+  100%{opacity:0;transform:translateX(-50%) scale(.9) translateY(-20px)}}
+
+/* ── RESULTS ── */
+#results-screen{flex-direction:column;gap:14px;padding:20px;text-align:center;
+  max-width:480px;width:100%}
+.res-title{font-family:'Orbitron',monospace;font-size:clamp(18px,5vw,26px);font-weight:900}
+.res-score{font-family:'Orbitron',monospace;font-size:clamp(60px,16vw,88px);
+  font-weight:900;color:var(--amber);line-height:1;text-shadow:0 0 30px rgba(255,184,0,.4)}
+.res-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--text3)}
+.res-stats{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rs{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 6px}
+.rs-val{font-family:'Orbitron',monospace;font-size:22px;font-weight:700}
+.rs-lbl{font-size:10px;color:var(--text3);margin-top:2px;font-family:'IBM Plex Mono',monospace;letter-spacing:.1em}
+.missed-title{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  color:var(--text3);text-transform:uppercase;align-self:flex-start;width:100%}
+.missed-scroll{width:100%;max-height:155px;overflow-y:auto;display:flex;flex-direction:column;gap:6px}
+.mi{background:var(--s2);border-left:3px solid var(--red);border-radius:5px;
+  padding:7px 12px;text-align:left;font-size:12px;line-height:1.5}
+.mi .ans{color:var(--green);font-family:'IBM Plex Mono',monospace;font-weight:600}
+.missed-scroll::-webkit-scrollbar{width:3px}
+.missed-scroll::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.btn-play-again{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;
+  letter-spacing:.1em;color:var(--bg);background:var(--cyan);border:none;
+  padding:13px 44px;border-radius:3px;cursor:pointer;
+  box-shadow:0 0 24px rgba(34,204,255,.4);transition:transform .15s}
+.btn-play-again:hover{transform:translateY(-2px)}
+
+@media(max-width:380px){
+  .dose-card{padding:9px 10px}
+  .card-dose{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div id="flash-ov"></div>
+
+<!-- ════════════ SPLASH ════════════ -->
+<div class="screen" id="splash">
+  <div class="title">DOSE SNIPER</div>
+  <div class="title-sub">Falling Cards · Pediatric Dosing · PedsIQ</div>
+  <div class="splash-line"></div>
+  <div class="mechanic-card">
+    <strong>Perceptual discrimination + motor encoding.</strong> Choosing between 
+    near-correct doses forces visual comparison that reading never does. 
+    The tap encodes procedural memory — your hand learns the answer.
+  </div>
+  <div class="how-to">
+    <div class="step"><span class="sn">1</span><span>Patient context and drug appear at the top</span></div>
+    <div class="step"><span class="sn">2</span><span>Three dose cards fall — tap the correct one before it hits the floor</span></div>
+    <div class="step"><span class="sn">3</span><span>Combos multiply your score. Each correct answer speeds up the next card.</span></div>
+  </div>
+  <div class="splash-stats">
+    <div><span>25</span>Rounds</div>
+    <div><span>×4</span>Max combo</div>
+    <div><span>∞</span>Speed</div>
+  </div>
+  <button class="btn-launch" id="startBtn">LAUNCH →</button>
+</div>
+
+<!-- ════════════ GAME ════════════ -->
+<div class="screen hidden" id="game-screen" style="justify-content:flex-start">
+  <div id="hud">
+    <div>
+      <div class="hv" id="hudScore" style="color:var(--amber)">0</div>
+      <div class="hl">Score</div>
+    </div>
+    <div class="hud-center">
+      <div class="hv" id="hudRound" style="color:var(--cyan)">01 / 25</div>
+      <div class="hl">Round</div>
+    </div>
+    <div class="hud-right">
+      <div class="hv" id="hudCombo" style="color:var(--pink)">×1</div>
+      <div class="hl">Combo</div>
+    </div>
+  </div>
+  <div class="vbar-wrap"><div class="vbar" id="vbar" style="width:4%"></div></div>
+  <div id="qpanel">
+    <div class="qp-row1">
+      <div class="qp-ctx" id="qCtx">—</div>
+      <div class="qp-label" id="qLabel">—</div>
+    </div>
+    <div class="qp-drug" id="qDrug">—</div>
+    <div class="qp-hint">▼ tap the correct dose before it hits the floor ▼</div>
+  </div>
+  <div id="fall-zone">
+    <div class="floor-line"><span class="floor-text">floor — miss zone</span></div>
+  </div>
+</div>
+
+<!-- Countdown -->
+<div id="countdown" class="hidden">
+  <div class="cd-num" id="cdNum">3</div>
+</div>
+
+<!-- Feedback panel -->
+<div id="feedback">
+  <div class="fb-inner" id="fbInner">
+    <div class="fb-verdict" id="fbVerdict">—</div>
+    <div class="fb-answer" id="fbAnswer">—</div>
+    <div class="fb-explain" id="fbExplain">—</div>
+    <div class="fb-trap" id="fbTrap" style="display:none">—</div>
+  </div>
+</div>
+
+<!-- ════════════ RESULTS ════════════ -->
+<div class="screen hidden" id="results-screen">
+  <div class="res-title" id="resTitle">—</div>
+  <div class="res-score" id="resScore">—</div>
+  <div class="res-sub" id="resSub">—</div>
+  <div class="res-stats">
+    <div class="rs"><div class="rs-val" id="rHit" style="color:var(--green)">—</div><div class="rs-lbl">Hit</div></div>
+    <div class="rs"><div class="rs-val" id="rMiss" style="color:var(--red)">—</div><div class="rs-lbl">Missed</div></div>
+    <div class="rs"><div class="rs-val" id="rCombo" style="color:var(--pink)">—</div><div class="rs-lbl">Max ×</div></div>
+  </div>
+  <div class="missed-title" id="missedTitle">Missed — study these:</div>
+  <div class="missed-scroll" id="missedList"></div>
+  <button class="btn-play-again" id="restartBtn">PLAY AGAIN</button>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+// DATA  (25 questions from PedsIQ)
+// ═══════════════════════════════════════
+const QS=[
+  {ctx:"5 yr · 22 kg",lbl:"APSGN — Strep Eradication",
+   drug:"Benzathine Penicillin G · IM · Single dose",
+   correct:"600,000 U",w:["1.2 million U","300,000 U"],
+   exp:"22 kg < 27 kg → 600,000 U IM. The boundary is exactly 27 kg.",
+   trap:"<27 kg = 600K · ≥27 kg = 1.2M. One of the most tested dose thresholds in KUHS."},
+  {ctx:"8 yr · 31 kg",lbl:"APSGN — Strep Eradication",
+   drug:"Benzathine Penicillin G · IM · Single dose",
+   correct:"1.2 million U",w:["600,000 U","2.4 million U"],
+   exp:"31 kg > 27 kg → 1.2 million U IM. Trap: students often remember only one value.",
+   trap:"Same threshold question — heavier child. ≥27 kg = 1.2M."},
+  {ctx:"4 yr · 16 kg",lbl:"Nephrotic Syndrome — First episode",
+   drug:"Prednisolone · PO · Phase 1 daily dose",
+   correct:"2 mg/kg/day",w:["1 mg/kg/day","3 mg/kg/day"],
+   exp:"NS first episode phase 1: 2 mg/kg/day (max 60 mg) × 6 weeks.",
+   trap:"1 mg/kg is the phase 2 alternate-day dose. Don't swap the phases."},
+  {ctx:"13 yr · 42 kg",lbl:"Nephrotic Syndrome — Apply cap",
+   drug:"Prednisolone · PO · What dose do you give?",
+   correct:"60 mg/day",w:["84 mg/day","40 mg/day"],
+   exp:"2 mg/kg × 42 kg = 84 mg but max cap = 60 mg/day. Always apply the ceiling.",
+   trap:"Max cap = 60 mg/day regardless of weight. 84 mg = -1 mark."},
+  {ctx:"4 yr · 14 kg",lbl:"Nephrotic Syndrome — Phase 2 weeks 7–12",
+   drug:"Prednisolone · PO · Alternate days",
+   correct:"1.5 mg/kg alt days",w:["2 mg/kg alt days","1 mg/kg alt days"],
+   exp:"NS phase 2: 1.5 mg/kg on alternate days × 6 weeks. Total course = 12 weeks for responders.",
+   trap:"Phase 2 = 1.5 mg/kg alternate days. Not 1 mg/kg, not 2 mg/kg."},
+  {ctx:"5 yr · 17 kg",lbl:"Nephrotic Syndrome — Hypovolaemia",
+   drug:"25% Albumin · IV · Over 1–2 hours",
+   correct:"0.5–1.0 g/kg",w:["2.0 g/kg","0.1 g/kg"],
+   exp:"NS hypovolaemia: 25% albumin 0.5–1.0 g/kg IV over 1–2 hours. Follow with loop diuretic.",
+   trap:"For HYPOVOLAEMIA only — not for routine oedema management."},
+  {ctx:"6 yr · 20 kg",lbl:"AGN — Fluid Overload",
+   drug:"Furosemide · IV",
+   correct:"1–2 mg/kg",w:["0.25 mg/kg","5 mg/kg"],
+   exp:"Furosemide 1–2 mg/kg IV for fluid overload in AGN. NOT for hypertension.",
+   trap:"Furosemide = fluid overload. Nifedipine = HTN. These are not interchangeable."},
+  {ctx:"9 mo · 9 kg",lbl:"Rickets — Hypocalcaemic Seizure",
+   drug:"10% Calcium Gluconate · IV · Over 10 min",
+   correct:"1–2 mL/kg",w:["5 mL/kg","0.5 mL/kg"],
+   exp:"Hypocalcaemic seizures: Ca gluconate 10% at 1–2 mL/kg slowly over 10 min with ECG monitoring.",
+   trap:"SLOW infusion with cardiac monitoring. Rapid bolus → bradycardia / cardiac arrest."},
+  {ctx:"6 wk · 4.5 kg",lbl:"Congenital Hypothyroidism",
+   drug:"Levothyroxine · PO · Daily",
+   correct:"10–15 mcg/kg/day",w:["5 mcg/kg/day","25 mcg/kg/day"],
+   exp:"L-thyroxine 10–15 mcg/kg/day PO. Start within 2 weeks of life for normal neurodevelopment.",
+   trap:"Start WITHIN 2 WEEKS of life. Delay = irreversible intellectual disability."},
+  {ctx:"2 d · 2.8 kg",lbl:"Neonatal Hypoglycaemia — Symptomatic",
+   drug:"Dextrose 10% · IV Bolus",
+   correct:"2 mL/kg",w:["5 mL/kg","10 mL/kg"],
+   exp:"Symptomatic neonatal hypoglycaemia or glucose <25 mg/dL: D10 2 mL/kg IV bolus.",
+   trap:"Feed FIRST if asymptomatic. IV D10 only if symptomatic or glucose <25 mg/dL."},
+  {ctx:"18 mo · 10 kg",lbl:"Nutritional Rickets — Treatment",
+   drug:"Vitamin D3 · PO · Daily × 6–12 weeks",
+   correct:"2000–4000 IU/day",w:["400 IU/day","10,000 IU/day"],
+   exp:"Treatment dose: Vit D3 2000–4000 IU/day for 6–12 weeks. 400 IU/day = prevention only.",
+   trap:"Treatment ≠ prevention. 400 IU = prevention. 2000–4000 = treatment. Don't confuse."},
+  {ctx:"3 yr · 14 kg",lbl:"Nutritional Rickets — Stoss",
+   drug:"Vitamin D3 · PO · Single-dose Stoss",
+   correct:"150,000–300,000 IU",w:["50,000 IU","600,000 IU"],
+   exp:"Stoss therapy: 150,000–300,000 IU oral single dose. Repeat at 3 months if needed.",
+   trap:"Stoss = 150K–300K IU. 50K is insufficient. 600K is excessive."},
+  {ctx:"2 yr · 12 kg",lbl:"Rickets — alongside Vit D",
+   drug:"Elemental Calcium · PO · Daily",
+   correct:"50–100 mg/kg/day",w:["10–20 mg/kg/day","500 mg flat"],
+   exp:"Elemental calcium 50–100 mg/kg/day must accompany Vit D. Never omit this.",
+   trap:"Vitamin D alone is NOT sufficient. Elemental calcium is mandatory alongside it."},
+  {ctx:"8 yr · 28 kg",lbl:"DKA — After 1h fluids · start insulin",
+   drug:"Regular Insulin · IV · Infusion only",
+   correct:"0.05–0.1 U/kg/hr",w:["0.3–0.5 U/kg/hr","1 U/kg bolus"],
+   exp:"DKA insulin: 0.05–0.1 U/kg/hr IV continuous infusion. NEVER bolus. Always start after fluids.",
+   trap:"NEVER bolus insulin in paediatric DKA. Continuous infusion only, started after 1–2 h fluids."},
+  {ctx:"10 yr · 32 kg",lbl:"DKA — K⁺ = 3.0 mEq/L",
+   drug:"Insulin · start or hold?",
+   correct:"HOLD — correct K⁺ first",w:["Start 0.1 U/kg/hr","Give bicarb first"],
+   exp:"K⁺ < 3.3 mEq/L: HOLD insulin. Correct potassium first. Insulin + hypokalaemia = fatal arrhythmia.",
+   trap:"K⁺ <3.3 → Hold insulin. The single most dangerous DKA management error."},
+  {ctx:"7 yr · 24 kg",lbl:"DKA — Initial Resuscitation",
+   drug:"0.9% Normal Saline · IV · First bolus",
+   correct:"10–20 mL/kg / 1–2 h",w:["30 mL/kg / 30 min","5 mL/kg / 15 min"],
+   exp:"DKA initial fluid: 0.9% NS 10–20 mL/kg over 1–2 h. Replace total deficit over 48 h, not 24 h.",
+   trap:"Replace DKA deficit over 48 h NOT 24 h. Rapid replacement → cerebral oedema."},
+  {ctx:"9 yr · 30 kg",lbl:"DKA — Cerebral Oedema",
+   drug:"Mannitol · IV · Emergency",
+   correct:"0.5–1 g/kg",w:["0.1 g/kg","4 g/kg"],
+   exp:"Cerebral oedema in DKA: Mannitol 0.5–1 g/kg IV or 3% NaCl 5–10 mL/kg. Reduce fluids + elevate head.",
+   trap:"Both mannitol AND 3% saline are valid options. Must also reduce fluid rate."},
+  {ctx:"2 yr · 12 kg",lbl:"Diarrhoea — Some Dehydration · Plan B",
+   drug:"ORS · PO · In clinic",
+   correct:"75 mL/kg / 4 h",w:["30 mL/kg / 1 h","100 mL/kg / 4 h"],
+   exp:"Plan B (some dehydration, 3–9%): ORS 75 mL/kg over 4 hours in clinic.",
+   trap:"Plan B = 75 mL/kg ORS. Plan C = IV RL bolus. These two are classic exam swap traps."},
+  {ctx:"9 mo · 8 kg",lbl:"Severe Dehydration — Plan C · Infant",
+   drug:"Ringer's Lactate · IV · Phase 1",
+   correct:"30 mL/kg / 1 h",w:["30 mL/kg / 30 min","70 mL/kg / 5 h"],
+   exp:"Infant <12 months: RL 30 mL/kg over 1 HOUR. (Child 1–5 yr: same volume over 30 min.)",
+   trap:"Age matters: <12 mo = 1 hour. 1–5 yr = 30 min. Most common Plan C error."},
+  {ctx:"2 yr · 12 kg",lbl:"Severe Dehydration — Plan C · Child",
+   drug:"Ringer's Lactate · IV · Phase 1",
+   correct:"30 mL/kg / 30 min",w:["30 mL/kg / 1 h","70 mL/kg / 5 h"],
+   exp:"Child 1–5 years: RL 30 mL/kg over 30 MIN. Then 70 mL/kg over next 5 hours.",
+   trap:"Age matters: 1–5 yr = 30 min. <12 mo = 1 hour. Opposite of infant — common trap."},
+  {ctx:"4 mo · 5.5 kg",lbl:"Acute Diarrhoea — Zinc",
+   drug:"Zinc · PO · 10–14 days (<6 months)",
+   correct:"10 mg/day",w:["20 mg/day","5 mg/day"],
+   exp:"<6 months: Zinc 10 mg/day × 10–14 days. ≥6 months: 20 mg/day.",
+   trap:"Age cutoff at 6 months. <6 mo = 10 mg. ≥6 mo = 20 mg. Frequently tested in MCQ."},
+  {ctx:"10 mo · 9 kg",lbl:"Acute Diarrhoea — Zinc",
+   drug:"Zinc · PO · 10–14 days (≥6 months)",
+   correct:"20 mg/day",w:["10 mg/day","40 mg/day"],
+   exp:"≥6 months: Zinc 20 mg/day × 10–14 days. Reduces duration and severity.",
+   trap:"≥6 mo = 20 mg. <6 mo = 10 mg. Opposite side of the same MCQ trap."},
+  {ctx:"7 yr · 22 kg",lbl:"APSGN — Acute HTN",
+   drug:"Antihypertensive · First-line",
+   correct:"Nifedipine (CCB)",w:["Enalapril (ACE-i)","Furosemide"],
+   exp:"First-line acute HTN in AGN: Nifedipine (CCB). ACE-i contraindicated — worsen hyperkalaemia + AKI.",
+   trap:"ACEi in acute AGN = instant marks off. Answer = Nifedipine. Furosemide = fluid overload only."},
+  {ctx:"3 yr · 14 kg",lbl:"HUS — STEC E. coli confirmed",
+   drug:"Antibiotics — decision",
+   correct:"WITHHOLD — contraindicated",w:["Ceftriaxone 50 mg/kg","Azithromycin PO"],
+   exp:"Antibiotics CONTRAINDICATED in STEC-HUS — increase Shiga toxin release, worsening the syndrome.",
+   trap:"No antibiotics in STEC-HUS. Exception: pneumococcal HUS (antibiotics ARE indicated)."},
+  {ctx:"10 yr · 35 kg",lbl:"Portal HTN — Variceal Bleed",
+   drug:"Blood Transfusion — target Hb",
+   correct:"Hb 7–8 g/dL",w:["Hb 10–12 g/dL","Hb 5–6 g/dL"],
+   exp:"Target Hb 7–8 g/dL only. Over-transfusion raises portal pressure and dramatically increases rebleeding.",
+   trap:"Over-transfusion INCREASES portal pressure. Target 7–8, NOT 10–12."},
+];
+
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+const G={
+  phase:'splash',round:0,score:0,
+  combo:0,maxCombo:0,hits:0,misses:0,
+  speed:72,answered:false,
+  cards:[],animId:null,lastTime:0,
+  questions:[],missed:[],
+  CW:0,CH:88, // card width computed at runtime
+};
+const BASE=72,MAX_SPD=280,SPD_INC=9;
+const CMULT=[1,1,1.5,2,2.5,3,4];
+const LANES=[.17,.50,.83];
+
+// ═══════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════
+const $=id=>document.getElementById(id);
+function shuf(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=0|Math.random()*(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
+function clamp(v,lo,hi){return v<lo?lo:v>hi?hi:v;}
+
+function showScreen(id){
+  ['splash','game-screen','results-screen'].forEach(s=>{
+    $(s).classList.toggle('hidden',s!==id);
+  });
+}
+
+// ═══════════════════════════════════════
+// EFFECTS
+// ═══════════════════════════════════════
+function flashBg(color){
+  const f=$('flash-ov');
+  f.style.background=color;f.style.opacity='1';
+  setTimeout(()=>f.style.opacity='0',160);
+}
+function spawnParticles(x,y,col,n=14){
+  for(let i=0;i<n;i++){
+    const p=document.createElement('div');
+    p.className='ptcl';
+    const a=Math.random()*Math.PI*2,d=40+Math.random()*90;
+    p.style.setProperty('--tx',Math.cos(a)*d+'px');
+    p.style.setProperty('--ty',Math.sin(a)*d+'px');
+    p.style.setProperty('--d',.35+Math.random()*.45+'s');
+    p.style.background=col;
+    p.style.cssText+=`;left:${x-3}px;top:${y-3}px`;
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),900);
+  }
+}
+function scorePop(x,y,txt,col){
+  const e=document.createElement('div');
+  e.className='spop';e.textContent=txt;
+  e.style.cssText=`color:${col};left:${x}px;top:${y}px`;
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),850);
+}
+function comboSurge(txt,col){
+  const e=document.createElement('div');
+  e.className='combo-surge';e.textContent=txt;e.style.color=col;
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),1100);
+}
+function levelFlash(){
+  const e=document.createElement('div');
+  e.className='lvl-flash';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),700);
+}
+
+// ═══════════════════════════════════════
+// CARDS
+// ═══════════════════════════════════════
+function computeCardWidth(){
+  const zw=$('fall-zone').offsetWidth;
+  G.CW=clamp(Math.floor(zw*0.27),120,162);
+}
+
+function makeCards(q){
+  const zone=$('fall-zone');
+  // remove old cards
+  zone.querySelectorAll('.dose-card').forEach(c=>c.remove());
+  G.cards=[];
+  const zw=zone.offsetWidth;
+  const opts=shuf([q.correct,...q.w]);
+  const laneOrder=shuf([0,1,2]);
+  const icons=['💊','🔬','⚗️'];
+
+  opts.forEach((dose,i)=>{
+    const ln=laneOrder[i];
+    const isOk=dose===q.correct;
+    const baseX=Math.round(LANES[ln]*zw-G.CW/2);
+    const spVar=0.80+ln*0.13+(Math.random()-.5)*.06;
+    const card={dose,isOk,x:baseX,y:-(G.CH+15+ln*22),
+      speed:G.speed*spVar,
+      phase:Math.random()*Math.PI*2,
+      rotBase:(Math.random()-.5)*3.5,
+      alive:true,el:null};
+
+    const el=document.createElement('div');
+    el.className='dose-card';
+    el.style.width=G.CW+'px';
+    el.innerHTML=`<div class="card-corner">${icons[i]}</div>
+      <div class="card-dose">${dose}</div>
+      <div class="card-sub">tap if correct</div>`;
+
+    el.addEventListener('click',()=>onHit(card,el));
+    el.addEventListener('touchend',e=>{e.preventDefault();onHit(card,el);},{passive:false});
+    zone.appendChild(el);
+    card.el=el;
+    G.cards.push(card);
+  });
+}
+
+// ═══════════════════════════════════════
+// HIT HANDLER
+// ═══════════════════════════════════════
+function onHit(card,el){
+  if(G.answered||!card.alive)return;
+  G.answered=true;
+  stopLoop();
+  const q=G.questions[G.round];
+  const r=el.getBoundingClientRect();
+  const cx=r.left+r.width/2,cy=r.top+r.height/2;
+
+  if(card.isOk){
+    el.classList.add('hit-ok');
+    const mult=CMULT[Math.min(G.combo,CMULT.length-1)];
+    const pts=Math.round(100*mult);
+    G.score+=pts; G.combo++; G.hits++;
+    if(G.combo>G.maxCombo)G.maxCombo=G.combo;
+    G.speed=Math.min(MAX_SPD,G.speed+SPD_INC);
+    spawnParticles(cx,cy,'#00FF94',18);
+    scorePop(cx-26,cy-30,'+'+pts,'#FFB800');
+    flashBg('rgba(0,255,148,.11)');
+    if(G.combo===3)comboSurge('TRIPLE ×1.5','#FF6BF5');
+    else if(G.combo===5)comboSurge('× 3 COMBO!','#FFB800');
+    else if(G.combo===7){comboSurge('× 4 GODMODE','#22CCFF');levelFlash();}
+    showFb('ok',q);
+  }else{
+    el.classList.add('hit-bad');
+    G.cards.forEach(c=>{if(c.isOk&&c.el)c.el.classList.add('reveal');});
+    G.combo=0; G.misses++;
+    G.missed.push(q);
+    spawnParticles(cx,cy,'#FF3B3B',10);
+    flashBg('rgba(255,59,59,.14)');
+    showFb('bad',q);
+  }
+  updateHud();
+  setTimeout(next,2300);
+}
+
+// ═══════════════════════════════════════
+// GAME LOOP
+// ═══════════════════════════════════════
+function startLoop(){
+  G.lastTime=performance.now();
+  G.animId=requestAnimationFrame(loop);
+}
+function stopLoop(){if(G.animId){cancelAnimationFrame(G.animId);G.animId=null;}}
+
+function loop(ts){
+  const dt=Math.min((ts-G.lastTime)/1000,.05);
+  G.lastTime=ts;
+  const zone=$('fall-zone');
+  const zh=zone.offsetHeight;
+  const t=ts/1000;
+  let anyFloor=false;
+
+  G.cards.forEach(c=>{
+    if(!c.alive)return;
+    c.y+=c.speed*dt;
+    const drift=Math.sin(t*.75+c.phase)*4.5;
+    const rot=c.rotBase+Math.sin(t*.4+c.phase)*1.1;
+    if(c.el){
+      c.el.style.left=c.x+'px';
+      c.el.style.transform=`translateY(${c.y}px) translateX(${drift}px) rotate(${rot}deg)`;
+      const pct=c.y/zh;
+      if(pct>.68)c.el.classList.add('danger');
+    }
+    if(c.y>zh+5){c.alive=false;if(c.el)c.el.style.opacity='0';}
+    if(c.isOk&&c.y>zh+5)anyFloor=true;
+  });
+
+  if(!G.answered&&anyFloor){
+    G.answered=true;
+    G.combo=0;G.misses++;
+    const q=G.questions[G.round];
+    G.missed.push(q);
+    flashBg('rgba(255,184,0,.11)');
+    showFb('tmout',q);
+    updateHud();
+    stopLoop();
+    setTimeout(next,2700);
+    return;
+  }
+  if(!G.answered)G.animId=requestAnimationFrame(loop);
+}
+
+// ═══════════════════════════════════════
+// ROUND FLOW
+// ═══════════════════════════════════════
+function loadRound(){
+  G.answered=false;
+  hideFb();
+  computeCardWidth();
+  const q=G.questions[G.round];
+  $('qCtx').textContent=q.ctx;
+  $('qLabel').textContent=q.lbl;
+  $('qDrug').textContent=q.drug;
+  $('hudRound').textContent=String(G.round+1).padStart(2,'0')+' / '+QS.length;
+  const pct=(G.speed-BASE)/(MAX_SPD-BASE)*100;
+  $('vbar').style.width=clamp(4+pct,4,100)+'%';
+  updateHud();
+  makeCards(q);
+  startLoop();
+}
+
+function next(){
+  hideFb();
+  G.round++;
+  if(G.round>=QS.length){endGame();return;}
+  loadRound();
+}
+
+function updateHud(){
+  $('hudScore').textContent=G.score.toLocaleString();
+  $('hudCombo').textContent='×'+(G.combo>=CMULT.length?CMULT.length-1:G.combo);
+  $('hudCombo').style.color=G.combo>=5?'#FFB800':G.combo>=3?'#22CCFF':'#FF6BF5';
+}
+
+// ═══════════════════════════════════════
+// FEEDBACK
+// ═══════════════════════════════════════
+function showFb(type,q){
+  const inner=$('fbInner');
+  inner.className='fb-inner '+type;
+  const v=$('fbVerdict'),a=$('fbAnswer'),e=$('fbExplain'),t=$('fbTrap');
+  if(type==='ok'){
+    v.textContent='✓ INTERCEPTED';v.style.color='var(--green)';
+    a.textContent=q.correct;a.style.color='var(--green)';
+  }else if(type==='bad'){
+    v.textContent='✗ WRONG DRUG';v.style.color='var(--red)';
+    a.textContent='Correct: '+q.correct;a.style.color='var(--green)';
+  }else{
+    v.textContent='⏱ FLOOR HIT';v.style.color='var(--amber)';
+    a.textContent='Answer: '+q.correct;a.style.color='var(--green)';
+  }
+  e.textContent=q.exp;
+  if(q.trap){t.textContent=q.trap;t.style.display='block';}
+  else t.style.display='none';
+  $('feedback').classList.add('show');
+}
+function hideFb(){$('feedback').classList.remove('show');}
+
+// ═══════════════════════════════════════
+// COUNTDOWN
+// ═══════════════════════════════════════
+function countdown(cb){
+  const cd=$('countdown'),n=$('cdNum');
+  cd.classList.remove('hidden');
+  let v=3;n.textContent=v;
+  const t=setInterval(()=>{
+    v--;
+    if(v<=0){clearInterval(t);n.textContent='GO!';
+      setTimeout(()=>{cd.classList.add('hidden');cb();},450);}
+    else{n.textContent=v;n.style.animation='none';void n.offsetWidth;n.style.animation='cdpop .8s ease';}
+  },800);
+}
+
+// ═══════════════════════════════════════
+// END
+// ═══════════════════════════════════════
+function endGame(){
+  stopLoop();
+  showScreen('results-screen');
+  const pct=Math.round(G.hits/QS.length*100);
+  let title,col;
+  if(pct>=92){title='EXPERT SNIPER';col='var(--green)';}
+  else if(pct>=72){title='SOLID RECALL';col='var(--cyan)';}
+  else if(pct>=52){title='KEEP TRAINING';col='var(--amber)';}
+  else{title='REVISE & RETRY';col='var(--red)';}
+  $('resTitle').textContent=title;$('resTitle').style.color=col;
+  $('resScore').textContent=G.score.toLocaleString();
+  $('resSub').textContent=pct+'% accuracy · max combo ×'+G.maxCombo;
+  $('rHit').textContent=G.hits;
+  $('rMiss').textContent=G.misses;
+  $('rCombo').textContent=G.maxCombo;
+  const ml=$('missedList'),mt=$('missedTitle');
+  ml.innerHTML='';
+  if(!G.missed.length){mt.textContent='No misses — clean sweep!';}
+  else{
+    mt.textContent='Missed ('+G.missed.length+') — study these:';
+    G.missed.forEach(q=>{
+      const d=document.createElement('div');
+      d.className='mi';
+      d.innerHTML=`<strong>${q.drug}</strong> · ${q.ctx}<br>Answer: <span class="ans">${q.correct}</span>`;
+      ml.appendChild(d);
+    });
+  }
+}
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+function startGame(){
+  G.round=0;G.score=0;G.combo=0;G.maxCombo=0;
+  G.hits=0;G.misses=0;G.speed=BASE;G.missed=[];
+  G.questions=shuf([...QS]);
+  showScreen('game-screen');
+  countdown(()=>loadRound());
+}
+
+// Lane guides (decorative)
+function addLaneGuides(){
+  const z=$('fall-zone');
+  const zw=z.offsetWidth;
+  LANES.forEach(l=>{
+    const g=document.createElement('div');
+    g.className='lane-guide';
+    g.style.left=Math.round(l*zw)+'px';
+    z.appendChild(g);
+  });
+}
+
+$('startBtn').addEventListener('click',startGame);
+$('restartBtn').addEventListener('click',startGame);
+window.addEventListener('DOMContentLoaded',()=>{
+  showScreen('splash');
+  // pre-size
+  setTimeout(addLaneGuides,100);
+});
+window.addEventListener('resize',()=>{
+  document.querySelectorAll('.lane-guide').forEach(g=>g.remove());
+  addLaneGuides();
+});
+</script>
+</body>
+</html>

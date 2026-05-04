@@ -11,6 +11,7 @@ import {
   Activity,
   Flame,
   Brain,
+  Gamepad2,
   Menu,
   X,
   ChevronLeft,
@@ -22,6 +23,7 @@ import { topics } from "../app/structured-answers/topics";
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/quiz/", label: "MCQ Practice", icon: Brain },
+  { href: "/arcade/", label: "Arcade", icon: Gamepad2 },
   { href: "/questions/", label: "Questions", icon: FileText },
   { href: "/nelson/", label: "Nelson Analysis", icon: BookOpen },
   { href: "/subjects/", label: "Subjects", icon: BarChart3 },

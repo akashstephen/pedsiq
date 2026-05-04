@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Feature Wars — Peds Differentials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#040812;--s0:#07101F;--s1:#0A1528;--s2:#0E1C35;--s3:#162240;
+  --text:#CDD9E8;--text2:#6E89A8;--text3:#2E4A65;
+  --border:#182A42;--border2:#1E3550;
+  --amber:#FBBF24;--cyan:#22D3EE;--green:#34D399;
+  --red:#F87171;--violet:#A78BFA;--pink:#F472B6;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);
+  font-family:'DM Sans',sans-serif;color:var(--text)}
+
+/* scanline texture */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:100;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 4px)}
+
+/* ── SCREENS ── */
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;z-index:10;
+  transition:opacity .25s,transform .25s;overflow:hidden}
+.screen.hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+
+/* ── SPLASH ── */
+#splash{gap:16px;padding:20px;text-align:center}
+.sp-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;
+  color:var(--text3);text-transform:uppercase;border:1px solid var(--border2);
+  padding:4px 14px;border-radius:20px}
+.sp-title{font-family:'Syne',sans-serif;font-size:clamp(44px,11vw,72px);
+  font-weight:800;line-height:.9;letter-spacing:-.02em;
+  background:linear-gradient(120deg,var(--amber),var(--pink),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sp-sub{font-size:14px;color:var(--text2);max-width:320px;line-height:1.6}
+.rounds-preview{width:100%;max-width:340px;display:flex;flex-direction:column;gap:8px}
+.rp{display:flex;align-items:center;gap:12px;background:var(--s1);border:1px solid var(--border2);
+  border-radius:9px;padding:10px 14px}
+.rp-num{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;width:24px;flex-shrink:0}
+.rp-body{text-align:left}
+.rp-title{font-size:13px;font-weight:600;color:var(--text)}
+.rp-sub{font-size:11px;color:var(--text2);margin-top:1px}
+.neuro-note{background:var(--s1);border:1px solid var(--border2);border-radius:9px;
+  padding:11px 15px;max-width:340px;font-size:12.5px;color:var(--text2);line-height:1.7;text-align:left}
+.neuro-note strong{color:var(--amber)}
+.btn-fw{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;
+  letter-spacing:.05em;color:#030812;border:none;padding:14px 52px;
+  border-radius:6px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn-fw:hover{transform:translateY(-2px)}
+
+/* ── GAME ── */
+#game-screen{justify-content:flex-start;padding:0}
+
+/* HUD */
+#hud{width:100%;flex-shrink:0;display:flex;align-items:center;
+  justify-content:space-between;padding:9px 14px 8px;
+  background:rgba(4,8,18,.85);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border)}
+.h-score{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--amber)}
+.h-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;
+  color:var(--text3);text-transform:uppercase;margin-top:1px}
+.h-round-title{font-size:clamp(11px,3vw,13px);font-weight:600;color:var(--text);
+  text-align:center;max-width:170px;line-height:1.2}
+.h-round-sub{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text3);
+  text-align:center;margin-top:2px}
+.h-chips{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;
+  color:var(--cyan);text-align:right}
+
+/* Round progress dots */
+#round-dots{width:100%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  gap:6px;padding:6px 0 5px;background:var(--s0);border-bottom:1px solid var(--border)}
+.rdot{width:28px;height:5px;border-radius:3px;background:var(--s2);transition:all .3s}
+.rdot.done{background:var(--green)}
+.rdot.active{background:var(--amber);box-shadow:0 0 8px rgba(251,191,36,.5)}
+
+/* Instruction strip */
+#instr-strip{width:100%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  gap:6px;padding:5px 12px;background:var(--s0)}
+.instr-text{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text3);
+  text-align:center;line-height:1.4}
+.instr-text.sel-mode{color:var(--amber)}
+
+/* Main area */
+#main-area{display:flex;flex-direction:column;flex:1;overflow:hidden;width:100%;min-height:0}
+
+/* Disease columns zone */
+#columns-zone{display:flex;gap:6px;padding:8px 8px 6px;flex-shrink:0;
+  align-items:stretch;width:100%}
+.d-col{flex:1;min-width:0;border-radius:10px;border:1.5px solid var(--border2);
+  background:var(--s1);display:flex;flex-direction:column;overflow:hidden;
+  transition:border-color .2s,box-shadow .2s;position:relative}
+.d-col.target-mode{cursor:pointer}
+.d-col.target-mode:hover{border-color:var(--col-color);
+  box-shadow:0 0 16px var(--col-glow)}
+.d-col.flash-ok{animation:colOk .4s ease}
+.d-col.flash-bad{animation:colBad .3s ease}
+@keyframes colOk{0%,100%{border-color:var(--col-color)}
+  50%{border-color:var(--green);box-shadow:0 0 20px rgba(52,211,153,.35)}}
+@keyframes colBad{0%,100%{}
+  40%{border-color:var(--red);box-shadow:0 0 16px rgba(248,113,113,.3)}}
+.d-col-header{padding:8px 10px 6px;border-bottom:1px solid var(--border);flex-shrink:0}
+.d-col-name{font-family:'Syne',sans-serif;font-size:clamp(11px,2.8vw,13px);
+  font-weight:800;line-height:1.2}
+.d-col-count{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text3);margin-top:2px}
+.d-col-chips{flex:1;padding:5px 6px;display:flex;flex-direction:column;gap:4px;
+  overflow-y:auto;min-height:60px}
+.d-col-chips::-webkit-scrollbar{width:2px}
+.d-col-chips::-webkit-scrollbar-thumb{background:var(--border2)}
+.placed-chip{border-radius:6px;padding:5px 7px;font-size:10.5px;font-weight:500;
+  color:var(--text);line-height:1.3;animation:chipIn .25s cubic-bezier(.175,.885,.32,1.3)}
+@keyframes chipIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.placed-chip.multi-pending{opacity:.55;font-style:italic}
+
+/* Feature tray */
+#tray-zone{flex:1;overflow-y:auto;padding:6px 8px 8px;min-height:0}
+#tray-zone::-webkit-scrollbar{width:3px}
+#tray-zone::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+#tray-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:7px}
+.f-chip{background:var(--s2);border:1.5px solid var(--border2);border-radius:10px;
+  padding:9px 11px;cursor:pointer;user-select:none;position:relative;
+  transition:all .15s;display:flex;flex-direction:column;gap:3px}
+.f-chip:hover{background:var(--s3);border-color:var(--border)}
+.f-chip.selected{border-color:var(--sel-color,var(--amber));
+  box-shadow:0 0 14px var(--sel-glow,rgba(251,191,36,.25));
+  background:var(--sel-bg,rgba(251,191,36,.07));
+  transform:scale(1.04)}
+.f-chip.done{opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
+  transform:scale(0.8)}
+.f-chip.wrong-shake{animation:fShake .3s ease}
+@keyframes fShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.f-chip-text{font-size:12px;font-weight:600;color:var(--text);line-height:1.3}
+.f-chip-sub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--text3);line-height:1.3}
+.multi-badge{position:absolute;top:6px;right:7px;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;
+  background:var(--violet);color:#fff;border-radius:4px;padding:1px 5px;line-height:1.4}
+
+/* Tray divider */
+.tray-divider{width:100%;height:1px;background:var(--border);margin:-1px 0 0;
+  flex-shrink:0;position:relative}
+.tray-divider::before{content:'▼ FEATURE TRAY ▼';position:absolute;
+  left:50%;transform:translateX(-50%);top:-9px;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.15em;
+  color:var(--text3);background:var(--bg);padding:0 8px}
+
+/* Explanation popup */
+#exp-popup{position:fixed;bottom:0;left:0;right:0;z-index:50;padding:10px 12px;
+  transform:translateY(110%);transition:transform .25s cubic-bezier(.175,.885,.32,1.1)}
+#exp-popup.show{transform:translateY(0)}
+.exp-inner{border-radius:12px;padding:12px 16px;max-width:560px;margin:0 auto}
+.exp-inner.ok{background:#012B18;border:1.5px solid var(--green)}
+.exp-inner.bad{background:#160008;border:1.5px solid var(--red)}
+.exp-verdict{font-family:'Syne',sans-serif;font-size:11px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.exp-answer{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;margin-bottom:5px}
+.exp-text{font-size:12.5px;color:var(--text2);line-height:1.65}
+.exp-trap{margin-top:8px;padding:7px 10px;background:rgba(251,191,36,.08);
+  border-left:3px solid var(--amber);border-radius:4px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber);line-height:1.5}
+.exp-trap::before{content:'⚡ TRAP: '}
+
+/* Score pop */
+.spop{position:fixed;font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
+  pointer-events:none;z-index:60;animation:spop .7s ease forwards}
+@keyframes spop{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-60px)}}
+
+/* Flash overlay */
+#fov{position:fixed;inset:0;pointer-events:none;z-index:40;opacity:0;transition:opacity .08s}
+
+/* ── BATTLE COMPLETE ── */
+#battle-complete{background:rgba(4,8,18,.94);backdrop-filter:blur(12px);
+  display:flex;flex-direction:column;gap:16px;padding:28px 24px;text-align:center}
+.bc-title{font-family:'Syne',sans-serif;font-size:clamp(24px,6vw,36px);font-weight:800}
+.bc-score{font-family:'Syne',sans-serif;font-size:64px;font-weight:800;color:var(--amber);
+  text-shadow:0 0 30px rgba(251,191,36,.4);line-height:1}
+.bc-sub{font-size:13px;color:var(--text2)}
+.bc-stats{display:flex;gap:16px;justify-content:center}
+.bcs{background:var(--s2);border:1px solid var(--border2);border-radius:8px;
+  padding:10px 18px;text-align:center;min-width:70px}
+.bcs-val{font-family:'Syne',sans-serif;font-size:24px;font-weight:800}
+.bcs-lbl{font-size:10px;color:var(--text3);font-family:'IBM Plex Mono',monospace;
+  letter-spacing:.08em;text-transform:uppercase;margin-top:1px}
+.missed-section{width:100%;max-width:420px;text-align:left}
+.ms-title{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;
+  color:var(--text3);text-transform:uppercase;margin-bottom:8px}
+.ms-list{display:flex;flex-direction:column;gap:5px;max-height:130px;overflow-y:auto}
+.ms-item{background:var(--s1);border-left:3px solid var(--red);border-radius:5px;
+  padding:7px 10px;font-size:12px;color:var(--text2);line-height:1.5}
+.ms-item strong{color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:11px}
+.ms-list::-webkit-scrollbar{width:3px}
+.ms-list::-webkit-scrollbar-thumb{background:var(--border2)}
+
+/* ── FINAL RESULTS ── */
+#final-screen{gap:16px;padding:24px;text-align:center}
+.fin-title{font-family:'Syne',sans-serif;font-size:clamp(26px,7vw,44px);font-weight:800}
+.fin-score{font-family:'Syne',sans-serif;font-size:80px;font-weight:800;
+  background:linear-gradient(135deg,var(--amber),var(--pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.fin-grade{font-family:'IBM Plex Mono',monospace;font-size:13px;
+  font-weight:600;padding:5px 18px;border-radius:20px;border:1.5px solid;display:inline-block}
+.fin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:380px}
+.fs{background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px 6px}
+.fs-val{font-family:'Syne',sans-serif;font-size:22px;font-weight:800}
+.fs-lbl{font-size:10px;color:var(--text3);font-family:'IBM Plex Mono',monospace;letter-spacing:.08em}
+
+@media(max-width:400px){
+  #tray-grid{grid-template-columns:1fr 1fr}
+  .d-col-name{font-size:10px}
+  .f-chip{padding:7px 9px}
+}
+</style>
+</head>
+<body>
+<div id="fov"></div>
+
+<!-- ════════════ SPLASH ════════════ -->
+<div class="screen" id="splash">
+  <div class="sp-badge">PedsIQ · Differential Diagnosis</div>
+  <div class="sp-title">FEATURE<br>WARS</div>
+  <div class="sp-sub">Assign each clinical feature to its disease. Some features belong to both — find them all.</div>
+  <div class="rounds-preview">
+    <div class="rp">
+      <div class="rp-num" style="color:var(--amber)">1</div>
+      <div class="rp-body">
+        <div class="rp-title">Glomerular Wars</div>
+        <div class="rp-sub">AGN / PSGN vs Nephrotic Syndrome · 12 features</div>
+      </div>
+    </div>
+    <div class="rp">
+      <div class="rp-num" style="color:var(--violet)">2</div>
+      <div class="rp-body">
+        <div class="rp-title">Rickets Rumble</div>
+        <div class="rp-sub">Nutritional Rickets vs XLH · 10 features</div>
+      </div>
+    </div>
+    <div class="rp">
+      <div class="rp-num" style="color:var(--pink)">3</div>
+      <div class="rp-body">
+        <div class="rp-title">Complement Clash</div>
+        <div class="rp-sub">PSGN vs MPGN vs IgA vs MCD · 8 features</div>
+      </div>
+    </div>
+  </div>
+  <div class="neuro-note">
+    <strong>Elaborative interrogation effect:</strong> Deciding WHERE a feature belongs 
+    forces you to articulate the mechanism. The "why" question produces 
+    deeper semantic encoding than any form of passive review.
+  </div>
+  <button class="btn-fw" id="startBtn"
+    style="background:linear-gradient(135deg,var(--amber),var(--pink))">BEGIN BATTLE →</button>
+</div>
+
+<!-- ════════════ GAME ════════════ -->
+<div class="screen hidden" id="game-screen">
+  <div id="hud">
+    <div>
+      <div class="h-score" id="hudScore">0</div>
+      <div class="h-label">Score</div>
+    </div>
+    <div style="text-align:center">
+      <div class="h-round-title" id="hudTitle">—</div>
+      <div class="h-round-sub" id="hudSub">—</div>
+    </div>
+    <div>
+      <div class="h-chips" id="hudChips">0</div>
+      <div class="h-label" style="text-align:right">Left</div>
+    </div>
+  </div>
+  <div id="round-dots">
+    <div class="rdot active" id="dot0"></div>
+    <div class="rdot" id="dot1"></div>
+    <div class="rdot" id="dot2"></div>
+  </div>
+  <div id="instr-strip">
+    <div class="instr-text" id="instrText">Tap a feature chip to select, then tap a disease column to place it</div>
+  </div>
+  <div id="main-area">
+    <div id="columns-zone"></div>
+    <div class="tray-divider"></div>
+    <div id="tray-zone"><div id="tray-grid"></div></div>
+  </div>
+</div>
+
+<!-- Battle Complete overlay (child of game-screen) -->
+<div class="screen hidden" id="battle-complete">
+  <div class="bc-title" id="bcTitle">—</div>
+  <div class="bc-score" id="bcScore">—</div>
+  <div class="bc-sub" id="bcSub">—</div>
+  <div class="bc-stats">
+    <div class="bcs"><div class="bcs-val" id="bcCorrect" style="color:var(--green)">—</div><div class="bcs-lbl">Correct</div></div>
+    <div class="bcs"><div class="bcs-val" id="bcWrong" style="color:var(--red)">—</div><div class="bcs-lbl">Wrong</div></div>
+    <div class="bcs"><div class="bcs-val" id="bcMulti" style="color:var(--violet)">—</div><div class="bcs-lbl">Both found</div></div>
+  </div>
+  <div class="missed-section">
+    <div class="ms-title" id="missedLabel">Missed placements — review:</div>
+    <div class="ms-list" id="missedItems"></div>
+  </div>
+  <button class="btn-fw" id="nextBattleBtn"
+    style="background:linear-gradient(135deg,var(--cyan),var(--violet))">NEXT BATTLE →</button>
+</div>
+
+<!-- ════════════ FINAL ════════════ -->
+<div class="screen hidden" id="final-screen">
+  <div class="fin-title" id="finTitle">—</div>
+  <div class="fin-score" id="finScore">—</div>
+  <div class="fin-grade" id="finGrade">—</div>
+  <div class="fin-stats">
+    <div class="fs"><div class="fs-val" id="finHits" style="color:var(--green)">—</div><div class="fs-lbl">Hits</div></div>
+    <div class="fs"><div class="fs-val" id="finMiss" style="color:var(--red)">—</div><div class="fs-lbl">Wrong</div></div>
+    <div class="fs"><div class="fs-val" id="finBoth" style="color:var(--violet)">—</div><div class="fs-lbl">Both found</div></div>
+  </div>
+  <button class="btn-fw" id="restartBtn"
+    style="background:linear-gradient(135deg,var(--amber),var(--pink))">PLAY AGAIN</button>
+</div>
+
+<!-- Explanation popup -->
+<div id="exp-popup">
+  <div class="exp-inner" id="expInner">
+    <div class="exp-verdict" id="expVerdict">—</div>
+    <div class="exp-answer" id="expAnswer">—</div>
+    <div class="exp-text" id="expText">—</div>
+    <div class="exp-trap" id="expTrap" style="display:none">—</div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════════
+const BATTLES = [
+  {
+    id:'b1',
+    name:'Glomerular Wars',
+    subtitle:'12 features · some belong to BOTH',
+    diseases:[
+      {id:'agn',name:'AGN / PSGN',color:'#FBBF24',glow:'rgba(251,191,36,.25)',bg:'rgba(251,191,36,.06)'},
+      {id:'ns', name:'Nephrotic Syndrome',color:'#22D3EE',glow:'rgba(34,211,238,.25)',bg:'rgba(34,211,238,.06)'},
+    ],
+    features:[
+      {id:'f01',text:'Gross haematuria',sub:'smoky / tea-coloured urine',correct:['agn'],
+       exp:'Haematuria is cardinal in nephritic syndrome (AGN). NS (MCD) has absent or only microscopic haematuria — a defining differentiator.'},
+      {id:'f02',text:'RBC casts in urine',sub:'pathognomonic finding',correct:['agn'],
+       exp:'RBC casts = glomerular bleeding → nephritic pattern. Pathognomonic for AGN. Completely absent in NS.'},
+      {id:'f03',text:'Hypertension',sub:'Na/H₂O retention',correct:['agn'],
+       exp:'HTN is cardinal in nephritic syndrome. Absent in typical MCD/NS — oedema in NS is from oncotic pressure fall, not fluid overload or hypertension.'},
+      {id:'f04',text:'Low serum C3, normal C4',sub:'alternate pathway consumed',correct:['agn'],
+       exp:'PSGN: immune complex → alternate pathway activation → C3 consumed, C4 spared. NS (MCD) has completely normal complement.',
+       trap:'Normal C3 + haematuria → IgA nephropathy, NOT PSGN. Always check both C3 and C4.'},
+      {id:'f05',text:'Massive proteinuria',sub:'>50 mg/kg/day',correct:['ns'],
+       exp:'NS is defined by nephrotic-range proteinuria. AGN has only mild proteinuria (<1 g/day) — not enough to cause hypoalbuminaemia.'},
+      {id:'f06',text:'Serum albumin <2.5 g/dL',sub:'hypoalbuminaemia',correct:['ns'],
+       exp:'Hypoalbuminaemia results from massive urinary protein loss in NS. In AGN, albumin is normal — this distinction is core to the clinical picture.'},
+      {id:'f07',text:'Ascites + pleural effusion',sub:'severe generalised oedema',correct:['ns'],
+       exp:'Severe generalised oedema (including ascites) is driven by the oncotic pressure fall in NS. AGN oedema is milder and mainly periorbital due to fluid retention.'},
+      {id:'f08',text:'Antithrombin III lost in urine',sub:'→ renal vein thrombosis',correct:['ns'],
+       exp:'NS causes urinary loss of multiple proteins including antithrombin III, proteins C and S → hypercoagulable state. Renal vein thrombosis is the most common thrombotic complication.'},
+      {id:'f09',text:'S. pneumoniae infection risk',sub:'SBP, cellulitis, sepsis',correct:['ns'],
+       exp:'NS causes urinary loss of IgG and complement Factor B → susceptibility to encapsulated organisms (S. pneumoniae, E. coli, Klebsiella). Vaccinate before starting steroids.'},
+      {id:'f10',text:'Follows streptococcal infection',sub:'pharyngitis 10d · impetigo 3–6w',correct:['agn'],
+       exp:'PSGN follows nephritogenic Group A strep infection with a clear latent period. NS is idiopathic in most children — no infectious trigger in MCD.'},
+      {id:'f11',text:'Age peak 5–12 years',sub:'rare under 2 years',correct:['agn'],
+       exp:'PSGN peaks at 5–12 years. MCD/NS peaks at 2–6 years. Both facts are individually tested in MCQs.'},
+      {id:'f12',text:'Periorbital puffiness on waking',sub:'classic presenting complaint',correct:['agn','ns'],
+       exp:'BOTH diseases cause periorbital oedema. In AGN it is from fluid retention / HTN. In NS it is from hypoalbuminaemia. Clinically, NS causes more striking morning facial oedema.'},
+    ]
+  },
+  {
+    id:'b2',
+    name:'Rickets Rumble',
+    subtitle:'10 features · separate the two types',
+    diseases:[
+      {id:'nutr',name:'Nutritional Rickets',color:'#34D399',glow:'rgba(52,211,153,.25)',bg:'rgba(52,211,153,.06)'},
+      {id:'xlh', name:'XLH (Familial Hypophosphataemia)',color:'#A78BFA',glow:'rgba(167,139,250,.25)',bg:'rgba(167,139,250,.06)'},
+    ],
+    features:[
+      {id:'r01',text:'Low 25(OH)D < 8 ng/mL',sub:'vitamin D deficiency',correct:['nutr'],
+       exp:'Nutritional rickets is defined by low vitamin D stores. In XLH, 25(OH)D is NORMAL — the defect is in renal phosphate reabsorption (PHEX gene mutation), not vitamin D status.'},
+      {id:'r02',text:'Normal 25(OH)D · Normal Ca',sub:'phosphate-only abnormality',correct:['xlh'],
+       exp:'XLH has normal vitamin D and normal calcium. Only phosphate is low, due to constitutive FGF23-driven renal phosphate wasting. Simple Vit D replacement is therefore inadequate.'},
+      {id:'r03',text:'Elevated PTH (secondary)',sub:'compensatory hyperparathyroidism',correct:['nutr'],
+       exp:'Nutritional rickets: low Ca → PTH rises to compensate → renal phosphate wasting. In XLH, calcium is normal so this secondary PTH rise does NOT occur.'},
+      {id:'r04',text:'Low serum phosphate',sub:'but mechanism differs',correct:['nutr','xlh'],
+       exp:'BOTH have hypophosphataemia — but mechanisms differ. Nutritional: secondary to PTH. XLH: PHEX mutation → FGF23 excess → constitutive renal phosphate wasting independent of PTH and calcium.',
+       trap:'Low phosphate alone cannot distinguish nutritional from XLH. You MUST check 25(OH)D and calcium.'},
+      {id:'r05',text:'Elevated serum ALP',sub:'osteoblast hyperactivity',correct:['nutr','xlh'],
+       exp:'Both diseases cause elevated ALP — bone mineralisation is defective regardless of mechanism. ALP reflects osteoblast activity trying to mineralise accumulating osteoid.'},
+      {id:'r06',text:'X-linked dominant inheritance',sub:'PHEX gene · FGF23 excess',correct:['xlh'],
+       exp:'XLH is X-linked dominant caused by loss-of-function PHEX mutations → FGF23 excess → renal phosphate wasting. Nutritional rickets has no genetic basis — it is purely environmental/dietary.'},
+      {id:'r07',text:'Treat with Vitamin D + Calcium',sub:'2000–4000 IU/day + 50–100 mg/kg/day',correct:['nutr'],
+       exp:'Nutritional rickets: replace what is missing — Vit D3 2000–4000 IU/day × 6–12 weeks + elemental calcium 50–100 mg/kg/day. XLH is not Vit D deficient, so this approach is insufficient.'},
+      {id:'r08',text:'Treat with Phosphate + Calcitriol',sub:'burosumab for refractory',correct:['xlh'],
+       exp:'XLH treatment: oral phosphate supplements + calcitriol (active 1,25-OH Vit D to suppress FGF23 effects). New: Burosumab (anti-FGF23 monoclonal antibody). Vitamin D alone is ineffective.',
+       trap:'XLH requires PHOSPHATE + CALCITRIOL, not simple Vit D. This distinction is high-yield.'},
+      {id:'r09',text:'Hypocalcaemic tetany / seizures',sub:'emergency presentation',correct:['nutr'],
+       exp:'Hypocalcaemic seizures occur in nutritional rickets — severe Vit D deficiency → low calcium. In XLH, calcium is normal throughout, so tetany does NOT occur.'},
+      {id:'r10',text:'Bowing of legs (genu varum)',sub:'weight-bearing deformity',correct:['nutr','xlh'],
+       exp:'BOTH diseases cause bow legs — the common endpoint of defective bone mineralisation. X-ray changes look identical in both. Only the biochemistry (Ca, PO4, 25-OH-D) distinguishes them.'},
+    ]
+  },
+  {
+    id:'b3',
+    name:'Complement Clash',
+    subtitle:'8 features · 4 diseases',
+    diseases:[
+      {id:'psgn',name:'PSGN',color:'#FBBF24',glow:'rgba(251,191,36,.25)',bg:'rgba(251,191,36,.06)'},
+      {id:'mpgn',name:'MPGN',color:'#F87171',glow:'rgba(248,113,113,.25)',bg:'rgba(248,113,113,.06)'},
+      {id:'iga', name:'IgA Nephropathy',color:'#F472B6',glow:'rgba(244,114,182,.25)',bg:'rgba(244,114,182,.06)'},
+      {id:'mcd', name:'MCD (Nephrotic)',color:'#22D3EE',glow:'rgba(34,211,238,.25)',bg:'rgba(34,211,238,.06)'},
+    ],
+    features:[
+      {id:'c01',text:'Low C3 · normal C4',sub:'alternate pathway activation',correct:['psgn'],
+       exp:'PSGN: immune complexes predominantly activate the alternate pathway → C3 consumed, C4 spared. C3 returns to normal in 6–8 weeks. Persistent low C3 beyond 12 weeks → suspect MPGN.',
+       trap:'C3 persists low >8–12 weeks = NOT PSGN. Think MPGN or another chronic disease.'},
+      {id:'c02',text:'Low C3 · low C4',sub:'both pathways consumed',correct:['mpgn'],
+       exp:'MPGN activates BOTH classical (antibody-driven → low C4) and alternate pathways (→ low C3). Persistently low C3 + low C4 beyond 8 weeks is the hallmark distinguishing MPGN from PSGN.',
+       trap:'PSGN = low C3, NORMAL C4. MPGN = low C3, LOW C4. C4 is the discriminator.'},
+      {id:'c03',text:'Normal C3 · normal C4 + haematuria',sub:'mesangial IgA deposits',correct:['iga'],
+       exp:'IgA nephropathy has completely normal complement — disease is driven by mesangial IgA deposition with local complement activation, no systemic consumption. This is the key differentiator from PSGN.',
+       trap:'Normal C3 + haematuria = IgA nephropathy, NOT PSGN. Examiners test this frequently.'},
+      {id:'c04',text:'Normal C3 · normal C4 + massive proteinuria',sub:'no complement disease',correct:['mcd'],
+       exp:'MCD (Minimal Change Disease) has entirely normal complement. Proteinuria is from podocyte foot process effacement — not immune complex or complement-mediated disease.'},
+      {id:'c05',text:'"Humps" on electron microscopy',sub:'subepithelial immune deposits',correct:['psgn'],
+       exp:'"Humps" = electron-dense subepithelial immune complex deposits. This is the pathognomonic EM finding in PSGN. Light microscopy shows "lumpy-bumpy" pattern on immunofluorescence.'},
+      {id:'c06',text:'"Tram-track" GBM on light microscopy',sub:'GBM reduplication',correct:['mpgn'],
+       exp:'"Tram-track" = double-contoured GBM on PAS/silver stain. Pathognomonic for MPGN. Caused by mesangial cell interposition into the GBM creating a second layer.'},
+      {id:'c07',text:'Foot process effacement on EM',sub:'podocyte injury · normal LM',correct:['mcd'],
+       exp:'Foot process effacement on EM is the hallmark of MCD. Light microscopy is NORMAL (hence "minimal change") — the lesion is only visible on EM. This is why MCD was historically missed on biopsy.'},
+      {id:'c08',text:'Haematuria 1–3 days after URTI',sub:'"synpharyngitic" onset',correct:['iga'],
+       exp:'IgA nephropathy has a very short latent period (1–3 days, concurrently with URTI). PSGN has a LONG latent period (5–21 days after pharyngitis). Timing is the classic MCQ discriminator.',
+       trap:'Short latent period (days) = IgA. Long latent period (1–3 weeks) = PSGN.'},
+    ]
+  }
+];
+
+// ══════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════
+const G = {
+  battleIdx: 0,
+  score: 0,
+  totalHits: 0,
+  totalWrong: 0,
+  totalBoth: 0,
+  selectedChip: null,
+  placements: {},      // chipId → Set of diseaseIds already correctly placed
+  wrongPlaced: {},     // chipId → Set of diseaseIds wrongly placed (for missed list)
+  wrongCount: 0,
+  correctCount: 0,
+  multiFound: 0,
+  missed: [],
+  expTimer: null,
+};
+
+function battle(){ return BATTLES[G.battleIdx]; }
+
+// ══════════════════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════════════════
+const $ = id => document.getElementById(id);
+function showScreen(...show){
+  ['splash','game-screen','battle-complete','final-screen'].forEach(id=>{
+    $(id).classList.toggle('hidden', !show.includes(id));
+  });
+}
+function flashBg(col){
+  const f=$('fov');f.style.background=col;f.style.opacity='1';
+  setTimeout(()=>f.style.opacity='0',160);
+}
+function scorePop(x,y,txt,col){
+  const e=document.createElement('div');e.className='spop';
+  e.textContent=txt;e.style.cssText=`color:${col};left:${x}px;top:${y}px`;
+  document.body.appendChild(e);setTimeout(()=>e.remove(),750);
+}
+
+// ══════════════════════════════════════════════════
+// LAYOUT
+// ══════════════════════════════════════════════════
+function initBattle(){
+  const b = battle();
+  G.selectedChip = null;
+  G.placements = {};
+  G.wrongPlaced = {};
+  G.wrongCount = 0;
+  G.correctCount = 0;
+  G.multiFound = 0;
+  G.missed = [];
+  b.features.forEach(f=>{ G.placements[f.id] = new Set(); });
+
+  $('hudTitle').textContent = b.name;
+  $('hudSub').textContent = b.subtitle;
+  updateHud();
+
+  // round dots
+  for(let i=0;i<3;i++){
+    const d=$('dot'+i);
+    d.className='rdot';
+    if(i<G.battleIdx)d.classList.add('done');
+    if(i===G.battleIdx)d.classList.add('active');
+  }
+
+  buildColumns();
+  buildTray();
+  updateInstr(null);
+}
+
+function buildColumns(){
+  const zone = $('columns-zone');
+  zone.innerHTML = '';
+  const b = battle();
+  const numCols = b.diseases.length;
+  // For 4 diseases on small screen, wrap in 2x2
+  if(numCols === 4 && window.innerWidth < 500){
+    zone.style.flexWrap = 'wrap';
+  } else {
+    zone.style.flexWrap = 'nowrap';
+  }
+
+  b.diseases.forEach(d=>{
+    const col = document.createElement('div');
+    col.className = 'd-col';
+    col.id = 'col-'+d.id;
+    col.style.setProperty('--col-color', d.color);
+    col.style.setProperty('--col-glow', d.glow);
+    col.style.borderColor = d.color+'55';
+    if(numCols === 4 && window.innerWidth < 500){
+      col.style.flexBasis = 'calc(50% - 3px)';
+      col.style.flexGrow = '0';
+    }
+    col.innerHTML = `
+      <div class="d-col-header" style="background:${d.bg}">
+        <div class="d-col-name" style="color:${d.color}">${d.name}</div>
+        <div class="d-col-count" id="cnt-${d.id}">0 placed</div>
+      </div>
+      <div class="d-col-chips" id="chips-${d.id}"></div>`;
+    col.addEventListener('click', ()=>onColumnTap(d.id));
+    zone.appendChild(col);
+  });
+}
+
+function buildTray(){
+  const grid = $('tray-grid');
+  grid.innerHTML = '';
+  const b = battle();
+  b.features.forEach(f=>{
+    const el = document.createElement('div');
+    el.className = 'f-chip';
+    el.id = 'chip-'+f.id;
+    const isMulti = f.correct.length > 1;
+    el.innerHTML = `
+      ${isMulti ? `<div class="multi-badge">×${f.correct.length}</div>` : ''}
+      <div class="f-chip-text">${f.text}</div>
+      <div class="f-chip-sub">${f.sub}</div>`;
+    el.addEventListener('click', ()=>onChipTap(f.id, el));
+    grid.appendChild(el);
+  });
+  updateHud();
+}
+
+// ══════════════════════════════════════════════════
+// INTERACTION
+// ══════════════════════════════════════════════════
+function onChipTap(chipId, el){
+  // If already done, ignore
+  if(el.classList.contains('done')) return;
+
+  if(G.selectedChip === chipId){
+    // Deselect
+    G.selectedChip = null;
+    el.classList.remove('selected');
+    updateInstr(null);
+    highlightColumns(false);
+  } else {
+    // Select
+    deselectAll();
+    G.selectedChip = chipId;
+    el.classList.add('selected');
+    // Use disease-first color based on... use amber as selection color
+    el.style.setProperty('--sel-color','#FBBF24');
+    el.style.setProperty('--sel-glow','rgba(251,191,36,.25)');
+    el.style.setProperty('--sel-bg','rgba(251,191,36,.06)');
+    updateInstr(chipId);
+    highlightColumns(true);
+  }
+}
+
+function deselectAll(){
+  if(G.selectedChip){
+    const el = document.getElementById('chip-'+G.selectedChip);
+    if(el) el.classList.remove('selected');
+  }
+  G.selectedChip = null;
+}
+
+function highlightColumns(on){
+  battle().diseases.forEach(d=>{
+    const col = $('col-'+d.id);
+    if(col) col.classList.toggle('target-mode', on);
+  });
+}
+
+function onColumnTap(diseaseId){
+  if(!G.selectedChip) return;
+  const chipId = G.selectedChip;
+  const b = battle();
+  const feature = b.features.find(f=>f.id===chipId);
+  if(!feature) return;
+
+  // Already placed here?
+  if(G.placements[chipId].has(diseaseId)){
+    // Bounce the column gently to signal "already placed here"
+    const col = $('col-'+diseaseId);
+    col.classList.add('flash-ok');
+    setTimeout(()=>col.classList.remove('flash-ok'),400);
+    return;
+  }
+
+  const isCorrect = feature.correct.includes(diseaseId);
+
+  if(isCorrect){
+    handleCorrect(chipId, diseaseId, feature);
+  } else {
+    handleWrong(chipId, diseaseId, feature);
+  }
+}
+
+function handleCorrect(chipId, diseaseId, feature){
+  const col = $('col-'+diseaseId);
+  const chipEl = $('chip-'+chipId);
+  const b = battle();
+  const disease = b.diseases.find(d=>d.id===diseaseId);
+
+  // Mark placement
+  G.placements[chipId].add(diseaseId);
+
+  // Place chip visually in column
+  const placed = document.createElement('div');
+  placed.className = 'placed-chip';
+  placed.style.background = disease.bg;
+  placed.style.border = `1px solid ${disease.color}40`;
+  placed.textContent = feature.text;
+  $('chips-'+diseaseId).appendChild(placed);
+
+  // Update column count
+  const cnt = $('cnt-'+diseaseId);
+  const existing = parseInt(cnt.textContent) || 0;
+  cnt.textContent = (existing+1)+' placed';
+
+  // Flash column
+  col.classList.add('flash-ok');
+  setTimeout(()=>col.classList.remove('flash-ok'),400);
+
+  // Score + particles
+  const pts = 10;
+  G.score += pts;
+  G.correctCount++;
+  G.totalHits++;
+  flashBg('rgba(52,211,153,.09)');
+  const r = chipEl.getBoundingClientRect();
+  scorePop(r.left+r.width/2-20, r.top-10, '+'+pts, '#34D399');
+
+  // Is this chip fully placed (all correct diseases)?
+  const allDone = feature.correct.every(id=>G.placements[chipId].has(id));
+  if(allDone){
+    chipEl.classList.add('done');
+    if(feature.correct.length > 1){ G.multiFound++; G.totalBoth++; }
+    deselectAll();
+    highlightColumns(false);
+    updateHud();
+    showExp('ok', feature, disease);
+    checkBattleComplete();
+  } else {
+    // Multi-assign: update badge
+    const remaining = feature.correct.length - G.placements[chipId].size;
+    const badge = chipEl.querySelector('.multi-badge');
+    if(badge) badge.textContent = '×'+remaining;
+    deselectAll();
+    highlightColumns(false);
+    updateHud();
+    showExp('partial', feature, disease);
+  }
+}
+
+function handleWrong(chipId, diseaseId, feature){
+  const chipEl = $('chip-'+chipId);
+  const col = $('col-'+diseaseId);
+  col.classList.add('flash-bad');
+  setTimeout(()=>col.classList.remove('flash-bad'),350);
+  chipEl.classList.add('wrong-shake');
+  setTimeout(()=>chipEl.classList.remove('wrong-shake'),320);
+  G.score = Math.max(0, G.score - 5);
+  G.wrongCount++;
+  G.totalWrong++;
+  flashBg('rgba(248,113,113,.1)');
+  // Track for missed list
+  if(!G.wrongPlaced[chipId]) G.wrongPlaced[chipId] = new Set();
+  G.wrongPlaced[chipId].add(diseaseId);
+  updateHud();
+  showExp('bad', feature, null);
+}
+
+// ══════════════════════════════════════════════════
+// EXPLANATION
+// ══════════════════════════════════════════════════
+let expTimer = null;
+function showExp(type, feature, disease){
+  clearTimeout(expTimer);
+  const inner = $('expInner');
+  const v=$('expVerdict'),a=$('expAnswer'),t=$('expText'),trap=$('expTrap');
+
+  inner.className='exp-inner '+(type==='bad'?'bad':'ok');
+  if(type==='ok'){
+    v.textContent='✓ CORRECT PLACEMENT';v.style.color='var(--green)';
+    a.textContent = disease ? `→ ${disease.name}` : '';
+    a.style.color='var(--green)';
+  } else if(type==='partial'){
+    v.textContent='✓ PARTIAL — place in another disease too';v.style.color='var(--violet)';
+    a.textContent = disease ? `→ ${disease.name} ✓` : '';
+    a.style.color='var(--violet)';
+  } else {
+    v.textContent='✗ WRONG PLACEMENT';v.style.color='var(--red)';
+    a.textContent=`Correct: ${feature.correct.map(id=>{
+      const d=battle().diseases.find(x=>x.id===id);return d?d.name:id;
+    }).join(' + ')}`;
+    a.style.color='var(--green)';
+    // Add to missed
+    if(!G.missed.find(m=>m.id===feature.id)) G.missed.push(feature);
+  }
+  t.textContent = feature.exp;
+  if(feature.trap){trap.textContent=feature.trap;trap.style.display='block';}
+  else trap.style.display='none';
+
+  $('exp-popup').classList.add('show');
+  expTimer = setTimeout(hideExp, type==='bad' ? 3000 : 2200);
+}
+function hideExp(){ $('exp-popup').classList.remove('show'); }
+
+// ══════════════════════════════════════════════════
+// HUD + INSTR
+// ══════════════════════════════════════════════════
+function updateHud(){
+  $('hudScore').textContent = G.score.toLocaleString();
+  const b = battle();
+  const remaining = b.features.filter(f=>!isChipDone(f.id)).length;
+  $('hudChips').textContent = remaining;
+}
+function isChipDone(chipId){
+  const f = battle().features.find(x=>x.id===chipId);
+  if(!f) return false;
+  return f.correct.every(id=>G.placements[chipId] && G.placements[chipId].has(id));
+}
+function updateInstr(chipId){
+  const strip = $('instrText');
+  if(chipId){
+    const f = battle().features.find(x=>x.id===chipId);
+    strip.textContent = `"${f.text}" selected — tap a disease column to place it`;
+    strip.className = 'instr-text sel-mode';
+  } else {
+    strip.textContent = 'Tap a feature chip to select, then tap a disease column to place it';
+    strip.className = 'instr-text';
+  }
+}
+
+// ══════════════════════════════════════════════════
+// BATTLE COMPLETE
+// ══════════════════════════════════════════════════
+function checkBattleComplete(){
+  const b = battle();
+  const allDone = b.features.every(f=>isChipDone(f.id));
+  if(allDone) setTimeout(showBattleComplete, 800);
+}
+
+function showBattleComplete(){
+  hideExp();
+  const b = battle();
+  const total = b.features.length;
+  const pct = Math.round(G.correctCount/(total+ b.features.filter(f=>f.correct.length>1).length)*100);
+
+  $('bcTitle').textContent = G.wrongCount===0 ? '⚡ CLEAN SWEEP!' : `${b.name} — Round Over`;
+  $('bcTitle').style.color = G.wrongCount===0 ? 'var(--green)' : 'var(--amber)';
+  $('bcScore').textContent = G.score.toLocaleString();
+  $('bcSub').textContent = `${G.correctCount} correct · ${G.wrongCount} wrong · ${G.multiFound} "both" found`;
+  $('bcCorrect').textContent = G.correctCount;
+  $('bcWrong').textContent = G.wrongCount;
+  $('bcMulti').textContent = G.multiFound;
+
+  const ml = $('missedItems');
+  ml.innerHTML = '';
+  const ml_title = $('missedLabel');
+  if(G.missed.length === 0){
+    ml_title.textContent = 'No missed placements — perfect!';
+  } else {
+    ml_title.textContent = `Missed (${G.missed.length}) — review the mechanics:`;
+    G.missed.forEach(f=>{
+      const div = document.createElement('div');
+      div.className = 'ms-item';
+      const correctNames = f.correct.map(id=>{
+        const d=b.diseases.find(x=>x.id===id);return d?d.name:id;
+      }).join(' + ');
+      div.innerHTML=`<strong>${f.text}</strong><br>Belongs to: <span style="color:var(--green)">${correctNames}</span>`;
+      ml.appendChild(div);
+    });
+  }
+
+  const isLast = G.battleIdx >= BATTLES.length - 1;
+  $('nextBattleBtn').textContent = isLast ? 'SEE FINAL SCORE →' : 'NEXT BATTLE →';
+  showScreen('battle-complete');
+}
+
+// ══════════════════════════════════════════════════
+// FLOW
+// ══════════════════════════════════════════════════
+function startGame(){
+  G.battleIdx = 0;
+  G.score = 0;
+  G.totalHits = 0;
+  G.totalWrong = 0;
+  G.totalBoth = 0;
+  showScreen('game-screen');
+  initBattle();
+}
+
+function nextBattle(){
+  G.battleIdx++;
+  if(G.battleIdx >= BATTLES.length){
+    showFinalResults();
+  } else {
+    showScreen('game-screen');
+    initBattle();
+  }
+}
+
+function showFinalResults(){
+  const pct = G.totalHits + G.totalWrong > 0 ?
+    Math.round(G.totalHits/(G.totalHits+G.totalWrong)*100) : 0;
+  let title, col;
+  if(pct>=90){title='CONSULTANT-LEVEL';col='var(--green)';}
+  else if(pct>=75){title='SOLID CLINICIAN';col='var(--cyan)';}
+  else if(pct>=55){title='KEEP REVISING';col='var(--amber)';}
+  else{title='REVISE & RETRY';col='var(--red)';}
+  $('finTitle').textContent=title;$('finTitle').style.color=col;
+  $('finScore').textContent=G.score.toLocaleString();
+  $('finGrade').textContent=pct+'% accuracy';
+  $('finGrade').style.color=col;$('finGrade').style.borderColor=col;
+  $('finHits').textContent=G.totalHits;
+  $('finMiss').textContent=G.totalWrong;
+  $('finBoth').textContent=G.totalBoth;
+  showScreen('final-screen');
+}
+
+// ══════════════════════════════════════════════════
+// EVENTS
+// ══════════════════════════════════════════════════
+$('startBtn').addEventListener('click', startGame);
+$('nextBattleBtn').addEventListener('click', nextBattle);
+$('restartBtn').addEventListener('click', startGame);
+showScreen('splash');
+</script>
+</body>
+</html>

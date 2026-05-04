@@ -136,9 +136,35 @@ body {
   }
 
   /* Mnemonics */
-  .from-\\[\\#34C759\\]\\/10 {
+  .from-\[\#34C759\]\/10 {
     background: #f0f8f0 !important;
     border: 1px solid #ccc !important;
   }
 
+}
+
+/* ─── Arcade Full-Screen Mode ─────────────────────────────────────────────── */
+
+body[data-arcade-active] aside,
+body[data-arcade-active] .no-print {
+  display: none !important;
+}
+
+body[data-arcade-active] main {
+  margin-left: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+body[data-arcade-active] {
+  overflow: hidden;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  body[data-arcade-active] * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
