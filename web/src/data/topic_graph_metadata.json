@@ -216,5 +216,69 @@
     ],
     "yearsAppeared": [],
     "nelsonChapter": "174. Diabetes Mellitus"
+  },
+  "pku": {
+    "relatedConcepts": [
+      "Phenylalanine Hydroxylase",
+      "Newborn Screening",
+      "Inborn Errors of Metabolism",
+      "Low-Phenylalanine Diet",
+      "Intellectual Disability"
+    ],
+    "examinerTraps": [
+      "Screen after 48 hours of protein feeding",
+      "Diet is lifelong — not relaxed in adolescence",
+      "Aspartame contains phenylalanine",
+      "Tyrosine becomes essential in PKU"
+    ],
+    "yearsAppeared": [
+      2017,
+      2020,
+      2023
+    ],
+    "nelsonChapter": "50. Inborn Errors of Metabolism"
+  },
+  "hbv-neonatal": {
+    "relatedConcepts": [
+      "Hepatitis B",
+      "HBIG",
+      "Hepatitis B Vaccine",
+      "Perinatal Transmission",
+      "HBeAg"
+    ],
+    "examinerTraps": [
+      "HBIG + vaccine within 12 hours (not 24)",
+      "Different injection sites required",
+      "Breastfeeding is safe with prophylaxis",
+      "Premature <2 kg needs 4 doses"
+    ],
+    "yearsAppeared": [
+      2016,
+      2019,
+      2022,
+      2024
+    ],
+    "nelsonChapter": "129. Viral Hepatitis"
+  },
+  "polyuria": {
+    "relatedConcepts": [
+      "Diabetes Insipidus",
+      "Desmopressin",
+      "Fluid Deprivation Test",
+      "Craniopharyngioma",
+      "Nephrogenic DI"
+    ],
+    "examinerTraps": [
+      "DM is the #1 cause of polyuria in children",
+      "Do NOT correct Na+ >10-12 mEq/L per day",
+      "Desmopressin does NOT work in nephrogenic DI",
+      "Craniopharyngioma is the most common CNS tumor causing central DI"
+    ],
+    "yearsAppeared": [
+      2018,
+      2021,
+      2022
+    ],
+    "nelsonChapter": "175. Disorders of the Posterior Pituitary"
   }
 }
