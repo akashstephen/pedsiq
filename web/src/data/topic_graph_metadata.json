@@ -322,5 +322,49 @@
       2020
     ],
     "nelsonChapter": "161. Evaluation of the Child with Renal Disease"
+  },
+  "uti-imaging": {
+    "relatedConcepts": [
+      "Urinary Tract Infection",
+      "Vesicoureteral Reflux",
+      "DMSA Scan",
+      "Ultrasound",
+      "MCU"
+    ],
+    "examinerTraps": [
+      "DMSA at 3-6 months post-infection for scarring",
+      "MCU not for every first UTI",
+      "USG is first-line for ALL febrile UTIs",
+      "Male infant with UTI → evaluate for PUV"
+    ],
+    "yearsAppeared": [
+      2017,
+      2019,
+      2021,
+      2023
+    ],
+    "nelsonChapter": "165. Urinary Tract Infections"
+  },
+  "acth": {
+    "relatedConcepts": [
+      "Cortisol",
+      "Adrenal Insufficiency",
+      "Cushing Disease",
+      "Craniopharyngioma",
+      "Dexamethasone Suppression Test"
+    ],
+    "examinerTraps": [
+      "Secondary AI has NO hyperpigmentation and NO hyperkalemia",
+      "ACTH elevated in primary AI, low in secondary AI",
+      "Cushing DISEASE = pituitary; Cushing SYNDROME = any cause",
+      "Growth failure is hallmark of pediatric Cushing"
+    ],
+    "yearsAppeared": [
+      2018,
+      2020,
+      2022,
+      2023
+    ],
+    "nelsonChapter": "172. Disorders of the Anterior Pituitary"
   }
 }
