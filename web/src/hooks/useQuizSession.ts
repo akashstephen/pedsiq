@@ -14,6 +14,7 @@ import { type McqQuestion, type QuizSession, type ConfidenceLevel } from '@/type
 import { createSession, recordResponse, isSessionComplete } from '@/lib/session';
 import { saveActiveSession, clearActiveSession, loadActiveSession } from '@/lib/storage';
 import { updatePerformance, updateSpacedRepetition, finalizeSession } from '@/lib/analytics';
+// Note: updatePerformance is called only in rateConfidence to avoid double-counting
 
 export interface UseQuizSessionReturn {
   /** Current session state (null while loading) */
@@ -116,19 +117,7 @@ export function useQuizSession(allQuestions: McqQuestion[]): UseQuizSessionRetur
     if (isRevealed || !session || !currentQuestion || selectedOption === null) return;
 
     setIsRevealed(true);
-
-    const timeSpent = Date.now() - startTime;
-    const correct = selectedOption === currentQuestion.correctIndex;
-
-    // Immediate analytics update (without final confidence yet)
-    updatePerformance(currentQuestion, {
-      questionId: currentQuestion.id,
-      selectedIndex: selectedOption,
-      correct,
-      timeSpentMs: timeSpent,
-      confidence: 'unsure',
-    });
-  }, [isRevealed, session, currentQuestion, selectedOption, startTime]);
+  }, [isRevealed, session, currentQuestion, selectedOption]);
 
   // ─── Confidence Rating ─────────────────────────────────────────────────────
   const rateConfidence = useCallback(

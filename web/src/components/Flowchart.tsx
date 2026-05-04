@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useId } from 'react';
 import { graphlib, layout } from '@dagrejs/dagre';
 
 interface FlowchartNode {
@@ -115,6 +115,10 @@ function getShapePath(type: string | undefined, w: number, h: number) {
 }
 
 export function Flowchart({ nodes, edges, title }: FlowchartProps) {
+  const id = useId();
+  const arrowId = `fc-arrow-${id}`;
+  const glowId = `fc-glow-${id}`;
+
   const data = useMemo(() => {
     const g = new graphlib.Graph({ directed: true, compound: false, multigraph: false });
     g.setGraph({ rankdir: 'TB', nodesep: 44, edgesep: 28, ranksep: 72, marginx: 24, marginy: 24 });
@@ -179,10 +183,10 @@ export function Flowchart({ nodes, edges, title }: FlowchartProps) {
       <div className="flex justify-center min-w-fit">
         <svg viewBox={vb} width={vw} height={vh} className="max-w-full h-auto" style={{ minWidth: Math.min(vw, 640) }}>
           <defs>
-            <marker id="fc-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <marker id={arrowId} markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
               <polygon points="0 0, 10 3.5, 0 7" fill="rgba(255,255,255,0.3)" />
             </marker>
-            <filter id="fc-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <filter id={glowId} x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4" result="blur" />
               <feComposite in="SourceGraphic" in2="blur" operator="over" />
             </filter>
@@ -204,7 +208,7 @@ export function Flowchart({ nodes, edges, title }: FlowchartProps) {
 
             return (
               <g key={`e${i}`}>
-                <path d={d} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" markerEnd="url(#fc-arrow)" />
+                <path d={d} fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" markerEnd={`url(#${arrowId})`} />
                 {edge.label && (
                   <g>
                     <rect
@@ -239,7 +243,7 @@ export function Flowchart({ nodes, edges, title }: FlowchartProps) {
             const shapeD = getShapePath(n.type, n.w, n.h);
             return (
               <g key={id} transform={`translate(${n.x.toFixed(1)}, ${n.y.toFixed(1)})`}>
-                <path d={shapeD} fill={c.fill} stroke={c.stroke} strokeWidth="1.5" filter="url(#fc-glow)" />
+                <path d={shapeD} fill={c.fill} stroke={c.stroke} strokeWidth="1.5" filter={`url(#${glowId})`} />
                 <path d={shapeD} fill={c.fill} stroke={c.stroke} strokeWidth="1.5" />
                 {n.lines.length === 1 ? (
                   <text

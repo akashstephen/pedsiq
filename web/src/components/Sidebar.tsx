@@ -17,6 +17,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import clsx from "clsx";
+import { topics } from "../app/structured-answers/topics";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -39,7 +40,9 @@ function useFocusTrap(
   useEffect(() => {
     if (!isActive) return;
 
-    previouslyFocused.current = document.activeElement as HTMLElement;
+    previouslyFocused.current = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
 
     const container = containerRef.current;
     if (!container) return;
@@ -167,9 +170,17 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
         aria-label="Main navigation"
       >
         {/* Header */}
-        <div className="p-4 pb-3 border-b border-white/[0.08] flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group overflow-hidden">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#007AFF] to-[#5856D6] flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-shadow shrink-0">
+        <div className={clsx(
+          "border-b border-white/[0.08] flex",
+          collapsed
+            ? "md:flex-col md:items-center md:justify-center md:gap-2 md:p-2 md:py-3"
+            : "items-center justify-between p-4 pb-3"
+        )}>
+          <Link href="/" className={clsx("flex items-center gap-3 group overflow-hidden", collapsed && "md:gap-0")}>
+            <div className={clsx(
+              "rounded-xl bg-gradient-to-br from-[#007AFF] to-[#5856D6] flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 transition-shadow shrink-0",
+              collapsed ? "md:w-8 md:h-8 md:text-base w-10 h-10 text-lg" : "w-10 h-10 text-lg"
+            )}>
               P
             </div>
             <div
@@ -191,8 +202,8 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             type="button"
             onClick={onToggle}
             className={clsx(
-              "hidden md:flex items-center justify-center w-7 h-7 rounded-lg bg-white/[0.05] border border-white/10 text-white/60 hover:text-white hover:bg-white/[0.1] transition-colors shrink-0",
-              collapsed && "absolute right-2 top-4"
+              "hidden md:flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/10 text-white/60 hover:text-white hover:bg-white/[0.1] transition-colors shrink-0",
+              collapsed ? "md:w-6 md:h-6" : "w-7 h-7"
             )}
             aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
             title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
@@ -238,7 +249,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
                       collapsed && "md:hidden"
                     )}
                   >
-                    39
+                    {topics.length}
                   </span>
                 )}
               </Link>
