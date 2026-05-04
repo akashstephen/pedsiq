@@ -365,6 +365,14 @@ body[data-arcade-active] [role="button"] {
   transition: opacity 0.3s ease, transform 0.3s ease;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+/* macOS / iOS fallback: always reserve scrollbar space to prevent layout shifts */
+@supports not (scrollbar-gutter: stable) {
+  .arcade-screen {
+    overflow-y: scroll;
+  }
 }
 
 .arcade-screen.hidden {

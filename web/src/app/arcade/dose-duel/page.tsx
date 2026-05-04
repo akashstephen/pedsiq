@@ -123,129 +123,135 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useDoseDuel
     : null;
 
   return (
-    <div className="flex flex-col h-full w-full max-w-[560px] mx-auto px-3 sm:px-4 py-3 sm:py-4 overflow-y-auto"
+    <div className="flex flex-col h-full w-full max-w-[640px] mx-auto px-3 sm:px-4 py-3 sm:py-4 overflow-hidden"
          style={{ background: '#080C18', fontFamily: "'DM Sans', sans-serif", color: '#E2E8F0' }}>
-      {/* HUD */}
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <div className="text-xl font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.score}</div>
+      {/* HUD — 3-col grid prevents layout shift when score grows */}
+      <div className="grid grid-cols-3 gap-2 mb-3 shrink-0">
+        <div className="text-left">
+          <div className="text-xl font-bold text-[#22D3EE] tabular-nums" style={{fontFamily:"'Space Mono',monospace"}}>{engine.score}</div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Score</div>
         </div>
-        <div className="text-center text-xs text-[#475569]" style={{fontFamily:"'Space Mono',monospace"}}>
-          Q {engine.currentIndex + 1} / {engine.questions.length}
+        <div className="text-center self-center">
+          <div className="text-xs text-[#475569]" style={{fontFamily:"'Space Mono',monospace"}}>
+            Q {engine.currentIndex + 1} / {engine.questions.length}
+          </div>
         </div>
         <div className="text-right">
-          <div className="text-lg font-bold text-[#F59E0B]" style={{fontFamily:"'Space Mono',monospace"}}>{engine.streak}🔥</div>
+          <div className="text-lg font-bold text-[#F59E0B] tabular-nums" style={{fontFamily:"'Space Mono',monospace"}}>{engine.streak}🔥</div>
           <div className="text-[10px] tracking-wider text-[#475569] uppercase">Streak</div>
         </div>
       </div>
 
       {/* Timer */}
-      <div className="w-full h-[5px] bg-[#1D2847] rounded-[3px] overflow-hidden mb-4">
+      <div className="w-full h-[5px] bg-[#1D2847] rounded-[3px] overflow-hidden mb-3 shrink-0">
         <div className="h-full rounded-[3px] transition-[width] duration-100"
              style={{ width: `${timerPct}%`, background: timerColor }} />
       </div>
 
-      {/* Patient Card */}
-      <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-4 mb-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <div>
-          <div className="text-[10px] tracking-wider text-[#475569] uppercase">Age</div>
-          <div className="text-sm font-medium">{q.patient.age}</div>
-        </div>
-        <div className="text-left sm:text-right">
-          <div className="text-[10px] tracking-wider text-[#475569] uppercase">Weight</div>
-          <div className="text-lg font-bold text-[#22D3EE]" style={{fontFamily:"'Space Mono',monospace"}}>
-            {q.patient.weightKg} <span className="text-xs text-[#475569] font-normal" style={{fontFamily:"'DM Sans',sans-serif"}}>kg</span>
+      {/* Scrollable content area */}
+      <div className="flex-1 overflow-y-auto min-h-0 pr-1">
+        {/* Patient Card */}
+        <div className="bg-[#161E35] border border-[#2D4A6E] rounded-xl p-3 sm:p-4 mb-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div>
+            <div className="text-[10px] tracking-wider text-[#475569] uppercase">Age</div>
+            <div className="text-sm font-medium">{q.patient.age}</div>
           </div>
-        </div>
-        <div className="col-span-1 sm:col-span-2 bg-[#1D2847] rounded-lg p-3 mt-1">
-          <div className="text-[10px] tracking-wider text-[#475569] uppercase mb-1">Clinical Context</div>
-          <div className="text-sm leading-relaxed">{q.patient.diagnosis}</div>
-        </div>
-      </div>
-
-      {/* Drug Box */}
-      <div className="bg-[#0F1628] border border-[#1E3A5F] rounded-xl p-4 mb-3 text-center">
-        <div className="text-sm font-bold text-[#818CF8] mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</div>
-        <div className="text-xs text-[#475569]">{q.route}</div>
-        <div className="text-sm text-[#94A3B8] mt-2">Select the correct dose / answer:</div>
-      </div>
-
-      {/* Options */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
-        {q.options.map((opt) => {
-          const isSelected = engine.selectedOption === opt;
-          const isCorrect = opt === q.correctAnswer;
-          const showCorrect = engine.isRevealed && isCorrect;
-          const showWrong = engine.isRevealed && isSelected && !isCorrect;
-
-          return (
-            <button
-              key={opt}
-              onClick={() => { if (!engine.isRevealed) engine.selectOption(opt); }}
-              disabled={engine.isRevealed}
-              className={`rounded-xl p-3 text-center text-xs font-bold cursor-pointer min-h-[56px] flex items-center justify-center leading-tight transition-all
-                ${showCorrect ? 'bg-[#052E16] border border-[#10B981] text-[#10B981] shadow-[0_0_16px_rgba(16,185,129,0.2)]' : ''}
-                ${showWrong ? 'bg-[#2A0A0A] border border-[#EF4444] text-[#EF4444]' : ''}
-                ${!engine.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
-                ${!engine.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F] hover:-translate-y-px' : ''}
-                ${engine.isRevealed && !isSelected && !isCorrect ? 'bg-[#161E35] border border-[#2D4A6E] text-[#475569] opacity-60' : ''}
-              `}
-              style={{
-                fontFamily: "'Space Mono', monospace",
-                animation: showWrong ? 'dd-shake 0.3s ease' : undefined,
-              }}
-            >
-              {opt}
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Feedback */}
-      {feedbackType && (
-        <div className={`rounded-xl p-4 mb-3
-          ${feedbackType === 'correct' ? 'bg-[#052E16] border border-[#10B981]' :
-            feedbackType === 'timeout' ? 'bg-[#1A1000] border border-[#F59E0B]' :
-            'bg-[#1A0A0A] border border-[#EF4444]'}`}
-             style={{ animation: 'dd-fadeUp 0.2s ease' }}>
-          <div className={`text-xs font-bold tracking-wider uppercase mb-2
-            ${feedbackType === 'correct' ? 'text-[#10B981]' :
-              feedbackType === 'timeout' ? 'text-[#F59E0B]' :
-              'text-[#EF4444]'}`}>
-            {feedbackType === 'correct'
-              ? `✓ CORRECT +${10 + Math.ceil(engine.timeLeft)} pts`
-              : feedbackType === 'timeout'
-              ? `⏱ TIME'S UP · Answer: ${q.correctAnswer}`
-              : `✗ WRONG · Correct: ${q.correctAnswer}`}
-          </div>
-          <p className="text-xs text-[#94A3B8] leading-relaxed">{q.explanation}</p>
-          {q.trap && (
-            <div className="mt-2 p-2 bg-[rgba(245,158,11,0.08)] border-l-[3px] border-[#F59E0B] rounded text-xs text-[#F59E0B] leading-relaxed">
-              <strong>⚠ TRAP:</strong> {q.trap}
+          <div className="text-left sm:text-right">
+            <div className="text-[10px] tracking-wider text-[#475569] uppercase">Weight</div>
+            <div className="text-lg font-bold text-[#22D3EE] tabular-nums" style={{fontFamily:"'Space Mono',monospace"}}>
+              {q.patient.weightKg} <span className="text-xs text-[#475569] font-normal" style={{fontFamily:"'DM Sans',sans-serif"}}>kg</span>
             </div>
-          )}
+          </div>
+          <div className="col-span-1 sm:col-span-2 bg-[#1D2847] rounded-lg p-3 mt-1">
+            <div className="text-[10px] tracking-wider text-[#475569] uppercase mb-1">Clinical Context</div>
+            <div className="text-sm leading-relaxed">{q.patient.diagnosis}</div>
+          </div>
         </div>
-      )}
 
-      {/* Action Button */}
-      {!engine.isRevealed ? (
-        <button
-          onClick={engine.submitAnswer}
-          disabled={!engine.selectedOption}
-          className={`w-full py-3 rounded-xl font-semibold transition-all
-            ${engine.selectedOption ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90' : 'bg-white/[0.06] text-white/30 cursor-not-allowed'}`}
-        >
-          Submit Answer
-        </button>
-      ) : (
-        <button
-          onClick={engine.nextQuestion}
-          className="w-full py-3 rounded-xl font-semibold bg-[#007AFF] text-white hover:bg-[#007AFF]/90 transition-all"
-        >
-          {engine.currentIndex + 1 >= engine.questions.length ? 'See Results' : 'Next Question'}
-        </button>
-      )}
+        {/* Drug Box */}
+        <div className="bg-[#0F1628] border border-[#1E3A5F] rounded-xl p-3 sm:p-4 mb-3 text-center">
+          <div className="text-sm font-bold text-[#818CF8] mb-1" style={{fontFamily:"'Space Mono',monospace"}}>{q.drug}</div>
+          <div className="text-xs text-[#475569]">{q.route}</div>
+          <div className="text-sm text-[#94A3B8] mt-2">Select the correct dose / answer:</div>
+        </div>
+
+        {/* Options */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
+          {q.options.map((opt) => {
+            const isSelected = engine.selectedOption === opt;
+            const isCorrect = opt === q.correctAnswer;
+            const showCorrect = engine.isRevealed && isCorrect;
+            const showWrong = engine.isRevealed && isSelected && !isCorrect;
+
+            return (
+              <button
+                key={opt}
+                onClick={() => { if (!engine.isRevealed) engine.selectOption(opt); }}
+                disabled={engine.isRevealed}
+                className={`rounded-xl p-3 text-center text-xs font-bold cursor-pointer min-h-[52px] sm:min-h-[56px] flex items-center justify-center leading-tight transition-all
+                  ${showCorrect ? 'bg-[#052E16] border border-[#10B981] text-[#10B981] shadow-[0_0_16px_rgba(16,185,129,0.2)]' : ''}
+                  ${showWrong ? 'bg-[#2A0A0A] border border-[#EF4444] text-[#EF4444]' : ''}
+                  ${!engine.isRevealed && isSelected ? 'bg-[#007AFF]/10 border border-[#007AFF]/40 text-white' : ''}
+                  ${!engine.isRevealed && !isSelected ? 'bg-[#161E35] border border-[#2D4A6E] text-[#E2E8F0] hover:bg-[#1D2847] hover:border-[#1E3A5F] hover:-translate-y-px' : ''}
+                  ${engine.isRevealed && !isSelected && !isCorrect ? 'bg-[#161E35] border border-[#2D4A6E] text-[#475569] opacity-60' : ''}
+                `}
+                style={{
+                  fontFamily: "'Space Mono', monospace",
+                  animation: showWrong ? 'dd-shake 0.3s ease' : undefined,
+                }}
+              >
+                {opt}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Bottom action area — fixed height prevents layout shift */}
+      <div className="shrink-0 pt-2">
+        {feedbackType && (
+          <div className={`rounded-xl p-3 sm:p-4 mb-2
+            ${feedbackType === 'correct' ? 'bg-[#052E16] border border-[#10B981]' :
+              feedbackType === 'timeout' ? 'bg-[#1A1000] border border-[#F59E0B]' :
+              'bg-[#1A0A0A] border border-[#EF4444]'}`}
+               style={{ animation: 'dd-fadeUp 0.2s ease' }}>
+            <div className={`text-xs font-bold tracking-wider uppercase mb-1
+              ${feedbackType === 'correct' ? 'text-[#10B981]' :
+                feedbackType === 'timeout' ? 'text-[#F59E0B]' :
+                'text-[#EF4444]'}`}>
+              {feedbackType === 'correct'
+                ? `✓ CORRECT +${10 + Math.ceil(engine.timeLeft)} pts`
+                : feedbackType === 'timeout'
+                ? `⏱ TIME'S UP · Answer: ${q.correctAnswer}`
+                : `✗ WRONG · Correct: ${q.correctAnswer}`}
+            </div>
+            <p className="text-[11px] sm:text-xs text-[#94A3B8] leading-relaxed">{q.explanation}</p>
+            {q.trap && (
+              <div className="mt-2 p-2 bg-[rgba(245,158,11,0.08)] border-l-[3px] border-[#F59E0B] rounded text-[11px] sm:text-xs text-[#F59E0B] leading-relaxed">
+                <strong>⚠ TRAP:</strong> {q.trap}
+              </div>
+            )}
+          </div>
+        )}
+
+        {!engine.isRevealed ? (
+          <button
+            onClick={engine.submitAnswer}
+            disabled={!engine.selectedOption}
+            className={`w-full py-3 rounded-xl font-semibold transition-all
+              ${engine.selectedOption ? 'bg-[#007AFF] text-white hover:bg-[#007AFF]/90' : 'bg-white/[0.06] text-white/30 cursor-not-allowed'}`}
+          >
+            Submit Answer
+          </button>
+        ) : (
+          <button
+            onClick={engine.nextQuestion}
+            className="w-full py-3 rounded-xl font-semibold bg-[#007AFF] text-white hover:bg-[#007AFF]/90 transition-all"
+          >
+            {engine.currentIndex + 1 >= engine.questions.length ? 'See Results' : 'Next Question'}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

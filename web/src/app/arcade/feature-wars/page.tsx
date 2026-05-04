@@ -137,19 +137,19 @@ function BattleScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngi
       <div className="pointer-events-none fixed inset-0 z-[100]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 4px)' }} />
 
-      {/* HUD */}
-      <div className="relative z-20 flex items-center justify-between px-3 sm:px-4 py-2 border-b border-[#182A42]"
+      {/* HUD — 3-col grid prevents layout shift */}
+      <div className="relative z-20 grid grid-cols-3 gap-2 px-3 sm:px-4 py-2 border-b border-[#182A42]"
            style={{ background: 'rgba(4,8,18,0.85)', backdropFilter: 'blur(8px)' }}>
-        <div>
-          <div className="text-[clamp(18px,5vw,22px)] font-extrabold text-[#FBBF24]" style={{fontFamily:"'Syne',sans-serif"}}>{engine.score}</div>
+        <div className="text-left">
+          <div className="text-[clamp(18px,5vw,22px)] font-extrabold text-[#FBBF24] tabular-nums" style={{fontFamily:"'Syne',sans-serif"}}>{engine.score}</div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.12em] text-[#2E4A65] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Score</div>
         </div>
-        <div className="text-center max-w-[170px] px-2">
-          <div className="text-[clamp(10px,3vw,13px)] font-semibold text-[#CDD9E8] leading-tight">{b.name}</div>
-          <div className="text-[8px] sm:text-[9px] text-[#2E4A65] mt-0.5" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{b.subtitle}</div>
+        <div className="text-center self-center px-1">
+          <div className="text-[clamp(10px,3vw,13px)] font-semibold text-[#CDD9E8] leading-tight truncate">{b.name}</div>
+          <div className="text-[8px] sm:text-[9px] text-[#2E4A65] mt-0.5 truncate" style={{fontFamily:"'IBM Plex Mono',monospace"}}>{b.subtitle}</div>
         </div>
         <div className="text-right">
-          <div className="text-[clamp(18px,5vw,22px)] font-extrabold text-[#22D3EE]" style={{fontFamily:"'Syne',sans-serif"}}>{remaining}</div>
+          <div className="text-[clamp(18px,5vw,22px)] font-extrabold text-[#22D3EE] tabular-nums" style={{fontFamily:"'Syne',sans-serif"}}>{remaining}</div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.12em] text-[#2E4A65] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Left</div>
         </div>
       </div>
@@ -242,11 +242,11 @@ function BattleScreen({ engine }: { engine: ReturnType<typeof useFeatureWarsEngi
         </div>
       </div>
 
-      {/* Explanation popup */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-2 sm:p-3"
+      {/* Explanation popup — always mounted, translated off-screen */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-2 sm:p-3 pointer-events-none"
            style={{ transform: expVisible ? 'translateY(0)' : 'translateY(110%)', transition: 'transform 0.25s cubic-bezier(0.175,0.885,0.32,1.1)' }}>
         {engine.feedback && (
-          <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border
+          <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border pointer-events-auto
             ${engine.feedback.type === 'ok' ? 'bg-[#012B18] border-[#34D399]' :
               engine.feedback.type === 'partial' ? 'bg-[#0A1528] border-[#A78BFA]' :
               'bg-[#160008] border-[#F87171]'}`}
@@ -350,7 +350,7 @@ function ColumnComponent({
           {placedFeatures.length} placed
         </div>
       </div>
-      <div className="p-1.5 flex flex-col gap-1 min-h-[60px] max-h-[120px] overflow-y-auto arcade-scroll-thin">
+      <div className="p-1.5 flex flex-col gap-1 min-h-[60px] max-h-[100px] sm:max-h-[140px] md:max-h-[200px] overflow-y-auto arcade-scroll-thin">
         {placedFeatures.map((f) => {
           const isMultiPending = f.correctDiseaseIds.length > 1 && !isFeatureDone(f.id);
           return (

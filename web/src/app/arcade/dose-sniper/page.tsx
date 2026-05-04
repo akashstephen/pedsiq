@@ -166,21 +166,21 @@ function GameScreen({ engine, session }: { engine: ReturnType<typeof useSniperEn
       <div className="pointer-events-none fixed inset-0 z-[99]"
            style={{ background: 'repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px)' }} />
 
-      {/* HUD */}
-      <div className="relative z-20 flex items-center justify-between px-3 sm:px-4 py-2 border-b border-[#1A2E4A]"
+      {/* HUD — 3-col grid prevents layout shift when score/combo grow */}
+      <div className="relative z-20 grid grid-cols-3 gap-2 px-3 sm:px-4 py-2 border-b border-[#1A2E4A]"
            style={{ background: 'rgba(7,14,31,0.7)', backdropFilter: 'blur(6px)' }}>
-        <div>
-          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#FFB800]" style={{fontFamily:"'Orbitron',monospace"}}>{session.score.toLocaleString()}</div>
+        <div className="text-left">
+          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#FFB800] tabular-nums" style={{fontFamily:"'Orbitron',monospace"}}>{session.score.toLocaleString()}</div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.14em] text-[#1E3A5A] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Score</div>
         </div>
-        <div className="text-center flex-1 px-2">
-          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#22CCFF]" style={{fontFamily:"'Orbitron',monospace"}}>
+        <div className="text-center self-center">
+          <div className="text-[clamp(15px,4.5vw,22px)] font-bold text-[#22CCFF] tabular-nums" style={{fontFamily:"'Orbitron',monospace"}}>
             {String(engine.currentRound + 1).padStart(2, '0')} / {allQuestions.length}
           </div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.14em] text-[#1E3A5A] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Round</div>
         </div>
         <div className="text-right">
-          <div className="text-[clamp(15px,4.5vw,22px)] font-bold" style={{fontFamily:"'Orbitron',monospace", color: engine.combo >= 5 ? '#FFB800' : engine.combo >= 3 ? '#22CCFF' : '#FF6BF5'}}>
+          <div className="text-[clamp(15px,4.5vw,22px)] font-bold tabular-nums" style={{fontFamily:"'Orbitron',monospace", color: engine.combo >= 5 ? '#FFB800' : engine.combo >= 3 ? '#22CCFF' : '#FF6BF5'}}>
             ×{engine.combo}
           </div>
           <div className="text-[8px] sm:text-[9px] tracking-[0.14em] text-[#1E3A5A] uppercase" style={{fontFamily:"'IBM Plex Mono',monospace"}}>Combo</div>
@@ -226,61 +226,47 @@ function FeedbackPanel({ feedback, onNext, currentRound, totalRounds }: {
   currentRound: number;
   totalRounds: number;
 }) {
-  const [visible, setVisible] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    if (feedback) {
-      setVisible(true);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => setVisible(true), 10); // ensure DOM update
-    } else {
-      setVisible(false);
-    }
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [feedback]);
-
-  if (!feedback) return null;
-
+  const visible = !!feedback;
   const isLast = currentRound + 1 >= totalRounds;
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-40 p-2 sm:p-3"
-           style={{ transform: visible ? 'translateY(0)' : 'translateY(105%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
-        <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border
-          ${feedback.type === 'ok' ? 'bg-[#001B0D] border-[#00FF94]' : feedback.type === 'bad' ? 'bg-[#180000] border-[#FF3B3B]' : 'bg-[#180E00] border-[#FFB800]'}`}
-             style={{ boxShadow: feedback.type === 'ok' ? '0 0 22px rgba(0,255,148,0.12)' : feedback.type === 'bad' ? '0 0 22px rgba(255,59,59,0.12)' : '0 0 22px rgba(255,184,0,0.12)' }}>
-          <div className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase mb-2
-            ${feedback.type === 'ok' ? 'text-[#00FF94]' : feedback.type === 'bad' ? 'text-[#FF3B3B]' : 'text-[#FFB800]'}`}
-               style={{fontFamily:"'Orbitron',monospace"}}>
-            {feedback.type === 'ok' ? '✓ INTERCEPTED' : feedback.type === 'bad' ? '✗ WRONG DRUG' : '⏱ FLOOR HIT'}
-          </div>
-          <div className={`text-[13px] sm:text-[15px] font-bold mb-2 ${feedback.type === 'ok' ? 'text-[#00FF94]' : 'text-[#00FF94]'}`}
-               style={{fontFamily:"'IBM Plex Mono',monospace"}}>
-            {feedback.type === 'ok' ? feedback.q.correctAnswer : `Correct: ${feedback.q.correctAnswer}`}
-          </div>
-          <p className="text-[11px] sm:text-xs text-[#6B8BAA] leading-relaxed">{feedback.q.explanation}</p>
-          {feedback.q.trap && (
-            <div className="mt-2 p-2 bg-[rgba(255,184,0,0.07)] border-l-2 border-[#FFB800] rounded text-[11px] sm:text-xs text-[#FFB800] leading-relaxed"
-                 style={{fontFamily:"'IBM Plex Mono',monospace"}}>
-              <strong>⚡ TRAP:</strong> {feedback.q.trap}
+      {/* Feedback — always mounted, translated off-screen when hidden */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 p-2 sm:p-3 pointer-events-none"
+           style={{ transform: visible ? 'translateY(0)' : 'translateY(110%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275)' }}>
+        {feedback && (
+          <div className={`rounded-xl p-3 sm:p-4 max-w-lg mx-auto border pointer-events-auto
+            ${feedback.type === 'ok' ? 'bg-[#001B0D] border-[#00FF94]' : feedback.type === 'bad' ? 'bg-[#180000] border-[#FF3B3B]' : 'bg-[#180E00] border-[#FFB800]'}`}
+               style={{ boxShadow: feedback.type === 'ok' ? '0 0 22px rgba(0,255,148,0.12)' : feedback.type === 'bad' ? '0 0 22px rgba(255,59,59,0.12)' : '0 0 22px rgba(255,184,0,0.12)' }}>
+            <div className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase mb-2
+              ${feedback.type === 'ok' ? 'text-[#00FF94]' : feedback.type === 'bad' ? 'text-[#FF3B3B]' : 'text-[#FFB800]'}`}
+                 style={{fontFamily:"'Orbitron',monospace"}}>
+              {feedback.type === 'ok' ? '✓ INTERCEPTED' : feedback.type === 'bad' ? '✗ WRONG DRUG' : '⏱ FLOOR HIT'}
             </div>
-          )}
-        </div>
+            <div className={`text-[13px] sm:text-[15px] font-bold mb-2 ${feedback.type === 'ok' ? 'text-[#00FF94]' : 'text-[#00FF94]'}`}
+                 style={{fontFamily:"'IBM Plex Mono',monospace"}}>
+              {feedback.type === 'ok' ? feedback.q.correctAnswer : `Correct: ${feedback.q.correctAnswer}`}
+            </div>
+            <p className="text-[11px] sm:text-xs text-[#6B8BAA] leading-relaxed">{feedback.q.explanation}</p>
+            {feedback.q.trap && (
+              <div className="mt-2 p-2 bg-[rgba(255,184,0,0.07)] border-l-2 border-[#FFB800] rounded text-[11px] sm:text-xs text-[#FFB800] leading-relaxed"
+                   style={{fontFamily:"'IBM Plex Mono',monospace"}}>
+                <strong>⚡ TRAP:</strong> {feedback.q.trap}
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
-      {visible && (
-        <div className="fixed bottom-24 sm:bottom-32 left-0 right-0 z-50 flex justify-center">
-          <button onClick={onNext}
-                  className="px-6 sm:px-8 py-2.5 sm:py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5"
-                  style={{fontFamily:"'Orbitron',monospace", boxShadow: '0 0 24px rgba(34,204,255,0.4)'}}>
-            {isLast ? 'SEE RESULTS →' : 'NEXT →'}
-          </button>
-        </div>
-      )}
+      {/* Next button — always mounted, translated off-screen when hidden */}
+      <div className="fixed bottom-24 sm:bottom-32 left-0 right-0 z-50 flex justify-center pointer-events-none"
+           style={{ transform: visible ? 'translateY(0)' : 'translateY(200%)', transition: 'transform 0.28s cubic-bezier(0.175,0.885,0.32,1.275) 0.05s' }}>
+        <button onClick={onNext}
+                className="px-6 sm:px-8 py-2.5 sm:py-3 rounded bg-[#22CCFF] text-[#03050E] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5 pointer-events-auto"
+                style={{fontFamily:"'Orbitron',monospace", boxShadow: '0 0 24px rgba(34,204,255,0.4)'}}>
+          {isLast ? 'SEE RESULTS →' : 'NEXT →'}
+        </button>
+      </div>
     </>
   );
 }
