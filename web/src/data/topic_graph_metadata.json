@@ -280,5 +280,47 @@
       2022
     ],
     "nelsonChapter": "175. Disorders of the Posterior Pituitary"
+  },
+  "drugs-nephrotic": {
+    "relatedConcepts": [
+      "Nephrotic Syndrome",
+      "Minimal Change Disease",
+      "Membranous Nephropathy",
+      "FSGS",
+      "NSAIDs"
+    ],
+    "examinerTraps": [
+      "NSAIDs are the most common drug cause",
+      "Penicillamine and gold cause membranous (not MCD)",
+      "Stop drug first before considering steroids",
+      "Lithium causes both nephrogenic DI and NS"
+    ],
+    "yearsAppeared": [
+      2017,
+      2019,
+      2021
+    ],
+    "nelsonChapter": "162. Nephrotic Syndrome and Proteinuria"
+  },
+  "renal-biopsy": {
+    "relatedConcepts": [
+      "Nephrotic Syndrome",
+      "Steroid-Resistant Nephrotic Syndrome",
+      "Glomerulonephritis",
+      "Complement C3",
+      "FSGS"
+    ],
+    "examinerTraps": [
+      "NOT indicated in typical first-episode MCD",
+      "Congenital NS always requires biopsy",
+      "Solitary kidney is absolute contraindication",
+      "Send tissue for LM + IF + EM"
+    ],
+    "yearsAppeared": [
+      2016,
+      2018,
+      2020
+    ],
+    "nelsonChapter": "161. Evaluation of the Child with Renal Disease"
   }
 }
