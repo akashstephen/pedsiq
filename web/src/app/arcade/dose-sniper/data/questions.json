@@ -1,27 +1,717 @@
 [
-  {"id":"sn_001","context":"5 yr · 22 kg","label":"APSGN — Strep Eradication","drug":"Benzathine Penicillin G · IM · Single dose","correctAnswer":"600,000 U","wrongAnswers":["1.2 million U","300,000 U"],"explanation":"22 kg < 27 kg → 600,000 U IM. The boundary is exactly 27 kg.","trap":"<27 kg = 600K · ≥27 kg = 1.2M. One of the most tested dose thresholds in KUHS."},
-  {"id":"sn_002","context":"8 yr · 31 kg","label":"APSGN — Strep Eradication","drug":"Benzathine Penicillin G · IM · Single dose","correctAnswer":"1.2 million U","wrongAnswers":["600,000 U","2.4 million U"],"explanation":"31 kg > 27 kg → 1.2 million U IM. Trap: students often remember only one value.","trap":"Same threshold question — heavier child. ≥27 kg = 1.2M."},
-  {"id":"sn_003","context":"4 yr · 16 kg","label":"Nephrotic Syndrome — First episode","drug":"Prednisolone · PO · Phase 1 daily dose","correctAnswer":"2 mg/kg/day","wrongAnswers":["1 mg/kg/day","3 mg/kg/day"],"explanation":"NS first episode phase 1: 2 mg/kg/day (max 60 mg) × 6 weeks.","trap":"1 mg/kg is the phase 2 alternate-day dose. Don't swap the phases."},
-  {"id":"sn_004","context":"13 yr · 42 kg","label":"Nephrotic Syndrome — Apply cap","drug":"Prednisolone · PO · What dose do you give?","correctAnswer":"60 mg/day","wrongAnswers":["84 mg/day","40 mg/day"],"explanation":"2 mg/kg × 42 kg = 84 mg but max cap = 60 mg/day. Always apply the ceiling.","trap":"Max cap = 60 mg/day regardless of weight. 84 mg = -1 mark."},
-  {"id":"sn_005","context":"4 yr · 14 kg","label":"Nephrotic Syndrome — Phase 2 weeks 7–12","drug":"Prednisolone · PO · Alternate days","correctAnswer":"1.5 mg/kg alt days","wrongAnswers":["2 mg/kg alt days","1 mg/kg alt days"],"explanation":"NS phase 2: 1.5 mg/kg on alternate days × 6 weeks. Total course = 12 weeks for responders.","trap":"Phase 2 = 1.5 mg/kg alternate days. Not 1 mg/kg, not 2 mg/kg."},
-  {"id":"sn_006","context":"5 yr · 17 kg","label":"Nephrotic Syndrome — Hypovolaemia","drug":"25% Albumin · IV · Over 1–2 hours","correctAnswer":"0.5–1.0 g/kg","wrongAnswers":["2.0 g/kg","0.1 g/kg"],"explanation":"NS hypovolaemia: 25% albumin 0.5–1.0 g/kg IV over 1–2 hours. Follow with loop diuretic.","trap":"For HYPOVOLAEMIA only — not for routine oedema management."},
-  {"id":"sn_007","context":"6 yr · 20 kg","label":"AGN — Fluid Overload","drug":"Furosemide · IV","correctAnswer":"1–2 mg/kg","wrongAnswers":["0.25 mg/kg","5 mg/kg"],"explanation":"Furosemide 1–2 mg/kg IV for fluid overload in AGN. NOT for hypertension.","trap":"Furosemide = fluid overload. Nifedipine = HTN. These are not interchangeable."},
-  {"id":"sn_008","context":"9 mo · 9 kg","label":"Rickets — Hypocalcaemic Seizure","drug":"10% Calcium Gluconate · IV · Over 10 min","correctAnswer":"1–2 mL/kg","wrongAnswers":["5 mL/kg","0.5 mL/kg"],"explanation":"Hypocalcaemic seizures: Ca gluconate 10% at 1–2 mL/kg slowly over 10 min with ECG monitoring.","trap":"SLOW infusion with cardiac monitoring. Rapid bolus → bradycardia / cardiac arrest."},
-  {"id":"sn_009","context":"6 wk · 4.5 kg","label":"Congenital Hypothyroidism","drug":"Levothyroxine · PO · Daily","correctAnswer":"10–15 mcg/kg/day","wrongAnswers":["5 mcg/kg/day","25 mcg/kg/day"],"explanation":"L-thyroxine 10–15 mcg/kg/day PO. Start within 2 weeks of life for normal neurodevelopment.","trap":"Start WITHIN 2 WEEKS of life. Delay = irreversible intellectual disability."},
-  {"id":"sn_010","context":"2 d · 2.8 kg","label":"Neonatal Hypoglycaemia — Symptomatic","drug":"Dextrose 10% · IV Bolus","correctAnswer":"2 mL/kg","wrongAnswers":["5 mL/kg","10 mL/kg"],"explanation":"Symptomatic neonatal hypoglycaemia or glucose <25 mg/dL: D10 2 mL/kg IV bolus.","trap":"Feed FIRST if asymptomatic. IV D10 only if symptomatic or glucose <25 mg/dL."},
-  {"id":"sn_011","context":"18 mo · 10 kg","label":"Nutritional Rickets — Treatment","drug":"Vitamin D3 · PO · Daily × 6–12 weeks","correctAnswer":"2000–4000 IU/day","wrongAnswers":["400 IU/day","10,000 IU/day"],"explanation":"Treatment dose: Vit D3 2000–4000 IU/day for 6–12 weeks. 400 IU/day = prevention only.","trap":"Treatment ≠ prevention. 400 IU = prevention. 2000–4000 = treatment. Don't confuse."},
-  {"id":"sn_012","context":"3 yr · 14 kg","label":"Nutritional Rickets — Stoss","drug":"Vitamin D3 · PO · Single-dose Stoss","correctAnswer":"150,000–300,000 IU","wrongAnswers":["50,000 IU","600,000 IU"],"explanation":"Stoss therapy: 150,000–300,000 IU oral single dose. Repeat at 3 months if needed.","trap":"Stoss = 150K–300K IU. 50K is insufficient. 600K is excessive."},
-  {"id":"sn_013","context":"2 yr · 12 kg","label":"Rickets — alongside Vit D","drug":"Elemental Calcium · PO · Daily","correctAnswer":"50–100 mg/kg/day","wrongAnswers":["10–20 mg/kg/day","500 mg flat"],"explanation":"Elemental calcium 50–100 mg/kg/day must accompany Vit D. Never omit this.","trap":"Vitamin D alone is NOT sufficient. Elemental calcium is mandatory alongside it."},
-  {"id":"sn_014","context":"8 yr · 28 kg","label":"DKA — After 1h fluids · start insulin","drug":"Regular Insulin · IV · Infusion only","correctAnswer":"0.05–0.1 U/kg/hr","wrongAnswers":["0.3–0.5 U/kg/hr","1 U/kg bolus"],"explanation":"DKA insulin: 0.05–0.1 U/kg/hr IV continuous infusion. NEVER bolus. Always start after fluids.","trap":"NEVER bolus insulin in paediatric DKA. Continuous infusion only, started after 1–2 h fluids."},
-  {"id":"sn_015","context":"10 yr · 32 kg","label":"DKA — K⁺ = 3.0 mEq/L","drug":"Insulin · start or hold?","correctAnswer":"HOLD — correct K⁺ first","wrongAnswers":["Start 0.1 U/kg/hr","Give bicarb first"],"explanation":"K⁺ < 3.3 mEq/L: HOLD insulin. Correct potassium first. Insulin + hypokalaemia = fatal arrhythmia.","trap":"K⁺ <3.3 → Hold insulin. The single most dangerous DKA management error."},
-  {"id":"sn_016","context":"7 yr · 24 kg","label":"DKA — Initial Resuscitation","drug":"0.9% Normal Saline · IV · First bolus","correctAnswer":"10–20 mL/kg / 1–2 h","wrongAnswers":["30 mL/kg / 30 min","5 mL/kg / 15 min"],"explanation":"DKA initial fluid: 0.9% NS 10–20 mL/kg over 1–2 h. Replace total deficit over 48 h, not 24 h.","trap":"Replace DKA deficit over 48 h NOT 24 h. Rapid replacement → cerebral oedema."},
-  {"id":"sn_017","context":"9 yr · 30 kg","label":"DKA — Cerebral Oedema","drug":"Mannitol · IV · Emergency","correctAnswer":"0.5–1 g/kg","wrongAnswers":["0.1 g/kg","4 g/kg"],"explanation":"Cerebral oedema in DKA: Mannitol 0.5–1 g/kg IV or 3% NaCl 5–10 mL/kg. Reduce fluids + elevate head.","trap":"Both mannitol AND 3% saline are valid options. Must also reduce fluid rate."},
-  {"id":"sn_018","context":"2 yr · 12 kg","label":"Diarrhoea — Some Dehydration · Plan B","drug":"ORS · PO · In clinic","correctAnswer":"75 mL/kg / 4 h","wrongAnswers":["30 mL/kg / 1 h","100 mL/kg / 4 h"],"explanation":"Plan B (some dehydration, 3–9%): ORS 75 mL/kg over 4 hours in clinic.","trap":"Plan B = 75 mL/kg ORS. Plan C = IV RL bolus. These two are classic exam swap traps."},
-  {"id":"sn_019","context":"9 mo · 8 kg","label":"Severe Dehydration — Plan C · Infant","drug":"Ringer's Lactate · IV · Phase 1","correctAnswer":"30 mL/kg / 1 h","wrongAnswers":["30 mL/kg / 30 min","70 mL/kg / 5 h"],"explanation":"Infant <12 months: RL 30 mL/kg over 1 HOUR. (Child 1–5 yr: same volume over 30 min.)","trap":"Age matters: <12 mo = 1 hour. 1–5 yr = 30 min. Most common Plan C error."},
-  {"id":"sn_020","context":"2 yr · 12 kg","label":"Severe Dehydration — Plan C · Child","drug":"Ringer's Lactate · IV · Phase 1","correctAnswer":"30 mL/kg / 30 min","wrongAnswers":["30 mL/kg / 1 h","70 mL/kg / 5 h"],"explanation":"Child 1–5 years: RL 30 mL/kg over 30 MIN. Then 70 mL/kg over next 5 hours.","trap":"Age matters: 1–5 yr = 30 min. <12 mo = 1 hour. Opposite of infant — common trap."},
-  {"id":"sn_021","context":"4 mo · 5.5 kg","label":"Acute Diarrhoea — Zinc","drug":"Zinc · PO · 10–14 days (<6 months)","correctAnswer":"10 mg/day","wrongAnswers":["20 mg/day","5 mg/day"],"explanation":"<6 months: Zinc 10 mg/day × 10–14 days. ≥6 months: 20 mg/day.","trap":"Age cutoff at 6 months. <6 mo = 10 mg. ≥6 mo = 20 mg. Frequently tested in MCQ."},
-  {"id":"sn_022","context":"10 mo · 9 kg","label":"Acute Diarrhoea — Zinc","drug":"Zinc · PO · 10–14 days (≥6 months)","correctAnswer":"20 mg/day","wrongAnswers":["10 mg/day","40 mg/day"],"explanation":"≥6 months: Zinc 20 mg/day × 10–14 days. Reduces duration and severity.","trap":"≥6 mo = 20 mg. <6 mo = 10 mg. Opposite side of the same MCQ trap."},
-  {"id":"sn_023","context":"7 yr · 22 kg","label":"APSGN — Acute HTN","drug":"Antihypertensive · First-line","correctAnswer":"Nifedipine (CCB)","wrongAnswers":["Enalapril (ACE-i)","Furosemide"],"explanation":"First-line acute HTN in AGN: Nifedipine (CCB). ACE-i contraindicated — worsen hyperkalaemia + AKI.","trap":"ACEi in acute AGN = instant marks off. Answer = Nifedipine. Furosemide = fluid overload only."},
-  {"id":"sn_024","context":"3 yr · 14 kg","label":"HUS — STEC E. coli confirmed","drug":"Antibiotics — decision","correctAnswer":"WITHHOLD — contraindicated","wrongAnswers":["Ceftriaxone 50 mg/kg","Azithromycin PO"],"explanation":"Antibiotics CONTRAINDICATED in STEC-HUS — increase Shiga toxin release, worsening the syndrome.","trap":"No antibiotics in STEC-HUS. Exception: pneumococcal HUS (antibiotics ARE indicated)."},
-  {"id":"sn_025","context":"10 yr · 35 kg","label":"Portal HTN — Variceal Bleed","drug":"Blood Transfusion — target Hb","correctAnswer":"Hb 7–8 g/dL","wrongAnswers":["Hb 10–12 g/dL","Hb 5–6 g/dL"],"explanation":"Target Hb 7–8 g/dL only. Over-transfusion raises portal pressure and dramatically increases rebleeding.","trap":"Over-transfusion INCREASES portal pressure. Target 7–8, NOT 10–12."}
+  {
+    "id": "sn_001",
+    "context": "5 yr \u00b7 22 kg",
+    "label": "APSGN \u2014 Strep Eradication",
+    "drug": "Benzathine Penicillin G \u00b7 IM \u00b7 Single dose",
+    "correctAnswer": "600,000 U",
+    "wrongAnswers": [
+      "1.2 million U",
+      "300,000 U"
+    ],
+    "explanation": "22 kg < 27 kg \u2192 600,000 U IM. The boundary is exactly 27 kg.",
+    "trap": "<27 kg = 600K \u00b7 \u226527 kg = 1.2M. One of the most tested dose thresholds in KUHS."
+  },
+  {
+    "id": "sn_002",
+    "context": "8 yr \u00b7 31 kg",
+    "label": "APSGN \u2014 Strep Eradication",
+    "drug": "Benzathine Penicillin G \u00b7 IM \u00b7 Single dose",
+    "correctAnswer": "1.2 million U",
+    "wrongAnswers": [
+      "600,000 U",
+      "2.4 million U"
+    ],
+    "explanation": "31 kg > 27 kg \u2192 1.2 million U IM. Trap: students often remember only one value.",
+    "trap": "Same threshold question \u2014 heavier child. \u226527 kg = 1.2M."
+  },
+  {
+    "id": "sn_003",
+    "context": "4 yr \u00b7 16 kg",
+    "label": "Nephrotic Syndrome \u2014 First episode",
+    "drug": "Prednisolone \u00b7 PO \u00b7 Phase 1 daily dose",
+    "correctAnswer": "2 mg/kg/day",
+    "wrongAnswers": [
+      "1 mg/kg/day",
+      "3 mg/kg/day"
+    ],
+    "explanation": "NS first episode phase 1: 2 mg/kg/day (max 60 mg) \u00d7 6 weeks.",
+    "trap": "1 mg/kg is the phase 2 alternate-day dose. Don't swap the phases."
+  },
+  {
+    "id": "sn_004",
+    "context": "13 yr \u00b7 42 kg",
+    "label": "Nephrotic Syndrome \u2014 Apply cap",
+    "drug": "Prednisolone \u00b7 PO \u00b7 What dose do you give?",
+    "correctAnswer": "60 mg/day",
+    "wrongAnswers": [
+      "84 mg/day",
+      "40 mg/day"
+    ],
+    "explanation": "2 mg/kg \u00d7 42 kg = 84 mg but max cap = 60 mg/day. Always apply the ceiling.",
+    "trap": "Max cap = 60 mg/day regardless of weight. 84 mg = -1 mark."
+  },
+  {
+    "id": "sn_005",
+    "context": "4 yr \u00b7 14 kg",
+    "label": "Nephrotic Syndrome \u2014 Phase 2 weeks 7\u201312",
+    "drug": "Prednisolone \u00b7 PO \u00b7 Alternate days",
+    "correctAnswer": "1.5 mg/kg alt days",
+    "wrongAnswers": [
+      "2 mg/kg alt days",
+      "1 mg/kg alt days"
+    ],
+    "explanation": "NS phase 2: 1.5 mg/kg on alternate days \u00d7 6 weeks. Total course = 12 weeks for responders.",
+    "trap": "Phase 2 = 1.5 mg/kg alternate days. Not 1 mg/kg, not 2 mg/kg."
+  },
+  {
+    "id": "sn_006",
+    "context": "5 yr \u00b7 17 kg",
+    "label": "Nephrotic Syndrome \u2014 Hypovolaemia",
+    "drug": "25% Albumin \u00b7 IV \u00b7 Over 1\u20132 hours",
+    "correctAnswer": "0.5\u20131.0 g/kg",
+    "wrongAnswers": [
+      "2.0 g/kg",
+      "0.1 g/kg"
+    ],
+    "explanation": "NS hypovolaemia: 25% albumin 0.5\u20131.0 g/kg IV over 1\u20132 hours. Follow with loop diuretic.",
+    "trap": "For HYPOVOLAEMIA only \u2014 not for routine oedema management."
+  },
+  {
+    "id": "sn_007",
+    "context": "6 yr \u00b7 20 kg",
+    "label": "AGN \u2014 Fluid Overload",
+    "drug": "Furosemide \u00b7 IV",
+    "correctAnswer": "1\u20132 mg/kg",
+    "wrongAnswers": [
+      "0.25 mg/kg",
+      "5 mg/kg"
+    ],
+    "explanation": "Furosemide 1\u20132 mg/kg IV for fluid overload in AGN. NOT for hypertension.",
+    "trap": "Furosemide = fluid overload. Nifedipine = HTN. These are not interchangeable."
+  },
+  {
+    "id": "sn_008",
+    "context": "9 mo \u00b7 9 kg",
+    "label": "Rickets \u2014 Hypocalcaemic Seizure",
+    "drug": "10% Calcium Gluconate \u00b7 IV \u00b7 Over 10 min",
+    "correctAnswer": "1\u20132 mL/kg",
+    "wrongAnswers": [
+      "5 mL/kg",
+      "0.5 mL/kg"
+    ],
+    "explanation": "Hypocalcaemic seizures: Ca gluconate 10% at 1\u20132 mL/kg slowly over 10 min with ECG monitoring.",
+    "trap": "SLOW infusion with cardiac monitoring. Rapid bolus \u2192 bradycardia / cardiac arrest."
+  },
+  {
+    "id": "sn_009",
+    "context": "6 wk \u00b7 4.5 kg",
+    "label": "Congenital Hypothyroidism",
+    "drug": "Levothyroxine \u00b7 PO \u00b7 Daily",
+    "correctAnswer": "10\u201315 mcg/kg/day",
+    "wrongAnswers": [
+      "5 mcg/kg/day",
+      "25 mcg/kg/day"
+    ],
+    "explanation": "L-thyroxine 10\u201315 mcg/kg/day PO. Start within 2 weeks of life for normal neurodevelopment.",
+    "trap": "Start WITHIN 2 WEEKS of life. Delay = irreversible intellectual disability."
+  },
+  {
+    "id": "sn_010",
+    "context": "2 d \u00b7 2.8 kg",
+    "label": "Neonatal Hypoglycaemia \u2014 Symptomatic",
+    "drug": "Dextrose 10% \u00b7 IV Bolus",
+    "correctAnswer": "2 mL/kg",
+    "wrongAnswers": [
+      "5 mL/kg",
+      "10 mL/kg"
+    ],
+    "explanation": "Symptomatic neonatal hypoglycaemia or glucose <25 mg/dL: D10 2 mL/kg IV bolus.",
+    "trap": "Feed FIRST if asymptomatic. IV D10 only if symptomatic or glucose <25 mg/dL."
+  },
+  {
+    "id": "sn_011",
+    "context": "18 mo \u00b7 10 kg",
+    "label": "Nutritional Rickets \u2014 Treatment",
+    "drug": "Vitamin D3 \u00b7 PO \u00b7 Daily \u00d7 6\u201312 weeks",
+    "correctAnswer": "2000\u20134000 IU/day",
+    "wrongAnswers": [
+      "400 IU/day",
+      "10,000 IU/day"
+    ],
+    "explanation": "Treatment dose: Vit D3 2000\u20134000 IU/day for 6\u201312 weeks. 400 IU/day = prevention only.",
+    "trap": "Treatment \u2260 prevention. 400 IU = prevention. 2000\u20134000 = treatment. Don't confuse."
+  },
+  {
+    "id": "sn_012",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "Nutritional Rickets \u2014 Stoss",
+    "drug": "Vitamin D3 \u00b7 PO \u00b7 Single-dose Stoss",
+    "correctAnswer": "150,000\u2013300,000 IU",
+    "wrongAnswers": [
+      "50,000 IU",
+      "600,000 IU"
+    ],
+    "explanation": "Stoss therapy: 150,000\u2013300,000 IU oral single dose. Repeat at 3 months if needed.",
+    "trap": "Stoss = 150K\u2013300K IU. 50K is insufficient. 600K is excessive."
+  },
+  {
+    "id": "sn_013",
+    "context": "2 yr \u00b7 12 kg",
+    "label": "Rickets \u2014 alongside Vit D",
+    "drug": "Elemental Calcium \u00b7 PO \u00b7 Daily",
+    "correctAnswer": "50\u2013100 mg/kg/day",
+    "wrongAnswers": [
+      "10\u201320 mg/kg/day",
+      "500 mg flat"
+    ],
+    "explanation": "Elemental calcium 50\u2013100 mg/kg/day must accompany Vit D. Never omit this.",
+    "trap": "Vitamin D alone is NOT sufficient. Elemental calcium is mandatory alongside it."
+  },
+  {
+    "id": "sn_014",
+    "context": "8 yr \u00b7 28 kg",
+    "label": "DKA \u2014 After 1h fluids \u00b7 start insulin",
+    "drug": "Regular Insulin \u00b7 IV \u00b7 Infusion only",
+    "correctAnswer": "0.05\u20130.1 U/kg/hr",
+    "wrongAnswers": [
+      "0.3\u20130.5 U/kg/hr",
+      "1 U/kg bolus"
+    ],
+    "explanation": "DKA insulin: 0.05\u20130.1 U/kg/hr IV continuous infusion. NEVER bolus. Always start after fluids.",
+    "trap": "NEVER bolus insulin in paediatric DKA. Continuous infusion only, started after 1\u20132 h fluids."
+  },
+  {
+    "id": "sn_015",
+    "context": "10 yr \u00b7 32 kg",
+    "label": "DKA \u2014 K\u207a = 3.0 mEq/L",
+    "drug": "Insulin \u00b7 start or hold?",
+    "correctAnswer": "HOLD \u2014 correct K\u207a first",
+    "wrongAnswers": [
+      "Start 0.1 U/kg/hr",
+      "Give bicarb first"
+    ],
+    "explanation": "K\u207a < 3.3 mEq/L: HOLD insulin. Correct potassium first. Insulin + hypokalaemia = fatal arrhythmia.",
+    "trap": "K\u207a <3.3 \u2192 Hold insulin. The single most dangerous DKA management error."
+  },
+  {
+    "id": "sn_016",
+    "context": "7 yr \u00b7 24 kg",
+    "label": "DKA \u2014 Initial Resuscitation",
+    "drug": "0.9% Normal Saline \u00b7 IV \u00b7 First bolus",
+    "correctAnswer": "10\u201320 mL/kg / 1\u20132 h",
+    "wrongAnswers": [
+      "30 mL/kg / 30 min",
+      "5 mL/kg / 15 min"
+    ],
+    "explanation": "DKA initial fluid: 0.9% NS 10\u201320 mL/kg over 1\u20132 h. Replace total deficit over 48 h, not 24 h.",
+    "trap": "Replace DKA deficit over 48 h NOT 24 h. Rapid replacement \u2192 cerebral oedema."
+  },
+  {
+    "id": "sn_017",
+    "context": "9 yr \u00b7 30 kg",
+    "label": "DKA \u2014 Cerebral Oedema",
+    "drug": "Mannitol \u00b7 IV \u00b7 Emergency",
+    "correctAnswer": "0.5\u20131 g/kg",
+    "wrongAnswers": [
+      "0.1 g/kg",
+      "4 g/kg"
+    ],
+    "explanation": "Cerebral oedema in DKA: Mannitol 0.5\u20131 g/kg IV or 3% NaCl 5\u201310 mL/kg. Reduce fluids + elevate head.",
+    "trap": "Both mannitol AND 3% saline are valid options. Must also reduce fluid rate."
+  },
+  {
+    "id": "sn_018",
+    "context": "2 yr \u00b7 12 kg",
+    "label": "Diarrhoea \u2014 Some Dehydration \u00b7 Plan B",
+    "drug": "ORS \u00b7 PO \u00b7 In clinic",
+    "correctAnswer": "75 mL/kg / 4 h",
+    "wrongAnswers": [
+      "30 mL/kg / 1 h",
+      "100 mL/kg / 4 h"
+    ],
+    "explanation": "Plan B (some dehydration, 3\u20139%): ORS 75 mL/kg over 4 hours in clinic.",
+    "trap": "Plan B = 75 mL/kg ORS. Plan C = IV RL bolus. These two are classic exam swap traps."
+  },
+  {
+    "id": "sn_019",
+    "context": "9 mo \u00b7 8 kg",
+    "label": "Severe Dehydration \u2014 Plan C \u00b7 Infant",
+    "drug": "Ringer's Lactate \u00b7 IV \u00b7 Phase 1",
+    "correctAnswer": "30 mL/kg / 1 h",
+    "wrongAnswers": [
+      "30 mL/kg / 30 min",
+      "70 mL/kg / 5 h"
+    ],
+    "explanation": "Infant <12 months: RL 30 mL/kg over 1 HOUR. (Child 1\u20135 yr: same volume over 30 min.)",
+    "trap": "Age matters: <12 mo = 1 hour. 1\u20135 yr = 30 min. Most common Plan C error."
+  },
+  {
+    "id": "sn_020",
+    "context": "2 yr \u00b7 12 kg",
+    "label": "Severe Dehydration \u2014 Plan C \u00b7 Child",
+    "drug": "Ringer's Lactate \u00b7 IV \u00b7 Phase 1",
+    "correctAnswer": "30 mL/kg / 30 min",
+    "wrongAnswers": [
+      "30 mL/kg / 1 h",
+      "70 mL/kg / 5 h"
+    ],
+    "explanation": "Child 1\u20135 years: RL 30 mL/kg over 30 MIN. Then 70 mL/kg over next 5 hours.",
+    "trap": "Age matters: 1\u20135 yr = 30 min. <12 mo = 1 hour. Opposite of infant \u2014 common trap."
+  },
+  {
+    "id": "sn_021",
+    "context": "4 mo \u00b7 5.5 kg",
+    "label": "Acute Diarrhoea \u2014 Zinc",
+    "drug": "Zinc \u00b7 PO \u00b7 10\u201314 days (<6 months)",
+    "correctAnswer": "10 mg/day",
+    "wrongAnswers": [
+      "20 mg/day",
+      "5 mg/day"
+    ],
+    "explanation": "<6 months: Zinc 10 mg/day \u00d7 10\u201314 days. \u22656 months: 20 mg/day.",
+    "trap": "Age cutoff at 6 months. <6 mo = 10 mg. \u22656 mo = 20 mg. Frequently tested in MCQ."
+  },
+  {
+    "id": "sn_022",
+    "context": "10 mo \u00b7 9 kg",
+    "label": "Acute Diarrhoea \u2014 Zinc",
+    "drug": "Zinc \u00b7 PO \u00b7 10\u201314 days (\u22656 months)",
+    "correctAnswer": "20 mg/day",
+    "wrongAnswers": [
+      "10 mg/day",
+      "40 mg/day"
+    ],
+    "explanation": "\u22656 months: Zinc 20 mg/day \u00d7 10\u201314 days. Reduces duration and severity.",
+    "trap": "\u22656 mo = 20 mg. <6 mo = 10 mg. Opposite side of the same MCQ trap."
+  },
+  {
+    "id": "sn_023",
+    "context": "7 yr \u00b7 22 kg",
+    "label": "APSGN \u2014 Acute HTN",
+    "drug": "Antihypertensive \u00b7 First-line",
+    "correctAnswer": "Nifedipine (CCB)",
+    "wrongAnswers": [
+      "Enalapril (ACE-i)",
+      "Furosemide"
+    ],
+    "explanation": "First-line acute HTN in AGN: Nifedipine (CCB). ACE-i contraindicated \u2014 worsen hyperkalaemia + AKI.",
+    "trap": "ACEi in acute AGN = instant marks off. Answer = Nifedipine. Furosemide = fluid overload only."
+  },
+  {
+    "id": "sn_024",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "HUS \u2014 STEC E. coli confirmed",
+    "drug": "Antibiotics \u2014 decision",
+    "correctAnswer": "WITHHOLD \u2014 contraindicated",
+    "wrongAnswers": [
+      "Ceftriaxone 50 mg/kg",
+      "Azithromycin PO"
+    ],
+    "explanation": "Antibiotics CONTRAINDICATED in STEC-HUS \u2014 increase Shiga toxin release, worsening the syndrome.",
+    "trap": "No antibiotics in STEC-HUS. Exception: pneumococcal HUS (antibiotics ARE indicated)."
+  },
+  {
+    "id": "sn_025",
+    "context": "10 yr \u00b7 35 kg",
+    "label": "Portal HTN \u2014 Variceal Bleed",
+    "drug": "Blood Transfusion \u2014 target Hb",
+    "correctAnswer": "Hb 7\u20138 g/dL",
+    "wrongAnswers": [
+      "Hb 10\u201312 g/dL",
+      "Hb 5\u20136 g/dL"
+    ],
+    "explanation": "Target Hb 7\u20138 g/dL only. Over-transfusion raises portal pressure and dramatically increases rebleeding.",
+    "trap": "Over-transfusion INCREASES portal pressure. Target 7\u20138, NOT 10\u201312."
+  },
+  {
+    "id": "sn_026",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "UTI \u2014 Cystitis duration",
+    "drug": "Oral antibiotic duration",
+    "correctAnswer": "3\u20135 days",
+    "wrongAnswers": [
+      "1\u20132 days",
+      "10\u201314 days"
+    ],
+    "explanation": "Uncomplicated cystitis: 3\u20135 days. Pyelonephritis: 10\u201314 days. Too short = recurrence; too long = resistance.",
+    "trap": "Cystitis = 3\u20135 days. Pyelonephritis = 10\u201314 days. Duration trap is commonly tested."
+  },
+  {
+    "id": "sn_027",
+    "context": "6 mo \u00b7 7 kg",
+    "label": "Pyelonephritis \u2014 Infant <2mo",
+    "drug": "First-line IV antibiotics",
+    "correctAnswer": "Ampicillin + Gentamicin",
+    "wrongAnswers": [
+      "Ceftriaxone",
+      "Oral Cotrimoxazole"
+    ],
+    "explanation": "Infants <2 months: Ampicillin + Gentamicin or Ampicillin + Cefotaxime. Ceftriaxone avoided due to bilirubin displacement.",
+    "trap": "Ceftriaxone CONTRAINDICATED in neonates. Use Ampicillin + Gentamicin."
+  },
+  {
+    "id": "sn_028",
+    "context": "4 yr \u00b7 16 kg",
+    "label": "VUR \u2014 Prophylaxis",
+    "drug": "Cephalexin \u00b7 PO \u00b7 Nightly",
+    "correctAnswer": "10\u201315 mg/kg",
+    "wrongAnswers": [
+      "5 mg/kg",
+      "25 mg/kg"
+    ],
+    "explanation": "VUR prophylaxis: Cephalexin 10\u201315 mg/kg at night. Safe in infants. Alternative: Cotrimoxazole 2 mg/kg TMP.",
+    "trap": "Cephalexin 10\u201315 mg/kg at night. Cotrimoxazole contraindicated <2 months."
+  },
+  {
+    "id": "sn_029",
+    "context": "3 wk \u00b7 4.2 kg",
+    "label": "CAH \u2014 Adrenal crisis",
+    "drug": "Hydrocortisone stress dose IV",
+    "correctAnswer": "50\u2013100 mg/m\u00b2/day",
+    "wrongAnswers": [
+      "10\u201315 mg/m\u00b2/day",
+      "200 mg/m\u00b2/day"
+    ],
+    "explanation": "CAH crisis: Hydrocortisone 50\u2013100 mg/m\u00b2/day IV Q6H for 24\u201348h. Maintenance = 10\u201315 mg/m\u00b2/day PO.",
+    "trap": "Stress dose is 5\u201310\u00d7 higher than maintenance. Do NOT confuse them."
+  },
+  {
+    "id": "sn_030",
+    "context": "10 yr \u00b7 32 kg",
+    "label": "Wilson Disease \u2014 Chelation",
+    "drug": "D-Penicillamine \u00b7 PO",
+    "correctAnswer": "20 mg/kg/day",
+    "wrongAnswers": [
+      "10 mg/kg/day",
+      "50 mg/kg/day"
+    ],
+    "explanation": "D-Penicillamine 20 mg/kg/day (max 1\u20132 g/day). MUST give pyridoxine 25\u201350 mg/day alongside.",
+    "trap": "Always give PYRIDOXINE with penicillamine \u2014 anti-pyridoxine effect causes neuropathy."
+  },
+  {
+    "id": "sn_031",
+    "context": "8 yr \u00b7 26 kg",
+    "label": "Paracetamol Poisoning \u2014 NAC",
+    "drug": "NAC IV total dose \u00b7 21h",
+    "correctAnswer": "300 mg/kg",
+    "wrongAnswers": [
+      "150 mg/kg",
+      "500 mg/kg"
+    ],
+    "explanation": "NAC IV: 150 mg/kg (1h) + 50 mg/kg (4h) + 100 mg/kg (16h) = 300 mg/kg total.",
+    "trap": "IV total = 300 mg/kg. Oral total = 1330 mg/kg. Different regimens."
+  },
+  {
+    "id": "sn_032",
+    "context": "18 mo \u00b7 8 kg",
+    "label": "SAM \u2014 Phase 1 stabilization",
+    "drug": "F-75 milk \u00b7 PO \u00b7 q2h",
+    "correctAnswer": "130 mL/kg/day",
+    "wrongAnswers": [
+      "75 mL/kg/day",
+      "200 mL/kg/day"
+    ],
+    "explanation": "SAM Phase 1: F-75 at 130 mL/kg/day divided q2h. Phase 2: F-100 at 150\u2013220 kcal/kg/day.",
+    "trap": "Phase 1 = F-75 low calorie. Phase 2 = F-100 high calorie. High calorie in Phase 1 risks refeeding syndrome."
+  },
+  {
+    "id": "sn_033",
+    "context": "6 yr \u00b7 20 kg",
+    "label": "SRNS \u2014 Tacrolimus trough",
+    "drug": "Tacrolimus \u00b7 PO \u00b7 Target",
+    "correctAnswer": "5\u201310 ng/mL",
+    "wrongAnswers": [
+      "1\u20133 ng/mL",
+      "15\u201320 ng/mL"
+    ],
+    "explanation": "Tacrolimus trough 5\u201310 ng/mL in maintenance. Higher (10\u201315) in first 3 months post-transplant.",
+    "trap": "Nephrotoxicity increases at high troughs. Monitor renal function and blood levels."
+  },
+  {
+    "id": "sn_034",
+    "context": "8 yr \u00b7 25 kg",
+    "label": "Hepatic Encephalopathy \u2014 Lactulose",
+    "drug": "Lactulose \u00b7 PO \u00b7 2\u20133\u00d7 daily",
+    "correctAnswer": "0.5\u20131 mL/kg/dose",
+    "wrongAnswers": [
+      "0.1 mL/kg/dose",
+      "2\u20133 mL/kg/dose"
+    ],
+    "explanation": "Lactulose 0.5\u20131 mL/kg/dose 2\u20133\u00d7 daily. Titrate to 2\u20133 soft stools/day.",
+    "trap": "Too little = no ammonia reduction. Too much = dehydration. Titrate to 2\u20133 soft stools."
+  },
+  {
+    "id": "sn_035",
+    "context": "5 yr \u00b7 18 kg",
+    "label": "Hyponatremia \u2014 Severe",
+    "drug": "Max safe correction rate",
+    "correctAnswer": "8\u201310 mEq/L/24h",
+    "wrongAnswers": [
+      "15\u201320 mEq/L/24h",
+      "No limit"
+    ],
+    "explanation": "Chronic hyponatremia: max 8\u201310 mEq/L in 24h. Faster = osmotic demyelination syndrome.",
+    "trap": "Rapid correction >12 mEq/L/24h causes locked-in syndrome. Max = 8\u201310."
+  },
+  {
+    "id": "sn_036",
+    "context": "4 yr \u00b7 15 kg",
+    "label": "Constipation \u2014 Disimpaction",
+    "drug": "PEG 3350 \u00b7 PO \u00b7 3\u20136 days",
+    "correctAnswer": "1\u20131.5 g/kg/day",
+    "wrongAnswers": [
+      "0.4\u20130.8 g/kg/day",
+      "3 g/kg/day"
+    ],
+    "explanation": "Disimpaction: PEG 3350 1\u20131.5 g/kg/day for 3\u20136 days. Maintenance: 0.4\u20130.8 g/kg/day.",
+    "trap": "Maintenance dose is NOT for disimpaction. Must disimpact first or therapy fails."
+  },
+  {
+    "id": "sn_037",
+    "context": "6 yr \u00b7 22 kg",
+    "label": "PKU \u2014 Target Phe",
+    "drug": "Blood phenylalanine target",
+    "correctAnswer": "2\u20136 mg/dL",
+    "wrongAnswers": [
+      "<2 mg/dL",
+      ">10 mg/dL"
+    ],
+    "explanation": "PKU target: 2\u20136 mg/dL in children. Adults: <10 mg/dL. Classic PKU >20 mg/dL at diagnosis.",
+    "trap": "Target is 2\u20136 mg/dL in children. <2 is too restrictive; >10 is neurotoxic."
+  },
+  {
+    "id": "sn_038",
+    "context": "Newborn \u00b7 3.2 kg",
+    "label": "HBV Neonatal Prophylaxis",
+    "drug": "HBIG dose \u00b7 IM",
+    "correctAnswer": "0.5 mL",
+    "wrongAnswers": [
+      "0.25 mL",
+      "1.0 mL"
+    ],
+    "explanation": "HBIG 0.5 mL IM within 12h + Hep B vaccine at different site. Preterm <2 kg needs 4 vaccine doses.",
+    "trap": "HBIG = 0.5 mL. Must be at DIFFERENT site from vaccine. <12 hours, not 24."
+  },
+  {
+    "id": "sn_039",
+    "context": "7 yr \u00b7 24 kg",
+    "label": "Central DI \u2014 DDAVP",
+    "drug": "Desmopressin \u00b7 Intranasal",
+    "correctAnswer": "5\u201320 mcg BID",
+    "wrongAnswers": [
+      "1\u20132 mcg daily",
+      "50\u2013100 mcg BID"
+    ],
+    "explanation": "Central DI: Desmopressin intranasal 5\u201320 mcg BID. Monitor for hyponatremia.",
+    "trap": "DDAVP only works in central DI. Nephrogenic DI needs thiazides + low-solute diet."
+  },
+  {
+    "id": "sn_040",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "AKI \u2014 Fluid overload",
+    "drug": "Furosemide \u00b7 IV",
+    "correctAnswer": "1\u20132 mg/kg",
+    "wrongAnswers": [
+      "0.1\u20130.5 mg/kg",
+      "5\u201310 mg/kg"
+    ],
+    "explanation": "AKI fluid overload: Furosemide 1\u20132 mg/kg IV. Dialysis indications = AEIOU.",
+    "trap": "Do NOT use NSAIDs in AKI \u2014 they worsen renal perfusion."
+  },
+  {
+    "id": "sn_041",
+    "context": "Newborn \u00b7 3.0 kg",
+    "label": "CDH \u2014 Gentle ventilation",
+    "drug": "Tidal volume",
+    "correctAnswer": "4\u20136 mL/kg",
+    "wrongAnswers": [
+      "2\u20133 mL/kg",
+      "8\u201310 mL/kg"
+    ],
+    "explanation": "CDH: TV 4\u20136 mL/kg, PIP <25, permissive hypercapnia. No bag-mask \u2014 intubate immediately.",
+    "trap": "High pressure ventilation worsens pulmonary hypertension in CDH. Gentle ventilation is critical."
+  },
+  {
+    "id": "sn_042",
+    "context": "12 yr \u00b7 40 kg",
+    "label": "HRS Type 1",
+    "drug": "Terlipressin \u00b7 IV q4\u20136h",
+    "correctAnswer": "0.01\u20130.04 mg/kg",
+    "wrongAnswers": [
+      "0.001 mg/kg",
+      "0.1\u20130.2 mg/kg"
+    ],
+    "explanation": "Type 1 HRS: Terlipressin 0.01\u20130.04 mg/kg IV q4\u20136h + Albumin. First-line medical therapy.",
+    "trap": "Monitor for ischemia: chest/abdominal pain, arrhythmias, digital gangrene."
+  },
+  {
+    "id": "sn_043",
+    "context": "8 yr \u00b7 26 kg",
+    "label": "Renal Transplant \u2014 Tacrolimus",
+    "drug": "Target trough \u00b7 Maintenance",
+    "correctAnswer": "5\u201310 ng/mL",
+    "wrongAnswers": [
+      "1\u20133 ng/mL",
+      "15\u201320 ng/mL"
+    ],
+    "explanation": "Tacrolimus trough 5\u201310 ng/mL maintenance. 10\u201315 ng/mL in first 3 months post-transplant.",
+    "trap": "Nephrotoxic, neurotoxic, diabetogenic. Monitor closely. No live vaccines post-transplant."
+  },
+  {
+    "id": "sn_044",
+    "context": "6 yr \u00b7 20 kg",
+    "label": "ACTH Deficiency",
+    "drug": "Hydrocortisone replacement \u00b7 PO",
+    "correctAnswer": "8\u201310 mg/m\u00b2/day",
+    "wrongAnswers": [
+      "2\u20134 mg/m\u00b2/day",
+      "20\u201330 mg/m\u00b2/day"
+    ],
+    "explanation": "Secondary AI: Hydrocortisone 8\u201310 mg/m\u00b2/day PO divided TDS. Stress = triple dose.",
+    "trap": "Secondary AI has NO hyperkalemia, NO hyperpigmentation \u2014 aldosterone preserved. Key differentiator from primary AI."
+  },
+  {
+    "id": "sn_045",
+    "context": "9 yr \u00b7 28 kg",
+    "label": "Growth Hormone Deficiency",
+    "drug": "rhGH \u00b7 SC \u00b7 Weekly",
+    "correctAnswer": "0.16\u20130.24 mg/kg/week",
+    "wrongAnswers": [
+      "0.05 mg/kg/week",
+      "0.5 mg/kg/week"
+    ],
+    "explanation": "GHD: rhGH 0.16\u20130.24 mg/kg/week SC divided 6\u20137 doses. Continue until near-final height.",
+    "trap": "rhGH is dosed per WEEK, not per day. Monitor IGF-1 and thyroid function."
+  },
+  {
+    "id": "sn_046",
+    "context": "4 wk \u00b7 3.5 kg",
+    "label": "Obstructive Jaundice",
+    "drug": "Vitamin K \u00b7 Pre-procedure",
+    "correctAnswer": "1\u20132 mg",
+    "wrongAnswers": [
+      "0.5 mg",
+      "5 mg"
+    ],
+    "explanation": "Vitamin K 1\u20132 mg IM/IV before any procedure in cholestatic infants. Corrects coagulopathy from malabsorption.",
+    "trap": "Always give vitamin K before liver biopsy or Kasai surgery in cholestatic infants."
+  },
+  {
+    "id": "sn_047",
+    "context": "2 mo \u00b7 4.8 kg",
+    "label": "Crigler-Najjar Type II",
+    "drug": "Phenobarbital \u00b7 PO \u00b7 Lifelong",
+    "correctAnswer": "2\u20135 mg/kg/day",
+    "wrongAnswers": [
+      "0.5 mg/kg/day",
+      "10 mg/kg/day"
+    ],
+    "explanation": "Type II: Phenobarbital 2\u20135 mg/kg/day PO (max 300 mg/day). Reduces bilirubin 25\u201350%. Type I has NO response.",
+    "trap": "Phenobarbital response distinguishes Type I (NO response) from Type II (>25% reduction)."
+  },
+  {
+    "id": "sn_048",
+    "context": "8 yr \u00b7 25 kg",
+    "label": "Coeliac Disease \u2014 Serology",
+    "drug": "Anti-tTG IgA diagnostic threshold",
+    "correctAnswer": ">10\u00d7 ULN",
+    "wrongAnswers": [
+      ">5\u00d7 ULN",
+      ">50\u00d7 ULN"
+    ],
+    "explanation": "Anti-tTG IgA >10\u00d7 ULN + positive EMA + symptomatic = can diagnose without biopsy in selected cases.",
+    "trap": "Must also check total IgA to rule out IgA deficiency (false negative tTG)."
+  },
+  {
+    "id": "sn_049",
+    "context": "5 yr \u00b7 18 kg",
+    "label": "RTA Type I \u2014 Alkali",
+    "drug": "Potassium citrate \u00b7 PO",
+    "correctAnswer": "1\u20132 mEq/kg/day",
+    "wrongAnswers": [
+      "0.1\u20130.5 mEq/kg/day",
+      "5\u201315 mEq/kg/day"
+    ],
+    "explanation": "Type I RTA: K-citrate 1\u20132 mEq/kg/day. Type II needs 5\u201315 mEq/kg/day. Type IV: treat underlying cause.",
+    "trap": "Type I = 1\u20132 mEq/kg/day. Type II = 5\u201315 mEq/kg/day. Do NOT give potassium in Type IV (worsens hyperkalemia)."
+  },
+  {
+    "id": "sn_050",
+    "context": "Newborn \u00b7 3.2 kg",
+    "label": "Hirschsprung Disease \u2014 Biopsy",
+    "drug": "Minimum distance above dentate line",
+    "correctAnswer": "\u22652 cm",
+    "wrongAnswers": [
+      "<1 cm",
+      "1 cm"
+    ],
+    "explanation": "Rectal biopsy must sample \u22652 cm above dentate line. Below is physiologically aganglionic = false positive.",
+    "trap": "Biopsying <2 cm = false positive. Must be \u22652 cm for accurate diagnosis."
+  },
+  {
+    "id": "sn_051",
+    "context": "4 yr \u00b7 16 kg",
+    "label": "Wilms Tumor \u2014 Pre-op",
+    "drug": "Mandatory pre-op check",
+    "correctAnswer": "Acquired vWD screen",
+    "wrongAnswers": [
+      "Not needed",
+      "Heparin prophylaxis"
+    ],
+    "explanation": "Wilms tumor absorbs vWF -> acquired vWD. Check coagulation before surgery. Also: NEVER biopsy pre-op (upstages to Stage III).",
+    "trap": "Acquired vWD + no pre-op biopsy are both high-yield Wilms tumor management points."
+  },
+  {
+    "id": "sn_052",
+    "context": "10 yr \u00b7 32 kg",
+    "label": "Chronic Hepatitis B",
+    "drug": "First-line antiviral \u00b7 PO",
+    "correctAnswer": "Entecavir",
+    "wrongAnswers": [
+      "Interferon-alpha",
+      "Ribavirin"
+    ],
+    "explanation": "Entecavir 0.015 mg/kg/day (max 0.5 mg/day) is first-line for chronic HBV in children. High barrier to resistance.",
+    "trap": "Interferon is NOT first-line in children due to side effects. Entecavir or Tenofovir are preferred."
+  },
+  {
+    "id": "sn_053",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "CH \u2014 Levothyroxine absorption",
+    "drug": "Substances to separate from T4",
+    "correctAnswer": "Soy / iron / calcium",
+    "wrongAnswers": [
+      "Breast milk",
+      "Vitamin D"
+    ],
+    "explanation": "Soy formula, iron, and calcium reduce levothyroxine absorption. Give separately, >=4 hours apart.",
+    "trap": "Soy + iron + calcium all REDUCE T4 absorption. A real exam trap for CH management."
+  },
+  {
+    "id": "sn_054",
+    "context": "7 yr \u00b7 22 kg",
+    "label": "SRNS \u2014 Cyclophosphamide",
+    "drug": "Cyclophosphamide \u00b7 PO",
+    "correctAnswer": "2 mg/kg/day \u00d7 8\u201312 weeks",
+    "wrongAnswers": [
+      "0.5 mg/kg/day \u00d7 4 weeks",
+      "5 mg/kg/day \u00d7 6 months"
+    ],
+    "explanation": "Cyclophosphamide 2 mg/kg/day \u00d7 8\u201312 weeks. Cumulative limit: 168 mg/kg to limit gonadotoxicity.",
+    "trap": "Cumulative limit = 168 mg/kg. Exceeding this increases gonadotoxicity risk."
+  },
+  {
+    "id": "sn_055",
+    "context": "3 yr \u00b7 14 kg",
+    "label": "Hepatic Encephalopathy \u2014 Rifaximin",
+    "drug": "Rifaximin \u00b7 PO \u00b7 Daily",
+    "correctAnswer": "10\u201320 mg/kg/day",
+    "wrongAnswers": [
+      "1\u20135 mg/kg/day",
+      "50 mg/kg/day"
+    ],
+    "explanation": "Rifaximin 10\u201320 mg/kg/day. Synergistic with lactulose. Superior to lactulose alone in preventing recurrence.",
+    "trap": "Combination of lactulose + rifaximin is superior to lactulose alone \u2014 always mention both."
+  }
 ]

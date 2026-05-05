@@ -1,52 +1,2658 @@
 [
-  {"topic":"AGN / PSGN","isTrap":true,"q":"Give <strong>prednisolone 2 mg/kg/day</strong> for acute PSGN to suppress the immune-mediated glomerular inflammation.","truth":"❌ TRAP — NO steroids in APSGN","exp":"APSGN is self-limiting. Steroids are not only ineffective but potentially harmful. Prescribing them in the exam = instant −2 marks.","marks":"−2 marks in KUHS exam"},
-  {"topic":"AGN / PSGN","isTrap":true,"q":"First-line antihypertensive for acute hypertension in AGN is <strong>Enalapril (ACE inhibitor)</strong>.","truth":"❌ TRAP — First-line is Nifedipine (CCB)","exp":"ACE inhibitors worsen hyperkalaemia and can precipitate AKI in the setting of low GFR in AGN. First-line = Nifedipine.","marks":"−1 mark if you write ACEi"},
-  {"topic":"AGN / PSGN","isTrap":true,"q":"Use <strong>Furosemide</strong> as first-line therapy for hypertension in PSGN.","truth":"❌ TRAP — Furosemide = fluid overload only","exp":"Furosemide is for fluid overload management, not blood pressure control. HTN → Nifedipine. Fluid overload → Furosemide. Mixing these is a classic -1.","marks":"Common -1 mark error"},
-  {"topic":"AGN / PSGN","isTrap":false,"q":"A 22 kg child with PSGN needs Strep eradication. Give <strong>Benzathine Penicillin G 600,000 U IM</strong> as a single dose.","truth":"✓ CORRECT — Weight <27 kg → 600,000 U","exp":"The exact threshold is 27 kg. Below = 600K U. At or above = 1.2 million U. Always state the weight threshold explicitly in the exam.","marks":"+0.5M for correct dose + threshold"},
-  {"topic":"AGN / PSGN","isTrap":true,"q":"C3 complement is still low at <strong>8 weeks</strong> post-PSGN. Reassure the family — this is within the expected recovery range.","truth":"❌ TRAP — Investigate for MPGN","exp":"C3 should normalise by 6–8 weeks post-PSGN. Persistent low C3 beyond 8–12 weeks = MPGN until proven otherwise. Reassurance here is dangerous.","marks":"High-yield distinction vs MPGN"},
-  {"topic":"AGN / PSGN","isTrap":false,"q":"A child has haematuria with <strong>normal C3, normal C4</strong>, and onset 2 days after a throat infection. Diagnose <strong>IgA nephropathy</strong>.","truth":"✓ CORRECT — Short latent + normal C3 = IgA","exp":"IgA nephropathy: synpharyngitic (1–3 days), normal complement. PSGN: latent 10–21 days, low C3. Timing + C3 distinguish them.","marks":"Normal C3 + haematuria = IgA, not PSGN"},
-  {"topic":"Nephrotic Syndrome","isTrap":true,"q":"<strong>Restrict protein intake</strong> in nephrotic syndrome to reduce urinary protein loss.","truth":"❌ TRAP — Normal protein intake is essential","exp":"NS patients are protein-depleted from urinary losses. Restriction worsens malnutrition. Only salt restriction during oedema phase. Protein restriction = −1 mark.","marks":"Protein restriction = wrong, always"},
-  {"topic":"Nephrotic Syndrome","isTrap":false,"q":"First episode NS in a 4-year-old: start <strong>Prednisolone 2 mg/kg/day (max 60 mg/day)</strong> for 6 weeks.","truth":"✓ CORRECT — Phase 1 ISKD protocol","exp":"2 mg/kg/day × 6 weeks is Phase 1. Max cap 60 mg regardless of weight. Then 1.5 mg/kg alternate days × 6 weeks = total 12 weeks.","marks":"+1M for correct dose, max, and duration"},
-  {"topic":"Nephrotic Syndrome","isTrap":true,"q":"A 42 kg child with NS should receive <strong>84 mg/day prednisolone</strong> (calculated as 2 mg/kg × 42 kg).","truth":"❌ TRAP — Maximum cap is 60 mg/day","exp":"2 × 42 = 84 mg calculates correctly but the maximum is capped at 60 mg/day regardless of weight. Never ignore the cap.","marks":"Forgetting the cap = −1 mark"},
-  {"topic":"Nephrotic Syndrome","isTrap":false,"q":"Serum <strong>C3 is low</strong> in a child presenting with first-episode NS. Perform a <strong>renal biopsy before starting steroids</strong>.","truth":"✓ CORRECT — Low C3 = biopsy first","exp":"Low C3 suggests MPGN or membranous GN, not MCD. Starting steroids on MPGN without biopsy gives false response data. Biopsy before steroids if C3 is low.","marks":"Low C3 + NS = biopsy, not empirical steroids"},
-  {"topic":"Nephrotic Syndrome","isTrap":true,"q":"Use <strong>ACE inhibitor (Enalapril)</strong> as first-line treatment for acute hypertension in nephrotic syndrome.","truth":"❌ TRAP — First-line acute HTN = CCB (Amlodipine)","exp":"ACEi are appropriate for persistent HTN/proteinuria (chronic), NOT acute HTN. Acute HTN in NS → CCB (Amlodipine). ACEi for chronic persistent HTN/proteinuria.","marks":"Acute vs chronic HTN — the indication matters"},
-  {"topic":"Nephrotic Syndrome","isTrap":false,"q":"NS child with <strong>cold peripheries, tachycardia, and hypotension</strong> (hypovolaemia): give <strong>25% albumin 0.5–1.0 g/kg IV</strong>.","truth":"✓ CORRECT — Albumin for hypovolaemia","exp":"Hypovolaemia despite oedema is the paradox of NS. Signs: cold peripheries, tachycardia, low BP. Treatment: 25% albumin 0.5–1.0 g/kg IV over 1–2 h + loop diuretic after.","marks":"+0.5M for correct indication and dose"},
-  {"topic":"Nephrotic Syndrome","isTrap":true,"q":"Give <strong>25% albumin infusion</strong> to a stable NS child to help mobilise and treat generalised oedema.","truth":"❌ TRAP — Albumin is for hypovolaemia only","exp":"Albumin given for routine oedema (without hypovolaemia) expands plasma volume abruptly → pulmonary oedema. Only use for documented hypovolaemia.","marks":"Wrong indication = can be fatal"},
-  {"topic":"Nephrotic Syndrome","isTrap":true,"q":"Phase 2 of NS steroid protocol is <strong>1 mg/kg alternate days</strong> for 6 weeks.","truth":"❌ TRAP — Phase 2 = 1.5 mg/kg alternate days","exp":"Phase 1: 2 mg/kg/day × 6 weeks. Phase 2: 1.5 mg/kg alternate days × 6 weeks. Total 12 weeks. 1 mg/kg alternate days is a common confusion — wrong dose.","marks":"1.5 not 1.0 — very commonly confused"},
-  {"topic":"DKA","isTrap":false,"q":"Serum K⁺ = <strong>3.0 mEq/L</strong> in a child with DKA before insulin is started. <strong>Hold insulin and correct potassium first.</strong>","truth":"✓ CORRECT — K⁺ <3.3 = hold insulin","exp":"Insulin drives K⁺ intracellularly. If already hypokalaemic (K⁺ <3.3), starting insulin causes fatal arrhythmia. Must correct K⁺ first, then start insulin when ≥3.3.","marks":"Single most dangerous DKA decision"},
-  {"topic":"DKA","isTrap":true,"q":"Give <strong>insulin 0.1 U/kg IV bolus</strong> at the start of DKA management to rapidly bring down blood glucose.","truth":"❌ TRAP — NEVER bolus insulin in paediatric DKA","exp":"IV bolus → rapid osmotic shift → cerebral oedema. Only give insulin as a continuous infusion (0.05–0.1 U/kg/hr), started after 1–2 h of fluid resuscitation.","marks":"IV bolus = cerebral oedema risk"},
-  {"topic":"DKA","isTrap":true,"q":"Replace the DKA fluid deficit over <strong>24 hours</strong> using 0.45% NaCl + KCl.","truth":"❌ TRAP — Deficit replaced over 48 hours","exp":"Rapid replacement (24 h) increases the osmotic gradient that drives cerebral oedema. Standard protocol: replace deficit over 48 hours. 24 hours = wrong.","marks":"48 h, NOT 24 h — tested directly in MCQs"},
-  {"topic":"DKA","isTrap":false,"q":"Blood glucose in DKA falls to <strong>210 mg/dL</strong>. <strong>Add dextrose to IV fluids and continue the insulin infusion.</strong>","truth":"✓ CORRECT — Add dextrose, keep insulin running","exp":"Insulin must continue until acidosis resolves (pH >7.30, HCO₃ >18), not just until glucose normalises. Add dextrose to prevent hypoglycaemia while ketosis clears.","marks":"Stop insulin early = ketosis persists"},
-  {"topic":"DKA","isTrap":true,"q":"Blood glucose has normalised in DKA. <strong>Stop the insulin infusion</strong> now.","truth":"❌ TRAP — Continue insulin until acidosis resolves","exp":"Insulin resolves ketoacidosis, not hyperglycaemia. Continue infusion until pH >7.30 AND HCO₃ >18 mEq/L. Stopping at glucose normalisation leaves the child acidotic.","marks":"Stop insulin = DKA recurrence"},
-  {"topic":"DKA","isTrap":false,"q":"DKA child develops headache, bradycardia, and altered consciousness. Give <strong>Mannitol 0.5–1 g/kg IV</strong> immediately.","truth":"✓ CORRECT — Cerebral oedema protocol","exp":"Classic cerebral oedema triad. Treatment: Mannitol 0.5–1 g/kg IV OR 3% NaCl 5–10 mL/kg, reduce fluid rate, elevate head 30°. Both mannitol and 3% NaCl are valid.","marks":"Know BOTH mannitol and 3% NaCl"},
-  {"topic":"DKA","isTrap":true,"q":"Start the <strong>insulin infusion simultaneously with IV fluids</strong> from the beginning of DKA management.","truth":"❌ TRAP — Fluids first for 1–2 hours before insulin","exp":"Start 0.9% NS resuscitation first for 1–2 h. Then check K⁺. Then start insulin at 0.05–0.1 U/kg/hr. Starting insulin simultaneously causes rapid osmotic shift.","marks":"Sequence matters: fluids → K⁺ check → insulin"},
-  {"topic":"Dehydration","isTrap":false,"q":"Some dehydration (Plan B): give <strong>ORS 75 mL/kg over 4 hours</strong> orally in clinic.","truth":"✓ CORRECT — Plan B = 75 mL/kg / 4 h ORS","exp":"Plan A: ORS freely at home. Plan B: 75 mL/kg × 4 h in clinic. Plan C: IV RL for severe dehydration. This exact volume and duration are frequently swapped in MCQs.","marks":"75 mL/kg / 4 h — not 50, not 100"},
-  {"topic":"Dehydration","isTrap":true,"q":"Severe dehydration, child aged 3 years (Plan C): give <strong>Ringer's Lactate 30 mL/kg over 1 hour</strong>.","truth":"❌ TRAP — Child 1–5 yr = 30 mL/kg over 30 MIN","exp":"1 hour is for INFANTS (<12 months). Child (1–5 years) = 30 mL/kg over 30 MINUTES. The same volume, different time — age determines the rate.","marks":"Most common Plan C error — age-rate trap"},
-  {"topic":"Dehydration","isTrap":false,"q":"Severe dehydration, infant aged 8 months (Plan C): give <strong>Ringer's Lactate 30 mL/kg over 1 hour</strong>.","truth":"✓ CORRECT — Infant <12 months = 1 hour","exp":"<12 months = 30 mL/kg over 1 HOUR. Child 1–5 years = 30 mL/kg over 30 MIN. The age cutoff at 12 months determines the infusion duration.","marks":"Age determines infusion duration"},
-  {"topic":"Dehydration","isTrap":true,"q":"A 4-month-old with acute diarrhoea needs zinc supplementation. Give <strong>zinc 20 mg/day</strong>.","truth":"❌ TRAP — Infant <6 months = 10 mg/day","exp":"Zinc dosing has an age cutoff at 6 months. <6 months = 10 mg/day. ≥6 months = 20 mg/day. A 4-month-old gets 10 mg/day. 20 mg/day is wrong.","marks":"Age cutoff at 6 months — very frequently tested"},
-  {"topic":"Dehydration","isTrap":false,"q":"A 10-month-old with acute diarrhoea: give <strong>zinc 20 mg/day for 10–14 days</strong>.","truth":"✓ CORRECT — ≥6 months = 20 mg/day","exp":"≥6 months = 20 mg/day × 10–14 days. Zinc reduces duration and severity. <6 months = 10 mg/day. This is one of the most tested dose thresholds in KUHS peds.","marks":"Correct dose for age ≥6 months"},
-  {"topic":"Dehydration","isTrap":true,"q":"Severe dehydration Plan C: after giving 30 mL/kg bolus, the child is improving. Give the remaining <strong>70 mL/kg over 2.5 hours</strong>.","truth":"❌ TRAP — Phase 2 = 70 mL/kg over 5 hours","exp":"Phase 2 in Plan C = 70 mL/kg over 5 hours, not 2.5. Halving the time doubles the rate — this is too fast and risks fluid overload.","marks":"70 mL/kg / 5 h — the full Plan C sequence"},
-  {"topic":"Rickets","isTrap":true,"q":"Nutritional rickets treatment: <strong>Vitamin D3 2000–4000 IU/day alone</strong> is sufficient for full mineralisation.","truth":"❌ TRAP — Elemental calcium is mandatory alongside","exp":"Vitamin D increases Ca/PO4 absorption, but you must also supplement elemental calcium 50–100 mg/kg/day. Without calcium, the osteoid cannot mineralise. Vit D alone is insufficient.","marks":"Forgetting calcium = incomplete answer"},
-  {"topic":"Rickets","isTrap":false,"q":"Stoss therapy for non-compliant family: give <strong>Vitamin D3 150,000–300,000 IU orally as a single dose</strong>.","truth":"✓ CORRECT — Stoss dose range","exp":"Stoss = single oral mega-dose for compliance issues. Range: 150,000–300,000 IU. Repeat at 3 months if needed. 50K IU is too low; 600K IU is excessive and risky.","marks":"150K–300K IU single dose — know the range"},
-  {"topic":"Rickets","isTrap":true,"q":"XLH (familial hypophosphataemia): treat with <strong>high-dose cholecalciferol (Vitamin D3)</strong> to correct the deficiency.","truth":"❌ TRAP — XLH needs phosphate + calcitriol, not Vit D3","exp":"XLH is a phosphate-wasting disorder (PHEX/FGF23), not vitamin D deficiency. Treatment: oral phosphate supplements + calcitriol. Cholecalciferol alone = wrong drug target.","marks":"XLH ≠ Vit D deficiency — completely different treatment"},
-  {"topic":"Rickets","isTrap":false,"q":"Early nutritional rickets: serum calcium is <strong>normal</strong>. This is expected and consistent with the diagnosis.","truth":"✓ CORRECT — PTH rises first, maintains Ca","exp":"PTH rises first (before calcium falls) to compensate for reduced absorption. Early rickets = normal calcium. Low calcium is a LATE finding. Examiners test this frequently.","marks":"PTH rises first — normal Ca is expected early"},
-  {"topic":"Rickets","isTrap":true,"q":"Treatment dose for nutritional rickets: <strong>400 IU/day of Vitamin D3</strong> for 6–12 weeks.","truth":"❌ TRAP — 400 IU/day is prevention, not treatment","exp":"400 IU/day is the prevention/maintenance dose. Treatment requires 2000–4000 IU/day × 6–12 weeks. The doses are 5–10× different. Writing 400 IU for treatment = wrong.","marks":"Prevention ≠ treatment dose — classic confusion"},
-  {"topic":"Rickets","isTrap":true,"q":"X-ray shows <strong>white line of Fraenkel</strong> at the zone of provisional calcification. Diagnose rickets.","truth":"❌ TRAP — White line of Fraenkel = Scurvy","exp":"White line of Fraenkel = Scurvy (vitamin C deficiency). Rickets shows cupping, fraying, and splaying of the metaphysis. These X-ray signs are directly swapped in MCQs.","marks":"Fraenkel line = Scurvy. Cupping/fraying = Rickets"},
-  {"topic":"HUS","isTrap":true,"q":"STEC E. coli O157:H7 confirmed in a child with HUS. Start <strong>ceftriaxone IV</strong> to clear the infection.","truth":"❌ TRAP — Antibiotics are contraindicated in STEC-HUS","exp":"Antibiotics (especially fluoroquinolones and beta-lactams) trigger increased Shiga toxin release from dying bacteria → worsens endothelial damage and HUS severity. No antibiotics.","marks":"No antibiotics in STEC-HUS — major trap"},
-  {"topic":"HUS","isTrap":false,"q":"STEC-confirmed HUS: <strong>withhold all antibiotics</strong> and manage supportively.","truth":"✓ CORRECT — Antibiotics contraindicated in STEC-HUS","exp":"Supportive care only: fluids, dialysis if needed, BP management, transfuse if Hb <7. Exception: pneumococcal HUS (non-STEC) — antibiotics ARE indicated in that variant.","marks":"Know the exception: pneumococcal HUS"},
-  {"topic":"HUS","isTrap":false,"q":"Starting eculizumab for aHUS: <strong>vaccinate against Neisseria meningitidis before the first dose</strong>.","truth":"✓ CORRECT — Meningococcal vaccine mandatory","exp":"Eculizumab blocks terminal complement (C5). This removes the primary defence against N. meningitidis. Vaccination is mandatory before starting. No exceptions.","marks":"C5 block = meningococcal vulnerability — always vaccinate first"},
-  {"topic":"Congenital Hypothyroidism","isTrap":true,"q":"Newborn screening for congenital hypothyroidism should be performed on <strong>day 1 of life</strong>.","truth":"❌ TRAP — Screening is at day 3–5","exp":"Physiological TSH surge occurs at birth. Testing on day 1 gives false-positive results. Optimal screening window: day 3–5 of life (after the surge settles).","marks":"Day 3–5, not day 1 — physiological surge"},
-  {"topic":"Congenital Hypothyroidism","isTrap":false,"q":"Newborn CH screening at day 3–5 shows TSH 45 mIU/L. Confirm with <strong>serum TSH + free T4</strong> and start levothyroxine within 2 weeks of life.","truth":"✓ CORRECT — Confirm + treat within 2 weeks","exp":"Screening TSH >20–40 mIU/L = abnormal. Confirm with serum TSH + free T4. Start L-thyroxine 10–15 mcg/kg/day within 2 weeks of life for normal neurodevelopment.","marks":"2 weeks = critical window for brain development"},
-  {"topic":"Congenital Hypothyroidism","isTrap":true,"q":"Crush the levothyroxine tablet and administer it <strong>with calcium supplement</strong> for better bioavailability.","truth":"❌ TRAP — Calcium reduces levothyroxine absorption","exp":"Calcium, soy formula, and iron all significantly reduce levothyroxine absorption. Give separately, at least 4 hours apart. Giving together = subtherapeutic levels.","marks":"Soy + iron + calcium all reduce T4 absorption"},
-  {"topic":"Congenital Hypothyroidism","isTrap":true,"q":"A 3-week-old has congenital hypothyroidism. Expected neonatal features include <strong>short stature</strong> and <strong>intellectual disability</strong>.","truth":"❌ TRAP — These are CHILDHOOD features if untreated","exp":"In the neonatal period: prolonged jaundice, hypotonia, constipation, large fontanelle, hoarse cry, macroglossia, umbilical hernia. Short stature and ID develop later if untreated.","marks":"Examiner explicitly tests neonatal vs childhood features"},
-  {"topic":"Testicular Torsion","isTrap":true,"q":"A 14-year-old has sudden severe scrotal pain with absent cremasteric reflex. <strong>Wait for Doppler ultrasound result</strong> before proceeding to theatre.","truth":"❌ TRAP — Do NOT wait for imaging if suspicion is high","exp":"<6 hours = >90% testicular salvage. >24 hours = <10%. Doppler takes time. If clinical suspicion is high (sudden pain + absent cremasteric + normal urine) → go to theatre immediately.","marks":"Time is testicle — do not delay for imaging"},
-  {"topic":"Testicular Torsion","isTrap":false,"q":"During surgery for right testicular torsion: after detorsion and confirming viability, perform <strong>bilateral orchidopexy</strong>.","truth":"✓ CORRECT — Fix both testes, not just the affected side","exp":"The anatomical predisposition (bell-clapper deformity) is bilateral in ~50% of cases. Fixing only the affected side leaves the contralateral testis at risk of torsion. Always fix both.","marks":"Bilateral fixation — always, always"},
-  {"topic":"Testicular Torsion","isTrap":true,"q":"A <strong>blue dot sign</strong> at the upper pole of the testis is pathognomonic for testicular torsion — emergency surgery is required.","truth":"❌ TRAP — Blue dot sign = torsion of testicular appendage","exp":"Blue dot = torsion of the appendix testis (hydatid of Morgagni), NOT testicular torsion. Management is conservative (analgesia, NSAIDs). Testicular torsion has absent cremasteric + no blue dot.","marks":"Blue dot ≠ testicular torsion — very different management"},
-  {"topic":"Haematuria / Labs","isTrap":false,"q":"Urine microscopy shows <strong>RBC casts</strong>. This is pathognomonic for glomerular haematuria.","truth":"✓ CORRECT — RBC casts = glomerular, always","exp":"RBC casts form when RBCs trapped in Tamm-Horsfall protein in the tubules — only possible if RBCs enter at the glomerular level. Pathognomonic = glomerular until proven otherwise.","marks":"RBC casts = glomerular — no exceptions"},
-  {"topic":"Haematuria / Labs","isTrap":false,"q":"Haematuria with <strong>clots in urine</strong>: this indicates non-glomerular bleeding.","truth":"✓ CORRECT — Clots = non-glomerular","exp":"Glomerular haematuria does not form clots — RBCs are fragmented and diluted too much. Clots indicate brisk non-glomerular bleeding: stones, tumour, trauma, coagulopathy.","marks":"Clots = non-glomerular — always"},
-  {"topic":"Haematuria / Labs","isTrap":true,"q":"Child with haematuria 2 days after a throat infection, <strong>C3 is normal, C4 is normal</strong>. Diagnose PSGN.","truth":"❌ TRAP — Normal C3 + short latent = IgA nephropathy","exp":"PSGN: 10–21 day latent period + LOW C3. IgA nephropathy: 1–3 day synpharyngitic onset + NORMAL complement. Normal C3/C4 with haematuria = IgA, not PSGN.","marks":"Normal C3 + haematuria ≠ PSGN"},
-  {"topic":"Portal Hypertension","isTrap":false,"q":"Acute variceal bleeding: target haemoglobin of <strong>7–8 g/dL</strong> with transfusion — do not exceed this.","truth":"✓ CORRECT — Restrictive transfusion strategy","exp":"Over-transfusion raises portal venous pressure → increases rebleeding risk significantly. Target Hb 7–8 g/dL only. This is counter-intuitive but well-established.","marks":"Restrictive strategy — counter-intuitive high-yield"},
-  {"topic":"Portal Hypertension","isTrap":true,"q":"Acute variceal bleeding: transfuse to <strong>Hb 10–12 g/dL</strong> to maintain haemodynamic stability.","truth":"❌ TRAP — Over-transfusion raises portal pressure","exp":"Transfusing to Hb 10–12 in variceal bleeding expands blood volume → raises portal venous pressure → dramatically increases rebleeding risk. Target 7–8 g/dL only.","marks":"Over-transfusion = rebleed — a genuinely dangerous error"},
-  {"topic":"Biliary Atresia","isTrap":false,"q":"Kasai portoenterostomy should be performed <strong>before 60 days of age</strong> for optimal outcome.","truth":"✓ CORRECT — <60 days = 50–60% success rate","exp":"Before 60 days: 50–60% achieve bile drainage. 60–90 days: success drops sharply. >90 days: <20% success. The 60-day target is the single most important prognostic factor in biliary atresia.","marks":"60 days = the critical target, not 90"},
-  {"topic":"Biliary Atresia","isTrap":true,"q":"Kasai portoenterostomy at <strong>90 days of age</strong> gives outcomes equivalent to surgery performed at 60 days.","truth":"❌ TRAP — 90 days has dramatically worse outcomes","exp":"60 days = 50–60% success. 90 days = <20–30% success. The window narrows rapidly after 60 days due to progressive hepatic fibrosis. 90 days is the outer limit, not the equivalent.","marks":"60 ≠ 90 days — major prognostic difference"}
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing AGN with NS \u2014 remember: AGN has hematuria + HTN + low C3; NS has massive proteinuria + hypoalbuminemia + no HTN",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing AGN with NS \u2014 remember: AGN has hematuria + HTN + low C3; NS has massive proteinuria + hypoalbuminemia + no HTN",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using ACE inhibitors as first-line for AGN HTN \u2014 NO; first-line is Nifedipine (CCB). ACEi can worsen hyperkalemia and AKI.",
+    "truth": "\u274c TRAP",
+    "exp": "Using ACE inhibitors as first-line for AGN HTN \u2014 NO; first-line is Nifedipine (CCB). ACEi can worsen hyperkalemia and AKI.",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using diuretics for HTN \u2014 NO; diuretics are only for fluid overload, not HTN control.",
+    "truth": "\u274c TRAP",
+    "exp": "Using diuretics for HTN \u2014 NO; diuretics are only for fluid overload, not HTN control.",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Prescribing steroids for PSGN \u2014 NO; therapy is supportive only.",
+    "truth": "\u274c TRAP",
+    "exp": "Prescribing steroids for PSGN \u2014 NO; therapy is supportive only.",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting pediatric penicillin dosing \u2014 weight-based: 600K U (&lt;27 kg) or 1.2M U (&gt;27 kg) IM.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting pediatric penicillin dosing \u2014 weight-based: 600K U (&lt;27 kg) or 1.2M U (&gt;27 kg) IM.",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Normal C3 + normal C4 + hematuria \u2192 think IgA nephropathy (not PSGN).",
+    "truth": "\u274c TRAP",
+    "exp": "Normal C3 + normal C4 + hematuria \u2192 think IgA nephropathy (not PSGN).",
+    "marks": "Trap from AGN / PSGN"
+  },
+  {
+    "topic": "AGN / PSGN",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> PSGN can develop even after antibiotic treatment of strep infection.",
+    "truth": "\u2713 FACT",
+    "exp": "PSGN can develop even after antibiotic treatment of strep infection.",
+    "marks": "High-yield from AGN / PSGN"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing NS with AGN \u2014 NS has NO hematuria, NO HTN, normal C3; AGN has all three.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing NS with AGN \u2014 NS has NO hematuria, NO HTN, normal C3; AGN has all three.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong steroid dose \u2014 must specify 2 mg/kg/day (MAX 60 mg/day); not 1 mg/kg.",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong steroid dose \u2014 must specify 2 mg/kg/day (MAX 60 mg/day); not 1 mg/kg.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong steroid duration \u2014 total 12 weeks for responders, not 6 weeks only.",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong steroid duration \u2014 total 12 weeks for responders, not 6 weeks only.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using ACE inhibitors for acute HTN in NS \u2014 use CCBs (Amlodipine) first; ACEi is for persistent HTN/proteinuria.",
+    "truth": "\u274c TRAP",
+    "exp": "Using ACE inhibitors for acute HTN in NS \u2014 use CCBs (Amlodipine) first; ACEi is for persistent HTN/proteinuria.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting salt restriction \u2014 as important as steroids for edema control.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting salt restriction \u2014 as important as steroids for edema control.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Protein restriction \u2014 NO; maintain normal protein intake.",
+    "truth": "\u274c TRAP",
+    "exp": "Protein restriction \u2014 NO; maintain normal protein intake.",
+    "marks": "Trap from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> S. pneumoniae is the #1 organism for SBP in NS \u2014 vaccinate!",
+    "truth": "\u2713 FACT",
+    "exp": "S. pneumoniae is the #1 organism for SBP in NS \u2014 vaccinate!",
+    "marks": "High-yield from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Biopsy BEFORE steroids if low C3, >8 years, or atypical features.",
+    "truth": "\u2713 FACT",
+    "exp": "Biopsy BEFORE steroids if low C3, >8 years, or atypical features.",
+    "marks": "High-yield from Nephrotic Syndrome"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing rickets with scurvy \u2014 scurvy has white line of Fraenkel on X-ray and bleeding gums; rickets has cupping/fraying/splaying.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing rickets with scurvy \u2014 scurvy has white line of Fraenkel on X-ray and bleeding gums; rickets has cupping/fraying/splaying.",
+    "marks": "Trap from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Normal calcium in early rickets \u2014 PTH rises FIRST to maintain calcium; do not expect hypocalcemia initially.",
+    "truth": "\u274c TRAP",
+    "exp": "Normal calcium in early rickets \u2014 PTH rises FIRST to maintain calcium; do not expect hypocalcemia initially.",
+    "marks": "Trap from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Vit D dependent Type I \u2014 normal 25(OH)D but low 1,25(OH)2D; differs from nutritional deficiency.",
+    "truth": "\u274c TRAP",
+    "exp": "Vit D dependent Type I \u2014 normal 25(OH)D but low 1,25(OH)2D; differs from nutritional deficiency.",
+    "marks": "Trap from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> XLH \u2014 normal calcium, normal 25(OH)D, low phosphate only; treat with phosphate + calcitriol (NOT calcium).",
+    "truth": "\u274c TRAP",
+    "exp": "XLH \u2014 normal calcium, normal 25(OH)D, low phosphate only; treat with phosphate + calcitriol (NOT calcium).",
+    "marks": "Trap from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting elemental calcium supplementation alongside vitamin D.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting elemental calcium supplementation alongside vitamin D.",
+    "marks": "Trap from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Rachitic rosary is most prominent at ribs 5-8.",
+    "truth": "\u2713 FACT",
+    "exp": "Rachitic rosary is most prominent at ribs 5-8.",
+    "marks": "High-yield from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 25(OH)D &lt;20 ng/mL indicates deficiency; &lt;10 ng/mL indicates severe deficiency (some references use &lt;8 ng/mL for severe).",
+    "truth": "\u2713 FACT",
+    "exp": "25(OH)D &lt;20 ng/mL indicates deficiency; &lt;10 ng/mL indicates severe deficiency (some references use &lt;8 ng/mL for severe).",
+    "marks": "High-yield from Rickets"
+  },
+  {
+    "topic": "Rickets",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Radiological healing takes 3-6 months \u2014 slower than clinical improvement.",
+    "truth": "\u2713 FACT",
+    "exp": "Radiological healing takes 3-6 months \u2014 slower than clinical improvement.",
+    "marks": "High-yield from Rickets"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Listing childhood features (short stature, intellectual disability) instead of neonatal features \u2014 examiner wants neonatal features specifically.",
+    "truth": "\u274c TRAP",
+    "exp": "Listing childhood features (short stature, intellectual disability) instead of neonatal features \u2014 examiner wants neonatal features specifically.",
+    "marks": "Trap from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting unconjugated hyperbilirubinemia \u2014 not conjugated.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting unconjugated hyperbilirubinemia \u2014 not conjugated.",
+    "marks": "Trap from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong screening timing \u2014 day 3-5, not immediately at birth (physiological TSH surge).",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong screening timing \u2014 day 3-5, not immediately at birth (physiological TSH surge).",
+    "marks": "Trap from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing central hypothyroidism \u2014 low/normal TSH + low T4 = MRI pituitary.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing central hypothyroidism \u2014 low/normal TSH + low T4 = MRI pituitary.",
+    "marks": "Trap from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving levothyroxine with soy/iron/calcium \u2014 reduces absorption.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving levothyroxine with soy/iron/calcium \u2014 reduces absorption.",
+    "marks": "Trap from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Most common preventable cause of intellectual disability \u2014 start before 2 weeks.",
+    "truth": "\u2713 FACT",
+    "exp": "Most common preventable cause of intellectual disability \u2014 start before 2 weeks.",
+    "marks": "High-yield from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Congenital Hypothyroidism",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> TSH screening cutoff: &gt;20-25 mIU/L (recall threshold &gt;40 mIU/L indicates severe deficiency).",
+    "truth": "\u2713 FACT",
+    "exp": "TSH screening cutoff: &gt;20-25 mIU/L (recall threshold &gt;40 mIU/L indicates severe deficiency).",
+    "marks": "High-yield from Congenital Hypothyroidism"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing torsion with epididymo-orchitis \u2014 torsion has sudden onset + absent cremasteric + normal urine; epididymitis has gradual onset + fever + pyuria.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing torsion with epididymo-orchitis \u2014 torsion has sudden onset + absent cremasteric + normal urine; epididymitis has gradual onset + fever + pyuria.",
+    "marks": "Trap from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting bilateral orchidopexy \u2014 always fix both testes to prevent future torsion on the contralateral side.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting bilateral orchidopexy \u2014 always fix both testes to prevent future torsion on the contralateral side.",
+    "marks": "Trap from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying surgery for imaging \u2014 do NOT wait for Doppler if clinical suspicion is high.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying surgery for imaging \u2014 do NOT wait for Doppler if clinical suspicion is high.",
+    "marks": "Trap from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Age trap \u2014 torsion occurs in neonates AND adolescents (two peaks), not just teenagers.",
+    "truth": "\u274c TRAP",
+    "exp": "Age trap \u2014 torsion occurs in neonates AND adolescents (two peaks), not just teenagers.",
+    "marks": "Trap from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Blue dot sign = torsion of appendix testis, NOT testicular torsion \u2014 different management (conservative).",
+    "truth": "\u274c TRAP",
+    "exp": "Blue dot sign = torsion of appendix testis, NOT testicular torsion \u2014 different management (conservative).",
+    "marks": "Trap from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Absent cremasteric reflex is the most sensitive clinical sign.",
+    "truth": "\u2713 FACT",
+    "exp": "Absent cremasteric reflex is the most sensitive clinical sign.",
+    "marks": "High-yield from Testicular Torsion"
+  },
+  {
+    "topic": "Testicular Torsion",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> &lt;6 hours = &gt;90% salvage; &gt;24 hours = &lt;10% salvage.",
+    "truth": "\u2713 FACT",
+    "exp": "&lt;6 hours = &gt;90% salvage; &gt;24 hours = &lt;10% salvage.",
+    "marks": "High-yield from Testicular Torsion"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> RBC casts = pathognomonic for glomerular hematuria. If you see RBC casts, it is glomerular until proven otherwise.",
+    "truth": "\u274c TRAP",
+    "exp": "RBC casts = pathognomonic for glomerular hematuria. If you see RBC casts, it is glomerular until proven otherwise.",
+    "marks": "Trap from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Clots in urine = non-glomerular. Glomerular hematuria does NOT form clots.",
+    "truth": "\u274c TRAP",
+    "exp": "Clots in urine = non-glomerular. Glomerular hematuria does NOT form clots.",
+    "marks": "Trap from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> IgA nephropathy = normal C3. Low C3 points to PSGN or MPGN.",
+    "truth": "\u274c TRAP",
+    "exp": "IgA nephropathy = normal C3. Low C3 points to PSGN or MPGN.",
+    "marks": "Trap from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Hypercalciuria is the #1 cause of isolated non-glomerular hematuria in children.",
+    "truth": "\u274c TRAP",
+    "exp": "Hypercalciuria is the #1 cause of isolated non-glomerular hematuria in children.",
+    "marks": "Trap from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Alport syndrome = X-linked, hearing loss, family history of hematuria + deafness.",
+    "truth": "\u274c TRAP",
+    "exp": "Alport syndrome = X-linked, hearing loss, family history of hematuria + deafness.",
+    "marks": "Trap from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Brown/smoky urine = glomerular; fresh red/pink = non-glomerular.",
+    "truth": "\u2713 FACT",
+    "exp": "Brown/smoky urine = glomerular; fresh red/pink = non-glomerular.",
+    "marks": "High-yield from Haematuria / Labs"
+  },
+  {
+    "topic": "Haematuria / Labs",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Dysmorphic RBCs = glomerular; isomorphic RBCs = non-glomerular.",
+    "truth": "\u2713 FACT",
+    "exp": "Dysmorphic RBCs = glomerular; isomorphic RBCs = non-glomerular.",
+    "marks": "High-yield from Haematuria / Labs"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Definition confusion \u2014 old: &lt;40 mg/dL (first 24h); new AAP: &lt;47 mg/dL (operational threshold); treatment threshold: &lt;54 mg/dL.",
+    "truth": "\u274c TRAP",
+    "exp": "Definition confusion \u2014 old: &lt;40 mg/dL (first 24h); new AAP: &lt;47 mg/dL (operational threshold); treatment threshold: &lt;54 mg/dL.",
+    "marks": "Trap from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Asymptomatic hypoglycemia is common \u2014 do NOT overtreat; feed and recheck.",
+    "truth": "\u274c TRAP",
+    "exp": "Asymptomatic hypoglycemia is common \u2014 do NOT overtreat; feed and recheck.",
+    "marks": "Trap from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> SGA causes hypoglycemia via glycogen depletion; IDM causes it via hyperinsulinism \u2014 different mechanisms.",
+    "truth": "\u274c TRAP",
+    "exp": "SGA causes hypoglycemia via glycogen depletion; IDM causes it via hyperinsulinism \u2014 different mechanisms.",
+    "marks": "Trap from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving dextrose bolus to asymptomatic baby \u2014 feed first; IV dextrose only if symptomatic or &lt;25 mg/dL.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving dextrose bolus to asymptomatic baby \u2014 feed first; IV dextrose only if symptomatic or &lt;25 mg/dL.",
+    "marks": "Trap from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting Beckwith-Wiedemann syndrome as a cause of refractory hypoglycemia (hyperinsulinism + macrosomia + macroglossia + omphalocele).",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting Beckwith-Wiedemann syndrome as a cause of refractory hypoglycemia (hyperinsulinism + macrosomia + macroglossia + omphalocele).",
+    "marks": "Trap from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Hypoglycemia + macrosomia + macroglossia = Beckwith-Wiedemann.",
+    "truth": "\u2713 FACT",
+    "exp": "Hypoglycemia + macrosomia + macroglossia = Beckwith-Wiedemann.",
+    "marks": "High-yield from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Neonatal Hypoglycaemia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Refractory hypoglycemia \u2192 think hyperinsulinism \u2192 Diazoxide first-line.",
+    "truth": "\u2713 FACT",
+    "exp": "Refractory hypoglycemia \u2192 think hyperinsulinism \u2192 Diazoxide first-line.",
+    "marks": "High-yield from Neonatal Hypoglycaemia"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting the two peaks \u2014 idiopathic intussusception is most common at 6-36 months; older children with intussusception likely have a lead point (Meckel, lymphoma, HSP).",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting the two peaks \u2014 idiopathic intussusception is most common at 6-36 months; older children with intussusception likely have a lead point (Meckel, lymphoma, HSP).",
+    "marks": "Trap from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Contrast enema is contraindicated if there are signs of peritonitis or perforation \u2014 surgery first in these cases.",
+    "truth": "\u274c TRAP",
+    "exp": "Contrast enema is contraindicated if there are signs of peritonitis or perforation \u2014 surgery first in these cases.",
+    "marks": "Trap from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing Dance sign (empty RLQ) \u2014 a subtle but important clinical sign.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing Dance sign (empty RLQ) \u2014 a subtle but important clinical sign.",
+    "marks": "Trap from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing with gastroenteritis \u2014 gastroenteritis has continuous diarrhea and no mass; intussusception has episodic colic, vomiting, and a sausage-shaped mass.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing with gastroenteritis \u2014 gastroenteritis has continuous diarrhea and no mass; intussusception has episodic colic, vomiting, and a sausage-shaped mass.",
+    "marks": "Trap from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying reduction \u2014 time is bowel; risk of gangrene increases after 24 hours.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying reduction \u2014 time is bowel; risk of gangrene increases after 24 hours.",
+    "marks": "Trap from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Currant jelly stool = late sign (sloughed mucosa + blood); do not wait for it.",
+    "truth": "\u2713 FACT",
+    "exp": "Currant jelly stool = late sign (sloughed mucosa + blood); do not wait for it.",
+    "marks": "High-yield from Intussusception"
+  },
+  {
+    "topic": "Intussusception",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Ileocolic is the most common type (90%).",
+    "truth": "\u2713 FACT",
+    "exp": "Ileocolic is the most common type (90%).",
+    "marks": "High-yield from Intussusception"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using selective beta-blockers (metoprolol) \u2014 must use non-selective (propranolol, nadolol) to reduce both cardiac output AND splanchnic vasodilation.",
+    "truth": "\u274c TRAP",
+    "exp": "Using selective beta-blockers (metoprolol) \u2014 must use non-selective (propranolol, nadolol) to reduce both cardiac output AND splanchnic vasodilation.",
+    "marks": "Trap from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving NSAIDs for pain \u2014 contraindicated; they worsen bleeding risk and renal function.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving NSAIDs for pain \u2014 contraindicated; they worsen bleeding risk and renal function.",
+    "marks": "Trap from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Over-transfusion \u2014 target Hb 7-8 g/dL (not 10-12); over-transfusion increases portal pressure and rebleeding risk.",
+    "truth": "\u274c TRAP",
+    "exp": "Over-transfusion \u2014 target Hb 7-8 g/dL (not 10-12); over-transfusion increases portal pressure and rebleeding risk.",
+    "marks": "Trap from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting antibiotic prophylaxis (Ceftriaxone) in acute variceal bleed \u2014 prevents SBP and reduces mortality.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting antibiotic prophylaxis (Ceftriaxone) in acute variceal bleed \u2014 prevents SBP and reduces mortality.",
+    "marks": "Trap from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing hepatorenal syndrome with pre-renal azotemia \u2014 HRS does NOT improve with fluid challenge; pre-renal does.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing hepatorenal syndrome with pre-renal azotemia \u2014 HRS does NOT improve with fluid challenge; pre-renal does.",
+    "marks": "Trap from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Endoscopy is the gold standard for diagnosing varices, NOT USG.",
+    "truth": "\u2713 FACT",
+    "exp": "Endoscopy is the gold standard for diagnosing varices, NOT USG.",
+    "marks": "High-yield from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Caput medusae = dilated periumbilical veins; recanalized paraumbilical vein.",
+    "truth": "\u2713 FACT",
+    "exp": "Caput medusae = dilated periumbilical veins; recanalized paraumbilical vein.",
+    "marks": "High-yield from Portal Hypertension"
+  },
+  {
+    "topic": "Portal Hypertension",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> In children, portal vein thrombosis is the most common cause of pre-hepatic portal HTN.",
+    "truth": "\u2713 FACT",
+    "exp": "In children, portal vein thrombosis is the most common cause of pre-hepatic portal HTN.",
+    "marks": "High-yield from Portal Hypertension"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving antibiotics in typical STEC-HUS \u2014 AVOID; antibiotics increase Shiga toxin release and worsen outcomes.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving antibiotics in typical STEC-HUS \u2014 AVOID; antibiotics increase Shiga toxin release and worsen outcomes.",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving platelet transfusion routinely \u2014 contraindicated unless active bleeding or invasive procedure; can worsen thrombosis.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving platelet transfusion routinely \u2014 contraindicated unless active bleeding or invasive procedure; can worsen thrombosis.",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing with TTP \u2014 TTP has severe neurological symptoms and low ADAMTS13; HUS has bloody diarrhea + normal ADAMTS13.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing with TTP \u2014 TTP has severe neurological symptoms and low ADAMTS13; HUS has bloody diarrhea + normal ADAMTS13.",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting vaccinate against meningococcus before eculizumab \u2014 C5 inhibition increases meningococcal risk.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting vaccinate against meningococcus before eculizumab \u2014 C5 inhibition increases meningococcal risk.",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using heparin/antiplatelets in typical HUS \u2014 no role; may worsen bleeding.",
+    "truth": "\u274c TRAP",
+    "exp": "Using heparin/antiplatelets in typical HUS \u2014 no role; may worsen bleeding.",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing pneumococcal HUS \u2014 occurs after pneumonia/meningitis; different management (antibiotics indicated, not contraindicated).",
+    "truth": "\u274c TRAP",
+    "exp": "Missing pneumococcal HUS \u2014 occurs after pneumonia/meningitis; different management (antibiotics indicated, not contraindicated).",
+    "marks": "Trap from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Negative Coombs test = non-immune hemolysis = HUS/TTP, not autoimmune hemolytic anemia.",
+    "truth": "\u2713 FACT",
+    "exp": "Negative Coombs test = non-immune hemolysis = HUS/TTP, not autoimmune hemolytic anemia.",
+    "marks": "High-yield from HUS"
+  },
+  {
+    "topic": "HUS",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Schistocytes on peripheral smear = microangiopathic hemolytic anemia = pathognomonic.",
+    "truth": "\u2713 FACT",
+    "exp": "Schistocytes on peripheral smear = microangiopathic hemolytic anemia = pathognomonic.",
+    "marks": "High-yield from HUS"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Calling it \"physiological jaundice\" beyond 14 days \u2014 ANY jaundice >14 days in a breastfed infant or >21 days in a formula-fed infant is pathological and needs workup.",
+    "truth": "\u274c TRAP",
+    "exp": "Calling it \"physiological jaundice\" beyond 14 days \u2014 ANY jaundice >14 days in a breastfed infant or >21 days in a formula-fed infant is pathological and needs workup.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing conjugated vs unconjugated hyperbilirubinemia \u2014 dark urine and pale stools = conjugated = obstructive = biliary atresia or neonatal hepatitis.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing conjugated vs unconjugated hyperbilirubinemia \u2014 dark urine and pale stools = conjugated = obstructive = biliary atresia or neonatal hepatitis.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying Kasai beyond 60 days \u2014 success rate drops dramatically; timing is the single most important prognostic factor.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying Kasai beyond 60 days \u2014 success rate drops dramatically; timing is the single most important prognostic factor.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting BASM syndrome associations \u2014 polysplenia, situs inversus, malrotation, cardiac defects, preduodenal portal vein.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting BASM syndrome associations \u2014 polysplenia, situs inversus, malrotation, cardiac defects, preduodenal portal vein.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing with neonatal hepatitis \u2014 both have conjugated hyperbilirubinemia; HIDA scan and liver biopsy help differentiate.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing with neonatal hepatitis \u2014 both have conjugated hyperbilirubinemia; HIDA scan and liver biopsy help differentiate.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not giving vitamin K pre-operatively \u2014 coagulopathy from vitamin K deficiency must be corrected before surgery.",
+    "truth": "\u274c TRAP",
+    "exp": "Not giving vitamin K pre-operatively \u2014 coagulopathy from vitamin K deficiency must be corrected before surgery.",
+    "marks": "Trap from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Acholic stools = most specific sign; stool color card screening programs use this.",
+    "truth": "\u2713 FACT",
+    "exp": "Acholic stools = most specific sign; stool color card screening programs use this.",
+    "marks": "High-yield from Biliary Atresia"
+  },
+  {
+    "topic": "Biliary Atresia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Triangular cord sign (>4 mm fibrous cone at porta hepatis) on USG = highly specific for BA.",
+    "truth": "\u2713 FACT",
+    "exp": "Triangular cord sign (>4 mm fibrous cone at porta hepatis) on USG = highly specific for BA.",
+    "marks": "High-yield from Biliary Atresia"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving insulin bolus \u2014 NEVER bolus insulin in DKA; use continuous infusion 0.05-0.1 U/kg/hr ONLY. Bolus causes rapid osmotic shifts and cerebral edema.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving insulin bolus \u2014 NEVER bolus insulin in DKA; use continuous infusion 0.05-0.1 U/kg/hr ONLY. Bolus causes rapid osmotic shifts and cerebral edema.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Starting insulin before fluids \u2014 insulin drives K+ intracellularly; if dehydrated, this worsens hypovolemia and can cause shock. Give fluids FIRST for 1-2 hours.",
+    "truth": "\u274c TRAP",
+    "exp": "Starting insulin before fluids \u2014 insulin drives K+ intracellularly; if dehydrated, this worsens hypovolemia and can cause shock. Give fluids FIRST for 1-2 hours.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving bicarbonate routinely \u2014 AVOID unless pH <6.9 with hemodynamic instability; bicarbonate can worsen cerebral edema and cause paradoxical CNS acidosis.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving bicarbonate routinely \u2014 AVOID unless pH <6.9 with hemodynamic instability; bicarbonate can worsen cerebral edema and cause paradoxical CNS acidosis.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Stopping insulin when glucose normalizes \u2014 continue insulin until acidosis resolves (pH >7.30, HCO3 >18), adding dextrose to prevent hypoglycemia.",
+    "truth": "\u274c TRAP",
+    "exp": "Stopping insulin when glucose normalizes \u2014 continue insulin until acidosis resolves (pH >7.30, HCO3 >18), adding dextrose to prevent hypoglycemia.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting potassium \u2014 DKA patients are TOTAL BODY K+ depleted despite normal/high serum K+. Add K+ once urine output is confirmed and K+ <5.5.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting potassium \u2014 DKA patients are TOTAL BODY K+ depleted despite normal/high serum K+. Add K+ once urine output is confirmed and K+ <5.5.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Overly rapid fluid resuscitation \u2014 increases risk of cerebral edema; replace deficit over 48 hours, not 24.",
+    "truth": "\u274c TRAP",
+    "exp": "Overly rapid fluid resuscitation \u2014 increases risk of cerebral edema; replace deficit over 48 hours, not 24.",
+    "marks": "Trap from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Kussmaul breathing = deep, rapid, sighing respirations = respiratory compensation for metabolic acidosis.",
+    "truth": "\u2713 FACT",
+    "exp": "Kussmaul breathing = deep, rapid, sighing respirations = respiratory compensation for metabolic acidosis.",
+    "marks": "High-yield from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Cerebral edema = most feared complication; treat with mannitol or 3% saline.",
+    "truth": "\u2713 FACT",
+    "exp": "Cerebral edema = most feared complication; treat with mannitol or 3% saline.",
+    "marks": "High-yield from DKA"
+  },
+  {
+    "topic": "DKA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Serum K+ may be normal or high initially despite total body depletion \u2014 acidosis shifts K+ extracellularly.",
+    "truth": "\u2713 FACT",
+    "exp": "Serum K+ may be normal or high initially despite total body depletion \u2014 acidosis shifts K+ extracellularly.",
+    "marks": "High-yield from DKA"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong ORS sodium content \u2014 75 mEq/L in low-osmolarity ORS (NOT 90 mEq/L of old ORS).",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong ORS sodium content \u2014 75 mEq/L in low-osmolarity ORS (NOT 90 mEq/L of old ORS).",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting zinc \u2014 10-20 mg/day for 10-14 days is standard of care and reduces duration.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting zinc \u2014 10-20 mg/day for 10-14 days is standard of care and reduces duration.",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving antibiotics for viral diarrhea \u2014 no benefit, increases resistance and complications.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving antibiotics for viral diarrhea \u2014 no benefit, increases resistance and complications.",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using antimotility agents in children \u2014 contraindicated, especially in dysentery.",
+    "truth": "\u274c TRAP",
+    "exp": "Using antimotility agents in children \u2014 contraindicated, especially in dysentery.",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Stopping feeds \u2014 NEVER stop breastfeeding; continue age-appropriate diet.",
+    "truth": "\u274c TRAP",
+    "exp": "Stopping feeds \u2014 NEVER stop breastfeeding; continue age-appropriate diet.",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong fluid for Plan C \u2014 Ringer Lactate preferred over NS (LR has lactate which buffers acidosis).",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong fluid for Plan C \u2014 Ringer Lactate preferred over NS (LR has lactate which buffers acidosis).",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Hypernatremic dehydration management \u2014 treat with 0.45% NS or ORS, NOT rapid free water; correct slowly over 48h to avoid cerebral edema.",
+    "truth": "\u274c TRAP",
+    "exp": "Hypernatremic dehydration management \u2014 treat with 0.45% NS or ORS, NOT rapid free water; correct slowly over 48h to avoid cerebral edema.",
+    "marks": "Trap from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Skin pinch is the most reliable sign of dehydration across all age groups.",
+    "truth": "\u2713 FACT",
+    "exp": "Skin pinch is the most reliable sign of dehydration across all age groups.",
+    "marks": "High-yield from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Cholera stools = rice-water stools \u2014 massive watery diarrhea with flecks of mucus; treat with ORS + Azithromycin.",
+    "truth": "\u2713 FACT",
+    "exp": "Cholera stools = rice-water stools \u2014 massive watery diarrhea with flecks of mucus; treat with ORS + Azithromycin.",
+    "marks": "High-yield from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "Dehydration / Diarrhoea",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> ORS mechanism = glucose-sodium cotransport (SGLT1) in the small intestine; 1:1 molar ratio optimizes absorption.",
+    "truth": "\u2713 FACT",
+    "exp": "ORS mechanism = glucose-sodium cotransport (SGLT1) in the small intestine; 1:1 molar ratio optimizes absorption.",
+    "marks": "High-yield from Dehydration / Diarrhoea"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Treating UTI based on dipstick alone \u2014 ALWAYS send urine culture before starting antibiotics in first UTI.",
+    "truth": "\u274c TRAP",
+    "exp": "Treating UTI based on dipstick alone \u2014 ALWAYS send urine culture before starting antibiotics in first UTI.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing nonspecific presentation in infants \u2014 fever without source in &lt;2 years = UTI until proven otherwise.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing nonspecific presentation in infants \u2014 fever without source in &lt;2 years = UTI until proven otherwise.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong duration \u2014 cystitis = 3-5 days; pyelonephritis = 10-14 days. Too short = recurrence; too long = resistance.",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong duration \u2014 cystitis = 3-5 days; pyelonephritis = 10-14 days. Too short = recurrence; too long = resistance.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting prophylaxis for recurrent UTI \u2014 nightly low-dose antibiotic (Nitrofurantoin or Cotrimoxazole) for 3-6 months.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting prophylaxis for recurrent UTI \u2014 nightly low-dose antibiotic (Nitrofurantoin or Cotrimoxazole) for 3-6 months.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not investigating VUR after first febrile UTI in &lt;2 years \u2014 USG KUB + MCU indicated.",
+    "truth": "\u274c TRAP",
+    "exp": "Not investigating VUR after first febrile UTI in &lt;2 years \u2014 USG KUB + MCU indicated.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using nitrofurantoin for pyelonephritis \u2014 poor tissue penetration; reserve for cystitis only.",
+    "truth": "\u274c TRAP",
+    "exp": "Using nitrofurantoin for pyelonephritis \u2014 poor tissue penetration; reserve for cystitis only.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not screening siblings of VUR patients \u2014 30% prevalence in siblings.",
+    "truth": "\u274c TRAP",
+    "exp": "Not screening siblings of VUR patients \u2014 30% prevalence in siblings.",
+    "marks": "Trap from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> E. coli P-fimbriae = most important virulence factor; adheres to uroepithelium.",
+    "truth": "\u2713 FACT",
+    "exp": "E. coli P-fimbriae = most important virulence factor; adheres to uroepithelium.",
+    "marks": "High-yield from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> VUR + UTI = renal scarring = hypertension + CKD. Prevention is key.",
+    "truth": "\u2713 FACT",
+    "exp": "VUR + UTI = renal scarring = hypertension + CKD. Prevention is key.",
+    "marks": "High-yield from UTI"
+  },
+  {
+    "topic": "UTI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Suprapubic aspiration = gold standard for urine collection in infants; ANY growth = UTI.",
+    "truth": "\u2713 FACT",
+    "exp": "Suprapubic aspiration = gold standard for urine collection in infants; ANY growth = UTI.",
+    "marks": "High-yield from UTI"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting sibling screening \u2014 30% of siblings have VUR.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting sibling screening \u2014 30% of siblings have VUR.",
+    "marks": "Trap from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using nitrofurantoin for prophylaxis in infants  \u2014 contraindicated; use Cephalexin or Amoxicillin instead. Cotrimoxazole is also contraindicated in infants <2 months due to risk of kernicterus.",
+    "truth": "\u274c TRAP",
+    "exp": "Using nitrofurantoin for prophylaxis in infants  \u2014 contraindicated; use Cephalexin or Amoxicillin instead. Cotrimoxazole is also contraindicated in infants <2 months due to risk of kernicterus.",
+    "marks": "Trap from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing MCU vs DMSA \u2014 MCU diagnoses VUR; DMSA detects scarring.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing MCU vs DMSA \u2014 MCU diagnoses VUR; DMSA detects scarring.",
+    "marks": "Trap from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Thinking all VUR needs surgery \u2014 Grades I-II resolve spontaneously in 80%.",
+    "truth": "\u274c TRAP",
+    "exp": "Thinking all VUR needs surgery \u2014 Grades I-II resolve spontaneously in 80%.",
+    "marks": "Trap from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing secondary VUR causes \u2014 PUV in males, neurogenic bladder, constipation.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing secondary VUR causes \u2014 PUV in males, neurogenic bladder, constipation.",
+    "marks": "Trap from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Deflux = dextranomer/hyaluronic acid injected subureterally; outpatient procedure.",
+    "truth": "\u2713 FACT",
+    "exp": "Deflux = dextranomer/hyaluronic acid injected subureterally; outpatient procedure.",
+    "marks": "High-yield from VUR"
+  },
+  {
+    "topic": "VUR",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Lateral ectopia of ureteric orifice = embryological basis of primary VUR.",
+    "truth": "\u2713 FACT",
+    "exp": "Lateral ectopia of ureteric orifice = embryological basis of primary VUR.",
+    "marks": "High-yield from VUR"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing RTA with diarrhea-induced metabolic acidosis \u2014 both have NAGMA; urine anion gap is negative in diarrhea (appropriate NH\u2084\u207a excretion) and positive in Type I RTA.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing RTA with diarrhea-induced metabolic acidosis \u2014 both have NAGMA; urine anion gap is negative in diarrhea (appropriate NH\u2084\u207a excretion) and positive in Type I RTA.",
+    "marks": "Trap from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting Type IV RTA causes hyperkalemia (not hypokalemia like Types I & II).",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting Type IV RTA causes hyperkalemia (not hypokalemia like Types I & II).",
+    "marks": "Trap from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using potassium citrate in Type IV \u2014 contraindicated; worsens hyperkalemia.",
+    "truth": "\u274c TRAP",
+    "exp": "Using potassium citrate in Type IV \u2014 contraindicated; worsens hyperkalemia.",
+    "marks": "Trap from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing  Fanconi syndrome association with Type II \u2014 glycosuria + aminoaciduria + phosphaturia + RTA = Fanconi.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing  Fanconi syndrome association with Type II \u2014 glycosuria + aminoaciduria + phosphaturia + RTA = Fanconi.",
+    "marks": "Trap from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Type II RTA requires 5-15 mEq/kg/day alkali (much higher than Type I) because of massive HCO\u2083\u207b wasting.",
+    "truth": "\u274c TRAP",
+    "exp": "Type II RTA requires 5-15 mEq/kg/day alkali (much higher than Type I) because of massive HCO\u2083\u207b wasting.",
+    "marks": "Trap from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Urine pH >5.5 despite systemic acidosis = pathognomonic of distal (Type I) RTA.",
+    "truth": "\u2713 FACT",
+    "exp": "Urine pH >5.5 despite systemic acidosis = pathognomonic of distal (Type I) RTA.",
+    "marks": "High-yield from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Amphotericin B is the classic drug causing Type I RTA (damages distal tubule H\u207a pump).",
+    "truth": "\u2713 FACT",
+    "exp": "Amphotericin B is the classic drug causing Type I RTA (damages distal tubule H\u207a pump).",
+    "marks": "High-yield from RTA"
+  },
+  {
+    "topic": "RTA",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Acetazolamide causes Type II RTA (inhibits proximal carbonic anhydrase).",
+    "truth": "\u2713 FACT",
+    "exp": "Acetazolamide causes Type II RTA (inhibits proximal carbonic anhydrase).",
+    "marks": "High-yield from RTA"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing retractile testis \u2014 this is NORMAL and does NOT need surgery. Differentiate by whether testis stays down after traction.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing retractile testis \u2014 this is NORMAL and does NOT need surgery. Differentiate by whether testis stays down after traction.",
+    "marks": "Trap from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying orchidopexy beyond 12 months \u2014 germ cell loss begins at 6-12 months; earlier surgery preserves fertility.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying orchidopexy beyond 12 months \u2014 germ cell loss begins at 6-12 months; earlier surgery preserves fertility.",
+    "marks": "Trap from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting DSD workup in bilateral non-palpable testes \u2014 check karyotype and 17-OHP.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting DSD workup in bilateral non-palpable testes \u2014 check karyotype and 17-OHP.",
+    "marks": "Trap from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Thinking orchidopexy eliminates malignancy risk \u2014 risk is reduced but NOT eliminated; lifelong self-examination needed.",
+    "truth": "\u274c TRAP",
+    "exp": "Thinking orchidopexy eliminates malignancy risk \u2014 risk is reduced but NOT eliminated; lifelong self-examination needed.",
+    "marks": "Trap from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Wrong timing \u2014 6-12 months is optimal for orchidopexy; not neonatal and not delayed to childhood.",
+    "truth": "\u274c TRAP",
+    "exp": "Wrong timing \u2014 6-12 months is optimal for orchidopexy; not neonatal and not delayed to childhood.",
+    "marks": "Trap from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 30% of preterm infants have cryptorchidism vs 3-5% term infants.",
+    "truth": "\u2713 FACT",
+    "exp": "30% of preterm infants have cryptorchidism vs 3-5% term infants.",
+    "marks": "High-yield from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 90% have associated inguinal hernia (patent processus vaginalis).",
+    "truth": "\u2713 FACT",
+    "exp": "90% have associated inguinal hernia (patent processus vaginalis).",
+    "marks": "High-yield from Undescended Testis"
+  },
+  {
+    "topic": "Undescended Testis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> hCG success rate is only 15-20%; surgery is preferred.",
+    "truth": "\u2713 FACT",
+    "exp": "hCG success rate is only 15-20%; surgery is preferred.",
+    "marks": "High-yield from Undescended Testis"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Assigning sex immediately at birth without investigation \u2014 this is a medical and social emergency; take time.",
+    "truth": "\u274c TRAP",
+    "exp": "Assigning sex immediately at birth without investigation \u2014 this is a medical and social emergency; take time.",
+    "marks": "Trap from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing salt-wasting CAH \u2014 virilized female with vomiting/shock at 7-14 days = emergency; start steroids immediately.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing salt-wasting CAH \u2014 virilized female with vomiting/shock at 7-14 days = emergency; start steroids immediately.",
+    "marks": "Trap from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting palpable gonads = testes (ovaries do not descend) \u2192 points to 46,XY DSD.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting palpable gonads = testes (ovaries do not descend) \u2192 points to 46,XY DSD.",
+    "marks": "Trap from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not checking 17-OHP \u2014 elevated in 95% of ambiguous genitalia cases (21-hydroxylase deficiency).",
+    "truth": "\u274c TRAP",
+    "exp": "Not checking 17-OHP \u2014 elevated in 95% of ambiguous genitalia cases (21-hydroxylase deficiency).",
+    "marks": "Trap from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Performing circumcision before diagnosis \u2014 may compromise future surgical options.",
+    "truth": "\u274c TRAP",
+    "exp": "Performing circumcision before diagnosis \u2014 may compromise future surgical options.",
+    "marks": "Trap from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 46,XX CAH is the most common cause of ambiguous genitalia (~95% of cases).",
+    "truth": "\u2713 FACT",
+    "exp": "46,XX CAH is the most common cause of ambiguous genitalia (~95% of cases).",
+    "marks": "High-yield from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Karyotype is the first and most urgent investigation.",
+    "truth": "\u2713 FACT",
+    "exp": "Karyotype is the first and most urgent investigation.",
+    "marks": "High-yield from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Ambiguous Genitalia / DSD",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 5\u03b1-reductase deficiency \u2014 ambiguous genitalia at birth, but virilizes at puberty (high T:DHT ratio).",
+    "truth": "\u2713 FACT",
+    "exp": "5\u03b1-reductase deficiency \u2014 ambiguous genitalia at birth, but virilizes at puberty (high T:DHT ratio).",
+    "marks": "High-yield from Ambiguous Genitalia / DSD"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing pre-renal vs intrinsic AKI \u2014 FENa 2% and urine Na >40 = intrinsic.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing pre-renal vs intrinsic AKI \u2014 FENa 2% and urine Na >40 = intrinsic.",
+    "marks": "Trap from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving NSAIDs in AKI \u2014 contraindicated; they worsen renal perfusion.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving NSAIDs in AKI \u2014 contraindicated; they worsen renal perfusion.",
+    "marks": "Trap from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Fluid resuscitation in intrinsic AKI with fluid overload \u2014 assess volume status first; fluid challenge is for pre-renal, not intrinsic.",
+    "truth": "\u274c TRAP",
+    "exp": "Fluid resuscitation in intrinsic AKI with fluid overload \u2014 assess volume status first; fluid challenge is for pre-renal, not intrinsic.",
+    "marks": "Trap from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing PUV as a cause of post-renal AKI in male infants \u2014 weak stream, palpable bladder, hydronephrosis.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing PUV as a cause of post-renal AKI in male infants \u2014 weak stream, palpable bladder, hydronephrosis.",
+    "marks": "Trap from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying dialysis \u2014 remember AEIOU indications.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying dialysis \u2014 remember AEIOU indications.",
+    "marks": "Trap from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Dehydration is the most common cause of AKI in children globally.",
+    "truth": "\u2713 FACT",
+    "exp": "Dehydration is the most common cause of AKI in children globally.",
+    "marks": "High-yield from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> HUS is the most common cause of intrinsic AKI in young children.",
+    "truth": "\u2713 FACT",
+    "exp": "HUS is the most common cause of intrinsic AKI in young children.",
+    "marks": "High-yield from Acute Kidney Injury"
+  },
+  {
+    "topic": "Acute Kidney Injury",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Peritoneal dialysis is preferred over hemodialysis in children (better hemodynamic tolerance, no anticoagulation).",
+    "truth": "\u2713 FACT",
+    "exp": "Peritoneal dialysis is preferred over hemodialysis in children (better hemodynamic tolerance, no anticoagulation).",
+    "marks": "High-yield from Acute Kidney Injury"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing salt-wasting crisis at 7-14 days \u2014 virilized female with vomiting and shock = CAH emergency; start steroids immediately.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing salt-wasting crisis at 7-14 days \u2014 virilized female with vomiting and shock = CAH emergency; start steroids immediately.",
+    "marks": "Trap from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using dexamethasone as first-line in infants \u2014 hydrocortisone is preferred (shorter half-life, growth-friendly).",
+    "truth": "\u274c TRAP",
+    "exp": "Using dexamethasone as first-line in infants \u2014 hydrocortisone is preferred (shorter half-life, growth-friendly).",
+    "marks": "Trap from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting sick-day rules and emergency injection \u2014 parents MUST have injectable hydrocortisone.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting sick-day rules and emergency injection \u2014 parents MUST have injectable hydrocortisone.",
+    "marks": "Trap from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Overtreatment with glucocorticoids \u2014 causes growth suppression and obesity; target 17-OHP in upper-normal range.",
+    "truth": "\u274c TRAP",
+    "exp": "Overtreatment with glucocorticoids \u2014 causes growth suppression and obesity; target 17-OHP in upper-normal range.",
+    "marks": "Trap from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing 11\u03b2-hydroxylase deficiency \u2014 causes hypertension (excess 11-deoxycorticosterone) rather than salt-wasting.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing 11\u03b2-hydroxylase deficiency \u2014 causes hypertension (excess 11-deoxycorticosterone) rather than salt-wasting.",
+    "marks": "Trap from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> 21-hydroxylase deficiency = >90% of CAH.",
+    "truth": "\u2713 FACT",
+    "exp": "21-hydroxylase deficiency = >90% of CAH.",
+    "marks": "High-yield from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Females are diagnosed at birth (ambiguous genitalia); males may be missed until salt-wasting crisis.",
+    "truth": "\u2713 FACT",
+    "exp": "Females are diagnosed at birth (ambiguous genitalia); males may be missed until salt-wasting crisis.",
+    "marks": "High-yield from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Congenital Adrenal Hyperplasia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Newborn screening for 17-OHP is mandatory in many countries.",
+    "truth": "\u2713 FACT",
+    "exp": "Newborn screening for 17-OHP is mandatory in many countries.",
+    "marks": "High-yield from Congenital Adrenal Hyperplasia"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Relying on ceruloplasmin alone \u2014 it is low in 90% but NOT specific; 24-hour urine copper and hepatic copper are more reliable.",
+    "truth": "\u274c TRAP",
+    "exp": "Relying on ceruloplasmin alone \u2014 it is low in 90% but NOT specific; 24-hour urine copper and hepatic copper are more reliable.",
+    "marks": "Trap from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting pyridoxine with penicillamine \u2014 penicillamine is anti-pyridoxine and can cause neuropathy.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting pyridoxine with penicillamine \u2014 penicillamine is anti-pyridoxine and can cause neuropathy.",
+    "marks": "Trap from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using zinc as initial monotherapy in symptomatic patients \u2014 zinc is for maintenance or presymptomatic patients; chelators are first-line for symptomatic disease.",
+    "truth": "\u274c TRAP",
+    "exp": "Using zinc as initial monotherapy in symptomatic patients \u2014 zinc is for maintenance or presymptomatic patients; chelators are first-line for symptomatic disease.",
+    "marks": "Trap from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing Coombs-negative hemolytic anemia \u2014 acute hemolysis + liver failure = Wilson disease until proven otherwise.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing Coombs-negative hemolytic anemia \u2014 acute hemolysis + liver failure = Wilson disease until proven otherwise.",
+    "marks": "Trap from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not screening siblings \u2014 autosomal recessive; all siblings need evaluation.",
+    "truth": "\u274c TRAP",
+    "exp": "Not screening siblings \u2014 autosomal recessive; all siblings need evaluation.",
+    "marks": "Trap from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Sunflower cataract = virtually pathognomonic for Wilson disease.",
+    "truth": "\u2713 FACT",
+    "exp": "Sunflower cataract = virtually pathognomonic for Wilson disease.",
+    "marks": "High-yield from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> KF rings are present in >95% of neurologic presentations but only 50-60% of hepatic presentations.",
+    "truth": "\u2713 FACT",
+    "exp": "KF rings are present in >95% of neurologic presentations but only 50-60% of hepatic presentations.",
+    "marks": "High-yield from Wilson's Disease"
+  },
+  {
+    "topic": "Wilson's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Low serum copper does NOT rule out Wilson \u2014 copper is trapped in tissues, not circulating.",
+    "truth": "\u2713 FACT",
+    "exp": "Low serum copper does NOT rule out Wilson \u2014 copper is trapped in tissues, not circulating.",
+    "marks": "High-yield from Wilson's Disease"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing anti-HBc with anti-HBs \u2014 Anti-HBc indicates past/present infection; Anti-HBs indicates immunity. Vaccine produces anti-HBs but NOT anti-HBc.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing anti-HBc with anti-HBs \u2014 Anti-HBc indicates past/present infection; Anti-HBs indicates immunity. Vaccine produces anti-HBs but NOT anti-HBc.",
+    "marks": "Trap from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing HBIG within 12 hours for infants of HBsAg+ mothers \u2014 delayed administration reduces efficacy dramatically.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing HBIG within 12 hours for infants of HBsAg+ mothers \u2014 delayed administration reduces efficacy dramatically.",
+    "marks": "Trap from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting that 90% of perinatally infected infants become chronic carriers \u2014 this is why perinatal prophylaxis is critical.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting that 90% of perinatally infected infants become chronic carriers \u2014 this is why perinatal prophylaxis is critical.",
+    "marks": "Trap from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using interferon as first-line in children \u2014 oral antivirals (Entecavir, Tenofovir) are preferred due to better tolerability.",
+    "truth": "\u274c TRAP",
+    "exp": "Using interferon as first-line in children \u2014 oral antivirals (Entecavir, Tenofovir) are preferred due to better tolerability.",
+    "marks": "Trap from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Thinking breastfeeding is contraindicated \u2014 breastfeeding is safe unless nipples are cracked/bleeding.",
+    "truth": "\u274c TRAP",
+    "exp": "Thinking breastfeeding is contraindicated \u2014 breastfeeding is safe unless nipples are cracked/bleeding.",
+    "marks": "Trap from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> HBeAg = marker of high replication and infectivity.",
+    "truth": "\u2713 FACT",
+    "exp": "HBeAg = marker of high replication and infectivity.",
+    "marks": "High-yield from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Window period = HBsAg negative, anti-HBs negative, IgM anti-HBc positive.",
+    "truth": "\u2713 FACT",
+    "exp": "Window period = HBsAg negative, anti-HBs negative, IgM anti-HBc positive.",
+    "marks": "High-yield from Hepatitis B"
+  },
+  {
+    "topic": "Hepatitis B",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Anti-HBs >10 mIU/mL = protective immunity.",
+    "truth": "\u2713 FACT",
+    "exp": "Anti-HBs >10 mIU/mL = protective immunity.",
+    "marks": "High-yield from Hepatitis B"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing CN with Gilbert syndrome \u2014 Gilbert has UGT1A1 partial deficiency but bilirubin <6 mg/dL, adult onset, no kernicterus.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing CN with Gilbert syndrome \u2014 Gilbert has UGT1A1 partial deficiency but bilirubin <6 mg/dL, adult onset, no kernicterus.",
+    "marks": "Trap from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting phenobarbital response distinguishes Type I vs II \u2014 Type I has NO response; Type II shows >25% reduction.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting phenobarbital response distinguishes Type I vs II \u2014 Type I has NO response; Type II shows >25% reduction.",
+    "marks": "Trap from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing liver transplantation as definitive cure for Type I \u2014 do NOT delay; kernicterus is irreversible.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing liver transplantation as definitive cure for Type I \u2014 do NOT delay; kernicterus is irreversible.",
+    "marks": "Trap from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using phototherapy as definitive treatment for Type I \u2014 it is temporary only; transplant is definitive.",
+    "truth": "\u274c TRAP",
+    "exp": "Using phototherapy as definitive treatment for Type I \u2014 it is temporary only; transplant is definitive.",
+    "marks": "Trap from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not warning about fasting and illness in Type II \u2014 these can precipitate bilirubin rise and kernicterus risk.",
+    "truth": "\u274c TRAP",
+    "exp": "Not warning about fasting and illness in Type II \u2014 these can precipitate bilirubin rise and kernicterus risk.",
+    "marks": "Trap from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> UGT1A1 = enzyme deficient in both Crigler-Najjar and Gilbert syndrome.",
+    "truth": "\u2713 FACT",
+    "exp": "UGT1A1 = enzyme deficient in both Crigler-Najjar and Gilbert syndrome.",
+    "marks": "High-yield from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Crigler-Najjar Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Unconjugated hyperbilirubinemia with normal LFTs and no hemolysis = think Crigler-Najjar or Gilbert.",
+    "truth": "\u2713 FACT",
+    "exp": "Unconjugated hyperbilirubinemia with normal LFTs and no hemolysis = think Crigler-Najjar or Gilbert.",
+    "marks": "High-yield from Crigler-Najjar Syndrome"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Waiting for symptoms before treating \u2014 Phase 1 is often asymptomatic; treat based on dose and serum level, NOT symptoms.",
+    "truth": "\u274c TRAP",
+    "exp": "Waiting for symptoms before treating \u2014 Phase 1 is often asymptomatic; treat based on dose and serum level, NOT symptoms.",
+    "marks": "Trap from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing the 8-hour window \u2014 NAC is most effective if given within 8 hours; do NOT delay for charcoal or lab results if >8 hours since ingestion.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing the 8-hour window \u2014 NAC is most effective if given within 8 hours; do NOT delay for charcoal or lab results if >8 hours since ingestion.",
+    "marks": "Trap from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using the wrong NAC dose \u2014 total IV dose is 300 mg/kg (150 + 50 + 100); oral is 1330 mg/kg total.",
+    "truth": "\u274c TRAP",
+    "exp": "Using the wrong NAC dose \u2014 total IV dose is 300 mg/kg (150 + 50 + 100); oral is 1330 mg/kg total.",
+    "marks": "Trap from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting activated charcoal within 1-2 hours \u2014 can reduce absorption by 50-90%.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting activated charcoal within 1-2 hours \u2014 can reduce absorption by 50-90%.",
+    "marks": "Trap from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving FFP to correct INR prophylactically \u2014 only if active bleeding or invasive procedure needed; FFP masks the prognostic value of INR.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving FFP to correct INR prophylactically \u2014 only if active bleeding or invasive procedure needed; FFP masks the prognostic value of INR.",
+    "marks": "Trap from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Rumack-Matthew nomogram applies ONLY to single acute ingestions between 4-24 hours.",
+    "truth": "\u2713 FACT",
+    "exp": "Rumack-Matthew nomogram applies ONLY to single acute ingestions between 4-24 hours.",
+    "marks": "High-yield from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Centrilobular (zone 3) hepatic necrosis is characteristic \u2014 NAPQI forms here due to highest CYP2E1 concentration.",
+    "truth": "\u2713 FACT",
+    "exp": "Centrilobular (zone 3) hepatic necrosis is characteristic \u2014 NAPQI forms here due to highest CYP2E1 concentration.",
+    "marks": "High-yield from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Paracetamol Poisoning",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Chronic supratherapeutic dosing (>75 mg/kg/day) can cause toxicity \u2014 especially in malnourished or fasting children.",
+    "truth": "\u2713 FACT",
+    "exp": "Chronic supratherapeutic dosing (>75 mg/kg/day) can cause toxicity \u2014 especially in malnourished or fasting children.",
+    "marks": "High-yield from Paracetamol Poisoning"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Diagnosing CD without biopsy in children \u2014 ESPGHAN guidelines allow serology-only diagnosis in selected symptomatic children with tTG >10x ULN and positive EMA, but biopsy remains gold standard in most settings.",
+    "truth": "\u274c TRAP",
+    "exp": "Diagnosing CD without biopsy in children \u2014 ESPGHAN guidelines allow serology-only diagnosis in selected symptomatic children with tTG >10x ULN and positive EMA, but biopsy remains gold standard in most settings.",
+    "marks": "Trap from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing IgA deficiency \u2014 always check total serum IgA; if deficient, use IgG-based tests (DGP IgG, tTG IgG).",
+    "truth": "\u274c TRAP",
+    "exp": "Missing IgA deficiency \u2014 always check total serum IgA; if deficient, use IgG-based tests (DGP IgG, tTG IgG).",
+    "marks": "Trap from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Starting GFD before completing investigations \u2014 serology and biopsy require ongoing gluten exposure for accuracy.",
+    "truth": "\u274c TRAP",
+    "exp": "Starting GFD before completing investigations \u2014 serology and biopsy require ongoing gluten exposure for accuracy.",
+    "marks": "Trap from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Thinking oats are universally safe \u2014 pure oats are safe but cross-contamination is common.",
+    "truth": "\u274c TRAP",
+    "exp": "Thinking oats are universally safe \u2014 pure oats are safe but cross-contamination is common.",
+    "marks": "Trap from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting hyposplenism and vaccination \u2014 pneumococcal, meningococcal, Hib, annual influenza.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting hyposplenism and vaccination \u2014 pneumococcal, meningococcal, Hib, annual influenza.",
+    "marks": "Trap from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> HLA-DQ2 present in 90-95%; HLA-DQ8 in 5-10%. If BOTH negative, CD is virtually excluded.",
+    "truth": "\u2713 FACT",
+    "exp": "HLA-DQ2 present in 90-95%; HLA-DQ8 in 5-10%. If BOTH negative, CD is virtually excluded.",
+    "marks": "High-yield from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Dermatitis herpetiformis is the cutaneous manifestation of CD \u2014 treat with GFD + dapsone.",
+    "truth": "\u2713 FACT",
+    "exp": "Dermatitis herpetiformis is the cutaneous manifestation of CD \u2014 treat with GFD + dapsone.",
+    "marks": "High-yield from Coeliac Disease"
+  },
+  {
+    "topic": "Coeliac Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Refractory CD Type II has clonal IELs and high risk of lymphoma \u2014 poor prognosis.",
+    "truth": "\u2713 FACT",
+    "exp": "Refractory CD Type II has clonal IELs and high risk of lymphoma \u2014 poor prognosis.",
+    "marks": "High-yield from Coeliac Disease"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Biopsying a classic Wilms tumor before surgery \u2014 risk of tumor spillage upstages to Stage III. Biopsy only if atypical.",
+    "truth": "\u274c TRAP",
+    "exp": "Biopsying a classic Wilms tumor before surgery \u2014 risk of tumor spillage upstages to Stage III. Biopsy only if atypical.",
+    "marks": "Trap from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting acquired vWD \u2014 check coagulation before surgery; tumor absorbs vWF.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting acquired vWD \u2014 check coagulation before surgery; tumor absorbs vWF.",
+    "marks": "Trap from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing Wilms tumor with neuroblastoma \u2014 Wilms is intrarenal, smooth, does NOT cross midline; neuroblastoma is extrarenal, irregular, often crosses midline, causes periorbital ecchymosis and opsoclonus-myoclonus.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing Wilms tumor with neuroblastoma \u2014 Wilms is intrarenal, smooth, does NOT cross midline; neuroblastoma is extrarenal, irregular, often crosses midline, causes periorbital ecchymosis and opsoclonus-myoclonus.",
+    "marks": "Trap from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing hypertension \u2014 25% of Wilms tumor patients have HTN due to renin secretion.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing hypertension \u2014 25% of Wilms tumor patients have HTN due to renin secretion.",
+    "marks": "Trap from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not screening contralateral kidney \u2014 5-10% are bilateral.",
+    "truth": "\u274c TRAP",
+    "exp": "Not screening contralateral kidney \u2014 5-10% are bilateral.",
+    "marks": "Trap from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> WAGR, Denys-Drash, Beckwith-Wiedemann syndromes \u2014 know the associated features and chromosomal locations.",
+    "truth": "\u2713 FACT",
+    "exp": "WAGR, Denys-Drash, Beckwith-Wiedemann syndromes \u2014 know the associated features and chromosomal locations.",
+    "marks": "High-yield from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Lung is the most common site of metastasis.",
+    "truth": "\u2713 FACT",
+    "exp": "Lung is the most common site of metastasis.",
+    "marks": "High-yield from Wilms' Tumor"
+  },
+  {
+    "topic": "Wilms' Tumor",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Varicocele that does NOT decompress supine = left renal vein obstruction by tumor thrombus.",
+    "truth": "\u2713 FACT",
+    "exp": "Varicocele that does NOT decompress supine = left renal vein obstruction by tumor thrombus.",
+    "marks": "High-yield from Wilms' Tumor"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing failure to pass meconium >48 hours \u2014 this is the hallmark in neonates.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing failure to pass meconium >48 hours \u2014 this is the hallmark in neonates.",
+    "marks": "Trap from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Performing barium enema in a sick neonate with enterocolitis \u2014 risk of perforation; do rectal washouts and stabilize first.",
+    "truth": "\u274c TRAP",
+    "exp": "Performing barium enema in a sick neonate with enterocolitis \u2014 risk of perforation; do rectal washouts and stabilize first.",
+    "marks": "Trap from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Biopsying  \u2014 this area is physiologically aganglionic; false positive.",
+    "truth": "\u274c TRAP",
+    "exp": "Biopsying  \u2014 this area is physiologically aganglionic; false positive.",
+    "marks": "Trap from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing with functional constipation \u2014 functional constipation starts later, responds to laxatives, normal growth, no distension.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing with functional constipation \u2014 functional constipation starts later, responds to laxatives, normal growth, no distension.",
+    "marks": "Trap from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting  Down syndrome association \u2014 5-10% of Hirschsprung patients have trisomy 21.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting  Down syndrome association \u2014 5-10% of Hirschsprung patients have trisomy 21.",
+    "marks": "Trap from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> RET proto-oncogene = most common genetic association.",
+    "truth": "\u2713 FACT",
+    "exp": "RET proto-oncogene = most common genetic association.",
+    "marks": "High-yield from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Transition zone on barium enema = narrow aganglionic segment + proximal dilated colon.",
+    "truth": "\u2713 FACT",
+    "exp": "Transition zone on barium enema = narrow aganglionic segment + proximal dilated colon.",
+    "marks": "High-yield from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hirschsprung's Disease",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Rectal suction biopsy = gold standard for diagnosis.",
+    "truth": "\u2713 FACT",
+    "exp": "Rectal suction biopsy = gold standard for diagnosis.",
+    "marks": "High-yield from Hirschsprung's Disease"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Correcting too rapidly \u2014 osmotic demyelination syndrome (central pontine myelinolysis) causes locked-in syndrome, quadriplegia, dysarthria. Max 8-10 mEq/L in 24 hours for chronic hyponatremia.",
+    "truth": "\u274c TRAP",
+    "exp": "Correcting too rapidly \u2014 osmotic demyelination syndrome (central pontine myelinolysis) causes locked-in syndrome, quadriplegia, dysarthria. Max 8-10 mEq/L in 24 hours for chronic hyponatremia.",
+    "marks": "Trap from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Treating CSW with fluid restriction \u2014 CSW is hypovolemic; fluid restriction causes shock. Replace Na\u207a + volume.",
+    "truth": "\u274c TRAP",
+    "exp": "Treating CSW with fluid restriction \u2014 CSW is hypovolemic; fluid restriction causes shock. Replace Na\u207a + volume.",
+    "marks": "Trap from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting adrenal insufficiency and hypothyroidism as causes of euvolemic hyponatremia.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting adrenal insufficiency and hypothyroidism as causes of euvolemic hyponatremia.",
+    "marks": "Trap from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using normal saline for SIADH \u2014 NS is hypotonic relative to urine in SIADH (urine osmolality >300); may worsen hyponatremia. Use fluid restriction or hypertonic saline.",
+    "truth": "\u274c TRAP",
+    "exp": "Using normal saline for SIADH \u2014 NS is hypotonic relative to urine in SIADH (urine osmolality >300); may worsen hyponatremia. Use fluid restriction or hypertonic saline.",
+    "marks": "Trap from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing hyperglycemia as cause of pseudohyponatremia \u2014 correct measured Na\u207a by adding 1.6 mEq/L for each 100 mg/dL glucose above 100.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing hyperglycemia as cause of pseudohyponatremia \u2014 correct measured Na\u207a by adding 1.6 mEq/L for each 100 mg/dL glucose above 100.",
+    "marks": "Trap from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> SIADH = most common cause of euvolemic hyponatremia in children (CNS infection, post-op).",
+    "truth": "\u2713 FACT",
+    "exp": "SIADH = most common cause of euvolemic hyponatremia in children (CNS infection, post-op).",
+    "marks": "High-yield from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Diarrhea = most common cause of hypovolemic hyponatremia globally.",
+    "truth": "\u2713 FACT",
+    "exp": "Diarrhea = most common cause of hypovolemic hyponatremia globally.",
+    "marks": "High-yield from Hyponatremia"
+  },
+  {
+    "topic": "Hyponatremia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Urine Na\u207a >20 in SIADH and CSW; <20 in extrarenal losses and effective volume depletion.",
+    "truth": "\u2713 FACT",
+    "exp": "Urine Na\u207a >20 in SIADH and CSW; <20 in extrarenal losses and effective volume depletion.",
+    "marks": "High-yield from Hyponatremia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Rushing to surgery immediately \u2014 CDH is a physiological emergency, NOT a surgical emergency. Stabilize lungs and PPHN first; operate when stable.",
+    "truth": "\u274c TRAP",
+    "exp": "Rushing to surgery immediately \u2014 CDH is a physiological emergency, NOT a surgical emergency. Stabilize lungs and PPHN first; operate when stable.",
+    "marks": "Trap from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Bag-mask ventilating \u2014 insufflates stomach and bowel into chest; intubate immediately instead.",
+    "truth": "\u274c TRAP",
+    "exp": "Bag-mask ventilating \u2014 insufflates stomach and bowel into chest; intubate immediately instead.",
+    "marks": "Trap from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using high pressure ventilation \u2014 causes barotrauma and worsens pulmonary hypertension; use gentle ventilation with permissive hypercapnia.",
+    "truth": "\u274c TRAP",
+    "exp": "Using high pressure ventilation \u2014 causes barotrauma and worsens pulmonary hypertension; use gentle ventilation with permissive hypercapnia.",
+    "marks": "Trap from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting NG decompression \u2014 critical to decompress bowel and improve ventilation.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting NG decompression \u2014 critical to decompress bowel and improve ventilation.",
+    "marks": "Trap from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing associated anomalies \u2014 30-40% have other anomalies; always evaluate cardiac and chromosomal status.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing associated anomalies \u2014 30-40% have other anomalies; always evaluate cardiac and chromosomal status.",
+    "marks": "Trap from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Left Bochdalek hernia = 85% of cases; right-sided = 13%.",
+    "truth": "\u2713 FACT",
+    "exp": "Left Bochdalek hernia = 85% of cases; right-sided = 13%.",
+    "marks": "High-yield from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> PPHN is the primary cause of mortality, NOT the hernia itself.",
+    "truth": "\u2713 FACT",
+    "exp": "PPHN is the primary cause of mortality, NOT the hernia itself.",
+    "marks": "High-yield from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Congenital Diaphragmatic Hernia",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Bowel sounds in chest + scaphoid abdomen = pathognomonic of CDH.",
+    "truth": "\u2713 FACT",
+    "exp": "Bowel sounds in chest + scaphoid abdomen = pathognomonic of CDH.",
+    "marks": "High-yield from Congenital Diaphragmatic Hernia"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Treating HRS with diuretics \u2014 diuretics worsen renal perfusion; discontinue them.",
+    "truth": "\u274c TRAP",
+    "exp": "Treating HRS with diuretics \u2014 diuretics worsen renal perfusion; discontinue them.",
+    "marks": "Trap from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing the albumin challenge \u2014 MUST give albumin 1 g/kg for 2 days before diagnosing HRS; if creatinine improves, it is pre-renal, not HRS.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing the albumin challenge \u2014 MUST give albumin 1 g/kg for 2 days before diagnosing HRS; if creatinine improves, it is pre-renal, not HRS.",
+    "marks": "Trap from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Thinking HRS is intrinsic renal failure \u2014 it is FUNCTIONAL; kidneys are structurally normal.",
+    "truth": "\u274c TRAP",
+    "exp": "Thinking HRS is intrinsic renal failure \u2014 it is FUNCTIONAL; kidneys are structurally normal.",
+    "marks": "Trap from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using dopamine for renal protection \u2014 no evidence of benefit in HRS.",
+    "truth": "\u274c TRAP",
+    "exp": "Using dopamine for renal protection \u2014 no evidence of benefit in HRS.",
+    "marks": "Trap from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying liver transplant evaluation \u2014 HRS is an indication for expedited transplant listing.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying liver transplant evaluation \u2014 HRS is an indication for expedited transplant listing.",
+    "marks": "Trap from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Type 1 HRS = doubling of creatinine to >2.5 in <2 weeks.",
+    "truth": "\u2713 FACT",
+    "exp": "Type 1 HRS = doubling of creatinine to >2.5 in <2 weeks.",
+    "marks": "High-yield from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Terlipressin + albumin = first-line medical therapy for Type 1 HRS.",
+    "truth": "\u2713 FACT",
+    "exp": "Terlipressin + albumin = first-line medical therapy for Type 1 HRS.",
+    "marks": "High-yield from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Hepatorenal Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> SBP is a common precipitant of HRS \u2014 always treat SBP prophylactically with antibiotics + albumin.",
+    "truth": "\u2713 FACT",
+    "exp": "SBP is a common precipitant of HRS \u2014 always treat SBP prophylactically with antibiotics + albumin.",
+    "marks": "High-yield from Hepatorenal Syndrome"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing Turner syndrome in short girls \u2014 ALWAYS check karyotype in girls with unexplained short stature.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing Turner syndrome in short girls \u2014 ALWAYS check karyotype in girls with unexplained short stature.",
+    "marks": "Trap from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Diagnosing GHD based on single random GH level \u2014 GH is pulsatile; must use stimulation tests.",
+    "truth": "\u274c TRAP",
+    "exp": "Diagnosing GHD based on single random GH level \u2014 GH is pulsatile; must use stimulation tests.",
+    "marks": "Trap from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting celiac disease as a cause of short stature \u2014 screen ALL children with unexplained short stature.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting celiac disease as a cause of short stature \u2014 screen ALL children with unexplained short stature.",
+    "marks": "Trap from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing hypothyroidism \u2014 one of the most treatable causes; always check TSH.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing hypothyroidism \u2014 one of the most treatable causes; always check TSH.",
+    "marks": "Trap from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing CDGP with GHD \u2014 CDGP has normal GH response, normal IGF-1, family history of delayed puberty; GHD has low GH, low IGF-1, may have midfacial hypoplasia.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing CDGP with GHD \u2014 CDGP has normal GH response, normal IGF-1, family history of delayed puberty; GHD has low GH, low IGF-1, may have midfacial hypoplasia.",
+    "marks": "Trap from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Micropenis + hypoglycemia + prolonged jaundice in a newborn = congenital GHD.",
+    "truth": "\u2713 FACT",
+    "exp": "Micropenis + hypoglycemia + prolonged jaundice in a newborn = congenital GHD.",
+    "marks": "High-yield from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Single central maxillary incisor = midline defect associated with GHD (holoprosencephaly spectrum).",
+    "truth": "\u2713 FACT",
+    "exp": "Single central maxillary incisor = midline defect associated with GHD (holoprosencephaly spectrum).",
+    "marks": "High-yield from Short Stature"
+  },
+  {
+    "topic": "Short Stature",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Growth velocity  is abnormal; interpret against age-specific norms (e.g., ~10 cm/year at age 1, ~7-8 cm/year at age 2-3, ~5-6 cm/year in mid-childhood).",
+    "truth": "\u2713 FACT",
+    "exp": "Growth velocity  is abnormal; interpret against age-specific norms (e.g., ~10 cm/year at age 1, ~7-8 cm/year at age 2-3, ~5-6 cm/year in mid-childhood).",
+    "marks": "High-yield from Short Stature"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting urologic evaluation before transplant \u2014 PUV, VUR, neurogenic bladder must be addressed to protect the graft.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting urologic evaluation before transplant \u2014 PUV, VUR, neurogenic bladder must be addressed to protect the graft.",
+    "marks": "Trap from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing BK virus nephropathy \u2014 causes graft dysfunction 6-12 months post-transplant; screen with plasma BK PCR; reduce immunosuppression.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing BK virus nephropathy \u2014 causes graft dysfunction 6-12 months post-transplant; screen with plasma BK PCR; reduce immunosuppression.",
+    "marks": "Trap from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not recognizing recurrent FSGS \u2014 presents within hours to days post-transplant with massive proteinuria; treat with plasmapheresis + rituximab.",
+    "truth": "\u274c TRAP",
+    "exp": "Not recognizing recurrent FSGS \u2014 presents within hours to days post-transplant with massive proteinuria; treat with plasmapheresis + rituximab.",
+    "marks": "Trap from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting CMV prophylaxis \u2014 valganciclovir for D+/R- or R+ patients for 3-6 months.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting CMV prophylaxis \u2014 valganciclovir for D+/R- or R+ patients for 3-6 months.",
+    "marks": "Trap from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using live vaccines post-transplant \u2014 contraindicated; give all live vaccines (MMR, varicella) BEFORE transplant.",
+    "truth": "\u274c TRAP",
+    "exp": "Using live vaccines post-transplant \u2014 contraindicated; give all live vaccines (MMR, varicella) BEFORE transplant.",
+    "marks": "Trap from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Living donor transplant has better outcomes than deceased donor \u2014 consider parents or relatives.",
+    "truth": "\u2713 FACT",
+    "exp": "Living donor transplant has better outcomes than deceased donor \u2014 consider parents or relatives.",
+    "marks": "High-yield from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Tacrolimus trough 5-10 ng/mL in maintenance; higher (10-15) in first 3 months.",
+    "truth": "\u2713 FACT",
+    "exp": "Tacrolimus trough 5-10 ng/mL in maintenance; higher (10-15) in first 3 months.",
+    "marks": "High-yield from Renal Transplantation"
+  },
+  {
+    "topic": "Renal Transplantation",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Preemptive transplant is preferred over transplant after dialysis initiation.",
+    "truth": "\u2713 FACT",
+    "exp": "Preemptive transplant is preferred over transplant after dialysis initiation.",
+    "marks": "High-yield from Renal Transplantation"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing kwashiorkor and marasmus \u2014 remember: edema = kwashiorkor, skin and bones = marasmus.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing kwashiorkor and marasmus \u2014 remember: edema = kwashiorkor, skin and bones = marasmus.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting hypoglycemia check on admission \u2014 always check and treat immediately.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting hypoglycemia check on admission \u2014 always check and treat immediately.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using standard ORS for SAM \u2014 use ReSoMal (reduced sodium ORS) or give ORS diluted.",
+    "truth": "\u274c TRAP",
+    "exp": "Using standard ORS for SAM \u2014 use ReSoMal (reduced sodium ORS) or give ORS diluted.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Starting iron in Phase 1 \u2014 iron is started ONLY after edema resolves (Phase 2) due to risk of oxidative stress and infection.",
+    "truth": "\u274c TRAP",
+    "exp": "Starting iron in Phase 1 \u2014 iron is started ONLY after edema resolves (Phase 2) due to risk of oxidative stress and infection.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting antibiotics for all SAM patients \u2014 even without obvious infection; immune dysfunction masks signs.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting antibiotics for all SAM patients \u2014 even without obvious infection; immune dysfunction masks signs.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving high-protein feeds in Phase 1 \u2014 F-75 (low protein) in stabilization; F-100 (higher protein) in rehabilitation.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving high-protein feeds in Phase 1 \u2014 F-75 (low protein) in stabilization; F-100 (higher protein) in rehabilitation.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Not using MUAC for SAM screening \u2014 MUAC &lt;11.5 cm is a standalone criterion for SAM in children 6-59 months.",
+    "truth": "\u274c TRAP",
+    "exp": "Not using MUAC for SAM screening \u2014 MUAC &lt;11.5 cm is a standalone criterion for SAM in children 6-59 months.",
+    "marks": "Trap from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Flag sign in hair = alternating light and dark bands = episodes of poor nutrition interspersed with adequate nutrition.",
+    "truth": "\u2713 FACT",
+    "exp": "Flag sign in hair = alternating light and dark bands = episodes of poor nutrition interspersed with adequate nutrition.",
+    "marks": "High-yield from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Flaky paint dermatosis = pathognomonic of kwashiorkor; hyperpigmented patches that peel off.",
+    "truth": "\u2713 FACT",
+    "exp": "Flaky paint dermatosis = pathognomonic of kwashiorkor; hyperpigmented patches that peel off.",
+    "marks": "High-yield from SAM / PEM"
+  },
+  {
+    "topic": "SAM / PEM",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Fatty liver in kwashiorkor = due to decreased apolipoprotein synthesis \u2192 impaired VLDL export \u2192 hepatic steatosis.",
+    "truth": "\u2713 FACT",
+    "exp": "Fatty liver in kwashiorkor = due to decreased apolipoprotein synthesis \u2192 impaired VLDL export \u2192 hepatic steatosis.",
+    "marks": "High-yield from SAM / PEM"
+  },
+  {
+    "topic": "Steroid-Resistant Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Do NOT write 8 weeks as the definition \u2014 this is steroid dependence, not resistance. The cutoff is 4 weeks daily or 6 weeks alternate-day.",
+    "truth": "\u274c TRAP",
+    "exp": "Do NOT write 8 weeks as the definition \u2014 this is steroid dependence, not resistance. The cutoff is 4 weeks daily or 6 weeks alternate-day.",
+    "marks": "Trap from Steroid-Resistant Nephrotic Syndrome"
+  },
+  {
+    "topic": "Steroid-Resistant Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Always mention NPHS2 (podocin) as the most common genetic cause and FSGS as the most common histology in SRNS. This pairing is a favorite examiner target.",
+    "truth": "\u2713 FACT",
+    "exp": "Always mention NPHS2 (podocin) as the most common genetic cause and FSGS as the most common histology in SRNS. This pairing is a favorite examiner target.",
+    "marks": "High-yield from Steroid-Resistant Nephrotic Syndrome"
+  },
+  {
+    "topic": "Steroid-Resistant Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Genetic SRNS (NPHS1/NPHS2) does NOT recur after transplant \u2014 this is a key distinction from sporadic FSGS which recurs in 30-50%.",
+    "truth": "\u2713 FACT",
+    "exp": "Genetic SRNS (NPHS1/NPHS2) does NOT recur after transplant \u2014 this is a key distinction from sporadic FSGS which recurs in 30-50%.",
+    "marks": "High-yield from Steroid-Resistant Nephrotic Syndrome"
+  },
+  {
+    "topic": "Steroid-Resistant Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>Clinical Pearl:</strong> Always mention ACE inhibitors/ARBs in SRNS management even if normotensive \u2014 they provide renal protection beyond BP control.",
+    "truth": "\u2713 FACT",
+    "exp": "Always mention ACE inhibitors/ARBs in SRNS management even if normotensive \u2014 they provide renal protection beyond BP control.",
+    "marks": "Clinical pearl from Steroid-Resistant Nephrotic Syndrome"
+  },
+  {
+    "topic": "Hepatic Encephalopathy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Do not confuse Grade 0 with absence of disease. Grade 0 (minimal HE) is diagnosed only by psychometric testing \u2014 this distinction is often tested.",
+    "truth": "\u274c TRAP",
+    "exp": "Do not confuse Grade 0 with absence of disease. Grade 0 (minimal HE) is diagnosed only by psychometric testing \u2014 this distinction is often tested.",
+    "marks": "Trap from Hepatic Encephalopathy"
+  },
+  {
+    "topic": "Hepatic Encephalopathy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Never recommend long-term protein restriction in chronic HE. It causes malnutrition and sarcopenia, which paradoxically worsen ammonia levels due to muscle wasting.",
+    "truth": "\u274c TRAP",
+    "exp": "Never recommend long-term protein restriction in chronic HE. It causes malnutrition and sarcopenia, which paradoxically worsen ammonia levels due to muscle wasting.",
+    "marks": "Trap from Hepatic Encephalopathy"
+  },
+  {
+    "topic": "Hepatic Encephalopathy",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Always state ammonia is the most important neurotoxin, but HE is multifactorial. Pure ammonia lowering does not always correlate with clinical improvement.",
+    "truth": "\u2713 FACT",
+    "exp": "Always state ammonia is the most important neurotoxin, but HE is multifactorial. Pure ammonia lowering does not always correlate with clinical improvement.",
+    "marks": "High-yield from Hepatic Encephalopathy"
+  },
+  {
+    "topic": "Hepatic Encephalopathy",
+    "isTrap": false,
+    "q": "<strong>Clinical Pearl:</strong> The combination of lactulose + rifaximin is superior to lactulose alone in preventing recurrence \u2014 always mention both in management.",
+    "truth": "\u2713 FACT",
+    "exp": "The combination of lactulose + rifaximin is superior to lactulose alone in preventing recurrence \u2014 always mention both in management.",
+    "marks": "Clinical pearl from Hepatic Encephalopathy"
+  },
+  {
+    "topic": "Constipation",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Examiners frequently test the distinction between functional constipation and Hirschsprung disease. Remember: Hirschsprung typically presents with failure to pass meconium within 48 hours, abdominal distension, and a tight empty rectum on exam \u2014 unlike functional constipation where the rectum is loaded with stool.",
+    "truth": "\u274c TRAP",
+    "exp": "Examiners frequently test the distinction between functional constipation and Hirschsprung disease. Remember: Hirschsprung typically presents with failure to pass meconium within 48 hours, abdominal distension, and a tight empty rectum on exam \u2014 unlike functional constipation where the rectum is loaded with stool.",
+    "marks": "Trap from Constipation"
+  },
+  {
+    "topic": "Constipation",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The most common reason for treatment failure is skipping disimpaction. Examiners award marks for explicitly stating that fecal disimpaction must precede maintenance therapy.",
+    "truth": "\u2713 FACT",
+    "exp": "The most common reason for treatment failure is skipping disimpaction. Examiners award marks for explicitly stating that fecal disimpaction must precede maintenance therapy.",
+    "marks": "High-yield from Constipation"
+  },
+  {
+    "topic": "Obstructive Jaundice",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Do not rely solely on USG to exclude biliary atresia \u2014 a small gallbladder may be present in type 3 atresia. The combination of acholic stools, elevated GGT, and non-visualization on HIDA strongly supports the diagnosis.",
+    "truth": "\u274c TRAP",
+    "exp": "Do not rely solely on USG to exclude biliary atresia \u2014 a small gallbladder may be present in type 3 atresia. The combination of acholic stools, elevated GGT, and non-visualization on HIDA strongly supports the diagnosis.",
+    "marks": "Trap from Obstructive Jaundice"
+  },
+  {
+    "topic": "Obstructive Jaundice",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Biliary atresia is the most important surgically correctable cause. The Kasai portoenterostomy must be performed before 60 days of age for optimal prognosis \u2014 this is a favorite examination point.",
+    "truth": "\u2713 FACT",
+    "exp": "Biliary atresia is the most important surgically correctable cause. The Kasai portoenterostomy must be performed before 60 days of age for optimal prognosis \u2014 this is a favorite examination point.",
+    "marks": "High-yield from Obstructive Jaundice"
+  },
+  {
+    "topic": "Portosystemic Anastomosis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The lower esophagus is the highest-yield site in examinations. Remember the exact venous names: left gastric (portal) to esophageal/azygos (systemic). Caput medusae is pathognomonic for portal hypertension and must be distinguished from inferior vena cava obstruction.",
+    "truth": "\u2713 FACT",
+    "exp": "The lower esophagus is the highest-yield site in examinations. Remember the exact venous names: left gastric (portal) to esophageal/azygos (systemic). Caput medusae is pathognomonic for portal hypertension and must be distinguished from inferior vena cava obstruction.",
+    "marks": "High-yield from Portosystemic Anastomosis"
+  },
+  {
+    "topic": "Kramer's Index",
+    "isTrap": false,
+    "q": "<strong>Clinical Pearl:</strong> In exams, explicitly state that Kramer\\'s index assesses wasting (acute malnutrition), not stunting (chronic). Distinguish it from Gomez classification (weight-for-age) and Waterlow classification (weight-for-height and height-for-age). Examiners often set traps by asking you to compare these indices.",
+    "truth": "\u2713 FACT",
+    "exp": "In exams, explicitly state that Kramer\\'s index assesses wasting (acute malnutrition), not stunting (chronic). Distinguish it from Gomez classification (weight-for-age) and Waterlow classification (weight-for-height and height-for-age). Examiners often set traps by asking you to compare these indices.",
+    "marks": "Clinical pearl from Kramer's Index"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Describing childhood features instead of neonatal screening \u2014 the exam focuses on newborn screening and early dietary intervention.",
+    "truth": "\u274c TRAP",
+    "exp": "Describing childhood features instead of neonatal screening \u2014 the exam focuses on newborn screening and early dietary intervention.",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Saying diet can be relaxed in adolescence \u2014 NO; PKU requires lifelong dietary management.",
+    "truth": "\u274c TRAP",
+    "exp": "Saying diet can be relaxed in adolescence \u2014 NO; PKU requires lifelong dietary management.",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting that aspartame (artificial sweetener) contains phenylalanine \u2014 must be avoided.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting that aspartame (artificial sweetener) contains phenylalanine \u2014 must be avoided.",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing PAH deficiency with BH4 cofactor defects \u2014 BH4 defects need additional neurotransmitter precursors (L-dopa, 5-HTP).",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing PAH deficiency with BH4 cofactor defects \u2014 BH4 defects need additional neurotransmitter precursors (L-dopa, 5-HTP).",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Normal newborn screening does NOT rule out PKU if tested before 48h or before protein feeding \u2014 retest.",
+    "truth": "\u274c TRAP",
+    "exp": "Normal newborn screening does NOT rule out PKU if tested before 48h or before protein feeding \u2014 retest.",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The musty/mousy odor is pathognomonic and comes from phenylacetic acid excretion in sweat and urine.",
+    "truth": "\u2713 FACT",
+    "exp": "The musty/mousy odor is pathognomonic and comes from phenylacetic acid excretion in sweat and urine.",
+    "marks": "High-yield from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Tyrosine becomes an essential amino acid in PKU \u2014 must be supplemented in medical formulas.",
+    "truth": "\u2713 FACT",
+    "exp": "Tyrosine becomes an essential amino acid in PKU \u2014 must be supplemented in medical formulas.",
+    "marks": "High-yield from PKU"
+  },
+  {
+    "topic": "PKU",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Screening must be done after 48 hours of protein feeding \u2014 earlier testing gives false negatives. Always confirm with quantitative plasma amino acids, not just the screening test.",
+    "truth": "\u274c TRAP",
+    "exp": "Screening must be done after 48 hours of protein feeding \u2014 earlier testing gives false negatives. Always confirm with quantitative plasma amino acids, not just the screening test.",
+    "marks": "Trap from PKU"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Delaying prophylaxis to 24 hours \u2014 NO; must be &lt;12 hours.",
+    "truth": "\u274c TRAP",
+    "exp": "Delaying prophylaxis to 24 hours \u2014 NO; must be &lt;12 hours.",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving HBIG and vaccine in the same syringe or same site \u2014 NO; different anatomical sites required.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving HBIG and vaccine in the same syringe or same site \u2014 NO; different anatomical sites required.",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Stopping breastfeeding \u2014 NOT needed; breastfeeding is safe with prophylaxis.",
+    "truth": "\u274c TRAP",
+    "exp": "Stopping breastfeeding \u2014 NOT needed; breastfeeding is safe with prophylaxis.",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting the extra dose for premature &lt;2 kg infants \u2014 give 4 doses total (birth, 1 month, 2 months, 6 months).",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting the extra dose for premature &lt;2 kg infants \u2014 give 4 doses total (birth, 1 month, 2 months, 6 months).",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Checking anti-HBs too early \u2014 must wait until 9-12 months (after series complete + maternal antibody waning).",
+    "truth": "\u274c TRAP",
+    "exp": "Checking anti-HBs too early \u2014 must wait until 9-12 months (after series complete + maternal antibody waning).",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Perinatal transmission is the most common route of HBV infection globally \u2014 making neonatal prophylaxis one of the most impactful public health interventions.",
+    "truth": "\u2713 FACT",
+    "exp": "Perinatal transmission is the most common route of HBV infection globally \u2014 making neonatal prophylaxis one of the most impactful public health interventions.",
+    "marks": "High-yield from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> HBeAg-positive mother without prophylaxis = 70-90% infection risk; with prophylaxis = &lt;5-10% risk.",
+    "truth": "\u2713 FACT",
+    "exp": "HBeAg-positive mother without prophylaxis = 70-90% infection risk; with prophylaxis = &lt;5-10% risk.",
+    "marks": "High-yield from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "HBV Neonatal Prophylaxis",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> The window is &lt;12 hours, not 24 hours. Delay beyond 12 hours significantly reduces efficacy. HBIG and vaccine must be given at separate sites \u2014 mixing them inactivates the vaccine.",
+    "truth": "\u274c TRAP",
+    "exp": "The window is &lt;12 hours, not 24 hours. Delay beyond 12 hours significantly reduces efficacy. HBIG and vaccine must be given at separate sites \u2014 mixing them inactivates the vaccine.",
+    "marks": "Trap from HBV Neonatal Prophylaxis"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Confusing polyuria with urinary frequency \u2014 polyuria = large volume; frequency = frequent small voids.",
+    "truth": "\u274c TRAP",
+    "exp": "Confusing polyuria with urinary frequency \u2014 polyuria = large volume; frequency = frequent small voids.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting that diabetes mellitus is the #1 cause of polyuria in children \u2014 always check blood glucose first.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting that diabetes mellitus is the #1 cause of polyuria in children \u2014 always check blood glucose first.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Rapid correction of hypernatremia \u2014 NO; correct Na+ no faster than 10-12 mEq/L per day to prevent cerebral edema.",
+    "truth": "\u274c TRAP",
+    "exp": "Rapid correction of hypernatremia \u2014 NO; correct Na+ no faster than 10-12 mEq/L per day to prevent cerebral edema.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Giving desmopressin in nephrogenic DI \u2014 ineffective; use thiazides + low-solute diet instead.",
+    "truth": "\u274c TRAP",
+    "exp": "Giving desmopressin in nephrogenic DI \u2014 ineffective; use thiazides + low-solute diet instead.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Missing craniopharyngioma as the most common CNS tumor causing central DI in children \u2014 always do MRI pituitary.",
+    "truth": "\u274c TRAP",
+    "exp": "Missing craniopharyngioma as the most common CNS tumor causing central DI in children \u2014 always do MRI pituitary.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting that X-linked nephrogenic DI affects males primarily; female carriers may have mild concentrating defects.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting that X-linked nephrogenic DI affects males primarily; female carriers may have mild concentrating defects.",
+    "marks": "Trap from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Absent posterior pituitary bright spot on MRI = central DI (sensitivity ~80%).",
+    "truth": "\u2713 FACT",
+    "exp": "Absent posterior pituitary bright spot on MRI = central DI (sensitivity ~80%).",
+    "marks": "High-yield from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Lithium is the most common drug-induced nephrogenic DI; amiloride is the specific antidote.",
+    "truth": "\u2713 FACT",
+    "exp": "Lithium is the most common drug-induced nephrogenic DI; amiloride is the specific antidote.",
+    "marks": "High-yield from Polyuria / DI"
+  },
+  {
+    "topic": "Polyuria / DI",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The fluid deprivation test + desmopressin response is the gold standard for differentiating central vs nephrogenic DI. Both have dilute urine, but only central responds to DDAVP.",
+    "truth": "\u2713 FACT",
+    "exp": "The fluid deprivation test + desmopressin response is the gold standard for differentiating central vs nephrogenic DI. Both have dilute urine, but only central responds to DDAVP.",
+    "marks": "High-yield from Polyuria / DI"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> NSAIDs are the most common drug cause of nephrotic syndrome \u2014 not penicillamine or gold.",
+    "truth": "\u274c TRAP",
+    "exp": "NSAIDs are the most common drug cause of nephrotic syndrome \u2014 not penicillamine or gold.",
+    "marks": "Trap from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Penicillamine and gold cause membranous nephropathy (not MCD) \u2014 examiners test this distinction.",
+    "truth": "\u274c TRAP",
+    "exp": "Penicillamine and gold cause membranous nephropathy (not MCD) \u2014 examiners test this distinction.",
+    "marks": "Trap from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Proteinuria may take weeks to months to resolve after stopping the drug \u2014 do not immediately biopsy.",
+    "truth": "\u274c TRAP",
+    "exp": "Proteinuria may take weeks to months to resolve after stopping the drug \u2014 do not immediately biopsy.",
+    "marks": "Trap from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Lithium causes BOTH nephrogenic DI AND nephrotic syndrome \u2014 recognize the dual renal toxicity.",
+    "truth": "\u274c TRAP",
+    "exp": "Lithium causes BOTH nephrogenic DI AND nephrotic syndrome \u2014 recognize the dual renal toxicity.",
+    "marks": "Trap from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Pamidronate causes collapsing glomerulopathy / FSGS in children with osteogenesis imperfecta \u2014 emerging exam topic.",
+    "truth": "\u274c TRAP",
+    "exp": "Pamidronate causes collapsing glomerulopathy / FSGS in children with osteogenesis imperfecta \u2014 emerging exam topic.",
+    "marks": "Trap from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Drugs Causing Nephrotic Syndrome",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Drug-induced MCD (NSAIDs, captopril) is steroid-responsive just like idiopathic MCD \u2014 but first step is always stop the drug.",
+    "truth": "\u2713 FACT",
+    "exp": "Drug-induced MCD (NSAIDs, captopril) is steroid-responsive just like idiopathic MCD \u2014 but first step is always stop the drug.",
+    "marks": "High-yield from Drugs Causing Nephrotic Syndrome"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Biopsy is NOT indicated in typical first-episode MCD \u2014 biopsy is reserved for SRNS, atypical features, or &gt;8 years old.",
+    "truth": "\u274c TRAP",
+    "exp": "Biopsy is NOT indicated in typical first-episode MCD \u2014 biopsy is reserved for SRNS, atypical features, or &gt;8 years old.",
+    "marks": "Trap from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Low C3 in PSGN is expected \u2014 do NOT biopsy just for low C3; wait 6-8 weeks for normalization.",
+    "truth": "\u274c TRAP",
+    "exp": "Low C3 in PSGN is expected \u2014 do NOT biopsy just for low C3; wait 6-8 weeks for normalization.",
+    "marks": "Trap from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Congenital NS always requires biopsy \u2014 cannot assume MCD in infants.",
+    "truth": "\u274c TRAP",
+    "exp": "Congenital NS always requires biopsy \u2014 cannot assume MCD in infants.",
+    "marks": "Trap from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Solitary kidney is an absolute contraindication \u2014 not relative.",
+    "truth": "\u274c TRAP",
+    "exp": "Solitary kidney is an absolute contraindication \u2014 not relative.",
+    "marks": "Trap from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Light microscopy alone is insufficient \u2014 tissue must be sent for immunofluorescence (IF) and electron microscopy (EM) for complete diagnosis.",
+    "truth": "\u274c TRAP",
+    "exp": "Light microscopy alone is insufficient \u2014 tissue must be sent for immunofluorescence (IF) and electron microscopy (EM) for complete diagnosis.",
+    "marks": "Trap from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The lower pole is the preferred biopsy site (less vascular, away from hilum).",
+    "truth": "\u2713 FACT",
+    "exp": "The lower pole is the preferred biopsy site (less vascular, away from hilum).",
+    "marks": "High-yield from Renal Biopsy"
+  },
+  {
+    "topic": "Renal Biopsy",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> BP must be controlled to &lt;140/90 before biopsy \u2014 uncontrolled HTN is a contraindication.",
+    "truth": "\u2713 FACT",
+    "exp": "BP must be controlled to &lt;140/90 before biopsy \u2014 uncontrolled HTN is a contraindication.",
+    "marks": "High-yield from Renal Biopsy"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Ordering DMSA during acute infection to assess scarring \u2014 NO; wait 3-6 months. Acute DMSA only shows pyelonephritis.",
+    "truth": "\u274c TRAP",
+    "exp": "Ordering DMSA during acute infection to assess scarring \u2014 NO; wait 3-6 months. Acute DMSA only shows pyelonephritis.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> MCU in every first UTI \u2014 NO; reserved for recurrent UTIs, atypical organisms, abnormal USG, or male infants.",
+    "truth": "\u274c TRAP",
+    "exp": "MCU in every first UTI \u2014 NO; reserved for recurrent UTIs, atypical organisms, abnormal USG, or male infants.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Forgetting that USG is first-line for ALL children with febrile UTI \u2014 not just selected cases.",
+    "truth": "\u274c TRAP",
+    "exp": "Forgetting that USG is first-line for ALL children with febrile UTI \u2014 not just selected cases.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Using CT as first-line imaging \u2014 NO; CT has high radiation and is reserved for abscess, trauma, or complex anatomy.",
+    "truth": "\u274c TRAP",
+    "exp": "Using CT as first-line imaging \u2014 NO; CT has high radiation and is reserved for abscess, trauma, or complex anatomy.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> MAG3 vs DTPA confusion \u2014 MAG3 is preferred in children with impaired renal function; DTPA is GFR-based.",
+    "truth": "\u274c TRAP",
+    "exp": "MAG3 vs DTPA confusion \u2014 MAG3 is preferred in children with impaired renal function; DTPA is GFR-based.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The AAP guideline (2011) recommended USG + VCUG for all 2-24 month olds with first febrile UTI; more recent approaches favor selective imaging based on risk factors.",
+    "truth": "\u2713 FACT",
+    "exp": "The AAP guideline (2011) recommended USG + VCUG for all 2-24 month olds with first febrile UTI; more recent approaches favor selective imaging based on risk factors.",
+    "marks": "High-yield from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Male infant with UTI \u2192 always evaluate for PUV (posterior urethral valves) with MCU.",
+    "truth": "\u2713 FACT",
+    "exp": "Male infant with UTI \u2192 always evaluate for PUV (posterior urethral valves) with MCU.",
+    "marks": "High-yield from UTI Imaging"
+  },
+  {
+    "topic": "UTI Imaging",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> DMSA during acute infection shows acute pyelonephritis but cannot distinguish it from permanent scarring. Scarring assessment must be deferred to 3-6 months after infection.",
+    "truth": "\u274c TRAP",
+    "exp": "DMSA during acute infection shows acute pyelonephritis but cannot distinguish it from permanent scarring. Scarring assessment must be deferred to 3-6 months after infection.",
+    "marks": "Trap from UTI Imaging"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Secondary AI has NO hyperpigmentation and NO hyperkalemia \u2014 aldosterone is preserved via RAAS. This is the most tested differentiator.",
+    "truth": "\u274c TRAP",
+    "exp": "Secondary AI has NO hyperpigmentation and NO hyperkalemia \u2014 aldosterone is preserved via RAAS. This is the most tested differentiator.",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> ACTH is elevated in primary AI (Addison) and low in secondary AI \u2014 do NOT confuse the direction.",
+    "truth": "\u274c TRAP",
+    "exp": "ACTH is elevated in primary AI (Addison) and low in secondary AI \u2014 do NOT confuse the direction.",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Cushing DISEASE = pituitary adenoma (ACTH-dependent). Cushing SYNDROME = any cause of hypercortisolism (pituitary, adrenal, ectopic, exogenous).",
+    "truth": "\u274c TRAP",
+    "exp": "Cushing DISEASE = pituitary adenoma (ACTH-dependent). Cushing SYNDROME = any cause of hypercortisolism (pituitary, adrenal, ectopic, exogenous).",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Growth failure is the hallmark of Cushing disease in children \u2014 not obesity (which is the adult presentation).",
+    "truth": "\u274c TRAP",
+    "exp": "Growth failure is the hallmark of Cushing disease in children \u2014 not obesity (which is the adult presentation).",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> Low-dose dexamethasone suppresses in normal/obese children but fails to suppress in Cushing \u2014 this is the screening test.",
+    "truth": "\u274c TRAP",
+    "exp": "Low-dose dexamethasone suppresses in normal/obese children but fails to suppress in Cushing \u2014 this is the screening test.",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": true,
+    "q": "<strong>Trap:</strong> High-dose dexamethasone suppresses &gt;50% in Cushing disease but NOT in ectopic ACTH \u2014 this differentiates pituitary from ectopic.",
+    "truth": "\u274c TRAP",
+    "exp": "High-dose dexamethasone suppresses &gt;50% in Cushing disease but NOT in ectopic ACTH \u2014 this differentiates pituitary from ectopic.",
+    "marks": "Trap from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Hydrocortisone replacement mimics physiological rhythm \u2014 higher dose in morning, lower in evening.",
+    "truth": "\u2713 FACT",
+    "exp": "Hydrocortisone replacement mimics physiological rhythm \u2014 higher dose in morning, lower in evening.",
+    "marks": "High-yield from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> Nelson syndrome = pituitary tumor enlargement after bilateral adrenalectomy \u2014 prevent by doing transsphenoidal surgery first.",
+    "truth": "\u2713 FACT",
+    "exp": "Nelson syndrome = pituitary tumor enlargement after bilateral adrenalectomy \u2014 prevent by doing transsphenoidal surgery first.",
+    "marks": "High-yield from ACTH / Cushing"
+  },
+  {
+    "topic": "ACTH / Cushing",
+    "isTrap": false,
+    "q": "<strong>High-yield:</strong> The absence of hyperpigmentation and hyperkalemia is the fastest way to distinguish secondary from primary adrenal insufficiency in exams.",
+    "truth": "\u2713 FACT",
+    "exp": "The absence of hyperpigmentation and hyperkalemia is the fastest way to distinguish secondary from primary adrenal insufficiency in exams.",
+    "marks": "High-yield from ACTH / Cushing"
+  }
 ]
