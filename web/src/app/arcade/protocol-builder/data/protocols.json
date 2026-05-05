@@ -3,71 +3,71 @@
     "id": "dka",
     "name": "DKA Management",
     "color": "#E05252",
-    "sub": "10 steps · pH <7.3, glucose >200, HCO₃ <15",
+    "sub": "10 steps \u00b7 pH <7.3, glucose >200, HCO\u2083 <15",
     "steps": [
       {
         "id": "d1",
-        "text": "Confirm DKA: glucose >200 mg/dL + pH <7.3 + HCO₃ <15 mEq/L. Weigh child. Assess degree of dehydration (mild 5% / moderate 7% / severe 10%).",
+        "text": "Confirm DKA: glucose >200 mg/dL + pH <7.3 + HCO\u2083 <15 mEq/L. Weigh child. Assess degree of dehydration (mild 5% / moderate 7% / severe 10%).",
         "tag": "Diagnosis + assessment"
       },
       {
         "id": "d2",
-        "text": "IV access × 2. Send labs: blood glucose, electrolytes (Na⁺, K⁺, Cl⁻), BGA, urine ketones, HbA1c, blood culture.",
+        "text": "IV access \u00d7 2. Send labs: blood glucose, electrolytes (Na\u207a, K\u207a, Cl\u207b), BGA, urine ketones, HbA1c, blood culture.",
         "tag": "Access + investigations"
       },
       {
         "id": "d3",
-        "text": "Fluid resuscitation: 0.9% Normal Saline 10–20 mL/kg IV over 1–2 hours. Do NOT start insulin yet.",
+        "text": "Fluid resuscitation: 0.9% Normal Saline 10\u201320 mL/kg IV over 1\u20132 hours. Do NOT start insulin yet.",
         "tag": "Fluid phase 1",
         "trap": "Start fluids BEFORE insulin. Do NOT give insulin in the first hour."
       },
       {
         "id": "d4",
-        "text": "Check serum potassium: if K⁺ <3.3 mEq/L → ADD potassium to fluids and HOLD insulin until K⁺ ≥3.3. If K⁺ >5.5 → hold potassium supplementation.",
-        "tag": "Potassium check — critical",
-        "trap": "K⁺ <3.3 = HOLD INSULIN. This is the most dangerous DKA error — insulin + hypokalaemia = fatal arrhythmia."
+        "text": "Check serum potassium: if K\u207a <3.3 mEq/L \u2192 ADD potassium to fluids and HOLD insulin until K\u207a \u22653.3. If K\u207a >5.5 \u2192 hold potassium supplementation.",
+        "tag": "Potassium check \u2014 critical",
+        "trap": "K\u207a <3.3 = HOLD INSULIN. This is the most dangerous DKA error \u2014 insulin + hypokalaemia = fatal arrhythmia."
       },
       {
         "id": "d5",
-        "text": "Start insulin: Regular insulin 0.05–0.1 U/kg/hr IV continuous infusion. NEVER give insulin as a bolus in paediatric DKA.",
+        "text": "Start insulin: Regular insulin 0.05\u20130.1 U/kg/hr IV continuous infusion. NEVER give insulin as a bolus in paediatric DKA.",
         "tag": "Insulin infusion",
-        "trap": "NEVER bolus insulin. Continuous infusion only. Bolus → rapid osmotic shift → cerebral oedema."
+        "trap": "NEVER bolus insulin. Continuous infusion only. Bolus \u2192 rapid osmotic shift \u2192 cerebral oedema."
       },
       {
         "id": "d6",
-        "text": "Replace total fluid deficit over 48 hours (NOT 24 hours) using 0.45% NaCl + KCl 20–40 mEq/L. Rapid replacement causes cerebral oedema.",
+        "text": "Replace total fluid deficit over 48 hours (NOT 24 hours) using 0.45% NaCl + KCl 20\u201340 mEq/L. Rapid replacement causes cerebral oedema.",
         "tag": "Fluid deficit replacement",
-        "trap": "48 hours — NOT 24 hours. Students frequently write 24-hour replacement. That is wrong."
+        "trap": "48 hours \u2014 NOT 24 hours. Students frequently write 24-hour replacement. That is wrong."
       },
       {
         "id": "d7",
-        "text": "When blood glucose falls to 200–250 mg/dL: ADD dextrose (D5 or D10) to IV fluids. Continue insulin infusion — do NOT stop it.",
-        "tag": "Glucose at 200–250 mg/dL",
-        "trap": "Do NOT stop insulin when glucose normalises. Insulin must continue until ACIDOSIS resolves (pH >7.30, HCO₃ >18). Add dextrose to prevent hypoglycaemia."
+        "text": "When blood glucose falls to 200\u2013250 mg/dL: ADD dextrose (D5 or D10) to IV fluids. Continue insulin infusion \u2014 do NOT stop it.",
+        "tag": "Glucose at 200\u2013250 mg/dL",
+        "trap": "Do NOT stop insulin when glucose normalises. Insulin must continue until ACIDOSIS resolves (pH >7.30, HCO\u2083 >18). Add dextrose to prevent hypoglycaemia."
       },
       {
         "id": "d8",
-        "text": "Monitor closely every 1–2 hours: glucose, electrolytes, BGA. Watch for headache, bradycardia, altered consciousness (cerebral oedema warning signs).",
+        "text": "Monitor closely every 1\u20132 hours: glucose, electrolytes, BGA. Watch for headache, bradycardia, altered consciousness (cerebral oedema warning signs).",
         "tag": "Monitoring"
       },
       {
         "id": "d9",
-        "text": "Cerebral oedema: Mannitol 0.5–1 g/kg IV OR 3% NaCl 5–10 mL/kg IV immediately. Reduce fluid rate. Elevate head of bed 30°.",
+        "text": "Cerebral oedema: Mannitol 0.5\u20131 g/kg IV OR 3% NaCl 5\u201310 mL/kg IV immediately. Reduce fluid rate. Elevate head of bed 30\u00b0.",
         "tag": "Cerebral oedema emergency",
-        "trap": "Both mannitol AND 3% saline are valid — know both. Must also reduce fluid rate simultaneously."
+        "trap": "Both mannitol AND 3% saline are valid \u2014 know both. Must also reduce fluid rate simultaneously."
       },
       {
         "id": "d10",
-        "text": "Transition to subcutaneous insulin when: acidosis fully resolved (pH >7.30, HCO₃ >18), tolerating oral feeds, glucose stable. Overlap SC and IV insulin by 30 min before stopping infusion.",
+        "text": "Transition to subcutaneous insulin when: acidosis fully resolved (pH >7.30, HCO\u2083 >18), tolerating oral feeds, glucose stable. Overlap SC and IV insulin by 30 min before stopping infusion.",
         "tag": "Transition to SC insulin"
       }
     ]
   },
   {
     "id": "ns",
-    "name": "Nephrotic Syndrome — First Episode",
+    "name": "Nephrotic Syndrome \u2014 First Episode",
     "color": "#1FB8C0",
-    "sub": "8 steps · ISKD steroid protocol",
+    "sub": "8 steps \u00b7 ISKD steroid protocol",
     "steps": [
       {
         "id": "n1",
@@ -76,38 +76,38 @@
       },
       {
         "id": "n2",
-        "text": "Check complement C3 and C4. If C3 is LOW → do NOT start steroids yet. Renal biopsy is needed first. Also biopsy if age >8 years or <1 year.",
+        "text": "Check complement C3 and C4. If C3 is LOW \u2192 do NOT start steroids yet. Renal biopsy is needed first. Also biopsy if age >8 years or <1 year.",
         "tag": "Pre-steroid screen",
         "trap": "Low C3 + NS = biopsy BEFORE steroids. Starting steroids with low C3 (MPGN/other) is a major error."
       },
       {
         "id": "n3",
-        "text": "General measures: bed rest during oedema phase. Salt restriction (NOT protein restriction — maintain normal intake). Daily weight, BP, urine dipstick, I/O chart.",
+        "text": "General measures: bed rest during oedema phase. Salt restriction (NOT protein restriction \u2014 maintain normal intake). Daily weight, BP, urine dipstick, I/O chart.",
         "tag": "General + monitoring",
         "trap": "Protein restriction is WRONG in NS. Normal protein intake is essential. Students commonly write protein restriction."
       },
       {
         "id": "n4",
-        "text": "Prednisolone 2 mg/kg/day PO (maximum 60 mg/day regardless of weight) × 6 weeks. This is Phase 1 of the ISKD protocol.",
-        "tag": "Phase 1 — daily steroids",
-        "trap": "Max cap = 60 mg/day. A 42 kg child would calculate 84 mg (2×42) but receives 60 mg. Always apply the cap."
+        "text": "Prednisolone 2 mg/kg/day PO (maximum 60 mg/day regardless of weight) \u00d7 6 weeks. This is Phase 1 of the ISKD protocol.",
+        "tag": "Phase 1 \u2014 daily steroids",
+        "trap": "Max cap = 60 mg/day. A 42 kg child would calculate 84 mg (2\u00d742) but receives 60 mg. Always apply the cap."
       },
       {
         "id": "n5",
-        "text": "Assess response at week 4: remission = trace or nil proteinuria on dipstick. If no response by week 4–6 → steroid resistant NS → plan renal biopsy.",
+        "text": "Assess response at week 4: remission = trace or nil proteinuria on dipstick. If no response by week 4\u20136 \u2192 steroid resistant NS \u2192 plan renal biopsy.",
         "tag": "Response assessment"
       },
       {
         "id": "n6",
-        "text": "If responded: taper to Prednisolone 1.5 mg/kg on alternate days × 6 weeks (Phase 2). Total course: 12 weeks for full responders.",
-        "tag": "Phase 2 — alternate-day taper",
-        "trap": "Phase 2 = 1.5 mg/kg alternate days. NOT 1 mg/kg. Total 12 weeks total — not 6 weeks only."
+        "text": "If responded: taper to Prednisolone 1.5 mg/kg on alternate days \u00d7 6 weeks (Phase 2). Total course: 12 weeks for full responders.",
+        "tag": "Phase 2 \u2014 alternate-day taper",
+        "trap": "Phase 2 = 1.5 mg/kg alternate days. NOT 1 mg/kg. Total 12 weeks total \u2014 not 6 weeks only."
       },
       {
         "id": "n7",
-        "text": "Manage oedema: Furosemide for severe oedema. For hypovolaemia (cold peripheries, tachycardia): 25% albumin 0.5–1.0 g/kg IV over 1–2 h + loop diuretic after.",
+        "text": "Manage oedema: Furosemide for severe oedema. For hypovolaemia (cold peripheries, tachycardia): 25% albumin 0.5\u20131.0 g/kg IV over 1\u20132 h + loop diuretic after.",
         "tag": "Oedema + hypovolaemia",
-        "trap": "Albumin is for HYPOVOLAEMIA — not routine oedema. Giving albumin for routine oedema causes pulmonary oedema."
+        "trap": "Albumin is for HYPOVOLAEMIA \u2014 not routine oedema. Giving albumin for routine oedema causes pulmonary oedema."
       },
       {
         "id": "n8",
@@ -119,9 +119,9 @@
   },
   {
     "id": "planc",
-    "name": "Severe Dehydration — Plan C",
+    "name": "Severe Dehydration \u2014 Plan C",
     "color": "#3DBF8A",
-    "sub": "7 steps · child 1–5 years · WHO IMNCI",
+    "sub": "7 steps \u00b7 child 1\u20135 years \u00b7 WHO IMNCI",
     "steps": [
       {
         "id": "c1",
@@ -130,23 +130,23 @@
       },
       {
         "id": "c2",
-        "text": "IV access immediately. If unable to establish IV → intraosseous access. Send electrolytes and BGA to rule out hypernatraemic dehydration.",
+        "text": "IV access immediately. If unable to establish IV \u2192 intraosseous access. Send electrolytes and BGA to rule out hypernatraemic dehydration.",
         "tag": "Access + investigations"
       },
       {
         "id": "c3",
-        "text": "PHASE 1 — Child 1–5 years: Ringer's Lactate 30 mL/kg IV over 30 minutes. Reassess after each phase.",
+        "text": "PHASE 1 \u2014 Child 1\u20135 years: Ringer's Lactate 30 mL/kg IV over 30 minutes. Reassess after each phase.",
         "tag": "Phase 1 IV fluid",
-        "trap": "Child (1–5 yr) = 30 mL/kg over 30 MIN. Infant (<12 months) = 30 mL/kg over 1 HOUR. AGE MATTERS — the most common swap error."
+        "trap": "Child (1\u20135 yr) = 30 mL/kg over 30 MIN. Infant (<12 months) = 30 mL/kg over 1 HOUR. AGE MATTERS \u2014 the most common swap error."
       },
       {
         "id": "c4",
-        "text": "Reassess after Phase 1: if improving → continue Phase 2. If not improving → repeat Phase 1 bolus. If in shock → give 10–20 mL/kg NS bolus first.",
+        "text": "Reassess after Phase 1: if improving \u2192 continue Phase 2. If not improving \u2192 repeat Phase 1 bolus. If in shock \u2192 give 10\u201320 mL/kg NS bolus first.",
         "tag": "Reassessment decision point"
       },
       {
         "id": "c5",
-        "text": "PHASE 2: Ringer's Lactate 70 mL/kg IV over 5 hours. Continue monitoring every 1–2 hours.",
+        "text": "PHASE 2: Ringer's Lactate 70 mL/kg IV over 5 hours. Continue monitoring every 1\u20132 hours.",
         "tag": "Phase 2 IV fluid",
         "trap": "Total Plan C = 30 mL/kg (30 min) + 70 mL/kg (5 hours) = 100 mL/kg total. Know both phases and their durations."
       },
@@ -157,9 +157,9 @@
       },
       {
         "id": "c7",
-        "text": "Nutritional support + adjuncts: continue breastfeeding throughout. Zinc 20 mg/day (≥6 months) or 10 mg/day (<6 months) × 10–14 days. Reassess every 1–2 hours throughout.",
+        "text": "Nutritional support + adjuncts: continue breastfeeding throughout. Zinc 20 mg/day (\u22656 months) or 10 mg/day (<6 months) \u00d7 10\u201314 days. Reassess every 1\u20132 hours throughout.",
         "tag": "Zinc + nutrition",
-        "trap": "Zinc dose is AGE-DEPENDENT: ≥6 months = 20 mg/day. <6 months = 10 mg/day. High-yield MCQ trap."
+        "trap": "Zinc dose is AGE-DEPENDENT: \u22656 months = 20 mg/day. <6 months = 10 mg/day. High-yield MCQ trap."
       }
     ]
   },
@@ -167,7 +167,7 @@
     "id": "agn",
     "name": "AGN / PSGN Management",
     "color": "#C9A84C",
-    "sub": "7 steps · drug traps · no steroids",
+    "sub": "7 steps \u00b7 drug traps \u00b7 no steroids",
     "steps": [
       {
         "id": "a1",
@@ -176,37 +176,349 @@
       },
       {
         "id": "a2",
-        "text": "Streptococcal eradication: Benzathine Penicillin G — 600,000 U IM if weight <27 kg; 1.2 million U IM if weight ≥27 kg. Single dose. Alternative: Penicillin V 250 mg PO BD × 10 days.",
+        "text": "Streptococcal eradication: Benzathine Penicillin G \u2014 600,000 U IM if weight <27 kg; 1.2 million U IM if weight \u226527 kg. Single dose. Alternative: Penicillin V 250 mg PO BD \u00d7 10 days.",
         "tag": "Strep eradication",
-        "trap": "Penicillin is for STREP ERADICATION — NOT treatment of GN itself. The GN is immune-mediated, not from active infection."
+        "trap": "Penicillin is for STREP ERADICATION \u2014 NOT treatment of GN itself. The GN is immune-mediated, not from active infection."
       },
       {
         "id": "a3",
         "text": "Hypertension: First-line = Nifedipine (calcium channel blocker) oral. Emergency/severe HTN = IV Labetalol or IV Sodium Nitroprusside. Do NOT give ACE inhibitors.",
         "tag": "Hypertension management",
-        "trap": "ACE inhibitors are CONTRAINDICATED in acute AGN HTN — they worsen hyperkalaemia and AKI. First-line = Nifedipine CCB. This is the single most tested trap."
+        "trap": "ACE inhibitors are CONTRAINDICATED in acute AGN HTN \u2014 they worsen hyperkalaemia and AKI. First-line = Nifedipine CCB. This is the single most tested trap."
       },
       {
         "id": "a4",
-        "text": "Fluid overload: Furosemide 1–2 mg/kg IV. Do NOT use furosemide for hypertension — it is only for fluid overload. These are different indications.",
+        "text": "Fluid overload: Furosemide 1\u20132 mg/kg IV. Do NOT use furosemide for hypertension \u2014 it is only for fluid overload. These are different indications.",
         "tag": "Fluid overload",
-        "trap": "Furosemide = FLUID OVERLOAD only. Nifedipine = HYPERTENSION only. Students swap these — instant -1 mark."
+        "trap": "Furosemide = FLUID OVERLOAD only. Nifedipine = HYPERTENSION only. Students swap these \u2014 instant -1 mark."
       },
       {
         "id": "a5",
-        "text": "Hyperkalaemia management (stepped approach): Step 1 → Calcium gluconate 10% (cardioprotection). Step 2 → Insulin + Glucose (shift K⁺ intracellularly). Step 3 → Sodium bicarbonate. Step 4 → Dialysis if refractory.",
+        "text": "Hyperkalaemia management (stepped approach): Step 1 \u2192 Calcium gluconate 10% (cardioprotection). Step 2 \u2192 Insulin + Glucose (shift K\u207a intracellularly). Step 3 \u2192 Sodium bicarbonate. Step 4 \u2192 Dialysis if refractory.",
         "tag": "Hyperkalaemia"
       },
       {
         "id": "a6",
-        "text": "AKI / severe azotaemia: Dialysis if refractory fluid overload + no response to furosemide, severe K⁺ >6.5, or uraemic symptoms (encephalopathy, pericarditis).",
-        "tag": "AKI — dialysis"
+        "text": "AKI / severe azotaemia: Dialysis if refractory fluid overload + no response to furosemide, severe K\u207a >6.5, or uraemic symptoms (encephalopathy, pericarditis).",
+        "tag": "AKI \u2014 dialysis"
       },
       {
         "id": "a7",
-        "text": "Monitoring + prognosis: C3 complement should normalise by 6–8 weeks. If C3 remains low beyond 8–12 weeks → suspect MPGN, arrange biopsy. NO steroids or immunosuppressants in APSGN.",
+        "text": "Monitoring + prognosis: C3 complement should normalise by 6\u20138 weeks. If C3 remains low beyond 8\u201312 weeks \u2192 suspect MPGN, arrange biopsy. NO steroids or immunosuppressants in APSGN.",
         "tag": "Follow-up + prognosis",
         "trap": "Steroids in APSGN = instant -2 marks. C3 persistent >12 weeks = NOT PSGN, reassess diagnosis."
+      }
+    ]
+  },
+  {
+    "id": "srns",
+    "name": "SRNS Management",
+    "color": "#8B5CF6",
+    "sub": "8 steps \u00b7 biopsy first \u00b7 CNI first-line",
+    "steps": [
+      {
+        "id": "s1",
+        "text": "Confirm SRNS: No remission after 4 weeks daily prednisolone 2 mg/kg/day (max 60 mg) OR 6 weeks alternate-day. Do NOT confuse with steroid dependence (relapse on taper).",
+        "tag": "Definition confirmation",
+        "trap": "SRNS = no remission at 4 weeks daily. Steroid dependence = relapse during taper. Different entities."
+      },
+      {
+        "id": "s2",
+        "text": "Renal biopsy: Mandatory in all children with SRNS. Establish histology \u2014 FSGS (most common ~35-50%), MPGN (~10%), IgM nephropathy, mesangial proliferative.",
+        "tag": "Biopsy \u2014 mandatory",
+        "trap": "Biopsy is MANDATORY in SRNS. Cannot assume MCD. FSGS is the most common histology."
+      },
+      {
+        "id": "s3",
+        "text": "Genetic testing: NPHS1, NPHS2 (podocin), WT1 sequencing. Essential if congenital onset, family history, or before transplant planning.",
+        "tag": "Genetic workup",
+        "trap": "NPHS2 (podocin) = most common genetic cause. FSGS = most common histology. This pairing is examiner gold."
+      },
+      {
+        "id": "s4",
+        "text": "Calcineurin inhibitor first-line: Tacrolimus 0.1\u20130.2 mg/kg/day (target trough 5\u201310 ng/mL) OR Cyclosporine 3\u20135 mg/kg/day. Monitor renal function and drug levels.",
+        "tag": "CNI first-line",
+        "trap": "Tacrolimus trough 5\u201310 ng/mL in maintenance. Monitor for nephrotoxicity. Continue 12\u201324 months with slow taper."
+      },
+      {
+        "id": "s5",
+        "text": "ACE inhibitor / ARB: Enalapril or Losartan for renal protection. Reduces proteinuria independent of blood pressure. Give EVEN if normotensive.",
+        "tag": "ACEi/ARB \u2014 renal protection",
+        "trap": "ACEi/ARBs provide renal protection BEYOND BP control. Always mention them in SRNS management even if normotensive."
+      },
+      {
+        "id": "s6",
+        "text": "Assess response to CNI at 3\u20136 months. If responded \u2192 continue CNI 12\u201324 months with slow taper. If no response \u2192 consider Rituximab (anti-CD20) 375 mg/m\u00b2 \u00d7 1\u20132 doses.",
+        "tag": "Response assessment",
+        "trap": "Rituximab is indicated for calcineurin-dependent or frequently relapsing SRNS. Not first-line monotherapy."
+      },
+      {
+        "id": "s7",
+        "text": "Supportive care: Salt restriction, loop diuretics (furosemide) for edema, IV albumin only for severe hypoalbuminaemia with circulatory compromise, pneumococcal prophylaxis, statins if persistent hyperlipidaemia.",
+        "tag": "Supportive care",
+        "trap": "IV albumin is ONLY for severe hypoalbuminaemia with circulatory compromise. Not for routine edema \u2014 risk of pulmonary edema."
+      },
+      {
+        "id": "s8",
+        "text": "If progressive to ESRD: Transplant evaluation. Genetic SRNS (NPHS1/NPHS2) does NOT recur post-transplant. Sporadic FSGS has 30\u201350% recurrence risk \u2014 consider pre-emptive plasmapheresis.",
+        "tag": "Transplant planning",
+        "trap": "Genetic SRNS does NOT recur after transplant \u2014 key distinction from sporadic FSGS (30\u201350% recurrence)."
+      }
+    ]
+  },
+  {
+    "id": "sam",
+    "name": "SAM \u2014 WHO Stabilization",
+    "color": "#F59E0B",
+    "sub": "8 steps \u00b7 Phase 1 + Phase 2 \u00b7 F-75 \u2192 F-100",
+    "steps": [
+      {
+        "id": "m1",
+        "text": "Assess for SAM: Weight-for-height <\u20133 SD OR MUAC <11.5 cm OR bilateral pitting edema (any grade). Check for danger signs.",
+        "tag": "SAM criteria",
+        "trap": "SAM criteria: WFH <\u20133 SD OR MUAC <11.5 cm OR edema. Any ONE criterion confirms SAM."
+      },
+      {
+        "id": "m2",
+        "text": "Check danger signs on admission: Hypoglycaemia, hypothermia, dehydration, shock, severe infection. Check blood glucose immediately.",
+        "tag": "Danger signs",
+        "trap": "Hypoglycaemia is the most dangerous complication. Always check and treat immediately on admission."
+      },
+      {
+        "id": "m3",
+        "text": "Treat hypoglycaemia: Give 5 mL/kg of 10% glucose ORS orally OR 2 mL/kg IV dextrose if unconscious. Then feed every 2 hours.",
+        "tag": "Hypoglycaemia Rx",
+        "trap": "Feed every 2 hours after hypoglycaemia treatment. Do NOT leave the child fasting."
+      },
+      {
+        "id": "m4",
+        "text": "Treat dehydration: Use ReSoMal (reduced sodium ORS) \u2014 5 mL/kg every 30 min for 2h, then 5\u201310 mL/kg/hr. Do NOT use standard ORS.",
+        "tag": "Dehydration Rx",
+        "trap": "Standard ORS has too much sodium for SAM. Use ReSoMal (reduced sodium ORS) or dilute standard ORS."
+      },
+      {
+        "id": "m5",
+        "text": "Treat sepsis: Broad-spectrum antibiotics for ALL SAM patients \u2014 Ampicillin + Gentamicin first-line. Avoid ceftriaxone in infants <1 month.",
+        "tag": "Sepsis prophylaxis",
+        "trap": "Give antibiotics to ALL SAM patients even without obvious infection \u2014 immune dysfunction masks signs."
+      },
+      {
+        "id": "m6",
+        "text": "Phase 1 feeds: F-75 therapeutic milk 130 mL/kg/day divided every 2 hours. F-75 = 75 kcal/100 mL, 0.9g protein/100 mL. Do NOT start iron yet.",
+        "tag": "Phase 1 \u2014 F-75",
+        "trap": "Phase 1 = F-75 LOW calorie (130 mL/kg/day). Do NOT give high-calorie feeds yet \u2014 risk of refeeding syndrome. NO iron in Phase 1."
+      },
+      {
+        "id": "m7",
+        "text": "Phase 2 feeds (when stabilized): F-100 therapeutic milk or RUTF 150\u2013220 kcal/kg/day. Start iron ONLY after edema resolves. Add micronutrients.",
+        "tag": "Phase 2 \u2014 F-100",
+        "trap": "Start iron ONLY after edema resolves (Phase 2). Iron in Phase 1 increases oxidative stress and infection risk."
+      },
+      {
+        "id": "m8",
+        "text": "Discharge criteria: Weight-for-height >\u20132 SD, eating well, no edema for 2 weeks, caregiver educated. Continue RUTF (Plumpy'Nut) at home with weekly follow-up.",
+        "tag": "Discharge + follow-up",
+        "trap": "Discharge only when WFH >\u20132 SD AND no edema for 2 weeks. Premature discharge = relapse."
+      }
+    ]
+  },
+  {
+    "id": "he",
+    "name": "Hepatic Encephalopathy",
+    "color": "#7C3AED",
+    "sub": "7 steps \u00b7 lactulose + rifaximin \u00b7 precipitant removal",
+    "steps": [
+      {
+        "id": "e1",
+        "text": "Grade HE (West Haven): Grade 0 = subclinical; Grade 1 = mild confusion; Grade 2 = lethargy + asterixis; Grade 3 = stupor; Grade 4 = coma. Intubate for Grade 3\u20134.",
+        "tag": "Grading",
+        "trap": "Grade 0 (minimal HE) is diagnosed only by psychometric testing \u2014 not absence of disease."
+      },
+      {
+        "id": "e2",
+        "text": "Identify and treat precipitant using HEPATICS mnemonic: Haemorrhage (GI bleed), Electrolytes (hypokalaemia), Protein load, Ascites infection (SBP), Toxins (sedatives), Infection, Constipation, Surgery.",
+        "tag": "Precipitant removal",
+        "trap": "Treating the precipitant is the cornerstone of HE management. Do NOT just give lactulose without removing the trigger."
+      },
+      {
+        "id": "e3",
+        "text": "Lactulose 0.5\u20131 mL/kg/dose, 2\u20133 times daily. Titrate to 2\u20133 soft stools/day. Mechanism: acidifies colonic pH \u2192 converts NH\u2083 to NH\u2084\u207a (non-absorbable).",
+        "tag": "Lactulose \u2014 first-line",
+        "trap": "Titrate lactulose to 2\u20133 soft stools/day. Too little = no ammonia reduction. Too much = dehydration."
+      },
+      {
+        "id": "e4",
+        "text": "Rifaximin 10\u201320 mg/kg/day. Non-absorbable antibiotic reducing ammonia-producing gut flora. Synergistic with lactulose \u2014 superior to lactulose alone.",
+        "tag": "Rifaximin \u2014 synergistic",
+        "trap": "Combination of lactulose + rifaximin is SUPERIOR to lactulose alone. Always mention both in management."
+      },
+      {
+        "id": "e5",
+        "text": "Airway protection: Endotracheal intubation for Grade 3\u20134 HE. Mannitol 0.5\u20131 g/kg IV for cerebral oedema. Elevate head 30\u00b0. Reduce fluid rate.",
+        "tag": "Cerebral oedema",
+        "trap": "Both mannitol AND 3% saline are valid for cerebral oedema. Must also reduce fluid rate simultaneously."
+      },
+      {
+        "id": "e6",
+        "text": "Protein: Do NOT routinely restrict protein. Maintain 1\u20131.5 g/kg/day normally. Only restrict during acute severe episodes. Long-term restriction causes sarcopenia and worsens ammonia.",
+        "tag": "Protein management",
+        "trap": "Never recommend long-term protein restriction in chronic HE. It causes malnutrition and sarcopenia, paradoxically worsening ammonia levels."
+      },
+      {
+        "id": "e7",
+        "text": "Refractory/recurrent HE: Evaluate for liver transplantation. Recurrent HE despite optimal medical therapy indicates advanced liver decompensation.",
+        "tag": "Transplant evaluation",
+        "trap": "Refractory HE = indication for expedited liver transplant listing. Do not delay evaluation."
+      }
+    ]
+  },
+  {
+    "id": "hypona",
+    "name": "Hyponatremia Emergency",
+    "color": "#0EA5E9",
+    "sub": "7 steps \u00b7 volume status first \u00b7 slow correction",
+    "steps": [
+      {
+        "id": "y1",
+        "text": "Confirm true hyponatraemia: Serum Na\u207a <135 mEq/L. Check serum osmolality to rule out pseudohyponatraemia (high lipids/proteins) or hyperglycaemia.",
+        "tag": "Confirmation",
+        "trap": "Hyperglycaemia causes pseudohyponatraemia \u2014 correct measured Na\u207a by adding 1.6 mEq/L for each 100 mg/dL glucose above 100."
+      },
+      {
+        "id": "y2",
+        "text": "Assess volume status: Hypovolaemic (dry mucosa, tachycardia) vs Euvolaemic (normal skin turgor) vs Hypervolaemic (oedema, ascites). This determines the entire management pathway.",
+        "tag": "Volume status",
+        "trap": "Volume status is the examiner's preferred framework. Getting this wrong leads to completely wrong management."
+      },
+      {
+        "id": "y3",
+        "text": "Hypovolaemic: Replace volume with normal saline. Once euvolaemic, free water excretion resumes and Na\u207a corrects. For CSW: aggressive NaCl + fludrocortisone.",
+        "tag": "Hypovolaemic Rx",
+        "trap": "CSW is hypovolaemic \u2014 fluid restriction causes SHOCK. Replace Na\u207a + volume aggressively."
+      },
+      {
+        "id": "y4",
+        "text": "Euvolaemic (SIADH): Fluid restriction 800\u20131200 mL/m\u00b2/day (60\u201375% maintenance). First-line for mild-moderate SIADH. Normal saline may WORSEN hyponatraemia.",
+        "tag": "SIADH Rx",
+        "trap": "Normal saline is hypotonic relative to urine in SIADH (urine osmolality >300) \u2014 may worsen hyponatraemia. Use fluid restriction or hypertonic saline."
+      },
+      {
+        "id": "y5",
+        "text": "Severe symptomatic hyponatraemia (seizures, Na\u207a <120): 3% hypertonic saline 1\u20132 mL/kg/hr. Calculate rate: [desired rise/hr \u00d7 0.6 \u00d7 weight] / 0.513.",
+        "tag": "3% saline \u2014 emergency",
+        "trap": "Check Na\u207a every 2\u20134 hours during 3% saline infusion. Rapid correction risks osmotic demyelination syndrome (ODS)."
+      },
+      {
+        "id": "y6",
+        "text": "Rate of correction: Chronic hyponatraemia (>48h) \u2014 max 8\u201310 mEq/L in 24h and 12\u201318 mEq/L in 48h. Acute symptomatic: can correct faster initially (1\u20132 mEq/L/hr for 3\u20134h).",
+        "tag": "Correction rate",
+        "trap": "Rapid correction >12 mEq/L/24h causes central pontine myelinolysis (locked-in syndrome, quadriplegia). Max = 8\u201310 mEq/L/24h for chronic."
+      },
+      {
+        "id": "y7",
+        "text": "Treat underlying cause: SIADH \u2192 stop offending drugs, treat CNS infection/pneumonia. CSW \u2192 treat CNS trauma/SAH. Hypervolaemic \u2192 treat CHF/cirrhosis/NS.",
+        "tag": "Underlying cause",
+        "trap": "Always treat the underlying cause. Hyponatraemia will recur if the precipitant is not addressed."
+      }
+    ]
+  },
+  {
+    "id": "para",
+    "name": "Paracetamol Poisoning",
+    "color": "#EF4444",
+    "sub": "8 steps \u00b7 NAC \u00b7 Rumack-Matthew \u00b7 King's College",
+    "steps": [
+      {
+        "id": "x1",
+        "text": "Assess toxicity: Single ingestion >150 mg/kg OR chronic >75 mg/kg/day. Risk factors: fasting, malnutrition, enzyme-inducing drugs (phenytoin, rifampicin).",
+        "tag": "Toxicity assessment",
+        "trap": "Chronic supratherapeutic dosing (>75 mg/kg/day) can cause toxicity \u2014 especially in malnourished or fasting children."
+      },
+      {
+        "id": "x2",
+        "text": "Gastric decontamination: Activated charcoal 1 g/kg (max 50 g) if within 1\u20132 hours of ingestion AND airway is protected.",
+        "tag": "Charcoal",
+        "trap": "Activated charcoal reduces absorption by 50\u201390% but only if given within 1\u20132 hours. Do NOT delay NAC for charcoal if >8 hours since ingestion."
+      },
+      {
+        "id": "x3",
+        "text": "NAC indication: All potentially toxic ingestions OR serum level above treatment line on Rumack-Matthew nomogram (4\u201324h post-ingestion) OR abnormal LFTs/INR.",
+        "tag": "NAC indication",
+        "trap": "Rumack-Matthew nomogram applies ONLY to single acute ingestions between 4\u201324 hours. Cannot use for chronic or staggered overdoses."
+      },
+      {
+        "id": "x4",
+        "text": "NAC IV regimen (preferred in children): 150 mg/kg in 3 mL/kg D5W over 1h \u2192 50 mg/kg in 7 mL/kg D5W over 4h \u2192 100 mg/kg in 14 mL/kg D5W over 16h. Total 300 mg/kg/21h.",
+        "tag": "NAC dosing",
+        "trap": "IV total = 300 mg/kg (150+50+100). Oral total = 1330 mg/kg. Do NOT confuse the regimens. Monitor for fluid overload in small children."
+      },
+      {
+        "id": "x5",
+        "text": "NAC timing: MOST effective within 8 hours of ingestion. Still beneficial beyond 8h if hepatic failure has not developed. Give NAC empirically if time of ingestion is uncertain.",
+        "tag": "NAC timing",
+        "trap": "Do NOT delay NAC for lab results or charcoal if >8 hours since ingestion. The 8-hour window is critical for efficacy."
+      },
+      {
+        "id": "x6",
+        "text": "Monitor LFTs, INR, creatinine, glucose every 4\u20136 hours. INR >3 at 48h or >4.5 at any time = poor prognosis. pH <7.3 after fluid resuscitation = poor prognosis.",
+        "tag": "Monitoring",
+        "trap": "INR is a prognostic marker. FFP only for active bleeding \u2014 NOT for INR correction alone (masks prognostic value)."
+      },
+      {
+        "id": "x7",
+        "text": "King's College poor prognostic criteria: (1) Arterial pH <7.3 after fluids OR (2) All three of: INR >6.5, creatinine >3.4 mg/dL, encephalopathy Grade III\u2013IV.",
+        "tag": "Prognosis",
+        "trap": "King's College criteria indicate need for liver transplant evaluation. Do not delay referral if criteria are met."
+      },
+      {
+        "id": "x8",
+        "text": "Liver transplant: For fulminant hepatic failure meeting King's College criteria. Contact transplant centre early. Complete hepatic regeneration is usual if patient survives.",
+        "tag": "Transplant",
+        "trap": "Paracetamol poisoning has excellent prognosis if NAC given within 8h. Late presentation (>24h) has 5\u201310% mortality without transplant."
+      }
+    ]
+  },
+  {
+    "id": "cah",
+    "name": "CAH \u2014 Salt-Wasting Crisis",
+    "color": "#EC4899",
+    "sub": "6 steps \u00b7 hydrocortisone + fludrocortisone \u00b7 emergency",
+    "steps": [
+      {
+        "id": "h1",
+        "text": "Recognise crisis: Virilised female with vomiting, dehydration, shock at 7\u201314 days of life. Hyponatraemia + hyperkalaemia + metabolic acidosis. THIS IS A MEDICAL EMERGENCY.",
+        "tag": "Recognition",
+        "trap": "Salt-wasting crisis at 7\u201314 days is a neonatal emergency. Do NOT delay treatment for confirmatory tests."
+      },
+      {
+        "id": "h2",
+        "text": "Emergency resuscitation: 0.9% NS 10\u201320 mL/kg boluses for hypovolaemic shock. IV access. Send bloods: glucose, electrolytes, cortisol, 17-OHP.",
+        "tag": "Resuscitation",
+        "trap": "Do NOT give potassium-containing fluids. The child already has hyperkalaemia. Use normal saline for resuscitation."
+      },
+      {
+        "id": "h3",
+        "text": "Hydrocortisone stress dose: 50\u2013100 mg/m\u00b2/day IV divided Q6H for 24\u201348 hours. This is 5\u201310\u00d7 the maintenance dose. Then taper to maintenance.",
+        "tag": "Hydrocortisone",
+        "trap": "Stress dose = 50\u2013100 mg/m\u00b2/day IV. Maintenance = 10\u201315 mg/m\u00b2/day PO. These are vastly different \u2014 do NOT confuse them."
+      },
+      {
+        "id": "h4",
+        "text": "Fludrocortisone: 0.1\u20130.2 mg/day PO when enteral tolerated. Mineralocorticoid replacement for aldosterone deficiency.",
+        "tag": "Fludrocortisone",
+        "trap": "Fludrocortisone is ONLY needed in salt-wasting CAH. Simple virilising CAH may not need it. Monitor BP and electrolytes."
+      },
+      {
+        "id": "h5",
+        "text": "Sodium chloride: 1\u20132 g/day PO (or IV saline if shocked). Infants have higher sodium requirement due to immature kidneys. May discontinue in older children.",
+        "tag": "Salt supplementation",
+        "trap": "Infants need 1\u20132 g/day NaCl. Older children may not need supplemental salt if diet is adequate."
+      },
+      {
+        "id": "h6",
+        "text": "Hyperkalaemia management: Calcium gluconate for cardioprotection \u2192 insulin + glucose \u2192 sodium bicarbonate if pH <7.1. Dialysis for refractory cases.",
+        "tag": "Hyperkalaemia",
+        "trap": "Hyperkalaemia in CAH is due to aldosterone deficiency. Fludrocortisone is the definitive treatment \u2014 adjuncts are temporary bridges."
       }
     ]
   }

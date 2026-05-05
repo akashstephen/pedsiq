@@ -2,66 +2,889 @@
   {
     "id": "b1",
     "name": "Glomerular Wars",
-    "subtitle": "12 features · some belong to BOTH",
+    "subtitle": "12 features \u00b7 some belong to BOTH",
     "diseases": [
-      {"id":"agn","name":"AGN / PSGN","color":"#FBBF24","glow":"rgba(251,191,36,.25)","bg":"rgba(251,191,36,.06)"},
-      {"id":"ns","name":"Nephrotic Syndrome","color":"#22D3EE","glow":"rgba(34,211,238,.25)","bg":"rgba(34,211,238,.06)"}
+      {
+        "id": "agn",
+        "name": "AGN / PSGN",
+        "color": "#FBBF24",
+        "glow": "rgba(251,191,36,.25)",
+        "bg": "rgba(251,191,36,.06)"
+      },
+      {
+        "id": "ns",
+        "name": "Nephrotic Syndrome",
+        "color": "#22D3EE",
+        "glow": "rgba(34,211,238,.25)",
+        "bg": "rgba(34,211,238,.06)"
+      }
     ],
     "features": [
-      {"id":"f01","text":"Gross haematuria","sub":"smoky / tea-coloured urine","correctDiseaseIds":["agn"],"explanation":"Haematuria is cardinal in nephritic syndrome (AGN). NS (MCD) has absent or only microscopic haematuria — a defining differentiator."},
-      {"id":"f02","text":"RBC casts in urine","sub":"pathognomonic finding","correctDiseaseIds":["agn"],"explanation":"RBC casts = glomerular bleeding → nephritic pattern. Pathognomonic for AGN. Completely absent in NS."},
-      {"id":"f03","text":"Hypertension","sub":"Na/H₂O retention","correctDiseaseIds":["agn"],"explanation":"HTN is cardinal in nephritic syndrome. Absent in typical MCD/NS — oedema in NS is from oncotic pressure fall, not fluid overload or hypertension."},
-      {"id":"f04","text":"Low serum C3, normal C4","sub":"alternate pathway consumed","correctDiseaseIds":["agn"],"explanation":"PSGN: immune complex → alternate pathway activation → C3 consumed, C4 spared. NS (MCD) has completely normal complement.","trap":"Normal C3 + haematuria → IgA nephropathy, NOT PSGN. Always check both C3 and C4."},
-      {"id":"f05","text":"Massive proteinuria","sub":">50 mg/kg/day","correctDiseaseIds":["ns"],"explanation":"NS is defined by nephrotic-range proteinuria. AGN has only mild proteinuria (<1 g/day) — not enough to cause hypoalbuminaemia."},
-      {"id":"f06","text":"Serum albumin <2.5 g/dL","sub":"hypoalbuminaemia","correctDiseaseIds":["ns"],"explanation":"Hypoalbuminaemia results from massive urinary protein loss in NS. In AGN, albumin is normal — this distinction is core to the clinical picture."},
-      {"id":"f07","text":"Ascites + pleural effusion","sub":"severe generalised oedema","correctDiseaseIds":["ns"],"explanation":"Severe generalised oedema (including ascites) is driven by the oncotic pressure fall in NS. AGN oedema is milder and mainly periorbital due to fluid retention."},
-      {"id":"f08","text":"Antithrombin III lost in urine","sub":"→ renal vein thrombosis","correctDiseaseIds":["ns"],"explanation":"NS causes urinary loss of multiple proteins including antithrombin III, proteins C and S → hypercoagulable state. Renal vein thrombosis is the most common thrombotic complication."},
-      {"id":"f09","text":"S. pneumoniae infection risk","sub":"SBP, cellulitis, sepsis","correctDiseaseIds":["ns"],"explanation":"NS causes urinary loss of IgG and complement Factor B → susceptibility to encapsulated organisms (S. pneumoniae, E. coli, Klebsiella). Vaccinate before starting steroids."},
-      {"id":"f10","text":"Follows streptococcal infection","sub":"pharyngitis 10d · impetigo 3–6w","correctDiseaseIds":["agn"],"explanation":"PSGN follows nephritogenic Group A strep infection with a clear latent period. NS is idiopathic in most children — no infectious trigger in MCD."},
-      {"id":"f11","text":"Age peak 5–12 years","sub":"rare under 2 years","correctDiseaseIds":["agn"],"explanation":"PSGN peaks at 5–12 years. MCD/NS peaks at 2–6 years. Both facts are individually tested in MCQs."},
-      {"id":"f12","text":"Periorbital puffiness on waking","sub":"classic presenting complaint","correctDiseaseIds":["agn","ns"],"explanation":"BOTH diseases cause periorbital oedema. In AGN it is from fluid retention / HTN. In NS it is from hypoalbuminaemia. Clinically, NS causes more striking morning facial oedema."}
+      {
+        "id": "f01",
+        "text": "Gross haematuria",
+        "sub": "smoky / tea-coloured urine",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "Haematuria is cardinal in nephritic syndrome (AGN). NS (MCD) has absent or only microscopic haematuria \u2014 a defining differentiator."
+      },
+      {
+        "id": "f02",
+        "text": "RBC casts in urine",
+        "sub": "pathognomonic finding",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "RBC casts = glomerular bleeding \u2192 nephritic pattern. Pathognomonic for AGN. Completely absent in NS."
+      },
+      {
+        "id": "f03",
+        "text": "Hypertension",
+        "sub": "Na/H\u2082O retention",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "HTN is cardinal in nephritic syndrome. Absent in typical MCD/NS \u2014 oedema in NS is from oncotic pressure fall, not fluid overload or hypertension."
+      },
+      {
+        "id": "f04",
+        "text": "Low serum C3, normal C4",
+        "sub": "alternate pathway consumed",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "PSGN: immune complex \u2192 alternate pathway activation \u2192 C3 consumed, C4 spared. NS (MCD) has completely normal complement.",
+        "trap": "Normal C3 + haematuria \u2192 IgA nephropathy, NOT PSGN. Always check both C3 and C4."
+      },
+      {
+        "id": "f05",
+        "text": "Massive proteinuria",
+        "sub": ">50 mg/kg/day",
+        "correctDiseaseIds": [
+          "ns"
+        ],
+        "explanation": "NS is defined by nephrotic-range proteinuria. AGN has only mild proteinuria (<1 g/day) \u2014 not enough to cause hypoalbuminaemia."
+      },
+      {
+        "id": "f06",
+        "text": "Serum albumin <2.5 g/dL",
+        "sub": "hypoalbuminaemia",
+        "correctDiseaseIds": [
+          "ns"
+        ],
+        "explanation": "Hypoalbuminaemia results from massive urinary protein loss in NS. In AGN, albumin is normal \u2014 this distinction is core to the clinical picture."
+      },
+      {
+        "id": "f07",
+        "text": "Ascites + pleural effusion",
+        "sub": "severe generalised oedema",
+        "correctDiseaseIds": [
+          "ns"
+        ],
+        "explanation": "Severe generalised oedema (including ascites) is driven by the oncotic pressure fall in NS. AGN oedema is milder and mainly periorbital due to fluid retention."
+      },
+      {
+        "id": "f08",
+        "text": "Antithrombin III lost in urine",
+        "sub": "\u2192 renal vein thrombosis",
+        "correctDiseaseIds": [
+          "ns"
+        ],
+        "explanation": "NS causes urinary loss of multiple proteins including antithrombin III, proteins C and S \u2192 hypercoagulable state. Renal vein thrombosis is the most common thrombotic complication."
+      },
+      {
+        "id": "f09",
+        "text": "S. pneumoniae infection risk",
+        "sub": "SBP, cellulitis, sepsis",
+        "correctDiseaseIds": [
+          "ns"
+        ],
+        "explanation": "NS causes urinary loss of IgG and complement Factor B \u2192 susceptibility to encapsulated organisms (S. pneumoniae, E. coli, Klebsiella). Vaccinate before starting steroids."
+      },
+      {
+        "id": "f10",
+        "text": "Follows streptococcal infection",
+        "sub": "pharyngitis 10d \u00b7 impetigo 3\u20136w",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "PSGN follows nephritogenic Group A strep infection with a clear latent period. NS is idiopathic in most children \u2014 no infectious trigger in MCD."
+      },
+      {
+        "id": "f11",
+        "text": "Age peak 5\u201312 years",
+        "sub": "rare under 2 years",
+        "correctDiseaseIds": [
+          "agn"
+        ],
+        "explanation": "PSGN peaks at 5\u201312 years. MCD/NS peaks at 2\u20136 years. Both facts are individually tested in MCQs."
+      },
+      {
+        "id": "f12",
+        "text": "Periorbital puffiness on waking",
+        "sub": "classic presenting complaint",
+        "correctDiseaseIds": [
+          "agn",
+          "ns"
+        ],
+        "explanation": "BOTH diseases cause periorbital oedema. In AGN it is from fluid retention / HTN. In NS it is from hypoalbuminaemia. Clinically, NS causes more striking morning facial oedema."
+      }
     ]
   },
   {
     "id": "b2",
     "name": "Rickets Rumble",
-    "subtitle": "10 features · separate the two types",
+    "subtitle": "10 features \u00b7 separate the two types",
     "diseases": [
-      {"id":"nutr","name":"Nutritional Rickets","color":"#34D399","glow":"rgba(52,211,153,.25)","bg":"rgba(52,211,153,.06)"},
-      {"id":"xlh","name":"XLH (Familial Hypophosphataemia)","color":"#A78BFA","glow":"rgba(167,139,250,.25)","bg":"rgba(167,139,250,.06)"}
+      {
+        "id": "nutr",
+        "name": "Nutritional Rickets",
+        "color": "#34D399",
+        "glow": "rgba(52,211,153,.25)",
+        "bg": "rgba(52,211,153,.06)"
+      },
+      {
+        "id": "xlh",
+        "name": "XLH (Familial Hypophosphataemia)",
+        "color": "#A78BFA",
+        "glow": "rgba(167,139,250,.25)",
+        "bg": "rgba(167,139,250,.06)"
+      }
     ],
     "features": [
-      {"id":"r01","text":"Low 25(OH)D < 8 ng/mL","sub":"vitamin D deficiency","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets is defined by low vitamin D stores. In XLH, 25(OH)D is NORMAL — the defect is in renal phosphate reabsorption (PHEX gene mutation), not vitamin D status."},
-      {"id":"r02","text":"Normal 25(OH)D · Normal Ca","sub":"phosphate-only abnormality","correctDiseaseIds":["xlh"],"explanation":"XLH has normal vitamin D and normal calcium. Only phosphate is low, due to constitutive FGF23-driven renal phosphate wasting. Simple Vit D replacement is therefore inadequate."},
-      {"id":"r03","text":"Elevated PTH (secondary)","sub":"compensatory hyperparathyroidism","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets: low Ca → PTH rises to compensate → renal phosphate wasting. In XLH, calcium is normal so this secondary PTH rise does NOT occur."},
-      {"id":"r04","text":"Low serum phosphate","sub":"but mechanism differs","correctDiseaseIds":["nutr","xlh"],"explanation":"BOTH have hypophosphataemia — but mechanisms differ. Nutritional: secondary to PTH. XLH: PHEX mutation → FGF23 excess → constitutive renal phosphate wasting independent of PTH and calcium.","trap":"Low phosphate alone cannot distinguish nutritional from XLH. You MUST check 25(OH)D and calcium."},
-      {"id":"r05","text":"Elevated serum ALP","sub":"osteoblast hyperactivity","correctDiseaseIds":["nutr","xlh"],"explanation":"Both diseases cause elevated ALP — bone mineralisation is defective regardless of mechanism. ALP reflects osteoblast activity trying to mineralise accumulating osteoid."},
-      {"id":"r06","text":"X-linked dominant inheritance","sub":"PHEX gene · FGF23 excess","correctDiseaseIds":["xlh"],"explanation":"XLH is X-linked dominant caused by loss-of-function PHEX mutations → FGF23 excess → renal phosphate wasting. Nutritional rickets has no genetic basis — it is purely environmental/dietary."},
-      {"id":"r07","text":"Treat with Vitamin D + Calcium","sub":"2000–4000 IU/day + 50–100 mg/kg/day","correctDiseaseIds":["nutr"],"explanation":"Nutritional rickets: replace what is missing — Vit D3 2000–4000 IU/day × 6–12 weeks + elemental calcium 50–100 mg/kg/day. XLH is not Vit D deficient, so this approach is insufficient."},
-      {"id":"r08","text":"Treat with Phosphate + Calcitriol","sub":"burosumab for refractory","correctDiseaseIds":["xlh"],"explanation":"XLH treatment: oral phosphate supplements + calcitriol (active 1,25-OH Vit D to suppress FGF23 effects). New: Burosumab (anti-FGF23 monoclonal antibody). Vitamin D alone is ineffective.","trap":"XLH requires PHOSPHATE + CALCITRIOL, not simple Vit D. This distinction is high-yield."},
-      {"id":"r09","text":"Hypocalcaemic tetany / seizures","sub":"emergency presentation","correctDiseaseIds":["nutr"],"explanation":"Hypocalcaemic seizures occur in nutritional rickets — severe Vit D deficiency → low calcium. In XLH, calcium is normal throughout, so tetany does NOT occur."},
-      {"id":"r10","text":"Bowing of legs (genu varum)","sub":"weight-bearing deformity","correctDiseaseIds":["nutr","xlh"],"explanation":"BOTH diseases cause bow legs — the common endpoint of defective bone mineralisation. X-ray changes look identical in both. Only the biochemistry (Ca, PO4, 25-OH-D) distinguishes them."}
+      {
+        "id": "r01",
+        "text": "Low 25(OH)D < 8 ng/mL",
+        "sub": "vitamin D deficiency",
+        "correctDiseaseIds": [
+          "nutr"
+        ],
+        "explanation": "Nutritional rickets is defined by low vitamin D stores. In XLH, 25(OH)D is NORMAL \u2014 the defect is in renal phosphate reabsorption (PHEX gene mutation), not vitamin D status."
+      },
+      {
+        "id": "r02",
+        "text": "Normal 25(OH)D \u00b7 Normal Ca",
+        "sub": "phosphate-only abnormality",
+        "correctDiseaseIds": [
+          "xlh"
+        ],
+        "explanation": "XLH has normal vitamin D and normal calcium. Only phosphate is low, due to constitutive FGF23-driven renal phosphate wasting. Simple Vit D replacement is therefore inadequate."
+      },
+      {
+        "id": "r03",
+        "text": "Elevated PTH (secondary)",
+        "sub": "compensatory hyperparathyroidism",
+        "correctDiseaseIds": [
+          "nutr"
+        ],
+        "explanation": "Nutritional rickets: low Ca \u2192 PTH rises to compensate \u2192 renal phosphate wasting. In XLH, calcium is normal so this secondary PTH rise does NOT occur."
+      },
+      {
+        "id": "r04",
+        "text": "Low serum phosphate",
+        "sub": "but mechanism differs",
+        "correctDiseaseIds": [
+          "nutr",
+          "xlh"
+        ],
+        "explanation": "BOTH have hypophosphataemia \u2014 but mechanisms differ. Nutritional: secondary to PTH. XLH: PHEX mutation \u2192 FGF23 excess \u2192 constitutive renal phosphate wasting independent of PTH and calcium.",
+        "trap": "Low phosphate alone cannot distinguish nutritional from XLH. You MUST check 25(OH)D and calcium."
+      },
+      {
+        "id": "r05",
+        "text": "Elevated serum ALP",
+        "sub": "osteoblast hyperactivity",
+        "correctDiseaseIds": [
+          "nutr",
+          "xlh"
+        ],
+        "explanation": "Both diseases cause elevated ALP \u2014 bone mineralisation is defective regardless of mechanism. ALP reflects osteoblast activity trying to mineralise accumulating osteoid."
+      },
+      {
+        "id": "r06",
+        "text": "X-linked dominant inheritance",
+        "sub": "PHEX gene \u00b7 FGF23 excess",
+        "correctDiseaseIds": [
+          "xlh"
+        ],
+        "explanation": "XLH is X-linked dominant caused by loss-of-function PHEX mutations \u2192 FGF23 excess \u2192 renal phosphate wasting. Nutritional rickets has no genetic basis \u2014 it is purely environmental/dietary."
+      },
+      {
+        "id": "r07",
+        "text": "Treat with Vitamin D + Calcium",
+        "sub": "2000\u20134000 IU/day + 50\u2013100 mg/kg/day",
+        "correctDiseaseIds": [
+          "nutr"
+        ],
+        "explanation": "Nutritional rickets: replace what is missing \u2014 Vit D3 2000\u20134000 IU/day \u00d7 6\u201312 weeks + elemental calcium 50\u2013100 mg/kg/day. XLH is not Vit D deficient, so this approach is insufficient."
+      },
+      {
+        "id": "r08",
+        "text": "Treat with Phosphate + Calcitriol",
+        "sub": "burosumab for refractory",
+        "correctDiseaseIds": [
+          "xlh"
+        ],
+        "explanation": "XLH treatment: oral phosphate supplements + calcitriol (active 1,25-OH Vit D to suppress FGF23 effects). New: Burosumab (anti-FGF23 monoclonal antibody). Vitamin D alone is ineffective.",
+        "trap": "XLH requires PHOSPHATE + CALCITRIOL, not simple Vit D. This distinction is high-yield."
+      },
+      {
+        "id": "r09",
+        "text": "Hypocalcaemic tetany / seizures",
+        "sub": "emergency presentation",
+        "correctDiseaseIds": [
+          "nutr"
+        ],
+        "explanation": "Hypocalcaemic seizures occur in nutritional rickets \u2014 severe Vit D deficiency \u2192 low calcium. In XLH, calcium is normal throughout, so tetany does NOT occur."
+      },
+      {
+        "id": "r10",
+        "text": "Bowing of legs (genu varum)",
+        "sub": "weight-bearing deformity",
+        "correctDiseaseIds": [
+          "nutr",
+          "xlh"
+        ],
+        "explanation": "BOTH diseases cause bow legs \u2014 the common endpoint of defective bone mineralisation. X-ray changes look identical in both. Only the biochemistry (Ca, PO4, 25-OH-D) distinguishes them."
+      }
     ]
   },
   {
     "id": "b3",
     "name": "Complement Clash",
-    "subtitle": "8 features · 4 diseases",
+    "subtitle": "8 features \u00b7 4 diseases",
     "diseases": [
-      {"id":"psgn","name":"PSGN","color":"#FBBF24","glow":"rgba(251,191,36,.25)","bg":"rgba(251,191,36,.06)"},
-      {"id":"mpgn","name":"MPGN","color":"#F87171","glow":"rgba(248,113,113,.25)","bg":"rgba(248,113,113,.06)"},
-      {"id":"iga","name":"IgA Nephropathy","color":"#F472B6","glow":"rgba(244,114,182,.25)","bg":"rgba(244,114,182,.06)"},
-      {"id":"mcd","name":"MCD (Nephrotic)","color":"#22D3EE","glow":"rgba(34,211,238,.25)","bg":"rgba(34,211,238,.06)"}
+      {
+        "id": "psgn",
+        "name": "PSGN",
+        "color": "#FBBF24",
+        "glow": "rgba(251,191,36,.25)",
+        "bg": "rgba(251,191,36,.06)"
+      },
+      {
+        "id": "mpgn",
+        "name": "MPGN",
+        "color": "#F87171",
+        "glow": "rgba(248,113,113,.25)",
+        "bg": "rgba(248,113,113,.06)"
+      },
+      {
+        "id": "iga",
+        "name": "IgA Nephropathy",
+        "color": "#F472B6",
+        "glow": "rgba(244,114,182,.25)",
+        "bg": "rgba(244,114,182,.06)"
+      },
+      {
+        "id": "mcd",
+        "name": "MCD (Nephrotic)",
+        "color": "#22D3EE",
+        "glow": "rgba(34,211,238,.25)",
+        "bg": "rgba(34,211,238,.06)"
+      }
     ],
     "features": [
-      {"id":"c01","text":"Low C3 · normal C4","sub":"alternate pathway activation","correctDiseaseIds":["psgn"],"explanation":"PSGN: immune complexes predominantly activate the alternate pathway → C3 consumed, C4 spared. C3 returns to normal in 6–8 weeks. Persistent low C3 beyond 12 weeks → suspect MPGN.","trap":"C3 persists low >8–12 weeks = NOT PSGN. Think MPGN or another chronic disease."},
-      {"id":"c02","text":"Low C3 · low C4","sub":"both pathways consumed","correctDiseaseIds":["mpgn"],"explanation":"MPGN activates BOTH classical (antibody-driven → low C4) and alternate pathways (→ low C3). Persistently low C3 + low C4 beyond 8 weeks is the hallmark distinguishing MPGN from PSGN.","trap":"PSGN = low C3, NORMAL C4. MPGN = low C3, LOW C4. C4 is the discriminator."},
-      {"id":"c03","text":"Normal C3 · normal C4 + haematuria","sub":"mesangial IgA deposits","correctDiseaseIds":["iga"],"explanation":"IgA nephropathy has completely normal complement — disease is driven by mesangial IgA deposition with local complement activation, no systemic consumption. This is the key differentiator from PSGN.","trap":"Normal C3 + haematuria = IgA nephropathy, NOT PSGN. Examiners test this frequently."},
-      {"id":"c04","text":"Normal C3 · normal C4 + massive proteinuria","sub":"no complement disease","correctDiseaseIds":["mcd"],"explanation":"MCD (Minimal Change Disease) has entirely normal complement. Proteinuria is from podocyte foot process effacement — not immune complex or complement-mediated disease."},
-      {"id":"c05","text":"\"Humps\" on electron microscopy","sub":"subepithelial immune deposits","correctDiseaseIds":["psgn"],"explanation":"\"Humps\" = electron-dense subepithelial immune complex deposits. This is the pathognomonic EM finding in PSGN. Light microscopy shows \"lumpy-bumpy\" pattern on immunofluorescence."},
-      {"id":"c06","text":"\"Tram-track\" GBM on light microscopy","sub":"GBM reduplication","correctDiseaseIds":["mpgn"],"explanation":"\"Tram-track\" = double-contoured GBM on PAS/silver stain. Pathognomonic for MPGN. Caused by mesangial cell interposition into the GBM creating a second layer."},
-      {"id":"c07","text":"Foot process effacement on EM","sub":"podocyte injury · normal LM","correctDiseaseIds":["mcd"],"explanation":"Foot process effacement on EM is the hallmark of MCD. Light microscopy is NORMAL (hence \"minimal change\") — the lesion is only visible on EM. This is why MCD was historically missed on biopsy."},
-      {"id":"c08","text":"Haematuria 1–3 days after URTI","sub":"\"synpharyngitic\" onset","correctDiseaseIds":["iga"],"explanation":"IgA nephropathy has a very short latent period (1–3 days, concurrently with URTI). PSGN has a LONG latent period (5–21 days after pharyngitis). Timing is the classic MCQ discriminator.","trap":"Short latent period (days) = IgA. Long latent period (1–3 weeks) = PSGN."}
+      {
+        "id": "c01",
+        "text": "Low C3 \u00b7 normal C4",
+        "sub": "alternate pathway activation",
+        "correctDiseaseIds": [
+          "psgn"
+        ],
+        "explanation": "PSGN: immune complexes predominantly activate the alternate pathway \u2192 C3 consumed, C4 spared. C3 returns to normal in 6\u20138 weeks. Persistent low C3 beyond 12 weeks \u2192 suspect MPGN.",
+        "trap": "C3 persists low >8\u201312 weeks = NOT PSGN. Think MPGN or another chronic disease."
+      },
+      {
+        "id": "c02",
+        "text": "Low C3 \u00b7 low C4",
+        "sub": "both pathways consumed",
+        "correctDiseaseIds": [
+          "mpgn"
+        ],
+        "explanation": "MPGN activates BOTH classical (antibody-driven \u2192 low C4) and alternate pathways (\u2192 low C3). Persistently low C3 + low C4 beyond 8 weeks is the hallmark distinguishing MPGN from PSGN.",
+        "trap": "PSGN = low C3, NORMAL C4. MPGN = low C3, LOW C4. C4 is the discriminator."
+      },
+      {
+        "id": "c03",
+        "text": "Normal C3 \u00b7 normal C4 + haematuria",
+        "sub": "mesangial IgA deposits",
+        "correctDiseaseIds": [
+          "iga"
+        ],
+        "explanation": "IgA nephropathy has completely normal complement \u2014 disease is driven by mesangial IgA deposition with local complement activation, no systemic consumption. This is the key differentiator from PSGN.",
+        "trap": "Normal C3 + haematuria = IgA nephropathy, NOT PSGN. Examiners test this frequently."
+      },
+      {
+        "id": "c04",
+        "text": "Normal C3 \u00b7 normal C4 + massive proteinuria",
+        "sub": "no complement disease",
+        "correctDiseaseIds": [
+          "mcd"
+        ],
+        "explanation": "MCD (Minimal Change Disease) has entirely normal complement. Proteinuria is from podocyte foot process effacement \u2014 not immune complex or complement-mediated disease."
+      },
+      {
+        "id": "c05",
+        "text": "\"Humps\" on electron microscopy",
+        "sub": "subepithelial immune deposits",
+        "correctDiseaseIds": [
+          "psgn"
+        ],
+        "explanation": "\"Humps\" = electron-dense subepithelial immune complex deposits. This is the pathognomonic EM finding in PSGN. Light microscopy shows \"lumpy-bumpy\" pattern on immunofluorescence."
+      },
+      {
+        "id": "c06",
+        "text": "\"Tram-track\" GBM on light microscopy",
+        "sub": "GBM reduplication",
+        "correctDiseaseIds": [
+          "mpgn"
+        ],
+        "explanation": "\"Tram-track\" = double-contoured GBM on PAS/silver stain. Pathognomonic for MPGN. Caused by mesangial cell interposition into the GBM creating a second layer."
+      },
+      {
+        "id": "c07",
+        "text": "Foot process effacement on EM",
+        "sub": "podocyte injury \u00b7 normal LM",
+        "correctDiseaseIds": [
+          "mcd"
+        ],
+        "explanation": "Foot process effacement on EM is the hallmark of MCD. Light microscopy is NORMAL (hence \"minimal change\") \u2014 the lesion is only visible on EM. This is why MCD was historically missed on biopsy."
+      },
+      {
+        "id": "c08",
+        "text": "Haematuria 1\u20133 days after URTI",
+        "sub": "\"synpharyngitic\" onset",
+        "correctDiseaseIds": [
+          "iga"
+        ],
+        "explanation": "IgA nephropathy has a very short latent period (1\u20133 days, concurrently with URTI). PSGN has a LONG latent period (5\u201321 days after pharyngitis). Timing is the classic MCQ discriminator.",
+        "trap": "Short latent period (days) = IgA. Long latent period (1\u20133 weeks) = PSGN."
+      }
+    ]
+  },
+  {
+    "id": "b4",
+    "name": "PEM Showdown",
+    "subtitle": "10 features \u00b7 Kwashiorkor vs Marasmus",
+    "diseases": [
+      {
+        "id": "kwa",
+        "name": "Kwashiorkor",
+        "color": "#F87171",
+        "glow": "rgba(248,113,113,.25)",
+        "bg": "rgba(248,113,113,.06)"
+      },
+      {
+        "id": "mar",
+        "name": "Marasmus",
+        "color": "#FBBF24",
+        "glow": "rgba(251,191,36,.25)",
+        "bg": "rgba(251,191,36,.06)"
+      }
+    ],
+    "features": [
+      {
+        "id": "p01",
+        "text": "Bilateral pitting edema",
+        "sub": "present vs absent",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Kwashiorkor = protein deficiency with adequate calories \u2192 hypoalbuminaemia \u2192 edema. Marasmus = both protein AND calorie deficiency \u2192 no edema."
+      },
+      {
+        "id": "p02",
+        "text": "Severe wasting \u00b7 'skin and bones'",
+        "sub": "muscle + fat loss",
+        "correctDiseaseIds": [
+          "mar"
+        ],
+        "explanation": "Marasmus = severe wasting of BOTH muscle and subcutaneous fat. Kwashiorkor has moderate wasting with preserved fat due to adequate calorie intake."
+      },
+      {
+        "id": "p03",
+        "text": "Flaky paint dermatosis",
+        "sub": "hyperpigmented peeling patches",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Flaky paint dermatosis is pathognomonic for kwashiorkor \u2014 hyperpigmented patches that peel off leaving raw skin. Not seen in marasmus."
+      },
+      {
+        "id": "p04",
+        "text": "Flag sign in hair",
+        "sub": "alternating light and dark bands",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Flag sign (alternating bands of light and dark hair) is classic for kwashiorkor due to episodes of poor nutrition interspersed with adequate nutrition."
+      },
+      {
+        "id": "p05",
+        "text": "Hepatomegaly (fatty liver)",
+        "sub": "decreased apolipoprotein synthesis",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Kwashiorkor causes fatty liver due to decreased apolipoprotein synthesis \u2192 impaired VLDL export \u2192 hepatic steatosis. Marasmus does NOT have hepatomegaly."
+      },
+      {
+        "id": "p06",
+        "text": "Serum albumin <2.5 g/dL",
+        "sub": "severe hypoalbuminaemia",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Kwashiorkor: serum albumin is LOW (<2.5 g/dL) due to protein deficiency. Marasmus: albumin is normal or only mildly low."
+      },
+      {
+        "id": "p07",
+        "text": "Voracious appetite",
+        "sub": "alert and hungry",
+        "correctDiseaseIds": [
+          "mar"
+        ],
+        "explanation": "Marasmus: child is alert, anxious, and has a GOOD (voracious) appetite. Kwashiorkor: child is irritable, apathetic, and has POOR appetite."
+      },
+      {
+        "id": "p08",
+        "text": "Weight for age 60\u201380%",
+        "sub": "moderate wasting",
+        "correctDiseaseIds": [
+          "kwa"
+        ],
+        "explanation": "Kwashiorkor: weight-for-age is 60\u201380% of expected. Marasmus: weight-for-age is <60% \u2014 much more severe."
+      },
+      {
+        "id": "p09",
+        "text": "Age typically <1 year",
+        "sub": "early infancy",
+        "correctDiseaseIds": [
+          "mar"
+        ],
+        "explanation": "Marasmus typically presents in infants <1 year. Kwashiorkor presents at 1\u20133 years (after weaning to starchy diet)."
+      },
+      {
+        "id": "p10",
+        "text": "Mortality risk",
+        "sub": "infection susceptibility",
+        "correctDiseaseIds": [
+          "kwa",
+          "mar"
+        ],
+        "explanation": "BOTH have high mortality risk due to immune dysfunction. Kwashiorkor: higher infection risk due to edema and skin breakdown. Marasmus: high if superinfection occurs."
+      }
+    ]
+  },
+  {
+    "id": "b5",
+    "name": "RTA Triad",
+    "subtitle": "10 features \u00b7 Type I vs Type II vs Type IV",
+    "diseases": [
+      {
+        "id": "rt1",
+        "name": "Type I (Distal)",
+        "color": "#F472B6",
+        "glow": "rgba(244,114,182,.25)",
+        "bg": "rgba(244,114,182,.06)"
+      },
+      {
+        "id": "rt2",
+        "name": "Type II (Proximal)",
+        "color": "#34D399",
+        "glow": "rgba(52,211,153,.25)",
+        "bg": "rgba(52,211,153,.06)"
+      },
+      {
+        "id": "rt4",
+        "name": "Type IV (Hypoaldo)",
+        "color": "#A78BFA",
+        "glow": "rgba(167,139,250,.25)",
+        "bg": "rgba(167,139,250,.06)"
+      }
+    ],
+    "features": [
+      {
+        "id": "t01",
+        "text": "Urine pH >5.5 despite acidosis",
+        "sub": "inappropriately alkaline urine",
+        "correctDiseaseIds": [
+          "rt1"
+        ],
+        "explanation": "Type I RTA: inability to secrete H+ in distal tubule \u2192 urine pH remains >5.5 even during systemic acidosis. Pathognomonic for distal RTA.",
+        "trap": "Urine pH >5.5 despite acidosis = Type I RTA. This is the single most important discriminator."
+      },
+      {
+        "id": "t02",
+        "text": "Urine pH variable",
+        "sub": "<5.5 when depleted, >5.5 when replete",
+        "correctDiseaseIds": [
+          "rt2"
+        ],
+        "explanation": "Type II RTA: urine pH is variable. When HCO3- is depleted, urine pH is <5.5. When replete, it rises >5.5 because the proximal tubule cannot reabsorb the filtered bicarbonate."
+      },
+      {
+        "id": "t03",
+        "text": "Urine pH <5.5",
+        "sub": "CAN acidify urine",
+        "correctDiseaseIds": [
+          "rt4"
+        ],
+        "explanation": "Type IV RTA: the distal tubule CAN acidify urine (pH <5.5). The problem is aldosterone deficiency/resistance \u2192 hyperkalaemia \u2192 impaired ammoniagenesis."
+      },
+      {
+        "id": "t04",
+        "text": "Hypokalaemia",
+        "sub": "low serum K+",
+        "correctDiseaseIds": [
+          "rt1",
+          "rt2"
+        ],
+        "explanation": "Types I and II BOTH cause hypokalaemia. Type I: K+ wasting in distal tubule. Type II: K+ wasting secondary to massive bicarbonaturia and volume depletion."
+      },
+      {
+        "id": "t05",
+        "text": "Hyperkalaemia",
+        "sub": "high serum K+",
+        "correctDiseaseIds": [
+          "rt4"
+        ],
+        "explanation": "Type IV RTA causes HYPERkalaemia \u2014 this is the key differentiator. Aldosterone deficiency \u2192 reduced distal K+ secretion. NEVER give potassium citrate in Type IV."
+      },
+      {
+        "id": "t06",
+        "text": "Nephrocalcinosis / stones",
+        "sub": "calcium phosphate deposition",
+        "correctDiseaseIds": [
+          "rt1"
+        ],
+        "explanation": "Type I RTA: citrate loss + alkaline urine \u2192 calcium phosphate stone formation and nephrocalcinosis. Types II and IV do NOT have this complication."
+      },
+      {
+        "id": "t07",
+        "text": "Fractional excretion HCO3- >15%",
+        "sub": "massive bicarbonate wasting",
+        "correctDiseaseIds": [
+          "rt2"
+        ],
+        "explanation": "Type II RTA: FE HCO3- >15% when plasma HCO3- is above threshold. Type I: FE HCO3- <5%. This is a key lab differentiator."
+      },
+      {
+        "id": "t08",
+        "text": "Fanconi syndrome association",
+        "sub": "glycosuria + aminoaciduria + phosphaturia",
+        "correctDiseaseIds": [
+          "rt2"
+        ],
+        "explanation": "Type II RTA is associated with Fanconi syndrome \u2014 generalized proximal tubule dysfunction causing glycosuria, aminoaciduria, and phosphaturia. Type I is NOT associated with Fanconi."
+      },
+      {
+        "id": "t09",
+        "text": "Amphotericin B as cause",
+        "sub": "drug-induced distal RTA",
+        "correctDiseaseIds": [
+          "rt1"
+        ],
+        "explanation": "Amphotericin B damages the distal tubule H+ pump \u2192 causes Type I RTA. Lithium causes nephrogenic DI. Acetazolamide causes Type II RTA (inhibits proximal carbonic anhydrase)."
+      },
+      {
+        "id": "t10",
+        "text": "Fludrocortisone responsive",
+        "sub": "mineralocorticoid replacement",
+        "correctDiseaseIds": [
+          "rt4"
+        ],
+        "explanation": "Type IV RTA due to aldosterone deficiency responds to fludrocortisone 0.1\u20130.3 mg/day. Types I and II do NOT respond to fludrocortisone."
+      }
+    ]
+  },
+  {
+    "id": "b6",
+    "name": "DI Duel",
+    "subtitle": "8 features \u00b7 Central vs Nephrogenic Diabetes Insipidus",
+    "diseases": [
+      {
+        "id": "cdi",
+        "name": "Central DI",
+        "color": "#22D3EE",
+        "glow": "rgba(34,211,238,.25)",
+        "bg": "rgba(34,211,238,.06)"
+      },
+      {
+        "id": "ndi",
+        "name": "Nephrogenic DI",
+        "color": "#F87171",
+        "glow": "rgba(248,113,113,.25)",
+        "bg": "rgba(248,113,113,.06)"
+      }
+    ],
+    "features": [
+      {
+        "id": "d01",
+        "text": "Low or undetectable plasma ADH",
+        "sub": "pituitary/hypothalamic defect",
+        "correctDiseaseIds": [
+          "cdi"
+        ],
+        "explanation": "Central DI: ADH (vasopressin) is LOW or undetectable due to pituitary/hypothalamic damage (craniopharyngioma, trauma, surgery, histiocytosis)."
+      },
+      {
+        "id": "d02",
+        "text": "Normal or elevated plasma ADH",
+        "sub": "kidney unresponsive",
+        "correctDiseaseIds": [
+          "ndi"
+        ],
+        "explanation": "Nephrogenic DI: ADH level is normal or elevated, but the collecting duct is resistant to its action. The problem is in the kidney, not the pituitary."
+      },
+      {
+        "id": "d03",
+        "text": "Urine osmolality rises >50% after desmopressin",
+        "sub": "DDAVP response test",
+        "correctDiseaseIds": [
+          "cdi"
+        ],
+        "explanation": "Central DI: desmopressin (DDAVP) causes urine osmolality to rise >50% because the collecting duct is intact and responsive once ADH is replaced.",
+        "trap": "Fluid deprivation test + DDAVP response is the gold standard. Central = responds. Nephrogenic = does NOT respond."
+      },
+      {
+        "id": "d04",
+        "text": "NO change in urine osmolality after desmopressin",
+        "sub": "ADH resistance",
+        "correctDiseaseIds": [
+          "ndi"
+        ],
+        "explanation": "Nephrogenic DI: DDAVP has NO effect because the collecting duct V2 receptors or AQP2 channels are defective or resistant."
+      },
+      {
+        "id": "d05",
+        "text": "Absent posterior pituitary bright spot on MRI",
+        "sub": "loss of normal T1 hyperintensity",
+        "correctDiseaseIds": [
+          "cdi"
+        ],
+        "explanation": "Central DI: MRI shows absent posterior pituitary bright spot (the normal T1 hyperintensity from stored ADH). Sensitivity ~80%. Nephrogenic DI has a normal pituitary MRI."
+      },
+      {
+        "id": "d06",
+        "text": "Craniopharyngioma as most common cause",
+        "sub": "suprasellar tumor in children",
+        "correctDiseaseIds": [
+          "cdi"
+        ],
+        "explanation": "Craniopharyngioma is the most common CNS tumor causing central DI in children. Always do MRI pituitary in suspected central DI."
+      },
+      {
+        "id": "d07",
+        "text": "X-linked AVPR2 mutation",
+        "sub": "90% of congenital nephrogenic DI",
+        "correctDiseaseIds": [
+          "ndi"
+        ],
+        "explanation": "Congenital nephrogenic DI: 90% are X-linked AVPR2 mutations (males affected). 10% are AQP2 mutations. Central DI is usually acquired, not genetic."
+      },
+      {
+        "id": "d08",
+        "text": "Lithium as most common drug cause",
+        "sub": "induces V2 receptor resistance",
+        "correctDiseaseIds": [
+          "ndi"
+        ],
+        "explanation": "Lithium is the most common drug-induced nephrogenic DI. It enters collecting duct principal cells via ENaC and inhibits glycogen synthase kinase-3beta, reducing AQP2 expression."
+      }
+    ]
+  },
+  {
+    "id": "b7",
+    "name": "Adrenal Crisis",
+    "subtitle": "8 features \u00b7 Primary vs Secondary Adrenal Insufficiency",
+    "diseases": [
+      {
+        "id": "pai",
+        "name": "Primary AI (Addison)",
+        "color": "#FBBF24",
+        "glow": "rgba(251,191,36,.25)",
+        "bg": "rgba(251,191,36,.06)"
+      },
+      {
+        "id": "sai",
+        "name": "Secondary AI (ACTH deficiency)",
+        "color": "#22D3EE",
+        "glow": "rgba(34,211,238,.25)",
+        "bg": "rgba(34,211,238,.06)"
+      }
+    ],
+    "features": [
+      {
+        "id": "a01",
+        "text": "Elevated ACTH",
+        "sub": "loss of negative feedback",
+        "correctDiseaseIds": [
+          "pai"
+        ],
+        "explanation": "Primary AI: ACTH is elevated because cortisol deficiency removes negative feedback on the pituitary. ACTH also cross-reacts with MSH receptors \u2192 hyperpigmentation."
+      },
+      {
+        "id": "a02",
+        "text": "Low or inappropriately normal ACTH",
+        "sub": "pituitary/hypothalamic disease",
+        "correctDiseaseIds": [
+          "sai"
+        ],
+        "explanation": "Secondary AI: ACTH is LOW because the pituitary cannot produce it (craniopharyngioma, surgery, trauma, radiation, congenital hypopituitarism)."
+      },
+      {
+        "id": "a03",
+        "text": "Hyperpigmentation",
+        "sub": "ACTH/MSH cross-reactivity",
+        "correctDiseaseIds": [
+          "pai"
+        ],
+        "explanation": "Hyperpigmentation of skin and mucous membranes is present in primary AI due to ACTH/MSH cross-reactivity. ABSENT in secondary AI \u2014 this is the fastest clinical differentiator.",
+        "trap": "NO hyperpigmentation + NO hyperkalaemia = secondary AI. These two features are the most tested differentiators."
+      },
+      {
+        "id": "a04",
+        "text": "NO hyperpigmentation",
+        "sub": "pallor instead",
+        "correctDiseaseIds": [
+          "sai"
+        ],
+        "explanation": "Secondary AI: NO hyperpigmentation. The child may appear pale. MSH is also low because ACTH is low."
+      },
+      {
+        "id": "a05",
+        "text": "Hyperkalaemia",
+        "sub": "aldosterone deficiency",
+        "correctDiseaseIds": [
+          "pai"
+        ],
+        "explanation": "Primary AI: hyperkalaemia is present because aldosterone is deficient (zona glomerulosa destroyed). RAAS cannot compensate."
+      },
+      {
+        "id": "a06",
+        "text": "Normal potassium",
+        "sub": "aldosterone preserved via RAAS",
+        "correctDiseaseIds": [
+          "sai"
+        ],
+        "explanation": "Secondary AI: potassium is NORMAL because aldosterone production is independent of ACTH \u2014 the renin-angiotensin-aldosterone system remains intact."
+      },
+      {
+        "id": "a07",
+        "text": "Salt craving",
+        "sub": "volume depletion from aldosterone loss",
+        "correctDiseaseIds": [
+          "pai"
+        ],
+        "explanation": "Primary AI: salt craving is present due to aldosterone deficiency \u2192 sodium loss \u2192 volume depletion. Absent in secondary AI."
+      },
+      {
+        "id": "a08",
+        "text": "Fludrocortisone required",
+        "sub": "mineralocorticoid replacement",
+        "correctDiseaseIds": [
+          "pai"
+        ],
+        "explanation": "Primary AI requires BOTH hydrocortisone AND fludrocortisone (mineralocorticoid). Secondary AI usually needs only hydrocortisone \u2014 fludrocortisone is usually NOT needed."
+      }
+    ]
+  },
+  {
+    "id": "b8",
+    "name": "Hyponatremia Wars",
+    "subtitle": "8 features \u00b7 SIADH vs Cerebral Salt Wasting",
+    "diseases": [
+      {
+        "id": "siadh",
+        "name": "SIADH",
+        "color": "#34D399",
+        "glow": "rgba(52,211,153,.25)",
+        "bg": "rgba(52,211,153,.06)"
+      },
+      {
+        "id": "csw",
+        "name": "Cerebral Salt Wasting",
+        "color": "#F87171",
+        "glow": "rgba(248,113,113,.25)",
+        "bg": "rgba(248,113,113,.06)"
+      }
+    ],
+    "features": [
+      {
+        "id": "h01",
+        "text": "Euvolaemic volume status",
+        "sub": "normal skin turgor, no oedema",
+        "correctDiseaseIds": [
+          "siadh"
+        ],
+        "explanation": "SIADH: euvolaemic. Total body sodium is normal but water is retained inappropriately. No signs of volume depletion or overload."
+      },
+      {
+        "id": "h02",
+        "text": "Hypovolaemic volume status",
+        "sub": "dry mucosa, tachycardia, orthostasis",
+        "correctDiseaseIds": [
+          "csw"
+        ],
+        "explanation": "CSW: hypovolaemic. Both sodium AND water are lost from the kidneys \u2192 true volume depletion. This is the KEY differentiator from SIADH.",
+        "trap": "SIADH and CSW both have high urine sodium and hyponatraemia. The KEY distinction is volume status: SIADH = euvolaemic; CSW = hypovolaemic. Treating CSW with fluid restriction causes shock."
+      },
+      {
+        "id": "h03",
+        "text": "Fluid restriction = correct treatment",
+        "sub": "800\u20131200 mL/m2/day",
+        "correctDiseaseIds": [
+          "siadh"
+        ],
+        "explanation": "SIADH is treated with fluid restriction \u2014 the cornerstone of management. Restricting fluids in CSW would worsen hypovolaemia and cause shock."
+      },
+      {
+        "id": "h04",
+        "text": "Aggressive NaCl replacement required",
+        "sub": "+ fludrocortisone 0.1\u20130.2 mg/day",
+        "correctDiseaseIds": [
+          "csw"
+        ],
+        "explanation": "CSW requires aggressive sodium replacement (may need 3% saline) + fludrocortisone. Fluid restriction is CONTRAINDICATED \u2014 it worsens hypovolaemia."
+      },
+      {
+        "id": "h05",
+        "text": "Low/normal urine output",
+        "sub": "inappropriate water retention",
+        "correctDiseaseIds": [
+          "siadh"
+        ],
+        "explanation": "SIADH: urine output is low or normal despite hyponatraemia. The kidneys inappropriately retain water."
+      },
+      {
+        "id": "h06",
+        "text": "High urine output",
+        "sub": "natriuresis + diuresis",
+        "correctDiseaseIds": [
+          "csw"
+        ],
+        "explanation": "CSW: urine output is high because the kidneys are wasting both sodium and water."
+      },
+      {
+        "id": "h07",
+        "text": "Normal/low haematocrit",
+        "sub": "dilutional effect",
+        "correctDiseaseIds": [
+          "siadh"
+        ],
+        "explanation": "SIADH: haematocrit is normal or low (dilutional). CSW: haematocrit is elevated (haemoconcentration from volume depletion)."
+      },
+      {
+        "id": "h08",
+        "text": "Elevated BUN/creatinine",
+        "sub": "prerenal azotaemia",
+        "correctDiseaseIds": [
+          "csw"
+        ],
+        "explanation": "CSW: BUN and creatinine are elevated due to prerenal azotaemia from volume depletion. SIADH: BUN/creatinine are low/normal."
+      }
     ]
   }
 ]
