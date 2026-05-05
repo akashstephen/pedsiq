@@ -474,9 +474,9 @@
   {
     "topic": "Congenital Hypothyroidism",
     "isTrap": true,
-    "q": "<strong>Do not investigate for central hypothyroidism</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing central hypothyroidism is dangerous",
-    "exp": "Missing central hypothyroidism \u2014 low/normal TSH + low T4 = MRI pituitary.",
+    "q": "A newborn with prolonged jaundice and umbilical hernia has <strong>TSH 25 mIU/L with normal free T4</strong>. The diagnosis is primary congenital hypothyroidism.",
+    "truth": "\u274c TRAP \u2014 Elevated TSH with normal/low T4 suggests PRIMARY hypothyroidism; low/normal TSH with low T4 suggests CENTRAL",
+    "exp": "Central (secondary) hypothyroidism = low/normal TSH with low free T4. In primary hypothyroidism, TSH is HIGH. This case describes primary hypothyroidism correctly, but the trap is not checking for central causes when TSH is inappropriately normal/low with low T4.",
     "marks": "Trap from Congenital Hypothyroidism"
   },
   {
@@ -626,9 +626,9 @@
   {
     "topic": "Intussusception",
     "isTrap": true,
-    "q": "<strong>Do not investigate for Dance sign (empty RLQ)</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing Dance sign (empty RLQ) is dangerous",
-    "exp": "Missing Dance sign (empty RLQ) \u2014 a subtle but important clinical sign.",
+    "q": "A 9-month-old with currant jelly stool and intermittent abdominal pain has a <strong>normal abdominal ultrasound</strong>. Intussusception is ruled out.",
+    "truth": "\u274c TRAP \u2014 Ultrasound can miss intussusception; Dance sign + clinical suspicion = proceed to enema",
+    "exp": "Ultrasound is operator-dependent and can miss intussusception, especially if the lead point is small or if there is significant bowel gas. If clinical suspicion is high (currant jelly stool, intermittent pain, vomiting) and ultrasound is negative, consider air/contrast enema or repeat imaging. Dance sign (empty RLQ) is a classic physical exam finding.",
     "marks": "Trap from Intussusception"
   },
   {
@@ -730,9 +730,9 @@
   {
     "topic": "HUS",
     "isTrap": true,
-    "q": "<strong>Do not investigate for pneumococcal HUS</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing pneumococcal HUS is dangerous",
-    "exp": "Missing pneumococcal HUS \u2014 occurs after pneumonia/meningitis; different management (antibiotics indicated, not contraindicated).",
+    "q": "A 2-year-old with bloody diarrhoea, acute kidney injury, and low haptoglobin is diagnosed with <strong>STEC-HUS without checking pneumococcal serology</strong>.",
+    "truth": "\u274c TRAP \u2014 Pneumococcal HUS can mimic STEC-HUS but requires different management",
+    "exp": "Pneumococcal HUS is triggered by Streptococcus pneumoniae infection (often pneumonia or meningitis), not diarrhoea. It causes hemolysis via T-antigen activation. Management includes antibiotics and avoids platelet transfusion. STEC-HUS is diarrhoea-associated and managed supportively. Differentiating them matters.",
     "marks": "Trap from HUS"
   },
   {
@@ -746,9 +746,9 @@
   {
     "topic": "Biliary Atresia",
     "isTrap": true,
-    "q": "<strong>Do not investigate for conjugated vs unconjugated hyperbilirubinemia</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing conjugated vs unconjugated hyperbilirubinemia is dangerous",
-    "exp": "Missing conjugated vs unconjugated hyperbilirubinemia \u2014 dark urine and pale stools = conjugated = obstructive = biliary atresia or neonatal hepatitis.",
+    "q": "A 3-week-old with jaundice has <strong>unconjugated bilirubin 12 mg/dL</strong>. Breast milk jaundice is diagnosed without fractionating bilirubin.",
+    "truth": "\u274c TRAP \u2014 ALWAYS fractionate bilirubin; conjugated hyperbilirubinemia = pathological",
+    "exp": "Conjugated hyperbilirubinemia (>1 mg/dL or >20% of total) is NEVER normal and indicates cholestasis (biliary atresia, neonatal hepatitis, metabolic disease). Assuming unconjugated jaundice without fractionating can miss biliary atresia. Always do direct + indirect bilirubin.",
     "marks": "Trap from Biliary Atresia"
   },
   {
@@ -898,9 +898,9 @@
   {
     "topic": "UTI",
     "isTrap": true,
-    "q": "<strong>Do not investigate for nonspecific presentation in infants</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing nonspecific presentation in infants is dangerous",
-    "exp": "Missing nonspecific presentation in infants \u2014 fever without source in &lt;2 years = UTI until proven otherwise.",
+    "q": "A 3-month-old with fever 39\u00b0C and irritability is diagnosed with <strong>viral upper respiratory infection</strong> without urine testing.",
+    "truth": "\u274c TRAP \u2014 UTI in infants presents nonspecifically; ALWAYS check urine in febrile infants",
+    "exp": "UTI in infants can present with fever alone, irritability, poor feeding, or jaundice without localizing signs. Missing a UTI can lead to pyelonephritis and renal scarring. Febrile infants <3 months need urine culture.",
     "marks": "Trap from UTI"
   },
   {
@@ -978,9 +978,9 @@
   {
     "topic": "VUR",
     "isTrap": true,
-    "q": "<strong>Do not investigate for secondary VUR causes</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing secondary VUR causes is dangerous",
-    "exp": "Missing secondary VUR causes \u2014 PUV in males, neurogenic bladder, constipation.",
+    "q": "A 5-year-old with VUR grade III is started on <strong>prophylactic antibiotics</strong> without investigating for neuropathic bladder.",
+    "truth": "\u274c TRAP \u2014 Secondary VUR (neuropathic bladder, PUV) needs cause-specific treatment",
+    "exp": "Primary VUR is due to immature vesicoureteric junction. Secondary VUR is caused by bladder outlet obstruction (PUV), neuropathic bladder (spina bifida), or high intravesical pressure. Treating secondary VUR with antibiotics alone misses the underlying cause. Always check for constipation, neurogenic bladder, and PUV in boys.",
     "marks": "Trap from VUR"
   },
   {
@@ -1010,9 +1010,9 @@
   {
     "topic": "RTA",
     "isTrap": true,
-    "q": "<strong>Do not investigate for Fanconi syndrome association with Type II</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing Fanconi syndrome association with Type II is dangerous",
-    "exp": "Missing  Fanconi syndrome association with Type II \u2014 glycosuria + aminoaciduria + phosphaturia + RTA = Fanconi.",
+    "q": "A child with RTA Type II (proximal) is given <strong>oral bicarbonate replacement</strong> without checking for glycosuria or phosphaturia.",
+    "truth": "\u274c TRAP \u2014 RTA Type II can be part of Fanconi syndrome; check for glycosuria, phosphaturia, aminoaciduria",
+    "exp": "Isolated proximal RTA is rare. Most proximal RTA occurs as part of Fanconi syndrome (cystinosis, Wilson disease, Lowe syndrome, heavy metal toxicity). Fanconi syndrome causes glycosuria, phosphaturia, aminoaciduria, and rickets. Missing the underlying cause leads to progressive renal failure.",
     "marks": "Trap from RTA"
   },
   {
@@ -1026,9 +1026,9 @@
   {
     "topic": "Undescended Testis",
     "isTrap": true,
-    "q": "<strong>Do not investigate for retractile testis</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing retractile testis is dangerous",
-    "exp": "Missing retractile testis \u2014 this is NORMAL and does NOT need surgery. Differentiate by whether testis stays down after traction.",
+    "q": "A 4-year-old boy has a testis that can be brought down but retracts back. <strong>Orchidopexy is planned</strong> as this is cryptorchidism.",
+    "truth": "\u274c TRAP \u2014 Retractile testis is normal; orchidopexy is unnecessary",
+    "exp": "Retractile testis = testis can be brought to the scrotum and stays there briefly before retracting due to cremasteric reflex. This is a normal variant and does NOT require surgery. Cryptorchidism = testis cannot be brought to the scrotum or does not stay there. Distinguishing them prevents unnecessary surgery.",
     "marks": "Trap from Undescended Testis"
   },
   {
@@ -1130,9 +1130,9 @@
   {
     "topic": "Acute Kidney Injury",
     "isTrap": true,
-    "q": "<strong>Do not investigate for PUV as a cause of post-renal AKI in male infants</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing PUV as a cause of post-renal AKI in male infants is dangerous",
-    "exp": "Missing PUV as a cause of post-renal AKI in male infants \u2014 weak stream, palpable bladder, hydronephrosis.",
+    "q": "A male newborn with poor urinary stream and a palpable bladder has <strong>pre-renal AKI due to perinatal asphyxia</strong> without checking for PUV.",
+    "truth": "\u274c TRAP \u2014 Poor stream + palpable bladder in a male infant = PUV until proven otherwise",
+    "exp": "Posterior urethral valves (PUV) cause bladder outlet obstruction, leading to hydronephrosis, pulmonary hypoplasia, and renal failure. Key clues: male infant, poor urinary stream, palpable bladder, thick-walled bladder on ultrasound. Always check for PUV with VCUG in male infants with urinary obstruction signs.",
     "marks": "Trap from Acute Kidney Injury"
   },
   {
@@ -1146,9 +1146,9 @@
   {
     "topic": "Congenital Adrenal Hyperplasia",
     "isTrap": true,
-    "q": "<strong>Do not investigate for salt-wasting crisis at 7-14 days</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing salt-wasting crisis at 7-14 days is dangerous",
-    "exp": "Missing salt-wasting crisis at 7-14 days \u2014 virilized female with vomiting and shock = CAH emergency; start steroids immediately.",
+    "q": "A newborn with ambiguous genitalia and normal day-3 electrolytes is <strong>discharged home without follow-up</strong> for electrolyte monitoring.",
+    "truth": "\u274c TRAP \u2014 Salt-wasting crisis in CAH peaks at 7-14 days; normal day-3 electrolytes do NOT rule it out",
+    "exp": "21-hydroxylase deficiency causes salt-wasting crisis at 7-14 days as maternal progesterone clearance occurs. Normal electrolytes in the first few days do not exclude CAH. All infants with ambiguous genitalia need 17-OHP testing and electrolyte monitoring regardless of day-3 results.",
     "marks": "Trap from Congenital Adrenal Hyperplasia"
   },
   {
@@ -1178,9 +1178,9 @@
   {
     "topic": "Congenital Adrenal Hyperplasia",
     "isTrap": true,
-    "q": "<strong>Do not investigate for 11\u03b2-hydroxylase deficiency</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing 11\u03b2-hydroxylase deficiency is dangerous",
-    "exp": "Missing 11\u03b2-hydroxylase deficiency \u2014 causes hypertension (excess 11-deoxycorticosterone) rather than salt-wasting.",
+    "q": "A newborn with ambiguous genitalia and <strong>hypertension</strong> is diagnosed with 21-hydroxylase deficiency without checking for 11\u03b2-hydroxylase deficiency.",
+    "truth": "\u274c TRAP \u2014 Hypertension + virilization = 11\u03b2-hydroxylase deficiency, NOT 21-hydroxylase",
+    "exp": "21-hydroxylase deficiency causes salt-wasting (hypotension, hyponatremia, hyperkalemia). 11\u03b2-hydroxylase deficiency causes hypertension due to DOC excess. 17-OHP is elevated in both but the electrolyte picture is opposite. Hypertension in a virilized infant points to 11\u03b2-hydroxylase deficiency.",
     "marks": "Trap from Congenital Adrenal Hyperplasia"
   },
   {
@@ -1210,9 +1210,9 @@
   {
     "topic": "Wilson's Disease",
     "isTrap": true,
-    "q": "<strong>Do not investigate for Coombs-negative hemolytic anemia</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing Coombs-negative hemolytic anemia is dangerous",
-    "exp": "Missing Coombs-negative hemolytic anemia \u2014 acute hemolysis + liver failure = Wilson disease until proven otherwise.",
+    "q": "A 12-year-old with jaundice, hemolysis, and hematuria is started on <strong>prednisolone for autoimmune hemolytic anemia</strong> without checking for Wilson disease.",
+    "truth": "\u274c TRAP \u2014 Wilson disease causes Coombs-negative hemolysis; steroids are harmful",
+    "exp": "Wilson disease can present with acute hemolysis (due to copper release from hepatocyte necrosis) that is Coombs-negative. Treating with steroids is inappropriate and potentially harmful. Always check ceruloplasmin, serum copper, 24h urinary copper, and Kayser-Fleischer rings in unexplained Coombs-negative hemolysis with liver dysfunction.",
     "marks": "Trap from Wilson's Disease"
   },
   {
@@ -1234,9 +1234,9 @@
   {
     "topic": "Hepatitis B",
     "isTrap": true,
-    "q": "<strong>Do not investigate for HBIG within 12 hours for infants of HBsAg+ mothers</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing HBIG within 12 hours for infants of HBsAg+ mothers is dangerous",
-    "exp": "Missing HBIG within 12 hours for infants of HBsAg+ mothers \u2014 delayed administration reduces efficacy dramatically.",
+    "q": "An infant born to an HBsAg-positive mother is given <strong>Hepatitis B vaccine only</strong> at 24 hours of age.",
+    "truth": "\u274c TRAP \u2014 Infants of HBsAg+ mothers need BOTH HBIG + vaccine within 12 hours",
+    "exp": "Infants born to HBsAg-positive mothers are at high risk of perinatal transmission. HBIG (Hepatitis B immunoglobulin) + first dose of vaccine must be given within 12 hours of birth. Vaccine alone at 24 hours is too late and misses the window for effective post-exposure prophylaxis.",
     "marks": "Trap from Hepatitis B"
   },
   {
@@ -1282,9 +1282,9 @@
   {
     "topic": "Crigler-Najjar Syndrome",
     "isTrap": true,
-    "q": "<strong>Do not investigate for liver transplantation as definitive cure for Type I</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing liver transplantation as definitive cure for Type I is dangerous",
-    "exp": "Missing liver transplantation as definitive cure for Type I \u2014 do NOT delay; kernicterus is irreversible.",
+    "q": "A 3-year-old with Crigler-Najjar Type I has <strong>only phototherapy</strong> planned as long-term management without referral for liver transplant evaluation.",
+    "truth": "\u274c TRAP \u2014 Crigler-Najjar Type I is fatal without liver transplantation",
+    "exp": "Crigler-Najjar Type I has complete UGT1A1 deficiency causing severe unconjugated hyperbilirubinemia (>20 mg/dL). Phototherapy manages bilirubin temporarily but cannot prevent kernicterus long-term. Liver transplantation is the definitive cure. Type II (partial deficiency) responds to phenobarbital.",
     "marks": "Trap from Crigler-Najjar Syndrome"
   },
   {
@@ -1314,9 +1314,9 @@
   {
     "topic": "Paracetamol Poisoning",
     "isTrap": true,
-    "q": "<strong>Do not investigate for the 8-hour window</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing the 8-hour window is dangerous",
-    "exp": "Missing the 8-hour window \u2014 NAC is most effective if given within 8 hours; do NOT delay for charcoal or lab results if >8 hours since ingestion.",
+    "q": "A 10-year-old who ingested 20 paracetamol tablets 10 hours ago is <strong>observed without antidote</strong> as the overdose was 'not that large'.",
+    "truth": "\u274c TRAP \u2014 Paracetamol toxicity: NAC is effective up to 24 hours, but best within 8 hours",
+    "exp": "Paracetamol overdose causes hepatic necrosis via NAPQI. N-acetylcysteine (NAC) is most effective within 8 hours but still beneficial up to 24 hours. Always check serum paracetamol level and plot on Rumack-Matthew nomogram. Do NOT delay treatment based on clinical appearance \u2014 patients are asymptomatic until liver damage occurs.",
     "marks": "Trap from Paracetamol Poisoning"
   },
   {
@@ -1354,9 +1354,9 @@
   {
     "topic": "Coeliac Disease",
     "isTrap": true,
-    "q": "<strong>Do not investigate for IgA deficiency</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing IgA deficiency is dangerous",
-    "exp": "Missing IgA deficiency \u2014 always check total serum IgA; if deficient, use IgG-based tests (DGP IgG, tTG IgG).",
+    "q": "A child with chronic diarrhoea and IgA tTG negative is told <strong>coeliac disease is ruled out</strong> without checking total IgA.",
+    "truth": "\u274c TRAP \u2014 IgA deficiency causes false-negative IgA tTG; check total IgA or use IgG tests",
+    "exp": "IgA tissue transglutaminase (tTG) antibody is the screening test for coeliac disease. However, 2-3% of coeliac patients have selective IgA deficiency, causing a false-negative IgA tTG. Always check total serum IgA level. If IgA-deficient, use IgG-based tests (IgG tTG or IgG DGP).",
     "marks": "Trap from Coeliac Disease"
   },
   {
@@ -1410,9 +1410,9 @@
   {
     "topic": "Wilms' Tumor",
     "isTrap": true,
-    "q": "<strong>Do not investigate for hypertension</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing hypertension is dangerous",
-    "exp": "Missing hypertension \u2014 25% of Wilms tumor patients have HTN due to renin secretion.",
+    "q": "A 4-year-old with an abdominal mass and <strong>blood pressure 130/90 mmHg</strong> is given antihypertensives without investigating for Wilms' tumor.",
+    "truth": "\u274c TRAP \u2014 Hypertension + abdominal mass in a child = Wilms' tumor until proven otherwise",
+    "exp": "Wilms' tumor is the most common renal malignancy in children and commonly presents with an asymptomatic abdominal mass. Hypertension occurs due to renin secretion by the tumor. Treating hypertension without investigating the underlying mass misses the diagnosis. Always do abdominal ultrasound + CT/MRI.",
     "marks": "Trap from Wilms' Tumor"
   },
   {
@@ -1426,9 +1426,9 @@
   {
     "topic": "Hirschsprung's Disease",
     "isTrap": true,
-    "q": "<strong>Do not investigate for failure to pass meconium >48 hours</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing failure to pass meconium >48 hours is dangerous",
-    "exp": "Missing failure to pass meconium >48 hours \u2014 this is the hallmark in neonates.",
+    "q": "A newborn who has not passed meconium by 72 hours is started on <strong>oral laxatives for functional constipation</strong> without rectal biopsy.",
+    "truth": "\u274c TRAP \u2014 Failure to pass meconium >48 hours = Hirschsprung's disease until proven otherwise",
+    "exp": "99% of term infants pass meconium within 48 hours. Delayed meconium passage (>48 hours) is highly suggestive of Hirschsprung's disease (aganglionic megacolon). Starting laxatives without investigating for aganglionosis delays diagnosis and can cause enterocolitis. Rectal biopsy is the gold standard.",
     "marks": "Trap from Hirschsprung's Disease"
   },
   {
@@ -1498,9 +1498,9 @@
   {
     "topic": "Hyponatremia",
     "isTrap": true,
-    "q": "<strong>Do not investigate for hyperglycemia as cause of pseudohyponatremia</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing hyperglycemia as cause of pseudohyponatremia is dangerous",
-    "exp": "Missing hyperglycemia as cause of pseudohyponatremia \u2014 correct measured Na\u207a by adding 1.6 mEq/L for each 100 mg/dL glucose above 100.",
+    "q": "A child with DKA has <strong>serum Na+ 128 mmol/L</strong>. 0.9% saline is started immediately without correcting for glucose.",
+    "truth": "\u274c TRAP \u2014 Hyperglycemia causes pseudohyponatremia; correct Na+ before treatment decisions",
+    "exp": "For every 100 mg/dL glucose above 100 mg/dL, serum sodium decreases by 1.6 mmol/L (pseudohyponatremia). A DKA patient with Na+ 128 and glucose 600 mg/dL has corrected Na+ \u2248 136 mmol/L. Treating apparent hyponatremia with aggressive saline can cause hypernatremia once glucose falls. Always calculate corrected sodium.",
     "marks": "Trap from Hyponatremia"
   },
   {
@@ -1538,9 +1538,9 @@
   {
     "topic": "Congenital Diaphragmatic Hernia",
     "isTrap": true,
-    "q": "<strong>Do not investigate for associated anomalies</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing associated anomalies is dangerous",
-    "exp": "Missing associated anomalies \u2014 30-40% have other anomalies; always evaluate cardiac and chromosomal status.",
+    "q": "A newborn with congenital diaphragmatic hernia has <strong>emergency surgery planned</strong> without pre-operative echocardiogram.",
+    "truth": "\u274c TRAP \u2014 50% of CDH have associated cardiac anomalies; echo is mandatory pre-op",
+    "exp": "Congenital diaphragmatic hernia (CDH) is associated with cardiac defects in ~50% of cases (VSD, ASD, coarctation). These significantly impact prognosis and surgical risk. Echocardiography is mandatory before surgery. Also check for chromosomal anomalies. Operative repair should be delayed until hemodynamically stable.",
     "marks": "Trap from Congenital Diaphragmatic Hernia"
   },
   {
@@ -1586,9 +1586,9 @@
   {
     "topic": "Short Stature",
     "isTrap": true,
-    "q": "<strong>Do not investigate for Turner syndrome in short girls</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing Turner syndrome in short girls is dangerous",
-    "exp": "Missing Turner syndrome in short girls \u2014 ALWAYS check karyotype in girls with unexplained short stature.",
+    "q": "A 12-year-old girl with height <3rd centile and <strong>no breast development</strong> is diagnosed with constitutional delay of growth without karyotype.",
+    "truth": "\u274c TRAP \u2014 Short stature + delayed puberty in girls = karyotype for Turner syndrome",
+    "exp": "Turner syndrome (45,X) classically presents with short stature and primary amenorrhoea/delayed puberty due to ovarian dysgenesis. All girls with unexplained short stature (<3rd centile) and/or delayed puberty should have karyotype analysis. Missing Turner syndrome delays hormone replacement therapy and cardiovascular surveillance.",
     "marks": "Trap from Short Stature"
   },
   {
@@ -1610,9 +1610,9 @@
   {
     "topic": "Short Stature",
     "isTrap": true,
-    "q": "<strong>Do not investigate for hypothyroidism</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing hypothyroidism is dangerous",
-    "exp": "Missing hypothyroidism \u2014 one of the most treatable causes; always check TSH.",
+    "q": "A 6-year-old with height <3rd centile and <strong>normal weight</strong> is told this is familial short stature without checking thyroid function.",
+    "truth": "\u274c TRAP \u2014 Hypothyroidism is a reversible cause of short stature; ALWAYS check TSH + free T4",
+    "exp": "Hypothyroidism causes growth failure with disproportionate weight gain (due to decreased metabolic rate). However, even with normal weight, thyroid dysfunction must be excluded in all children with short stature. TSH and free T4 are part of the standard short stature workup. Untreated hypothyroidism causes irreversible growth delay.",
     "marks": "Trap from Short Stature"
   },
   {
@@ -1634,9 +1634,9 @@
   {
     "topic": "Renal Transplantation",
     "isTrap": true,
-    "q": "<strong>Do not investigate for BK virus nephropathy</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing BK virus nephropathy is dangerous",
-    "exp": "Missing BK virus nephropathy \u2014 causes graft dysfunction 6-12 months post-transplant; screen with plasma BK PCR; reduce immunosuppression.",
+    "q": "A renal transplant recipient with rising creatinine at 3 months post-op is started on <strong>pulse steroids for acute rejection</strong> without checking BK virus PCR.",
+    "truth": "\u274c TRAP \u2014 BK nephropathy mimics rejection but is treated by REDUCING immunosuppression",
+    "exp": "BK polyomavirus nephropathy is a common cause of graft dysfunction in renal transplant recipients. It mimics acute rejection on biopsy but is treated by REDUCING immunosuppression (not increasing it with steroids). Treating BK nephropathy as rejection with pulse steroids causes further viral replication and graft loss. Always check BK viral load by PCR.",
     "marks": "Trap from Renal Transplantation"
   },
   {
@@ -1890,9 +1890,9 @@
   {
     "topic": "Polyuria / DI",
     "isTrap": true,
-    "q": "<strong>Do not investigate for craniopharyngioma as the most common CNS tumor causing central DI in children</strong> as it rarely changes management.",
-    "truth": "\u274c TRAP \u2014 Missing craniopharyngioma as the most common CNS tumor causing central DI in children is dangerous",
-    "exp": "Missing craniopharyngioma as the most common CNS tumor causing central DI in children \u2014 always do MRI pituitary.",
+    "q": "A 7-year-old with polyuria, polydipsia, and <strong>no headaches or visual symptoms</strong> is diagnosed with primary central DI without brain MRI.",
+    "truth": "\u274c TRAP \u2014 Central DI in children is often due to craniopharyngioma; MRI is mandatory",
+    "exp": "In children, central diabetes insipidus is most commonly caused by craniopharyngioma (suprasellar tumor). Other causes include Langerhans cell histiocytosis and trauma. All children with central DI need pituitary MRI with contrast to rule out tumor. Missing craniopharyngioma delays treatment and risks visual field defects and hypopituitarism.",
     "marks": "Trap from Polyuria / DI"
   },
   {
