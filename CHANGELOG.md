@@ -5,6 +5,39 @@ All notable changes to PedsIQ will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2026-05-08
+
+### Changed
+- Documentation updated to match the current codebase: 409 PYQs, 250 MCQs, 46 structured-answer topics, five arcade games, and localStorage-backed quiz/arcade profiles.
+- Arcade documentation now covers the neuroscience behind Protocol Builder and Trap Defuser in addition to Dose Duel, Dose Sniper, and Feature Wars.
+
+## [3.0.0] - 2025-05-08
+
+### Added
+- **PedsIQ Arcade** — Five neuroscience-backed gamified learning modules
+  - **Dose Duel** — 56 timed pediatric dosing MCQs (12s/question). Targets retrieval practice + generation effect. Score = 10 + remaining seconds.
+  - **Dose Sniper** — 55-round falling-card dose discrimination game. Targets visuomotor integration + dual coding. Combo multipliers up to 4×. Stable 60fps via rAF + ref-based DOM.
+  - **Feature Wars** — 8-battle / 74-feature multi-column differential diagnosis sorting. Targets elaborative interrogation + semantic discrimination. Correct +10 / Wrong -5.
+  - **Protocol Builder** — 10 pediatric management protocols / 76 ordered steps. Targets generation effect + spatial sequencing.
+  - **Trap Defuser** — 392 trap/correct cards with 8-second judgments. Targets hypercorrection + confidence calibration.
+- **Arcade Launcher** (`/arcade/`) — Central hub with per-game stats, high scores, and session history
+- **ArcadeShell** component — Full-screen mode (`data-arcade-active`) that hides sidebar and resets margins
+- **ArcadeProfile** localStorage persistence (`pedsiq_arcade_v1`) — Isolated from MCQ user profile
+- **Study List** — Auto-generated from missed questions across all games with explanations and traps
+- **Per-game themes** — Distinct typography, colors, and feedback effects per arcade module
+- **NEUROSCIENCE.md** — Comprehensive document explaining the cognitive neuroscience behind every arcade mechanic, with neural circuits, evidence citations, and design constraints
+
+### Architecture
+- Self-contained game verticals: each game has its own `page.tsx`, local state/engine code as needed, and static `data/`
+- Pure React + CSS + rAF — no game engine dependencies (Phaser/Pixi)
+- Build-time JSON import — static export compatible
+- `ArcadeProfile` schema with `GameStats` and `StudyListItem` types
+
+### Security & Safety
+- Arcade data is static JSON and client-only
+- No `dangerouslySetInnerHTML` in arcade components
+- Isolated localStorage key prevents cross-contamination with quiz data
+
 ## [2.2.0] - 2025-05-04
 
 ### Added
@@ -30,7 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Reverted
 - **Removed Mermaid.js integration** — `beautiful-mermaid` produced poor visual quality on the dark theme. Reverted all diagrams back to the custom `Flowchart` component.
-- Removed `beautiful-mermaid` dependency and `MermaidDiagram` component usage.
+- Removed `beautiful-mermaid` from the runtime path and stopped using `MermaidDiagram` in structured answers.
 
 ## [2.1.1] - 2025-05-01
 
@@ -48,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Dead code removal** — Removed unused `subLabel` property from `FlowchartNode` interface and `Flowchart.tsx` rendering
 
 ### Changed
-- **AGENTS.md** — Officially allows Mermaid.js via `beautiful-mermaid` as the preferred diagram tool; marks legacy root-level Python scripts as deprecated in favor of `pipeline/src/pedsiq/cli.py`
+- **AGENTS.md** — Reaffirmed custom React/SVG flowcharts as the project diagram path; marks legacy root-level Python scripts as deprecated in favor of `pipeline/src/pedsiq/cli.py`
 
 ### Added
 - **Ontology tests** — `test_no_duplicate_concept_ids` and `test_all_concepts_have_category` in `pipeline/tests/test_models.py`
@@ -130,7 +163,7 @@ Complete rebuild of the application from static HTML to Next.js static export.
 - Mobile layout overflow issues
 
 ### Data
-- **411 questions** from 24 KUHS exam papers (2015–2025)
+- **409 current questions** from 24 KUHS exam papers (2015–2025)
 - Nelson Textbook chapter classification for all questions
 - 12 predicted questions with model answers
 
@@ -165,22 +198,20 @@ Complete rebuild of the application from static HTML to Next.js static export.
 - Dark theme UI
 
 ### Data
-- 411 questions extracted and classified
+- 409 current questions extracted and classified
 - 24 exam metadata records
 - Coverage: 2015 April through 2025 May
-
----
 
 ## Upcoming
 
 ### Planned
 - [ ] Mock exam generator with randomized questions
 - [ ] Flashcard mode for quick revision
-- [ ] Spaced repetition integration
+- [ ] Spaced repetition integration (SM-2 algorithm for study list)
 - [ ] Service worker for offline access
 - [ ] Search index (Fuse.js) for faster filtering
 - [ ] Exam timeline/planner tool
 - [ ] Topic bookmarking for personalized study lists
 - [ ] Dark/light theme toggle
 - [ ] PWA install support
-
+- [ ] Adaptive difficulty tuning based on accuracy curves

@@ -1,7 +1,7 @@
 # PedsIQ v2.0 Redesign — Implementation Report
 
 **Date:** 2026-05-01
-**Status:** Phases A, B, C Complete | Phases D, E Pending
+**Status:** Phases A, B, C Complete | Phase D Partially Complete | Phase E Pending
 **Live URL:** https://pedsiq.pages.dev
 **Repository:** https://github.com/akashstephen/pedsiq
 
@@ -13,7 +13,7 @@
 2. [Phase A: Frontend Rebrand (Pattern Awareness)](#phase-a-frontend-rebrand)
 3. [Phase B: Modern Data Pipeline](#phase-b-modern-data-pipeline)
 4. [Phase C: Knowledge Graph](#phase-c-knowledge-graph)
-5. [Phase D: Practice Mode (Pending)](#phase-d-practice-mode-pending)
+5. [Phase D: Practice Mode (Partially Complete)](#phase-d-practice-mode-partially-complete--arcade-v1)
 6. [Phase E: Analytics & Observability (Pending)](#phase-e-analytics--observability-pending)
 7. [Files Created/Modified](#files-createdmodified)
 8. [Known Issues & Limitations](#known-issues--limitations)
@@ -30,7 +30,7 @@ PedsIQ has been fundamentally redesigned based on the RED_TEAM_AUDIT.md findings
 | Metric | Before | After |
 |--------|--------|-------|
 | Prediction language | "Very High Probability", "Hot" | "Strong Pattern", "Moderate Pattern", "Emerging Pattern" |
-| Sub-part extraction | 0% (411/411 null) | Mark breakdowns parsed: 24/409 |
+| Sub-part extraction | 0% in original 411-question extract | Mark breakdowns parsed: 24/409 |
 | Question taxonomy | Single dimension (section header) | 3D: Format × Bloom's × Content Depth |
 | Validation | None | Post-parse validation with warnings |
 | Knowledge graph | None | 51 concepts, 35 relationships, self-curated |
@@ -76,18 +76,18 @@ confidenceNote: string;
 
 | Topic | Old | New Pattern | Appearances | Confidence Note |
 |-------|-----|-------------|-------------|-----------------|
-| AGN | Very High | Strong | 38 | "Appeared in 38 of 411 questions (9.2%)..." |
-| Nephrotic Syndrome | Very High | Strong | 31 | "Appeared in 31 of 411 questions (7.5%)..." |
-| Rickets | Very High | Strong | 27 | "Appeared in 27 of 411 questions (6.6%)..." |
-| Hypothyroidism | High | Moderate | 14 | "Appeared in 14 of 411 questions (3.4%)..." |
-| Testicular Torsion | High | Moderate | 8 | "Appeared in 8 of 411 questions (1.9%)..." |
-| Hematuria DDx | High | Moderate | 11 | "Appeared in 11 of 411 questions (2.7%)..." |
-| Hypoglycemia | Moderate | Emerging | 5 | "Appeared in 5 of 411 questions (1.2%)..." |
-| Intussusception | Moderate | Emerging | 6 | "Appeared in 6 of 411 questions (1.5%)..." |
-| Portal HTN | Moderate | Emerging | 4 | "Appeared in 4 of 411 questions (1.0%)..." |
-| HUS | Moderate | Emerging | 3 | "Appeared in 3 of 411 questions (0.7%)..." |
-| Biliary Atresia | Moderate | Emerging | 2 | "Appeared in 2 of 411 questions (0.5%)..." |
-| DKA | Moderate | Emerging | 4 | "Appeared in 4 of 411 questions (1.0%)..." |
+| AGN | Very High | Strong | 38 | "Appeared in 38 of 409 questions (9.3%)..." |
+| Nephrotic Syndrome | Very High | Strong | 31 | "Appeared in 31 of 409 questions (7.6%)..." |
+| Rickets | Very High | Strong | 27 | "Appeared in 27 of 409 questions (6.6%)..." |
+| Hypothyroidism | High | Moderate | 14 | "Appeared in 14 of 409 questions (3.4%)..." |
+| Testicular Torsion | High | Moderate | 8 | "Appeared in 8 of 409 questions (2.0%)..." |
+| Hematuria DDx | High | Moderate | 11 | "Appeared in 11 of 409 questions (2.7%)..." |
+| Hypoglycemia | Moderate | Emerging | 5 | "Appeared in 5 of 409 questions (1.2%)..." |
+| Intussusception | Moderate | Emerging | 6 | "Appeared in 6 of 409 questions (1.5%)..." |
+| Portal HTN | Moderate | Emerging | 4 | "Appeared in 4 of 409 questions (1.0%)..." |
+| HUS | Moderate | Emerging | 3 | "Appeared in 3 of 409 questions (0.7%)..." |
+| Biliary Atresia | Moderate | Emerging | 2 | "Appeared in 2 of 409 questions (0.5%)..." |
+| DKA | Moderate | Emerging | 4 | "Appeared in 4 of 409 questions (1.0%)..." |
 
 **Note:** Frequencies are **manually curated** (accurate). Graph-derived frequencies were tested but found inaccurate due to synonym crossfire.
 
@@ -97,7 +97,7 @@ confidenceNote: string;
 
 - `BacktestingDisclaimer`: Prominent banner explaining "Pattern Awareness, Not Prediction"
 - `PatternCard`: Shows frequency meter, sample size context, confidence note
-- Statistical context section: 24 papers, 411 questions, ~119 unique topics, random baseline ~14%
+- Statistical context section: 24 papers, 409 questions, ~119 unique topics, random baseline ~14%
 
 ### A4. Site-Wide Language Cleanup
 
@@ -269,7 +269,7 @@ class ContentDepth(str, Enum):
 **35 relationships** of 10 types:
 - IS_A, CAUSES, TREATED_BY, DIAGNOSED_BY, HAS_SYMPTOM, HAS_SIGN, HAS_COMPLICATION, CONTRAINDICATES, EXAMINED_IN, RELATED_TO
 
-### C3. Graph Enrichment from 411 Questions
+### C3. Graph Enrichment from 409 Questions
 
 **Mapping methodology:**
 1. Extract all concept mentions from question text (name + synonyms)
@@ -326,9 +326,41 @@ class ContentDepth(str, Enum):
 
 ---
 
-## Phase D: Practice Mode (Pending)
+## Phase D: Practice Mode (Partially Complete — Arcade v1)
 
-### D1. Mock Exam Generator
+### D1. Arcade Modules (Completed 2025-05-08)
+
+Five neuroscience-backed gamified modules implemented:
+
+| Module | Mechanic | Cognitive Target | Status |
+|--------|----------|------------------|--------|
+| **Dose Duel** | 56 timed dosing MCQs (12s/q) | Retrieval practice + Generation effect | ✅ Complete |
+| **Dose Sniper** | 55-round falling-card discrimination | Visuomotor integration + Dual coding | ✅ Complete |
+| **Feature Wars** | 8 battles / 74-feature multi-column sorting | Elaborative interrogation + Semantic discrimination | ✅ Complete |
+| **Protocol Builder** | 10 protocols / 76-step reconstruction | Generation effect + Spatial sequencing | ✅ Complete |
+| **Trap Defuser** | 392 trap/correct judgments (8s/card) | Hypercorrection + Confidence calibration | ✅ Complete |
+
+**Implementation details:**
+- Self-contained game verticals with own data, engine hooks, themes
+- `ArcadeShell` full-screen mode hides sidebar via `data-arcade-active`
+- `ArcadeProfile` isolated in `pedsiq_arcade_v1` localStorage
+- Study list auto-generated from missed questions
+- Pure React + CSS + rAF — no game engine dependencies
+- 60fps in Dose Sniper via ref-based DOM mutations in rAF loop
+
+**Files:**
+- `web/src/app/arcade/page.tsx` — Launcher hub
+- `web/src/app/arcade/dose-duel/` — Game vertical
+- `web/src/app/arcade/dose-sniper/` — Game vertical
+- `web/src/app/arcade/feature-wars/` — Game vertical
+- `web/src/app/arcade/protocol-builder/` — Game vertical
+- `web/src/app/arcade/trap-defuser/` — Game vertical
+- `web/src/components/ArcadeShell.tsx`
+- `web/src/lib/arcade-storage.ts`
+- `web/src/types/arcade.ts`
+- `NEUROSCIENCE.md` — Design rationale with neural circuits and citations
+
+### D2. Mock Exam Generator
 
 **Not started.** Requirements:
 - Select: syllabus coverage %, difficulty distribution, time limit
@@ -336,19 +368,21 @@ class ContentDepth(str, Enum):
 - Timer + auto-submit
 - Detailed scoring with answer key
 
-### D2. Flashcards / Spaced Repetition
+### D3. Flashcards / Spaced Repetition
 
-**Not started.** Requirements:
+**Partially started.** Arcade study list provides basic spaced repetition via re-play shuffling. Full SM-2 algorithm pending.
+
+**Requirements:**
 - High-yield facts from structured answers
 - Examiner traps as challenge cards
 - SM-2 algorithm for scheduling
 - Track mastery per concept
 
-### D3. PWA / Offline Support
+### D4. PWA / Offline Support
 
 **Not started.** Requirements:
 - Service worker caching all static assets
-- Offline access to structured answers
+- Offline access to structured answers and arcade
 - Background sync for progress data
 
 ---
@@ -455,30 +489,42 @@ class ContentDepth(str, Enum):
    - Re-run `extract_graph_metadata.py` after ontology expansion
    - Verify all 12 topics have traps + related concepts
 
+3. **Adaptive difficulty tuning for arcade**
+   - Adjust timer velocity and card fall speed based on player accuracy curves
+   - Target 80% success rate (desirable difficulty)
+
 ### Short-term (Medium Priority)
 
-3. **Build Mock Exam Generator** (`/practice/mock-exam/`)
+4. **Build Mock Exam Generator** (`/practice/mock-exam/`)
    - Randomized question selection from pool
    - Timer and scoring
    - Answer key generation
 
-4. **Build Flashcards** (`/practice/flashcards/`)
+5. **Build Flashcards** (`/practice/flashcards/`)
    - Extract key facts from structured answers
    - SM-2 spaced repetition
 
+6. **Arcade content expansion**
+   - Keep expanding decks where needed, especially weak subtopics found through play data
+   - Add new game modes (e.g., "Pathology Match", "Drug Interaction Matrix")
+
 ### Long-term (Lower Priority)
 
-5. **PWA / Offline support**
+7. **PWA / Offline support**
    - Service worker for static asset caching
-   - Offline structured answer access
+   - Offline structured answer and arcade access
 
-6. **Data quality dashboard**
+8. **Data quality dashboard**
    - Visualize parsing accuracy
    - Show classification confidence distribution
 
-7. **Backtesting framework**
+9. **Backtesting framework**
    - Historical validation of pattern accuracy
    - Transparency reporting
+
+10. **Neuroscience validation**
+    - A/B test arcade vs. traditional study for retention
+    - Measure optimal timer duration per player skill level
 
 ---
 

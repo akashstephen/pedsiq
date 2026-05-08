@@ -8,7 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Project Overview
 
-PedsIQ is a statically-generated Next.js 16 application that analyzes KUHS (Kerala University of Health Sciences) Pediatrics exam papers and provides structured answers for medical students. It is deployed on Cloudflare Pages.
+PedsIQ is a statically-generated Next.js 16 application that analyzes KUHS (Kerala University of Health Sciences) Pediatrics exam papers and provides analytics, structured answers, MCQ practice, and neuroscience-backed arcade learning for medical students. It is deployed on Cloudflare Pages.
 
 **Live URL:** https://pedsiq.pages.dev  
 **Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS v4, Recharts, Lucide React  
@@ -24,37 +24,61 @@ web/                            # Next.js application (this directory)
 │   │   ├── questions/          # Question bank with search/filter
 │   │   ├── nelson/             # Nelson chapter analysis
 │   │   ├── subjects/           # Subject distribution
-│   │   ├── predictions/        # Exam predictions
-│   │   └── structured-answers/ # 12 predicted topics
-│   │       ├── page.tsx        # Topic filter + renderer
-│   │       └── topics.ts       # Topic data (12 predicted questions)
+│   │   ├── insights/           # Pattern insights with uncertainty
+│   │   ├── structured-answers/ # 46 predicted topics
+│   │   │   ├── page.tsx        # Topic filter + renderer
+│   │   │   └── topics.ts       # Topic data (46 predicted questions)
+│   │   ├── quiz/               # MCQ launcher/session/results
+│   │   ├── mcq-review/         # Searchable MCQ explanations
+│   │   └── arcade/             # Gamified learning modules
+│   │       ├── page.tsx        # Arcade launcher hub
+│   │       ├── dose-duel/      # Timed dosing MCQs
+│   │       ├── dose-sniper/    # Falling-card game
+│   │       ├── feature-wars/   # Differential diagnosis sorting
+│   │       ├── protocol-builder/ # Algorithm reconstruction
+│   │       └── trap-defuser/   # Examiner trap detection
 │   ├── components/
 │   │   ├── Sidebar.tsx         # Navigation sidebar
-│   │   └── Flowchart.tsx       # Custom SVG flowcharts
+│   │   ├── Flowchart.tsx       # Custom SVG flowcharts
+│   │   └── ArcadeShell.tsx     # Full-screen arcade wrapper
+│   ├── hooks/
+│   │   ├── useQuizSession.ts
+│   │   └── useArcadeSession.ts
 │   ├── lib/
-│   │   └── data.ts             # Data processing utilities + types
+│   │   ├── data.ts             # Data processing utilities + types
+│   │   ├── storage.ts          # MCQ UserProfile + active-session storage
+│   │   └── arcade-storage.ts   # ArcadeProfile localStorage manager
+│   ├── types/
+│   │   ├── mcq.ts              # MCQ type definitions
+│   │   └── arcade.ts           # Arcade type definitions
 │   └── data/
-│       ├── questions.json      # 411 exam questions
+│       ├── questions.json      # 409 exam questions
+│       ├── mcqs.json           # 250 MCQs
 │       └── metadata.json       # 24 exam metadata records
-├── public/
-│   ├── robots.txt
-│   └── sitemap.xml
-├── next.config.ts              # Static export config
-└── globals.css                 # Dark theme tokens + print styles
-
-../                             # Parent directory (project root)
-├── README.md                   # Main project documentation
-├── ARCHITECTURE.md             # System architecture details
-├── CONTRIBUTING.md             # Contribution guidelines
-├── CHANGELOG.md                # Version history
-├── LICENSE                     # MIT License
-├── .gitignore                  # Git ignore rules
-└── *.py                        # Python data pipeline scripts
 ```
 
 ## Critical Conventions
 
-### 1. Static Export Only
+### 1. Arcade Components
+
+Arcade games are **client-only** and must use `'use client'`. They also use `ArcadeShell` for full-screen mode:
+
+```tsx
+'use client';
+import { ArcadeShell } from '@/components/ArcadeShell';
+
+export default function DoseDuelPage() {
+  return (
+    <ArcadeShell gameId="dose-duel" themeClass="arcade-dose-duel">
+      <DoseDuelGame />
+    </ArcadeShell>
+  );
+}
+```
+
+Current `ArcadeShell` props are `gameId`, `themeClass`, and `children`. It adds `data-arcade-active` to `<body>`, applies the theme class, locks body scrolling, and shows an Escape-key quit confirmation.
+
+### 2. Static Export Only
 
 This project uses **static export** (`output: 'export'`). This means:
 - NO server components that fetch data at runtime
@@ -62,7 +86,7 @@ This project uses **static export** (`output: 'export'`). This means:
 - NO dynamic routes with `generateStaticParams`
 - All data must be imported at build time or be client-side only
 
-### 2. Chart Components Must Be Client Components
+### 3. Chart Components Must Be Client Components
 
 Any page using Recharts MUST include `'use client'` at the top:
 
@@ -73,7 +97,7 @@ import { LineChart, Line, ... } from 'recharts';
 
 Recharts uses DOM APIs and cannot render on the server during static export.
 
-### 3. Data Import Pattern
+### 4. Data Import Pattern
 
 All data is imported directly from JSON:
 
@@ -86,7 +110,7 @@ const data = processData(questions);
 
 Do NOT fetch data in useEffect. Import it at the module level.
 
-### 4. Dark Theme First
+### 5. Dark Theme First
 
 All components are designed for dark backgrounds (`bg-black`). Use these tokens:
 
@@ -100,7 +124,7 @@ bg-[#007AFF]/15          /* Accent backgrounds */
 text-[#007AFF]           /* Accent text */
 ```
 
-### 5. Print Styles
+### 6. Print Styles
 
 The `@media print` block in `globals.css` handles A4 printing:
 - Hides sidebar (`aside`, mobile toggle button)
@@ -108,7 +132,7 @@ The `@media print` block in `globals.css` handles A4 printing:
 - Adds page breaks between `article` elements
 - Do NOT use Tailwind arbitrary selectors in print CSS (causes build errors)
 
-### 6. Flowcharts
+### 7. Flowcharts
 
 Use the custom `Flowchart` component for all diagrams:
 
@@ -132,7 +156,7 @@ import { Flowchart } from '@/components/Flowchart';
 
 Node types: `default`, `decision`, `start`, `end`
 
-### 7. Structured Answer Topics
+### 8. Structured Answer Topics
 
 All predicted questions live in `src/app/structured-answers/topics.ts`.
 
@@ -141,13 +165,16 @@ Interface:
 interface Topic {
   id: string;                // URL slug (kebab-case)
   shortTitle: string;        // Button label (short)
-  prob: 'Very High' | 'High' | 'Moderate';
+  patternStrength: 'Strong' | 'Moderate' | 'Emerging';
+  historicalFrequency: HistoricalFrequency;
+  confidenceNote: string;
   subject: string;
   examType: string;          // e.g., "Essay / Short Note"
   question: string;          // Predicted exam question
   marksBreakdown: string;    // Mark allocation
   sections: TopicSection[];
   checklist?: string[];      // Scoring checklist with <strong>X.M</strong>
+  references?: string[];
 }
 ```
 
@@ -186,6 +213,12 @@ Legacy root-level scripts (`extract_questions_v3.py`, `classify_questions_v2.py`
 3. **Complex Tailwind selectors in print CSS** → CSS parse errors
 4. **Adding images without `unoptimized: true`** → Static export fails
 5. **Forgetting to add new routes to `sitemap.xml`** → SEO issue
+6. **Using `setState` inside `requestAnimationFrame`** → React batching delays cause frame drops. Use refs for DOM mutations in rAF loops.
+7. **Sharing localStorage keys between arcade and quiz** → Data corruption. Arcade uses `pedsiq_arcade_v1`; quiz uses `pedsiq_user_v1`.
+8. **Forgetting to wrap arcade pages in `ArcadeShell`** → Sidebar remains visible during gameplay.
+9. **Adding runtime deps for arcade** → Bundle bloat. Use pure React + CSS + rAF. No Phaser/Pixi.
+10. **Hardcoding game data in components** → Static export constraint. Import JSON at build time.
+11. **Forgetting to document arcade neuroscience** → Every arcade mechanic should map to a learning principle in `../NEUROSCIENCE.md`.
 
 ## When Adding New Features
 
@@ -196,12 +229,29 @@ Legacy root-level scripts (`extract_questions_v3.py`, `classify_questions_v2.py`
 5. Build and test locally before deploying
 6. Deploy with Wrangler
 
+## When Adding a New Arcade Game
+
+1. Create `src/app/arcade/[game-id]/page.tsx` wrapped in `ArcadeShell`
+2. Create engine hook in `src/app/arcade/[game-id]/hooks/use[Game]Engine.ts`
+3. Add game-specific types in `src/types/arcade.ts` unless the type is truly local-only
+4. Add static JSON data in `src/app/arcade/[game-id]/data/`
+5. Export game stats type in `src/types/arcade.ts`
+6. Add storage serialization in `src/lib/arcade-storage.ts`
+7. Add nav link in `ArcadeLauncher` (`src/app/arcade/page.tsx`)
+8. Add game card to `sitemap.xml`
+9. Document neuroscience principle in `NEUROSCIENCE.md`
+10. Build and test: timer, scoring, study list, fullscreen
+
 ## External Dependencies
 
 - **Recharts** — Charts (client-side only)
 - **Lucide React** — Icons
 - **clsx** — Conditional class names
 - **Tailwind CSS v4** — Styling (custom `@theme inline` tokens)
+
+## Arcade Dependencies
+
+**None.** Arcade games use pure React + CSS + `requestAnimationFrame`. No Phaser, Pixi, or other game engines. This keeps bundles small and avoids runtime dependency bloat.
 
 ## Contact
 

@@ -4,6 +4,8 @@
 **Papers Analyzed:** 24 (2015-2025)
 **Total Questions:** 411
 
+> Current codebase note: this is an archival report generated from the earlier 411-question extraction. The live Next.js app now consumes a cleaned 409-question PYQ dataset plus 250 MCQs, 46 structured-answer topics, and five arcade modules.
+
 ---
 
 ## Top 30 Most Frequently Asked Topics

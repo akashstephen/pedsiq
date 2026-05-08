@@ -1,75 +1,65 @@
-# PedsIQ Arcade Modules — Architecture Specification
+# PedsIQ Arcade Architecture
 
-**Version:** 1.0.0  
-**Date:** 2026-05-04  
-**Status:** Approved for Implementation
+**Status:** Implemented  
+**Last reviewed:** 2026-05-08
 
----
+PedsIQ Arcade is a set of five client-only learning games inside the static Next.js app. Every game imports static JSON at build time, runs entirely in the browser, and persists high scores plus missed-item study lists through `pedsiq_arcade_v1` localStorage.
 
-## 1. Executive Summary
+## Modules
 
-PedsIQ Arcade integrates three gamified learning modules into the existing Next.js 16 static-export web app:
+| Module | Route | Current Data | Mechanic | Primary Neuroscience |
+|--------|-------|--------------|----------|----------------------|
+| Dose Duel | `/arcade/dose-duel/` | 56 questions | 12-second pediatric dosing MCQs | Retrieval practice, generation effect, arousal-mediated encoding |
+| Dose Sniper | `/arcade/dose-sniper/` | 55 rounds | Falling-card dose discrimination | Dual coding, visuomotor integration |
+| Feature Wars | `/arcade/feature-wars/` | 8 battles / 74 features | Multi-column differential diagnosis sorting | Elaborative interrogation, semantic discrimination |
+| Protocol Builder | `/arcade/protocol-builder/` | 10 protocols / 76 steps | Reconstruct scrambled management algorithms | Generation effect, spatial sequencing |
+| Trap Defuser | `/arcade/trap-defuser/` | 392 cards | Timed trap-vs-correct judgments | Hypercorrection, error-driven learning, confidence calibration |
 
-| Module | Mechanic | Cognitive Target | Domain |
-|--------|----------|------------------|--------|
-| **Dose Duel** | Timed MCQ (12s/q) | Generation effect + arousal | Pediatric dosing |
-| **Dose Sniper** | Falling-card discrimination | Motor + visual encoding | Dosing thresholds |
-| **Feature Wars** | Multi-column sorting | Elaborative interrogation | Differential diagnosis |
+The launcher lives at `/arcade/` and surfaces per-game high scores and session counts.
 
-**Principle:** Each module is a **self-contained vertical** with its own data, engine, theme, and persistence. They plug into the app shell but do not leak into the core MCQ quiz system.
+## File Structure
 
----
-
-## 2. Requirements
-
-### Functional
-- Central `/arcade/` launcher hub
-- Per-game splash → gameplay → results flow
-- Shuffled questions per session
-- Score, accuracy, streak/combo stats + missed list
-- Separate `ArcadeProfile` localStorage (isolated from MCQ `UserProfile`)
-- Offline playable, build-time JSON data
-
-### Non-Functional
-- First paint < 200ms, input latency < 50ms
-- Sniper at stable 60fps (rAF + ref-based DOM)
-- Bundle per game < 50 KB gzipped
-- 320px–1920px responsive
-- WCAG AA contrast
-
-### Constraints
-- Static export only — no API routes, no server components
-- No new runtime deps — pure React + CSS + rAF
-- Preserve existing quiz system
-
----
-
-## 3. Architecture
-
-```
-PedsIQ Next.js App
-├── AppShell (Sidebar + Main)
-│   ├── /quiz/           → Existing MCQ Hub
-│   ├── /arcade/         → NEW: Arcade Launcher
-│   │   ├── /dose-duel/
-│   │   ├── /dose-sniper/
-│   │   └── /feature-wars/
-│   └── ...
-├── SHARED
-│   ├── types/arcade.ts
-│   ├── lib/arcade-storage.ts
-│   └── components/ArcadeShell.tsx
-└── GAME VERTICALS (page + components + hooks + types + data/)
+```text
+web/src/
+├── app/arcade/
+│   ├── page.tsx
+│   ├── dose-duel/
+│   │   ├── page.tsx
+│   │   ├── hooks/useDoseDuelEngine.ts
+│   │   └── data/questions.json
+│   ├── dose-sniper/
+│   │   ├── page.tsx
+│   │   ├── hooks/useSniperEngine.ts
+│   │   └── data/questions.json
+│   ├── feature-wars/
+│   │   ├── page.tsx
+│   │   ├── hooks/useFeatureWarsEngine.ts
+│   │   └── data/battles.json
+│   ├── protocol-builder/
+│   │   ├── page.tsx
+│   │   └── data/protocols.json
+│   └── trap-defuser/
+│       ├── page.tsx
+│       └── data/cards.json
+├── components/
+│   ├── ArcadeShell.tsx
+│   └── ArcadeScreen.tsx
+├── hooks/useArcadeSession.ts
+├── lib/
+│   ├── arcade-storage.ts
+│   └── arcade-effects.ts
+└── types/arcade.ts
 ```
 
----
-
-## 4. Data Schema
-
-### Core Types
+## Shared Contracts
 
 ```typescript
-type ArcadeGameId = 'dose-duel' | 'dose-sniper' | 'feature-wars';
+type ArcadeGameId =
+  | 'dose-duel'
+  | 'dose-sniper'
+  | 'feature-wars'
+  | 'protocol-builder'
+  | 'trap-defuser';
 
 interface ArcadeProfile {
   version: 1;
@@ -77,131 +67,58 @@ interface ArcadeProfile {
   createdAt: string;
   lastPlayedAt: string;
 }
-
-interface GameStats {
-  highScore: number;
-  totalSessions: number;
-  totalQuestionsAnswered: number;
-  totalCorrect: number;
-  bestStreak: number;
-  bestCombo: number;
-  bestAccuracy: number;
-  lastPlayedAt: string;
-  studyList: StudyListItem[];
-}
-
-interface StudyListItem {
-  questionId: string;
-  gameId: ArcadeGameId;
-  text: string;
-  correctAnswer: string;
-  explanation: string;
-  trap?: string;
-  addedAt: string;
-}
 ```
 
-### Game-Specific
-- **DoseDuelQuestion:** patient (age, weight, dx), drug, route, correctAnswer, options[], explanation, trap
-- **SniperQuestion:** context, label, drug, correctAnswer, wrongAnswers[], explanation, trap
-- **FeatureWarsBattle:** diseases[], features[] (each with correctDiseaseIds, explanation, trap)
+`GameStats` stores high score, session totals, accuracy bests, best streak/combo fields, and a capped missed-item `studyList`. `arcade-storage.ts` also performs migration safety by adding missing game keys when older profiles are loaded.
 
----
+## Runtime Model
 
-## 5. State Management
+- All arcade pages are client components and must be wrapped in `ArcadeShell`.
+- `ArcadeShell` sets `data-arcade-active`, adds a game theme class to `<body>`, locks page scroll, and shows an Escape-key quit confirmation.
+- `useArcadeSession` centralizes splash/countdown/playing/results transitions for games that opt into it.
+- Dose Sniper uses `requestAnimationFrame` and refs for the falling-card loop to avoid React state churn.
+- Dose Duel and Feature Wars use dedicated hooks for game state and scoring.
+- Protocol Builder and Trap Defuser keep game-specific state in their page components because their mechanics are more bespoke.
 
-Each game = one self-contained React hook (no Redux/Zustand).
+## Scoring
 
-| Game | Engine Hook | Loop Strategy |
-|------|-------------|---------------|
-| Dose Duel | `useDoseDuelEngine` | `setInterval` timer (100ms) |
-| Dose Sniper | `useSniperEngine` | `requestAnimationFrame` + refs |
-| Feature Wars | `useFeatureWarsEngine` | Event-driven (tap → state) |
+| Module | Scoring Summary |
+|--------|-----------------|
+| Dose Duel | Correct answer: `10 + ceil(timeLeft)`; wrong/timeout adds the question to review. |
+| Dose Sniper | Correct card earns points with combo multipliers up to 4x; missed rounds go to review. |
+| Feature Wars | Correct placement: +10; wrong placement: -5, floored at 0. Multi-assign features require every correct disease column. |
+| Protocol Builder | First-try correct step: +15; later correct step: +5; wrong placement: -3, floored at 0. |
+| Trap Defuser | Correct judgment: `10 + ceil(timeLeft * 1.5)`; wrong/timeout cards go to review. |
 
-**Persistence:** `lib/arcade-storage.ts` — separate from `lib/storage.ts`.
+## Persistence
 
----
+- Arcade profile key: `pedsiq_arcade_v1`
+- MCQ profile key: `pedsiq_user_v1`
+- Active quiz session key: `pedsiq_active_session_v1`
 
-## 6. Visual Design
+Arcade data is intentionally isolated from MCQ progress because time pressure, combos, and missed-trap lists are different learning signals from quiz accuracy.
 
-Each game has **distinct arcade theme** (approved). Themes use CSS custom properties scoped to the game container.
+## Neuroscience Design
 
-| Game | Fonts | Accent Colors |
-|------|-------|---------------|
-| Dose Duel | Space Mono, DM Sans | Cyan `#22D3EE`, Violet `#818CF8` |
-| Dose Sniper | Orbitron, IBM Plex Mono | Cyan `#22CCFF`, Pink `#FF6BF5`, Green `#00FF94` |
-| Feature Wars | Syne, IBM Plex Mono | Amber `#FBBF24`, Pink `#F472B6`, Cyan `#22D3EE` |
+The arcade is not ornamental gamification. Each mechanic is chosen to push a specific learning process:
 
-**Full-screen mode:** `ArcadeShell` adds `data-arcade-active` to `<body>` → CSS hides sidebar, resets margins.
+- **Dose Duel:** short timers create moderate noradrenergic arousal while forcing active retrieval before recognition.
+- **Dose Sniper:** moving visual cards plus click actions bind verbal dose facts to visuomotor traces.
+- **Feature Wars:** sorting features into diagnoses forces illness-script comparison and semantic discrimination.
+- **Protocol Builder:** reconstructing ordered algorithms makes learners generate causal sequences and encode them spatially.
+- **Trap Defuser:** confidently judging traps creates prediction errors; wrong judgments trigger the hypercorrection effect.
 
----
+See [NEUROSCIENCE.md](NEUROSCIENCE.md) for the full cognitive-neuroscience rationale.
 
-## 7. Game Specs
+## Integration Checklist
 
-### Dose Duel
-- 26 questions, 12s each
-- Score: 10 + remaining seconds
-- Screens: Splash → Game (HUD + Timer + Patient Card + Options + Feedback) → Results
+When adding or changing an arcade game:
 
-### Dose Sniper
-- 25 rounds, 3 cards/round (1 correct + 2 wrong)
-- Base speed 72 px/s, max 280 px/s, +9 per hit
-- Combo multipliers: `[1, 1, 1.5, 2, 2.5, 3, 4]`
-- Screens: Splash → Countdown → Game (HUD + Velocity Bar + Fall Zone) → Results
-
-### Feature Wars
-- 3 battles (12 + 10 + 8 features)
-- Correct: +10 pts, Wrong: -5 pts
-- Multi-assign features require all correct columns
-- Screens: Splash → Battle → Battle Complete → Final Results
-
----
-
-## 8. Integration
-
-- **Sidebar:** Add `Arcade` nav item with `Gamepad2` icon → `/arcade/`
-- **Sitemap:** Add `/arcade/`, `/arcade/dose-duel/`, `/arcade/dose-sniper/`, `/arcade/feature-wars/`
-- **Analytics isolation:** `pedsiq_arcade_v1` localStorage key, separate from `pedsiq_user_v1`
-
----
-
-## 9. Implementation Phases
-
-1. **Foundation:** types, storage, shell, JSON data
-2. **Dose Duel:** engine + screens
-3. **Dose Sniper:** rAF engine + effects
-4. **Feature Wars:** sorting engine + battles
-5. **Integration:** sidebar, sitemap, polish
-
----
-
-## 10. ADRs
-
-### ADR-001: Separate Arcade Profile
-Create `ArcadeProfile` in its own localStorage key. Arcade metrics (time pressure, combos) differ fundamentally from MCQ accuracy tracking. Future auth module can sync both.
-
-### ADR-002: Pure React Over Game Engine
-Phaser/Pixi add ~100 KB+ and are unnecessary for UI-based games. React + CSS + rAF is sufficient and keeps the bundle minimal.
-
-### ADR-003: Build-Time JSON Import
-Static export constraint. Question data is small (~15 KB total). Import JSON directly; no runtime fetching.
-
----
-
-## 11. File Structure
-
-```
-web/src/
-├── app/arcade/
-│   ├── page.tsx
-│   ├── dose-duel/page.tsx + components/ + hooks/ + types.ts + data/questions.json
-│   ├── dose-sniper/page.tsx + components/ + hooks/ + types.ts + data/questions.json
-│   └── feature-wars/page.tsx + components/ + hooks/ + types.ts + data/battles.json
-├── components/ArcadeShell.tsx
-├── types/arcade.ts
-└── lib/arcade-storage.ts
-```
-
----
-
-*End of Document*
+1. Add the route under `web/src/app/arcade/[game-id]/`.
+2. Wrap gameplay in `ArcadeShell`.
+3. Add game data under that route’s `data/` directory.
+4. Update `ArcadeGameId`, `createDefaultProfile()`, and migration safety in `arcade-storage.ts`.
+5. Add the launcher card in `web/src/app/arcade/page.tsx`.
+6. Add the route to `web/public/sitemap.xml`.
+7. Document the learning mechanism in `NEUROSCIENCE.md`.
+8. Run `npm run build` from `web/`.

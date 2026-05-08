@@ -14,13 +14,15 @@
 
 ## What is PedsIQ?
 
-PedsIQ is a specialized study tool for medical students preparing for KUHS Pediatrics theory examinations. It analyzes **411 previous year questions (2015–2025)** across **24 exam papers** to provide:
+PedsIQ is a specialized study tool for medical students preparing for KUHS Pediatrics theory examinations. It analyzes **409 previous year questions (2015–2025)** across **24 exam papers** to provide:
 
 - **Question Bank** — Browse, search, and filter all PYQs by year, scheme, section, and topic
 - **Nelson Analysis** — Ranked chapter and section frequency charts based on the Nelson Textbook of Pediatrics
 - **Subject Analytics** — Distribution of questions across Gastroenterology, Nephrology, Endocrinology, and other subjects
-- **Exam Predictions** — High-probability topic predictions for upcoming exams with probability ratings
-- **Structured Answers** — 12 predicted questions with model answers, scoring checklists, flowcharts, tables, and mnemonics formatted for A4 printing
+- **Pattern Insights** — Historical frequency and trend analysis for topic prioritization
+- **Structured Answers** — 46 predicted questions with model answers, scoring checklists, flowcharts, tables, and mnemonics formatted for A4 printing
+- **MCQ Practice** — 250 clinically validated MCQs with custom sessions, weak-topic targeting, repeat-wrong mode, explanations, and local progress tracking
+- **Arcade** — Five neuroscience-backed gamified learning modules for active recall, dosing mastery, protocol sequencing, and examiner-trap detection
 
 ## Tech Stack
 
@@ -31,6 +33,14 @@ PedsIQ is a specialized study tool for medical students preparing for KUHS Pedia
 - **Tailwind CSS v4** — Utility-first styling with custom dark theme tokens
 - **Recharts** — Interactive data visualization (line, bar, pie charts)
 - **Lucide React** — Icon library
+
+### Arcade (Gamified Learning)
+- **Dose Duel** — 56 timed dosing MCQs (12s/question) targeting retrieval practice, generation effect, and arousal-mediated encoding
+- **Dose Sniper** — 55 falling-card dose-discrimination rounds targeting visuomotor integration and dual coding
+- **Feature Wars** — 8 differential-diagnosis battles with 74 features targeting elaborative interrogation and semantic discrimination
+- **Protocol Builder** — 10 management algorithms with 76 scrambled steps targeting generation effect and spatial sequencing
+- **Trap Defuser** — 392 trap/correct cards targeting hypercorrection, confidence calibration, and examiner-trap memory
+- **Neuroscience-backed design** — Every mechanic maps to evidence-based learning principles (see [NEUROSCIENCE.md](NEUROSCIENCE.md))
 
 ### Data Pipeline
 - **Python 3** — PDF extraction, question classification, data processing
@@ -52,13 +62,25 @@ Pediatrics Exam/
 │   │   │   ├── questions/        # Question bank
 │   │   │   ├── nelson/           # Nelson chapter analysis
 │   │   │   ├── subjects/         # Subject distribution
-│   │   │   ├── predictions/      # Exam predictions
-│   │   │   └── structured-answers/  # Model answers (12 topics)
+│   │   │   ├── insights/         # Pattern insights
+│   │   │   ├── structured-answers/  # Model answers (46 topics)
+│   │   │   ├── quiz/             # MCQ practice launcher/session/results
+│   │   │   ├── mcq-review/       # Browse all MCQs with explanations
+│   │   │   └── arcade/           # Gamified learning modules
+│   │   │       ├── page.tsx      # Arcade launcher
+│   │   │       ├── dose-duel/    # Timed dosing MCQs
+│   │   │       ├── dose-sniper/  # Falling-card game
+│   │   │       ├── feature-wars/ # Differential diagnosis sorting
+│   │   │       ├── protocol-builder/ # Algorithm reconstruction
+│   │   │       └── trap-defuser/ # Examiner trap detection
 │   │   ├── components/           # React components
-│   │   ├── lib/                  # Data utilities and types
+│   │   ├── hooks/                # Quiz and arcade session hooks
+│   │   ├── lib/                  # Data, analytics, storage, arcade effects
+│   │   ├── types/                # MCQ and arcade TypeScript schemas
 │   │   └── data/                 # Static JSON data
 │   ├── public/                   # Static assets
 │   └── next.config.ts            # Static export config
+├── pipeline/                     # Modern Python data pipeline
 ├── worker/                       # Legacy Cloudflare Worker (reference)
 ├── *.py                          # Data extraction and classification scripts
 ├── *.json                        # Raw and classified question data
@@ -77,7 +99,7 @@ The application is built on a static data pipeline:
 This approach means:
 - **Zero runtime database** — Everything is statically rendered
 - **Instant page loads** — No API calls, no loading states
-- **Offline capable** — Entire site works without internet after first load
+- **Client-side persistence** — Quiz and arcade progress are stored in browser localStorage
 - **Easy updates** — Re-run Python scripts, rebuild, redeploy
 
 ## Key Features
@@ -92,7 +114,14 @@ This approach means:
 ### Question Bank
 - Full-text search across question text, chapters, and sections
 - Filter by exam year, scheme (2010/2019), and question type (Essay/Short Note/MCQ)
-- 411 questions with metadata: year, month, marks, section, chapter
+- 409 questions with metadata: year, month, marks, section, chapter
+
+### MCQ Practice
+- 250 clinically validated MCQs across gastroenterology, nephrology, and endocrinology
+- Quick modes: Quick 10, Weak Topics, Repeat Wrong, Unlimited
+- Custom sessions by topic, difficulty, and question count
+- Per-question explanations with correct-answer rationale, misconception, and key takeaway
+- Local progress profile: attempts, topic mastery, session history, and active-session resume
 
 ### Nelson Analysis
 - Section frequency pie chart
@@ -102,27 +131,45 @@ This approach means:
 ### Subjects
 - Subject distribution pie chart
 - Cognitive level distribution (Recall/Conceptual/Clinical/Multi-step)
-- High-yield subtopics table with probability badges
+- High-yield subtopics table with pattern strength badges
 
-### Predictions
-- 8 predicted topics with probability ratings (Very High / High / Moderate)
+### Pattern Insights
+- Historical frequency analysis with pattern strength ratings (Strong / Moderate / Emerging)
+- Statistical context and confidence notes
 - Exam strategy tips
-- Color-coded probability cards
+- Color-coded pattern cards
+
+### Arcade
+Five neuroscience-backed gamified modules for active recall:
+
+- **Dose Duel** — 56 timed dosing questions (12s each). Score = 10 + remaining seconds. Targets retrieval practice, generation effect, and arousal-mediated encoding.
+- **Dose Sniper** — 55 rounds of falling-card dose discrimination. Combo multipliers up to 4×. Targets visuomotor integration and dual coding.
+- **Feature Wars** — 8 battles / 74 features of multi-column differential diagnosis sorting. Correct +10 / Wrong -5. Targets elaborative interrogation and semantic discrimination.
+- **Protocol Builder** — 10 pediatric management protocols / 76 steps. Correct first-try placements score highest; wrong placements subtract points. Targets generation effect and spatial encoding.
+- **Trap Defuser** — 392 timed trap/correct cards (8s each). Rewards calibrated judgment and captures missed traps for review. Targets hypercorrection and error-driven learning.
+
+All games include:
+- Per-session shuffled questions
+- In-session streak/combo feedback plus persisted high scores, session counts, accuracy bests, and study lists
+- Auto-generated study list from missed questions
+- Static JSON data and local browser persistence
 
 ### Structured Answers
-- 12 predicted questions with comprehensive model answers:
-  1. AGN / PSGN (Very High)
-  2. Nephrotic Syndrome (Very High)
-  3. Rickets (Very High)
-  4. Congenital Hypothyroidism (High)
-  5. Testicular Torsion (High)
-  6. Hematuria Differential (High)
-  7. Neonatal Hypoglycemia (High)
-  8. Intussusception (Moderate)
-  9. Portal Hypertension (Moderate)
-  10. HUS (Moderate)
-  11. Biliary Atresia (Moderate)
-  12. DKA Management (Moderate)
+- 46 predicted questions with comprehensive model answers (representative sample):
+  1. AGN / PSGN (Strong Pattern)
+  2. Nephrotic Syndrome (Strong Pattern)
+  3. Rickets (Strong Pattern)
+  4. Congenital Hypothyroidism (Moderate Pattern)
+  5. Testicular Torsion (Moderate Pattern)
+  6. Hematuria Differential (Moderate Pattern)
+  7. Neonatal Hypoglycemia (Moderate Pattern)
+  8. PKU (Emerging Pattern)
+  9. Polyuria & Diabetes Insipidus (Emerging Pattern)
+  10. Renal Biopsy in Children (Emerging Pattern)
+  11. UTI Imaging in Children (Emerging Pattern)
+  12. ACTH & HPA Axis Disorders (Emerging Pattern)
+  
+  ...plus 34 additional topics covering nephrology, gastroenterology, endocrinology, neonatology, and more
 
 Each answer includes:
 - Definition and etiology
@@ -130,6 +177,9 @@ Each answer includes:
 - Investigation tables
 - Management flowcharts (React/SVG-based, no Mermaid)
 - Complications and prognosis
+- **Examiner traps** — Common mistakes that cost marks
+- **Related concepts** — Knowledge graph-derived connections
+- **Years appeared** — Historical occurrence tracking
 - **Exam scoring checklist** — Point-by-point mark allocation
 - **A4 print styles** — Hide sidebar, white background, proper page breaks
 
@@ -184,10 +234,24 @@ python consolidate_data.py
 cp consolidated_questions.json web/src/data/questions.json
 ```
 
+## Learning Science
+
+PedsIQ Arcade is designed around evidence-based cognitive neuroscience principles:
+
+- **Retrieval Practice** — Active recall strengthens memory traces more than passive re-reading
+- **Generation Effect** — Self-generated answers create deeper encoding
+- **Arousal-Mediated Encoding** — Time pressure optimizes hippocampal consolidation
+- **Dual Coding** — Visual + verbal channels create redundant memory traces
+- **Elaborative Interrogation** — "Why" reasoning integrates knowledge into schemas
+- **Spaced Repetition** — Study list from missed questions enables distributed practice
+- **Interleaving** — Mixed topics within sessions improve discriminative learning
+
+See [NEUROSCIENCE.md](NEUROSCIENCE.md) for the full technical breakdown with neural circuits, evidence, and design constraints.
+
 ## Architecture Decisions
 
 ### Why Static Export?
-The data is entirely static (411 questions, 24 exams). A static export eliminates:
+The data is entirely static (409 PYQs, 250 MCQs, 46 structured-answer topics, and arcade JSON data). A static export eliminates:
 - Server costs
 - Database maintenance
 - API latency
@@ -243,6 +307,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - **Nelson Textbook of Pediatrics** — Chapter and section classification reference
 - **KUHS** — Exam question papers (2015–2025)
 - **Open source community** — Next.js, React, Tailwind, Recharts, Lucide
+- **Cognitive neuroscience research** — Roediger & Karpicke (retrieval practice), Bjork (desirable difficulties), Paivio (dual coding), Custers et al. (illness scripts)
 
 ---
 

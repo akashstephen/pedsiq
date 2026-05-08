@@ -6,6 +6,12 @@
 
 ---
 
+## Current Codebase Note
+
+This audit reviewed an earlier 411-question extraction snapshot. The current web app consumes a cleaned 409-question PYQ dataset, 250 MCQs, 46 structured-answer topics, and five arcade modules. The critique of overclaiming "prediction" remains relevant; current user-facing docs now describe the product as pattern awareness, MCQ practice, and neuroscience-backed retrieval training rather than deterministic exam prediction.
+
+---
+
 # SECTION 1: EXECUTIVE SUMMARY
 
 ## Brutally Honest Assessment

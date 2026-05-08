@@ -2,7 +2,12 @@
 
 ## System Overview
 
-PedsIQ is a **statically-generated web application** that transforms 24 KUHS Pediatrics exam PDFs into an interactive analytics dashboard and structured answer bank. There is no backend server, no database, and no runtime API. All data is processed at build time and served as static HTML, CSS, and JavaScript.
+PedsIQ is a **statically-generated web application** that transforms 24 KUHS Pediatrics exam PDFs into an interactive analytics dashboard, structured answer bank, MCQ practice system, and gamified learning arcade. There is no backend server, no database, and no runtime API. Core data is processed at build time and served as static HTML, CSS, and JavaScript; quiz and arcade progress are stored locally in the browser.
+
+The system has three conceptual layers:
+1. **Analytics Layer** — Pattern insights, question bank, Nelson analysis
+2. **Study Layer** — Structured answers plus MCQ practice with explanations and local mastery tracking
+3. **Arcade Layer** — Neuroscience-backed gamified modules for active recall, dosing mastery, protocol sequencing, and examiner-trap detection
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -17,7 +22,7 @@ PedsIQ is a **statically-generated web application** that transforms 24 KUHS Ped
 │                  BUILD PIPELINE (Next.js)                    │
 ├─────────────────────────────────────────────────────────────┤
 │  JSON Data → React Components → Static HTML → Cloudflare    │
-│  (import)    (Recharts)        (next export)   (Pages)      │
+│  (import)    (Recharts/Arcade) (next export)   (Pages)      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -58,7 +63,7 @@ Uses fuzzy string matching against Nelson chapter titles with confidence scoring
 **Input:** 4 classified batch files  
 **Output:** `web/src/data/questions.json`
 
-The consolidator (`consolidate_data.py`) merges batches, deduplicates, and normalizes fields. Final JSON contains 411 questions with 16 fields each.
+The consolidator (`consolidate_data.py`) merges batches, deduplicates, and normalizes fields. Final JSON contains 409 questions with 16 fields each; two false positives from earlier extraction passes have been removed.
 
 ### 4. Build-time Processing
 
@@ -69,7 +74,7 @@ At `next build` time:
 - `lib/data.ts` processes questions into analytics-ready structures
 - `page.tsx` files import JSON directly (tree-shaken at build)
 - Recharts renders charts to SVG in static HTML
-- All pages pre-rendered with `generateStaticParams`
+- Pages are statically exported by the Next.js App Router; data is available at build time through JSON imports.
 
 ## Frontend Architecture
 
@@ -85,11 +90,42 @@ app/
 │   └── page.tsx        # Chapter/section analytics
 ├── subjects/
 │   └── page.tsx        # Subject distribution + subtopics
-├── predictions/
-│   └── page.tsx        # Predicted topics
-└── structured-answers/
-    ├── page.tsx        # Topic filter + article renderer
-    └── topics.ts       # 12 predicted question data
+├── insights/
+│   └── page.tsx        # Pattern insights with uncertainty
+├── structured-answers/
+│   ├── page.tsx        # Topic filter + article renderer
+│   └── topics.ts       # 46 predicted question data
+├── quiz/
+│   ├── page.tsx        # MCQ launcher, quick modes, custom sessions
+│   ├── session/        # Active quiz session route
+│   └── results/        # Session scoring and review
+├── mcq-review/
+│   └── page.tsx        # Browse all MCQs with explanations
+└── arcade/
+    ├── page.tsx        # Arcade launcher hub
+    ├── dose-duel/
+    │   ├── page.tsx    # Timed dosing recall game
+    │   ├── hooks/      # useDoseDuelEngine
+    │   └── data/
+    │       └── questions.json
+    ├── dose-sniper/
+    │   ├── page.tsx    # Falling-card dose discrimination game
+    │   ├── hooks/      # useSniperEngine (rAF-based)
+    │   └── data/
+    │       └── questions.json
+    ├── feature-wars/
+    │   ├── page.tsx    # Differential diagnosis sorting game
+    │   ├── hooks/      # useFeatureWarsEngine
+    │   └── data/
+    │       └── battles.json
+    ├── protocol-builder/
+    │   ├── page.tsx    # Pediatric protocol reconstruction game
+    │   └── data/
+    │       └── protocols.json
+    └── trap-defuser/
+        ├── page.tsx    # Examiner trap detection game
+        └── data/
+            └── cards.json
 ```
 
 ### Component Hierarchy
@@ -107,15 +143,49 @@ RootLayout
     ├── Questions (client)    # Search + filters
     ├── Nelson (client)       # Charts + ranking grid
     ├── Subjects (client)     # Charts + subtopic table
-    ├── Predictions (static)  # Probability cards
-    └── StructuredAnswers (client)
-        ├── TopicFilter
-        ├── TopicArticle
-        │   ├── Section
-        │   ├── DataTable
-        │   ├── Flowchart (SVG)
-        │   └── MnemonicBox
-        └── Checklist
+    ├── Insights (static)     # Pattern cards with uncertainty
+    ├── StructuredAnswers (client)
+    │   ├── TopicFilter
+    │   ├── TopicArticle
+    │   │   ├── Section
+    │   │   ├── DataTable
+    │   │   ├── Flowchart (SVG)
+    │   │   └── MnemonicBox
+    │   └── Checklist
+    ├── Quiz (client)
+    │   ├── Launcher
+    │   ├── Active session
+    │   └── Results / review
+    ├── McqReview (client)
+    │   └── Searchable explanation browser
+    └── Arcade (client)
+        ├── ArcadeLauncher      # Hub with game cards + stats
+        ├── DoseDuelGame
+        │   ├── SplashScreen
+        │   ├── HUD (timer/score/streak)
+        │   ├── PatientCard
+        │   ├── OptionGrid
+        │   └── ResultsScreen
+        ├── DoseSniperGame
+        │   ├── SplashScreen
+        │   ├── CountdownOverlay
+        │   ├── HUD (score/combo/velocity)
+        │   ├── FallZone (rAF loop)
+        │   └── ResultsScreen
+        ├── FeatureWarsGame
+        │   ├── SplashScreen
+        │   ├── BattleBoard
+        │   ├── DiseaseColumns
+        │   ├── FeatureCards
+        │   └── ResultsScreen
+        ├── ProtocolBuilderGame
+        │   ├── SplashScreen
+        │   ├── Protocol reconstruction board
+        │   └── ResultsScreen
+        └── TrapDefuserGame
+            ├── SplashScreen
+            ├── Timed trap/correct deck
+            └── ResultsScreen
 ```
 
 ### State Management
@@ -129,6 +199,12 @@ Data flows top-down via props. No context providers needed because:
 - Data is static (no mutations)
 - Pages are independent
 - No shared state across routes
+
+**Quiz Exception:** The MCQ system persists `UserProfile`, active sessions, and spaced-repetition items in localStorage through `lib/storage.ts`. This is still client-only; no profile data leaves the browser.
+
+**Arcade Exception:** Dose Duel, Dose Sniper, and Feature Wars use self-contained engine hooks (`useDoseDuelEngine`, `useSniperEngine`, `useFeatureWarsEngine`) that encapsulate game loop state, score tracking, and question progression. Protocol Builder and Trap Defuser keep their game state in their page components. All arcade state is isolated from the core app except for local profile persistence.
+
+**Arcade Persistence:** `lib/arcade-storage.ts` manages `ArcadeProfile` in a separate localStorage key (`pedsiq_arcade_v1`), isolated from the MCQ `UserProfile` (`pedsiq_user_v1`). This separation is intentional: arcade metrics (time pressure, combos, accuracy) differ fundamentally from quiz accuracy tracking.
 
 ### Styling Architecture
 
@@ -249,13 +325,19 @@ interface ExamMetadata {
 interface Topic {
   id: string;                // URL slug
   shortTitle: string;        // Button label
-  prob: 'Very High' | 'High' | 'Moderate';
+  patternStrength: 'Strong' | 'Moderate' | 'Emerging';
   subject: string;
   examType: string;
   question: string;          // Predicted question text
   marksBreakdown: string;    // Mark allocation
   sections: TopicSection[];
   checklist?: string[];      // Scoring checklist
+  historicalFrequency?: {
+    appearances: number;
+    papersAnalyzed: number;
+    lastAppeared: string;
+  };
+  confidenceNote?: string;
 }
 
 interface TopicSection {
@@ -265,6 +347,41 @@ interface TopicSection {
   table?: { headers: string[]; rows: string[][] };
   flowchart?: { nodes: FlowchartNode[]; edges: FlowchartEdge[] };
   mnemonic?: { title: string; text: string };
+}
+```
+
+### Arcade Types
+
+```typescript
+type ArcadeGameId = 'dose-duel' | 'dose-sniper' | 'feature-wars' | 'protocol-builder' | 'trap-defuser';
+
+interface ArcadeProfile {
+  version: 1;
+  games: Record<ArcadeGameId, GameStats>;
+  createdAt: string;
+  lastPlayedAt: string;
+}
+
+interface GameStats {
+  highScore: number;
+  totalSessions: number;
+  totalQuestionsAnswered: number;
+  totalCorrect: number;
+  bestStreak: number;
+  bestCombo: number;
+  bestAccuracy: number;
+  lastPlayedAt: string;
+  studyList: StudyListItem[];
+}
+
+interface StudyListItem {
+  questionId: string;
+  gameId: ArcadeGameId;
+  text: string;
+  correctAnswer: string;
+  explanation: string;
+  trap?: string;
+  addedAt: string;
 }
 ```
 
@@ -289,7 +406,7 @@ const nextConfig: NextConfig = {
 | Initial load | Instant (pre-rendered HTML) | Slow (server render) | Medium (hydration) |
 | SEO | Excellent | Excellent | Poor |
 | Data updates | Rebuild + redeploy | Instant | Instant |
-| Offline support | Yes (service worker) | No | Partial |
+| Offline support | Static assets after browser cache | No | Partial |
 
 For PedsIQ, static export is optimal because:
 - Data changes infrequently (once per exam cycle)
@@ -330,7 +447,8 @@ Cloudflare Pages CDN
 ## Security Considerations
 
 ### XSS Prevention
-- No user input accepted (read-only site)
+- No user-submitted content is sent to a server or rendered from external sources
+- Search filters, quiz answers, and arcade actions remain client-side
 - `dangerouslySetInnerHTML` used only for trusted structured answer content
 - All JSON data is static and reviewed
 
@@ -340,9 +458,14 @@ Recommended headers for production:
 Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
 ```
 
+### Local Persistence
+- MCQ profile and active session: `pedsiq_user_v1` / `pedsiq_active_session_v1`
+- Arcade profile and missed-question study lists: `pedsiq_arcade_v1`
+- Data stays local to the browser; there is no sync service.
+
 ### No Authentication
 - No login system
-- No cookies or local storage
+- No cookies
 - No tracking scripts
 - Fully privacy-respecting
 
@@ -355,19 +478,26 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; 
 | Time to First Byte | < 100 ms | ~50 ms (Cloudflare) |
 | Largest Contentful Paint | < 2.5 s | ~1.2 s |
 | Cumulative Layout Shift | < 0.1 | 0 |
+| Arcade input latency | < 50 ms | ~16 ms (rAF) |
+| Dose Sniper frame rate | 60 fps | 60 fps (rAF + refs) |
+| Arcade bundle per game | < 50 KB gzipped | ~35 KB |
 
 ## Future Architecture Considerations
 
 ### Potential Additions
-1. **Service Worker** — Offline caching for structured answers
-2. **Incremental Static Regeneration** — Update predictions without full rebuild
+1. **Service Worker** — Offline caching for structured answers and arcade assets
+2. **Incremental Static Regeneration** — Update insights without full rebuild
 3. **Search Index** — Fuse.js for client-side full-text search (currently O(n) filter)
 4. **Analytics** — Privacy-preserving analytics (Plausible or Cloudflare Web Analytics)
+5. **Adaptive Difficulty** — Dynamic timer velocity and question selection based on player accuracy curves
+6. **SM-2 Spaced Repetition** — Scheduled review intervals for arcade study-list items
+7. **Mock Exam Generator** — Randomized exam generation with timer and scoring
 
 ### Scaling
-- Current: 411 questions, ~50 KB JSON
+- Current: 409 PYQs, 250 MCQs, 46 structured topics, and arcade JSON
 - Can handle: 10,000+ questions (~1 MB JSON) without performance issues
 - If data grows beyond 5 MB: Consider splitting JSON by year or section
+- Arcade data: 56 Dose Duel questions, 55 Dose Sniper rounds, 8 Feature Wars battles / 74 features, 10 Protocol Builder protocols / 76 steps, and 392 Trap Defuser cards
 
 ## File Size Breakdown
 
@@ -377,8 +507,8 @@ web/dist/
 ├── questions/index.html    # 180 KB (largest - all questions inline)
 ├── nelson/index.html       # 15 KB
 ├── subjects/index.html     # 18 KB
-├── predictions/index.html  # 12 KB
-├── structured-answers/     # 45 KB (12 topics)
+├── insights/index.html     # 12 KB
+├── structured-answers/     # 120 KB (46 topics)
 │   └── index.html
 ├── _next/static/
 │   ├── css/                # 15 KB
