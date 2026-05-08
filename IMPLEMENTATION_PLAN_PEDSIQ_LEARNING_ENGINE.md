@@ -14,6 +14,7 @@ This branch has started the first implementation slice:
 - Phase 1 has the first clinical-light token set and reusable primitives: `LearningPanel`, `BrainTargetBadge`, `MasteryMeter`, and `ActivityLauncher`.
 - Phase 2 has the first canonical topic map and topic type definitions for the top 12 pediatric topics.
 - Phase 3 has a safe `/today/` route that proves the new product direction without replacing `/` yet.
+- Phase 4 has the first Exam Mode wrapper, and the old root dashboard now lives at `/exam/overview/`.
 - Phase 5 has the first Retrieval Lab reframing on the arcade hub and accurate JSON-derived activity counts.
 - Phase 6 has a first Learn Atlas MVP with `/learn/`, static top-12 topic pages, system grouping, related-topic links, and learning activity links.
 - Phase 7 has a first Review Notebook MVP with unified arcade and MCQ review adapters, filtering, and arcade item clearing.

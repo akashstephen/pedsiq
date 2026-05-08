@@ -25,11 +25,11 @@ import clsx from "clsx";
 import { topics } from "../app/structured-answers/topics";
 
 const navItems = [
-  { href: "/today/", label: "Today", icon: CalendarCheck },
+  { href: "/", label: "Today", icon: CalendarCheck },
   { href: "/learn/", label: "Learn Atlas", icon: Map },
   { href: "/notebook/", label: "Notebook", icon: BookMarked },
   { href: "/progress/", label: "Progress", icon: TrendingUp },
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/exam/", label: "Exam Mode", icon: LayoutDashboard },
   { href: "/quiz/", label: "MCQ Practice", icon: Brain },
   { href: "/arcade/", label: "Retrieval Lab", icon: Gamepad2 },
   { href: "/questions/", label: "Questions", icon: FileText },
@@ -225,7 +225,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
         {/* Nav */}
         <nav className="flex-1 overflow-y-auto p-3 space-y-1" aria-label="Primary">
           {navItems.map((item) => {
-            const active = pathname === item.href;
+            const active = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
             const Icon = item.icon;
             return (
               <Link
