@@ -6,11 +6,14 @@ import { ActivityLauncher } from '@/components/design-system/ActivityLauncher';
 import { BrainTargetBadge } from '@/components/design-system/BrainTargetBadge';
 import { LearningPanel } from '@/components/design-system/LearningPanel';
 import { MasteryMeter } from '@/components/design-system/MasteryMeter';
-import { getGameStats, getStudyList } from '@/lib/arcade-storage';
+import { getDailyRecommendations, type RecommendationIcon } from '@/domain/recommendations/getDailyRecommendations';
+import { getReviewQueue } from '@/domain/review/storage';
+import { getGameStats } from '@/lib/arcade-storage';
 import { getOverallAccuracy, loadActiveSession, loadProfile } from '@/lib/storage';
 import {
   BookOpen,
   Brain,
+  BookMarked,
   ClipboardList,
   FlaskConical,
   Gamepad2,
@@ -22,40 +25,14 @@ import {
 
 const totalMcqs = mcqs.length;
 
-const dailyActivities = [
-  {
-    href: '/quiz/session/?mode=quick_10',
-    title: 'Quick Retrieval',
-    description: 'Ten focused MCQs to wake up active recall and expose weak concepts.',
-    icon: Brain,
-    target: 'retrieval' as const,
-    meta: '~8 min',
-  },
-  {
-    href: '/arcade/protocol-builder/',
-    title: 'Protocol Builder',
-    description: 'Rebuild a pediatric management algorithm from ordered clinical steps.',
-    icon: FlaskConical,
-    target: 'sequencing' as const,
-    meta: '~6 min',
-  },
-  {
-    href: '/arcade/trap-defuser/',
-    title: 'Trap Defuser',
-    description: 'Convert examiner traps and confident mistakes into durable corrections.',
-    icon: ShieldAlert,
-    target: 'hypercorrection' as const,
-    meta: '~5 min',
-  },
-  {
-    href: '/structured-answers/',
-    title: 'Answer Studio',
-    description: 'Review a structured long-answer skeleton before reading the model answer.',
-    icon: ClipboardList,
-    target: 'generation' as const,
-    meta: 'print-ready',
-  },
-];
+const recommendationIcons: Record<RecommendationIcon, typeof Brain> = {
+  brain: Brain,
+  flask: FlaskConical,
+  shield: ShieldAlert,
+  clipboard: ClipboardList,
+  book: BookOpen,
+  notebook: BookMarked,
+};
 
 export default function TodayPage() {
   const profile = loadProfile();
@@ -72,7 +49,8 @@ export default function TodayPage() {
     const stats = getGameStats(gameId);
     return { gameId, ...stats };
   });
-  const arcadeStudyList = getStudyList();
+  const reviewQueue = getReviewQueue();
+  const dailyActivities = getDailyRecommendations();
   const overallAccuracy = Math.round(getOverallAccuracy(profile) * 100);
   const completedArcadeSessions = arcadeStats.reduce((sum, stats) => sum + stats.totalSessions, 0);
   const bestArcadeScore = Math.max(0, ...arcadeStats.map((stats) => stats.highScore));
@@ -110,7 +88,7 @@ export default function TodayPage() {
                 <div className="text-xs font-medium text-[var(--clinical-ink-soft)]">Lab sessions</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">{arcadeStudyList.length}</div>
+                <div className="text-2xl font-bold">{reviewQueue.length}</div>
                 <div className="text-xs font-medium text-[var(--clinical-ink-soft)]">Review items</div>
               </div>
             </div>
@@ -142,15 +120,16 @@ export default function TodayPage() {
             <div>
               <h2 className="text-xl font-semibold">Recommended study loop</h2>
               <p className="text-sm text-[var(--clinical-ink-soft)]">
-                A first-pass plan using the learning modes that already exist.
+                A deterministic plan using your current practice and review pressure.
               </p>
             </div>
             <BrainTargetBadge target="consolidation" />
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {dailyActivities.map((activity) => (
-              <ActivityLauncher key={activity.href} {...activity} />
-            ))}
+            {dailyActivities.map((activity) => {
+              const Icon = recommendationIcons[activity.icon];
+              return <ActivityLauncher key={activity.href} {...activity} icon={Icon} />;
+            })}
           </div>
         </section>
 
@@ -159,7 +138,7 @@ export default function TodayPage() {
             <div className="space-y-5">
               <MasteryMeter label="MCQ practice coverage" attempts={profile.totalAnswered} value={(profile.totalAnswered / totalMcqs) * 100} />
               <MasteryMeter label="Retrieval Lab exposure" attempts={completedArcadeSessions} value={Math.min(100, completedArcadeSessions * 10)} />
-              <MasteryMeter label="Review queue activity" attempts={arcadeStudyList.length} />
+              <MasteryMeter label="Review queue activity" attempts={reviewQueue.length} />
               <p className="rounded-lg bg-[var(--clinical-amber-soft)] p-3 text-sm leading-relaxed text-[var(--clinical-ink-soft)]">
                 Mastery scores stay hidden until there is enough activity data. For now, PedsIQ shows coverage,
                 attempts, and review pressure instead of false precision.
@@ -197,12 +176,13 @@ export default function TodayPage() {
 
         <div className="grid gap-5 lg:grid-cols-2">
           <LearningPanel title="Memory queue" eyebrow="Review pressure">
-            {arcadeStudyList.length > 0 ? (
+            {reviewQueue.length > 0 ? (
               <div className="space-y-3">
-                {arcadeStudyList.slice(0, 4).map((item) => (
-                  <div key={`${item.gameId}-${item.questionId}`} className="rounded-lg border border-[var(--clinical-line)] p-3">
-                    <div className="text-sm font-semibold">{item.text}</div>
-                    <div className="mt-1 text-xs text-[var(--clinical-ink-soft)]">{item.correctAnswer}</div>
+                {reviewQueue.slice(0, 4).map((item) => (
+                  <div key={item.id} className="rounded-lg border border-[var(--clinical-line)] p-3">
+                    <div className="text-xs font-semibold text-[var(--clinical-teal)]">{item.sourceLabel}</div>
+                    <div className="mt-1 text-sm font-semibold">{item.prompt}</div>
+                    <div className="mt-1 text-xs text-[var(--clinical-ink-soft)]">{item.answer}</div>
                   </div>
                 ))}
                 <Link href="/notebook/" className="inline-flex text-sm font-semibold text-[var(--clinical-teal)] hover:underline">
