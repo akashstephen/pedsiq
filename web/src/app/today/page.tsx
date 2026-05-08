@@ -205,6 +205,9 @@ export default function TodayPage() {
                     <div className="mt-1 text-xs text-[var(--clinical-ink-soft)]">{item.correctAnswer}</div>
                   </div>
                 ))}
+                <Link href="/notebook/" className="inline-flex text-sm font-semibold text-[var(--clinical-teal)] hover:underline">
+                  Open notebook
+                </Link>
               </div>
             ) : (
               <p className="text-sm leading-relaxed text-[var(--clinical-ink-soft)]">

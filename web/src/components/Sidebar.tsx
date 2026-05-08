@@ -14,6 +14,7 @@ import {
   CalendarCheck,
   Gamepad2,
   Map,
+  BookMarked,
   Menu,
   X,
   ChevronLeft,
@@ -25,6 +26,7 @@ import { topics } from "../app/structured-answers/topics";
 const navItems = [
   { href: "/today/", label: "Today", icon: CalendarCheck },
   { href: "/learn/", label: "Learn Atlas", icon: Map },
+  { href: "/notebook/", label: "Notebook", icon: BookMarked },
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/quiz/", label: "MCQ Practice", icon: Brain },
   { href: "/arcade/", label: "Retrieval Lab", icon: Gamepad2 },
