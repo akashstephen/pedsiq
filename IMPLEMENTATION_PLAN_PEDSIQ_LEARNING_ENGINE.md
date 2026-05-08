@@ -17,6 +17,7 @@ This branch has started the first implementation slice:
 - Phase 5 has the first Retrieval Lab reframing on the arcade hub and accurate JSON-derived activity counts.
 - Phase 6 has a first Learn Atlas MVP with `/learn/`, static top-12 topic pages, system grouping, related-topic links, and learning activity links.
 - Phase 7 has a first Review Notebook MVP with unified arcade and MCQ review adapters, filtering, and arcade item clearing.
+- Phase 8 has a first Progress MVP with honest coverage, activity, accuracy, review pressure, and recent-session signals.
 
 Verification on this branch:
 
