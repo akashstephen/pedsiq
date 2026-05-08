@@ -13,6 +13,7 @@ This branch has started the first implementation slice:
 - Phase 0 is implemented for public copy, metadata, generated-output lint ignores, accurate arcade hub counts, and stale `409` denominator cleanup.
 - Phase 1 has the first clinical-light token set and reusable primitives: `LearningPanel`, `BrainTargetBadge`, `MasteryMeter`, and `ActivityLauncher`.
 - Phase 2 has the first canonical topic map and topic type definitions for the top 12 pediatric topics.
+- Phase 2 now includes pure adapters for MCQ, structured-answer, and canonical learning topic IDs.
 - Phase 3 has a safe `/today/` route that proves the new product direction without replacing `/` yet.
 - Phase 3 now has deterministic daily recommendations and uses the unified review queue on Today.
 - Phase 4 has the first Exam Mode wrapper, and the old root dashboard now lives at `/exam/overview/`.

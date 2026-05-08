@@ -3,6 +3,7 @@
 import mcqs from '@/data/mcqs.json';
 import { getStudyList, removeFromStudyList } from '@/lib/arcade-storage';
 import { loadProfile } from '@/lib/storage';
+import { getLearningTopicForMcq } from '@/domain/topics/adapters';
 import { type ArcadeGameId } from '@/types/arcade';
 import { type BrainTarget } from '@/domain/topics/types';
 import { type McqQuestion } from '@/types/mcq';
@@ -43,13 +44,14 @@ function getMcqReviewItems(): ReviewItem[] {
     .map(([questionId, history]) => {
       const question = mcqBank.find((item) => item.id === questionId);
       if (!question) return null;
+      const learningTopic = getLearningTopicForMcq(question);
 
       const reviewItem: ReviewItem = {
         id: `mcq:${questionId}`,
         source: 'mcq' as const,
         sourceLabel: sourceLabels.mcq,
         sourceId: questionId,
-        topic: question.explanation.relatedTopic ?? question.meta.topic,
+        topic: learningTopic?.id ?? question.meta.topic,
         title: question.meta.subtopic,
         prompt: question.question,
         answer: question.options[question.correctIndex],
