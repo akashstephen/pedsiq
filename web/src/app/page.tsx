@@ -73,7 +73,7 @@ export default function DashboardPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-white mb-1">Dashboard</h1>
-        <p className="text-white/55">KUHS Pediatrics Exam Intelligence Overview</p>
+        <p className="text-white/55">Exam intelligence overview for historical KUHS pediatrics papers</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

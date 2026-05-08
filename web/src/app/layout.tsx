@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PedsIQ — KUHS Pediatrics Exam Intelligence",
-  description: "MCQ practice with 250+ clinically-validated questions, previous year question analysis, pattern insights, and structured answers for KUHS Pediatrics exams. Study the full syllabus — patterns describe the past, they do not predict the future.",
+  title: "PedsIQ — Pediatrics Learning Engine",
+  description: "A neuroscience-informed pediatrics learning engine for active recall, clinical reasoning, protocol fluency, examiner-trap correction, and exam-aware study.",
 };
 
 export default function RootLayout({

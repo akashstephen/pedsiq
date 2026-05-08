@@ -55,7 +55,7 @@ function SplashScreen({ onStart, highScore }: { onStart: () => void; highScore: 
       </div>
       <div className="text-[10px] tracking-[0.2em] uppercase mb-3"
            style={{ fontFamily: "'JetBrains Mono', monospace", color: '#1E3450' }}>
-        PedsIQ · Examiner Trap Intelligence · 48 cards
+        PedsIQ · Examiner Trap Intelligence · {CARDS.length} cards
       </div>
       <div className="w-12 h-0.5 rounded-sm mx-auto mb-3"
            style={{ background: 'linear-gradient(90deg, #FF4D1A, #00D97E)' }} />

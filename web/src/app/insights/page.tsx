@@ -20,35 +20,35 @@ const insights: InsightTopic[] = [
     patternStrength: "Strong",
     desc: "Historically frequent nephrology topic. Common framing: 3-year-old with edema + tea-colored urine after sore throat — diagnosis, urinalysis, C3, management, complications.",
     historicalFrequency: { appearances: 38, papersAnalyzed: 24, lastAppeared: "2024" },
-    confidenceNote: "Appeared in 38 of 411 questions (9.2%) across 24 papers. Sample size is small; past frequency does not guarantee future appearance.",
+    confidenceNote: "Appeared in 38 of 409 questions across 24 papers. Sample size is small; past frequency does not guarantee future appearance.",
   },
   {
     title: "Nephrotic Syndrome (First Episode)",
     patternStrength: "Strong",
     desc: "Core pediatric nephrology topic. Common framing: 4-year-old with periorbital edema + frothy urine — investigations, steroid regimen, complications.",
     historicalFrequency: { appearances: 31, papersAnalyzed: 24, lastAppeared: "2024" },
-    confidenceNote: "Appeared in 31 of 411 questions (7.5%). A syllabus staple, but examiners may vary sub-part emphasis.",
+    confidenceNote: "Appeared in 31 of 409 questions. A syllabus staple, but examiners may vary sub-part emphasis.",
   },
   {
     title: "Rickets",
     patternStrength: "Strong",
     desc: "Consistently tested endocrine topic. Common framing: 9-month-old with delayed teething + wrist swelling — biochemistry, X-ray, clinical features, treatment.",
     historicalFrequency: { appearances: 27, papersAnalyzed: 24, lastAppeared: "2024" },
-    confidenceNote: "Appeared in 27 of 411 questions (6.6%). Frequently rephrased but conceptually stable.",
+    confidenceNote: "Appeared in 27 of 409 questions. Frequently rephrased but conceptually stable.",
   },
   {
     title: "Congenital Hypothyroidism",
     patternStrength: "Moderate",
     desc: "Neonatal features + TSH screening + immediate thyroxine start. Often tested as short note or brief answer.",
     historicalFrequency: { appearances: 14, papersAnalyzed: 24, lastAppeared: "2023" },
-    confidenceNote: "Appeared in 14 of 411 questions (3.4%). Moderate historical presence; may appear in neonatology-focused papers.",
+    confidenceNote: "Appeared in 14 of 409 questions. Moderate historical presence; may appear in neonatology-focused papers.",
   },
   {
     title: "Testicular Torsion",
     patternStrength: "Moderate",
     desc: "Emergency management topic. Doppler USG + surgery within 6 hours + bilateral fixation. Often combined with differential diagnosis.",
     historicalFrequency: { appearances: 8, papersAnalyzed: 24, lastAppeared: "2023" },
-    confidenceNote: "Appeared in 8 of 411 questions (1.9%). Low absolute frequency but high mark value when tested.",
+    confidenceNote: "Appeared in 8 of 409 questions. Low absolute frequency but high mark value when tested.",
   },
   {
     title: "HUS",
@@ -120,7 +120,7 @@ function PatternCard({ topic }: { topic: InsightTopic }) {
   const style = strengthStyles[topic.patternStrength];
   const Icon = style.icon;
   const freq = topic.historicalFrequency;
-  const percentage = ((freq.appearances / 411) * 100).toFixed(1);
+  const percentage = ((freq.appearances / 409) * 100).toFixed(1);
 
   return (
     <div className={`bg-white/[0.03] border ${style.border} rounded-2xl p-6 transition-all hover:bg-white/[0.05]`}>
@@ -129,7 +129,7 @@ function PatternCard({ topic }: { topic: InsightTopic }) {
           <Icon size={12} />
           {topic.patternStrength} Pattern
         </div>
-        <span className="text-white/40 text-xs">{freq.appearances} / 411 questions</span>
+        <span className="text-white/40 text-xs">{freq.appearances} / 409 questions</span>
       </div>
       
       <h3 className={`text-lg font-bold mb-2 ${style.title}`}>{topic.title}</h3>
@@ -219,7 +219,7 @@ export default function InsightsPage() {
             <div className="text-[11px] text-white/40 mt-1">2015 – 2025</div>
           </div>
           <div className="bg-white/[0.03] rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-white mb-1">411</div>
+            <div className="text-2xl font-bold text-white mb-1">409</div>
             <div className="text-xs text-white/50">Questions catalogued</div>
             <div className="text-[11px] text-white/40 mt-1">Across all formats</div>
           </div>

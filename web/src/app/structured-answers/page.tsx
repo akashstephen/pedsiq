@@ -86,7 +86,7 @@ export default function StructuredAnswersPage() {
                   {topic.patternStrength} Pattern
                 </span>
                 <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
-                  {topic.historicalFrequency.appearances} / 411 questions
+                  {topic.historicalFrequency.appearances} / 409 questions
                 </span>
                 <span className="text-[10px] md:text-xs text-white/40 font-medium px-2 md:px-3 py-1 rounded-full bg-white/[0.05]">
                   {topic.subject}

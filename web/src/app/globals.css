@@ -1,6 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
+  --color-clinical-bg: #F7F8F5;
+  --color-clinical-surface: #FFFFFF;
+  --color-clinical-surface-muted: #EEF2EF;
+  --color-clinical-ink: #14201E;
+  --color-clinical-ink-soft: #4B5C58;
+  --color-clinical-line: #DCE4DF;
+  --color-clinical-teal: #0E9F9A;
+  --color-clinical-teal-soft: #DDF5F2;
+  --color-clinical-coral: #E85D4F;
+  --color-clinical-coral-soft: #FDE8E5;
+  --color-clinical-amber: #C98910;
+  --color-clinical-amber-soft: #FFF2D6;
+  --color-clinical-green: #2E9D65;
+  --color-clinical-green-soft: #E4F6EC;
+  --color-clinical-violet: #6D5BD0;
+  --color-clinical-violet-soft: #EDEBFF;
+  --color-clinical-blue: #2D6CDF;
+  --color-clinical-blue-soft: #E5EEFF;
   --color-background: #000000;
   --color-foreground: #ffffff;
   --color-surface: #0a0a0a;
@@ -19,6 +37,31 @@
   --color-glass-border: rgba(255,255,255,0.08);
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --clinical-bg: #F7F8F5;
+  --clinical-surface: #FFFFFF;
+  --clinical-surface-muted: #EEF2EF;
+  --clinical-ink: #14201E;
+  --clinical-ink-soft: #4B5C58;
+  --clinical-line: #DCE4DF;
+  --clinical-teal: #0E9F9A;
+  --clinical-teal-soft: #DDF5F2;
+  --clinical-coral: #E85D4F;
+  --clinical-coral-soft: #FDE8E5;
+  --clinical-amber: #C98910;
+  --clinical-amber-soft: #FFF2D6;
+  --clinical-green: #2E9D65;
+  --clinical-green-soft: #E4F6EC;
+  --clinical-violet: #6D5BD0;
+  --clinical-violet-soft: #EDEBFF;
+  --clinical-blue: #2D6CDF;
+  --clinical-blue-soft: #E5EEFF;
+  --panel-radius: 10px;
+  --control-radius: 8px;
+  --content-max: 1280px;
+  --reading-max: 820px;
 }
 
 body {

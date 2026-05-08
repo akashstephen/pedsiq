@@ -8,6 +8,14 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { getGameStats } from '@/lib/arcade-storage';
 import { Gamepad2, Zap, Crosshair, Swords, Trophy, Clock, Target, FlaskConical, Bomb } from 'lucide-react';
+import doseDuelQuestions from './dose-duel/data/questions.json';
+import doseSniperQuestions from './dose-sniper/data/questions.json';
+import featureWarsBattles from './feature-wars/data/battles.json';
+import protocolBuilderProtocols from './protocol-builder/data/protocols.json';
+import trapDefuserCards from './trap-defuser/data/cards.json';
+
+const featureWarFeatureCount = featureWarsBattles.reduce((total, battle) => total + battle.features.length, 0);
+const protocolStepCount = protocolBuilderProtocols.reduce((total, protocol) => total + protocol.steps.length, 0);
 
 const GAMES = [
   {
@@ -19,7 +27,7 @@ const GAMES = [
     color: '#22D3EE',
     bgGradient: 'linear-gradient(135deg, #0891B2, #6D28D9)',
     route: '/arcade/dose-duel/',
-    questionCount: 26,
+    countLabel: `${doseDuelQuestions.length} dose prompts`,
   },
   {
     id: 'dose-sniper' as const,
@@ -30,7 +38,7 @@ const GAMES = [
     color: '#22CCFF',
     bgGradient: 'linear-gradient(135deg, #0ea5e9, #7c3aed)',
     route: '/arcade/dose-sniper/',
-    questionCount: 25,
+    countLabel: `${doseSniperQuestions.length} rounds`,
   },
   {
     id: 'feature-wars' as const,
@@ -41,7 +49,7 @@ const GAMES = [
     color: '#FBBF24',
     bgGradient: 'linear-gradient(135deg, #d97706, #db2777)',
     route: '/arcade/feature-wars/',
-    questionCount: 30,
+    countLabel: `${featureWarsBattles.length} battles / ${featureWarFeatureCount} features`,
   },
   {
     id: 'protocol-builder' as const,
@@ -52,7 +60,7 @@ const GAMES = [
     color: '#C9A84C',
     bgGradient: 'linear-gradient(135deg, #B45309, #0891B2)',
     route: '/arcade/protocol-builder/',
-    questionCount: 32,
+    countLabel: `${protocolBuilderProtocols.length} protocols / ${protocolStepCount} steps`,
   },
   {
     id: 'trap-defuser' as const,
@@ -63,7 +71,7 @@ const GAMES = [
     color: '#FF4D1A',
     bgGradient: 'linear-gradient(135deg, #DC2626, #F59E0B)',
     route: '/arcade/trap-defuser/',
-    questionCount: 48,
+    countLabel: `${trapDefuserCards.length} cards`,
   },
 ];
 
@@ -81,9 +89,9 @@ export default function ArcadeHubPage() {
       <div>
         <h1 className="text-3xl font-bold text-white mb-1 flex items-center gap-3">
           <Gamepad2 size={28} className="text-[#007AFF]" />
-          Arcade
+          Retrieval Lab
         </h1>
-        <p className="text-white/50">Gamified learning modes for high-stakes pediatric facts</p>
+        <p className="text-white/50">Neuroscience-informed drills for pediatric memory, reasoning, and protocol fluency</p>
       </div>
 
       {/* Game Cards */}
@@ -107,7 +115,7 @@ export default function ArcadeHubPage() {
               <p className="text-white/50 text-sm leading-relaxed mb-4 flex-1">{game.description}</p>
 
               <div className="flex items-center justify-between text-xs">
-                <span className="text-white/30">{game.questionCount} questions</span>
+                <span className="text-white/30">{game.countLabel}</span>
                 {game.highScore > 0 && (
                   <span className="flex items-center gap-1 text-[#FBBF24]">
                     <Trophy size={12} />

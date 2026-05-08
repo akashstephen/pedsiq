@@ -11,6 +11,7 @@ import {
   Activity,
   Flame,
   Brain,
+  CalendarCheck,
   Gamepad2,
   Menu,
   X,
@@ -21,9 +22,10 @@ import clsx from "clsx";
 import { topics } from "../app/structured-answers/topics";
 
 const navItems = [
+  { href: "/today/", label: "Today", icon: CalendarCheck },
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/quiz/", label: "MCQ Practice", icon: Brain },
-  { href: "/arcade/", label: "Arcade", icon: Gamepad2 },
+  { href: "/arcade/", label: "Retrieval Lab", icon: Gamepad2 },
   { href: "/questions/", label: "Questions", icon: FileText },
   { href: "/nelson/", label: "Nelson Analysis", icon: BookOpen },
   { href: "/subjects/", label: "Subjects", icon: BarChart3 },
@@ -194,7 +196,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             >
               <div className="text-lg font-bold tracking-tight text-white whitespace-nowrap">PedsIQ</div>
               <div className="text-[11px] text-white/55 font-medium uppercase tracking-wider whitespace-nowrap">
-                KUHS PYQ Analyzer
+                Pediatrics Learning Engine
               </div>
             </div>
           </Link>
@@ -272,7 +274,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             Final Year MBBS Student
           </div>
           <div className="text-[10px] text-white/30 text-center">
-            Built for KUHS Pediatrics
+            Pediatrics Learning Engine
           </div>
         </div>
       </aside>
