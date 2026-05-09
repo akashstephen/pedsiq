@@ -62,18 +62,18 @@ export default function TodayPage() {
           <div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[var(--clinical-line)] bg-[var(--clinical-surface)] px-3 py-1 text-xs font-semibold text-[var(--clinical-ink-soft)]">
               <Zap size={14} className="text-[var(--clinical-teal)]" />
-              Pediatrics Learning Engine
+              Today
             </div>
             <h1 className="max-w-3xl text-3xl font-bold leading-tight text-[var(--clinical-ink)] md:text-5xl">
-              Learn pediatrics through retrieval, reasoning, and memory science.
+              Your pediatrics workspace
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--clinical-ink-soft)]">
-              Today combines MCQs, protocols, examiner traps, and answer building into a practical study loop:
-              understand, retrieve, reason, correct, and consolidate.
+              Start with the highest-value work for this session: continue practice, clear review pressure,
+              and move through mapped pediatric topics.
             </p>
           </div>
 
-          <LearningPanel title="Today at a glance" eyebrow="Local progress">
+          <LearningPanel title="Session snapshot" eyebrow="Activity">
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <div className="text-2xl font-bold">{profile.totalAnswered}</div>
@@ -118,9 +118,9 @@ export default function TodayPage() {
         <section>
           <div className="mb-4 flex flex-col justify-between gap-2 md:flex-row md:items-end">
             <div>
-              <h2 className="text-xl font-semibold">Recommended study loop</h2>
+              <h2 className="text-xl font-semibold">Recommended work</h2>
               <p className="text-sm text-[var(--clinical-ink-soft)]">
-                A deterministic plan using your current practice and review pressure.
+                Based on local progress and open review items.
               </p>
             </div>
             <BrainTargetBadge target="consolidation" />
@@ -134,21 +134,21 @@ export default function TodayPage() {
         </section>
 
         <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <LearningPanel title="Coverage snapshot" eyebrow="Honest progress">
+          <LearningPanel title="Coverage" eyebrow="Progress">
             <div className="space-y-5">
               <MasteryMeter label="MCQ practice coverage" attempts={profile.totalAnswered} value={(profile.totalAnswered / totalMcqs) * 100} />
               <MasteryMeter label="Retrieval Lab exposure" attempts={completedArcadeSessions} value={Math.min(100, completedArcadeSessions * 10)} />
               <MasteryMeter label="Review queue activity" attempts={reviewQueue.length} />
               <p className="rounded-lg bg-[var(--clinical-amber-soft)] p-3 text-sm leading-relaxed text-[var(--clinical-ink-soft)]">
-                Mastery scores stay hidden until there is enough activity data. For now, PedsIQ shows coverage,
-                attempts, and review pressure instead of false precision.
+                Coverage and review pressure are shown from local activity. Durable mastery will require repeated
+                correct retrieval across time.
               </p>
             </div>
           </LearningPanel>
 
           <LearningPanel
-            title="Next best areas"
-            eyebrow="Start with existing high-yield systems"
+            title="Priority areas"
+            eyebrow="High-yield systems"
             action={
               <Link href="/quiz/" className="text-sm font-semibold text-[var(--clinical-teal)] hover:underline">
                 Practice
@@ -175,7 +175,7 @@ export default function TodayPage() {
         </div>
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <LearningPanel title="Memory queue" eyebrow="Review pressure">
+          <LearningPanel title="Review queue" eyebrow="Due items">
             {reviewQueue.length > 0 ? (
               <div className="space-y-3">
                 {reviewQueue.slice(0, 4).map((item) => (
@@ -191,16 +191,15 @@ export default function TodayPage() {
               </div>
             ) : (
               <p className="text-sm leading-relaxed text-[var(--clinical-ink-soft)]">
-                Missed arcade and practice items will appear here as review prompts. Play Trap Defuser or Dose Duel to start building the queue.
+                Review prompts will appear after missed MCQs or Retrieval Lab items.
               </p>
             )}
           </LearningPanel>
 
-          <LearningPanel title="Exam watch" eyebrow="Secondary signal">
+          <LearningPanel title="Exam signals" eyebrow="Context">
             <div className="space-y-3 text-sm leading-relaxed text-[var(--clinical-ink-soft)]">
               <p>
-                Historical KUHS patterns remain available, but they are no longer the center of the product.
-                Use them to prioritize, not to predict.
+                Use historical KUHS patterns as a prioritization layer alongside topic practice and review.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Link href="/insights/" className="rounded-full bg-[var(--clinical-amber-soft)] px-3 py-1 font-semibold text-[var(--clinical-amber)]">

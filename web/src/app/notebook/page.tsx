@@ -44,14 +44,14 @@ export default function NotebookPage() {
               Review Notebook
             </div>
             <h1 className="max-w-4xl text-3xl font-bold leading-tight text-[var(--clinical-ink)] md:text-5xl">
-              Turn misses into a deliberate correction queue.
+              Review notebook
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--clinical-ink-soft)]">
-              Notebook gathers missed Retrieval Lab prompts and repeat-wrong MCQs into one place, with traps separated from ordinary recall gaps.
+              Missed MCQs and Retrieval Lab items are collected here for correction, filtering, and follow-up practice.
             </p>
           </div>
 
-          <LearningPanel title="Queue pressure" eyebrow="Local data">
+          <LearningPanel title="Due review" eyebrow="Queue">
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <div className="text-2xl font-bold">{summary.total}</div>
@@ -76,7 +76,7 @@ export default function NotebookPage() {
         <div className="flex flex-col justify-between gap-3 rounded-[var(--panel-radius)] border border-[var(--clinical-line)] bg-[var(--clinical-surface)] p-3 shadow-sm md:flex-row md:items-center">
           <div className="flex items-center gap-2 text-sm font-semibold text-[var(--clinical-ink-soft)]">
             <Filter size={16} aria-hidden="true" />
-            Review filter
+            Filters
           </div>
           <div className="flex flex-wrap gap-2">
             {filterOptions.map((option) => (
@@ -127,7 +127,7 @@ export default function NotebookPage() {
           <label className="flex flex-col gap-2 text-sm font-semibold text-[var(--clinical-ink-soft)]">
             <span className="inline-flex items-center gap-2">
               <ShieldAlert size={16} aria-hidden="true" />
-              Confidence mismatch
+              Correction type
             </span>
             <select
               value={confidenceFilter}
@@ -135,7 +135,7 @@ export default function NotebookPage() {
               className="rounded-lg border border-[var(--clinical-line)] bg-[var(--clinical-surface-muted)] px-3 py-2 text-sm text-[var(--clinical-ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--clinical-teal)]/35"
             >
               <option value="all">All review items</option>
-              <option value="mismatch">Hypercorrection only</option>
+              <option value="mismatch">High-confidence misses</option>
             </select>
           </label>
         </div>
@@ -207,10 +207,10 @@ export default function NotebookPage() {
             ))}
           </section>
         ) : (
-          <LearningPanel title="No review items yet" eyebrow="Empty state">
+          <LearningPanel title="Notebook is clear" eyebrow="Review">
             <div className="max-w-2xl space-y-4 text-sm leading-7 text-[var(--clinical-ink-soft)]">
               <p>
-                Missed Retrieval Lab prompts and repeat-wrong MCQs will appear here after practice. Start with a short retrieval session, then return when there is something worth correcting.
+                Review items appear after missed MCQs or Retrieval Lab prompts.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Link href="/arcade/" className="rounded-full bg-[var(--clinical-teal)] px-3 py-1.5 font-semibold text-white">

@@ -14,7 +14,7 @@ export function IllnessScriptCard({ summary, objectives }: IllnessScriptCardProp
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.08em] text-[var(--clinical-teal)]">Illness script</p>
-          <h2 className="text-lg font-semibold text-[var(--clinical-ink)]">What to encode first</h2>
+          <h2 className="text-lg font-semibold text-[var(--clinical-ink)]">Clinical script</h2>
         </div>
       </div>
       <p className="text-sm leading-7 text-[var(--clinical-ink-soft)]">{summary}</p>

@@ -148,10 +148,6 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
   useEscape(closeSidebar, open);
   useFocusTrap(sidebarRef, open);
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
   return (
     <>
       {/* Mobile toggle */}
@@ -202,7 +198,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             >
               <div className="text-lg font-bold tracking-tight text-white whitespace-nowrap">PedsIQ</div>
               <div className="text-[11px] text-white/55 font-medium uppercase tracking-wider whitespace-nowrap">
-                Pediatrics Learning Engine
+                Pediatrics Workspace
               </div>
             </div>
           </Link>
@@ -280,7 +276,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
             Final Year MBBS Student
           </div>
           <div className="text-[10px] text-white/30 text-center">
-            Pediatrics Learning Engine
+            Pediatrics Workspace
           </div>
         </div>
       </aside>

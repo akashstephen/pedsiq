@@ -5,7 +5,7 @@ import { LearningPanel } from "@/components/design-system/LearningPanel";
 const examTools = [
   {
     href: "/exam/overview/",
-    title: "Exam Overview",
+    title: "Paper Overview",
     description: "Historical paper volume, marks, sections, and subject distribution.",
     icon: BarChart3,
   },
@@ -52,17 +52,17 @@ export default function ExamModePage() {
               Exam Mode
             </div>
             <h1 className="max-w-4xl text-3xl font-bold leading-tight text-[var(--clinical-ink)] md:text-5xl">
-              Historical exam intelligence, kept secondary to learning.
+              Exam preparation
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--clinical-ink-soft)]">
-              KUHS patterns are still useful for prioritization, but they should support the learning engine rather than define the product.
+              Review KUHS paper history, Nelson mapping, subject trends, and structured answer tools.
             </p>
           </div>
 
-          <LearningPanel title="Use this mode for" eyebrow="Secondary signal">
+          <LearningPanel title="Exam tools" eyebrow="Scope">
             <div className="space-y-3 text-sm leading-7 text-[var(--clinical-ink-soft)]">
-              <p>Prioritize revision, inspect historical coverage, and practice answer structure.</p>
-              <p>Do not treat paper frequency as a prediction model.</p>
+              <p>Use this area for paper analysis, prioritization, and answer preparation.</p>
+              <p>Frequency is context, not a prediction.</p>
             </div>
           </LearningPanel>
         </header>

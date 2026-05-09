@@ -110,7 +110,7 @@ export default function ArcadeHubPage() {
           <Gamepad2 size={28} className="text-[#007AFF]" />
           Retrieval Lab
         </h1>
-        <p className="text-white/50">Neuroscience-informed drills for pediatric memory, reasoning, and protocol fluency</p>
+        <p className="text-white/50">High-friction drills for doses, protocols, features, and examiner traps.</p>
       </div>
 
       {/* Game Cards */}
@@ -160,11 +160,11 @@ export default function ArcadeHubPage() {
         <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <h2 className="text-white font-semibold mb-1">Next recommended lab</h2>
+              <h2 className="text-white font-semibold mb-1">Recommended lab</h2>
               <p className="text-sm text-white/55">
                 {dueTotal > 0
-                  ? `${dueTotal} missed prompts are waiting. Start where review pressure is highest.`
-                  : 'No lab review pressure yet. Start with a short sequencing drill.'}
+                  ? `${dueTotal} review items are waiting. Start with the highest-pressure mode.`
+                  : 'Start with Protocol Builder to establish a sequencing baseline.'}
               </p>
             </div>
             <Link
@@ -181,19 +181,19 @@ export default function ArcadeHubPage() {
       <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
         <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
           <Target size={18} className="text-[#007AFF]" />
-          Why Arcade Modes Work
+          Training model
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-white/60">
           <div>
-            <h4 className="text-white font-medium mb-1">Time Pressure</h4>
+            <h4 className="text-white font-medium mb-1">Timed recall</h4>
             <p>Forces genuine retrieval (not recognition) and activates the locus coeruleus-norepinephrine system, tagging facts as important.</p>
           </div>
           <div>
-            <h4 className="text-white font-medium mb-1">Motor Encoding</h4>
+            <h4 className="text-white font-medium mb-1">Motor response</h4>
             <p>Physical tap actions create procedural memory. Your hand learns the answer, not just your mind.</p>
           </div>
           <div>
-            <h4 className="text-white font-medium mb-1">Elaborative Interrogation</h4>
+            <h4 className="text-white font-medium mb-1">Feature discrimination</h4>
             <p>Deciding WHERE a feature belongs forces articulation of the mechanism, producing deeper semantic encoding.</p>
           </div>
         </div>

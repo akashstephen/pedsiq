@@ -71,8 +71,8 @@ export default function ExamOverviewPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-white mb-1">Exam Overview</h1>
-        <p className="text-white/55">Historical KUHS pediatrics paper intelligence for prioritization, not prediction</p>
+        <h1 className="text-3xl font-bold text-white mb-1">Paper overview</h1>
+        <p className="text-white/55">Question volume, marks, sections, and chapter trends across the KUHS pediatrics archive.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

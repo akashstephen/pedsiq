@@ -63,8 +63,8 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
           <IllnessScriptCard summary={topic.summary} objectives={topic.learningObjectives} />
 
           <LearningPanel
-            title="Learning activities"
-            eyebrow="Existing routes"
+            title="Practice routes"
+            eyebrow="Linked work"
             action={<Route size={18} className="text-[var(--clinical-teal)]" aria-hidden="true" />}
           >
             <div className="mb-4 flex flex-wrap items-center gap-2">
@@ -105,8 +105,8 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
 
         <div className="grid gap-5 lg:grid-cols-2">
           <LearningPanel
-            title="Reasoning checklist"
-            eyebrow="Before you drill"
+            title="Checklist"
+            eyebrow="Core tasks"
             action={<ListChecks size={18} className="text-[var(--clinical-teal)]" aria-hidden="true" />}
           >
             <div className="space-y-3">
@@ -123,7 +123,7 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
 
           <LearningPanel
             title="Related topics"
-            eyebrow="Build discrimination"
+            eyebrow="Compare"
             action={<GitBranch size={18} className="text-[var(--clinical-teal)]" aria-hidden="true" />}
           >
             {relatedTopics.length > 0 ? (
@@ -146,15 +146,14 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
               </div>
             ) : (
               <p className="text-sm leading-7 text-[var(--clinical-ink-soft)]">
-                Related topics will appear after this part of the atlas is governed.
+                No related mapped topics yet.
               </p>
             )}
           </LearningPanel>
         </div>
 
         <TrapCallout>
-          Use this page as the starting route for the topic: encode the clinical script, retrieve the key facts,
-          compare related diagnoses, then correct traps through practice.
+          Review common traps after the core script and practice routes.
         </TrapCallout>
       </div>
     </div>

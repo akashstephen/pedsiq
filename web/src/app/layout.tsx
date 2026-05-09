@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PedsIQ — Pediatrics Learning Engine",
-  description: "A neuroscience-informed pediatrics learning engine for active recall, clinical reasoning, protocol fluency, examiner-trap correction, and exam-aware study.",
+  title: "PedsIQ — Pediatrics Workspace",
+  description: "PedsIQ is a pediatrics learning workspace for MCQs, topic maps, retrieval drills, structured answers, and exam preparation.",
 };
 
 export default function RootLayout({

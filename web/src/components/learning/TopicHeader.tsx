@@ -44,7 +44,7 @@ export function TopicHeader({ topic, systemLabel }: TopicHeaderProps) {
         {topic.examSignal && (
           <div className="rounded-[var(--panel-radius)] border border-[var(--clinical-line)] bg-[var(--clinical-surface)] p-5 shadow-sm">
             <p className="text-xs font-bold uppercase tracking-[0.08em] text-[var(--clinical-teal)]">
-              Historical KUHS context
+              Exam signal
             </p>
             <div className="mt-3 grid grid-cols-3 gap-3">
               <div>
@@ -61,7 +61,7 @@ export function TopicHeader({ topic, systemLabel }: TopicHeaderProps) {
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-[var(--clinical-ink-soft)]">
-              Use this as a prioritization signal, not as a prediction.
+              Historical frequency is shown for prioritization.
             </p>
           </div>
         )}

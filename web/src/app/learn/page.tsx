@@ -27,14 +27,14 @@ export default function LearnAtlasPage() {
               Learn Atlas
             </div>
             <h1 className="max-w-4xl text-3xl font-bold leading-tight text-[var(--clinical-ink)] md:text-5xl">
-              A pediatric curriculum map built around memory, reasoning, and exam context.
+              Pediatrics atlas
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--clinical-ink-soft)]">
-              Start with governed high-yield topics. Each topic links concept encoding, active recall, answer generation, and Retrieval Lab practice into one study path.
+              Browse mapped topics, linked practice, answer frameworks, and exam signals from one place.
             </p>
           </div>
 
-          <LearningPanel title="Atlas scope" eyebrow="Current coverage">
+          <LearningPanel title="Atlas status" eyebrow="Mapped content">
             <div className="grid grid-cols-3 gap-3">
               <div>
                 <div className="text-2xl font-bold">{learningTopics.length}</div>
@@ -54,9 +54,9 @@ export default function LearnAtlasPage() {
 
         <section className="grid gap-4 md:grid-cols-3">
           {[
-            [Layers3, 'Concept map', 'Encode each topic as a stable clinical script before drilling details.'],
-            [Route, 'Activity routes', 'Jump from a topic into structured answers, MCQs, or Retrieval Lab practice.'],
-            [ShieldCheck, 'Honest scope', 'Pages show current coverage and avoid claiming complete syllabus mastery.'],
+            [Layers3, 'Topic map', 'Review core pediatric topics with consistent IDs and linked learning paths.'],
+            [Route, 'Practice links', 'Move from a topic into MCQs, structured answers, or Retrieval Lab.'],
+            [ShieldCheck, 'Exam context', 'Use historical signals as context for prioritization.'],
           ].map(([Icon, title, detail]) => {
             const IconComponent = Icon as typeof Layers3;
             return (
@@ -69,7 +69,7 @@ export default function LearnAtlasPage() {
           })}
         </section>
 
-        <LearningPanel title="Featured high-yield topics" eyebrow="Start here">
+        <LearningPanel title="Featured topics" eyebrow="High-yield">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {featuredTopics.map((topic) => (
               <Link
