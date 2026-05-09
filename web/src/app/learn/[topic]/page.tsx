@@ -1,13 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import mcqs from "@/data/mcqs.json";
 import { ArrowRight, GitBranch, ListChecks, Route } from "lucide-react";
 import { BrainTargetBadge } from "@/components/design-system/BrainTargetBadge";
 import { LearningPanel } from "@/components/design-system/LearningPanel";
 import { IllnessScriptCard } from "@/components/learning/IllnessScriptCard";
+import { McqCoverageBadge } from "@/components/learning/McqCoverageBadge";
 import { TopicHeader } from "@/components/learning/TopicHeader";
 import { TrapCallout } from "@/components/learning/TrapCallout";
+import { getMcqLearningTopicCoverage } from "@/domain/topics/adapters";
 import { learningTopicById, learningTopics } from "@/domain/topics/topic-map";
 import { pediatricSystemLabels } from "@/domain/topics/system-labels";
+import { type McqQuestion } from "@/types/mcq";
 
 interface TopicPageProps {
   params: Promise<{ topic: string }>;
@@ -44,6 +48,11 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
   const relatedTopics = topic.relatedTopicIds
     .map((id) => learningTopicById[id])
     .filter(Boolean);
+  const mcqCoverage = new Map(
+    getMcqLearningTopicCoverage(mcqs as McqQuestion[]).map((item) => [item.topic.id, item.questionCount])
+  );
+  const mappedMcqCount = mcqCoverage.get(topic.id) ?? 0;
+  const mcqActivity = topic.activities.find((activity) => activity.type === 'mcq');
 
   return (
     <div className="-mx-4 -mt-16 min-h-screen bg-[var(--clinical-bg)] px-4 py-8 text-[var(--clinical-ink)] md:-mx-8 md:-mt-8 md:px-8">
@@ -58,6 +67,17 @@ export default async function LearnTopicPage({ params }: TopicPageProps) {
             eyebrow="Existing routes"
             action={<Route size={18} className="text-[var(--clinical-teal)]" aria-hidden="true" />}
           >
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <McqCoverageBadge questionCount={mappedMcqCount} />
+              {mappedMcqCount > 0 && mcqActivity && (
+                <Link
+                  href={mcqActivity.href}
+                  className="rounded-full bg-[var(--clinical-blue-soft)] px-2.5 py-1 text-xs font-semibold text-[var(--clinical-blue)] transition hover:bg-white"
+                >
+                  Start mapped system drill
+                </Link>
+              )}
+            </div>
             <div className="grid gap-3 md:grid-cols-2">
               {topic.activities.map((activity) => (
                 <Link

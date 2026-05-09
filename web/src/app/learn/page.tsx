@@ -1,13 +1,20 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, Layers3, Route, ShieldCheck } from "lucide-react";
+import mcqs from "@/data/mcqs.json";
 import { BrainTargetBadge } from "@/components/design-system/BrainTargetBadge";
 import { ExamSignalBadge } from "@/components/design-system/ExamSignalBadge";
 import { LearningPanel } from "@/components/design-system/LearningPanel";
+import { McqCoverageBadge } from "@/components/learning/McqCoverageBadge";
+import { getMcqLearningTopicCoverage } from "@/domain/topics/adapters";
 import { getLearningTopicsBySystem, learningTopics } from "@/domain/topics/topic-map";
 import { pediatricSystemLabels } from "@/domain/topics/system-labels";
+import { type McqQuestion } from "@/types/mcq";
 
 const systemGroups = getLearningTopicsBySystem();
 const featuredTopics = learningTopics.slice(0, 6);
+const mcqCoverage = new Map(
+  getMcqLearningTopicCoverage(mcqs as McqQuestion[]).map((item) => [item.topic.id, item.questionCount])
+);
 
 export default function LearnAtlasPage() {
   return (
@@ -38,8 +45,8 @@ export default function LearnAtlasPage() {
                 <div className="text-xs font-medium text-[var(--clinical-ink-soft)]">Systems</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">12</div>
-                <div className="text-xs font-medium text-[var(--clinical-ink-soft)]">Governed paths</div>
+                <div className="text-2xl font-bold">{Array.from(mcqCoverage.values()).reduce((sum, count) => sum + count, 0)}</div>
+                <div className="text-xs font-medium text-[var(--clinical-ink-soft)]">Mapped MCQs</div>
               </div>
             </div>
           </LearningPanel>
@@ -82,6 +89,7 @@ export default function LearnAtlasPage() {
                 <p className="flex-1 text-sm leading-7 text-[var(--clinical-ink-soft)]">{topic.summary}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <ExamSignalBadge signal={topic.examSignal} />
+                  <McqCoverageBadge questionCount={mcqCoverage.get(topic.id) ?? 0} />
                   {topic.activities[0] && <BrainTargetBadge target={topic.activities[0].brainTarget} />}
                 </div>
               </Link>
@@ -107,6 +115,9 @@ export default function LearnAtlasPage() {
                       <div className="font-semibold">{topic.title}</div>
                       <div className="mt-1 text-sm text-[var(--clinical-ink-soft)]">
                         {topic.activities.length} linked learning activities
+                      </div>
+                      <div className="mt-2">
+                        <McqCoverageBadge questionCount={mcqCoverage.get(topic.id) ?? 0} />
                       </div>
                     </div>
                     <ArrowRight size={17} className="shrink-0 text-[var(--clinical-teal)]" aria-hidden="true" />
