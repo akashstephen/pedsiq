@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { BookMarked, Check, Filter, RotateCcw, ShieldAlert } from 'lucide-react';
+import { BookMarked, Check, Filter, RotateCcw, ShieldAlert, SlidersHorizontal } from 'lucide-react';
 import { BrainTargetBadge } from '@/components/design-system/BrainTargetBadge';
 import { LearningPanel } from '@/components/design-system/LearningPanel';
 import { useReviewQueue, type ReviewFilter } from '@/hooks/useReviewQueue';
@@ -20,7 +20,19 @@ function formatDate(value: string) {
 }
 
 export default function NotebookPage() {
-  const { visibleItems, summary, filter, setFilter, refresh, remove } = useReviewQueue();
+  const {
+    visibleItems,
+    summary,
+    topics,
+    filter,
+    setFilter,
+    topicFilter,
+    setTopicFilter,
+    confidenceFilter,
+    setConfidenceFilter,
+    refresh,
+    remove,
+  } = useReviewQueue();
 
   return (
     <div className="-mx-4 -mt-16 min-h-screen bg-[var(--clinical-bg)] px-4 py-8 text-[var(--clinical-ink)] md:-mx-8 md:-mt-8 md:px-8">
@@ -90,6 +102,42 @@ export default function NotebookPage() {
               Refresh
             </button>
           </div>
+        </div>
+
+        <div className="grid gap-3 rounded-[var(--panel-radius)] border border-[var(--clinical-line)] bg-[var(--clinical-surface)] p-3 shadow-sm md:grid-cols-2">
+          <label className="flex flex-col gap-2 text-sm font-semibold text-[var(--clinical-ink-soft)]">
+            <span className="inline-flex items-center gap-2">
+              <SlidersHorizontal size={16} aria-hidden="true" />
+              Topic
+            </span>
+            <select
+              value={topicFilter}
+              onChange={(event) => setTopicFilter(event.target.value)}
+              className="rounded-lg border border-[var(--clinical-line)] bg-[var(--clinical-surface-muted)] px-3 py-2 text-sm text-[var(--clinical-ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--clinical-teal)]/35"
+            >
+              <option value="all">All topics</option>
+              {topics.map((topic) => (
+                <option key={topic} value={topic}>
+                  {topic}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="flex flex-col gap-2 text-sm font-semibold text-[var(--clinical-ink-soft)]">
+            <span className="inline-flex items-center gap-2">
+              <ShieldAlert size={16} aria-hidden="true" />
+              Confidence mismatch
+            </span>
+            <select
+              value={confidenceFilter}
+              onChange={(event) => setConfidenceFilter(event.target.value as 'all' | 'mismatch')}
+              className="rounded-lg border border-[var(--clinical-line)] bg-[var(--clinical-surface-muted)] px-3 py-2 text-sm text-[var(--clinical-ink)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--clinical-teal)]/35"
+            >
+              <option value="all">All review items</option>
+              <option value="mismatch">Hypercorrection only</option>
+            </select>
+          </label>
         </div>
 
         {visibleItems.length > 0 ? (

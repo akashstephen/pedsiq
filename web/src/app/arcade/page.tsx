@@ -6,7 +6,9 @@
 
 import { useMemo } from 'react';
 import Link from 'next/link';
-import { getGameStats } from '@/lib/arcade-storage';
+import { BrainTargetBadge } from '@/components/design-system/BrainTargetBadge';
+import { getGameStats, getStudyList } from '@/lib/arcade-storage';
+import { type BrainTarget } from '@/domain/topics/types';
 import { Gamepad2, Zap, Crosshair, Swords, Trophy, Clock, Target, FlaskConical, Bomb } from 'lucide-react';
 import doseDuelQuestions from './dose-duel/data/questions.json';
 import doseSniperQuestions from './dose-sniper/data/questions.json';
@@ -28,6 +30,8 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #0891B2, #6D28D9)',
     route: '/arcade/dose-duel/',
     countLabel: `${doseDuelQuestions.length} dose prompts`,
+    brainTarget: 'retrieval' as BrainTarget,
+    clinicalSkill: 'Drug-dose recall under time pressure',
   },
   {
     id: 'dose-sniper' as const,
@@ -39,6 +43,8 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #0ea5e9, #7c3aed)',
     route: '/arcade/dose-sniper/',
     countLabel: `${doseSniperQuestions.length} rounds`,
+    brainTarget: 'visuomotor' as BrainTarget,
+    clinicalSkill: 'Fast recognition of correct dose cards',
   },
   {
     id: 'feature-wars' as const,
@@ -50,6 +56,8 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #d97706, #db2777)',
     route: '/arcade/feature-wars/',
     countLabel: `${featureWarsBattles.length} battles / ${featureWarFeatureCount} features`,
+    brainTarget: 'discrimination' as BrainTarget,
+    clinicalSkill: 'Separate confusable clinical features',
   },
   {
     id: 'protocol-builder' as const,
@@ -61,6 +69,8 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #B45309, #0891B2)',
     route: '/arcade/protocol-builder/',
     countLabel: `${protocolBuilderProtocols.length} protocols / ${protocolStepCount} steps`,
+    brainTarget: 'sequencing' as BrainTarget,
+    clinicalSkill: 'Order pediatric management algorithms',
   },
   {
     id: 'trap-defuser' as const,
@@ -72,6 +82,8 @@ const GAMES = [
     bgGradient: 'linear-gradient(135deg, #DC2626, #F59E0B)',
     route: '/arcade/trap-defuser/',
     countLabel: `${trapDefuserCards.length} cards`,
+    brainTarget: 'hypercorrection' as BrainTarget,
+    clinicalSkill: 'Detect and correct examiner traps',
   },
 ];
 
@@ -79,9 +91,16 @@ export default function ArcadeHubPage() {
   const stats = useMemo(() => {
     return GAMES.map((g) => {
       const s = getGameStats(g.id);
-      return { ...g, highScore: s.highScore, totalSessions: s.totalSessions };
+      return {
+        ...g,
+        highScore: s.highScore,
+        totalSessions: s.totalSessions,
+        dueCount: getStudyList(g.id).length,
+      };
     });
   }, []);
+  const dueTotal = stats.reduce((sum, game) => sum + game.dueCount, 0);
+  const recommendedGame = [...stats].sort((a, b) => b.dueCount - a.dueCount || a.totalSessions - b.totalSessions)[0];
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
@@ -113,20 +132,50 @@ export default function ArcadeHubPage() {
               <h3 className="text-white font-semibold text-lg mb-1">{game.title}</h3>
               <p className="text-white/40 text-xs mb-3">{game.subtitle}</p>
               <p className="text-white/50 text-sm leading-relaxed mb-4 flex-1">{game.description}</p>
+              <div className="mb-4 flex flex-wrap gap-2">
+                <BrainTargetBadge target={game.brainTarget} className="border-white/10 bg-white/[0.06] text-white/75" />
+                <span className="rounded-full bg-white/[0.05] px-2.5 py-1 text-xs font-semibold text-white/45">
+                  {game.clinicalSkill}
+                </span>
+              </div>
 
               <div className="flex items-center justify-between text-xs">
                 <span className="text-white/30">{game.countLabel}</span>
-                {game.highScore > 0 && (
-                  <span className="flex items-center gap-1 text-[#FBBF24]">
-                    <Trophy size={12} />
-                    {game.highScore.toLocaleString()}
-                  </span>
-                )}
+                <span className="flex items-center gap-2">
+                  {game.dueCount > 0 && <span className="text-[#FF9500]">{game.dueCount} due</span>}
+                  {game.highScore > 0 && (
+                    <span className="flex items-center gap-1 text-[#FBBF24]">
+                      <Trophy size={12} />
+                      {game.highScore.toLocaleString()}
+                    </span>
+                  )}
+                </span>
               </div>
             </Link>
           );
         })}
       </div>
+
+      {recommendedGame && (
+        <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="text-white font-semibold mb-1">Next recommended lab</h2>
+              <p className="text-sm text-white/55">
+                {dueTotal > 0
+                  ? `${dueTotal} missed prompts are waiting. Start where review pressure is highest.`
+                  : 'No lab review pressure yet. Start with a short sequencing drill.'}
+              </p>
+            </div>
+            <Link
+              href={recommendedGame.route}
+              className="inline-flex items-center justify-center rounded-xl bg-[#007AFF] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#3395ff]"
+            >
+              Start {recommendedGame.title}
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* How it works */}
       <div className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-6">

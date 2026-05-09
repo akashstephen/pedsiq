@@ -18,9 +18,12 @@ This branch has started the first implementation slice:
 - Phase 3 now has deterministic daily recommendations and uses the unified review queue on Today.
 - Phase 4 has the first Exam Mode wrapper, and the old root dashboard now lives at `/exam/overview/`.
 - Phase 5 has the first Retrieval Lab reframing on the arcade hub and accurate JSON-derived activity counts.
+- Phase 5 now includes brain-target labels, per-game due counts, and a next recommended lab block.
 - Phase 6 has a first Learn Atlas MVP with `/learn/`, static top-12 topic pages, system grouping, related-topic links, and learning activity links.
 - Phase 7 has a first Review Notebook MVP with unified arcade and MCQ review adapters, filtering, and arcade item clearing.
+- Phase 7 now includes topic and hypercorrection filters.
 - Phase 8 has a first Progress MVP with honest coverage, activity, accuracy, review pressure, and recent-session signals.
+- Remaining planned domain stubs (`brain-targets`, `exam/types`) are present for future expansion.
 
 Verification on this branch:
 
